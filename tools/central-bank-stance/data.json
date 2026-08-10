@@ -1,0 +1,904 @@
+{
+  "meta": {
+    "generated_at": "2026-08-10T08:51:32+00:00",
+    "title": "Global Central Bank Stance Matrix",
+    "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
+    "source_url": "https://data.bis.org/topics/CBPOL",
+    "lookback_months": 6,
+    "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path."
+  },
+  "summary": {
+    "as_of": "2026-08-04",
+    "total": 12,
+    "cutting": 0,
+    "hold": 9,
+    "hiking": 3,
+    "paused": 2
+  },
+  "banks": [
+    {
+      "code": "US",
+      "name": "Federal Reserve",
+      "country": "United States",
+      "flag": "🇺🇸",
+      "instrument": "Federal Funds Rate (target range)",
+      "rate": 3.625,
+      "rate_display": "3.50–3.75%",
+      "as_of": "2026-08-04",
+      "last_move": {
+        "date": "2025-12-11",
+        "delta_bps": -25,
+        "direction": "down",
+        "display": "▼ 25 bp · Dec 2025"
+      },
+      "phase": "On Hold",
+      "phase_source": "auto",
+      "ytd_bps": 0,
+      "ytd_display": "0 bp",
+      "next_move": {
+        "text": "On hold; data-dependent",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-01",
+          "value": 4.375
+        },
+        {
+          "date": "2023-02-02",
+          "value": 4.625
+        },
+        {
+          "date": "2023-03-23",
+          "value": 4.875
+        },
+        {
+          "date": "2023-05-04",
+          "value": 5.125
+        },
+        {
+          "date": "2023-07-27",
+          "value": 5.375
+        },
+        {
+          "date": "2024-09-19",
+          "value": 4.875
+        },
+        {
+          "date": "2024-11-08",
+          "value": 4.625
+        },
+        {
+          "date": "2024-12-19",
+          "value": 4.375
+        },
+        {
+          "date": "2025-09-18",
+          "value": 4.125
+        },
+        {
+          "date": "2025-10-30",
+          "value": 3.875
+        },
+        {
+          "date": "2025-12-11",
+          "value": 3.625
+        },
+        {
+          "date": "2026-08-04",
+          "value": 3.625
+        }
+      ]
+    },
+    {
+      "code": "XM",
+      "name": "European Central Bank",
+      "country": "Euro area",
+      "flag": "🇪🇺",
+      "instrument": "Deposit Facility Rate",
+      "rate": 2.25,
+      "rate_display": "2.25%",
+      "as_of": "2026-08-04",
+      "last_move": {
+        "date": "2026-06-17",
+        "delta_bps": 25,
+        "direction": "up",
+        "display": "▲ 25 bp · Jun 2026"
+      },
+      "phase": "Hiking",
+      "phase_source": "auto",
+      "ytd_bps": 25,
+      "ytd_display": "+25 bp",
+      "next_move": {
+        "text": "Further hikes likely",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-01",
+          "value": 2.5
+        },
+        {
+          "date": "2023-02-08",
+          "value": 3.0
+        },
+        {
+          "date": "2023-03-22",
+          "value": 3.5
+        },
+        {
+          "date": "2023-05-10",
+          "value": 3.75
+        },
+        {
+          "date": "2023-06-21",
+          "value": 4.0
+        },
+        {
+          "date": "2023-08-02",
+          "value": 4.25
+        },
+        {
+          "date": "2023-09-20",
+          "value": 4.5
+        },
+        {
+          "date": "2024-06-12",
+          "value": 4.25
+        },
+        {
+          "date": "2024-09-18",
+          "value": 3.5
+        },
+        {
+          "date": "2024-10-23",
+          "value": 3.25
+        },
+        {
+          "date": "2024-12-18",
+          "value": 3.0
+        },
+        {
+          "date": "2025-02-05",
+          "value": 2.75
+        },
+        {
+          "date": "2025-03-12",
+          "value": 2.5
+        },
+        {
+          "date": "2025-04-23",
+          "value": 2.25
+        },
+        {
+          "date": "2025-06-11",
+          "value": 2.0
+        },
+        {
+          "date": "2026-06-17",
+          "value": 2.25
+        },
+        {
+          "date": "2026-08-04",
+          "value": 2.25
+        }
+      ]
+    },
+    {
+      "code": "JP",
+      "name": "Bank of Japan",
+      "country": "Japan",
+      "flag": "🇯🇵",
+      "instrument": "Overnight Call Rate",
+      "rate": 1.0,
+      "rate_display": "1.00%",
+      "as_of": "2026-08-04",
+      "last_move": {
+        "date": "2026-06-17",
+        "delta_bps": 25,
+        "direction": "up",
+        "display": "▲ 25 bp · Jun 2026"
+      },
+      "phase": "Hiking",
+      "phase_source": "auto",
+      "ytd_bps": 25,
+      "ytd_display": "+25 bp",
+      "next_move": {
+        "text": "Further hikes likely",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-02",
+          "value": -0.1
+        },
+        {
+          "date": "2024-03-21",
+          "value": 0.05
+        },
+        {
+          "date": "2024-08-01",
+          "value": 0.25
+        },
+        {
+          "date": "2025-01-27",
+          "value": 0.5
+        },
+        {
+          "date": "2025-12-22",
+          "value": 0.75
+        },
+        {
+          "date": "2026-06-17",
+          "value": 1.0
+        },
+        {
+          "date": "2026-08-04",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "code": "GB",
+      "name": "Bank of England",
+      "country": "United Kingdom",
+      "flag": "🇬🇧",
+      "instrument": "Bank Rate",
+      "rate": 3.75,
+      "rate_display": "3.75%",
+      "as_of": "2026-08-03",
+      "last_move": {
+        "date": "2025-12-18",
+        "delta_bps": -25,
+        "direction": "down",
+        "display": "▼ 25 bp · Dec 2025"
+      },
+      "phase": "On Hold",
+      "phase_source": "auto",
+      "ytd_bps": 0,
+      "ytd_display": "0 bp",
+      "next_move": {
+        "text": "On hold; data-dependent",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-03",
+          "value": 3.5
+        },
+        {
+          "date": "2023-02-02",
+          "value": 4.0
+        },
+        {
+          "date": "2023-03-23",
+          "value": 4.25
+        },
+        {
+          "date": "2023-05-11",
+          "value": 4.5
+        },
+        {
+          "date": "2023-06-22",
+          "value": 5.0
+        },
+        {
+          "date": "2023-08-03",
+          "value": 5.25
+        },
+        {
+          "date": "2024-08-01",
+          "value": 5.0
+        },
+        {
+          "date": "2024-11-07",
+          "value": 4.75
+        },
+        {
+          "date": "2025-02-06",
+          "value": 4.5
+        },
+        {
+          "date": "2025-05-08",
+          "value": 4.25
+        },
+        {
+          "date": "2025-08-07",
+          "value": 4.0
+        },
+        {
+          "date": "2025-12-18",
+          "value": 3.75
+        },
+        {
+          "date": "2026-08-03",
+          "value": 3.75
+        }
+      ]
+    },
+    {
+      "code": "CA",
+      "name": "Bank of Canada",
+      "country": "Canada",
+      "flag": "🇨🇦",
+      "instrument": "Overnight Rate",
+      "rate": 2.25,
+      "rate_display": "2.25%",
+      "as_of": "2026-08-03",
+      "last_move": {
+        "date": "2025-10-30",
+        "delta_bps": -25,
+        "direction": "down",
+        "display": "▼ 25 bp · Oct 2025"
+      },
+      "phase": "On Hold",
+      "phase_source": "auto",
+      "ytd_bps": 0,
+      "ytd_display": "0 bp",
+      "next_move": {
+        "text": "On hold; data-dependent",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-03",
+          "value": 4.25
+        },
+        {
+          "date": "2023-01-26",
+          "value": 4.5
+        },
+        {
+          "date": "2023-06-08",
+          "value": 4.75
+        },
+        {
+          "date": "2023-07-13",
+          "value": 5.0
+        },
+        {
+          "date": "2024-06-06",
+          "value": 4.75
+        },
+        {
+          "date": "2024-07-25",
+          "value": 4.5
+        },
+        {
+          "date": "2024-09-05",
+          "value": 4.25
+        },
+        {
+          "date": "2024-10-24",
+          "value": 3.75
+        },
+        {
+          "date": "2024-12-12",
+          "value": 3.25
+        },
+        {
+          "date": "2025-01-30",
+          "value": 3.0
+        },
+        {
+          "date": "2025-03-13",
+          "value": 2.75
+        },
+        {
+          "date": "2025-09-18",
+          "value": 2.5
+        },
+        {
+          "date": "2025-10-30",
+          "value": 2.25
+        },
+        {
+          "date": "2026-08-03",
+          "value": 2.25
+        }
+      ]
+    },
+    {
+      "code": "AU",
+      "name": "Reserve Bank of Australia",
+      "country": "Australia",
+      "flag": "🇦🇺",
+      "instrument": "Cash Rate",
+      "rate": 4.35,
+      "rate_display": "4.35%",
+      "as_of": "2026-07-30",
+      "last_move": {
+        "date": "2026-05-06",
+        "delta_bps": 25,
+        "direction": "up",
+        "display": "▲ 25 bp · May 2026"
+      },
+      "phase": "On Hold",
+      "phase_source": "override",
+      "ytd_bps": 75,
+      "ytd_display": "+75 bp",
+      "next_move": {
+        "text": "No change expected; data-dependent",
+        "kind": "desk",
+        "edited": "2026-06-16"
+      },
+      "path": [
+        {
+          "date": "2023-01-03",
+          "value": 3.1
+        },
+        {
+          "date": "2023-02-08",
+          "value": 3.35
+        },
+        {
+          "date": "2023-03-08",
+          "value": 3.6
+        },
+        {
+          "date": "2023-05-03",
+          "value": 3.85
+        },
+        {
+          "date": "2023-06-07",
+          "value": 4.1
+        },
+        {
+          "date": "2023-11-08",
+          "value": 4.35
+        },
+        {
+          "date": "2025-02-19",
+          "value": 4.1
+        },
+        {
+          "date": "2025-05-21",
+          "value": 3.85
+        },
+        {
+          "date": "2025-08-13",
+          "value": 3.6
+        },
+        {
+          "date": "2026-02-04",
+          "value": 3.85
+        },
+        {
+          "date": "2026-03-18",
+          "value": 4.1
+        },
+        {
+          "date": "2026-05-06",
+          "value": 4.35
+        },
+        {
+          "date": "2026-07-30",
+          "value": 4.35
+        }
+      ]
+    },
+    {
+      "code": "CH",
+      "name": "Swiss National Bank",
+      "country": "Switzerland",
+      "flag": "🇨🇭",
+      "instrument": "SNB Policy Rate",
+      "rate": 0.0,
+      "rate_display": "0.00%",
+      "as_of": "2026-08-04",
+      "last_move": {
+        "date": "2025-06-20",
+        "delta_bps": -25,
+        "direction": "down",
+        "display": "▼ 25 bp · Jun 2025"
+      },
+      "phase": "Paused",
+      "phase_source": "auto",
+      "ytd_bps": 0,
+      "ytd_display": "0 bp",
+      "next_move": {
+        "text": "Extended hold",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-02",
+          "value": 1.0
+        },
+        {
+          "date": "2023-03-24",
+          "value": 1.5
+        },
+        {
+          "date": "2023-06-23",
+          "value": 1.75
+        },
+        {
+          "date": "2024-03-22",
+          "value": 1.5
+        },
+        {
+          "date": "2024-06-21",
+          "value": 1.25
+        },
+        {
+          "date": "2024-09-27",
+          "value": 1.0
+        },
+        {
+          "date": "2024-12-13",
+          "value": 0.5
+        },
+        {
+          "date": "2025-03-21",
+          "value": 0.25
+        },
+        {
+          "date": "2025-06-20",
+          "value": 0.0
+        },
+        {
+          "date": "2026-08-04",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "code": "SE",
+      "name": "Sveriges Riksbank",
+      "country": "Sweden",
+      "flag": "🇸🇪",
+      "instrument": "Policy Rate",
+      "rate": 1.75,
+      "rate_display": "1.75%",
+      "as_of": "2026-08-04",
+      "last_move": {
+        "date": "2025-10-01",
+        "delta_bps": -25,
+        "direction": "down",
+        "display": "▼ 25 bp · Oct 2025"
+      },
+      "phase": "On Hold",
+      "phase_source": "auto",
+      "ytd_bps": 0,
+      "ytd_display": "0 bp",
+      "next_move": {
+        "text": "On hold; data-dependent",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-02",
+          "value": 2.5
+        },
+        {
+          "date": "2023-02-15",
+          "value": 3.0
+        },
+        {
+          "date": "2023-05-03",
+          "value": 3.5
+        },
+        {
+          "date": "2023-07-05",
+          "value": 3.75
+        },
+        {
+          "date": "2023-09-27",
+          "value": 4.0
+        },
+        {
+          "date": "2024-05-15",
+          "value": 3.75
+        },
+        {
+          "date": "2024-08-21",
+          "value": 3.5
+        },
+        {
+          "date": "2024-10-02",
+          "value": 3.25
+        },
+        {
+          "date": "2024-11-13",
+          "value": 2.75
+        },
+        {
+          "date": "2025-01-08",
+          "value": 2.5
+        },
+        {
+          "date": "2025-02-05",
+          "value": 2.25
+        },
+        {
+          "date": "2025-06-25",
+          "value": 2.0
+        },
+        {
+          "date": "2025-10-01",
+          "value": 1.75
+        },
+        {
+          "date": "2026-08-04",
+          "value": 1.75
+        }
+      ]
+    },
+    {
+      "code": "NO",
+      "name": "Norges Bank",
+      "country": "Norway",
+      "flag": "🇳🇴",
+      "instrument": "Policy Rate",
+      "rate": 4.25,
+      "rate_display": "4.25%",
+      "as_of": "2026-07-30",
+      "last_move": {
+        "date": "2026-05-08",
+        "delta_bps": 25,
+        "direction": "up",
+        "display": "▲ 25 bp · May 2026"
+      },
+      "phase": "On Hold",
+      "phase_source": "override",
+      "ytd_bps": 25,
+      "ytd_display": "+25 bp",
+      "next_move": {
+        "text": "No change expected; data-dependent",
+        "kind": "desk",
+        "edited": "2026-06-16"
+      },
+      "path": [
+        {
+          "date": "2023-01-02",
+          "value": 2.75
+        },
+        {
+          "date": "2023-03-24",
+          "value": 3.0
+        },
+        {
+          "date": "2023-05-05",
+          "value": 3.25
+        },
+        {
+          "date": "2023-06-23",
+          "value": 3.75
+        },
+        {
+          "date": "2023-08-18",
+          "value": 4.0
+        },
+        {
+          "date": "2023-09-22",
+          "value": 4.25
+        },
+        {
+          "date": "2023-12-15",
+          "value": 4.5
+        },
+        {
+          "date": "2025-06-20",
+          "value": 4.25
+        },
+        {
+          "date": "2025-09-19",
+          "value": 4.0
+        },
+        {
+          "date": "2026-05-08",
+          "value": 4.25
+        },
+        {
+          "date": "2026-07-30",
+          "value": 4.25
+        }
+      ]
+    },
+    {
+      "code": "NZ",
+      "name": "Reserve Bank of New Zealand",
+      "country": "New Zealand",
+      "flag": "🇳🇿",
+      "instrument": "Official Cash Rate",
+      "rate": 2.5,
+      "rate_display": "2.50%",
+      "as_of": "2026-07-31",
+      "last_move": {
+        "date": "2026-07-09",
+        "delta_bps": 25,
+        "direction": "up",
+        "display": "▲ 25 bp · Jul 2026"
+      },
+      "phase": "Hiking",
+      "phase_source": "auto",
+      "ytd_bps": 25,
+      "ytd_display": "+25 bp",
+      "next_move": {
+        "text": "Further hikes likely",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-02",
+          "value": 4.25
+        },
+        {
+          "date": "2023-02-23",
+          "value": 4.75
+        },
+        {
+          "date": "2023-04-06",
+          "value": 5.25
+        },
+        {
+          "date": "2023-05-25",
+          "value": 5.5
+        },
+        {
+          "date": "2024-08-15",
+          "value": 5.25
+        },
+        {
+          "date": "2024-10-10",
+          "value": 4.75
+        },
+        {
+          "date": "2024-11-28",
+          "value": 4.25
+        },
+        {
+          "date": "2025-02-20",
+          "value": 3.75
+        },
+        {
+          "date": "2025-04-10",
+          "value": 3.5
+        },
+        {
+          "date": "2025-05-29",
+          "value": 3.25
+        },
+        {
+          "date": "2025-08-21",
+          "value": 3.0
+        },
+        {
+          "date": "2025-10-09",
+          "value": 2.5
+        },
+        {
+          "date": "2025-11-27",
+          "value": 2.25
+        },
+        {
+          "date": "2026-07-09",
+          "value": 2.5
+        },
+        {
+          "date": "2026-07-31",
+          "value": 2.5
+        }
+      ]
+    },
+    {
+      "code": "CN",
+      "name": "People's Bank of China",
+      "country": "China",
+      "flag": "🇨🇳",
+      "instrument": "1-Year Loan Prime Rate (LPR)",
+      "rate": 3.0,
+      "rate_display": "3.00%",
+      "as_of": "2026-07-19",
+      "last_move": {
+        "date": "2025-05-20",
+        "delta_bps": -10,
+        "direction": "down",
+        "display": "▼ 10 bp · May 2025"
+      },
+      "phase": "Paused",
+      "phase_source": "auto",
+      "ytd_bps": 0,
+      "ytd_display": "0 bp",
+      "next_move": {
+        "text": "Extended hold",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-01",
+          "value": 3.65
+        },
+        {
+          "date": "2023-06-20",
+          "value": 3.55
+        },
+        {
+          "date": "2023-08-20",
+          "value": 3.45
+        },
+        {
+          "date": "2024-07-22",
+          "value": 3.35
+        },
+        {
+          "date": "2024-10-21",
+          "value": 3.1
+        },
+        {
+          "date": "2025-05-20",
+          "value": 3.0
+        },
+        {
+          "date": "2026-07-19",
+          "value": 3.0
+        }
+      ]
+    },
+    {
+      "code": "IN",
+      "name": "Reserve Bank of India",
+      "country": "India",
+      "flag": "🇮🇳",
+      "instrument": "Policy Repo Rate",
+      "rate": 5.25,
+      "rate_display": "5.25%",
+      "as_of": "2026-07-23",
+      "last_move": {
+        "date": "2025-12-05",
+        "delta_bps": -25,
+        "direction": "down",
+        "display": "▼ 25 bp · Dec 2025"
+      },
+      "phase": "On Hold",
+      "phase_source": "auto",
+      "ytd_bps": 0,
+      "ytd_display": "0 bp",
+      "next_move": {
+        "text": "On hold; data-dependent",
+        "kind": "auto",
+        "edited": ""
+      },
+      "path": [
+        {
+          "date": "2023-01-02",
+          "value": 6.25
+        },
+        {
+          "date": "2023-02-08",
+          "value": 6.5
+        },
+        {
+          "date": "2025-02-07",
+          "value": 6.25
+        },
+        {
+          "date": "2025-04-09",
+          "value": 6.0
+        },
+        {
+          "date": "2025-06-06",
+          "value": 5.5
+        },
+        {
+          "date": "2025-12-05",
+          "value": 5.25
+        },
+        {
+          "date": "2026-07-23",
+          "value": 5.25
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "masthead": {
+    "eyebrow": "Macro Tracker · Diagnostic Panel",
+    "title": "Housing Bubble Monitor",
+    "sub": "A market-temperature read across four diagnostic systems — valuation, affordability, supply & activity, and financing stress — pulling the strongest single signal from each into one verdict."
+  },
+  "verdict": {
+    "headline": "Stretched, not bubbly. A slow grind toward balance — not 2006-style crash risk.",
+    "revised": "2026-06-16",
+    "lights": [
+      {
+        "label": "Valuation",
+        "state": "Stretched",
+        "tone": "caution",
+        "gloss": "Levels elevated vs. fundamentals; correcting in real terms."
+      },
+      {
+        "label": "Affordability",
+        "state": "Tight",
+        "tone": "caution",
+        "gloss": "Payments near record in dollars; easing at the margin as income outpaces prices."
+      },
+      {
+        "label": "Activity",
+        "state": "Cooling",
+        "tone": "caution",
+        "gloss": "Buyer's market, record price cuts — but thawing at the margin."
+      },
+      {
+        "label": "Stability",
+        "state": "Sound",
+        "tone": "sound",
+        "gloss": "High equity, low LTV. Stress confined to FHA/VA tails."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "valuation",
+      "num": "01",
+      "title": "Price & valuation",
+      "tag": "momentum cool · levels stretched",
+      "kind": "gauges",
+      "items": [
+        {
+          "id": "cs_yoy",
+          "name": "Case-Shiller national, YoY",
+          "unit": "% nom",
+          "val": "+1.1",
+          "pos": 24,
+          "tone": "cool",
+          "band": [
+            6,
+            96
+          ],
+          "ref": {
+            "pos": 52,
+            "label": "avg ≈5%"
+          },
+          "badge": "Cooling",
+          "note": "14th straight month of deceleration; weakest since Jun 2023.",
+          "_date": "2026-05-01"
+        },
+        {
+          "id": "real_yoy",
+          "name": "Real home price, YoY (CPI-adj.)",
+          "unit": "% real",
+          "val": "−2.9",
+          "pos": 18,
+          "tone": "cool",
+          "band": [
+            8,
+            94
+          ],
+          "ref": {
+            "pos": 50,
+            "label": "0%"
+          },
+          "badge": "Falling",
+          "note": "Prices now losing ground to inflation — the quiet correction.",
+          "_date": "2026-05-01"
+        },
+        {
+          "id": "price_to_rent",
+          "name": "Price-to-rent ratio",
+          "unit": "idx, 2000=100",
+          "val": "130",
+          "pos": 79,
+          "tone": "hot",
+          "band": [
+            40,
+            88
+          ],
+          "ref": {
+            "pos": 45,
+            "label": "fund."
+          },
+          "badge": "Stretched",
+          "note": "Dallas Fed's single best leading indicator; well above fundamentals.",
+          "_date": "2026-05-01"
+        },
+        {
+          "id": "price_to_income",
+          "name": "Price-to-income ratio",
+          "unit": "× median",
+          "val": "4.9",
+          "pos": 82,
+          "tone": "hot",
+          "band": [
+            38,
+            90
+          ],
+          "ref": {
+            "pos": 48,
+            "label": "norm"
+          },
+          "badge": "Stretched",
+          "note": "Near the top of its modern range; long-run mean ≈3.5×, '06 peak 4.7×. Pairs the current median price with annual median income that lags ~18 months, so the ratio runs a touch high between income vintages.",
+          "_date": "2026-04-01"
+        },
+        {
+          "id": "median_vs_2019",
+          "name": "Median sale price vs. 2019",
+          "unit": "% cum.",
+          "val": "+52",
+          "pos": 84,
+          "tone": "hot",
+          "band": [
+            30,
+            90
+          ],
+          "ref": {
+            "pos": 30,
+            "label": "'19"
+          },
+          "badge": "Record high",
+          "note": "Record NAR median in May; the level effect dominates the soft momentum."
+        }
+      ]
+    },
+    {
+      "id": "affordability",
+      "num": "02",
+      "title": "Affordability",
+      "tag": "tight, easing at the margin",
+      "kind": "sparks",
+      "items": [
+        {
+          "id": "mortgage30",
+          "name": "30-yr fixed mortgage",
+          "unit": "%",
+          "val": "6.69",
+          "tone": "warm",
+          "spark": [
+            6.37,
+            6.36,
+            6.51,
+            6.53,
+            6.48,
+            6.52,
+            6.47,
+            6.49,
+            6.43,
+            6.49,
+            6.55,
+            6.58,
+            6.66,
+            6.69
+          ],
+          "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
+          "_date": "2026-08-06"
+        },
+        {
+          "id": "nar_affordability",
+          "name": "NAR affordability index",
+          "unit": "idx",
+          "val": "102.3",
+          "tone": "warm",
+          "spark": [
+            98.3,
+            101.2,
+            106.7,
+            107.1,
+            108.7,
+            111.0,
+            116.5,
+            116.1,
+            112.0,
+            108.0,
+            105.1,
+            102.3
+          ],
+          "ctx": "Higher = more affordable; 100 = a median-income family exactly qualifies for the median home. Improving YoY as <b>income growth</b> edges out price gains.",
+          "_date": "2026-06-01"
+        },
+        {
+          "id": "implied_pi",
+          "name": "Implied P&I, median home",
+          "unit": "/mo",
+          "val": "$2,272",
+          "tone": "hot",
+          "spark": [
+            2198,
+            2196,
+            2230,
+            2235,
+            2223,
+            2233,
+            2221,
+            2226,
+            2212,
+            2226,
+            2240,
+            2246,
+            2265,
+            2272
+          ],
+          "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
+          "_date": "2026-08-06"
+        }
+      ]
+    },
+    {
+      "id": "activity",
+      "num": "03",
+      "title": "Supply & activity",
+      "tag": "inventory rebuilding · sales off the lows",
+      "kind": "table",
+      "items": [
+        {
+          "id": "existing_sales",
+          "k": "Existing-home sales (SAAR)",
+          "v": "4.09M",
+          "p": "4.19M",
+          "d": "+2.8%",
+          "dir": "up",
+          "s": "NAR",
+          "_date": "2026-06-01"
+        },
+        {
+          "id": "months_supply",
+          "k": "Months' supply",
+          "v": "4.6",
+          "p": "4.5",
+          "d": "+0.0",
+          "dir": "flat",
+          "s": "NAR",
+          "_date": "2026-06-01"
+        },
+        {
+          "id": "total_inventory",
+          "k": "Active listings",
+          "v": "1.13M",
+          "p": "1.10M",
+          "d": "+2.1%",
+          "dir": "up",
+          "s": "Realtor.com",
+          "_date": "2026-07-01"
+        },
+        {
+          "id": "median_existing_price",
+          "k": "Median existing-home price",
+          "v": "$440,600",
+          "p": "$431,200",
+          "d": "+1.8%",
+          "dir": "up",
+          "s": "NAR",
+          "_date": "2026-06-01"
+        },
+        {
+          "id": "median_dom",
+          "k": "Median days on market",
+          "v": "57",
+          "p": "53",
+          "d": "−1 days",
+          "dir": "dn",
+          "s": "Realtor.com",
+          "_date": "2026-07-01"
+        },
+        {
+          "id": "price_drops",
+          "k": "Listings with a price cut",
+          "v": "35.9%",
+          "p": "35.3%",
+          "d": "−1.6 pt",
+          "dir": "dn",
+          "s": "Realtor.com",
+          "_date": "2026-07-01"
+        },
+        {
+          "id": "new_home_sales",
+          "k": "New-home sales (SAAR)",
+          "v": "628K",
+          "p": "618K",
+          "d": "−5.6%",
+          "dir": "dn",
+          "s": "Census",
+          "_date": "2026-06-01"
+        },
+        {
+          "id": "housing_starts",
+          "k": "Housing starts (SAAR)",
+          "v": "1.43M",
+          "p": "1.20M",
+          "d": "+3.5%",
+          "dir": "up",
+          "s": "Census",
+          "_date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "stress",
+      "num": "04",
+      "title": "Financing & stress",
+      "tag": "rising off lows · structurally resilient",
+      "kind": "gauges",
+      "items": [
+        {
+          "id": "seriously_delinquent",
+          "name": "Single-family delinquency rate",
+          "unit": "% past due",
+          "val": "1.89",
+          "pos": 36,
+          "tone": "warm",
+          "band": [
+            10,
+            96
+          ],
+          "ref": {
+            "pos": 24,
+            "label": "low"
+          },
+          "badge": "Rising, low",
+          "note": "All-bank single-family mortgage delinquency (Fed, SA). Off the floor but far below the ~11% crisis peak.",
+          "_date": "2026-01-01"
+        },
+        {
+          "id": "equity_cushion",
+          "name": "Household equity cushion",
+          "unit": "% owners' equity",
+          "val": "71.6",
+          "pos": 20,
+          "tone": "cool",
+          "band": [
+            10,
+            90
+          ],
+          "ref": {
+            "pos": 60,
+            "label": "'06"
+          },
+          "badge": "Strong",
+          "note": "Z.1 owners' equity share near record; the structural firebreak vs. 2006.",
+          "_date": "2026-01-01"
+        },
+        {
+          "id": "lending_standards",
+          "name": "Bank lending standards",
+          "unit": "net % tightening",
+          "val": "+0.0",
+          "pos": 54,
+          "tone": "warm",
+          "band": [
+            15,
+            95
+          ],
+          "ref": {
+            "pos": 50,
+            "label": "neutral"
+          },
+          "badge": "Easing a touch",
+          "note": "SLOOS net % of banks tightening on GSE-eligible mortgages. Negative = a small net share easing — supportive, not restrictive.",
+          "_date": "2026-07-01"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
+  },
+  "asof": "Updated Aug 9 2026 · live via FRED · calibration editorial",
+  "data_through": "Aug 6 2026",
+  "generated_at": "2026-08-09T22:20:19+00:00",
+  "sources": {
+    "fred": 24,
+    "config": 1
+  }
+}

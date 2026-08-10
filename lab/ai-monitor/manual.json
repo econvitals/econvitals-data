@@ -1,0 +1,40 @@
+{
+  "_readme": "Hand-entered inputs for the AI Monitor. Everything else is fetched automatically by fetch_data.py. Where each number comes from and how to update it: manual_SOURCES.md.",
+  "issue": null,
+  "btos": {
+    "asof": "May 2026",
+    "share_pct": 19.8,
+    "delta_3m_pp": null,
+    "series": [[2025.9583, 18.0], [2026.375, 19.8]],
+    "_sources": [
+      "19.8% national current AI use, survey period ending May 3 2026 — census.gov/library/stories/2026/05/ai-use-businesses.html (entered 2026-07-16)",
+      "~18% end of Dec 2025 — Fed note 'Monitoring AI Adoption in the US Economy' 2026-04-03 (entered 2026-07-16)",
+      "delta_3m_pp left null: no exact ~Feb 2026 national value in hand; fill from the BTOS download at first production pass"
+    ]
+  },
+  "capex": {
+    "_units": "$bn per quarter, MSFT+GOOGL+AMZN+META+ORCL combined capex from 10-Q/K filings",
+    "quarters": []
+  },
+  "scoreboard": {
+    "ybl_dissimilarity": {"latest": null, "asof": null, "delta": null, "delta_units": null, "note": null},
+    "ybl_quintiles": {"latest": null, "asof": null, "delta": null, "delta_units": null, "note": null},
+    "canaries_early_career": {"latest": null, "asof": null, "delta": null, "delta_units": null, "note": null},
+    "canaries_auto_aug": {"latest": null, "asof": null, "delta": null, "delta_units": null, "note": null},
+    "challenger_ai_share": {"latest": null, "asof": null, "delta": null, "delta_units": null, "note": null}
+  },
+  "signals": {
+    "_rubric": "0 = within historical range; 1 = unusual but localized; 2 = sustained and broad-based. Scored monthly (3-draw Claude protocol from Phase 3; Jason can override).",
+    "ybl_dissimilarity": null,
+    "ybl_quintiles": null,
+    "canaries_early_career": null,
+    "canaries_auto_aug": null,
+    "indeed_ai_share": null,
+    "indeed_swdev": null,
+    "challenger_ai_share": null,
+    "recent_grad_gap": null
+  },
+  "reconciliation": null,
+  "bullets": [],
+  "bottom_line": null
+}

@@ -1,0 +1,520 @@
+{
+  "meta": {
+    "source": "U.S. Census Bureau \u2014 SAIPE and ACS 1-year public APIs.",
+    "saipe_year": 2024,
+    "acs_year": 2024,
+    "note": "State-level cross-section; figures fetched from Census APIs, not necessarily independently checked."
+  },
+  "states": {
+    "01": {
+      "abbr": "AL",
+      "pov": 15.2,
+      "child_pov": 20.4,
+      "mhi": 66704,
+      "snap": 13.1,
+      "ssi": 6.4,
+      "pubasst": 1.4,
+      "medicaid": 19.8
+    },
+    "02": {
+      "abbr": "AK",
+      "pov": 10.3,
+      "child_pov": 12.9,
+      "mhi": 96336,
+      "snap": 10.4,
+      "ssi": 3.4,
+      "pubasst": 4.1,
+      "medicaid": 23.3
+    },
+    "04": {
+      "abbr": "AZ",
+      "pov": 11.9,
+      "child_pov": 15.2,
+      "mhi": 81404,
+      "snap": 10.2,
+      "ssi": 3.8,
+      "pubasst": 2.0,
+      "medicaid": 19.1
+    },
+    "05": {
+      "abbr": "AR",
+      "pov": 15.3,
+      "child_pov": 19.6,
+      "mhi": 62146,
+      "snap": 9.0,
+      "ssi": 6.6,
+      "pubasst": 1.4,
+      "medicaid": 24.9
+    },
+    "06": {
+      "abbr": "CA",
+      "pov": 11.8,
+      "child_pov": 14.6,
+      "mhi": 100130,
+      "snap": 13.5,
+      "ssi": 5.7,
+      "pubasst": 3.7,
+      "medicaid": 27.9
+    },
+    "08": {
+      "abbr": "CO",
+      "pov": 9.6,
+      "child_pov": 11.2,
+      "mhi": 96871,
+      "snap": 8.9,
+      "ssi": 3.1,
+      "pubasst": 2.2,
+      "medicaid": 16.5
+    },
+    "09": {
+      "abbr": "CT",
+      "pov": 10.1,
+      "child_pov": 13.0,
+      "mhi": 95670,
+      "snap": 11.9,
+      "ssi": 4.9,
+      "pubasst": 2.7,
+      "medicaid": 22.0
+    },
+    "10": {
+      "abbr": "DE",
+      "pov": 10.1,
+      "child_pov": 14.2,
+      "mhi": 87510,
+      "snap": 10.0,
+      "ssi": 4.9,
+      "pubasst": 2.1,
+      "medicaid": 19.7
+    },
+    "11": {
+      "abbr": "DC",
+      "pov": 16.4,
+      "child_pov": 25.0,
+      "mhi": 109289,
+      "snap": 15.9,
+      "ssi": 4.6,
+      "pubasst": 5.0,
+      "medicaid": 25.4
+    },
+    "12": {
+      "abbr": "FL",
+      "pov": 12.1,
+      "child_pov": 15.7,
+      "mhi": 77687,
+      "snap": 11.4,
+      "ssi": 4.8,
+      "pubasst": 2.0,
+      "medicaid": 16.3
+    },
+    "13": {
+      "abbr": "GA",
+      "pov": 12.8,
+      "child_pov": 16.9,
+      "mhi": 79912,
+      "snap": 10.8,
+      "ssi": 4.9,
+      "pubasst": 1.6,
+      "medicaid": 17.0
+    },
+    "15": {
+      "abbr": "HI",
+      "pov": 10.0,
+      "child_pov": 11.4,
+      "mhi": 101581,
+      "snap": 11.5,
+      "ssi": 4.1,
+      "pubasst": 3.5,
+      "medicaid": 20.1
+    },
+    "16": {
+      "abbr": "ID",
+      "pov": 10.4,
+      "child_pov": 10.9,
+      "mhi": 80852,
+      "snap": 7.2,
+      "ssi": 4.5,
+      "pubasst": 2.4,
+      "medicaid": 16.2
+    },
+    "17": {
+      "abbr": "IL",
+      "pov": 11.5,
+      "child_pov": 14.1,
+      "mhi": 83327,
+      "snap": 13.4,
+      "ssi": 4.6,
+      "pubasst": 2.6,
+      "medicaid": 18.9
+    },
+    "18": {
+      "abbr": "IN",
+      "pov": 12.1,
+      "child_pov": 15.8,
+      "mhi": 71958,
+      "snap": 8.6,
+      "ssi": 5.2,
+      "pubasst": 1.7,
+      "medicaid": 20.6
+    },
+    "19": {
+      "abbr": "IA",
+      "pov": 11.2,
+      "child_pov": 13.1,
+      "mhi": 75623,
+      "snap": 8.2,
+      "ssi": 3.9,
+      "pubasst": 1.6,
+      "medicaid": 19.1
+    },
+    "20": {
+      "abbr": "KS",
+      "pov": 10.9,
+      "child_pov": 12.8,
+      "mhi": 75402,
+      "snap": 5.9,
+      "ssi": 3.7,
+      "pubasst": 1.3,
+      "medicaid": 13.4
+    },
+    "21": {
+      "abbr": "KY",
+      "pov": 15.4,
+      "child_pov": 18.9,
+      "mhi": 64481,
+      "snap": 13.4,
+      "ssi": 7.0,
+      "pubasst": 1.7,
+      "medicaid": 26.2
+    },
+    "22": {
+      "abbr": "LA",
+      "pov": 18.6,
+      "child_pov": 25.0,
+      "mhi": 61038,
+      "snap": 16.7,
+      "ssi": 6.6,
+      "pubasst": 1.5,
+      "medicaid": 30.2
+    },
+    "23": {
+      "abbr": "ME",
+      "pov": 10.6,
+      "child_pov": 12.3,
+      "mhi": 76372,
+      "snap": 12.7,
+      "ssi": 5.9,
+      "pubasst": 2.9,
+      "medicaid": 20.2
+    },
+    "24": {
+      "abbr": "MD",
+      "pov": 9.2,
+      "child_pov": 11.2,
+      "mhi": 102835,
+      "snap": 10.3,
+      "ssi": 4.2,
+      "pubasst": 2.5,
+      "medicaid": 19.1
+    },
+    "25": {
+      "abbr": "MA",
+      "pov": 9.8,
+      "child_pov": 11.4,
+      "mhi": 104569,
+      "snap": 15.1,
+      "ssi": 5.3,
+      "pubasst": 3.4,
+      "medicaid": 22.5
+    },
+    "26": {
+      "abbr": "MI",
+      "pov": 13.4,
+      "child_pov": 17.7,
+      "mhi": 72336,
+      "snap": 13.2,
+      "ssi": 5.6,
+      "pubasst": 2.4,
+      "medicaid": 22.5
+    },
+    "27": {
+      "abbr": "MN",
+      "pov": 9.3,
+      "child_pov": 9.6,
+      "mhi": 87120,
+      "snap": 8.3,
+      "ssi": 3.8,
+      "pubasst": 3.0,
+      "medicaid": 18.1
+    },
+    "28": {
+      "abbr": "MS",
+      "pov": 17.8,
+      "child_pov": 25.0,
+      "mhi": 59301,
+      "snap": 11.9,
+      "ssi": 7.6,
+      "pubasst": 2.0,
+      "medicaid": 23.9
+    },
+    "29": {
+      "abbr": "MO",
+      "pov": 12.2,
+      "child_pov": 15.3,
+      "mhi": 71583,
+      "snap": 9.3,
+      "ssi": 5.3,
+      "pubasst": 1.5,
+      "medicaid": 17.3
+    },
+    "30": {
+      "abbr": "MT",
+      "pov": 10.4,
+      "child_pov": 11.7,
+      "mhi": 75520,
+      "snap": 7.0,
+      "ssi": 4.7,
+      "pubasst": 2.6,
+      "medicaid": 18.3
+    },
+    "31": {
+      "abbr": "NE",
+      "pov": 10.6,
+      "child_pov": 11.6,
+      "mhi": 76578,
+      "snap": 8.4,
+      "ssi": 4.0,
+      "pubasst": 2.0,
+      "medicaid": 15.4
+    },
+    "32": {
+      "abbr": "NV",
+      "pov": 11.8,
+      "child_pov": 15.5,
+      "mhi": 81129,
+      "snap": 11.9,
+      "ssi": 3.8,
+      "pubasst": 2.8,
+      "medicaid": 19.1
+    },
+    "33": {
+      "abbr": "NH",
+      "pov": 7.3,
+      "child_pov": 7.0,
+      "mhi": 100364,
+      "snap": 6.5,
+      "ssi": 4.1,
+      "pubasst": 2.2,
+      "medicaid": 12.5
+    },
+    "34": {
+      "abbr": "NJ",
+      "pov": 9.2,
+      "child_pov": 11.8,
+      "mhi": 104202,
+      "snap": 9.1,
+      "ssi": 4.6,
+      "pubasst": 2.1,
+      "medicaid": 17.4
+    },
+    "35": {
+      "abbr": "NM",
+      "pov": 15.8,
+      "child_pov": 20.5,
+      "mhi": 67838,
+      "snap": 19.3,
+      "ssi": 6.4,
+      "pubasst": 3.1,
+      "medicaid": 32.9
+    },
+    "36": {
+      "abbr": "NY",
+      "pov": 14.0,
+      "child_pov": 17.9,
+      "mhi": 85768,
+      "snap": 16.2,
+      "ssi": 6.0,
+      "pubasst": 4.3,
+      "medicaid": 29.1
+    },
+    "37": {
+      "abbr": "NC",
+      "pov": 12.6,
+      "child_pov": 16.6,
+      "mhi": 74055,
+      "snap": 12.0,
+      "ssi": 4.5,
+      "pubasst": 1.7,
+      "medicaid": 20.1
+    },
+    "38": {
+      "abbr": "ND",
+      "pov": 10.8,
+      "child_pov": 11.7,
+      "mhi": 80132,
+      "snap": 6.4,
+      "ssi": 3.5,
+      "pubasst": 1.8,
+      "medicaid": 11.6
+    },
+    "39": {
+      "abbr": "OH",
+      "pov": 12.6,
+      "child_pov": 16.4,
+      "mhi": 72259,
+      "snap": 11.6,
+      "ssi": 5.7,
+      "pubasst": 1.9,
+      "medicaid": 20.4
+    },
+    "40": {
+      "abbr": "OK",
+      "pov": 14.8,
+      "child_pov": 18.7,
+      "mhi": 66124,
+      "snap": 14.0,
+      "ssi": 5.7,
+      "pubasst": 2.7,
+      "medicaid": 21.5
+    },
+    "41": {
+      "abbr": "OR",
+      "pov": 11.7,
+      "child_pov": 13.0,
+      "mhi": 84897,
+      "snap": 16.4,
+      "ssi": 4.6,
+      "pubasst": 3.8,
+      "medicaid": 24.5
+    },
+    "42": {
+      "abbr": "PA",
+      "pov": 11.6,
+      "child_pov": 15.3,
+      "mhi": 77532,
+      "snap": 15.1,
+      "ssi": 5.5,
+      "pubasst": 3.3,
+      "medicaid": 20.3
+    },
+    "44": {
+      "abbr": "RI",
+      "pov": 12.0,
+      "child_pov": 15.5,
+      "mhi": 83250,
+      "snap": 13.9,
+      "ssi": 6.0,
+      "pubasst": 3.8,
+      "medicaid": 23.6
+    },
+    "45": {
+      "abbr": "SC",
+      "pov": 13.3,
+      "child_pov": 18.1,
+      "mhi": 72507,
+      "snap": 9.5,
+      "ssi": 4.5,
+      "pubasst": 1.1,
+      "medicaid": 18.8
+    },
+    "46": {
+      "abbr": "SD",
+      "pov": 10.5,
+      "child_pov": 11.9,
+      "mhi": 77494,
+      "snap": 7.1,
+      "ssi": 3.7,
+      "pubasst": 1.6,
+      "medicaid": 13.4
+    },
+    "47": {
+      "abbr": "TN",
+      "pov": 13.3,
+      "child_pov": 18.4,
+      "mhi": 72007,
+      "snap": 9.4,
+      "ssi": 5.1,
+      "pubasst": 1.7,
+      "medicaid": 18.5
+    },
+    "48": {
+      "abbr": "TX",
+      "pov": 13.4,
+      "child_pov": 17.9,
+      "mhi": 79723,
+      "snap": 10.3,
+      "ssi": 4.4,
+      "pubasst": 1.7,
+      "medicaid": 14.9
+    },
+    "49": {
+      "abbr": "UT",
+      "pov": 8.4,
+      "child_pov": 8.6,
+      "mhi": 96398,
+      "snap": 4.6,
+      "ssi": 3.1,
+      "pubasst": 1.5,
+      "medicaid": 10.4
+    },
+    "50": {
+      "abbr": "VT",
+      "pov": 9.3,
+      "child_pov": 9.7,
+      "mhi": 82836,
+      "snap": 10.6,
+      "ssi": 4.9,
+      "pubasst": 4.1,
+      "medicaid": 20.4
+    },
+    "51": {
+      "abbr": "VA",
+      "pov": 9.8,
+      "child_pov": 11.8,
+      "mhi": 92116,
+      "snap": 9.2,
+      "ssi": 4.2,
+      "pubasst": 2.2,
+      "medicaid": 15.9
+    },
+    "53": {
+      "abbr": "WA",
+      "pov": 10.0,
+      "child_pov": 11.5,
+      "mhi": 99309,
+      "snap": 11.1,
+      "ssi": 4.5,
+      "pubasst": 3.3,
+      "medicaid": 19.6
+    },
+    "54": {
+      "abbr": "WV",
+      "pov": 16.2,
+      "child_pov": 20.1,
+      "mhi": 60662,
+      "snap": 17.0,
+      "ssi": 7.2,
+      "pubasst": 3.9,
+      "medicaid": 25.6
+    },
+    "55": {
+      "abbr": "WI",
+      "pov": 10.3,
+      "child_pov": 12.2,
+      "mhi": 77557,
+      "snap": 11.0,
+      "ssi": 4.1,
+      "pubasst": 1.8,
+      "medicaid": 17.2
+    },
+    "56": {
+      "abbr": "WY",
+      "pov": 10.0,
+      "child_pov": 10.2,
+      "mhi": 76975,
+      "snap": 5.6,
+      "ssi": 3.7,
+      "pubasst": 1.5,
+      "medicaid": 11.8
+    }
+  }
+}
