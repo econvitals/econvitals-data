@@ -1,0 +1,112 @@
+# Risk Monitor — risk register.
+#
+# The judgment layer. These are AUTO-DRAFTED starting points, not Jason's settled
+# views — edit freely. Each entry becomes a labelled dot on the probability x
+# severity scatter (color = category, arrow = trend). The monthly "what changed"
+# block picks up entries whose trend is `up`, `down`, or `new`.
+#
+# Fields:
+#   probability : a numeric range like "10-25%" (parsed to a midpoint for the plot)
+#   horizon     : the window the probability refers to (e.g. "12m")
+#   severity    : low | medium | high   (y-axis)
+#   trend       : up | down | flat | new | retired   (month-over-month arrow)
+#   geography   : us | global
+#   category    : fiscal | financial | real | inflation | policy | geopolitical
+
+meta:
+  as_of: "2026-07-16"
+  horizon_default: "12m"
+
+risks:
+  - id: fiscal-repricing
+    name: "Disorderly fiscal repricing"
+    geography: us
+    category: fiscal
+    probability: "10-20%"
+    horizon: "12m"
+    severity: high
+    trend: up
+    blurb: >
+      A buyers'-strike moment at a Treasury auction — term premium jumps, the
+      long end sells off, and it feeds into mortgages and credit. Interest is
+      already ~21% of federal receipts and rising.
+    triggers: ["weak auction bid-to-cover", "term-premium spike", "debt-limit brinkmanship"]
+    watching: ["Federal interest / receipts", "Yield-curve slope (10y − 3m)"]
+    last_changed: "2026-07-16"
+
+  - id: basis-trade-unwind
+    name: "Leveraged Treasury basis-trade unwind"
+    geography: financial
+    category: financial
+    probability: "10-20%"
+    horizon: "12m"
+    severity: high
+    trend: flat
+    blurb: >
+      Hedge funds run a large, highly levered long-cash / short-futures Treasury
+      trade. A funding shock or margin spike could force a fire-sale into thin
+      liquidity, echoing March 2020.
+    triggers: ["SOFR spike", "repo dislocation", "sharp rise in rate volatility"]
+    watching: ["SOFR − IORB spread", "Equity volatility (VIX)"]
+    last_changed: "2026-06-15"
+
+  - id: tariff-inflation
+    name: "Tariff-driven inflation resurgence"
+    geography: us
+    category: inflation
+    probability: "20-35%"
+    horizon: "12m"
+    severity: medium
+    trend: up
+    blurb: >
+      Tariff pass-through and supply frictions push core goods prices back up,
+      un-anchoring expectations and boxing in the Fed. Breakevens are the tell.
+    triggers: ["new tariff rounds", "rising 5y5y breakeven", "supply-chain stress"]
+    watching: ["5y5y forward inflation breakeven"]
+    last_changed: "2026-07-16"
+
+  - id: equity-air-pocket
+    name: "AI-led equity air-pocket"
+    geography: global
+    category: financial
+    probability: "20-35%"
+    horizon: "12m"
+    severity: medium
+    trend: flat
+    blurb: >
+      Equity market cap sits near 218% of GDP, concentrated in a handful of AI
+      names. A growth or capex disappointment could trigger a sharp,
+      concentration-amplified drawdown.
+    triggers: ["AI capex guidance cuts", "megacap earnings miss", "rate shock"]
+    watching: ["Equity market cap / GDP", "Equity volatility (VIX)"]
+    last_changed: "2026-06-15"
+
+  - id: cre-credit
+    name: "Commercial real-estate credit strain"
+    geography: us
+    category: real
+    probability: "15-30%"
+    horizon: "12m"
+    severity: medium
+    trend: down
+    blurb: >
+      Office and multifamily refinancing at higher rates pressures regional-bank
+      balance sheets. Slow-burn rather than acute, and easing at the margin.
+    triggers: ["CMBS delinquency rise", "regional-bank stress", "refi wall"]
+    watching: ["Corporate credit spread (Baa − 10y)"]
+    last_changed: "2026-07-16"
+
+  - id: geopolitical-oil
+    name: "Geopolitical oil shock"
+    geography: global
+    category: geopolitical
+    probability: "15-25%"
+    horizon: "12m"
+    severity: medium
+    trend: up
+    blurb: >
+      An escalation that disrupts supply spikes crude and oil volatility, a
+      stagflationary impulse. Oil-vol (OVX) has already jumped this month.
+    triggers: ["supply-route disruption", "OVX spike", "sanctions escalation"]
+    watching: ["Oil volatility (OVX)"]
+    last_changed: "2026-07-16"

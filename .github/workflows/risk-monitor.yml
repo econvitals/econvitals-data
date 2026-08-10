@@ -1,0 +1,51 @@
+name: Risk Monitor refresh
+
+# Daily refresh of lab/risk-monitor/data.json. All gauges are FRED pulls; the
+# editorial register.yaml + read.md (in builders/risk-monitor/) are re-baked in each
+# run (PyYAML). Commits the changed JSON only. Fast market gauges move daily.
+# Relocated from econvitals/site (2026-08-10, chart-system rebuild Stage B): the data
+# publishes from this repo via raw URLs — no Netlify deploy is involved.
+# Secrets required: FRED_API_KEY.
+
+on:
+  schedule:
+    - cron: "30 22 * * *"   # 22:30 UTC ~ 6:30pm ET — after the housing job, races handled below
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: risk-monitor
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r builders/risk-monitor/requirements.txt
+      - name: Fetch risk data (FRED)
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python builders/risk-monitor/fetch_data.py
+      - name: Commit refreshed data
+        run: |
+          git config user.name "risk-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add lab/risk-monitor/data.json
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "risk-monitor: refresh data"
+          # push can race with the other refresh jobs / fleet-host auto-pushes;
+          # rebase on the latest main and retry rather than failing the run
+          for i in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            echo "push rejected (attempt $i) — rebasing on latest main and retrying"
+            git pull --rebase --autostash origin main
+          done
+          echo "risk-monitor: push still failing after 5 attempts" >&2
+          exit 1

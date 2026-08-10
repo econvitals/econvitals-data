@@ -1,0 +1,50 @@
+name: Fed dot-plot refresh
+
+# Rebuilds tools/fed-dot-plot/data.json from the Fed's SEP "Figure 2" pages and the
+# FRED actual-rate overlay, committing only on change. The dots update 4x/year (Mar,
+# Jun, Sep, Dec — released Wednesday 2pm ET), so a Wednesday run publishes the new dot
+# plot same-day; Thursday backs it up and Sunday keeps the actual rate current.
+# Relocated from econvitals/site (2026-08-10, chart-system rebuild Stage B): the builder
+# now lives in builders/fed-dot-plot/ and the data publishes from this repo via raw URLs.
+# Secrets required: FRED_API_KEY.
+
+on:
+  schedule:
+    - cron: "30 20 * * 0,3,4"   # Wed, Thu & Sun 20:30 UTC (~3:30/4:30pm ET) — after the 2pm SEP release
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fed-dot-plot
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r builders/fed-dot-plot/requirements.txt
+      - name: Build dot-plot data
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python builders/fed-dot-plot/build.py
+      - name: Commit refreshed data
+        run: |
+          git config user.name "fed-dots-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tools/fed-dot-plot/data.json
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "fed-dots: refresh dot-plot data"
+          for i in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            echo "push rejected (attempt $i) — rebasing on latest main and retrying"
+            git pull --rebase --autostash origin main
+          done
+          echo "fed-dots: push still failing after 5 attempts" >&2
+          exit 1

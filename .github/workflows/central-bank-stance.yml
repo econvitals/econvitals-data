@@ -1,0 +1,46 @@
+name: Central Bank Stance refresh
+
+# Rebuilds tools/central-bank-stance/data.json (keyless — BIS policy rates + a
+# transparent phase heuristic). Relocated from econvitals/site (2026-08-10, chart-system
+# rebuild Stage B): the builder now lives in builders/central-bank-stance/ and the data
+# publishes from this repo via raw URLs — no Netlify deploy is involved.
+# Secrets required: none.
+
+on:
+  schedule:
+    - cron: "10 7 * * *"   # once daily; policy-rate timing-of-day is irrelevant
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: central-bank-stance
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install pyyaml
+      - name: Build Central Bank Stance Matrix data (BIS, keyless)
+        run: python builders/central-bank-stance/build.py
+      - name: Commit refreshed data
+        run: |
+          git config user.name "cb-stance-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tools/central-bank-stance/data.json
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "cb-stance: refresh policy rates"
+          for i in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            echo "push rejected (attempt $i) — rebasing on latest main and retrying"
+            git pull --rebase --autostash origin main
+          done
+          echo "cb-stance: push still failing after 5 attempts" >&2
+          exit 1

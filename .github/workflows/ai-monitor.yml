@@ -1,0 +1,53 @@
+name: AI Monitor refresh
+
+# Daily refresh of lab/ai-monitor/data.json — NEW with the chart-system rebuild
+# Stage B (2026-08-10): the ai-monitor lab page previously had a fetcher but no
+# scheduled workflow, so it never auto-refreshed. The fetcher is pure Python stdlib
+# (FRED, Census C30, Indeed Hiring Lab, Yahoo Finance, SSGA SPY holdings); every
+# auto block is fetched under try/except and carried forward from the existing
+# data.json on failure, so one dead source never blanks the page. Manual series
+# come from the committed lab/ai-monitor/manual.json (see
+# builders/ai-monitor/manual_SOURCES.md). No wall-clock timestamp is written, so a
+# no-op run produces no diff and no commit.
+# Secrets required: FRED_API_KEY.
+
+on:
+  schedule:
+    - cron: "0 23 * * *"   # 23:00 UTC ~ 7pm ET — after the housing (22:00) and risk (22:30) jobs
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-monitor
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Rebuild data.json (FRED + public sources + manual)
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python builders/ai-monitor/fetch_data.py
+      - name: Commit refreshed data
+        run: |
+          git config user.name "ai-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add lab/ai-monitor/data.json
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "ai-monitor: refresh data"
+          # push can race with the other refresh jobs / fleet-host auto-pushes;
+          # rebase on the latest main and retry rather than failing the run
+          for i in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            echo "push rejected (attempt $i) — rebasing on latest main and retrying"
+            git pull --rebase --autostash origin main
+          done
+          echo "ai-monitor: push still failing after 5 attempts" >&2
+          exit 1

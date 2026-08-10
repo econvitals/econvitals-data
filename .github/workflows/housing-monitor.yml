@@ -1,0 +1,53 @@
+name: Housing Monitor refresh
+
+# Rebuilds lab/housing-monitor/data.json, committing only on change.
+# Relocated from econvitals/site (2026-08-10, chart-system rebuild Stage B): the builder
+# now lives in builders/housing-monitor/ and the data publishes from this repo via raw
+# URLs — no Netlify deploy is involved.
+#
+# FRED-ONLY here: econvitals is deliberately Macrobond-free (Macrobond is retired),
+# so no macrolib/Macrobond secrets. fetch_housing.py's Macrobond attempt always
+# fails and falls through to FRED; no synthetic (FRED-less) series remain as of
+# 2026-07-30 (FRED added native equivalents for the last two).
+# Secrets required: FRED_API_KEY.
+
+on:
+  schedule:
+    - cron: "0 22 * * *"   # 22:00 UTC = 6pm ET (EDT) / 5pm ET (EST) — close enough
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: housing-monitor
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r builders/housing-monitor/requirements.txt
+      - name: Fetch housing data (FRED)
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python builders/housing-monitor/fetch_housing.py
+      - name: Commit refreshed data
+        run: |
+          git config user.name "housing-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add lab/housing-monitor/data.json
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "housing-monitor: refresh data"
+          for i in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            echo "push rejected (attempt $i) — rebasing on latest main and retrying"
+            git pull --rebase --autostash origin main
+          done
+          echo "housing-monitor: push still failing after 5 attempts" >&2
+          exit 1

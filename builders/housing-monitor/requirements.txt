@@ -1,0 +1,4 @@
+# Dependencies for fetch_housing.py (the daily FRED refresh; Macrobond retired 2026-07-25).
+# Deliberately tiny: FRED REST, no SDKs.
+requests>=2.31
+PyYAML>=6.0

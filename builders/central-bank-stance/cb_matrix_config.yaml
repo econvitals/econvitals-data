@@ -1,0 +1,108 @@
+# Global Central Bank Stance Matrix — manual overrides
+# =====================================================
+# This is the ONLY file you hand-edit after the build. `build.py` reads it on
+# every run and merges it over the data pulled from BIS. Nothing here touches
+# code or thresholds in build.py.
+#
+# What you can set per bank:
+#   phase_override : force the cycle phase   (Hiking | On Hold | Cutting | Paused)
+#   next_move      : a desk view of the next expected move (free text). If unset,
+#                    the page shows an automatic qualitative lean derived from the
+#                    bank's current phase. Set this to a real OIS/market call when
+#                    you have one — e.g. "v 25bp by Sep 2026".
+#   next_move_edited : optional ISO date stamp shown next to a desk view.
+#
+# `lookback_months` is the window used to auto-classify the cycle phase from the
+# most recent rate change (a cut/hike inside the window = Cutting/Hiking; older
+# than the window but within a year = On Hold; older than a year = Paused).
+
+lookback_months: 6
+
+# Display order + identity for each bank. `code` is the BIS REF_AREA.
+banks:
+  - code: "US"
+    name: Federal Reserve
+    country: United States
+    flag: "\U0001F1FA\U0001F1F8"
+    instrument: Federal Funds Rate (target range)
+    # phase_override: On Hold
+    # next_move: "v 25bp by Dec 2026"
+    # next_move_edited: 2026-06-16
+
+  - code: "XM"
+    name: European Central Bank
+    country: Euro area
+    flag: "\U0001F1EA\U0001F1FA"
+    instrument: Deposit Facility Rate
+
+  - code: "JP"
+    name: Bank of Japan
+    country: Japan
+    flag: "\U0001F1EF\U0001F1F5"
+    instrument: Overnight Call Rate
+    # BoJ is the classic "on hold but with a tightening bias" case — set a
+    # phase_override / next_move here when the data-driven phase reads wrong.
+
+  - code: "GB"
+    name: Bank of England
+    country: United Kingdom
+    flag: "\U0001F1EC\U0001F1E7"
+    instrument: Bank Rate
+
+  - code: "CA"
+    name: Bank of Canada
+    country: Canada
+    flag: "\U0001F1E8\U0001F1E6"
+    instrument: Overnight Rate
+
+  - code: "AU"
+    name: Reserve Bank of Australia
+    country: Australia
+    flag: "\U0001F1E6\U0001F1FA"
+    instrument: Cash Rate
+    # One +25bp move shouldn't read as a hiking cycle — hold the stance neutral
+    # until there's a real path. Remove these to let BIS auto-classify again.
+    phase_override: On Hold
+    next_move: "No change expected; data-dependent"
+    next_move_edited: 2026-06-16
+
+  - code: "CH"
+    name: Swiss National Bank
+    country: Switzerland
+    flag: "\U0001F1E8\U0001F1ED"
+    instrument: SNB Policy Rate
+
+  - code: "SE"
+    name: Sveriges Riksbank
+    country: Sweden
+    flag: "\U0001F1F8\U0001F1EA"
+    instrument: Policy Rate
+
+  - code: "NO"
+    name: Norges Bank
+    country: Norway
+    flag: "\U0001F1F3\U0001F1F4"
+    instrument: Policy Rate
+    # One +25bp move shouldn't read as a hiking cycle — hold the stance neutral
+    # until there's a real path. Remove these to let BIS auto-classify again.
+    phase_override: On Hold
+    next_move: "No change expected; data-dependent"
+    next_move_edited: 2026-06-16
+
+  - code: "NZ"
+    name: Reserve Bank of New Zealand
+    country: New Zealand
+    flag: "\U0001F1F3\U0001F1FF"
+    instrument: Official Cash Rate
+
+  - code: "CN"
+    name: People's Bank of China
+    country: China
+    flag: "\U0001F1E8\U0001F1F3"
+    instrument: 1-Year Loan Prime Rate (LPR)
+
+  - code: "IN"
+    name: Reserve Bank of India
+    country: India
+    flag: "\U0001F1EE\U0001F1F3"
+    instrument: Policy Repo Rate
