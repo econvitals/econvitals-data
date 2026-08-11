@@ -1,0 +1,193 @@
+{
+ "generated_at": "2026-08-11T13:31:10+00:00",
+ "as_of": "2026-08-10",
+ "n_rows": 14,
+ "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
+ "groups": [
+  {
+   "name": "Rates",
+   "rows": [
+    {
+     "label": "5-year",
+     "value": 4.35,
+     "as_of": "2026-08-07",
+     "is_yield": true,
+     "provenance": "hard",
+     "source_key": "fred:DGS5",
+     "chg_1d": -0.05,
+     "chg_1w": -0.1,
+     "chg_ytd": 0.61
+    },
+    {
+     "label": "10-year",
+     "value": 4.72,
+     "as_of": "2026-08-10",
+     "is_yield": true,
+     "provenance": "hard",
+     "source_key": "ust:par/10Y",
+     "chg_1d": 0.07,
+     "chg_1w": 0.02,
+     "chg_ytd": 0.53
+    },
+    {
+     "label": "30-year",
+     "value": 5.19,
+     "as_of": "2026-08-07",
+     "is_yield": true,
+     "provenance": "hard",
+     "source_key": "fred:DGS30",
+     "chg_1d": -0.03,
+     "chg_1w": -0.08,
+     "chg_ytd": 0.33
+    },
+    {
+     "label": "30-year mortgage",
+     "value": 6.69,
+     "as_of": "2026-08-06",
+     "is_yield": true,
+     "provenance": "hard",
+     "source_key": "fred:MORTGAGE30US",
+     "chg_1d": null,
+     "chg_1w": 0.26,
+     "chg_ytd": 0.53
+    }
+   ]
+  },
+  {
+   "name": "Credit & risk",
+   "rows": [
+    {
+     "label": "VIX",
+     "value": 14.9,
+     "as_of": "2026-08-07",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:VIXCLS",
+     "chg_1d": -0.25,
+     "chg_1w": -1.09,
+     "chg_ytd": 0.39
+    },
+    {
+     "label": "NFCI",
+     "value": -0.53,
+     "as_of": "2026-07-31",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:NFCI",
+     "chg_1d": null,
+     "chg_1w": -0.02,
+     "chg_ytd": 0.02
+    }
+   ]
+  },
+  {
+   "name": "FX",
+   "rows": [
+    {
+     "label": "EUR/USD",
+     "value": 1.1559,
+     "as_of": "2026-08-07",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:DEXUSEU",
+     "chg_1d": -0.3,
+     "chg_1w": -0.3,
+     "chg_ytd": 1.5,
+     "pct_change": true
+    },
+    {
+     "label": "GBP/USD",
+     "value": 1.3498,
+     "as_of": "2026-08-07",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:DEXUSUK",
+     "chg_1d": -0.3,
+     "chg_1w": -0.2,
+     "chg_ytd": -0.1,
+     "pct_change": true
+    },
+    {
+     "label": "USD/JPY",
+     "value": 157.5,
+     "as_of": "2026-08-07",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:DEXJPUS",
+     "chg_1d": -0.6,
+     "chg_1w": -1.0,
+     "chg_ytd": 0.5,
+     "pct_change": true
+    },
+    {
+     "label": "USD/CHF",
+     "value": 0.8078,
+     "as_of": "2026-08-07",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:DEXSZUS",
+     "chg_1d": -0.6,
+     "chg_1w": -0.0,
+     "chg_ytd": 2.0,
+     "pct_change": true
+    },
+    {
+     "label": "USD/CAD",
+     "value": 1.3933,
+     "as_of": "2026-08-07",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:DEXCAUS",
+     "chg_1d": -0.7,
+     "chg_1w": -0.7,
+     "chg_ytd": 1.4,
+     "pct_change": true
+    },
+    {
+     "label": "USD/CNY",
+     "value": 6.75,
+     "as_of": "2026-08-07",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:DEXCHUS",
+     "chg_1d": -0.0,
+     "chg_1w": -0.1,
+     "chg_ytd": -3.4,
+     "pct_change": true
+    }
+   ]
+  },
+  {
+   "name": "Commodities",
+   "rows": [
+    {
+     "label": "Brent",
+     "value": 88.9,
+     "as_of": "2026-08-03",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:DCOILBRENTEU",
+     "chg_1d": -8.0,
+     "chg_1w": -2.9,
+     "chg_ytd": 26.9
+    }
+   ]
+  },
+  {
+   "name": "Equities",
+   "rows": [
+    {
+     "label": "S&P 500",
+     "value": 7758.0,
+     "as_of": "2026-08-07",
+     "is_yield": false,
+     "provenance": "hard",
+     "source_key": "fred:SP500",
+     "chg_1d": 48.0,
+     "chg_1w": 268.0,
+     "chg_ytd": 899.0
+    }
+   ]
+  }
+ ]
+}
