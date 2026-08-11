@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-11T12:32:27+00:00",
+    "generated_at": "2026-08-11T12:40:26+00:00",
     "run_date": "2026-08-11",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -77,7 +77,7 @@
           "label": "10-year",
           "value": 4.7,
           "display": "4.70%",
-          "period": "2026-08-10",
+          "period": "2026-08-11",
           "change": 0.51,
           "change_display": "+0.51 YTD",
           "provenance": "hard"
@@ -102,11 +102,11 @@
         },
         {
           "label": "Brent",
-          "value": 87.77,
+          "value": 87.95,
           "display": "$88",
           "period": "2026-08-11",
-          "change": 44.5,
-          "change_display": "+44.5% YTD",
+          "change": 44.8,
+          "change_display": "+44.8% YTD",
           "provenance": "hard"
         },
         {
@@ -12000,31 +12000,31 @@
             "rows": [
               {
                 "label": "5-year",
-                "value": 4.41,
-                "as_of": "2026-08-10",
-                "chg_1d": 0.04,
-                "chg_1w": 0.01,
-                "chg_ytd": 0.67,
+                "value": 4.4,
+                "as_of": "2026-08-11",
+                "chg_1d": -0.0,
+                "chg_1w": 0.07,
+                "chg_ytd": 0.66,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "10-year",
                 "value": 4.7,
-                "as_of": "2026-08-10",
-                "chg_1d": 0.04,
-                "chg_1w": 0.01,
+                "as_of": "2026-08-11",
+                "chg_1d": 0.0,
+                "chg_1w": 0.07,
                 "chg_ytd": 0.51,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "30-year",
-                "value": 5.24,
-                "as_of": "2026-08-10",
-                "chg_1d": 0.03,
-                "chg_1w": 0.01,
-                "chg_ytd": 0.38,
+                "value": 5.25,
+                "as_of": "2026-08-11",
+                "chg_1d": 0.01,
+                "chg_1w": 0.06,
+                "chg_ytd": 0.39,
                 "is_yield": true,
                 "provenance": "hard"
               },
@@ -12045,11 +12045,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 15.46,
+                "value": 15.56,
                 "as_of": "2026-08-11",
-                "chg_1d": 0.0,
-                "chg_1w": -1.04,
-                "chg_ytd": 0.95,
+                "chg_1d": 0.1,
+                "chg_1w": -0.94,
+                "chg_ytd": 1.05,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -12070,18 +12070,18 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 99.88,
+                "value": 99.84,
                 "as_of": "2026-08-11",
-                "chg_1d": 0.1,
+                "chg_1d": 0.0,
                 "chg_1w": -0.0,
-                "chg_ytd": 1.5,
+                "chg_ytd": 1.4,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1541,
+                "value": 1.1538,
                 "as_of": "2026-08-11",
                 "chg_1d": 0.0,
                 "chg_1w": 0.1,
@@ -12092,9 +12092,9 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3501,
+                "value": 1.3497,
                 "as_of": "2026-08-11",
-                "chg_1d": 0.0,
+                "chg_1d": 0.1,
                 "chg_1w": -0.2,
                 "chg_ytd": -0.2,
                 "is_yield": false,
@@ -12114,21 +12114,21 @@
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8104,
+                "value": 0.8107,
                 "as_of": "2026-08-11",
-                "chg_1d": 0.0,
+                "chg_1d": 0.1,
                 "chg_1w": 0.4,
-                "chg_ytd": 2.3,
+                "chg_ytd": 2.4,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CAD",
-                "value": 1.393,
+                "value": 1.3934,
                 "as_of": "2026-08-11",
-                "chg_1d": -0.1,
-                "chg_1w": -0.6,
+                "chg_1d": -0.0,
+                "chg_1w": -0.5,
                 "chg_ytd": 1.6,
                 "is_yield": false,
                 "provenance": "hard",
@@ -12152,31 +12152,31 @@
             "rows": [
               {
                 "label": "WTI",
-                "value": 82.7,
+                "value": 82.4,
                 "as_of": "2026-08-11",
-                "chg_1d": 0.5,
-                "chg_1w": 6.9,
-                "chg_ytd": 25.3,
+                "chg_1d": 0.3,
+                "chg_1w": 6.6,
+                "chg_ytd": 25.1,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent",
-                "value": 87.9,
+                "value": 87.8,
                 "as_of": "2026-08-11",
-                "chg_1d": 0.2,
+                "chg_1d": 0.1,
                 "chg_1w": 8.5,
-                "chg_ytd": 26.8,
+                "chg_ytd": 26.7,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas",
-                "value": 2.78,
+                "value": 2.8,
                 "as_of": "2026-08-11",
-                "chg_1d": -0.02,
-                "chg_1w": 0.1,
-                "chg_ytd": -0.84,
+                "chg_1d": 0.01,
+                "chg_1w": 0.12,
+                "chg_ytd": -0.82,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -12192,21 +12192,21 @@
               },
               {
                 "label": "Silver",
-                "value": 65.22,
+                "value": 65.07,
                 "as_of": "2026-08-11",
-                "chg_1d": 0.12,
-                "chg_1w": 5.17,
-                "chg_ytd": -5.33,
+                "chg_1d": -0.03,
+                "chg_1w": 5.02,
+                "chg_ytd": -5.48,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper",
-                "value": 6.65,
+                "value": 6.66,
                 "as_of": "2026-08-11",
                 "chg_1d": 0.06,
-                "chg_1w": 0.03,
-                "chg_ytd": 1.01,
+                "chg_1w": 0.04,
+                "chg_ytd": 1.02,
                 "is_yield": false,
                 "provenance": "hard"
               }
@@ -14301,7 +14301,7 @@
           },
           {
             "country": "Brazil",
-            "cpi": 4.6
+            "cpi": 4.4
           }
         ],
         "series": [
@@ -14427,11 +14427,11 @@
             "gdp_qq": 4.5,
             "gdp": 1.8,
             "unemp": 5.4,
-            "cpi": 4.6,
+            "cpi": 4.4,
             "core": 4.3,
             "ten": 14.61,
             "pol": 14.25,
-            "asof": "Jun 2026"
+            "asof": "Jul 2026"
           }
         ],
         "footnote": "Core inflation is each country's own measure and the definitions differ. The United States is CPI less food and energy; Canada is Statistics Canada's CPI less food and energy (the Bank of Canada's own CPI-trim and CPI-median are a different definition and are not used here); the United Kingdom, the euro area, France, Germany and Italy are the harmonised index less energy, food, alcohol and tobacco; Japan is the CPI less fresh food (Japan's headline \"core\"). Brazil is the exception: it shows the IPCA-MS, Banco Central do Brasil's smoothed TRIMMED MEAN (SGS 4466), which excludes whatever moved most in a given month rather than a fixed list of items \u2014 so it is not strictly comparable with the cells above it. Brazil's own ex-food-and-energy core, the closest like-for-like measure, reads 4.7%. India's core is blank on purpose: it publishes no official core index. Japan's inflation comes from Japan's Statistics Dashboard, resolved to the current base year (the index rebases to a 2025 base in August 2026). The euro-area GDP figures cover all 21 members, including Croatia and Bulgaria; until 1 August 2026 they were drawn from a 19-member measure that predates both and read about 0.1 point lower."
