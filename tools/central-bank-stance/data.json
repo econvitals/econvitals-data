@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-12T08:26:35+00:00",
+    "generated_at": "2026-08-13T08:39:21+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "source_url": "https://data.bis.org/topics/CBPOL",
@@ -8,7 +8,7 @@
     "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path."
   },
   "summary": {
-    "as_of": "2026-08-04",
+    "as_of": "2026-08-11",
     "total": 12,
     "cutting": 0,
     "hold": 9,
@@ -24,7 +24,7 @@
       "instrument": "Federal Funds Rate (target range)",
       "rate": 3.625,
       "rate_display": "3.50–3.75%",
-      "as_of": "2026-08-04",
+      "as_of": "2026-08-11",
       "last_move": {
         "date": "2025-12-11",
         "delta_bps": -25,
@@ -86,7 +86,7 @@
           "value": 3.625
         },
         {
-          "date": "2026-08-04",
+          "date": "2026-08-11",
           "value": 3.625
         }
       ]
@@ -99,7 +99,7 @@
       "instrument": "Deposit Facility Rate",
       "rate": 2.25,
       "rate_display": "2.25%",
-      "as_of": "2026-08-04",
+      "as_of": "2026-08-11",
       "last_move": {
         "date": "2026-06-17",
         "delta_bps": 25,
@@ -181,7 +181,7 @@
           "value": 2.25
         },
         {
-          "date": "2026-08-04",
+          "date": "2026-08-11",
           "value": 2.25
         }
       ]
@@ -194,7 +194,7 @@
       "instrument": "Overnight Call Rate",
       "rate": 1.0,
       "rate_display": "1.00%",
-      "as_of": "2026-08-04",
+      "as_of": "2026-08-11",
       "last_move": {
         "date": "2026-06-17",
         "delta_bps": 25,
@@ -236,7 +236,7 @@
           "value": 1.0
         },
         {
-          "date": "2026-08-04",
+          "date": "2026-08-11",
           "value": 1.0
         }
       ]
@@ -249,7 +249,7 @@
       "instrument": "Bank Rate",
       "rate": 3.75,
       "rate_display": "3.75%",
-      "as_of": "2026-08-03",
+      "as_of": "2026-08-10",
       "last_move": {
         "date": "2025-12-18",
         "delta_bps": -25,
@@ -315,7 +315,7 @@
           "value": 3.75
         },
         {
-          "date": "2026-08-03",
+          "date": "2026-08-10",
           "value": 3.75
         }
       ]
@@ -328,7 +328,7 @@
       "instrument": "Overnight Rate",
       "rate": 2.25,
       "rate_display": "2.25%",
-      "as_of": "2026-08-03",
+      "as_of": "2026-08-10",
       "last_move": {
         "date": "2025-10-30",
         "delta_bps": -25,
@@ -398,7 +398,7 @@
           "value": 2.25
         },
         {
-          "date": "2026-08-03",
+          "date": "2026-08-10",
           "value": 2.25
         }
       ]
@@ -490,7 +490,7 @@
       "instrument": "SNB Policy Rate",
       "rate": 0.0,
       "rate_display": "0.00%",
-      "as_of": "2026-08-04",
+      "as_of": "2026-08-11",
       "last_move": {
         "date": "2025-06-20",
         "delta_bps": -25,
@@ -544,7 +544,7 @@
           "value": 0.0
         },
         {
-          "date": "2026-08-04",
+          "date": "2026-08-11",
           "value": 0.0
         }
       ]
@@ -557,7 +557,7 @@
       "instrument": "Policy Rate",
       "rate": 1.75,
       "rate_display": "1.75%",
-      "as_of": "2026-08-04",
+      "as_of": "2026-08-11",
       "last_move": {
         "date": "2025-10-01",
         "delta_bps": -25,
@@ -627,7 +627,7 @@
           "value": 1.75
         },
         {
-          "date": "2026-08-04",
+          "date": "2026-08-11",
           "value": 1.75
         }
       ]
@@ -711,7 +711,7 @@
       "instrument": "Official Cash Rate",
       "rate": 2.5,
       "rate_display": "2.50%",
-      "as_of": "2026-07-31",
+      "as_of": "2026-08-07",
       "last_move": {
         "date": "2026-07-09",
         "delta_bps": 25,
@@ -785,7 +785,7 @@
           "value": 2.5
         },
         {
-          "date": "2026-07-31",
+          "date": "2026-08-07",
           "value": 2.5
         }
       ]
