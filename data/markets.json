@@ -1,12 +1,23 @@
 {
- "generated_at": "2026-08-14T20:00:05+00:00",
+ "generated_at": "2026-08-14T20:30:04+00:00",
  "as_of": "2026-08-13",
- "n_rows": 14,
+ "n_rows": 18,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
  "groups": [
   {
    "name": "Rates",
    "rows": [
+    {
+     "label": "2-year",
+     "value": 4.2,
+     "as_of": "2026-08-12",
+     "is_yield": true,
+     "provenance": "hard",
+     "source_key": "fred:DGS2",
+     "chg_1d": -0.02,
+     "chg_1w": 0.02,
+     "chg_ytd": 0.73
+    },
     {
      "label": "5-year",
      "value": 4.38,
@@ -50,6 +61,44 @@
      "chg_1d": null,
      "chg_1w": 0.26,
      "chg_ytd": 0.53
+    },
+    {
+     "label": "2s10s",
+     "value": 0.48,
+     "as_of": "2026-08-12",
+     "is_yield": true,
+     "provenance": "hard",
+     "source_key": "ust:par/10Y \u2212 fred:DGS2",
+     "chg_1d": -0.0,
+     "chg_1w": 0.03,
+     "chg_ytd": -0.24
+    }
+   ]
+  },
+  {
+   "name": "Inflation-priced",
+   "rows": [
+    {
+     "label": "Real 10y",
+     "value": 2.39,
+     "as_of": "2026-08-13",
+     "is_yield": true,
+     "provenance": "hard",
+     "source_key": "ust:real/10Y",
+     "chg_1d": -0.03,
+     "chg_1w": -0.04,
+     "chg_ytd": 0.45
+    },
+    {
+     "label": "10y breakeven",
+     "value": 2.24,
+     "as_of": "2026-08-13",
+     "is_yield": true,
+     "provenance": "hard",
+     "source_key": "ust:par/10Y \u2212 ust:real/10Y",
+     "chg_1d": -0.02,
+     "chg_1w": -0.02,
+     "chg_ytd": -0.01
     }
    ]
   },
