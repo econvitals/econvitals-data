@@ -297,22 +297,6 @@
       "latest_date": "2026-06-01"
     },
     {
-      "slug": "china-current-account-gdp",
-      "category": "International/China",
-      "title": "China: Current Account Balance",
-      "type": "line",
-      "units": "Percent of GDP",
-      "latest_date": "2026-01-01"
-    },
-    {
-      "slug": "china-goods-trade-gdp",
-      "category": "International/China",
-      "title": "China: Goods Exports, Imports, and Balance",
-      "type": "gap",
-      "units": "Percent of GDP, trailing 4 quarters",
-      "latest_date": "2026-01-01"
-    },
-    {
       "slug": "china-real-gdp-growth",
       "category": "International/China",
       "title": "China: Real GDP Growth",
@@ -358,7 +342,23 @@
       "title": "Change in Commodity Prices",
       "type": "category_bar",
       "units": "Percent change, year to date",
-      "latest_date": "2026-08-13"
+      "latest_date": "2026-08-14"
+    },
+    {
+      "slug": "composite-activity",
+      "category": "Other/Composites",
+      "title": "Composite Activity Indicators: Surprise and Absolute",
+      "type": "line",
+      "units": "Standard deviations",
+      "latest_date": "2026-08-14"
+    },
+    {
+      "slug": "composite-inflation",
+      "category": "Other/Composites",
+      "title": "Composite Inflation Indicators: Surprise and Absolute",
+      "type": "line",
+      "units": "Standard deviations",
+      "latest_date": "2026-08-14"
     },
     {
       "slug": "computer-systems-design-payrolls",
@@ -1566,7 +1566,7 @@
       "title": "Euro-Area 10-Year Spreads to Germany",
       "type": "line",
       "units": "Basis points",
-      "latest_date": "2026-06-01"
+      "latest_date": "2026-07-01"
     },
     {
       "slug": "excess-inflation-expectations",
@@ -1622,7 +1622,7 @@
       "title": "December Fed Funds Forecast vs. the Actual Rate",
       "type": "line",
       "units": "Percent",
-      "latest_date": "2026-08-12"
+      "latest_date": "2026-08-13"
     },
     {
       "slug": "fed-funds-path",
@@ -2958,7 +2958,7 @@
       "title": "PCE Inflation \u2014 Tracking the Current Month",
       "type": "bar_line",
       "units": "Percent change, annual rate",
-      "latest_date": "2026-06-01"
+      "latest_date": "2026-07-01"
     },
     {
       "slug": "pce-inflation-vs-forecast",
@@ -3430,7 +3430,7 @@
       "title": "Real Broad Trade-Weighted Dollar",
       "type": "line",
       "units": "Index, March 1973 = 100",
-      "latest_date": "2026-05-01"
+      "latest_date": "2026-07-01"
     },
     {
       "slug": "real-comp-pc",
@@ -4206,7 +4206,7 @@
       "title": "10-Year Treasury Yield Decomposition",
       "type": "stack",
       "units": "Percent",
-      "latest_date": "2026-08-12"
+      "latest_date": "2026-08-13"
     },
     {
       "slug": "trade-balance",
