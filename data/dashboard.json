@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-15T10:31:41+00:00",
+    "generated_at": "2026-08-15T16:17:22+00:00",
     "run_date": "2026-08-15",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -78,8 +78,8 @@
           "value": 4.7,
           "display": "4.70%",
           "period": "2026-08-14",
-          "change": -0.01,
-          "change_display": "-0.01 YTD",
+          "change": 0.51,
+          "change_display": "+0.51 YTD",
           "provenance": "hard"
         },
         {
@@ -12059,7 +12059,7 @@
                 "as_of": "2026-08-14",
                 "chg_1d": 0.05,
                 "chg_1w": 0.0,
-                "chg_ytd": -0.1,
+                "chg_ytd": 0.62,
                 "is_yield": true,
                 "provenance": "hard"
               },
@@ -12237,11 +12237,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.74,
-                "as_of": "2026-08-14",
-                "chg_1d": -0.0,
-                "chg_1w": -0.1,
-                "chg_ytd": -3.6,
+                "value": 6.73,
+                "as_of": "2026-08-15",
+                "chg_1d": -0.1,
+                "chg_1w": -0.2,
+                "chg_ytd": -3.7,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -13254,7 +13254,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-08-14",
         "anchor_midpoint": 3.625,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-08-14)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-08-15)",
         "current_range_bp": [
           350,
           375
