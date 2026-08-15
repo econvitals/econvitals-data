@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-14T22:09:04+00:00",
+    "generated_at": "2026-08-15T02:19:01+00:00",
     "run_date": "2026-08-14",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -12203,11 +12203,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.73,
+                "value": 6.74,
                 "as_of": "2026-08-14",
-                "chg_1d": -0.1,
-                "chg_1w": -0.2,
-                "chg_ytd": -3.7,
+                "chg_1d": -0.0,
+                "chg_1w": -0.1,
+                "chg_ytd": -3.6,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -13266,43 +13266,43 @@
             "date": "2026-12-09",
             "implied_rate": 3.875,
             "net_moves": 1.0,
-            "expected_rate": 3.8498,
+            "expected_rate": 3.8566,
             "modal_rate": 3.875,
             "modal_range_bp": [
               375,
               400
             ],
-            "net_moves_expected": 0.9,
+            "net_moves_expected": 0.93,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.4486
+                "prob": 0.4528
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.3382
+                "prob": 0.3235
               },
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.1887
+                "prob": 0.1976
               },
               {
                 "outcome": "3 hikes",
                 "moves": 3,
-                "prob": 0.0244
+                "prob": 0.0261
               }
             ]
           }
         ],
         "year_end_implied": 3.875,
         "moves_priced_year_end": 1.0,
-        "year_end_expected": 3.8498,
+        "year_end_expected": 3.8566,
         "year_end_modal": 3.875,
-        "year_end_sigma": 0.196,
-        "moves_priced_year_end_expected": 0.9,
+        "year_end_sigma": 0.1969,
+        "moves_priced_year_end_expected": 0.93,
         "now_curve": [
           {
             "date": "2026-08-14",
@@ -13350,11 +13350,11 @@
           },
           {
             "date": "2026-10-28",
-            "rate": 3.76
+            "rate": 3.7575
           },
           {
             "date": "2026-12-09",
-            "rate": 3.8498
+            "rate": 3.8566
           }
         ],
         "repricing_since_2025": {
@@ -13363,7 +13363,7 @@
           "moves_added": 3.0,
           "year_end_expected": 3.0412,
           "year_end_modal": 3.125,
-          "moves_added_expected": 3.23,
+          "moves_added_expected": 3.26,
           "curve": [
             {
               "date": "2026-08-14",
@@ -13440,103 +13440,103 @@
           },
           {
             "date": "2026-10-28",
-            "reporting_date": "2026-08-13",
+            "reporting_date": "2026-08-14",
             "modal_range_bp": [
               350,
               375
             ],
             "modal_rate": 3.625,
-            "expected_rate": 3.76,
-            "sigma": 0.155,
-            "net_moves_expected": 0.54,
+            "expected_rate": 3.7575,
+            "sigma": 0.1543,
+            "net_moves_expected": 0.53,
             "distribution": [
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.5279
+                "prob": 0.5359
               },
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.4042
+                "prob": 0.3982
               },
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.0679
+                "prob": 0.0659
               }
             ],
             "ranges": [
               {
                 "lo": 350,
                 "hi": 375,
-                "prob": 0.5279
+                "prob": 0.53591
               },
               {
                 "lo": 375,
                 "hi": 400,
-                "prob": 0.4042
+                "prob": 0.39819
               },
               {
                 "lo": 400,
                 "hi": 425,
-                "prob": 0.0679
+                "prob": 0.06591
               }
             ]
           },
           {
             "date": "2026-12-09",
-            "reporting_date": "2026-08-13",
+            "reporting_date": "2026-08-14",
             "modal_range_bp": [
               375,
               400
             ],
             "modal_rate": 3.875,
-            "expected_rate": 3.8498,
-            "sigma": 0.196,
-            "net_moves_expected": 0.9,
+            "expected_rate": 3.8566,
+            "sigma": 0.1969,
+            "net_moves_expected": 0.93,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.4486
+                "prob": 0.4528
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.3382
+                "prob": 0.3235
               },
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.1887
+                "prob": 0.1976
               },
               {
                 "outcome": "3 hikes",
                 "moves": 3,
-                "prob": 0.0244
+                "prob": 0.0261
               }
             ],
             "ranges": [
               {
                 "lo": 350,
                 "hi": 375,
-                "prob": 0.33825
+                "prob": 0.32353
               },
               {
                 "lo": 375,
                 "hi": 400,
-                "prob": 0.44864
+                "prob": 0.45276
               },
               {
                 "lo": 400,
                 "hi": 425,
-                "prob": 0.18872
+                "prob": 0.19759
               },
               {
                 "lo": 425,
                 "hi": 450,
-                "prob": 0.02439
+                "prob": 0.02612
               }
             ]
           }
@@ -14508,7 +14508,7 @@
             "unemp": 5.4,
             "cpi": 4.4,
             "core": 4.4,
-            "ten": 14.72,
+            "ten": 14.84,
             "pol": 14.25,
             "asof": "Jul 2026"
           }
