@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-18T21:30:03+00:00",
- "as_of": "2026-08-17",
+ "generated_at": "2026-08-19T13:01:44+00:00",
+ "as_of": "2026-08-18",
  "n_rows": 18,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
  "groups": [
@@ -9,14 +9,14 @@
    "rows": [
     {
      "label": "2-year",
-     "value": 4.17,
-     "as_of": "2026-08-14",
+     "value": 4.19,
+     "as_of": "2026-08-17",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "fred:DGS2",
      "chg_1d": 0.02,
-     "chg_1w": -0.02,
-     "chg_ytd": 0.7
+     "chg_1w": -0.06,
+     "chg_ytd": 0.72
     },
     {
      "label": "5-year",
@@ -64,14 +64,14 @@
     },
     {
      "label": "2s10s",
-     "value": 0.51,
-     "as_of": "2026-08-14",
+     "value": 0.53,
+     "as_of": "2026-08-17",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 fred:DGS2",
-     "chg_1d": 0.03,
-     "chg_1w": 0.05,
-     "chg_ytd": -0.21
+     "chg_1d": 0.02,
+     "chg_1w": 0.06,
+     "chg_ytd": -0.19
     }
    ]
   },
@@ -80,14 +80,14 @@
    "rows": [
     {
      "label": "Real 10y",
-     "value": 2.44,
-     "as_of": "2026-08-17",
+     "value": 2.41,
+     "as_of": "2026-08-18",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:real/10Y",
-     "chg_1d": 0.03,
-     "chg_1w": 0.01,
-     "chg_ytd": 0.5
+     "chg_1d": -0.03,
+     "chg_1w": -0.02,
+     "chg_ytd": 0.47
     },
     {
      "label": "10y breakeven",
@@ -227,14 +227,14 @@
    "rows": [
     {
      "label": "S&P 500",
-     "value": 7745.0,
-     "as_of": "2026-08-17",
+     "value": 7692.0,
+     "as_of": "2026-08-18",
      "is_yield": false,
      "provenance": "hard",
      "source_key": "fred:SP500",
-     "chg_1d": -41.0,
-     "chg_1w": -8.0,
-     "chg_ytd": 887.0
+     "chg_1d": -53.0,
+     "chg_1w": -36.0,
+     "chg_ytd": 833.0
     }
    ]
   }
