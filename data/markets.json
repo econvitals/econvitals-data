@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T13:00:06+00:00",
+ "generated_at": "2026-08-21T13:30:18+00:00",
  "as_of": "2026-08-20",
  "n_rows": 18,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
@@ -10,12 +10,12 @@
     {
      "label": "2-year",
      "value": 4.19,
-     "as_of": "2026-08-18",
+     "as_of": "2026-08-19",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "fred:DGS2",
      "chg_1d": 0.0,
-     "chg_1w": -0.03,
+     "chg_1w": -0.01,
      "chg_ytd": 0.72
     },
     {
@@ -64,14 +64,14 @@
     },
     {
      "label": "2s10s",
-     "value": 0.52,
-     "as_of": "2026-08-18",
+     "value": 0.46,
+     "as_of": "2026-08-19",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 fred:DGS2",
-     "chg_1d": -0.01,
-     "chg_1w": 0.04,
-     "chg_ytd": -0.2
+     "chg_1d": -0.06,
+     "chg_1w": -0.02,
+     "chg_ytd": -0.26
     }
    ]
   },
@@ -227,14 +227,14 @@
    "rows": [
     {
      "label": "S&P 500",
-     "value": 7708.0,
-     "as_of": "2026-08-19",
+     "value": 7641.0,
+     "as_of": "2026-08-20",
      "is_yield": false,
      "provenance": "hard",
      "source_key": "fred:SP500",
-     "chg_1d": 16.0,
-     "chg_1w": -41.0,
-     "chg_ytd": 850.0
+     "chg_1d": -67.0,
+     "chg_1w": -158.0,
+     "chg_ytd": 783.0
     }
    ]
   }
