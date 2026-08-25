@@ -290,12 +290,12 @@
         {
           "id": "new_home_sales",
           "k": "New-home sales (SAAR)",
-          "v": "628K",
-          "p": "618K",
-          "d": "−5.6%",
+          "v": "607K",
+          "p": "678K",
+          "d": "−6.3%",
           "dir": "dn",
           "s": "Census",
-          "_date": "2026-06-01"
+          "_date": "2026-07-01"
         },
         {
           "id": "housing_starts",
@@ -320,7 +320,7 @@
           "id": "seriously_delinquent",
           "name": "Single-family delinquency rate",
           "unit": "% past due",
-          "val": "1.89",
+          "val": "1.86",
           "pos": 36,
           "tone": "warm",
           "band": [
@@ -333,7 +333,7 @@
           },
           "badge": "Rising, low",
           "note": "All-bank single-family mortgage delinquency (Fed, SA). Off the floor but far below the ~11% crisis peak.",
-          "_date": "2026-01-01"
+          "_date": "2026-04-01"
         },
         {
           "id": "equity_cushion",
@@ -379,9 +379,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Aug 24 2026 · live via FRED · calibration editorial",
+  "asof": "Updated Aug 25 2026 · live via FRED · calibration editorial",
   "data_through": "Aug 20 2026",
-  "generated_at": "2026-08-24T22:17:36+00:00",
+  "generated_at": "2026-08-25T22:18:20+00:00",
   "sources": {
     "fred": 24,
     "config": 1
