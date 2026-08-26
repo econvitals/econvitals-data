@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-26T10:33:08+00:00",
+    "generated_at": "2026-08-26T12:42:14+00:00",
     "run_date": "2026-08-26",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -39,18 +39,18 @@
         },
         {
           "label": "PCE 12-mo",
-          "value": 3.67,
+          "value": 3.7,
           "display": "3.7%",
-          "period": "Jun 2026",
+          "period": "Jul 2026",
           "change": null,
           "change_display": null,
           "provenance": "hard"
         },
         {
           "label": "Core PCE 12-mo",
-          "value": 3.29,
+          "value": 3.34,
           "display": "3.3%",
-          "period": "Jun 2026",
+          "period": "Jul 2026",
           "change": null,
           "change_display": null,
           "provenance": "hard"
@@ -75,11 +75,11 @@
         },
         {
           "label": "10-year",
-          "value": 4.64,
-          "display": "4.64%",
-          "period": "2026-08-25",
-          "change": 0.45,
-          "change_display": "+0.45 YTD",
+          "value": 4.63,
+          "display": "4.63%",
+          "period": "2026-08-26",
+          "change": 0.44,
+          "change_display": "+0.44 YTD",
           "provenance": "hard"
         },
         {
@@ -102,11 +102,11 @@
         },
         {
           "label": "Brent",
-          "value": 85.01,
+          "value": 85.26,
           "display": "$85",
           "period": "2026-08-26",
-          "change": 39.9,
-          "change_display": "+39.9% YTD",
+          "change": 40.3,
+          "change_display": "+40.3% YTD",
           "provenance": "hard"
         },
         {
@@ -1425,189 +1425,195 @@
       "title": "Inflation",
       "charts": [
         {
-          "title": "Core CPI Inflation",
+          "title": "Core PCE Inflation",
           "sub": "Percent change, annual rate",
           "start": "2024",
           "points": [
             {
               "m": "Jan 2024",
               "date": "2024-01-01",
-              "chg_1m_ann": 4.39,
-              "chg_3m_ann": 3.73
+              "chg_1m_ann": 6.4,
+              "chg_3m_ann": 3.29
             },
             {
               "m": "Feb 2024",
               "date": "2024-02-01",
-              "chg_1m_ann": 4.86,
-              "chg_3m_ann": 4.12
+              "chg_1m_ann": 3.21,
+              "chg_3m_ann": 3.92
             },
             {
               "m": "Mar 2024",
               "date": "2024-03-01",
-              "chg_1m_ann": 4.77,
-              "chg_3m_ann": 4.67
+              "chg_1m_ann": 4.76,
+              "chg_3m_ann": 4.78
             },
             {
               "m": "Apr 2024",
               "date": "2024-04-01",
-              "chg_1m_ann": 3.3,
-              "chg_3m_ann": 4.31
+              "chg_1m_ann": 2.94,
+              "chg_3m_ann": 3.64
             },
             {
               "m": "May 2024",
               "date": "2024-05-01",
-              "chg_1m_ann": 1.7,
-              "chg_3m_ann": 3.25
+              "chg_1m_ann": 0.78,
+              "chg_3m_ann": 2.81
             },
             {
               "m": "Jun 2024",
               "date": "2024-06-01",
-              "chg_1m_ann": 1.12,
-              "chg_3m_ann": 2.03
+              "chg_1m_ann": 2.92,
+              "chg_3m_ann": 2.21
             },
             {
               "m": "Jul 2024",
               "date": "2024-07-01",
-              "chg_1m_ann": 2.09,
-              "chg_3m_ann": 1.64
+              "chg_1m_ann": 2.31,
+              "chg_3m_ann": 2.0
             },
             {
               "m": "Aug 2024",
               "date": "2024-08-01",
-              "chg_1m_ann": 3.09,
-              "chg_3m_ann": 2.1
+              "chg_1m_ann": 2.14,
+              "chg_3m_ann": 2.46
             },
             {
               "m": "Sep 2024",
               "date": "2024-09-01",
-              "chg_1m_ann": 3.75,
-              "chg_3m_ann": 2.97
+              "chg_1m_ann": 3.34,
+              "chg_3m_ann": 2.6
             },
             {
               "m": "Oct 2024",
               "date": "2024-10-01",
-              "chg_1m_ann": 3.8,
-              "chg_3m_ann": 3.55
+              "chg_1m_ann": 3.62,
+              "chg_3m_ann": 3.03
             },
             {
               "m": "Nov 2024",
               "date": "2024-11-01",
-              "chg_1m_ann": 3.51,
-              "chg_3m_ann": 3.69
+              "chg_1m_ann": 1.27,
+              "chg_3m_ann": 2.74
             },
             {
               "m": "Dec 2024",
               "date": "2024-12-01",
-              "chg_1m_ann": 2.26,
-              "chg_3m_ann": 3.19
+              "chg_1m_ann": 2.29,
+              "chg_3m_ann": 2.39
             },
             {
               "m": "Jan 2025",
               "date": "2025-01-01",
-              "chg_1m_ann": 5.24,
-              "chg_3m_ann": 3.66
+              "chg_1m_ann": 3.84,
+              "chg_3m_ann": 2.46
             },
             {
               "m": "Feb 2025",
               "date": "2025-02-01",
-              "chg_1m_ann": 3.1,
-              "chg_3m_ann": 3.53
+              "chg_1m_ann": 5.51,
+              "chg_3m_ann": 3.87
             },
             {
               "m": "Mar 2025",
               "date": "2025-03-01",
-              "chg_1m_ann": 0.83,
-              "chg_3m_ann": 3.04
+              "chg_1m_ann": 1.18,
+              "chg_3m_ann": 3.49
             },
             {
               "m": "Apr 2025",
               "date": "2025-04-01",
-              "chg_1m_ann": 2.9,
-              "chg_3m_ann": 2.27
+              "chg_1m_ann": 2.27,
+              "chg_3m_ann": 2.97
             },
             {
               "m": "May 2025",
               "date": "2025-05-01",
-              "chg_1m_ann": 1.58,
-              "chg_3m_ann": 1.77
+              "chg_1m_ann": 2.79,
+              "chg_3m_ann": 2.08
             },
             {
               "m": "Jun 2025",
               "date": "2025-06-01",
-              "chg_1m_ann": 2.84,
-              "chg_3m_ann": 2.44
+              "chg_1m_ann": 3.2,
+              "chg_3m_ann": 2.75
             },
             {
               "m": "Jul 2025",
               "date": "2025-07-01",
-              "chg_1m_ann": 3.82,
-              "chg_3m_ann": 2.74
+              "chg_1m_ann": 2.98,
+              "chg_3m_ann": 2.99
             },
             {
               "m": "Aug 2025",
               "date": "2025-08-01",
-              "chg_1m_ann": 3.78,
-              "chg_3m_ann": 3.48
+              "chg_1m_ann": 2.73,
+              "chg_3m_ann": 2.97
             },
             {
               "m": "Sep 2025",
               "date": "2025-09-01",
-              "chg_1m_ann": 2.64,
-              "chg_3m_ann": 3.41
+              "chg_1m_ann": 2.3,
+              "chg_3m_ann": 2.67
+            },
+            {
+              "m": "Oct 2025",
+              "date": "2025-10-01",
+              "chg_1m_ann": 2.77,
+              "chg_3m_ann": 2.6
             },
             {
               "m": "Nov 2025",
               "date": "2025-11-01",
-              "chg_1m_ann": 2.29,
-              "chg_3m_ann": 2.9
+              "chg_1m_ann": 2.15,
+              "chg_3m_ann": 2.4
             },
             {
               "m": "Dec 2025",
               "date": "2025-12-01",
-              "chg_1m_ann": 2.83,
-              "chg_3m_ann": 2.59
+              "chg_1m_ann": 4.0,
+              "chg_3m_ann": 2.97
             },
             {
               "m": "Jan 2026",
               "date": "2026-01-01",
-              "chg_1m_ann": 3.6,
-              "chg_3m_ann": 2.91
+              "chg_1m_ann": 5.47,
+              "chg_3m_ann": 3.86
             },
             {
               "m": "Feb 2026",
               "date": "2026-02-01",
-              "chg_1m_ann": 2.62,
-              "chg_3m_ann": 3.02
+              "chg_1m_ann": 4.83,
+              "chg_3m_ann": 4.76
             },
             {
               "m": "Mar 2026",
               "date": "2026-03-01",
-              "chg_1m_ann": 2.38,
-              "chg_3m_ann": 2.86
+              "chg_1m_ann": 3.61,
+              "chg_3m_ann": 4.64
             },
             {
               "m": "Apr 2026",
               "date": "2026-04-01",
-              "chg_1m_ann": 4.61,
-              "chg_3m_ann": 3.2
+              "chg_1m_ann": 3.18,
+              "chg_3m_ann": 3.87
             },
             {
               "m": "May 2026",
               "date": "2026-05-01",
-              "chg_1m_ann": 2.53,
-              "chg_3m_ann": 3.17
+              "chg_1m_ann": 4.4,
+              "chg_3m_ann": 3.73
             },
             {
               "m": "Jun 2026",
               "date": "2026-06-01",
-              "chg_1m_ann": -0.2,
-              "chg_3m_ann": 2.29
+              "chg_1m_ann": 1.78,
+              "chg_3m_ann": 3.11
             },
             {
               "m": "Jul 2026",
               "date": "2026-07-01",
-              "chg_1m_ann": 2.62,
-              "chg_3m_ann": 1.64
+              "chg_1m_ann": 2.99,
+              "chg_3m_ann": 3.05
             }
           ],
           "series": [
@@ -1788,26 +1794,26 @@
             {
               "date": "2026-04-01",
               "core_cpi": 2.74,
-              "core_pce": 3.32,
-              "diff": -0.57
+              "core_pce": 3.33,
+              "diff": -0.59
             },
             {
               "date": "2026-05-01",
               "core_cpi": 2.82,
-              "core_pce": 3.42,
-              "diff": -0.6
+              "core_pce": 3.46,
+              "diff": -0.64
             },
             {
               "date": "2026-06-01",
               "core_cpi": 2.57,
-              "core_pce": 3.29,
-              "diff": -0.72
+              "core_pce": 3.34,
+              "diff": -0.78
             },
             {
               "date": "2026-07-01",
               "core_cpi": 2.47,
-              "core_pce": null,
-              "diff": null
+              "core_pce": 3.34,
+              "diff": -0.88
             }
           ],
           "series": [
@@ -1926,96 +1932,98 @@
           },
           {
             "name": "PCE",
-            "through": "Jun 2026",
+            "through": "Jul 2026",
             "rows": [
               {
                 "label": "PCE",
-                "ann_1": -1.3,
-                "ann_3": 3.07,
-                "ann_6": 4.43,
-                "yoy": 3.67,
-                "through": "Jun 2026",
+                "ann_1": 1.89,
+                "ann_3": 2.2,
+                "ann_6": 4.13,
+                "yoy": 3.7,
+                "through": "Jul 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Core PCE",
-                "ann_1": 1.6,
-                "ann_3": 2.89,
-                "ann_6": 3.76,
-                "yoy": 3.29,
-                "through": "Jun 2026",
+                "ann_1": 2.99,
+                "ann_3": 3.05,
+                "ann_6": 3.46,
+                "yoy": 3.34,
+                "through": "Jul 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Market-based core PCE",
-                "ann_1": 0.9,
-                "ann_3": 3.03,
-                "ann_6": 3.98,
-                "yoy": 3.78,
-                "through": "Jun 2026",
+                "ann_1": 3.41,
+                "ann_3": 4.07,
+                "ann_6": 3.59,
+                "yoy": 3.85,
+                "through": "Jul 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Median PCE",
-                "ann_1": 1.81,
-                "ann_3": 2.75,
-                "ann_6": 2.82,
-                "yoy": 2.66,
-                "through": "Jun 2026",
-                "provenance": "hard"
+                "ann_1": null,
+                "ann_3": null,
+                "ann_6": null,
+                "yoy": null,
+                "through": "Jul 2026",
+                "provenance": "hard",
+                "pending": true
               },
               {
                 "label": "Trimmed-mean PCE",
-                "ann_1": 1.44,
-                "ann_3": 2.21,
-                "ann_6": 2.37,
-                "yoy": 2.23,
-                "through": "Jun 2026",
-                "provenance": "hard"
+                "ann_1": null,
+                "ann_3": null,
+                "ann_6": null,
+                "yoy": null,
+                "through": "Jul 2026",
+                "provenance": "hard",
+                "pending": true
               },
               {
                 "label": "Core goods",
-                "ann_1": 1.06,
-                "ann_3": 1.17,
-                "ann_6": 3.32,
-                "yoy": 2.13,
-                "through": "Jun 2026",
+                "ann_1": 1.84,
+                "ann_3": 0.55,
+                "ann_6": 3.02,
+                "yoy": 2.28,
+                "through": "Jul 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Core services",
-                "ann_1": 1.78,
-                "ann_3": 3.44,
-                "ann_6": 3.9,
-                "yoy": 3.66,
-                "through": "Jun 2026",
+                "ann_1": 3.35,
+                "ann_3": 3.86,
+                "ann_6": 3.6,
+                "yoy": 3.69,
+                "through": "Jul 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Housing",
-                "ann_1": 2.67,
-                "ann_3": 4.33,
-                "ann_6": 3.56,
-                "yoy": 3.17,
-                "through": "Jun 2026",
+                "ann_1": 3.16,
+                "ann_3": 3.2,
+                "ann_6": 3.63,
+                "yoy": 3.16,
+                "through": "Jul 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Food",
-                "ann_1": 3.08,
-                "ann_3": 3.26,
-                "ann_6": 2.34,
-                "yoy": 2.38,
-                "through": "Jun 2026",
+                "ann_1": -0.96,
+                "ann_3": 0.93,
+                "ann_6": 1.71,
+                "yoy": 2.4,
+                "through": "Jul 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Energy",
-                "ann_1": -51.95,
-                "ann_3": 7.06,
-                "ann_6": 26.16,
-                "yoy": 15.84,
-                "through": "Jun 2026",
+                "ann_1": -16.22,
+                "ann_3": -13.52,
+                "ann_6": 26.87,
+                "yoy": 15.31,
+                "through": "Jul 2026",
                 "provenance": "hard"
               }
             ]
@@ -2025,7 +2033,7 @@
       "adjusted": {
         "pce": {
           "basis": "PCE",
-          "through": "Jun 2026",
+          "through": "Jul 2026",
           "source_version": "release",
           "measures": [
             "Overall",
@@ -2041,71 +2049,71 @@
             {
               "label": "Overall",
               "delta": 0.0,
-              "h1": -1.3,
-              "h3": 3.07,
-              "h6": 4.43,
-              "h12": 3.67
+              "h1": 1.89,
+              "h3": 2.2,
+              "h6": 4.13,
+              "h12": 3.7
             },
             {
               "label": "Core",
               "delta": 0.02,
-              "h1": 1.62,
-              "h3": 2.9,
-              "h6": 3.78,
-              "h12": 3.31
+              "h1": 3.01,
+              "h3": 3.07,
+              "h6": 3.48,
+              "h12": 3.36
             },
             {
               "label": "Core ex Housing",
               "delta": 0.23,
-              "h1": 1.59,
-              "h3": 2.8,
-              "h6": 4.02,
-              "h12": 3.54
+              "h1": 3.16,
+              "h3": 3.24,
+              "h6": 3.65,
+              "h12": 3.61
             },
             {
               "label": "Core ex Housing and Used Cars",
               "delta": 0.22,
-              "h1": 1.65,
-              "h3": 2.84,
-              "h6": 4.16,
-              "h12": 3.6
+              "h1": 3.12,
+              "h3": 3.26,
+              "h6": 3.71,
+              "h12": 3.68
             },
             {
               "label": "Core Services ex Housing",
               "delta": -0.76,
-              "h1": 0.74,
-              "h3": 2.41,
-              "h6": 3.24,
-              "h12": 3.05
+              "h1": 2.65,
+              "h3": 3.31,
+              "h6": 2.83,
+              "h12": 3.09
             },
             {
               "label": "Market Core",
               "delta": 0.11,
-              "h1": 2.34,
-              "h3": 2.98,
-              "h6": 3.78,
-              "h12": 3.15
+              "h1": 1.94,
+              "h3": 2.37,
+              "h6": 3.31,
+              "h12": 3.14
             },
             {
               "label": "Median",
               "delta": -0.5,
-              "h1": 1.31,
-              "h3": 2.25,
-              "h6": 2.35,
-              "h12": 2.2
+              "h1": 2.61,
+              "h3": 2.33,
+              "h6": 2.43,
+              "h12": 2.27
             },
             {
               "label": "Trimmed Mean",
               "delta": 0.0,
-              "h1": 1.45,
-              "h3": 2.21,
-              "h6": 2.37,
-              "h12": 2.23
+              "h1": 2.2,
+              "h3": 2.19,
+              "h6": 2.35,
+              "h12": 2.29
             }
           ],
           "ecumenical": {
-            "value": 3.06,
-            "through": "Jun 2026"
+            "value": 3.19,
+            "through": "Jul 2026"
           }
         },
         "cpi": {
@@ -9689,31 +9697,31 @@
               },
               {
                 "label": "5-year",
-                "value": 4.35,
-                "as_of": "2026-08-25",
-                "chg_1d": -0.06,
+                "value": 4.34,
+                "as_of": "2026-08-26",
+                "chg_1d": -0.02,
                 "chg_1w": -0.02,
-                "chg_ytd": 0.61,
+                "chg_ytd": 0.6,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "10-year",
-                "value": 4.64,
-                "as_of": "2026-08-25",
-                "chg_1d": -0.07,
-                "chg_1w": -0.07,
-                "chg_ytd": 0.45,
+                "value": 4.63,
+                "as_of": "2026-08-26",
+                "chg_1d": -0.01,
+                "chg_1w": -0.02,
+                "chg_ytd": 0.44,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "30-year",
                 "value": 5.17,
-                "as_of": "2026-08-25",
-                "chg_1d": -0.06,
-                "chg_1w": -0.11,
-                "chg_ytd": 0.31,
+                "as_of": "2026-08-26",
+                "chg_1d": -0.01,
+                "chg_1w": -0.03,
+                "chg_ytd": 0.3,
                 "is_yield": true,
                 "provenance": "hard"
               },
@@ -9780,11 +9788,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 15.71,
+                "value": 15.61,
                 "as_of": "2026-08-26",
-                "chg_1d": 0.26,
-                "chg_1w": 0.82,
-                "chg_ytd": 1.2,
+                "chg_1d": 0.16,
+                "chg_1w": 0.72,
+                "chg_ytd": 1.1,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -9805,7 +9813,7 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 99.01,
+                "value": 99.03,
                 "as_of": "2026-08-26",
                 "chg_1d": 0.1,
                 "chg_1w": 0.2,
@@ -9816,7 +9824,7 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1664,
+                "value": 1.1663,
                 "as_of": "2026-08-26",
                 "chg_1d": 0.1,
                 "chg_1w": 0.1,
@@ -9827,40 +9835,40 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3621,
+                "value": 1.3613,
                 "as_of": "2026-08-26",
                 "chg_1d": 0.2,
                 "chg_1w": 0.1,
-                "chg_ytd": -1.1,
+                "chg_ytd": -1.0,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/JPY",
-                "value": 159.0,
+                "value": 159.2,
                 "as_of": "2026-08-26",
-                "chg_1d": -0.1,
-                "chg_1w": -0.0,
-                "chg_ytd": 1.4,
-                "is_yield": false,
-                "provenance": "hard",
-                "pct_change": true
-              },
-              {
-                "label": "USD/CHF",
-                "value": 0.8039,
-                "as_of": "2026-08-26",
-                "chg_1d": 0.3,
-                "chg_1w": 0.5,
+                "chg_1d": -0.0,
+                "chg_1w": 0.1,
                 "chg_ytd": 1.5,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
+                "label": "USD/CHF",
+                "value": 0.8046,
+                "as_of": "2026-08-26",
+                "chg_1d": 0.4,
+                "chg_1w": 0.5,
+                "chg_ytd": 1.6,
+                "is_yield": false,
+                "provenance": "hard",
+                "pct_change": true
+              },
+              {
                 "label": "USD/CAD",
-                "value": 1.3867,
+                "value": 1.3868,
                 "as_of": "2026-08-26",
                 "chg_1d": 0.2,
                 "chg_1w": 0.6,
@@ -9871,11 +9879,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.71,
+                "value": 6.72,
                 "as_of": "2026-08-26",
-                "chg_1d": -0.2,
-                "chg_1w": -0.2,
-                "chg_ytd": -4.1,
+                "chg_1d": 0.0,
+                "chg_1w": -0.0,
+                "chg_ytd": -3.9,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -9887,21 +9895,21 @@
             "rows": [
               {
                 "label": "WTI",
-                "value": 80.1,
+                "value": 80.2,
                 "as_of": "2026-08-26",
-                "chg_1d": -2.2,
-                "chg_1w": -5.7,
-                "chg_ytd": 22.8,
+                "chg_1d": -2.1,
+                "chg_1w": -5.6,
+                "chg_ytd": 22.9,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent",
-                "value": 85.1,
+                "value": 85.3,
                 "as_of": "2026-08-26",
-                "chg_1d": -3.5,
-                "chg_1w": -6.5,
-                "chg_ytd": 24.0,
+                "chg_1d": -3.3,
+                "chg_1w": -6.4,
+                "chg_ytd": 24.1,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -9910,38 +9918,38 @@
                 "value": 2.88,
                 "as_of": "2026-08-26",
                 "chg_1d": 0.11,
-                "chg_1w": 0.06,
+                "chg_1w": 0.07,
                 "chg_ytd": -0.74,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold",
-                "value": 4675.0,
+                "value": 4672.0,
                 "as_of": "2026-08-26",
-                "chg_1d": 37.0,
-                "chg_1w": 186.0,
-                "chg_ytd": 361.0,
+                "chg_1d": 34.0,
+                "chg_1w": 183.0,
+                "chg_ytd": 358.0,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver",
-                "value": 68.5,
+                "value": 68.64,
                 "as_of": "2026-08-26",
-                "chg_1d": -0.14,
-                "chg_1w": 2.76,
-                "chg_ytd": -2.06,
+                "chg_1d": -0.0,
+                "chg_1w": 2.9,
+                "chg_ytd": -1.92,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper",
-                "value": 6.81,
+                "value": 6.8,
                 "as_of": "2026-08-26",
-                "chg_1d": 0.1,
-                "chg_1w": 0.33,
-                "chg_ytd": 1.17,
+                "chg_1d": 0.09,
+                "chg_1w": 0.31,
+                "chg_ytd": 1.16,
                 "is_yield": false,
                 "provenance": "hard"
               }
@@ -9974,7 +9982,7 @@
         "upper": 3.75,
         "midpoint": 3.62,
         "display": "3.50\u20133.75%",
-        "as_of": "2026-08-24"
+        "as_of": "2026-08-26"
       },
       "actual_path": [
         {
@@ -10920,140 +10928,348 @@
         {
           "date": "2026-08-24",
           "midpoint": 3.62
+        },
+        {
+          "date": "2026-08-25",
+          "midpoint": 3.62
+        },
+        {
+          "date": "2026-08-26",
+          "midpoint": 3.62
         }
       ],
       "replication": {
         "available": true,
-        "method": "Option A interim \u2014 ZQ futures, grid-constrained fit (CME FedWatch API to swap in)",
-        "anchor_effr": 3.63,
+        "source": "CME FedWatch End-of-Day API",
+        "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
+        "reporting_date": "2026-08-25",
+        "anchor_midpoint": 3.625,
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-08-26)",
+        "current_range_bp": [
+          350,
+          375
+        ],
+        "anchor_effr": 3.625,
         "next_meeting": "2026-09-16",
         "next_meeting_outcomes": [
           {
             "outcome": "Hold",
             "moves": 0,
-            "prob": 0.9815
+            "prob": 0.6214
           },
           {
             "outcome": "1 hike",
             "moves": 1,
-            "prob": 0.0185
+            "prob": 0.3786
           }
         ],
         "checkpoints": [
           {
             "label": "Next meeting",
             "date": "2026-09-16",
-            "implied_rate": 3.63,
-            "net_moves": 0.02,
+            "implied_rate": 3.625,
+            "net_moves": 0.0,
+            "expected_rate": 3.7196,
+            "modal_rate": 3.625,
+            "modal_range_bp": [
+              350,
+              375
+            ],
+            "net_moves_expected": 0.38,
             "distribution": [
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.9815
+                "prob": 0.6214
               },
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.0185
+                "prob": 0.3786
               }
             ]
           },
           {
             "label": "Year-end",
             "date": "2026-12-09",
-            "implied_rate": 3.88,
-            "net_moves": 0.99,
+            "implied_rate": 3.875,
+            "net_moves": 1.0,
+            "expected_rate": 3.8648,
+            "modal_rate": 3.875,
+            "modal_range_bp": [
+              375,
+              400
+            ],
+            "net_moves_expected": 0.96,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.9749
+                "prob": 0.4508
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.0194
+                "prob": 0.31
               },
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.0057
+                "prob": 0.209
+              },
+              {
+                "outcome": "3 hikes",
+                "moves": 3,
+                "prob": 0.0301
               }
             ]
           }
         ],
-        "year_end_implied": 3.88,
+        "year_end_implied": 3.875,
         "moves_priced_year_end": 1.0,
+        "year_end_expected": 3.8648,
+        "year_end_modal": 3.875,
+        "year_end_sigma": 0.1997,
+        "moves_priced_year_end_expected": 0.96,
         "now_curve": [
           {
             "date": "2026-08-26",
-            "rate": 3.63
+            "rate": 3.625
           },
           {
             "date": "2026-09-16",
-            "rate": 3.63
+            "rate": 3.625
           },
           {
             "date": "2026-10-28",
-            "rate": 3.88
+            "rate": 3.625
           },
           {
             "date": "2026-12-09",
-            "rate": 3.88
+            "rate": 3.875
+          }
+        ],
+        "now_curve_modal": [
+          {
+            "date": "2026-08-26",
+            "rate": 3.625
+          },
+          {
+            "date": "2026-09-16",
+            "rate": 3.625
+          },
+          {
+            "date": "2026-10-28",
+            "rate": 3.625
+          },
+          {
+            "date": "2026-12-09",
+            "rate": 3.875
+          }
+        ],
+        "now_curve_expected": [
+          {
+            "date": "2026-08-26",
+            "rate": 3.625
+          },
+          {
+            "date": "2026-09-16",
+            "rate": 3.7196
+          },
+          {
+            "date": "2026-10-28",
+            "rate": 3.775
+          },
+          {
+            "date": "2026-12-09",
+            "rate": 3.8648
           }
         ],
         "repricing_since_2025": {
-          "end2025_year_end": 3.14,
-          "moves_added": 2.96,
+          "reporting_date": "2025-12-31",
+          "end2025_year_end": 3.125,
+          "moves_added": 3.0,
+          "year_end_expected": 3.0412,
+          "year_end_modal": 3.125,
+          "moves_added_expected": 3.29,
           "curve": [
             {
               "date": "2026-08-26",
-              "rate": 3.64
+              "rate": 3.125
             },
             {
               "date": "2026-09-16",
-              "rate": 3.14
+              "rate": 3.125
             },
             {
               "date": "2026-10-28",
-              "rate": 3.14
+              "rate": 3.125
             },
             {
               "date": "2026-12-09",
-              "rate": 3.14
+              "rate": 3.125
+            }
+          ],
+          "curve_expected": [
+            {
+              "date": "2026-08-26",
+              "rate": 3.1255
+            },
+            {
+              "date": "2026-09-16",
+              "rate": 3.1255
+            },
+            {
+              "date": "2026-10-28",
+              "rate": 3.0812
+            },
+            {
+              "date": "2026-12-09",
+              "rate": 3.0412
             }
           ]
         },
-        "best_path_moves": [
-          0,
-          1,
-          0
-        ],
-        "chain": [
+        "meetings": [
           {
-            "meeting": "2026-09-16",
-            "ticker": "ZQU26.CBT",
-            "price": 96.32499694824219,
-            "implied_avg": 3.675,
-            "best_level": 3.63
+            "date": "2026-09-16",
+            "reporting_date": "2026-08-25",
+            "modal_range_bp": [
+              350,
+              375
+            ],
+            "modal_rate": 3.625,
+            "expected_rate": 3.7196,
+            "sigma": 0.1213,
+            "net_moves_expected": 0.38,
+            "distribution": [
+              {
+                "outcome": "Hold",
+                "moves": 0,
+                "prob": 0.6214
+              },
+              {
+                "outcome": "1 hike",
+                "moves": 1,
+                "prob": 0.3786
+              }
+            ],
+            "ranges": [
+              {
+                "lo": 350,
+                "hi": 375,
+                "prob": 0.62143
+              },
+              {
+                "lo": 375,
+                "hi": 400,
+                "prob": 0.37857
+              }
+            ]
           },
           {
-            "meeting": "2026-10-28",
-            "ticker": "ZQV26.CBT",
-            "price": 96.2699966430664,
-            "implied_avg": 3.73,
-            "best_level": 3.88
+            "date": "2026-10-28",
+            "reporting_date": "2026-08-25",
+            "modal_range_bp": [
+              350,
+              375
+            ],
+            "modal_rate": 3.625,
+            "expected_rate": 3.775,
+            "sigma": 0.1596,
+            "net_moves_expected": 0.6,
+            "distribution": [
+              {
+                "outcome": "Hold",
+                "moves": 0,
+                "prob": 0.4838
+              },
+              {
+                "outcome": "1 hike",
+                "moves": 1,
+                "prob": 0.4323
+              },
+              {
+                "outcome": "2 hikes",
+                "moves": 2,
+                "prob": 0.0838
+              }
+            ],
+            "ranges": [
+              {
+                "lo": 350,
+                "hi": 375,
+                "prob": 0.48383
+              },
+              {
+                "lo": 375,
+                "hi": 400,
+                "prob": 0.43235
+              },
+              {
+                "lo": 400,
+                "hi": 425,
+                "prob": 0.08383
+              }
+            ]
           },
           {
-            "meeting": "2026-12-09",
-            "ticker": "ZQZ26.CBT",
-            "price": 96.13999938964844,
-            "implied_avg": 3.86,
-            "best_level": 3.88
+            "date": "2026-12-09",
+            "reporting_date": "2026-08-25",
+            "modal_range_bp": [
+              375,
+              400
+            ],
+            "modal_rate": 3.875,
+            "expected_rate": 3.8648,
+            "sigma": 0.1997,
+            "net_moves_expected": 0.96,
+            "distribution": [
+              {
+                "outcome": "1 hike",
+                "moves": 1,
+                "prob": 0.4508
+              },
+              {
+                "outcome": "Hold",
+                "moves": 0,
+                "prob": 0.31
+              },
+              {
+                "outcome": "2 hikes",
+                "moves": 2,
+                "prob": 0.209
+              },
+              {
+                "outcome": "3 hikes",
+                "moves": 3,
+                "prob": 0.0301
+              }
+            ],
+            "ranges": [
+              {
+                "lo": 350,
+                "hi": 375,
+                "prob": 0.31001
+              },
+              {
+                "lo": 375,
+                "hi": 400,
+                "prob": 0.45084
+              },
+              {
+                "lo": 400,
+                "hi": 425,
+                "prob": 0.20904
+              },
+              {
+                "lo": 425,
+                "hi": 450,
+                "prob": 0.03011
+              }
+            ]
           }
         ],
-        "engine": "zq",
-        "cme_fallback_reason": "TimeoutError: The read operation timed out"
+        "engine": "cme"
       },
       "commentary": {
         "provenance": "soft",
@@ -11458,23 +11674,23 @@
             },
             {
               "label": "Durable goods orders",
-              "c1": 0.5,
-              "c2": 7.6,
+              "c1": 1.1,
+              "c2": 12.0,
               "c1pct": true,
               "c2pct": true,
               "decimals": 1,
               "provenance": "hard",
-              "through": "Jun 2026"
+              "through": "Jul 2026"
             },
             {
               "label": "Core capex orders",
-              "c1": 1.2,
+              "c1": 0.2,
               "c2": 12.9,
               "c1pct": true,
               "c2pct": true,
               "decimals": 1,
               "provenance": "hard",
-              "through": "Jun 2026"
+              "through": "Jul 2026"
             },
             {
               "label": "Saving rate (%)",
@@ -11606,8 +11822,8 @@
             },
             {
               "label": "5y breakeven (%)",
-              "c1": 2.32,
-              "c2": 2.48,
+              "c1": 2.31,
+              "c2": 2.49,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
@@ -11616,8 +11832,8 @@
             },
             {
               "label": "5y5y forward (%)",
-              "c1": 2.32,
-              "c2": 2.34,
+              "c1": 2.33,
+              "c2": 2.33,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
