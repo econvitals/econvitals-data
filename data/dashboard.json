@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-26T16:17:08+00:00",
+    "generated_at": "2026-08-26T18:46:58+00:00",
     "run_date": "2026-08-26",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -75,8 +75,8 @@
         },
         {
           "label": "10-year",
-          "value": 4.664,
-          "display": "4.66%",
+          "value": 4.666,
+          "display": "4.67%",
           "period": "2026-08-26",
           "change": 0.48,
           "change_display": "+0.48 YTD",
@@ -93,20 +93,20 @@
         },
         {
           "label": "S&P 500",
-          "value": 7667.0,
-          "display": "7,667",
+          "value": 7681.0,
+          "display": "7,681",
           "period": "2026-08-26",
-          "change": 11.8,
-          "change_display": "+11.8% YTD",
+          "change": 12.0,
+          "change_display": "+12.0% YTD",
           "provenance": "hard"
         },
         {
           "label": "Brent",
-          "value": 87.760002,
-          "display": "$88",
+          "value": 86.849998,
+          "display": "$87",
           "period": "2026-08-26",
-          "change": 44.5,
-          "change_display": "+44.5% YTD",
+          "change": 43.0,
+          "change_display": "+43.0% YTD",
           "provenance": "hard"
         },
         {
@@ -2067,7 +2067,7 @@
       "adjusted": {
         "pce": {
           "basis": "PCE",
-          "through": "Jun 2026",
+          "through": "Jul 2026",
           "source_version": "release",
           "measures": [
             "Overall",
@@ -2083,71 +2083,71 @@
             {
               "label": "Overall",
               "delta": 0.0,
-              "h1": -1.296823,
-              "h3": 3.068359,
-              "h6": 4.428256,
-              "h12": 3.668053
+              "h1": 1.887512,
+              "h3": 2.19585,
+              "h6": 4.127834,
+              "h12": 3.701166
             },
             {
               "label": "Core",
               "delta": 0.019337,
-              "h1": 1.61747,
-              "h3": 2.904462,
-              "h6": 3.776036,
-              "h12": 3.305863
+              "h1": 3.005634,
+              "h3": 3.067112,
+              "h6": 3.478744,
+              "h12": 3.36348
             },
             {
               "label": "Core ex Housing",
               "delta": 0.225224,
-              "h1": 1.592302,
-              "h3": 2.804192,
-              "h6": 4.024349,
-              "h12": 3.536272
+              "h1": 3.164719,
+              "h3": 3.240172,
+              "h6": 3.649024,
+              "h12": 3.609333
             },
             {
               "label": "Core ex Housing and Used Cars",
               "delta": 0.215258,
-              "h1": 1.649951,
-              "h3": 2.837833,
-              "h6": 4.158289,
-              "h12": 3.603262
+              "h1": 3.122485,
+              "h3": 3.256613,
+              "h6": 3.706547,
+              "h12": 3.67841
             },
             {
               "label": "Core Services ex Housing",
               "delta": -0.761366,
-              "h1": 0.739084,
-              "h3": 2.410503,
-              "h6": 3.235993,
-              "h12": 3.050537
+              "h1": 2.647518,
+              "h3": 3.307998,
+              "h6": 2.832506,
+              "h12": 3.088334
             },
             {
               "label": "Market Core",
               "delta": 0.111159,
-              "h1": 2.344389,
-              "h3": 2.981135,
-              "h6": 3.77664,
-              "h12": 3.150025
+              "h1": 1.936912,
+              "h3": 2.371064,
+              "h6": 3.310571,
+              "h12": 3.136293
             },
             {
               "label": "Median",
               "delta": -0.496371,
-              "h1": 1.313674,
-              "h3": 2.253486,
-              "h6": 2.349763,
-              "h12": 2.202109
+              "h1": 2.437969,
+              "h3": 2.303553,
+              "h6": 2.387353,
+              "h12": 2.224993
             },
             {
               "label": "Trimmed Mean",
               "delta": 0.003668,
-              "h1": 1.447468,
-              "h3": 2.213642,
-              "h6": 2.368663,
-              "h12": 2.230304
+              "h1": 2.203668,
+              "h3": 2.195623,
+              "h6": 2.354125,
+              "h12": 2.287223
             }
           ],
           "ecumenical": {
-            "value": 3.059448,
-            "through": "Jun 2026"
+            "value": 3.188232,
+            "through": "Jul 2026"
           }
         },
         "cpi": {
@@ -2207,22 +2207,22 @@
             {
               "label": "Median",
               "delta": -0.668043,
-              "h1": 2.446347,
-              "h3": 2.501842,
-              "h6": 2.275574,
-              "h12": 1.979059
+              "h1": 2.446654,
+              "h3": 2.292809,
+              "h6": 2.356842,
+              "h12": 2.025509
             },
             {
               "label": "Trimmed Mean",
               "delta": -0.36243,
-              "h1": 2.281477,
-              "h3": 1.705825,
-              "h6": 2.348252,
-              "h12": 2.265487
+              "h1": 2.343846,
+              "h3": 1.63349,
+              "h6": 2.346167,
+              "h12": 2.242201
             }
           ],
           "ecumenical": {
-            "value": 1.979059,
+            "value": 2.025509,
             "through": "Jul 2026"
           }
         }
@@ -9752,7 +9752,7 @@
               },
               {
                 "label": "10-year",
-                "value": 4.66,
+                "value": 4.67,
                 "as_of": "2026-08-26",
                 "chg_1d": 0.03,
                 "chg_1w": 0.01,
@@ -9833,11 +9833,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 15.64,
-                "as_of": "2026-08-26",
-                "chg_1d": 0.19,
-                "chg_1w": 0.75,
-                "chg_ytd": 1.13,
+                "value": 15.45,
+                "as_of": "2026-08-25",
+                "chg_1d": -0.4,
+                "chg_1w": -0.39,
+                "chg_ytd": 0.94,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -9858,7 +9858,7 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 99.16,
+                "value": 99.17,
                 "as_of": "2026-08-26",
                 "chg_1d": 0.2,
                 "chg_1w": 0.3,
@@ -9869,33 +9869,33 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1653,
-                "as_of": "2026-08-26",
-                "chg_1d": 0.2,
-                "chg_1w": 0.2,
-                "chg_ytd": 0.9,
+                "value": 1.1684,
+                "as_of": "2026-08-21",
+                "chg_1d": -0.0,
+                "chg_1w": -0.9,
+                "chg_ytd": 0.5,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3596,
-                "as_of": "2026-08-26",
-                "chg_1d": 0.4,
-                "chg_1w": 0.2,
-                "chg_ytd": -0.9,
+                "value": 1.3644,
+                "as_of": "2026-08-21",
+                "chg_1d": -0.0,
+                "chg_1w": -0.6,
+                "chg_ytd": -1.2,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/JPY",
-                "value": 159.3,
-                "as_of": "2026-08-26",
-                "chg_1d": 0.1,
-                "chg_1w": 0.2,
-                "chg_ytd": 1.6,
+                "value": 158.9,
+                "as_of": "2026-08-21",
+                "chg_1d": 0.0,
+                "chg_1w": -0.2,
+                "chg_ytd": 1.4,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -9940,11 +9940,11 @@
             "rows": [
               {
                 "label": "WTI",
-                "value": 82.8,
+                "value": 82.2,
                 "as_of": "2026-08-26",
-                "chg_1d": 0.5,
-                "chg_1w": -3.0,
-                "chg_ytd": 25.5,
+                "chg_1d": -0.2,
+                "chg_1w": -3.7,
+                "chg_ytd": 24.9,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -9960,41 +9960,41 @@
               },
               {
                 "label": "Natural gas",
-                "value": 2.91,
+                "value": 2.88,
                 "as_of": "2026-08-26",
-                "chg_1d": 0.14,
-                "chg_1w": 0.1,
-                "chg_ytd": -0.71,
+                "chg_1d": 0.11,
+                "chg_1w": 0.07,
+                "chg_ytd": -0.74,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold",
-                "value": 4655.0,
+                "value": 4650.0,
                 "as_of": "2026-08-26",
-                "chg_1d": 16.0,
-                "chg_1w": 165.0,
-                "chg_ytd": 340.0,
+                "chg_1d": 12.0,
+                "chg_1w": 160.0,
+                "chg_ytd": 335.0,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver",
-                "value": 67.97,
+                "value": 68.12,
                 "as_of": "2026-08-26",
-                "chg_1d": -0.66,
-                "chg_1w": 2.24,
-                "chg_ytd": -2.58,
+                "chg_1d": -0.52,
+                "chg_1w": 2.39,
+                "chg_ytd": -2.44,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper",
-                "value": 6.71,
+                "value": 6.7,
                 "as_of": "2026-08-26",
                 "chg_1d": -0.0,
                 "chg_1w": 0.22,
-                "chg_ytd": 1.07,
+                "chg_ytd": 1.06,
                 "is_yield": false,
                 "provenance": "hard"
               }
@@ -10992,12 +10992,12 @@
           {
             "outcome": "Hold",
             "moves": 0,
-            "prob": 0.9719
+            "prob": 0.9819
           },
           {
             "outcome": "1 hike",
             "moves": 1,
-            "prob": 0.0281
+            "prob": 0.0181
           }
         ],
         "checkpoints": [
@@ -11005,17 +11005,17 @@
             "label": "Next meeting",
             "date": "2026-09-16",
             "implied_rate": 3.63,
-            "net_moves": 0.03,
+            "net_moves": 0.02,
             "distribution": [
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.9719
+                "prob": 0.9819
               },
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.0281
+                "prob": 0.0181
               }
             ]
           },
@@ -11028,17 +11028,17 @@
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.9777
+                "prob": 0.9779
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.0135
+                "prob": 0.0129
               },
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.0088
+                "prob": 0.0092
               }
             ]
           }
@@ -11101,8 +11101,8 @@
           {
             "meeting": "2026-10-28",
             "ticker": "ZQV26.CBT",
-            "price": 96.26499938964844,
-            "implied_avg": 3.735,
+            "price": 96.2699966430664,
+            "implied_avg": 3.73,
             "best_level": 3.88
           },
           {
