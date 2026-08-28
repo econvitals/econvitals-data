@@ -46,7 +46,7 @@
           "id": "cs_yoy",
           "name": "Case-Shiller national, YoY",
           "unit": "% nom",
-          "val": "+1.1",
+          "val": "+1.5",
           "pos": 24,
           "tone": "cool",
           "band": [
@@ -59,13 +59,13 @@
           },
           "badge": "Cooling",
           "note": "14th straight month of deceleration; weakest since Jun 2023.",
-          "_date": "2026-05-01"
+          "_date": "2026-06-01"
         },
         {
           "id": "real_yoy",
           "name": "Real home price, YoY (CPI-adj.)",
           "unit": "% real",
-          "val": "−2.9",
+          "val": "−1.9",
           "pos": 18,
           "tone": "cool",
           "band": [
@@ -78,7 +78,7 @@
           },
           "badge": "Falling",
           "note": "Prices now losing ground to inflation — the quiet correction.",
-          "_date": "2026-05-01"
+          "_date": "2026-06-01"
         },
         {
           "id": "price_to_rent",
@@ -97,7 +97,7 @@
           },
           "badge": "Stretched",
           "note": "Dallas Fed's single best leading indicator; well above fundamentals.",
-          "_date": "2026-05-01"
+          "_date": "2026-06-01"
         },
         {
           "id": "price_to_income",
@@ -149,10 +149,9 @@
           "id": "mortgage30",
           "name": "30-yr fixed mortgage",
           "unit": "%",
-          "val": "6.65",
+          "val": "6.66",
           "tone": "warm",
           "spark": [
-            6.51,
             6.53,
             6.48,
             6.52,
@@ -165,10 +164,11 @@
             6.66,
             6.69,
             6.67,
-            6.65
+            6.65,
+            6.66
           ],
           "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
-          "_date": "2026-08-20"
+          "_date": "2026-08-27"
         },
         {
           "id": "nar_affordability",
@@ -197,10 +197,9 @@
           "id": "implied_pi",
           "name": "Implied P&I, median home",
           "unit": "/mo",
-          "val": "$2,229",
+          "val": "$2,232",
           "tone": "hot",
           "spark": [
-            2197,
             2202,
             2190,
             2200,
@@ -213,10 +212,11 @@
             2232,
             2239,
             2234,
-            2229
+            2229,
+            2232
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
-          "_date": "2026-08-20"
+          "_date": "2026-08-27"
         }
       ]
     },
@@ -379,9 +379,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Aug 27 2026 · live via FRED · calibration editorial",
-  "data_through": "Aug 20 2026",
-  "generated_at": "2026-08-27T02:28:29+00:00",
+  "asof": "Updated Aug 28 2026 · live via FRED · calibration editorial",
+  "data_through": "Aug 27 2026",
+  "generated_at": "2026-08-28T05:53:24+00:00",
   "sources": {
     "fred": 24,
     "config": 1
