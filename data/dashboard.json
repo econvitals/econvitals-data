@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-30T16:13:16+00:00",
+    "generated_at": "2026-08-30T20:28:53+00:00",
     "run_date": "2026-08-30",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -9902,11 +9902,11 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1585,
-                "as_of": "2026-08-29",
+                "value": 1.1587,
+                "as_of": "2026-08-30",
                 "chg_1d": -0.0,
                 "chg_1w": 0.7,
-                "chg_ytd": 1.5,
+                "chg_ytd": 1.4,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -9925,7 +9925,7 @@
               {
                 "label": "USD/JPY",
                 "value": 160.1,
-                "as_of": "2026-08-29",
+                "as_of": "2026-08-30",
                 "chg_1d": 0.0,
                 "chg_1w": 0.6,
                 "chg_ytd": 2.1,
@@ -9935,19 +9935,19 @@
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8091,
-                "as_of": "2026-08-29",
-                "chg_1d": -0.0,
-                "chg_1w": 0.8,
-                "chg_ytd": 2.2,
+                "value": 0.8072,
+                "as_of": "2026-08-30",
+                "chg_1d": -0.3,
+                "chg_1w": 0.7,
+                "chg_ytd": 1.9,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CAD",
-                "value": 1.3907,
-                "as_of": "2026-08-29",
+                "value": 1.3908,
+                "as_of": "2026-08-30",
                 "chg_1d": 0.0,
                 "chg_1w": 0.5,
                 "chg_ytd": 1.4,
@@ -9957,11 +9957,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.72,
+                "value": 6.73,
                 "as_of": "2026-08-30",
-                "chg_1d": -0.1,
-                "chg_1w": -0.0,
-                "chg_ytd": -3.9,
+                "chg_1d": 0.0,
+                "chg_1w": 0.1,
+                "chg_ytd": -3.8,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -11154,7 +11154,7 @@
           }
         ],
         "engine": "zq",
-        "cme_fallback_reason": "HTTPError: HTTP Error 401: Unauthorized"
+        "cme_fallback_reason": "TimeoutError: The read operation timed out"
       },
       "commentary": {
         "provenance": "soft",
