@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-30T10:36:23+00:00",
+    "generated_at": "2026-08-30T16:13:16+00:00",
     "run_date": "2026-08-30",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -9958,7 +9958,7 @@
               {
                 "label": "USD/CNY",
                 "value": 6.72,
-                "as_of": "2026-08-29",
+                "as_of": "2026-08-30",
                 "chg_1d": -0.1,
                 "chg_1w": -0.0,
                 "chg_ytd": -3.9,
@@ -11154,7 +11154,7 @@
           }
         ],
         "engine": "zq",
-        "cme_fallback_reason": "HTTPError: HTTP Error 400: Bad Request"
+        "cme_fallback_reason": "HTTPError: HTTP Error 401: Unauthorized"
       },
       "commentary": {
         "provenance": "soft",
@@ -11850,6 +11850,10 @@
             "cpi": 3.3
           },
           {
+            "country": "Canada",
+            "cpi": 3.0
+          },
+          {
             "country": "United Kingdom",
             "cpi": 2.9
           },
@@ -11917,11 +11921,11 @@
             "gdp_qq": -0.1,
             "gdp": -0.1,
             "unemp": 6.4,
-            "cpi": null,
+            "cpi": 3.0,
             "core": 1.9,
             "ten": 3.42,
             "pol": 2.25,
-            "asof": null
+            "asof": "Jul 2026"
           },
           {
             "country": "United Kingdom",
