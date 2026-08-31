@@ -1657,6 +1657,14 @@
       "latest_date": "2026-07-01"
     },
     {
+      "slug": "fedspeak-hawk-dove-ranking",
+      "category": "Fed",
+      "title": "Hawk-Dove Scores of Fed Policymakers",
+      "type": "barh",
+      "units": "Average score, -3 (most dovish) to +3 (most hawkish)",
+      "latest_date": "2026-08-28"
+    },
+    {
       "slug": "finance-insurance-payrolls",
       "category": "Employment",
       "title": "Finance and Insurance Employment",
@@ -4334,7 +4342,7 @@
       "title": "Treasury Yield Curve",
       "type": "curve",
       "units": "Percent",
-      "latest_date": "2026-08-28"
+      "latest_date": "2026-08-31"
     },
     {
       "slug": "trimmed-mean-cpi",
@@ -4399,6 +4407,14 @@
       "type": "line",
       "units": "Percentage points",
       "latest_date": "2026-05-01"
+    },
+    {
+      "slug": "unemployment-low-streaks",
+      "category": "Employment",
+      "title": "Longest Runs of Unemployment at or Below 4.5 Percent",
+      "type": "cycle_bar",
+      "units": "Consecutive months, 1948 to today",
+      "latest_date": "2026-08-01"
     },
     {
       "slug": "unemployment-rate",
