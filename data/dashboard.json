@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-01T16:17:47+00:00",
+    "generated_at": "2026-09-01T20:30:26+00:00",
     "run_date": "2026-09-01",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -75,11 +75,11 @@
         },
         {
           "label": "10-year",
-          "value": 4.77,
-          "display": "4.77%",
+          "value": 4.796,
+          "display": "4.80%",
           "period": "2026-09-01",
-          "change": 0.58,
-          "change_display": "+0.58 YTD",
+          "change": 0.61,
+          "change_display": "+0.61 YTD",
           "provenance": "hard"
         },
         {
@@ -93,20 +93,20 @@
         },
         {
           "label": "S&P 500",
-          "value": 7650.0,
-          "display": "7,650",
+          "value": 7631.0,
+          "display": "7,631",
           "period": "2026-09-01",
-          "change": 11.5,
-          "change_display": "+11.5% YTD",
+          "change": 11.3,
+          "change_display": "+11.3% YTD",
           "provenance": "hard"
         },
         {
           "label": "Brent",
-          "value": 92.699997,
-          "display": "$93",
+          "value": 95.25,
+          "display": "$95",
           "period": "2026-09-01",
-          "change": 52.6,
-          "change_display": "+52.6% YTD",
+          "change": 56.8,
+          "change_display": "+56.8% YTD",
           "provenance": "hard"
         },
         {
@@ -9780,51 +9780,51 @@
             "rows": [
               {
                 "label": "2-year",
-                "value": 4.34,
-                "as_of": "2026-08-31",
-                "chg_1d": 0.0,
-                "chg_1w": 0.1,
-                "chg_ytd": 0.87,
+                "value": 4.39,
+                "as_of": "2026-09-01",
+                "chg_1d": 0.05,
+                "chg_1w": 0.22,
+                "chg_ytd": 0.92,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "5-year",
-                "value": 4.53,
+                "value": 4.56,
                 "as_of": "2026-09-01",
-                "chg_1d": 0.02,
-                "chg_1w": 0.12,
-                "chg_ytd": 0.79,
+                "chg_1d": 0.05,
+                "chg_1w": 0.15,
+                "chg_ytd": 0.82,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "10-year",
-                "value": 4.77,
+                "value": 4.8,
                 "as_of": "2026-09-01",
-                "chg_1d": 0.01,
-                "chg_1w": 0.07,
-                "chg_ytd": 0.58,
+                "chg_1d": 0.04,
+                "chg_1w": 0.09,
+                "chg_ytd": 0.61,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "30-year",
-                "value": 5.25,
+                "value": 5.27,
                 "as_of": "2026-09-01",
-                "chg_1d": -0.0,
-                "chg_1w": 0.02,
-                "chg_ytd": 0.38,
+                "chg_1d": 0.02,
+                "chg_1w": 0.04,
+                "chg_ytd": 0.4,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "2s10s slope",
-                "value": 41.0,
-                "as_of": "2026-08-31",
-                "chg_1d": 2.0,
-                "chg_1w": -5.0,
-                "chg_ytd": -31.0,
+                "value": 40.0,
+                "as_of": "2026-09-01",
+                "chg_1d": -1.0,
+                "chg_1w": -7.0,
+                "chg_ytd": -32.0,
                 "unit": "bp",
                 "is_yield": false,
                 "provenance": "hard"
@@ -9847,30 +9847,30 @@
               {
                 "label": "Real 10y",
                 "value": 2.44,
-                "as_of": "2026-08-31",
-                "chg_1d": 0.02,
-                "chg_1w": 0.06,
+                "as_of": "2026-09-01",
+                "chg_1d": 0.0,
+                "chg_1w": 0.12,
                 "chg_ytd": 0.5,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "10y breakeven",
-                "value": 2.31,
-                "as_of": "2026-08-31",
-                "chg_1d": -0.0,
-                "chg_1w": -0.01,
-                "chg_ytd": 0.06,
+                "value": 2.35,
+                "as_of": "2026-09-01",
+                "chg_1d": 0.04,
+                "chg_1w": 0.03,
+                "chg_ytd": 0.1,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "5y5y fwd breakeven",
-                "value": 2.31,
-                "as_of": "2026-08-31",
-                "chg_1d": -0.01,
-                "chg_1w": -0.01,
-                "chg_ytd": 0.09,
+                "value": 2.33,
+                "as_of": "2026-09-01",
+                "chg_1d": 0.02,
+                "chg_1w": 0.0,
+                "chg_ytd": 0.11,
                 "is_yield": true,
                 "provenance": "hard"
               }
@@ -9881,11 +9881,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 15.46,
+                "value": 16.34,
                 "as_of": "2026-09-01",
-                "chg_1d": 0.54,
-                "chg_1w": 0.01,
-                "chg_ytd": 0.95,
+                "chg_1d": 1.42,
+                "chg_1w": 0.89,
+                "chg_ytd": 1.83,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -9906,21 +9906,21 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 99.64,
+                "value": 99.69,
                 "as_of": "2026-09-01",
-                "chg_1d": 0.2,
-                "chg_1w": 0.6,
-                "chg_ytd": 1.2,
+                "chg_1d": 0.3,
+                "chg_1w": 0.7,
+                "chg_ytd": 1.3,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1589,
+                "value": 1.159,
                 "as_of": "2026-09-01",
                 "chg_1d": 0.2,
-                "chg_1w": 0.6,
+                "chg_1w": 0.5,
                 "chg_ytd": 1.4,
                 "is_yield": false,
                 "provenance": "hard",
@@ -9928,55 +9928,55 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3524,
+                "value": 1.3512,
                 "as_of": "2026-09-01",
-                "chg_1d": 0.2,
-                "chg_1w": 0.5,
-                "chg_ytd": -0.4,
+                "chg_1d": 0.3,
+                "chg_1w": 0.6,
+                "chg_ytd": -0.3,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/JPY",
-                "value": 160.1,
+                "value": 160.2,
                 "as_of": "2026-09-01",
-                "chg_1d": 0.2,
-                "chg_1w": 0.5,
-                "chg_ytd": 2.1,
+                "chg_1d": 0.3,
+                "chg_1w": 0.6,
+                "chg_ytd": 2.2,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8121,
+                "value": 0.8117,
                 "as_of": "2026-09-01",
-                "chg_1d": 0.5,
+                "chg_1d": 0.4,
                 "chg_1w": 0.8,
-                "chg_ytd": 2.6,
+                "chg_ytd": 2.5,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CAD",
-                "value": 1.3903,
+                "value": 1.3897,
                 "as_of": "2026-09-01",
-                "chg_1d": 0.4,
+                "chg_1d": 0.3,
                 "chg_1w": 0.2,
-                "chg_ytd": 1.4,
+                "chg_ytd": 1.3,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CNY",
-                "value": 6.71,
+                "value": 6.72,
                 "as_of": "2026-09-01",
-                "chg_1d": -0.2,
-                "chg_1w": -0.2,
-                "chg_ytd": -4.1,
+                "chg_1d": -0.1,
+                "chg_1w": -0.0,
+                "chg_ytd": -3.9,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -9988,61 +9988,61 @@
             "rows": [
               {
                 "label": "WTI",
-                "value": 88.4,
+                "value": 90.7,
                 "as_of": "2026-09-01",
-                "chg_1d": 2.6,
-                "chg_1w": 6.0,
-                "chg_ytd": 31.1,
+                "chg_1d": 5.0,
+                "chg_1w": 8.4,
+                "chg_ytd": 33.4,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent",
-                "value": 93.5,
+                "value": 95.4,
                 "as_of": "2026-09-01",
-                "chg_1d": 3.0,
-                "chg_1w": 4.9,
-                "chg_ytd": 32.4,
+                "chg_1d": 4.9,
+                "chg_1w": 6.8,
+                "chg_ytd": 34.3,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas",
-                "value": 2.88,
+                "value": 2.94,
                 "as_of": "2026-09-01",
-                "chg_1d": -0.05,
-                "chg_1w": 0.12,
-                "chg_ytd": -0.73,
+                "chg_1d": 0.01,
+                "chg_1w": 0.17,
+                "chg_ytd": -0.67,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold",
-                "value": 4419.0,
+                "value": 4374.0,
                 "as_of": "2026-09-01",
-                "chg_1d": -12.0,
-                "chg_1w": -219.0,
-                "chg_ytd": 104.0,
+                "chg_1d": -57.0,
+                "chg_1w": -264.0,
+                "chg_ytd": 60.0,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver",
-                "value": 65.92,
+                "value": 64.68,
                 "as_of": "2026-09-01",
-                "chg_1d": -0.3,
-                "chg_1w": -2.72,
-                "chg_ytd": -4.64,
+                "chg_1d": -1.54,
+                "chg_1w": -3.95,
+                "chg_ytd": -5.87,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper",
-                "value": 6.62,
+                "value": 6.53,
                 "as_of": "2026-09-01",
-                "chg_1d": 0.03,
-                "chg_1w": -0.09,
-                "chg_ytd": 0.98,
+                "chg_1d": -0.06,
+                "chg_1w": -0.18,
+                "chg_ytd": 0.89,
                 "is_yield": false,
                 "provenance": "hard"
               }
@@ -10053,11 +10053,11 @@
             "rows": [
               {
                 "label": "S&P 500",
-                "value": 7649.0,
+                "value": 7633.0,
                 "as_of": "2026-09-01",
-                "chg_1d": -37.0,
-                "chg_1w": -28.0,
-                "chg_ytd": 791.0,
+                "chg_1d": -54.0,
+                "chg_1w": -45.0,
+                "chg_ytd": 774.0,
                 "is_yield": false,
                 "provenance": "hard"
               }
@@ -11053,336 +11053,131 @@
       ],
       "replication": {
         "available": true,
-        "source": "CME FedWatch End-of-Day API",
-        "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
-        "reporting_date": "2026-08-28",
-        "anchor_midpoint": 3.625,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-09-01)",
-        "current_range_bp": [
-          350,
-          375
-        ],
-        "anchor_effr": 3.625,
+        "method": "Option A interim \u2014 ZQ futures, grid-constrained fit (CME FedWatch API to swap in)",
+        "anchor_effr": 3.63,
         "next_meeting": "2026-09-16",
         "next_meeting_outcomes": [
           {
             "outcome": "1 hike",
             "moves": 1,
-            "prob": 0.59
+            "prob": 0.9849
           },
           {
             "outcome": "Hold",
             "moves": 0,
-            "prob": 0.41
+            "prob": 0.0151
           }
         ],
         "checkpoints": [
           {
             "label": "Next meeting",
             "date": "2026-09-16",
-            "implied_rate": 3.875,
-            "net_moves": 1.0,
-            "expected_rate": 3.7725,
-            "modal_rate": 3.875,
-            "modal_range_bp": [
-              375,
-              400
-            ],
-            "net_moves_expected": 0.59,
+            "implied_rate": 3.88,
+            "net_moves": 0.98,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.59
+                "prob": 0.9849
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.41
+                "prob": 0.0151
               }
             ]
           },
           {
             "label": "Year-end",
             "date": "2026-12-09",
-            "implied_rate": 4.125,
-            "net_moves": 2.0,
-            "expected_rate": 4.0069,
-            "modal_rate": 4.125,
-            "modal_range_bp": [
-              400,
-              425
-            ],
-            "net_moves_expected": 1.53,
+            "implied_rate": 4.13,
+            "net_moves": 1.57,
             "distribution": [
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.4033
+                "prob": 0.5694
               },
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.3765
-              },
-              {
-                "outcome": "3 hikes",
-                "moves": 3,
-                "prob": 0.1148
-              },
-              {
-                "outcome": "Hold",
-                "moves": 0,
-                "prob": 0.1054
+                "prob": 0.4306
               }
             ]
           }
         ],
-        "year_end_implied": 4.125,
+        "year_end_implied": 4.13,
         "moves_priced_year_end": 2.0,
-        "year_end_expected": 4.0069,
-        "year_end_modal": 4.125,
-        "year_end_sigma": 0.2076,
-        "moves_priced_year_end_expected": 1.53,
         "now_curve": [
           {
             "date": "2026-09-01",
-            "rate": 3.625
+            "rate": 3.63
           },
           {
             "date": "2026-09-16",
-            "rate": 3.875
+            "rate": 3.88
           },
           {
             "date": "2026-10-28",
-            "rate": 3.875
+            "rate": 3.88
           },
           {
             "date": "2026-12-09",
-            "rate": 4.125
-          }
-        ],
-        "now_curve_modal": [
-          {
-            "date": "2026-09-01",
-            "rate": 3.625
-          },
-          {
-            "date": "2026-09-16",
-            "rate": 3.875
-          },
-          {
-            "date": "2026-10-28",
-            "rate": 3.875
-          },
-          {
-            "date": "2026-12-09",
-            "rate": 4.125
-          }
-        ],
-        "now_curve_expected": [
-          {
-            "date": "2026-09-01",
-            "rate": 3.625
-          },
-          {
-            "date": "2026-09-16",
-            "rate": 3.7725
-          },
-          {
-            "date": "2026-10-28",
-            "rate": 3.85
-          },
-          {
-            "date": "2026-12-09",
-            "rate": 4.0069
+            "rate": 4.13
           }
         ],
         "repricing_since_2025": {
-          "reporting_date": "2025-12-31",
-          "end2025_year_end": 3.125,
-          "moves_added": 4.0,
-          "year_end_expected": 3.0412,
-          "year_end_modal": 3.125,
-          "moves_added_expected": 3.86,
+          "end2025_year_end": 3.14,
+          "moves_added": 3.96,
           "curve": [
             {
               "date": "2026-09-01",
-              "rate": 3.125
+              "rate": 3.64
             },
             {
               "date": "2026-09-16",
-              "rate": 3.125
+              "rate": 3.14
             },
             {
               "date": "2026-10-28",
-              "rate": 3.125
+              "rate": 3.14
             },
             {
               "date": "2026-12-09",
-              "rate": 3.125
-            }
-          ],
-          "curve_expected": [
-            {
-              "date": "2026-09-01",
-              "rate": 3.1255
-            },
-            {
-              "date": "2026-09-16",
-              "rate": 3.1255
-            },
-            {
-              "date": "2026-10-28",
-              "rate": 3.0812
-            },
-            {
-              "date": "2026-12-09",
-              "rate": 3.0412
+              "rate": 3.14
             }
           ]
         },
-        "meetings": [
+        "best_path_moves": [
+          1,
+          0,
+          1
+        ],
+        "chain": [
           {
-            "date": "2026-09-16",
-            "reporting_date": "2026-08-28",
-            "modal_range_bp": [
-              375,
-              400
-            ],
-            "modal_rate": 3.875,
-            "expected_rate": 3.7725,
-            "sigma": 0.123,
-            "net_moves_expected": 0.59,
-            "distribution": [
-              {
-                "outcome": "1 hike",
-                "moves": 1,
-                "prob": 0.59
-              },
-              {
-                "outcome": "Hold",
-                "moves": 0,
-                "prob": 0.41
-              }
-            ],
-            "ranges": [
-              {
-                "lo": 350,
-                "hi": 375,
-                "prob": 0.41
-              },
-              {
-                "lo": 375,
-                "hi": 400,
-                "prob": 0.59
-              }
-            ]
+            "meeting": "2026-09-16",
+            "ticker": "ZQU26.CBT",
+            "price": 96.29000091552734,
+            "implied_avg": 3.71,
+            "best_level": 3.88
           },
           {
-            "date": "2026-10-28",
-            "reporting_date": "2026-08-28",
-            "modal_range_bp": [
-              375,
-              400
-            ],
-            "modal_rate": 3.875,
-            "expected_rate": 3.85,
-            "sigma": 0.1688,
-            "net_moves_expected": 0.9,
-            "distribution": [
-              {
-                "outcome": "1 hike",
-                "moves": 1,
-                "prob": 0.5342
-              },
-              {
-                "outcome": "Hold",
-                "moves": 0,
-                "prob": 0.2829
-              },
-              {
-                "outcome": "2 hikes",
-                "moves": 2,
-                "prob": 0.1829
-              }
-            ],
-            "ranges": [
-              {
-                "lo": 350,
-                "hi": 375,
-                "prob": 0.2829
-              },
-              {
-                "lo": 375,
-                "hi": 400,
-                "prob": 0.5342
-              },
-              {
-                "lo": 400,
-                "hi": 425,
-                "prob": 0.1829
-              }
-            ]
+            "meeting": "2026-10-28",
+            "ticker": "ZQV26.CBT",
+            "price": 96.19000244140625,
+            "implied_avg": 3.81,
+            "best_level": 3.88
           },
           {
-            "date": "2026-12-09",
-            "reporting_date": "2026-08-28",
-            "modal_range_bp": [
-              400,
-              425
-            ],
-            "modal_rate": 4.125,
-            "expected_rate": 4.0069,
-            "sigma": 0.2076,
-            "net_moves_expected": 1.53,
-            "distribution": [
-              {
-                "outcome": "2 hikes",
-                "moves": 2,
-                "prob": 0.4033
-              },
-              {
-                "outcome": "1 hike",
-                "moves": 1,
-                "prob": 0.3765
-              },
-              {
-                "outcome": "3 hikes",
-                "moves": 3,
-                "prob": 0.1148
-              },
-              {
-                "outcome": "Hold",
-                "moves": 0,
-                "prob": 0.1054
-              }
-            ],
-            "ranges": [
-              {
-                "lo": 350,
-                "hi": 375,
-                "prob": 0.10541
-              },
-              {
-                "lo": 375,
-                "hi": 400,
-                "prob": 0.37653
-              },
-              {
-                "lo": 400,
-                "hi": 425,
-                "prob": 0.40331
-              },
-              {
-                "lo": 425,
-                "hi": 450,
-                "prob": 0.11475
-              }
-            ]
+            "meeting": "2026-12-09",
+            "ticker": "ZQZ26.CBT",
+            "price": 96.01499938964844,
+            "implied_avg": 3.985,
+            "best_level": 4.13
           }
         ],
-        "engine": "cme"
+        "engine": "zq",
+        "cme_fallback_reason": "HTTPError: HTTP Error 503: Service Unavailable"
       },
       "commentary": {
         "provenance": "soft",
