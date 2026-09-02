@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-02T20:31:54+00:00",
+    "generated_at": "2026-09-02T22:09:19+00:00",
     "run_date": "2026-09-02",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -86,7 +86,7 @@
           "label": "2s10s",
           "value": 45.0,
           "display": "+45 bp",
-          "period": "2026-09-01",
+          "period": "2026-09-02",
           "change": -27.0,
           "change_display": "-27 bp YTD",
           "provenance": "hard"
@@ -102,11 +102,11 @@
         },
         {
           "label": "Brent",
-          "value": 95.139999,
+          "value": 95.230003,
           "display": "$95",
           "period": "2026-09-02",
-          "change": 56.6,
-          "change_display": "+56.6% YTD",
+          "change": 56.8,
+          "change_display": "+56.8% YTD",
           "provenance": "hard"
         },
         {
@@ -9928,7 +9928,7 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1588,
+                "value": 1.1587,
                 "as_of": "2026-09-02",
                 "chg_1d": 0.0,
                 "chg_1w": 0.6,
@@ -9939,7 +9939,7 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3488,
+                "value": 1.3482,
                 "as_of": "2026-09-02",
                 "chg_1d": 0.2,
                 "chg_1w": 0.8,
@@ -9961,7 +9961,7 @@
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8129,
+                "value": 0.813,
                 "as_of": "2026-09-02",
                 "chg_1d": 0.2,
                 "chg_1w": 1.1,
@@ -9972,9 +9972,9 @@
               },
               {
                 "label": "USD/CAD",
-                "value": 1.3844,
+                "value": 1.3847,
                 "as_of": "2026-09-02",
-                "chg_1d": -0.4,
+                "chg_1d": -0.3,
                 "chg_1w": -0.1,
                 "chg_ytd": 1.0,
                 "is_yield": false,
@@ -10001,9 +10001,9 @@
                 "label": "WTI",
                 "value": 90.6,
                 "as_of": "2026-09-02",
-                "chg_1d": 0.3,
-                "chg_1w": 8.3,
-                "chg_ytd": 33.2,
+                "chg_1d": 0.4,
+                "chg_1w": 8.4,
+                "chg_ytd": 33.3,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -10012,38 +10012,38 @@
                 "value": 95.3,
                 "as_of": "2026-09-02",
                 "chg_1d": 0.6,
-                "chg_1w": 7.4,
-                "chg_ytd": 34.1,
+                "chg_1w": 7.5,
+                "chg_ytd": 34.2,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas",
-                "value": 2.99,
+                "value": 3.0,
                 "as_of": "2026-09-02",
-                "chg_1d": 0.09,
-                "chg_1w": 0.15,
-                "chg_ytd": -0.63,
+                "chg_1d": 0.1,
+                "chg_1w": 0.16,
+                "chg_ytd": -0.62,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold",
-                "value": 4432.0,
+                "value": 4434.0,
                 "as_of": "2026-09-02",
-                "chg_1d": 84.0,
-                "chg_1w": -166.0,
-                "chg_ytd": 118.0,
+                "chg_1d": 86.0,
+                "chg_1w": -164.0,
+                "chg_ytd": 120.0,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver",
-                "value": 65.85,
+                "value": 65.93,
                 "as_of": "2026-09-02",
-                "chg_1d": 1.23,
-                "chg_1w": -2.14,
-                "chg_ytd": -4.71,
+                "chg_1d": 1.31,
+                "chg_1w": -2.06,
+                "chg_ytd": -4.63,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -11192,7 +11192,7 @@
           }
         ],
         "engine": "zq",
-        "cme_fallback_reason": "HTTPError: HTTP Error 503: Service Unavailable"
+        "cme_fallback_reason": "TimeoutError: The read operation timed out"
       },
       "commentary": {
         "provenance": "soft",
