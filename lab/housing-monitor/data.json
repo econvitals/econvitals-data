@@ -149,10 +149,9 @@
           "id": "mortgage30",
           "name": "30-yr fixed mortgage",
           "unit": "%",
-          "val": "6.66",
+          "val": "6.71",
           "tone": "warm",
           "spark": [
-            6.53,
             6.48,
             6.52,
             6.47,
@@ -165,10 +164,11 @@
             6.69,
             6.67,
             6.65,
-            6.66
+            6.66,
+            6.71
           ],
           "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
-          "_date": "2026-08-27"
+          "_date": "2026-09-03"
         },
         {
           "id": "nar_affordability",
@@ -197,10 +197,9 @@
           "id": "implied_pi",
           "name": "Implied P&I, median home",
           "unit": "/mo",
-          "val": "$2,232",
+          "val": "$2,243",
           "tone": "hot",
           "spark": [
-            2202,
             2190,
             2200,
             2188,
@@ -213,10 +212,11 @@
             2239,
             2234,
             2229,
-            2232
+            2232,
+            2243
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
-          "_date": "2026-08-27"
+          "_date": "2026-09-03"
         }
       ]
     },
@@ -379,9 +379,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Sep 2 2026 · live via FRED · calibration editorial",
-  "data_through": "Aug 27 2026",
-  "generated_at": "2026-09-02T23:43:48+00:00",
+  "asof": "Updated Sep 3 2026 · live via FRED · calibration editorial",
+  "data_through": "Sep 3 2026",
+  "generated_at": "2026-09-03T23:43:27+00:00",
   "sources": {
     "fred": 24,
     "config": 1
