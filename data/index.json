@@ -569,6 +569,14 @@
       "latest_date": "2026-06-01"
     },
     {
+      "slug": "consumer-delinquency-90day",
+      "category": "Inbox",
+      "title": "Percent of Balance 90+ Days Delinquent",
+      "type": "line",
+      "units": "Percent",
+      "latest_date": "2026-04-01"
+    },
+    {
       "slug": "consumer-loan-delinquencies",
       "category": "Financial",
       "title": "Consumer Loan Delinquency Rate",
@@ -1113,12 +1121,52 @@
       "latest_date": "2000-01-30"
     },
     {
+      "slug": "diesel-gasoline-crude-indexed",
+      "category": "Inbox",
+      "title": "Diesel, Gasoline and Crude Oil Prices",
+      "type": "line",
+      "units": "Index, week of March 2, 2026 = 100",
+      "latest_date": "2026-08-31"
+    },
+    {
+      "slug": "diesel-price-components",
+      "category": "Inbox",
+      "title": "Components of the Retail Diesel Price",
+      "type": "contrib_stack",
+      "units": "Dollars per gallon",
+      "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "diesel-vs-gasoline-retail",
+      "category": "Inbox",
+      "title": "Retail Diesel and Gasoline Prices",
+      "type": "line",
+      "units": "Dollars per gallon",
+      "latest_date": "2026-08-31"
+    },
+    {
       "slug": "disposable-income",
       "category": "Income and Outlays",
       "title": "Disposable Personal Income",
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-07-01"
+    },
+    {
+      "slug": "distillate-exports-and-inventories",
+      "category": "Inbox",
+      "title": "Distillate Exports and Inventories",
+      "type": "line",
+      "units": "Million barrels per day",
+      "latest_date": "2026-08-28"
+    },
+    {
+      "slug": "distillate-inventories-utilization",
+      "category": "Inbox",
+      "title": "Distillate Inventories and Refinery Utilization",
+      "type": "line",
+      "units": "Days of supply",
+      "latest_date": "2026-08-28"
     },
     {
       "slug": "durable-goods-ex-transport-growth",
@@ -3846,7 +3894,7 @@
       "title": "Real Hourly Wage Growth Over Business Cycles",
       "type": "cycle_bar",
       "units": "Average annual percent change, real (PCE-deflated)",
-      "latest_date": "2026-06-01"
+      "latest_date": "2026-07-01"
     },
     {
       "slug": "real-wage-growth-by-industry",
