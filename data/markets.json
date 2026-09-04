@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-09-03T21:30:05+00:00",
- "as_of": "2026-09-02",
+ "generated_at": "2026-09-04T13:00:05+00:00",
+ "as_of": "2026-09-03",
  "n_rows": 18,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
  "groups": [
@@ -10,12 +10,12 @@
     {
      "label": "2-year",
      "value": 4.39,
-     "as_of": "2026-09-01",
+     "as_of": "2026-09-02",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "fred:DGS2",
-     "chg_1d": 0.05,
-     "chg_1w": 0.22,
+     "chg_1d": 0.0,
+     "chg_1w": 0.2,
      "chg_ytd": 0.92
     },
     {
@@ -31,14 +31,14 @@
     },
     {
      "label": "10-year",
-     "value": 4.79,
-     "as_of": "2026-09-02",
+     "value": 4.77,
+     "as_of": "2026-09-03",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y",
-     "chg_1d": 0.0,
-     "chg_1w": 0.13,
-     "chg_ytd": 0.6
+     "chg_1d": -0.02,
+     "chg_1w": 0.1,
+     "chg_ytd": 0.58
     },
     {
      "label": "30-year",
@@ -65,11 +65,11 @@
     {
      "label": "2s10s",
      "value": 0.4,
-     "as_of": "2026-09-01",
+     "as_of": "2026-09-02",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 fred:DGS2",
-     "chg_1d": -0.01,
+     "chg_1d": 0.0,
      "chg_1w": -0.07,
      "chg_ytd": -0.32
     }
@@ -80,25 +80,25 @@
    "rows": [
     {
      "label": "Real 10y",
-     "value": 2.45,
-     "as_of": "2026-09-02",
+     "value": 2.42,
+     "as_of": "2026-09-03",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:real/10Y",
-     "chg_1d": 0.01,
-     "chg_1w": 0.11,
-     "chg_ytd": 0.51
+     "chg_1d": -0.03,
+     "chg_1w": 0.08,
+     "chg_ytd": 0.48
     },
     {
      "label": "10y breakeven",
-     "value": 2.34,
-     "as_of": "2026-09-02",
+     "value": 2.35,
+     "as_of": "2026-09-03",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:real/10Y",
-     "chg_1d": -0.01,
+     "chg_1d": 0.01,
      "chg_1w": 0.02,
-     "chg_ytd": 0.09
+     "chg_ytd": 0.1
     }
    ]
   },
@@ -227,14 +227,14 @@
    "rows": [
     {
      "label": "S&P 500",
-     "value": 7667.0,
-     "as_of": "2026-09-02",
+     "value": 7748.0,
+     "as_of": "2026-09-03",
      "is_yield": false,
      "provenance": "hard",
      "source_key": "fred:SP500",
-     "chg_1d": 35.0,
-     "chg_1w": -9.0,
-     "chg_ytd": 808.0
+     "chg_1d": 81.0,
+     "chg_1w": 17.0,
+     "chg_ytd": 889.0
     }
    ]
   }
