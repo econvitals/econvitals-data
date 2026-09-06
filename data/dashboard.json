@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-06T10:33:00+00:00",
+    "generated_at": "2026-09-06T16:14:28+00:00",
     "run_date": "2026-09-06",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -10036,11 +10036,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.71,
-                "as_of": "2026-09-05",
-                "chg_1d": 0.0,
-                "chg_1w": -0.1,
-                "chg_ytd": -4.0,
+                "value": 6.7,
+                "as_of": "2026-09-06",
+                "chg_1d": -0.1,
+                "chg_1w": -0.3,
+                "chg_ytd": -4.2,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -11141,7 +11141,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-09-04",
         "anchor_midpoint": 3.625,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-09-05)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-09-06)",
         "current_range_bp": [
           350,
           375
@@ -12323,7 +12323,7 @@
             "unemp": 5.3,
             "cpi": 4.4,
             "core": 4.4,
-            "ten": null,
+            "ten": 14.32,
             "pol": 14.0,
             "asof": "Jul 2026"
           }
