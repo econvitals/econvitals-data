@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-07T10:32:59+00:00",
+    "generated_at": "2026-09-07T16:15:02+00:00",
     "run_date": "2026-09-07",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -9939,11 +9939,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 15.04,
+                "value": 15.3,
                 "as_of": "2026-09-07",
-                "chg_1d": 0.51,
-                "chg_1w": 0.12,
-                "chg_ytd": 0.53,
+                "chg_1d": 0.77,
+                "chg_1w": 0.38,
+                "chg_ytd": 0.79,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -9964,9 +9964,9 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 98.94,
+                "value": 98.9,
                 "as_of": "2026-09-07",
-                "chg_1d": -0.2,
+                "chg_1d": -0.3,
                 "chg_1w": -0.5,
                 "chg_ytd": 0.5,
                 "is_yield": false,
@@ -9975,9 +9975,9 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1625,
+                "value": 1.1627,
                 "as_of": "2026-09-07",
-                "chg_1d": -0.1,
+                "chg_1d": -0.2,
                 "chg_1w": -0.3,
                 "chg_ytd": 1.1,
                 "is_yield": false,
@@ -9986,7 +9986,7 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3536,
+                "value": 1.3541,
                 "as_of": "2026-09-07",
                 "chg_1d": -0.2,
                 "chg_1w": -0.2,
@@ -9997,33 +9997,33 @@
               },
               {
                 "label": "USD/JPY",
-                "value": 154.7,
+                "value": 154.4,
                 "as_of": "2026-09-07",
-                "chg_1d": -0.9,
-                "chg_1w": -3.4,
-                "chg_ytd": -1.4,
+                "chg_1d": -1.1,
+                "chg_1w": -3.6,
+                "chg_ytd": -1.6,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8085,
+                "value": 0.8091,
                 "as_of": "2026-09-07",
-                "chg_1d": -0.3,
-                "chg_1w": -0.4,
-                "chg_ytd": 2.1,
+                "chg_1d": -0.2,
+                "chg_1w": -0.3,
+                "chg_ytd": 2.2,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CAD",
-                "value": 1.382,
+                "value": 1.3812,
                 "as_of": "2026-09-07",
-                "chg_1d": -0.1,
-                "chg_1w": -0.5,
-                "chg_ytd": 0.8,
+                "chg_1d": -0.2,
+                "chg_1w": -0.6,
+                "chg_ytd": 0.7,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -10056,11 +10056,11 @@
               },
               {
                 "label": "Brent",
-                "value": 96.6,
+                "value": 97.3,
                 "as_of": "2026-09-07",
-                "chg_1d": 0.4,
-                "chg_1w": 6.2,
-                "chg_ytd": 35.5,
+                "chg_1d": 1.0,
+                "chg_1w": 6.8,
+                "chg_ytd": 36.1,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -11139,7 +11139,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-09-04",
         "anchor_midpoint": 3.625,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-09-06)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-09-07)",
         "current_range_bp": [
           350,
           375
@@ -12228,8 +12228,8 @@
           },
           {
             "country": "Canada",
-            "gdp_qq": -0.1,
-            "gdp": -0.1,
+            "gdp_qq": 3.3,
+            "gdp": 1.1,
             "unemp": 6.4,
             "cpi": 3.0,
             "core": 1.9,
