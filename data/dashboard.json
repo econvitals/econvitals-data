@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-07T20:30:19+00:00",
+    "generated_at": "2026-09-07T22:09:13+00:00",
     "run_date": "2026-09-07",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -84,11 +84,11 @@
         },
         {
           "label": "2s10s",
-          "value": 43.0,
-          "display": "+43 bp",
-          "period": "2026-09-03",
-          "change": -29.0,
-          "change_display": "-29 bp YTD",
+          "value": 44.0,
+          "display": "+44 bp",
+          "period": "2026-09-04",
+          "change": -28.0,
+          "change_display": "-28 bp YTD",
           "provenance": "hard"
         },
         {
@@ -6276,6 +6276,12 @@
               "breakeven": 2.35,
               "real": 2.42,
               "nominal": 4.77
+            },
+            {
+              "date": "2026-09-04",
+              "breakeven": 2.35,
+              "real": 2.43,
+              "nominal": 4.78
             }
           ],
           "series": [
@@ -9986,7 +9992,7 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.354,
+                "value": 1.3542,
                 "as_of": "2026-09-07",
                 "chg_1d": -0.2,
                 "chg_1w": -0.2,
@@ -9997,7 +10003,7 @@
               },
               {
                 "label": "USD/JPY",
-                "value": 154.4,
+                "value": 154.3,
                 "as_of": "2026-09-07",
                 "chg_1d": -1.1,
                 "chg_1w": -3.6,
@@ -10008,10 +10014,10 @@
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8096,
+                "value": 0.8094,
                 "as_of": "2026-09-07",
-                "chg_1d": -0.1,
-                "chg_1w": -0.2,
+                "chg_1d": -0.2,
+                "chg_1w": -0.3,
                 "chg_ytd": 2.2,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10019,7 +10025,7 @@
               },
               {
                 "label": "USD/CAD",
-                "value": 1.3814,
+                "value": 1.3813,
                 "as_of": "2026-09-07",
                 "chg_1d": -0.2,
                 "chg_1w": -0.6,
@@ -10030,11 +10036,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.71,
+                "value": 6.7,
                 "as_of": "2026-09-07",
-                "chg_1d": -0.0,
-                "chg_1w": -0.1,
-                "chg_ytd": -4.0,
+                "chg_1d": -0.2,
+                "chg_1w": -0.3,
+                "chg_ytd": -4.2,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -12222,7 +12228,7 @@
             "unemp": 4.1,
             "cpi": 3.3,
             "core": 2.5,
-            "ten": 4.77,
+            "ten": 4.78,
             "pol": 3.75,
             "asof": "Jul 2026"
           },
