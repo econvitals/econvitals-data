@@ -8,10 +8,15 @@ pulls live values, and writes data.json in the shape housing.js renders.
 DATA SOURCING — FRED, directly. Every config key that has a `source:` block is a FRED
 series id; there is one fetch path and no vendor in front of it.
 
-RESILIENCE: every indicator is computed in its own try/except. On any failure the
-indicator keeps the `val`/`spark`/`v` already written in config, so the page never
-blanks — exactly like the dashboard's maclow job. A per-run source tally
-(fred / config) is written to data.json for transparency.
+RESILIENCE: every indicator is computed in its own try/except, so the page never
+blanks. A failed row is served from last-good.json — the dated value that row last
+returned live — and only falls back to the editorial `val`/`spark`/`v` in config
+when there is no last-good entry. Every row carries `_source`
+(fred / last-good / fallback / editorial) and, where one exists, `_date`; the
+per-run tally goes in data.json's `sources` and the failed keys in `stale_rows`.
+`data_through` is computed from real observation dates only, never from today.
+Any failure makes the run exit 1, so a refresh that could not refresh is reported
+as failed rather than passing quietly with yesterday's numbers restamped.
 
 Credentials resolve env var → ~/.config/macro-dashboard/.env (same as the chartbook
 clients): FRED_API_KEY.
@@ -37,6 +42,10 @@ REPO = HERE.parent.parent  # builders/housing-monitor/ -> repo root
 CONFIG_PATH = HERE / "housing_config.yaml"
 OUT_PATH = (Path(os.environ["HOUSING_OUT"]) if os.environ.get("HOUSING_OUT")
             else REPO / "lab" / "housing-monitor" / "data.json")
+# Last-good store, beside the output and committed with it: the dated value each
+# wired row last returned live. A failed fetch reads from here instead of silently
+# republishing the editorial placeholder as though it were today's FRED print.
+LAST_GOOD_PATH = OUT_PATH.parent / "last-good.json"
 ENV_FILE = Path.home() / ".config" / "macro-dashboard" / ".env"
 
 SESSION = requests.Session()      # used by the FRED REST client below
@@ -83,7 +92,14 @@ def fred_series(series_id, start="1995-01-01"):
 
 
 # ── resolver ─────────────────────────────────────────────────────────────────
-USED = {"fred": 0, "config": 0}
+# fred      — series fetched live this run
+# config    — rows served from the editorial value (no source block, or a failed
+#             fetch with nothing in the last-good store)
+# last_good — rows served from a previously fetched, dated value
+# failed    — wired rows whose fetch raised this run (last_good + fallback rows)
+USED = {"fred": 0, "config": 0, "last_good": 0, "failed": 0}
+
+VALUE_KEYS = ("val", "spark", "v", "p", "d", "dir")
 
 
 def get_series(key):
@@ -290,51 +306,112 @@ def fmt_date(d):
     return "%s %d %d" % (MONTHS[d.month - 1], d.day, d.year) if d else ""
 
 
+# ── last-good store ──────────────────────────────────────────────────────────
+def load_last_good():
+    """{"section/item": {"date": iso, <value keys>}} — missing/corrupt reads empty."""
+    try:
+        blob = json.loads(LAST_GOOD_PATH.read_text())
+        return blob.get("rows", {}) if isinstance(blob, dict) else {}
+    except Exception:
+        return {}
+
+
+def save_last_good(rows):
+    LAST_GOOD_PATH.write_text(json.dumps(
+        {"note": "Last live value per wired row; read by fetch_housing.py when a "
+                 "fetch fails. Generated — do not hand-edit.",
+         "rows": dict(sorted(rows.items()))},
+        indent=2, ensure_ascii=False) + "\n")
+
+
 # ── main ───────────────────────────────────────────────────────────────────--
 def main():
     cfg = yaml.safe_load(CONFIG_PATH.read_text())
 
+    last_good = load_last_good()
+    fresh_good = dict(last_good)   # carried forward, refreshed row by row
+
     sections_out = []
     dates = []
+    failures = []
+    wired = 0
     for sec in cfg["sections"]:
         items_out = []
         for item in sec["items"]:
             row = {k: v for k, v in item.items() if k not in ("source",)}
             src = item.get("source")
+            key = "%s/%s" % (sec["id"], item.get("id"))
             if not src:
                 USED["config"] += 1
+                row["_source"] = "editorial"
             else:
+                wired += 1
                 try:
                     res = TRANSFORMS[src["transform"]](src)
-                    for k in ("val", "spark", "v", "p", "d", "dir"):
-                        if k in res:
-                            row[k] = res[k]
+                    keep = {k: res[k] for k in VALUE_KEYS if k in res}
+                    row.update(keep)
+                    row["_source"] = "fred"
                     if res.get("date"):
                         row["_date"] = res["date"].isoformat()
                         dates.append(res["date"])
-                except Exception as e:  # keep config value; never blank the page
-                    USED["config"] += 1
-                    sys.stderr.write("  [skip] %s/%s: %s — kept config value\n"
-                                     % (sec["id"], item.get("id"), str(e)[:80]))
+                        keep["date"] = row["_date"]
+                    fresh_good[key] = keep
+                except Exception as e:
+                    # Never blank the page — but never republish a stale number as
+                    # today's live print either. Serve the dated last-good value if
+                    # we have one, else the editorial placeholder, and say which.
+                    USED["failed"] += 1
+                    failures.append(key)
+                    prev = last_good.get(key)
+                    if prev:
+                        USED["last_good"] += 1
+                        row.update({k: v for k, v in prev.items() if k in VALUE_KEYS})
+                        row["_source"] = "last-good"
+                        if prev.get("date"):
+                            row["_date"] = prev["date"]
+                            dates.append(dt.date.fromisoformat(prev["date"]))
+                        held = "held at last-good %s" % (prev.get("date") or "(undated)")
+                    else:
+                        USED["config"] += 1
+                        row["_source"] = "fallback"
+                        held = "no last-good — kept config value"
+                    sys.stderr.write("  [skip] %s: %s — %s\n"
+                                     % (key, str(e)[:80], held))
             items_out.append(row)
         sections_out.append({"id": sec["id"], "num": sec["num"], "title": sec["title"],
                              "tag": sec["tag"], "kind": sec["kind"], "items": items_out})
 
     today = dt.datetime.now(dt.timezone.utc).date()
-    freshest = max(dates) if dates else today
+    # data_through is a claim about DATA, so it comes only from real observation
+    # dates (live or last-good). With nothing dated it stays empty and the page
+    # renders "—"; it must never fall back to today's wall clock.
+    freshest = max(dates) if dates else None
+    asof = "Updated %s · live via FRED · calibration editorial" % fmt_date(today)
+    if failures:
+        asof = ("Updated %s · %d of %d live indicators unavailable, held at last "
+                "reported value · calibration editorial"
+                % (fmt_date(today), USED["failed"], wired))
     out = {
         "masthead": cfg["masthead"],
         "verdict": cfg["verdict"],
         "sections": sections_out,
         "footer": cfg.get("footer", {}),
-        "asof": "Updated %s · live via FRED · calibration editorial" % fmt_date(today),
+        "asof": asof,
         "data_through": fmt_date(freshest),
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "sources": dict(USED),
+        "stale_rows": failures,
     }
     OUT_PATH.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
+    save_last_good(fresh_good)
     print("Wrote %s — sources: %s; data through %s"
-          % (OUT_PATH, USED, out["data_through"]))
+          % (OUT_PATH, USED, out["data_through"] or "(none)"))
+    if failures:
+        # The page is still serviceable, but the refresh did not do its job — fail
+        # the run so the Action reports red instead of a silent green every night.
+        sys.stderr.write("FETCH FAILED for %d row(s): %s\n"
+                         % (len(failures), ", ".join(failures)))
+        return 1
     return 0
 
 

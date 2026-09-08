@@ -37,11 +37,15 @@ jobs:
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python builders/housing-monitor/fetch_housing.py
+      # always(): a failed fetch still writes a serviceable page from last-good.json,
+      # and last-good.json only survives to the next run if it is committed. The job
+      # still reports red, because the fetch step's exit 1 is what decides that.
       - name: Commit refreshed data
+        if: always()
         run: |
           git config user.name "housing-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add lab/housing-monitor/data.json
+          git add lab/housing-monitor/data.json lab/housing-monitor/last-good.json
           git diff --cached --quiet && { echo "no changes"; exit 0; }
           git commit -m "housing-monitor: refresh data"
           for i in 1 2 3 4 5; do

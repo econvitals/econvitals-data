@@ -11,7 +11,7 @@ The pages that render this data live in `econvitals/site` — no page code is he
 |:---:|:---:|:---:|:---:|
 | central-bank-stance | tools/central-bank-stance/data.json | daily 07:10 UTC | none (BIS, keyless) |
 | fed-dot-plot | tools/fed-dot-plot/data.json | Wed/Thu/Sun 20:30 UTC | FRED_API_KEY |
-| housing-monitor | lab/housing-monitor/data.json | daily 22:00 UTC | FRED_API_KEY |
+| housing-monitor | lab/housing-monitor/data.json + last-good.json | daily 22:00 UTC | FRED_API_KEY |
 | risk-monitor | lab/risk-monitor/data.json | daily 22:30 UTC | FRED_API_KEY |
 | ai-monitor | lab/ai-monitor/data.json | daily 23:00 UTC | FRED_API_KEY |
 | how-americans-are-doing | lab/how-americans-are-doing/data.json | monthly, 1st 12:00 UTC | FRED_API_KEY |
@@ -36,6 +36,16 @@ skip the commit when nothing changed, then a 5-attempt push loop that rebases on
 latest main (`git pull --rebase --autostash origin main`) after each rejection and fails
 loudly only if all five attempts lose the race. Copy that pattern into any new workflow;
 do not "simplify" it away.
+
+**A failed fetch is a failed run (housing-monitor, 2026-09-08).** Its fetcher used to publish
+the editorial placeholder from `housing_config.yaml` labeled "live via FRED" and stamped
+`data_through` with TODAY'S date, then exit 0 — so a broken feed read on the page as a fresh
+print and reported green. It now serves the failed row from `lab/housing-monitor/last-good.json`
+(the dated value that row last returned live, committed beside `data.json`), tags every row with
+`_source` (fred / last-good / fallback / editorial) and `_date`, computes `data_through` from real
+observation dates only, and exits 1. The commit step runs `if: always()` so the last-good page
+still publishes while the job reports red. Any new builder that keeps serving on a fetch failure
+owes the same three things: a dated last-good store, a per-row source flag, and a nonzero exit.
 
 **Not here:** maclow (private sell-side content — its builder, Action and data stay in
 `econvitals/site`), and built-vs-trend (its `lab/built-vs-trend/` data was copied once and
