@@ -59,6 +59,7 @@
           },
           "badge": "Cooling",
           "note": "14th straight month of deceleration; weakest since Jun 2023.",
+          "_source": "fred",
           "_date": "2026-06-01"
         },
         {
@@ -78,6 +79,7 @@
           },
           "badge": "Falling",
           "note": "Prices now losing ground to inflation — the quiet correction.",
+          "_source": "fred",
           "_date": "2026-06-01"
         },
         {
@@ -97,6 +99,7 @@
           },
           "badge": "Stretched",
           "note": "Dallas Fed's single best leading indicator; well above fundamentals.",
+          "_source": "fred",
           "_date": "2026-06-01"
         },
         {
@@ -116,6 +119,7 @@
           },
           "badge": "Stretched",
           "note": "Near the top of its modern range; long-run mean ≈3.5×, '06 peak 4.7×. Pairs the current median price with annual median income that lags ~18 months, so the ratio runs a touch high between income vintages.",
+          "_source": "fred",
           "_date": "2026-04-01"
         },
         {
@@ -134,7 +138,8 @@
             "label": "'19"
           },
           "badge": "Record high",
-          "note": "Record NAR median in May; the level effect dominates the soft momentum."
+          "note": "Record NAR median in May; the level effect dominates the soft momentum.",
+          "_source": "fallback"
         }
       ]
     },
@@ -168,6 +173,7 @@
             6.71
           ],
           "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
+          "_source": "fred",
           "_date": "2026-09-03"
         },
         {
@@ -191,6 +197,7 @@
             103.3
           ],
           "ctx": "Higher = more affordable; 100 = a median-income family exactly qualifies for the median home. Improving YoY as <b>income growth</b> edges out price gains.",
+          "_source": "fred",
           "_date": "2026-07-01"
         },
         {
@@ -216,6 +223,7 @@
             2243
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
+          "_source": "fred",
           "_date": "2026-09-03"
         }
       ]
@@ -235,6 +243,7 @@
           "d": "+0.7%",
           "dir": "up",
           "s": "NAR",
+          "_source": "fred",
           "_date": "2026-07-01"
         },
         {
@@ -245,6 +254,7 @@
           "d": "+0.0",
           "dir": "flat",
           "s": "NAR",
+          "_source": "fred",
           "_date": "2026-07-01"
         },
         {
@@ -255,6 +265,7 @@
           "d": "+3.6%",
           "dir": "up",
           "s": "Realtor.com",
+          "_source": "fred",
           "_date": "2026-08-01"
         },
         {
@@ -265,6 +276,7 @@
           "d": "+2.0%",
           "dir": "up",
           "s": "NAR",
+          "_source": "fred",
           "_date": "2026-07-01"
         },
         {
@@ -275,6 +287,7 @@
           "d": "+0 days",
           "dir": "flat",
           "s": "Realtor.com",
+          "_source": "fred",
           "_date": "2026-08-01"
         },
         {
@@ -285,6 +298,7 @@
           "d": "−0.8 pt",
           "dir": "dn",
           "s": "Realtor.com",
+          "_source": "fred",
           "_date": "2026-08-01"
         },
         {
@@ -295,6 +309,7 @@
           "d": "−6.3%",
           "dir": "dn",
           "s": "Census",
+          "_source": "fred",
           "_date": "2026-07-01"
         },
         {
@@ -305,6 +320,7 @@
           "d": "−13.5%",
           "dir": "dn",
           "s": "Census",
+          "_source": "fred",
           "_date": "2026-07-01"
         }
       ]
@@ -333,6 +349,7 @@
           },
           "badge": "Rising, low",
           "note": "All-bank single-family mortgage delinquency (Fed, SA). Off the floor but far below the ~11% crisis peak.",
+          "_source": "fred",
           "_date": "2026-04-01"
         },
         {
@@ -352,6 +369,7 @@
           },
           "badge": "Strong",
           "note": "Z.1 owners' equity share near record; the structural firebreak vs. 2006.",
+          "_source": "fred",
           "_date": "2026-01-01"
         },
         {
@@ -371,6 +389,7 @@
           },
           "badge": "Easing a touch",
           "note": "SLOOS net % of banks tightening on GSE-eligible mortgages. Negative = a small net share easing — supportive, not restrictive.",
+          "_source": "fred",
           "_date": "2026-07-01"
         }
       ]
@@ -379,11 +398,16 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Sep 7 2026 · live via FRED · calibration editorial",
+  "asof": "Updated Sep 8 2026 · 1 of 19 live indicators unavailable, held at last reported value · calibration editorial",
   "data_through": "Sep 3 2026",
-  "generated_at": "2026-09-07T23:52:56+00:00",
+  "generated_at": "2026-09-08T23:46:07+00:00",
   "sources": {
     "fred": 24,
-    "config": 1
-  }
+    "config": 1,
+    "last_good": 0,
+    "failed": 1
+  },
+  "stale_rows": [
+    "valuation/median_vs_2019"
+  ]
 }
