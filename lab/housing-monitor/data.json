@@ -398,9 +398,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Sep 8 2026 · 1 of 19 live indicators unavailable, held at last reported value · calibration editorial",
+  "asof": "Updated Sep 9 2026 · 1 of 19 live indicators unavailable, held at last reported value · calibration editorial",
   "data_through": "Sep 3 2026",
-  "generated_at": "2026-09-08T23:46:07+00:00",
+  "generated_at": "2026-09-09T23:42:54+00:00",
   "sources": {
     "fred": 24,
     "config": 1,
@@ -409,5 +409,8 @@
   },
   "stale_rows": [
     "valuation/median_vs_2019"
-  ]
+  ],
+  "stale_reasons": {
+    "valuation/median_vs_2019": "HOSMEDUSM052N no longer carries 2019 (it starts 2025-07-01) — the source was truncated, so this row cannot be computed from FRED"
+  }
 }
