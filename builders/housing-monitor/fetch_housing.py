@@ -204,7 +204,17 @@ def t_ratio(src):
 
 def t_pct_vs_year(src):
     obs = get_series(src["series"])
-    base = mean_in_year(obs, int(src["base_year"]))
+    year = int(src["base_year"])
+    base = mean_in_year(obs, year)
+    if not base:
+        # NOT A FETCH FAILURE, AND NOT THE API KEY. The series arrived; it simply no longer
+        # reaches back to the base year. FRED truncated every NAR series to a rolling 13
+        # months on 2026-08-11 (HOSMEDUSM052N now starts 2025-07, and ALFRED has no earlier
+        # vintage either), so this row cannot be computed from FRED at all any more. Say that
+        # here, because a bare TypeError sent the ops mail chasing the FRED key.
+        raise ValueError("%s no longer carries %d (it starts %s) — the source was truncated, "
+                         "so this row cannot be computed from FRED"
+                         % (src["series"], year, obs[0][0].isoformat() if obs else "nowhere"))
     pct = (obs[-1][1] / base - 1) * 100
     return {"val": fmt_num(pct, src.get("fmt")), "date": obs[-1][0]}
 
@@ -334,6 +344,7 @@ def main():
     sections_out = []
     dates = []
     failures = []
+    reasons = {}
     wired = 0
     for sec in cfg["sections"]:
         items_out = []
@@ -362,6 +373,7 @@ def main():
                     # we have one, else the editorial placeholder, and say which.
                     USED["failed"] += 1
                     failures.append(key)
+                    reasons[key] = str(e)[:200]
                     prev = last_good.get(key)
                     if prev:
                         USED["last_good"] += 1
@@ -401,6 +413,9 @@ def main():
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "sources": dict(USED),
         "stale_rows": failures,
+        # WHY each one failed, not just which: the daily ops check reads this and can then name
+        # the real cause instead of telling a reader to go and look at the FRED key.
+        "stale_reasons": reasons,
     }
     OUT_PATH.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
     save_last_good(fresh_good)
