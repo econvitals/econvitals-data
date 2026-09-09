@@ -297,6 +297,14 @@
       "latest_date": "2026-07-01"
     },
     {
+      "slug": "china-exports-imports",
+      "category": "International/China",
+      "title": "China: Goods Exports and Imports",
+      "type": "line",
+      "units": "Percent change from a year earlier, three-month average",
+      "latest_date": "2026-06-01"
+    },
+    {
       "slug": "china-real-gdp-growth",
       "category": "International/China",
       "title": "China: Real GDP Growth",
@@ -342,7 +350,7 @@
       "title": "Change in Commodity Prices",
       "type": "category_bar",
       "units": "Percent change, year to date",
-      "latest_date": "2026-09-08"
+      "latest_date": "2026-09-09"
     },
     {
       "slug": "composite-activity",
@@ -998,7 +1006,7 @@
       "title": "Corporate Bond Spreads",
       "type": "line",
       "units": "Option-adjusted spread, percentage points",
-      "latest_date": "2026-09-03"
+      "latest_date": "2026-09-07"
     },
     {
       "slug": "current-account-balance",
@@ -1046,6 +1054,22 @@
       "title": "Current Account and Component Balances as a Percent of GDP",
       "type": "contrib_stack",
       "units": "Percent of GDP, annual rate",
+      "latest_date": "2026-01-01"
+    },
+    {
+      "slug": "current-account-components-gdp-half-year",
+      "category": "Inbox",
+      "title": "Current Account and Its Components as a Percent of GDP, by Half Year",
+      "type": "line",
+      "units": "Percent of GDP, at an annual rate",
+      "latest_date": "2026-01-01"
+    },
+    {
+      "slug": "current-account-gdp-half-year",
+      "category": "Inbox",
+      "title": "Current Account Balance as a Percent of GDP, by Half Year",
+      "type": "line",
+      "units": "Percent of GDP",
       "latest_date": "2026-01-01"
     },
     {
@@ -1678,7 +1702,7 @@
       "title": "December Fed Funds Forecast vs. the Actual Rate",
       "type": "line",
       "units": "Percent",
-      "latest_date": "2026-09-04"
+      "latest_date": "2026-09-08"
     },
     {
       "slug": "fed-funds-path",
@@ -2825,6 +2849,14 @@
       "latest_date": "Washington"
     },
     {
+      "slug": "pce-breadth-above-3",
+      "category": "PCE",
+      "title": "Share of PCE Components With Prices up More Than 3 Percent",
+      "type": "line",
+      "units": "Percent",
+      "latest_date": "2026-07-01"
+    },
+    {
       "slug": "pce-cbo",
       "category": "GDP",
       "title": "Real Personal Consumption Expenditures",
@@ -3644,9 +3676,9 @@
       "slug": "real-funds-rate-vs-rstar",
       "category": "Fed",
       "title": "Real Fed Funds Rate vs. Neutral Rate (r*)",
-      "type": "line",
+      "type": "gap",
       "units": "Percent",
-      "latest_date": "2026-04-01"
+      "latest_date": "2026-07-01"
     },
     {
       "slug": "real-gdi",
@@ -4174,7 +4206,7 @@
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-09-04"
+      "latest_date": "2026-09-08"
     },
     {
       "slug": "sp500-earnings-mag7",
@@ -4190,7 +4222,7 @@
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-09-04"
+      "latest_date": "2026-09-08"
     },
     {
       "slug": "spending-by-economy",
@@ -4262,7 +4294,7 @@
       "title": "10-Year Treasury Yield Decomposition",
       "type": "stack",
       "units": "Percent",
-      "latest_date": "2026-09-04"
+      "latest_date": "2026-09-08"
     },
     {
       "slug": "trade-balance",
