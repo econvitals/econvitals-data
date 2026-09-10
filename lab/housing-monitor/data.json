@@ -154,10 +154,9 @@
           "id": "mortgage30",
           "name": "30-yr fixed mortgage",
           "unit": "%",
-          "val": "6.71",
+          "val": "6.76",
           "tone": "warm",
           "spark": [
-            6.48,
             6.52,
             6.47,
             6.49,
@@ -170,20 +169,20 @@
             6.67,
             6.65,
             6.66,
-            6.71
+            6.71,
+            6.76
           ],
           "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
           "_source": "fred",
-          "_date": "2026-09-03"
+          "_date": "2026-09-10"
         },
         {
           "id": "nar_affordability",
           "name": "NAR affordability index",
           "unit": "idx",
-          "val": "103.3",
+          "val": "104.7",
           "tone": "warm",
           "spark": [
-            101.2,
             106.7,
             107.1,
             108.7,
@@ -194,37 +193,38 @@
             108.0,
             105.1,
             101.8,
-            103.3
+            102.8,
+            104.7
           ],
           "ctx": "Higher = more affordable; 100 = a median-income family exactly qualifies for the median home. Improving YoY as <b>income growth</b> edges out price gains.",
           "_source": "fred",
-          "_date": "2026-07-01"
+          "_date": "2026-08-01"
         },
         {
           "id": "implied_pi",
           "name": "Implied P&I, median home",
           "unit": "/mo",
-          "val": "$2,243",
+          "val": "$2,229",
           "tone": "hot",
           "spark": [
-            2190,
-            2200,
+            2174,
+            2163,
+            2168,
+            2154,
+            2168,
+            2181,
             2188,
-            2193,
-            2179,
-            2193,
             2206,
             2213,
-            2232,
-            2239,
-            2234,
-            2229,
-            2232,
-            2243
+            2208,
+            2204,
+            2206,
+            2217,
+            2229
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
           "_source": "fred",
-          "_date": "2026-09-03"
+          "_date": "2026-09-10"
         }
       ]
     },
@@ -238,24 +238,24 @@
         {
           "id": "existing_sales",
           "k": "Existing-home sales (SAAR)",
-          "v": "4.06M",
-          "p": "4.13M",
-          "d": "+0.7%",
-          "dir": "up",
+          "v": "3.98M",
+          "p": "4.06M",
+          "d": "−1.2%",
+          "dir": "dn",
           "s": "NAR",
           "_source": "fred",
-          "_date": "2026-07-01"
+          "_date": "2026-08-01"
         },
         {
           "id": "months_supply",
           "k": "Months' supply",
-          "v": "4.6",
+          "v": "4.9",
           "p": "4.6",
-          "d": "+0.0",
-          "dir": "flat",
+          "d": "+0.3",
+          "dir": "up",
           "s": "NAR",
           "_source": "fred",
-          "_date": "2026-07-01"
+          "_date": "2026-08-01"
         },
         {
           "id": "total_inventory",
@@ -271,13 +271,13 @@
         {
           "id": "median_existing_price",
           "k": "Median existing-home price",
-          "v": "$434,100",
-          "p": "$442,800",
-          "d": "+2.0%",
+          "v": "$429,100",
+          "p": "$436,400",
+          "d": "+1.6%",
           "dir": "up",
           "s": "NAR",
           "_source": "fred",
-          "_date": "2026-07-01"
+          "_date": "2026-08-01"
         },
         {
           "id": "median_dom",
@@ -399,8 +399,8 @@
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
   "asof": "Updated Sep 10 2026 · 1 of 19 live indicators unavailable, held at last reported value · calibration editorial",
-  "data_through": "Sep 3 2026",
-  "generated_at": "2026-09-10T09:11:17+00:00",
+  "data_through": "Sep 10 2026",
+  "generated_at": "2026-09-10T23:35:35+00:00",
   "sources": {
     "fred": 24,
     "config": 1,
