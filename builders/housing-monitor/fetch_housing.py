@@ -15,8 +15,14 @@ when there is no last-good entry. Every row carries `_source`
 (fred / last-good / fallback / editorial) and, where one exists, `_date`; the
 per-run tally goes in data.json's `sources` and the failed keys in `stale_rows`.
 `data_through` is computed from real observation dates only, never from today.
-Any failure makes the run exit 1, so a refresh that could not refresh is reported
-as failed rather than passing quietly with yesterday's numbers restamped.
+Any UNDECLARED failure makes the run exit 1, so a refresh that could not refresh is
+reported as failed rather than passing quietly with yesterday's numbers restamped. A
+row may DECLARE that it cannot be computed — `known_broken: {reason, until}` on the
+config item — in which case it is counted and named every run but does not fail it;
+see `_kb_current` and `known_broken_rows` in the output. That is chartbook's
+known-broken register in miniature, and it exists for the same reason: an alarm that
+is red every night for a fault nobody can fix from here stops being read, and hides
+the next real one.
 
 Credentials resolve env var → ~/.config/macro-dashboard/.env (same as the chartbook
 clients): FRED_API_KEY.
@@ -97,9 +103,33 @@ def fred_series(series_id, start="1995-01-01"):
 #             fetch with nothing in the last-good store)
 # last_good — rows served from a previously fetched, dated value
 # failed    — wired rows whose fetch raised this run (last_good + fallback rows)
-USED = {"fred": 0, "config": 0, "last_good": 0, "failed": 0}
+# known_broken — rows that raised AND said so in advance: the config item carries a
+#             `known_broken: {reason, until}` block. Counted and printed every run,
+#             never counted as `failed`, so a fault nobody can fix from here stops
+#             turning the nightly run red while a NEW break still does. Same register
+#             as chartbook's render/known_broken_charts.txt, and the same rule: it is a
+#             DEBT LIST, not a dismissal — `until` is a review date and the run fails
+#             again once it passes, so nothing can quietly become permanent.
+USED = {"fred": 0, "config": 0, "last_good": 0, "failed": 0, "known_broken": 0}
 
 VALUE_KEYS = ("val", "spark", "v", "p", "d", "dir")
+
+
+def _kb_current(kb):
+    """Is this `known_broken:` declaration still in force?
+
+    A declaration needs a `reason` — an entry you cannot write a reason for is a fault,
+    not an exception — and an `until` review date in ISO form. Past that date, or with
+    either field missing or unparseable, the declaration does NOT hold and the row counts
+    as a plain failure again. That is deliberate: the failure mode of every register like
+    this one is that it becomes permanent because nothing ever asks again.
+    """
+    if not str(kb.get("reason") or "").strip():
+        return False
+    try:
+        return dt.date.today() <= dt.date.fromisoformat(str(kb.get("until")).strip())
+    except (TypeError, ValueError):
+        return False
 
 
 def get_series(key):
@@ -345,11 +375,14 @@ def main():
     dates = []
     failures = []
     reasons = {}
+    declared = []
+    declared_reasons = {}
     wired = 0
     for sec in cfg["sections"]:
         items_out = []
         for item in sec["items"]:
-            row = {k: v for k, v in item.items() if k not in ("source",)}
+            row = {k: v for k, v in item.items()
+                   if k not in ("source", "known_broken")}
             src = item.get("source")
             key = "%s/%s" % (sec["id"], item.get("id"))
             if not src:
@@ -371,9 +404,15 @@ def main():
                     # Never blank the page — but never republish a stale number as
                     # today's live print either. Serve the dated last-good value if
                     # we have one, else the editorial placeholder, and say which.
-                    USED["failed"] += 1
-                    failures.append(key)
-                    reasons[key] = str(e)[:200]
+                    kb = item.get("known_broken")
+                    if isinstance(kb, dict) and _kb_current(kb):
+                        USED["known_broken"] += 1
+                        declared.append(key)
+                        declared_reasons[key] = str(kb.get("reason") or "")[:200]
+                    else:
+                        USED["failed"] += 1
+                        failures.append(key)
+                        reasons[key] = str(e)[:200]
                     prev = last_good.get(key)
                     if prev:
                         USED["last_good"] += 1
@@ -387,8 +426,9 @@ def main():
                         USED["config"] += 1
                         row["_source"] = "fallback"
                         held = "no last-good — kept config value"
-                    sys.stderr.write("  [skip] %s: %s — %s\n"
-                                     % (key, str(e)[:80], held))
+                    tag = "known-broken" if key in declared else "skip"
+                    sys.stderr.write("  [%s] %s: %s — %s\n"
+                                     % (tag, key, str(e)[:80], held))
             items_out.append(row)
         sections_out.append({"id": sec["id"], "num": sec["num"], "title": sec["title"],
                              "tag": sec["tag"], "kind": sec["kind"], "items": items_out})
@@ -399,10 +439,11 @@ def main():
     # renders "—"; it must never fall back to today's wall clock.
     freshest = max(dates) if dates else None
     asof = "Updated %s · live via FRED · calibration editorial" % fmt_date(today)
-    if failures:
+    held_n = USED["failed"] + USED["known_broken"]
+    if held_n:
         asof = ("Updated %s · %d of %d live indicators unavailable, held at last "
                 "reported value · calibration editorial"
-                % (fmt_date(today), USED["failed"], wired))
+                % (fmt_date(today), held_n, wired))
     out = {
         "masthead": cfg["masthead"],
         "verdict": cfg["verdict"],
@@ -416,11 +457,21 @@ def main():
         # WHY each one failed, not just which: the daily ops check reads this and can then name
         # the real cause instead of telling a reader to go and look at the FRED key.
         "stale_reasons": reasons,
+        # The declared register, published beside the undeclared failures so the debt is
+        # visible to anyone reading the file rather than only to whoever opens the config.
+        "known_broken_rows": declared,
+        "known_broken_reasons": declared_reasons,
     }
     OUT_PATH.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
     save_last_good(fresh_good)
     print("Wrote %s — sources: %s; data through %s"
           % (OUT_PATH, USED, out["data_through"] or "(none)"))
+    if declared:
+        # Counted and named every run, exactly like chartbook's known-broken register: the
+        # file being empty is the goal state, and a row here that has quietly become fixable
+        # should come off it.
+        sys.stderr.write("known-broken (declared, not failing the run) — %d row(s): %s\n"
+                         % (len(declared), ", ".join(declared)))
     if failures:
         # The page is still serviceable, but the refresh did not do its job — fail
         # the run so the Action reports red instead of a silent green every night.

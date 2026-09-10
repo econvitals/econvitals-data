@@ -398,19 +398,22 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Sep 9 2026 · 1 of 19 live indicators unavailable, held at last reported value · calibration editorial",
+  "asof": "Updated Sep 10 2026 · 1 of 19 live indicators unavailable, held at last reported value · calibration editorial",
   "data_through": "Sep 3 2026",
-  "generated_at": "2026-09-09T23:42:54+00:00",
+  "generated_at": "2026-09-10T09:11:17+00:00",
   "sources": {
     "fred": 24,
     "config": 1,
     "last_good": 0,
-    "failed": 1
+    "failed": 0,
+    "known_broken": 1
   },
-  "stale_rows": [
+  "stale_rows": [],
+  "stale_reasons": {},
+  "known_broken_rows": [
     "valuation/median_vs_2019"
   ],
-  "stale_reasons": {
-    "valuation/median_vs_2019": "HOSMEDUSM052N no longer carries 2019 (it starts 2025-07-01) — the source was truncated, so this row cannot be computed from FRED"
+  "known_broken_reasons": {
+    "valuation/median_vs_2019": "FRED truncated HOSMEDUSM052N to a rolling 13 months on 2026-08-11; a 2019 base is not computable from any free feed"
   }
 }
