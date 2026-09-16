@@ -286,7 +286,11 @@ def fetch_fred_fedfunds(api_key: str):
     blending that drags December's own monthly average ~0.2-0.3pp below the
     actual year-end target (e.g. end-2022 was a 4.375 midpoint, but December's
     average prints ~4.10). Falls back to December of Y if January is missing.
-    Only completed years appear. current = the latest monthly observation."""
+    Only completed years appear.
+
+    current = the latest DAILY effective funds rate (FRED DFF). FEDFUNDS is monthly,
+    so the "Current" reference line on the chart was up to five weeks stale and could
+    sit at the pre-decision rate on the very day a meeting moved it."""
     url = "https://api.stlouisfed.org/fred/series/observations"
     params = {
         "series_id": "FEDFUNDS",
@@ -311,6 +315,18 @@ def fetch_fred_fedfunds(api_key: str):
             year_end[y] = round(by_ym.get(nxt_jan, by_ym[ym]), 3)
     last_ym = max(by_ym)
     current = {"ym": last_ym, "rate": round(by_ym[last_ym], 3)}
+    try:  # prefer the daily series; the monthly one above is the fallback
+        dr = requests.get(url, params={**params, "series_id": "DFF",
+                                       "observation_start": "2024-01-01",
+                                       "sort_order": "desc", "limit": 5},
+                          headers=HEADERS, timeout=30)
+        dr.raise_for_status()
+        for o in dr.json().get("observations", []):
+            if o.get("value") not in (None, ".", ""):
+                current = {"ym": o["date"], "rate": round(float(o["value"]), 3)}
+                break
+    except Exception as e:  # noqa: BLE001
+        log(f"! DFF fetch failed ({e}); using monthly FEDFUNDS for 'current'")
     return year_end, current
 
 
