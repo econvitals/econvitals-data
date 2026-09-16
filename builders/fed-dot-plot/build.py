@@ -55,6 +55,11 @@ CALENDAR_URL = f"{FED}/fomccalendars.htm"
 PROJ_URL = FED + "/fomcprojtabl{date}.htm"
 # The Fed spelled one meeting's accessible page "projtable" (Mar 2022). Fallback.
 PROJ_URL_ALT = FED + "/fomcprojtable{date}.htm"
+# Before the Fed gave the projections their own page, the accessible tables rode on the
+# MINUTES as an appendix: fomcminutes<date>epa.htm ("economic projections, accessible").
+# December 2012 exists ONLY there — no fomcprojtabl page was ever published for it, which
+# is why that meeting was missing from this dataset until 2026-09-16.
+PROJ_URL_EPA = FED + "/fomcminutes{date}epa.htm"
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -172,6 +177,25 @@ def _is_dot_table(label: str) -> bool:
             or "appropriate monetary policy" in label)
 
 
+# In the 2012-2014 releases Figure 2's stub is a RANGE ("0 - 0.37", "0.38 - 0.62") rather
+# than a single rate. Each range brackets exactly one quarter point — 0.38-0.62 is 0.50,
+# 0.63-0.87 is 0.75 — because the pre-September-2014 SEP asked for "the target federal funds
+# rate at year-end", which moved on a quarter-point grid. The one ambiguous band is the first,
+# "0 - 0.37", which contains both 0 and 0.25; the era's dots never use 0 (the lowest dot in
+# every SEP from January 2012 to June 2014 is 0.25), so it resolves to 0.25.
+#
+# Verified before use: reconstructing Sep 2012, Mar 2013 and Dec 2013 from their range tables
+# reproduces this builder's own exact-value parse, participant for participant, in every
+# column (2026-09-16).
+def _rate_from_range(stub: str):
+    nums = [float(x) for x in RATE_RE.findall(stub)]
+    if len(nums) < 2:
+        return None
+    lo, hi = nums[0], nums[1]
+    hits = [round(q * 0.25, 3) for q in range(1, 80) if lo - 1e-9 <= q * 0.25 <= hi + 1e-9]
+    return hits[0] if len(hits) == 1 else (hits[-1] if hits else None)
+
+
 def parse_figure2(html: str):
     """Return (columns, dots) where dots[col] is a list of per-participant
     rate values, or None if no Figure 2 table is found."""
@@ -186,7 +210,9 @@ def parse_figure2(html: str):
         numeric = 0
         for tr in rows[1:]:
             cells = tr.find_all(["th", "td"])
-            if cells and _looks_like_rate(_text(cells[0])) is not None:
+            stub = _text(cells[0]) if cells else ""
+            if cells and (_looks_like_rate(stub) is not None
+                          or _rate_from_range(stub) is not None):
                 numeric += 1
         if numeric < 4:
             continue
@@ -216,7 +242,10 @@ def parse_figure2(html: str):
         cells = tr.find_all(["th", "td"])
         if not cells:
             continue
-        rate = _looks_like_rate(_text(cells[0]))
+        stub = _text(cells[0])
+        rate = _looks_like_rate(stub)
+        if rate is None:
+            rate = _rate_from_range(stub)     # 2012-2014 releases band the stub
         if rate is None:
             continue
         for i, cell in enumerate(cells[1:]):
@@ -367,6 +396,8 @@ def main() -> int:
         r = get(PROJ_URL.format(date=d))
         if r is None:
             r = get(PROJ_URL_ALT.format(date=d))  # rare "projtable" spelling
+        if r is None:
+            r = get(PROJ_URL_EPA.format(date=d))  # pre-2013: the minutes' own appendix
         if r is None:
             skipped.append(d)
             continue
