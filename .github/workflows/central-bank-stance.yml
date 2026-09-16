@@ -1,14 +1,19 @@
 name: Central Bank Stance refresh
 
-# Rebuilds tools/central-bank-stance/data.json (keyless — BIS policy rates + a
-# transparent phase heuristic). Relocated from econvitals/site (2026-08-10, chart-system
-# rebuild Stage B): the builder now lives in builders/central-bank-stance/ and the data
-# publishes from this repo via raw URLs — no Netlify deploy is involved.
-# Secrets required: none.
+# Rebuilds tools/central-bank-stance/data.json (BIS policy rates + a transparent phase
+# heuristic). Relocated from econvitals/site (2026-08-10, chart-system rebuild Stage B):
+# the builder now lives in builders/central-bank-stance/ and the data publishes from this
+# repo via raw URLs — no Netlify deploy is involved.
+#
+# Every 3 hours rather than daily (2026-09-16): BIS publishes in batches and can trail a
+# week, so the Fed, ECB, BoE and BoC rows are now topped up from each central bank's own
+# feed, which moves the day a rate takes effect. The job commits only when a number
+# actually changes, so the extra runs cost nothing downstream.
+# Secrets required: FRED_API_KEY (the US target range; the other three feeds are keyless).
 
 on:
   schedule:
-    - cron: "10 7 * * *"   # once daily; policy-rate timing-of-day is irrelevant
+    - cron: "10 */3 * * *"   # every 3 hours — catches a rate change the day it lands
   workflow_dispatch: {}
 
 permissions:
@@ -28,7 +33,9 @@ jobs:
           python-version: "3.12"
       - name: Install dependencies
         run: pip install pyyaml
-      - name: Build Central Bank Stance Matrix data (BIS, keyless)
+      - name: Build Central Bank Stance Matrix data (BIS + same-day central-bank feeds)
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python builders/central-bank-stance/build.py
       - name: Commit refreshed data
         run: |

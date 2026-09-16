@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """
-Global Central Bank Stance Matrix — data builder (BIS, keyless).
+Global Central Bank Stance Matrix — data builder (BIS spine + same-day feeds).
 
 Pulls daily policy-rate history for 12 major central banks from the BIS
 "Central bank policy rates" dataset (WS_CBPOL) and writes a single self-contained
-`data.json` next to this script, which the Lab page reads.
+`data.json` into tools/central-bank-stance/, which the Lab page reads.
+
+BIS publishes in batches and can trail by a week, so for the four majors that publish
+their own machine-readable policy rate — the Fed, ECB, Bank of England and Bank of
+Canada — `fast_sources.py` tops the history up to the current day before anything is
+derived (see `apply_fast`). Every row carries the date it is current through.
 
 For each bank we derive, straight from the rate history:
   - current rate (the Fed is shown as its 25bp target range around the BIS midpoint)
@@ -17,7 +22,9 @@ For each bank we derive, straight from the rate history:
 "Next expected move" is a desk view set in cb_matrix_config.yaml; when unset the
 page shows an automatic qualitative lean from the phase. BIS has no forward path.
 
-Refreshes daily via .github/workflows/cb-stance.yml (keyless — no secrets needed).
+Refreshes every 3 hours via .github/workflows/central-bank-stance.yml. BIS and three
+of the four fast feeds are keyless; the US target range needs FRED_API_KEY (already a
+secret on this repo). Without the key the US row simply falls back to BIS.
 Run by hand any time with:  python3 build.py
 
 This is an experimental Lab monitor: the phase classification is a transparent
@@ -39,6 +46,8 @@ try:
 except ImportError:  # pragma: no cover
     sys.exit("PyYAML is required: pip install pyyaml")
 
+import fast_sources
+
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent  # builders/central-bank-stance/ -> repo root
 CONFIG = HERE / "cb_matrix_config.yaml"
@@ -50,6 +59,7 @@ BIS_URL = (
 )
 SOURCE_URL = "https://data.bis.org/topics/CBPOL"
 HIST_YEARS_ON_PAGE = 3  # how much of the step path to ship for the sparkline
+BASIS_TOL = 0.011       # max |fast - BIS| on BIS's own last date before we refuse to splice
 
 
 # ----------------------------------------------------------------------------- fetch
@@ -69,6 +79,45 @@ def fetch_series(area: str) -> list[tuple[str, float]]:
             continue
     out.sort(key=lambda t: t[0])
     return out
+
+
+# ------------------------------------------------------------------------ fast lane
+def apply_fast(code: str, series: list[tuple[str, float]]):
+    """Splice a same-day feed onto the end of the BIS history for one bank.
+
+    BIS trails by up to a week, so for the four majors with their own machine-readable
+    policy rate we append the observations BIS has not caught up to yet. Everything
+    downstream (last move, phase, YTD, sparkline) then recomputes untouched.
+
+    The basis is CHECKED, never assumed: the feed must agree with BIS on BIS's own
+    last date. A feed that is late, broken or reporting a different concept is dropped
+    and the row silently falls back to BIS — today's behavior, not a blank row.
+    """
+    entry = fast_sources.FAST.get(code)
+    if not entry:
+        return series, None
+    label, fn = entry
+    try:
+        fast = fn(fast_sources.lookback_start())
+    except Exception as e:  # noqa: BLE001
+        print(f"[{code}] fast source unavailable ({e!r}); BIS only", file=sys.stderr)
+        return series, None
+    if not fast:
+        return series, None
+
+    bis_date, bis_value = series[-1]
+    ref = value_on_or_before(fast, bis_date)
+    if ref is None or abs(ref - bis_value) > BASIS_TOL:
+        print(f"[{code}] fast source disagrees with BIS on {bis_date} "
+              f"({ref} vs {bis_value}); not splicing", file=sys.stderr)
+        return series, None
+
+    newer = [(d, v) for d, v in fast if d > bis_date]
+    if not newer:
+        return series, {"label": label, "through": bis_date, "gained_days": 0}
+    gained = (datetime.strptime(newer[-1][0], "%Y-%m-%d").date()
+              - datetime.strptime(bis_date, "%Y-%m-%d").date()).days
+    return series + newer, {"label": label, "through": newer[-1][0], "gained_days": gained}
 
 
 # ----------------------------------------------------------------------------- derive
@@ -179,6 +228,7 @@ def main() -> None:
                 banks_out.append(prior[code])
             continue
 
+        series, fast = apply_fast(code, series)
         as_of, rate = series[-1]
         as_of_dates.append(as_of)
         mv = last_move(series)
@@ -218,6 +268,9 @@ def main() -> None:
             "rate": round(rate, 3),
             "rate_display": fed_range(rate) if code == "US" else fmt_rate(rate),
             "as_of": as_of,
+            "as_of_source": (fast["label"] if fast else
+                             "BIS — Central bank policy rates (WS_CBPOL)"),
+            "fast": bool(fast),
             "last_move": (mv | {"display": mv_display}) if mv else None,
             "phase": phase,
             "phase_source": phase_source,
@@ -236,16 +289,23 @@ def main() -> None:
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "title": "Global Central Bank Stance Matrix",
             "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
+            "fast_sources": [lbl for lbl, _ in fast_sources.FAST.values()],
             "source_url": SOURCE_URL,
             "lookback_months": lookback,
             "note": ("Cycle phase is a transparent heuristic derived from the size and "
                      "recency of each bank's last policy-rate change, not an official "
                      "central-bank characterization. “Next move” is a desk view "
                      "set in cb_matrix_config.yaml (or an automatic lean from the phase); "
-                     "BIS publishes no forward path."),
+                     "BIS publishes no forward path. BIS publishes in batches and can "
+                     "trail by a week, so the Fed, ECB, Bank of England and Bank of "
+                     "Canada rows are topped up from each central bank's own feed; every "
+                     "row shows the date it is current through. These are effective-date "
+                     "series — a rate appears when it takes effect, not when it is "
+                     "announced."),
         },
         "summary": {
             "as_of": max(as_of_dates) if as_of_dates else None,
+            "as_of_min": min(as_of_dates) if as_of_dates else None,
             "total": len(banks_out),
             "cutting": tally["Cutting"],
             "hold": tally["On Hold"] + tally["Paused"],
@@ -257,9 +317,10 @@ def main() -> None:
 
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
     s = payload["summary"]
+    fastn = sum(1 for b in banks_out if b.get("fast"))
     print(f"wrote {OUT.name} — {s['total']} banks "
           f"({s['cutting']} cutting · {s['hold']} on hold · {s['hiking']} hiking) "
-          f"as of {s['as_of']}")
+          f"as of {s['as_of_min']}–{s['as_of']}; {fastn} on a same-day feed")
 
 
 if __name__ == "__main__":
