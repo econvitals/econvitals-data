@@ -296,12 +296,7 @@ def main() -> None:
                      "recency of each bank's last policy-rate change, not an official "
                      "central-bank characterization. “Next move” is a desk view "
                      "set in cb_matrix_config.yaml (or an automatic lean from the phase); "
-                     "BIS publishes no forward path. BIS publishes in batches and can "
-                     "trail by a week, so the Fed, ECB, Bank of England and Bank of "
-                     "Canada rows are topped up from each central bank's own feed; every "
-                     "row shows the date it is current through. These are effective-date "
-                     "series — a rate appears when it takes effect, not when it is "
-                     "announced."),
+                     "BIS publishes no forward path."),
         },
         "summary": {
             "as_of": max(as_of_dates) if as_of_dates else None,

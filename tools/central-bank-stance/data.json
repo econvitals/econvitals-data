@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-16T19:25:41+00:00",
+    "generated_at": "2026-09-16T19:26:51+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -11,7 +11,7 @@
     ],
     "source_url": "https://data.bis.org/topics/CBPOL",
     "lookback_months": 6,
-    "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path. BIS publishes in batches and can trail by a week, so the Fed, ECB, Bank of England and Bank of Canada rows are topped up from each central bank's own feed; every row shows the date it is current through. These are effective-date series — a rate appears when it takes effect, not when it is announced."
+    "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path."
   },
   "summary": {
     "as_of": "2026-09-16",
