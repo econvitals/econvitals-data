@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-17T11:36:52+00:00",
+    "generated_at": "2026-09-17T16:57:03+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -18,8 +18,8 @@
     "as_of_min": "2026-07-23",
     "total": 12,
     "cutting": 0,
-    "hold": 9,
-    "hiking": 3,
+    "hold": 8,
+    "hiking": 4,
     "paused": 2
   },
   "banks": [
@@ -29,23 +29,23 @@
       "country": "United States",
       "flag": "🇺🇸",
       "instrument": "Federal Funds Rate (target range)",
-      "rate": 3.625,
-      "rate_display": "3.50–3.75%",
-      "as_of": "2026-09-16",
+      "rate": 3.875,
+      "rate_display": "3.75–4.00%",
+      "as_of": "2026-09-17",
       "as_of_source": "FRED (Board of Governors) — federal funds target range",
       "fast": true,
       "last_move": {
-        "date": "2025-12-11",
-        "delta_bps": -25,
-        "direction": "down",
-        "display": "▼ 25 bp · Dec 2025"
+        "date": "2026-09-17",
+        "delta_bps": 25,
+        "direction": "up",
+        "display": "▲ 25 bp · Sep 2026"
       },
-      "phase": "On Hold",
+      "phase": "Hiking",
       "phase_source": "auto",
-      "ytd_bps": 0,
-      "ytd_display": "0 bp",
+      "ytd_bps": 25,
+      "ytd_display": "+25 bp",
       "next_move": {
-        "text": "On hold; data-dependent",
+        "text": "Further hikes likely",
         "kind": "auto",
         "edited": ""
       },
@@ -95,8 +95,8 @@
           "value": 3.625
         },
         {
-          "date": "2026-09-16",
-          "value": 3.625
+          "date": "2026-09-17",
+          "value": 3.875
         }
       ]
     },
@@ -347,7 +347,7 @@
       "instrument": "Overnight Rate",
       "rate": 2.25,
       "rate_display": "2.25%",
-      "as_of": "2026-09-15",
+      "as_of": "2026-09-16",
       "as_of_source": "Bank of Canada — target for the overnight rate",
       "fast": true,
       "last_move": {
@@ -419,7 +419,7 @@
           "value": 2.25
         },
         {
-          "date": "2026-09-15",
+          "date": "2026-09-16",
           "value": 2.25
         }
       ]
