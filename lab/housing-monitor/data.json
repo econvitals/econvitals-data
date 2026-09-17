@@ -154,10 +154,9 @@
           "id": "mortgage30",
           "name": "30-yr fixed mortgage",
           "unit": "%",
-          "val": "6.76",
+          "val": "6.95",
           "tone": "warm",
           "spark": [
-            6.52,
             6.47,
             6.49,
             6.43,
@@ -170,11 +169,12 @@
             6.65,
             6.66,
             6.71,
-            6.76
+            6.76,
+            6.95
           ],
           "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
           "_source": "fred",
-          "_date": "2026-09-10"
+          "_date": "2026-09-17"
         },
         {
           "id": "nar_affordability",
@@ -204,10 +204,9 @@
           "id": "implied_pi",
           "name": "Implied P&I, median home",
           "unit": "/mo",
-          "val": "$2,229",
+          "val": "$2,272",
           "tone": "hot",
           "spark": [
-            2174,
             2163,
             2168,
             2154,
@@ -220,11 +219,12 @@
             2204,
             2206,
             2217,
-            2229
+            2229,
+            2272
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
           "_source": "fred",
-          "_date": "2026-09-10"
+          "_date": "2026-09-17"
         }
       ]
     },
@@ -315,13 +315,13 @@
         {
           "id": "housing_starts",
           "k": "Housing starts (SAAR)",
-          "v": "1.24M",
-          "p": "1.42M",
-          "d": "−13.5%",
+          "v": "1.28M",
+          "p": "1.31M",
+          "d": "−1.2%",
           "dir": "dn",
           "s": "Census",
           "_source": "fred",
-          "_date": "2026-07-01"
+          "_date": "2026-08-01"
         }
       ]
     },
@@ -398,9 +398,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Sep 16 2026 · 1 of 19 live indicators unavailable, held at last reported value · calibration editorial",
-  "data_through": "Sep 10 2026",
-  "generated_at": "2026-09-16T23:59:28+00:00",
+  "asof": "Updated Sep 17 2026 · 1 of 19 live indicators unavailable, held at last reported value · calibration editorial",
+  "data_through": "Sep 17 2026",
+  "generated_at": "2026-09-17T23:49:48+00:00",
   "sources": {
     "fred": 24,
     "config": 1,
