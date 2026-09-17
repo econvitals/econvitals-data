@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-17T10:33:12+00:00",
+    "generated_at": "2026-09-17T12:35:36+00:00",
     "run_date": "2026-09-17",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow and CME ZQ futures"
@@ -75,20 +75,20 @@
         },
         {
           "label": "10-year",
-          "value": 5.006,
-          "display": "5.01%",
-          "period": "2026-09-16",
-          "change": 0.82,
-          "change_display": "+0.82 YTD",
+          "value": 4.953,
+          "display": "4.95%",
+          "period": "2026-09-17",
+          "change": 0.77,
+          "change_display": "+0.77 YTD",
           "provenance": "hard"
         },
         {
           "label": "2s10s",
-          "value": 36.0,
-          "display": "+36 bp",
+          "value": 34.0,
+          "display": "+34 bp",
           "period": "2026-09-16",
-          "change": -36.0,
-          "change_display": "-36 bp YTD",
+          "change": -38.0,
+          "change_display": "-38 bp YTD",
           "provenance": "hard"
         },
         {
@@ -102,11 +102,11 @@
         },
         {
           "label": "Brent",
-          "value": 99.730003,
-          "display": "$100",
+          "value": 98.099998,
+          "display": "$98",
           "period": "2026-09-17",
-          "change": 64.2,
-          "change_display": "+64.2% YTD",
+          "change": 61.5,
+          "change_display": "+61.5% YTD",
           "provenance": "hard"
         },
         {
@@ -1121,22 +1121,21 @@
               },
               {
                 "label": "Initial claims (4wk avg)",
-                "latest": 206.0,
-                "m1_ago": 200.0,
-                "y1_ago": 239.0,
-                "through": "2026-09-05",
+                "latest": 203.0,
+                "m1_ago": 204.0,
+                "y1_ago": 237.0,
+                "through": "2026-09-12",
                 "unit": "k",
                 "provenance": "hard"
               },
               {
                 "label": "Continuing claims",
-                "latest": null,
-                "m1_ago": null,
-                "y1_ago": null,
+                "latest": 1730.0,
+                "m1_ago": 1796.0,
+                "y1_ago": 1916.0,
                 "through": "2026-09-05",
                 "unit": "k",
-                "provenance": "hard",
-                "pending": true
+                "provenance": "hard"
               }
             ]
           },
@@ -9932,31 +9931,31 @@
               },
               {
                 "label": "5-year",
-                "value": 4.86,
-                "as_of": "2026-09-16",
-                "chg_1d": 0.03,
-                "chg_1w": 0.25,
-                "chg_ytd": 1.12,
+                "value": 4.8,
+                "as_of": "2026-09-17",
+                "chg_1d": -0.06,
+                "chg_1w": 0.07,
+                "chg_ytd": 1.06,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "10-year",
-                "value": 5.01,
-                "as_of": "2026-09-16",
-                "chg_1d": 0.01,
-                "chg_1w": 0.17,
-                "chg_ytd": 0.82,
+                "value": 4.95,
+                "as_of": "2026-09-17",
+                "chg_1d": -0.06,
+                "chg_1w": 0.01,
+                "chg_ytd": 0.76,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "30-year",
-                "value": 5.35,
-                "as_of": "2026-09-16",
-                "chg_1d": -0.01,
-                "chg_1w": 0.06,
-                "chg_ytd": 0.49,
+                "value": 5.31,
+                "as_of": "2026-09-17",
+                "chg_1d": -0.04,
+                "chg_1w": -0.05,
+                "chg_ytd": 0.44,
                 "is_yield": true,
                 "provenance": "hard"
               },
@@ -10023,11 +10022,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 16.0,
+                "value": 15.61,
                 "as_of": "2026-09-17",
-                "chg_1d": -1.71,
-                "chg_1w": -1.84,
-                "chg_ytd": 1.49,
+                "chg_1d": -2.1,
+                "chg_1w": -2.23,
+                "chg_ytd": 1.1,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -10048,65 +10047,65 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 100.16,
+                "value": 100.07,
                 "as_of": "2026-09-17",
                 "chg_1d": -0.2,
-                "chg_1w": 1.1,
-                "chg_ytd": 1.8,
+                "chg_1w": 1.0,
+                "chg_ytd": 1.7,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1477,
+                "value": 1.1489,
                 "as_of": "2026-09-17",
-                "chg_1d": -0.1,
-                "chg_1w": 1.1,
-                "chg_ytd": 2.4,
+                "chg_1d": -0.2,
+                "chg_1w": 1.0,
+                "chg_ytd": 2.3,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3401,
+                "value": 1.339,
                 "as_of": "2026-09-17",
-                "chg_1d": -0.2,
-                "chg_1w": 0.9,
-                "chg_ytd": 0.5,
+                "chg_1d": -0.1,
+                "chg_1w": 1.0,
+                "chg_ytd": 0.6,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/JPY",
-                "value": 155.6,
+                "value": 155.5,
                 "as_of": "2026-09-17",
-                "chg_1d": -0.4,
-                "chg_1w": 1.4,
-                "chg_ytd": -0.7,
+                "chg_1d": -0.5,
+                "chg_1w": 1.3,
+                "chg_ytd": -0.8,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8254,
+                "value": 0.8238,
                 "as_of": "2026-09-17",
-                "chg_1d": -0.0,
-                "chg_1w": 1.1,
-                "chg_ytd": 4.2,
+                "chg_1d": -0.2,
+                "chg_1w": 0.9,
+                "chg_ytd": 4.0,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CAD",
-                "value": 1.3995,
+                "value": 1.3986,
                 "as_of": "2026-09-17",
-                "chg_1d": 0.1,
-                "chg_1w": 0.9,
+                "chg_1d": -0.0,
+                "chg_1w": 0.8,
                 "chg_ytd": 2.0,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10116,9 +10115,9 @@
                 "label": "USD/CNY",
                 "value": 6.7,
                 "as_of": "2026-09-17",
-                "chg_1d": -0.1,
+                "chg_1d": -0.2,
                 "chg_1w": -0.2,
-                "chg_ytd": -4.2,
+                "chg_ytd": -4.3,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -10130,61 +10129,61 @@
             "rows": [
               {
                 "label": "WTI",
-                "value": 100.9,
+                "value": 99.4,
                 "as_of": "2026-09-17",
-                "chg_1d": -1.5,
-                "chg_1w": -1.6,
-                "chg_ytd": 43.6,
+                "chg_1d": -3.1,
+                "chg_1w": -3.1,
+                "chg_ytd": 42.1,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent",
-                "value": 103.4,
+                "value": 101.8,
                 "as_of": "2026-09-17",
-                "chg_1d": -2.4,
-                "chg_1w": -4.2,
-                "chg_ytd": 42.3,
+                "chg_1d": -4.1,
+                "chg_1w": -5.9,
+                "chg_ytd": 40.6,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas",
-                "value": 2.89,
+                "value": 2.88,
                 "as_of": "2026-09-17",
-                "chg_1d": 0.0,
-                "chg_1w": 0.06,
-                "chg_ytd": -0.73,
+                "chg_1d": -0.02,
+                "chg_1w": 0.04,
+                "chg_ytd": -0.74,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold",
-                "value": 4349.0,
+                "value": 4410.0,
                 "as_of": "2026-09-17",
-                "chg_1d": -39.0,
-                "chg_1w": -59.0,
-                "chg_ytd": 19.0,
+                "chg_1d": 23.0,
+                "chg_1w": 3.0,
+                "chg_ytd": 81.0,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver",
-                "value": 64.38,
+                "value": 65.86,
                 "as_of": "2026-09-17",
-                "chg_1d": 0.09,
-                "chg_1w": 0.1,
-                "chg_ytd": -6.18,
+                "chg_1d": 1.57,
+                "chg_1w": 1.57,
+                "chg_ytd": -4.7,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper",
-                "value": 6.58,
+                "value": 6.62,
                 "as_of": "2026-09-17",
-                "chg_1d": 0.15,
-                "chg_1w": 0.11,
-                "chg_ytd": 0.94,
+                "chg_1d": 0.19,
+                "chg_1w": 0.15,
+                "chg_ytd": 0.98,
                 "is_yield": false,
                 "provenance": "hard"
               }
@@ -11889,13 +11888,18 @@
             },
             {
               "date": "2026-06-01",
-              "starts": 1415.0,
+              "starts": 1439.0,
               "permits": 1374.0
             },
             {
               "date": "2026-07-01",
-              "starts": 1239.0,
+              "starts": 1309.0,
               "permits": 1433.0
+            },
+            {
+              "date": "2026-08-01",
+              "starts": 1275.0,
+              "permits": 1394.0
             }
           ],
           "series": [
@@ -12001,23 +12005,23 @@
           "rows": [
             {
               "label": "Starts (k)",
-              "c1": 1239.0,
-              "c2": -13.5,
+              "c1": 1275.0,
+              "c2": -1.2,
               "c1pct": false,
               "c2pct": true,
               "decimals": 0,
               "provenance": "hard",
-              "through": "Jul 2026"
+              "through": "Aug 2026"
             },
             {
               "label": "Permits (k)",
-              "c1": 1433.0,
-              "c2": 2.4,
+              "c1": 1394.0,
+              "c2": 3.5,
               "c1pct": false,
               "c2pct": true,
               "decimals": 0,
               "provenance": "hard",
-              "through": "Jul 2026"
+              "through": "Aug 2026"
             },
             {
               "label": "New home sales (k)",
