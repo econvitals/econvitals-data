@@ -124,9 +124,9 @@
         },
         {
           "id": "median_vs_2019",
-          "name": "Median sale price vs. 2019",
+          "name": "Home prices vs. 2019",
           "unit": "% cum.",
-          "val": "+52",
+          "val": "+58",
           "pos": 84,
           "tone": "hot",
           "band": [
@@ -137,9 +137,10 @@
             "pos": 30,
             "label": "'19"
           },
-          "badge": "Record high",
-          "note": "Record NAR median in May; the level effect dominates the soft momentum.",
-          "_source": "fallback"
+          "badge": "Near peak",
+          "note": "The cumulative run-up since before the pandemic. Repeat-sales, so a change in which homes happen to sell cannot move it.",
+          "_source": "fred",
+          "_date": "2026-06-01"
         }
       ]
     },
@@ -398,22 +399,18 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Sep 20 2026 · 1 of 19 live indicators unavailable, held at last reported value · calibration editorial",
+  "asof": "Updated Sep 21 2026 · live via FRED · calibration editorial",
   "data_through": "Sep 17 2026",
-  "generated_at": "2026-09-20T23:45:10+00:00",
+  "generated_at": "2026-09-21T03:31:43+00:00",
   "sources": {
     "fred": 24,
-    "config": 1,
+    "config": 0,
     "last_good": 0,
     "failed": 0,
-    "known_broken": 1
+    "known_broken": 0
   },
   "stale_rows": [],
   "stale_reasons": {},
-  "known_broken_rows": [
-    "valuation/median_vs_2019"
-  ],
-  "known_broken_reasons": {
-    "valuation/median_vs_2019": "FRED truncated HOSMEDUSM052N to a rolling 13 months on 2026-08-11; a 2019 base is not computable from any free feed"
-  }
+  "known_broken_rows": [],
+  "known_broken_reasons": {}
 }

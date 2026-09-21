@@ -111,30 +111,29 @@ sections:
         note: "Near the top of its modern range; long-run mean ≈3.5×, '06 peak 4.7×. Pairs the current median price with annual median income that lags ~18 months, so the ratio runs a touch high between income vintages."
         source: {transform: ratio, num: MSPUS, den: MEHOINUSA646N, fmt: {decimals: 1}}
       - id: median_vs_2019
-        name: "Median sale price vs. 2019"
+        name: "Home prices vs. 2019"
         unit: "% cum."
-        val: "+52"
+        val: "+58"
         pos: 84
         tone: hot
         band: [30, 90]
         ref: {pos: 30, label: "'19"}
-        badge: "Record high"
-        note: "Record NAR median in May; the level effect dominates the soft momentum."
-        source: {transform: pct_vs_year, series: HOSMEDUSM052N, base_year: 2019, fmt: {decimals: 0, sign: true}}
-        # RECORDED DEBT, not a silenced error. FRED truncated every NAR series to a rolling
-        # 13 months on 2026-08-11 — HOSMEDUSM052N now starts 2025-07 and ALFRED holds no
-        # earlier vintage — so a 2019 base cannot be computed from any free feed, and this row
-        # has raised on every run since. The `source:` block STAYS so the row goes live again
-        # by itself the day a longer free history exists. Until then the page shows the
-        # hand-set value with its "not refreshed — placeholder value" chip, which is honest,
-        # and the run no longer goes red for a fault nobody can fix from here. `until` is the
-        # review date: past it the run fails again, so this cannot quietly become permanent.
-        # Closing it: pin the 2019 base as a sourced constant, or re-point the row at a series
-        # that still carries history (Case-Shiller CSUSHPISA, relabelled) — econvitals-data
-        # NEXT.md carries the task.
-        known_broken:
-          reason: "FRED truncated HOSMEDUSM052N to a rolling 13 months on 2026-08-11; a 2019 base is not computable from any free feed"
-          until: "2026-12-31"
+        badge: "Near peak"
+        note: "The cumulative run-up since before the pandemic. Repeat-sales, so a change in which homes happen to sell cannot move it."
+        # RE-ANCHORED 2026-09-20, and the row is live again. It used to read NAR's median
+        # existing-home sale price (HOSMEDUSM052N) against a 2019 base. FRED truncated every
+        # NAR series to a rolling 13 months on 2026-08-11 and ALFRED holds NO earlier vintage
+        # (checked: the API answers "does not exist in ALFRED"), so a 2019 base was not
+        # computable from FRED at all and the row raised on every run for five weeks.
+        # Of the two closures NEXT.md offered, this is the second: pinning NAR's 2019 monthly
+        # medians as a constant needs a citable source for twelve numbers, and NAR does not
+        # publish that history free, so it would have been a hand-typed figure with no
+        # provenance -- the one thing the house never does. Case-Shiller carries the full
+        # record, is already the source for the two rows above, and is REPEAT-SALES, which is
+        # a better answer for a valuation tile than a median contaminated by mix shift. What
+        # changed with it: the tile is "Home prices", not "Median sale price", because those
+        # are different measures and the label has to say which one is on the page.
+        source: {transform: pct_vs_year, series: CSUSHPISA, base_year: 2019, fmt: {decimals: 0, sign: true}}
 
   # ── 02 · Affordability ──────────────────────────────────────────────────--
   - id: affordability
