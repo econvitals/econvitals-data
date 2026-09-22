@@ -278,7 +278,7 @@
       "title": "U.S. Dollar, Broad Trade-Weighted Index",
       "type": "line",
       "units": "Index, Jan 2006 = 100",
-      "latest_date": "2026-09-11"
+      "latest_date": "2026-09-18"
     },
     {
       "slug": "brt-ceo-economic-outlook",
@@ -311,6 +311,14 @@
       "type": "line",
       "units": "Percent of the top 100's capital expenditures",
       "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "cbo-sensitivity-table",
+      "category": "Static/Fiscal",
+      "title": "How Much a 0.1-Point Change in the Economic Assumptions Moves the 2036 Budget",
+      "type": "table",
+      "units": "",
+      "latest_date": "Productivity growth down 0.1pp"
     },
     {
       "slug": "china-cpi-ppi",
@@ -374,7 +382,7 @@
       "title": "Change in Commodity Prices",
       "type": "category_bar",
       "units": "Percent change, year to date",
-      "latest_date": "2026-09-21"
+      "latest_date": "2026-09-22"
     },
     {
       "slug": "composite-activity",
@@ -1030,7 +1038,7 @@
       "title": "Corporate Bond Spreads",
       "type": "line",
       "units": "Option-adjusted spread, percentage points",
-      "latest_date": "2026-09-17"
+      "latest_date": "2026-09-18"
     },
     {
       "slug": "current-account-balance",
@@ -1147,15 +1155,39 @@
     {
       "slug": "debt-by-economy",
       "category": "Static/IntlFiscal",
-      "title": "Debt/GDP for Advanced Economies, 2025",
+      "title": "Debt/GDP for Advanced Economies, 2026",
       "type": "cycle_bar",
       "units": "Percent of GDP",
       "latest_date": "2000-01-30"
     },
     {
+      "slug": "debt-gdp-change-major-events",
+      "category": "Static/Fiscal",
+      "title": "Change in Federal Debt as a Share of GDP Around Major Events",
+      "type": "barh",
+      "units": "Percentage points of GDP",
+      "latest_date": "2026-09-30"
+    },
+    {
+      "slug": "debt-stabilization-adjustment-table",
+      "category": "Static/Fiscal",
+      "title": "Primary Deficit Adjustment Needed to Stabilize the Debt by 2036",
+      "type": "table",
+      "units": "",
+      "latest_date": null
+    },
+    {
+      "slug": "debt-stabilization-scenarios-table",
+      "category": "Static/Fiscal",
+      "title": "Adjustments Needed to Stabilize the Debt by 2036",
+      "type": "table",
+      "units": "",
+      "latest_date": null
+    },
+    {
       "slug": "debt-vs-pdeficit",
       "category": "Static/IntlFiscal",
-      "title": "Primary Deficit vs. Debt, Advanced Economies, 2025",
+      "title": "Primary Deficit vs. Debt, Advanced Economies, 2026",
       "type": "scatter",
       "units": "Percent of GDP",
       "latest_date": "Greece"
@@ -1167,6 +1199,38 @@
       "type": "cycle_bar",
       "units": "Percent of GDP (+deficit / - surplus)",
       "latest_date": "2000-01-30"
+    },
+    {
+      "slug": "deficit-gdp-history",
+      "category": "Static/Fiscal",
+      "title": "The Federal Deficit Since 1901",
+      "type": "line",
+      "units": "Percent of GDP (+deficit / -surplus)",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "deficit-most-important-problem",
+      "category": "Static/Fiscal",
+      "title": "Share Naming the Deficit or Debt as the Nation's Most Important Problem",
+      "type": "line",
+      "units": "Percent of respondents",
+      "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "deficit-options-menu-table",
+      "category": "Static/Fiscal",
+      "title": "Menu of Deficit Options",
+      "type": "table",
+      "units": "Deficit reduction in the last year of the estimate (+ = smaller deficit)",
+      "latest_date": null
+    },
+    {
+      "slug": "deficit-vs-unemployment",
+      "category": "Static/Fiscal",
+      "title": "Deficit vs. Unemployment Rate, FY1960\u20132026",
+      "type": "scatter_fit",
+      "units": "Percent of GDP",
+      "latest_date": "2026"
     },
     {
       "slug": "diesel-gasoline-crude-indexed",
@@ -1654,7 +1718,7 @@
       "title": "Euro Area: 10-Year Sovereign Credit Premium",
       "type": "line",
       "units": "Basis points",
-      "latest_date": "2026-09-18"
+      "latest_date": "2026-09-21"
     },
     {
       "slug": "europe-ea-hicp",
@@ -1734,7 +1798,7 @@
       "title": "December Fed Funds Forecast vs. the Actual Rate",
       "type": "line",
       "units": "Percent",
-      "latest_date": "2026-09-18"
+      "latest_date": "2026-09-21"
     },
     {
       "slug": "fed-dots-forecast-error",
@@ -1833,6 +1897,30 @@
       "latest_date": "2026-07-01"
     },
     {
+      "slug": "fiscal-adjustment-2020-vs-2026-table",
+      "category": "Static/Fiscal",
+      "title": "Fiscal Adjustment Needed for Sustainability, January 2020 vs. February 2026",
+      "type": "table",
+      "units": "Primary-deficit adjustment, percent of GDP, current law",
+      "latest_date": null
+    },
+    {
+      "slug": "fiscal-adjustment-by-cbo-vintage",
+      "category": "Static/Fiscal",
+      "title": "Fiscal Adjustment Needed to Stabilize the Debt, by CBO Forecast Vintage",
+      "type": "line",
+      "units": "Percent of GDP, current policy",
+      "latest_date": "2026-12-31"
+    },
+    {
+      "slug": "fiscal-and-economic-2000-vs-2026",
+      "category": "Static/Fiscal",
+      "title": "Fiscal and Economic Situation",
+      "type": "period_compare",
+      "units": "Percent",
+      "latest_date": "2026-09-30"
+    },
+    {
       "slug": "fiscal-balance-by-economy",
       "category": "International",
       "title": "Fiscal Balance by Economy",
@@ -1887,6 +1975,14 @@
       "type": "line",
       "units": "Millions of workers, change since December 2019",
       "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "gallup-worry-deficit",
+      "category": "Static/Fiscal",
+      "title": "How Much Do You Worry About Federal Spending and the Budget Deficit?",
+      "type": "line",
+      "units": "Percent of respondents",
+      "latest_date": "2026-03-15"
     },
     {
       "slug": "gasoline-cpi",
@@ -2153,6 +2249,14 @@
       "latest_date": "2026-04-01"
     },
     {
+      "slug": "gnp-per-person-debt-stabilization",
+      "category": "Static/Fiscal",
+      "title": "Real GNP per Person: Baseline vs. Holding Debt at 100% of GDP",
+      "type": "line",
+      "units": "Thousands of 2025 dollars",
+      "latest_date": "2055-12-31"
+    },
+    {
       "slug": "goods-balance",
       "category": "International Trade",
       "title": "Trade Balance: Goods",
@@ -2393,6 +2497,14 @@
       "latest_date": "2026-09-05"
     },
     {
+      "slug": "interest-rate-forecasts-cbo-vs-market",
+      "category": "Static/Fiscal",
+      "title": "Interest-Rate Forecasts for Federal Debt: CBO vs. Market",
+      "type": "barh_pair",
+      "units": "Percent",
+      "latest_date": "2026-09-22"
+    },
+    {
       "slug": "international-transactions-table-gdp",
       "category": "International Transactions",
       "title": "U.S. International Transactions as a Percent of GDP",
@@ -2471,6 +2583,14 @@
       "type": "line",
       "units": "Percent",
       "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "legislation-deficit-impact-table",
+      "category": "Static/Fiscal",
+      "title": "Impact of Major Deficit Legislation and Proposals on the Primary Deficit",
+      "type": "table",
+      "units": "Change in the primary deficit in the final year of the estimate (\u2212 = deficit reduction)",
+      "latest_date": null
     },
     {
       "slug": "leisure-hospitality-payrolls",
@@ -2729,6 +2849,14 @@
       "latest_date": "2026-08-01"
     },
     {
+      "slug": "net-gold-exports-gdp",
+      "category": "International Trade",
+      "title": "Net Exports of Nonmonetary Gold",
+      "type": "cycle_bar",
+      "units": "Percent of GDP",
+      "latest_date": "2026-01-01"
+    },
+    {
       "slug": "net-iip-assets-liabilities",
       "category": "International Transactions",
       "title": "U.S. Net International Investment Position, End of Quarter",
@@ -2847,6 +2975,14 @@
       "type": "bar_line",
       "units": "Thousands of jobs per month",
       "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "noninterest-outlays-vs-unemployment",
+      "category": "Static/Fiscal",
+      "title": "Noninterest Outlays vs. Unemployment Rate, FY1960\u20132026",
+      "type": "scatter_fit",
+      "units": "Percent of GDP",
+      "latest_date": "2026"
     },
     {
       "slug": "nonres-construction-by-category",
@@ -3163,10 +3299,18 @@
     {
       "slug": "pdeficit-by-economy",
       "category": "Static/IntlFiscal",
-      "title": "Primary Deficit/GDP for Advanced Economies, 2025",
+      "title": "Primary Deficit/GDP for Advanced Economies, 2026",
       "type": "cycle_bar",
       "units": "Percent of GDP (+deficit / - surplus)",
       "latest_date": "2000-01-28"
+    },
+    {
+      "slug": "pdeficit-vs-unemployment",
+      "category": "Static/Fiscal",
+      "title": "Primary Deficit vs. Unemployment Rate, FY1960\u20132026",
+      "type": "scatter_fit",
+      "units": "Percent of GDP",
+      "latest_date": "2026"
     },
     {
       "slug": "personal-income",
@@ -3207,6 +3351,14 @@
       "type": "line",
       "units": "12-month percent change",
       "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "policy-agenda-table",
+      "category": "Static/Fiscal",
+      "title": "Policies on the Agenda Are Almost All Deficit-Increasing",
+      "type": "table",
+      "units": "Increase in the primary deficit, percent of GDP",
+      "latest_date": null
     },
     {
       "slug": "portfolio-management-pce",
@@ -4145,6 +4297,14 @@
       "latest_date": "2000-01-27"
     },
     {
+      "slug": "revenue-vs-unemployment",
+      "category": "Static/Fiscal",
+      "title": "Revenue vs. Unemployment Rate, FY1960\u20132026",
+      "type": "scatter_fit",
+      "units": "Percent of GDP",
+      "latest_date": "2026"
+    },
+    {
       "slug": "rig-count",
       "category": "Misc",
       "title": "U.S. Oil and Natural Gas Rotary Rig Count",
@@ -4302,7 +4462,7 @@
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-09-17"
+      "latest_date": "2026-09-21"
     },
     {
       "slug": "sp500-earnings-mag7",
@@ -4318,7 +4478,7 @@
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-09-17"
+      "latest_date": "2026-09-21"
     },
     {
       "slug": "spending-by-economy",
@@ -4390,7 +4550,7 @@
       "title": "10-Year Treasury Yield Decomposition",
       "type": "stack",
       "units": "Percent",
-      "latest_date": "2026-09-18"
+      "latest_date": "2026-09-21"
     },
     {
       "slug": "ten-year-decomposition-monthly",
