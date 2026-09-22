@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-09-21T21:30:06+00:00",
- "as_of": "2026-09-18",
+ "generated_at": "2026-09-22T13:06:26+00:00",
+ "as_of": "2026-09-21",
  "n_rows": 19,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
  "groups": [
@@ -31,14 +31,14 @@
     },
     {
      "label": "10-year",
-     "value": 5.01,
-     "as_of": "2026-09-18",
+     "value": 4.96,
+     "as_of": "2026-09-21",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y",
-     "chg_1d": 0.07,
-     "chg_1w": 0.05,
-     "chg_ytd": 0.82
+     "chg_1d": -0.05,
+     "chg_1w": -0.01,
+     "chg_ytd": 0.77
     },
     {
      "label": "30-year",
@@ -80,25 +80,25 @@
    "rows": [
     {
      "label": "Real 10y",
-     "value": 2.68,
-     "as_of": "2026-09-18",
+     "value": 2.62,
+     "as_of": "2026-09-21",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:real/10Y",
-     "chg_1d": 0.07,
-     "chg_1w": 0.08,
-     "chg_ytd": 0.74
+     "chg_1d": -0.06,
+     "chg_1w": 0.02,
+     "chg_ytd": 0.68
     },
     {
      "label": "10y breakeven",
-     "value": 2.33,
-     "as_of": "2026-09-18",
+     "value": 2.34,
+     "as_of": "2026-09-21",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:real/10Y",
-     "chg_1d": -0.0,
+     "chg_1d": 0.01,
      "chg_1w": -0.03,
-     "chg_ytd": 0.08
+     "chg_ytd": 0.09
     },
     {
      "label": "5y5y fwd breakeven",
