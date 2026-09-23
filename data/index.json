@@ -382,7 +382,7 @@
       "title": "Change in Commodity Prices",
       "type": "category_bar",
       "units": "Percent change, year to date",
-      "latest_date": "2026-09-22"
+      "latest_date": "2026-09-23"
     },
     {
       "slug": "composite-activity",
@@ -1153,12 +1153,36 @@
       "latest_date": "2028-01-01"
     },
     {
+      "slug": "debt-2036-rates-productivity-sensitivity",
+      "category": "Static/Fiscal",
+      "title": "Debt Held by the Public in 2036",
+      "type": "table",
+      "units": "Percent of GDP",
+      "latest_date": "1.5"
+    },
+    {
       "slug": "debt-by-economy",
       "category": "Static/IntlFiscal",
       "title": "Debt/GDP for Advanced Economies, 2026",
       "type": "cycle_bar",
       "units": "Percent of GDP",
       "latest_date": "2000-01-30"
+    },
+    {
+      "slug": "debt-fiscal-gap-waterfall-preferred-baseline",
+      "category": "Static/Fiscal",
+      "title": "From CBO's Baseline to a Preferred Baseline",
+      "type": "table",
+      "units": "Percent of GDP",
+      "latest_date": null
+    },
+    {
+      "slug": "debt-gdp-cbo-vs-preferred-baseline",
+      "category": "Static/Fiscal",
+      "title": "Debt Held by the Public",
+      "type": "line",
+      "units": "Percent of GDP",
+      "latest_date": "2056-12-31"
     },
     {
       "slug": "debt-gdp-change-major-events",
@@ -1718,7 +1742,7 @@
       "title": "Euro Area: 10-Year Sovereign Credit Premium",
       "type": "line",
       "units": "Basis points",
-      "latest_date": "2026-09-21"
+      "latest_date": "2026-09-22"
     },
     {
       "slug": "europe-ea-hicp",
@@ -1798,7 +1822,7 @@
       "title": "December Fed Funds Forecast vs. the Actual Rate",
       "type": "line",
       "units": "Percent",
-      "latest_date": "2026-09-21"
+      "latest_date": "2026-09-22"
     },
     {
       "slug": "fed-dots-forecast-error",
@@ -1927,6 +1951,14 @@
       "type": "cycle_bar",
       "units": "Percent of GDP (+surplus / - deficit)",
       "latest_date": "2000-02-02"
+    },
+    {
+      "slug": "fiscal-gap-rates-productivity-sensitivity",
+      "category": "Static/Fiscal",
+      "title": "Ten-Year Fiscal Gap",
+      "type": "table",
+      "units": "Percent of GDP",
+      "latest_date": "1.5"
     },
     {
       "slug": "food-at-home-cpi",
@@ -4065,6 +4097,14 @@
       "latest_date": "2026-04-01"
     },
     {
+      "slug": "real-net-interest-cbo-vs-preferred-baseline",
+      "category": "Static/Fiscal",
+      "title": "Real Net Interest",
+      "type": "line",
+      "units": "Percent of GDP",
+      "latest_date": "2036-12-31"
+    },
+    {
       "slug": "real-nondefense",
       "category": "GDP",
       "title": "Real Federal Nondefense",
@@ -4550,7 +4590,7 @@
       "title": "10-Year Treasury Yield Decomposition",
       "type": "stack",
       "units": "Percent",
-      "latest_date": "2026-09-21"
+      "latest_date": "2026-09-22"
     },
     {
       "slug": "ten-year-decomposition-monthly",
