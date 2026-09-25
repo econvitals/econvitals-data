@@ -60,11 +60,6 @@ banks:
     country: Australia
     flag: "\U0001F1E6\U0001F1FA"
     instrument: Cash Rate
-    # One +25bp move shouldn't read as a hiking cycle — hold the stance neutral
-    # until there's a real path. Remove these to let BIS auto-classify again.
-    phase_override: On Hold
-    next_move: "No change expected; data-dependent"
-    next_move_edited: 2026-06-16
 
   - code: "CH"
     name: Swiss National Bank
@@ -83,11 +78,6 @@ banks:
     country: Norway
     flag: "\U0001F1F3\U0001F1F4"
     instrument: Policy Rate
-    # One +25bp move shouldn't read as a hiking cycle — hold the stance neutral
-    # until there's a real path. Remove these to let BIS auto-classify again.
-    phase_override: On Hold
-    next_move: "No change expected; data-dependent"
-    next_move_edited: 2026-06-16
 
   - code: "NZ"
     name: Reserve Bank of New Zealand
