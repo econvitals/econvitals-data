@@ -43,7 +43,7 @@
     {
       "slug": "advanced-fx-vs-usd",
       "category": "International",
-      "title": "Exchange Rates vs. US Dollar, Advanced Economies",
+      "title": "Exchange Rates vs. U.S. Dollar, Advanced Economies",
       "type": "line",
       "units": "Index, Jan 2024 = 100 (rise = depreciation)",
       "latest_date": "2026-08-01"
@@ -187,7 +187,7 @@
     {
       "slug": "balance-goods-services-gdp",
       "category": "International Transactions",
-      "title": "Balance on Goods and Services as a Percent of GDP",
+      "title": "Balance on Goods and Services",
       "type": "line",
       "units": "Percent of GDP, annual rate",
       "latest_date": "2026-04-01"
@@ -203,7 +203,7 @@
     {
       "slug": "balance-primary-income-gdp",
       "category": "International Transactions",
-      "title": "Balance on Primary Income as a Percent of GDP",
+      "title": "Balance on Primary Income",
       "type": "line",
       "units": "Percent of GDP, annual rate",
       "latest_date": "2026-04-01"
@@ -219,7 +219,7 @@
     {
       "slug": "balance-secondary-income-gdp",
       "category": "International Transactions",
-      "title": "Balance on Secondary Income as a Percent of GDP",
+      "title": "Balance on Secondary Income",
       "type": "line",
       "units": "Percent of GDP, annual rate",
       "latest_date": "2026-04-01"
@@ -283,7 +283,7 @@
     {
       "slug": "brt-ceo-economic-outlook",
       "category": "Static/Confidence",
-      "title": "Business Roundtable CEO Economic Outlook Index",
+      "title": "Business Roundtable CEO Economic Outlook",
       "type": "line",
       "units": "Diffusion index (50 = neutral)",
       "latest_date": "2026-04-01"
@@ -349,23 +349,23 @@
       "category": "International/China",
       "title": "China: Renminbi Exchange Rate",
       "type": "line",
-      "units": "RMB per US dollar",
+      "units": "RMB per U.S. dollar",
       "latest_date": "2026-08-01"
     },
     {
       "slug": "college-epop-by-race-sex",
       "category": "Static/Employment",
-      "title": "Employment-Population Ratio, College-Educated (Bachelor's Only, 25+)",
+      "title": "Employment-Population Ratio, College-Educated",
       "type": "line",
-      "units": "Percent",
+      "units": "Percent; bachelor's degree only, ages 25+",
       "latest_date": "2026-05-01"
     },
     {
       "slug": "college-unemployment-by-race-sex",
       "category": "Static/Employment",
-      "title": "Unemployment Rate, College-Educated (Bachelor's Only, 25+)",
+      "title": "Unemployment Rate, College-Educated",
       "type": "line",
-      "units": "Percent",
+      "units": "Percent; bachelor's degree only, ages 25+",
       "latest_date": "2026-05-01"
     },
     {
@@ -411,7 +411,7 @@
     {
       "slug": "confidence-buying-conditions",
       "category": "Static/Confidence",
-      "title": "Buying Conditions and Personal Finances: Negative Responses",
+      "title": "Buying Conditions and Personal Finances",
       "type": "line",
       "units": "% of respondents (negative view)",
       "latest_date": "2026-01-01"
@@ -475,7 +475,7 @@
     {
       "slug": "confidence-finances-prices-income",
       "category": "Static/Confidence",
-      "title": "Personal Finances: Prices vs. Income as the Cited Reason",
+      "title": "Personal Finances: Prices vs. Income",
       "type": "line",
       "units": "% of respondents citing reason",
       "latest_date": "2026-01-01"
@@ -494,14 +494,6 @@
       "title": "Change in Confidence Measures Since 2019",
       "type": "barh",
       "units": "Percent change, 2019 Q4 to 2026 Q2",
-      "latest_date": "2026-04-01"
-    },
-    {
-      "slug": "confidence-measures-indexed",
-      "category": "Static/Confidence",
-      "title": "Consumer and Business Confidence Since 2018",
-      "type": "line",
-      "units": "Index, 2019 Q4 = 100 (higher = more confident)",
       "latest_date": "2026-04-01"
     },
     {
@@ -579,7 +571,7 @@
     {
       "slug": "construction-real-growth-12m",
       "category": "Nonresidential Construction",
-      "title": "Real Construction Spending Growth Over the Past Year",
+      "title": "Real Construction Spending Growth",
       "type": "barh",
       "units": "Percent change, real, year to latest",
       "latest_date": "2026-07-01"
@@ -875,7 +867,7 @@
     {
       "slug": "corporate-profit-share",
       "category": "Income and Outlays",
-      "title": "Corporate Profits as a Share of GDP",
+      "title": "Corporate Profits",
       "type": "line",
       "units": "Percent of GDP",
       "latest_date": "2026-04-01"
@@ -1083,7 +1075,7 @@
     {
       "slug": "current-account-components-gdp",
       "category": "International Transactions",
-      "title": "Current Account and Component Balances as a Percent of GDP",
+      "title": "Current Account and Component Balances",
       "type": "contrib_stack",
       "units": "Percent of GDP, annual rate",
       "latest_date": "2026-04-01"
@@ -1091,7 +1083,7 @@
     {
       "slug": "current-account-components-gdp-half-year",
       "category": "Inbox",
-      "title": "Current Account and Its Components as a Percent of GDP, by Half Year",
+      "title": "Current Account and Its Components, by Half Year",
       "type": "line",
       "units": "Percent of GDP, at an annual rate",
       "latest_date": "2026-01-01"
@@ -1099,7 +1091,7 @@
     {
       "slug": "current-account-gdp-half-year",
       "category": "Inbox",
-      "title": "Current Account Balance as a Percent of GDP, by Half Year",
+      "title": "Current Account Balance, by Half Year",
       "type": "line",
       "units": "Percent of GDP",
       "latest_date": "2026-01-01"
@@ -1123,7 +1115,7 @@
     {
       "slug": "current-account-pct-gdp",
       "category": "International Transactions",
-      "title": "Current Account Balance as a Percent of GDP",
+      "title": "Current Account Balance",
       "type": "line",
       "units": "Percent of GDP",
       "latest_date": "2026-04-01"
@@ -1187,7 +1179,7 @@
     {
       "slug": "debt-gdp-change-major-events",
       "category": "Static/Fiscal",
-      "title": "Change in Federal Debt as a Share of GDP Around Major Events",
+      "title": "Change in Federal Debt Around Major Events",
       "type": "barh",
       "units": "Percentage points of GDP",
       "latest_date": "2026-09-30"
@@ -1211,9 +1203,9 @@
     {
       "slug": "debt-vs-pdeficit",
       "category": "Static/IntlFiscal",
-      "title": "Primary Deficit vs. Debt, Advanced Economies, 2026",
+      "title": "Primary Deficit vs. Debt, Advanced Economies",
       "type": "scatter",
-      "units": "Percent of GDP",
+      "units": "Percent of GDP, 2026",
       "latest_date": "Greece"
     },
     {
@@ -1371,7 +1363,7 @@
     {
       "slug": "eci-private-vs-government",
       "category": "Employment Cost Index",
-      "title": "ECI Wages: Private vs State and Local Government",
+      "title": "ECI Wages: Private vs. State and Local Government",
       "type": "line",
       "units": "Index, 2019 Q4 = 100",
       "latest_date": "2026-04-01"
@@ -1395,7 +1387,7 @@
     {
       "slug": "eci-total-compensation-12m",
       "category": "Employment Cost Index",
-      "title": "Employment Cost Index, 4-Quarter Change",
+      "title": "Employment Cost Index",
       "type": "line",
       "units": "4-quarter percent change",
       "latest_date": "2026-04-01"
@@ -1483,7 +1475,7 @@
     {
       "slug": "em-fx-vs-usd",
       "category": "International",
-      "title": "Exchange Rates vs. US Dollar, Emerging Markets",
+      "title": "Exchange Rates vs. U.S. Dollar, Emerging Markets",
       "type": "line",
       "units": "Index, Jan 2024 = 100 (rise = depreciation)",
       "latest_date": "2026-08-01"
@@ -1531,7 +1523,7 @@
     {
       "slug": "employment-indicators-12m-change",
       "category": "Employment",
-      "title": "12-Month Changes in Key Employment Indicators",
+      "title": "Changes in Key Employment Indicators",
       "type": "barh_signed",
       "units": "Change over the past 12 months, percentage points",
       "latest_date": "Employment-population ratio"
@@ -1707,7 +1699,7 @@
     {
       "slug": "europe-compare-core-cpi-ea-uk",
       "category": "International/Europe",
-      "title": "Core Consumer-Price Inflation, Euro Area vs United Kingdom",
+      "title": "Core Consumer-Price Inflation, Euro Area vs. United Kingdom",
       "type": "line",
       "units": "Percent, year-over-year",
       "latest_date": "2026-08-01"
@@ -1779,9 +1771,9 @@
     {
       "slug": "excess-inflation-expectations",
       "category": "Consumer Sentiment",
-      "title": "Excess Inflation Expectations vs. 2015-2019 Average",
+      "title": "Excess Inflation Expectations",
       "type": "line",
-      "units": "Percentage points",
+      "units": "Percentage points vs. 2015-2019 average",
       "latest_date": "2026-09-01"
     },
     {
@@ -1811,7 +1803,7 @@
     {
       "slug": "exports-share-gdp",
       "category": "Static/Trade-Policy",
-      "title": "Value of Exported Goods as a Share of GDP",
+      "title": "Value of Exported Goods",
       "type": "line",
       "units": "Percent of GDP",
       "latest_date": "2024-01-01"
@@ -1899,17 +1891,17 @@
     {
       "slug": "financial-account-transactions",
       "category": "International Transactions",
-      "title": "U.S. Financial-Account Transactions Excluding Financial Derivatives",
+      "title": "U.S. Financial-Account Transactions",
       "type": "panel_stack",
-      "units": "Billions of dollars, quarterly",
+      "units": "Billions of dollars, quarterly; excluding financial derivatives",
       "latest_date": "2026-04-01"
     },
     {
       "slug": "financial-account-transactions-gdp",
       "category": "International Transactions",
-      "title": "U.S. Financial-Account Transactions Excluding Financial Derivatives, as a Percent of GDP",
+      "title": "U.S. Financial-Account Transactions",
       "type": "panel_stack",
-      "units": "Percent of GDP, annual rate",
+      "units": "Percent of GDP, annual rate; excluding financial derivatives",
       "latest_date": "2026-04-01"
     },
     {
@@ -2011,7 +2003,7 @@
     {
       "slug": "full-time-part-time-change",
       "category": "Employment",
-      "title": "Net Change in Full-Time and Part-Time Employment Since December 2019",
+      "title": "Full-Time and Part-Time Employment",
       "type": "line",
       "units": "Millions of workers, change since December 2019",
       "latest_date": "2026-08-01"
@@ -2307,9 +2299,9 @@
     {
       "slug": "goods-balance-12m",
       "category": "International Trade",
-      "title": "Trade Balance: Goods, Annualized Monthly and Trailing 12-Month Sum",
+      "title": "Trade Balance: Goods",
       "type": "bar_line",
-      "units": "Billions of dollars",
+      "units": "Billions of dollars, annual rate",
       "latest_date": "2026-07-01"
     },
     {
@@ -2355,7 +2347,7 @@
     {
       "slug": "government-purchases-share-gdp",
       "category": "Static/Fiscal",
-      "title": "Government Purchases as a Share of GDP",
+      "title": "Government Purchases",
       "type": "line",
       "units": "Percent of nominal GDP",
       "latest_date": "2026-01-01"
@@ -2403,7 +2395,7 @@
     {
       "slug": "hourly-compensation-growth",
       "category": "Productivity",
-      "title": "Nonfarm Business Sector Hourly Compensation Growth",
+      "title": "Nonfarm Business Sector Hourly Compensation",
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-04-01"
@@ -2427,7 +2419,7 @@
     {
       "slug": "household-income-change-by-age",
       "category": "Static/Income and Poverty",
-      "title": "Change in Real Median Household Income by Age of Householder",
+      "title": "Real Median Household Income by Age of Householder",
       "type": "barh",
       "units": "Percent change, 2019 to 2025",
       "latest_date": "2025-01-01"
@@ -2435,7 +2427,7 @@
     {
       "slug": "household-income-change-by-percentile",
       "category": "Static/Income and Poverty",
-      "title": "Change in Real Household Income by Percentile",
+      "title": "Real Household Income by Percentile",
       "type": "barh",
       "units": "Percent change, 2019 to 2025",
       "latest_date": "2025-01-01"
@@ -2443,7 +2435,7 @@
     {
       "slug": "household-income-change-by-percentile-post-tax",
       "category": "Static/Income and Poverty",
-      "title": "Change in Real Household Income by Percentile, Before and After Tax",
+      "title": "Real Household Income by Percentile, Before and After Tax",
       "type": "barh_pair",
       "units": "Percent change, 2019 to 2025",
       "latest_date": "2025-01-01"
@@ -2451,7 +2443,7 @@
     {
       "slug": "household-income-change-by-size",
       "category": "Static/Income and Poverty",
-      "title": "Change in Real Median Household Income by Household Size",
+      "title": "Real Median Household Income by Household Size",
       "type": "barh",
       "units": "Percent change, 2019 to 2025",
       "latest_date": "2025-01-01"
@@ -2731,7 +2723,7 @@
     {
       "slug": "long-term-unemployed-share",
       "category": "Employment",
-      "title": "Long-Term Unemployed as a Share of Total Unemployment",
+      "title": "Long-Term Unemployed",
       "type": "line",
       "units": "Percent of unemployed, jobless 27 weeks or more",
       "latest_date": "2026-08-01"
@@ -2835,9 +2827,9 @@
     {
       "slug": "michigan-sentiment-since-1952",
       "category": "Static/Confidence",
-      "title": "University of Michigan Consumer Sentiment, Since 1952",
+      "title": "University of Michigan Consumer Sentiment",
       "type": "line",
-      "units": "Index, 1966 Q1 = 100",
+      "units": "Index, 1966 Q1 = 100; since 1952",
       "latest_date": "2026-06-01"
     },
     {
@@ -2899,15 +2891,15 @@
     {
       "slug": "net-iip-assets-liabilities",
       "category": "International Transactions",
-      "title": "U.S. Net International Investment Position, End of Quarter",
+      "title": "U.S. International Investment Position",
       "type": "gap",
-      "units": "Trillions of dollars",
+      "units": "Trillions of dollars, end of quarter",
       "latest_date": "2026-04-01"
     },
     {
       "slug": "net-iip-assets-liabilities-gdp",
       "category": "International Transactions",
-      "title": "U.S. International Investment Position as a Percent of GDP",
+      "title": "U.S. International Investment Position",
       "type": "gap",
       "units": "Percent of GDP",
       "latest_date": "2026-04-01"
@@ -2931,7 +2923,7 @@
     {
       "slug": "net-international-investment-position-gdp",
       "category": "International Transactions",
-      "title": "U.S. Net International Investment Position as a Percent of GDP",
+      "title": "U.S. Net International Investment Position",
       "type": "line",
       "units": "Percent of GDP",
       "latest_date": "2026-04-01"
@@ -3019,9 +3011,9 @@
     {
       "slug": "noninterest-outlays-vs-unemployment",
       "category": "Static/Fiscal",
-      "title": "Noninterest Outlays vs. Unemployment Rate, FY1960\u20132026",
+      "title": "Noninterest Outlays vs. Unemployment Rate",
       "type": "scatter_fit",
-      "units": "Percent of GDP",
+      "units": "Percent of GDP, FY1960\u20132026",
       "latest_date": "2026"
     },
     {
@@ -3077,7 +3069,7 @@
       "category": "Static/Energy",
       "title": "U.S. Crude Oil Production, 2011 vs. 2026",
       "type": "event_compare",
-      "units": "Percent change since the start of the oil price increase",
+      "units": "Percent change since the start",
       "latest_date": "29"
     },
     {
@@ -3243,15 +3235,15 @@
     {
       "slug": "pce-excess-core",
       "category": "PCE",
-      "title": "Core PCE Inflation: Excess Over the 2% Benchmark",
+      "title": "Excess Core PCE Inflation",
       "type": "bar_line",
-      "units": "Percentage points, actual minus benchmark",
+      "units": "Percentage points, actual minus 2% benchmark",
       "latest_date": "2026-07-01"
     },
     {
       "slug": "pce-excess-core-goods",
       "category": "PCE",
-      "title": "Core Goods PCE Inflation: Excess Over Benchmark",
+      "title": "Excess Core Goods PCE Inflation",
       "type": "bar_line",
       "units": "Percentage points, actual minus benchmark",
       "latest_date": "2026-07-01"
@@ -3259,7 +3251,7 @@
     {
       "slug": "pce-excess-core-services",
       "category": "PCE",
-      "title": "Core Services ex Housing PCE Inflation: Excess Over Benchmark",
+      "title": "Excess Core Services ex Housing PCE Inflation",
       "type": "bar_line",
       "units": "Percentage points, actual minus benchmark",
       "latest_date": "2026-07-01"
@@ -3267,7 +3259,7 @@
     {
       "slug": "pce-excess-core-stack",
       "category": "PCE",
-      "title": "Core PCE Inflation: Excess Contributions by Category",
+      "title": "Excess Core PCE Inflation by Category",
       "type": "contrib_stack",
       "units": "Percentage points, actual minus benchmark",
       "latest_date": "2026-07-01"
@@ -3275,7 +3267,7 @@
     {
       "slug": "pce-excess-housing",
       "category": "PCE",
-      "title": "Housing PCE Inflation: Excess Over Benchmark",
+      "title": "Excess Housing PCE Inflation",
       "type": "bar_line",
       "units": "Percentage points, actual minus benchmark",
       "latest_date": "2026-07-01"
@@ -3347,7 +3339,7 @@
     {
       "slug": "pdeficit-by-economy",
       "category": "Static/IntlFiscal",
-      "title": "Primary Deficit/GDP for Advanced Economies, 2026",
+      "title": "Primary Deficit for Advanced Economies, 2026",
       "type": "cycle_bar",
       "units": "Percent of GDP (+deficit / - surplus)",
       "latest_date": "2000-01-28"
@@ -3355,9 +3347,9 @@
     {
       "slug": "pdeficit-vs-unemployment",
       "category": "Static/Fiscal",
-      "title": "Primary Deficit vs. Unemployment Rate, FY1960\u20132026",
+      "title": "Primary Deficit vs. Unemployment Rate",
       "type": "scatter_fit",
-      "units": "Percent of GDP",
+      "units": "Percent of GDP, FY1960\u20132026",
       "latest_date": "2026"
     },
     {
@@ -3379,7 +3371,7 @@
     {
       "slug": "personal-saving-rate",
       "category": "Income and Outlays",
-      "title": "Personal Saving Rate, 3-Month Moving Average",
+      "title": "Personal Saving Rate",
       "type": "line",
       "units": "Percent, 3-month moving average",
       "latest_date": "2026-07-01"
@@ -3715,7 +3707,7 @@
     {
       "slug": "productivity-growth",
       "category": "Productivity",
-      "title": "Nonfarm Business Sector Productivity Growth",
+      "title": "Nonfarm Business Sector Productivity",
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-04-01"
@@ -3763,7 +3755,7 @@
     {
       "slug": "rd-share-gdp-by-source",
       "category": "Static/R&D",
-      "title": "Research and Development as a Share of GDP",
+      "title": "Research and Development",
       "type": "line",
       "units": "Percent of GDP",
       "latest_date": "2024-01-01"
@@ -4197,7 +4189,7 @@
       "category": "Income and Outlays",
       "title": "Real Personal Consumption Expenditures per Capita",
       "type": "line",
-      "units": "Chained 2017 Dollars, Annual Rate",
+      "units": "Chained 2017 dollars, annual rate",
       "latest_date": "2026-07-31"
     },
     {
@@ -4373,7 +4365,7 @@
       "category": "Static/Energy",
       "title": "Baker Hughes U.S. Rig Count, 2011 vs. 2026",
       "type": "event_compare",
-      "units": "Percent change since the start of the oil price increase",
+      "units": "Percent change since the start",
       "latest_date": "29"
     },
     {
@@ -4459,9 +4451,9 @@
     {
       "slug": "services-balance-12m",
       "category": "International Trade",
-      "title": "Trade Balance: Services, Annualized Monthly and Trailing 12-Month Sum",
+      "title": "Trade Balance: Services",
       "type": "bar_line",
-      "units": "Billions of dollars",
+      "units": "Billions of dollars, annual rate",
       "latest_date": "2026-07-01"
     },
     {
@@ -4531,7 +4523,7 @@
     {
       "slug": "sp500-earnings-mag7",
       "category": "Static/Financial",
-      "title": "S&P 500 Earnings Growth: Magnificent 7 vs. Rest",
+      "title": "S&P 500 Earnings: Magnificent 7 vs. Rest",
       "type": "bar_pair",
       "units": "Earnings growth, year-over-year (percent)",
       "latest_date": "2026-03-31"
@@ -4555,7 +4547,7 @@
     {
       "slug": "spf-employment-growth",
       "category": "SPF",
-      "title": "SPF Forecast vs. Actual: Nonfarm Payroll Employment Growth, 2026Q2",
+      "title": "SPF Forecast vs. Actual: Nonfarm Payroll Employment Growth, Q2 2026",
       "type": "cycle_bar",
       "units": "Thousands of jobs per month",
       "latest_date": "2026-04-02"
@@ -4563,7 +4555,7 @@
     {
       "slug": "spf-unemployment-rate",
       "category": "SPF",
-      "title": "SPF Forecast vs. Actual: Unemployment Rate, 2026Q2",
+      "title": "SPF Forecast vs. Actual: Unemployment Rate, Q2 2026",
       "type": "cycle_bar",
       "units": "Percent",
       "latest_date": "2026-04-02"
@@ -4635,9 +4627,9 @@
     {
       "slug": "trade-balance-12m",
       "category": "International Trade",
-      "title": "Trade Balance: Annualized Monthly and Trailing 12-Month Sum",
+      "title": "Trade Balance",
       "type": "bar_line",
-      "units": "Billions of dollars",
+      "units": "Billions of dollars, annual rate",
       "latest_date": "2026-07-01"
     },
     {
@@ -4723,9 +4715,9 @@
     {
       "slug": "treasury-debt-duration-2021",
       "category": "Static/Fiscal",
-      "title": "Duration of Marketable Treasury Debt Since 2021",
+      "title": "Duration of Marketable Treasury Debt",
       "type": "line",
-      "units": "Years",
+      "units": "Years, since 2021",
       "latest_date": "2026-08-31"
     },
     {
@@ -4739,9 +4731,9 @@
     {
       "slug": "treasury-debt-maturity-2021",
       "category": "Static/Fiscal",
-      "title": "Average Maturity of Marketable Treasury Debt Since 2021",
+      "title": "Average Maturity of Marketable Treasury Debt",
       "type": "line",
-      "units": "Years",
+      "units": "Years, since 2021",
       "latest_date": "2026-08-31"
     },
     {
@@ -4851,9 +4843,9 @@
     {
       "slug": "unemployment-rate-by-group-range-3ma",
       "category": "Employment",
-      "title": "Unemployment Rate by Group (3-Month Average)",
+      "title": "Unemployment Rate by Group",
       "type": "dot_range",
-      "units": "Percent",
+      "units": "Percent, 3-month average",
       "latest_date": "Education (25+)"
     },
     {
