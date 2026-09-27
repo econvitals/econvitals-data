@@ -686,7 +686,7 @@
       "title": "Core Capital Goods Orders",
       "type": "bar_line",
       "units": "Percent change, annual rate",
-      "latest_date": "2026-07-01"
+      "latest_date": "2026-08-01"
     },
     {
       "slug": "core-capex-orders-shipments-yoy",
@@ -694,7 +694,7 @@
       "title": "Core Capital Goods: Orders and Shipments",
       "type": "line",
       "units": "12-month percent change",
-      "latest_date": "2026-07-01"
+      "latest_date": "2026-08-01"
     },
     {
       "slug": "core-capex-shipments",
@@ -702,7 +702,7 @@
       "title": "Core Capital Goods Shipments",
       "type": "bar_line",
       "units": "Percent change, annual rate",
-      "latest_date": "2026-07-01"
+      "latest_date": "2026-08-01"
     },
     {
       "slug": "core-cpi-ex-shelter",
@@ -1081,22 +1081,6 @@
       "latest_date": "2026-04-01"
     },
     {
-      "slug": "current-account-components-gdp-half-year",
-      "category": "Inbox",
-      "title": "Current Account and Its Components, by Half Year",
-      "type": "line",
-      "units": "Percent of GDP, at an annual rate",
-      "latest_date": "2026-01-01"
-    },
-    {
-      "slug": "current-account-gdp-half-year",
-      "category": "Inbox",
-      "title": "Current Account Balance, by Half Year",
-      "type": "line",
-      "units": "Percent of GDP",
-      "latest_date": "2026-01-01"
-    },
-    {
       "slug": "current-account-goods-services-gap",
       "category": "International Transactions",
       "title": "Current Account and Trade Balance",
@@ -1249,30 +1233,6 @@
       "latest_date": "2026"
     },
     {
-      "slug": "diesel-gasoline-crude-indexed",
-      "category": "Inbox",
-      "title": "Diesel, Gasoline and Crude Oil Prices",
-      "type": "line",
-      "units": "Index, week of March 2, 2026 = 100",
-      "latest_date": "2026-08-31"
-    },
-    {
-      "slug": "diesel-price-components",
-      "category": "Inbox",
-      "title": "Components of the Retail Diesel Price",
-      "type": "contrib_stack",
-      "units": "Dollars per gallon",
-      "latest_date": "2026-08-01"
-    },
-    {
-      "slug": "diesel-vs-gasoline-retail",
-      "category": "Inbox",
-      "title": "Retail Diesel and Gasoline Prices",
-      "type": "line",
-      "units": "Dollars per gallon",
-      "latest_date": "2026-08-31"
-    },
-    {
       "slug": "disposable-income",
       "category": "Income and Outlays",
       "title": "Disposable Personal Income",
@@ -1281,28 +1241,12 @@
       "latest_date": "2026-07-01"
     },
     {
-      "slug": "distillate-exports-and-inventories",
-      "category": "Inbox",
-      "title": "Distillate Exports and Inventories",
-      "type": "line",
-      "units": "Million barrels per day",
-      "latest_date": "2026-08-28"
-    },
-    {
-      "slug": "distillate-inventories-utilization",
-      "category": "Inbox",
-      "title": "Distillate Inventories and Refinery Utilization",
-      "type": "line",
-      "units": "Days of supply",
-      "latest_date": "2026-08-28"
-    },
-    {
       "slug": "durable-goods-ex-transport-growth",
       "category": "Durable Goods",
       "title": "Durable Goods Orders ex Transportation",
       "type": "bar_line",
       "units": "Percent change, annual rate",
-      "latest_date": "2026-07-01"
+      "latest_date": "2026-08-01"
     },
     {
       "slug": "durable-goods-orders-growth",
@@ -1310,7 +1254,7 @@
       "title": "Durable Goods New Orders",
       "type": "bar_line",
       "units": "Percent change, annual rate",
-      "latest_date": "2026-07-01"
+      "latest_date": "2026-08-01"
     },
     {
       "slug": "durable-goods-payrolls",
@@ -1334,7 +1278,7 @@
       "title": "Durable Goods Shipments ex Transportation",
       "type": "bar_line",
       "units": "Percent change, annual rate",
-      "latest_date": "2026-07-01"
+      "latest_date": "2026-08-01"
     },
     {
       "slug": "durable-goods-shipments-growth",
@@ -1342,7 +1286,7 @@
       "title": "Durable Goods Shipments",
       "type": "bar_line",
       "units": "Percent change, annual rate",
-      "latest_date": "2026-07-01"
+      "latest_date": "2026-08-01"
     },
     {
       "slug": "durable-goods-shipments-orders-table",
@@ -1427,7 +1371,7 @@
     {
       "slug": "economic-systems-state-ownership",
       "category": "Static/Ec10",
-      "title": "Economic Systems: How Much the State Redistributes vs. How Much It Owns",
+      "title": "Economic Systems",
       "type": "scatter",
       "units": "Market-income Gini minus disposable-income Gini, points (y) vs. OECD PMR quality and scope of public ownership, 0-6 (x)",
       "latest_date": "North Korea"
@@ -1839,6 +1783,14 @@
       "type": "line",
       "units": "Percent",
       "latest_date": "2026-12-01"
+    },
+    {
+      "slug": "fed-odds-vs-outcomes",
+      "category": "Fed",
+      "title": "Market-Implied Odds of a Fed Move and What the Fed Did",
+      "type": "scatter_fit",
+      "units": "Percent of meetings",
+      "latest_date": "95-100%"
     },
     {
       "slug": "federal-debt-service",
