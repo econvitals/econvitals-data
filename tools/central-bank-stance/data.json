@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-01T05:47:27+00:00",
+    "generated_at": "2026-10-01T13:07:54+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -31,7 +31,7 @@
       "instrument": "Federal Funds Rate (target range)",
       "rate": 3.875,
       "rate_display": "3.75–4.00%",
-      "as_of": "2026-09-30",
+      "as_of": "2026-10-01",
       "as_of_source": "FRED (Board of Governors) — federal funds target range",
       "fast": true,
       "last_move": {
@@ -99,7 +99,7 @@
           "value": 3.875
         },
         {
-          "date": "2026-09-30",
+          "date": "2026-10-01",
           "value": 3.875
         }
       ]
@@ -211,21 +211,21 @@
       "country": "Japan",
       "flag": "🇯🇵",
       "instrument": "Overnight Call Rate",
-      "rate": 1.0,
-      "rate_display": "1.00%",
-      "as_of": "2026-09-22",
+      "rate": 1.25,
+      "rate_display": "1.25%",
+      "as_of": "2026-09-29",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
       "last_move": {
-        "date": "2026-06-17",
+        "date": "2026-09-24",
         "delta_bps": 25,
         "direction": "up",
-        "display": "▲ 25 bp · Jun 2026"
+        "display": "▲ 25 bp · Sep 2026"
       },
       "phase": "Hiking",
       "phase_source": "auto",
-      "ytd_bps": 25,
-      "ytd_display": "+25 bp",
+      "ytd_bps": 50,
+      "ytd_display": "+50 bp",
       "next_move": {
         "text": "Further hikes likely",
         "kind": "auto",
@@ -257,8 +257,12 @@
           "value": 1.0
         },
         {
-          "date": "2026-09-22",
-          "value": 1.0
+          "date": "2026-09-24",
+          "value": 1.25
+        },
+        {
+          "date": "2026-09-29",
+          "value": 1.25
         }
       ]
     },
@@ -270,7 +274,7 @@
       "instrument": "Bank Rate",
       "rate": 3.75,
       "rate_display": "3.75%",
-      "as_of": "2026-09-29",
+      "as_of": "2026-09-30",
       "as_of_source": "Bank of England — Bank Rate (IUDBEDR)",
       "fast": true,
       "last_move": {
@@ -338,7 +342,7 @@
           "value": 3.75
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "value": 3.75
         }
       ]
@@ -351,7 +355,7 @@
       "instrument": "Overnight Rate",
       "rate": 2.25,
       "rate_display": "2.25%",
-      "as_of": "2026-09-29",
+      "as_of": "2026-09-30",
       "as_of_source": "Bank of Canada — target for the overnight rate",
       "fast": true,
       "last_move": {
@@ -423,7 +427,7 @@
           "value": 2.25
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "value": 2.25
         }
       ]
@@ -436,7 +440,7 @@
       "instrument": "Cash Rate",
       "rate": 4.35,
       "rate_display": "4.35%",
-      "as_of": "2026-09-17",
+      "as_of": "2026-09-24",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
       "last_move": {
@@ -504,7 +508,7 @@
           "value": 4.35
         },
         {
-          "date": "2026-09-17",
+          "date": "2026-09-24",
           "value": 4.35
         }
       ]
@@ -517,7 +521,7 @@
       "instrument": "SNB Policy Rate",
       "rate": 0.0,
       "rate_display": "0.00%",
-      "as_of": "2026-09-22",
+      "as_of": "2026-09-29",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
       "last_move": {
@@ -573,7 +577,7 @@
           "value": 0.0
         },
         {
-          "date": "2026-09-22",
+          "date": "2026-09-29",
           "value": 0.0
         }
       ]
@@ -586,7 +590,7 @@
       "instrument": "Policy Rate",
       "rate": 1.75,
       "rate_display": "1.75%",
-      "as_of": "2026-09-22",
+      "as_of": "2026-09-29",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
       "last_move": {
@@ -658,7 +662,7 @@
           "value": 1.75
         },
         {
-          "date": "2026-09-22",
+          "date": "2026-09-29",
           "value": 1.75
         }
       ]
@@ -669,21 +673,21 @@
       "country": "Norway",
       "flag": "🇳🇴",
       "instrument": "Policy Rate",
-      "rate": 4.25,
-      "rate_display": "4.25%",
-      "as_of": "2026-09-16",
+      "rate": 4.5,
+      "rate_display": "4.50%",
+      "as_of": "2026-09-25",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
       "last_move": {
-        "date": "2026-05-08",
+        "date": "2026-09-25",
         "delta_bps": 25,
         "direction": "up",
-        "display": "▲ 25 bp · May 2026"
+        "display": "▲ 25 bp · Sep 2026"
       },
       "phase": "On Hold",
       "phase_source": "override",
-      "ytd_bps": 25,
-      "ytd_display": "+25 bp",
+      "ytd_bps": 50,
+      "ytd_display": "+50 bp",
       "next_move": {
         "text": "No change expected; data-dependent",
         "kind": "desk",
@@ -731,8 +735,8 @@
           "value": 4.25
         },
         {
-          "date": "2026-09-16",
-          "value": 4.25
+          "date": "2026-09-25",
+          "value": 4.5
         }
       ]
     },
@@ -744,7 +748,7 @@
       "instrument": "Official Cash Rate",
       "rate": 2.75,
       "rate_display": "2.75%",
-      "as_of": "2026-09-18",
+      "as_of": "2026-09-25",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
       "last_move": {
@@ -824,7 +828,7 @@
           "value": 2.75
         },
         {
-          "date": "2026-09-18",
+          "date": "2026-09-25",
           "value": 2.75
         }
       ]
@@ -837,7 +841,7 @@
       "instrument": "1-Year Loan Prime Rate (LPR)",
       "rate": 3.0,
       "rate_display": "3.00%",
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-29",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
       "last_move": {
@@ -881,7 +885,7 @@
           "value": 3.0
         },
         {
-          "date": "2026-09-19",
+          "date": "2026-09-29",
           "value": 3.0
         }
       ]
