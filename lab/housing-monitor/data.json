@@ -46,7 +46,7 @@
           "id": "cs_yoy",
           "name": "Case-Shiller national, YoY",
           "unit": "% nom",
-          "val": "+1.5",
+          "val": "+1.9",
           "pos": 24,
           "tone": "cool",
           "band": [
@@ -60,13 +60,13 @@
           "badge": "Cooling",
           "note": "14th straight month of deceleration; weakest since Jun 2023.",
           "_source": "fred",
-          "_date": "2026-06-01"
+          "_date": "2026-07-01"
         },
         {
           "id": "real_yoy",
           "name": "Real home price, YoY (CPI-adj.)",
           "unit": "% real",
-          "val": "−1.9",
+          "val": "−1.3",
           "pos": 18,
           "tone": "cool",
           "band": [
@@ -80,7 +80,7 @@
           "badge": "Falling",
           "note": "Prices now losing ground to inflation — the quiet correction.",
           "_source": "fred",
-          "_date": "2026-06-01"
+          "_date": "2026-07-01"
         },
         {
           "id": "price_to_rent",
@@ -100,7 +100,7 @@
           "badge": "Stretched",
           "note": "Dallas Fed's single best leading indicator; well above fundamentals.",
           "_source": "fred",
-          "_date": "2026-06-01"
+          "_date": "2026-07-01"
         },
         {
           "id": "price_to_income",
@@ -126,7 +126,7 @@
           "id": "median_vs_2019",
           "name": "Home prices vs. 2019",
           "unit": "% cum.",
-          "val": "+58",
+          "val": "+59",
           "pos": 84,
           "tone": "hot",
           "band": [
@@ -140,7 +140,7 @@
           "badge": "Near peak",
           "note": "The cumulative run-up since before the pandemic. Repeat-sales, so a change in which homes happen to sell cannot move it.",
           "_source": "fred",
-          "_date": "2026-06-01"
+          "_date": "2026-07-01"
         }
       ]
     },
@@ -399,9 +399,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Sep 30 2026 · live via FRED · calibration editorial",
+  "asof": "Updated Oct 1 2026 · live via FRED · calibration editorial",
   "data_through": "Sep 24 2026",
-  "generated_at": "2026-09-30T00:56:06+00:00",
+  "generated_at": "2026-10-01T00:57:18+00:00",
   "sources": {
     "fred": 24,
     "config": 0,
