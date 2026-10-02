@@ -155,10 +155,9 @@
           "id": "mortgage30",
           "name": "30-yr fixed mortgage",
           "unit": "%",
-          "val": "7.03",
+          "val": "7.28",
           "tone": "warm",
           "spark": [
-            6.49,
             6.43,
             6.49,
             6.55,
@@ -171,11 +170,12 @@
             6.71,
             6.76,
             6.95,
-            7.03
+            7.03,
+            7.28
           ],
           "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
           "_source": "fred",
-          "_date": "2026-09-24"
+          "_date": "2026-10-01"
         },
         {
           "id": "nar_affordability",
@@ -205,10 +205,9 @@
           "id": "implied_pi",
           "name": "Implied P&I, median home",
           "unit": "/mo",
-          "val": "$2,291",
+          "val": "$2,349",
           "tone": "hot",
           "spark": [
-            2168,
             2154,
             2168,
             2181,
@@ -221,11 +220,12 @@
             2217,
             2229,
             2272,
-            2291
+            2291,
+            2349
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
           "_source": "fred",
-          "_date": "2026-09-24"
+          "_date": "2026-10-01"
         }
       ]
     },
@@ -261,13 +261,13 @@
         {
           "id": "total_inventory",
           "k": "Active listings",
-          "v": "1.14M",
-          "p": "1.13M",
-          "d": "+3.6%",
+          "v": "1.16M",
+          "p": "1.14M",
+          "d": "+5.4%",
           "dir": "up",
           "s": "Realtor.com",
           "_source": "fred",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "median_existing_price",
@@ -283,24 +283,24 @@
         {
           "id": "median_dom",
           "k": "Median days on market",
-          "v": "60",
-          "p": "57",
-          "d": "+0 days",
-          "dir": "flat",
+          "v": "61",
+          "p": "60",
+          "d": "−1 days",
+          "dir": "dn",
           "s": "Realtor.com",
           "_source": "fred",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "price_drops",
           "k": "Listings with a price cut",
-          "v": "35.3%",
-          "p": "35.9%",
-          "d": "−0.8 pt",
+          "v": "35.0%",
+          "p": "35.3%",
+          "d": "−0.1 pt",
           "dir": "dn",
           "s": "Realtor.com",
           "_source": "fred",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "new_home_sales",
@@ -399,9 +399,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Oct 1 2026 · live via FRED · calibration editorial",
-  "data_through": "Sep 24 2026",
-  "generated_at": "2026-10-01T00:57:18+00:00",
+  "asof": "Updated Oct 2 2026 · live via FRED · calibration editorial",
+  "data_through": "Oct 1 2026",
+  "generated_at": "2026-10-02T01:13:02+00:00",
   "sources": {
     "fred": 24,
     "config": 0,
