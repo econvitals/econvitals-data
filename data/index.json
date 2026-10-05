@@ -1569,6 +1569,14 @@
       "latest_date": "2026-09-01"
     },
     {
+      "slug": "epop-15-64-us-demog-by-economy",
+      "category": "Static/IntlLabor",
+      "title": "Employment Rate Ages 15\u201364 With U.S. Demographics",
+      "type": "barh",
+      "units": "Percent of population ages 15\u201364",
+      "latest_date": "2000-01-25"
+    },
+    {
       "slug": "epop-adjusted-16-24",
       "category": "Employment/Aging-Adjusted",
       "title": "Employment-Population Ratio, Actual vs. Age/Sex-Adjusted (Ages 16-24)",
@@ -1649,12 +1657,156 @@
       "latest_date": "2026-09-01"
     },
     {
+      "slug": "epop-by-economy",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Advanced Economies",
+      "type": "barh",
+      "units": "Percent of population ages 15\u201364, seasonally adjusted",
+      "latest_date": "2000-01-25"
+    },
+    {
       "slug": "epop-gap-black-white-women",
       "category": "Static/Employment",
       "title": "EPOP Gap: Black Women Minus White Women",
       "type": "line",
       "units": "Percentage points",
       "latest_date": "2026-05-01"
+    },
+    {
+      "slug": "epop-us-demog-by-economy",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio With U.S. Demographics",
+      "type": "barh",
+      "units": "Percent of population 15 and over",
+      "latest_date": "2000-01-25"
+    },
+    {
+      "slug": "epop-us-vs-oecd",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Ages 15 and Over",
+      "type": "gap",
+      "units": "Percent of population 15 and over",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-15-24",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Ages 15\u201324",
+      "type": "gap",
+      "units": "Percent of population ages 15\u201324",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-25-54",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Ages 25\u201354",
+      "type": "gap",
+      "units": "Percent of population ages 25\u201354",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-55plus",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Ages 55+",
+      "type": "gap",
+      "units": "Percent of population ages 55 and over",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-contrib-2000",
+      "category": "Static/IntlLabor",
+      "title": "Contributions to the U.S. Employment-Rate Gap, 2000",
+      "type": "table",
+      "units": "Percentage points",
+      "latest_date": "Total"
+    },
+    {
+      "slug": "epop-us-vs-oecd-contrib-2025",
+      "category": "Static/IntlLabor",
+      "title": "Contributions to the U.S. Employment-Rate Gap, 2025",
+      "type": "table",
+      "units": "Percentage points",
+      "latest_date": "Total"
+    },
+    {
+      "slug": "epop-us-vs-oecd-contrib-change",
+      "category": "Static/IntlLabor",
+      "title": "Contributions to the Change in the U.S. Employment-Rate Gap, 2000 to 2025",
+      "type": "table",
+      "units": "Percentage points",
+      "latest_date": "Total"
+    },
+    {
+      "slug": "epop-us-vs-oecd-contrib-change-share",
+      "category": "Static/IntlLabor",
+      "title": "Shares of the Change in the U.S. Employment-Rate Gap, 2000 to 2025",
+      "type": "table",
+      "units": "Percent of the total change",
+      "latest_date": "Total"
+    },
+    {
+      "slug": "epop-us-vs-oecd-men",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Men 15 and Over",
+      "type": "gap",
+      "units": "Percent of men 15 and over",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-men-15-24",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Men 15\u201324",
+      "type": "gap",
+      "units": "Percent of men ages 15\u201324",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-men-25-54",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Men 25\u201354",
+      "type": "gap",
+      "units": "Percent of men ages 25\u201354",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-men-55plus",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Men 55+",
+      "type": "gap",
+      "units": "Percent of men ages 55 and over",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-women",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Women 15 and Over",
+      "type": "gap",
+      "units": "Percent of women 15 and over",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-women-15-24",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Women 15\u201324",
+      "type": "gap",
+      "units": "Percent of women ages 15\u201324",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-women-25-54",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Women 25\u201354",
+      "type": "gap",
+      "units": "Percent of women ages 25\u201354",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "epop-us-vs-oecd-women-55plus",
+      "category": "Static/IntlLabor",
+      "title": "Employment-Population Ratio, Women 55+",
+      "type": "gap",
+      "units": "Percent of women ages 55 and over",
+      "latest_date": "2025-01-01"
     },
     {
       "slug": "epop-women-by-race",
@@ -4801,6 +4953,14 @@
       "latest_date": "2026-09-01"
     },
     {
+      "slug": "unemployment-by-economy",
+      "category": "Static/IntlLabor",
+      "title": "Unemployment Rate, Advanced Economies",
+      "type": "barh",
+      "units": "Percent of labor force, seasonally adjusted",
+      "latest_date": "2000-01-25"
+    },
+    {
       "slug": "unemployment-cbo",
       "category": "Employment",
       "title": "Unemployment Rate",
@@ -4871,6 +5031,14 @@
       "type": "line",
       "units": "Percent",
       "latest_date": "2026-09-01"
+    },
+    {
+      "slug": "unemployment-us-demog-by-economy",
+      "category": "Static/IntlLabor",
+      "title": "Unemployment Rate With U.S. Demographics",
+      "type": "barh",
+      "units": "Percent of labor force, ages 15 and over",
+      "latest_date": "2000-01-25"
     },
     {
       "slug": "unemployment-women-by-race",
