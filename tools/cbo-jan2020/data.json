@@ -3,11 +3,11 @@
   "forecast_vintage": "CBO January 2020 Baseline",
   "forecast_pub": "The Budget and Economic Outlook: 2020 to 2030 (Jan 2020), pub. 51135",
   "rebase_quarter": "2019Q4",
-  "as_of_quarter": "2026Q2",
+  "as_of_quarter": "2026Q3",
   "window_start": "2018Q1",
-  "generated": "2026-07-30",
+  "generated": "2026-10-06",
   "source": "Bureau of Economic Analysis, BLS, Federal Reserve via FRED; Congressional Budget Office; author's calculations.",
-  "discussion": "<!-- Claude-written synthesis essay. The build (cbo2020.py build-explorer) reads this file\n     verbatim into data.json's meta.discussion, and the page renders it at the bottom under a\n     \"Synthesis \u00b7 written by Claude\" label. Descriptive + lightly causal; synthesizes patterns\n     rather than walking series-by-series. Re-check the directional claims against the freshly\n     rendered gaps on each refresh (the broad story is robust; specific magnitudes can move). -->\n<p>Set CBO's January-2020 baseline beside what actually happened and the surprises sort into one clean pattern: the <em>real</em> economy turned out close to \u2014 even a little better than \u2014 what was expected, while the <em>nominal</em> economy is almost unrecognizable. On this evidence the pandemic delivered a lasting nominal shock far more than a lasting real one.</p>\n\n<p>Start with the real side. After the deepest and fastest recession in modern memory, real GDP did not merely claw back to its pre-COVID path but pushed slightly above it, and the job market returned faster and tighter than almost anyone projected \u2014 unemployment round-tripped to roughly the low rate CBO had penciled in, rather than grinding back over years as it did after 2008. That is the dog that didn't bark: the permanent \"scarring\" of output and employment that the 2008\u20132015 experience taught us to fear simply does not show up in the aggregates. Shown only the real-GDP and unemployment lines, a 2020 forecaster would feel broadly vindicated \u2014 having lived through a wild detour to get there.</p>\n\n<p>Show that same forecaster the price level and the path of interest rates, and the world is unrecognizable. The single largest break with the forecast is prices: the 2021\u20132023 surge stepped the price level well above anything in the baseline and never reversed \u2014 disinflation brought down the <em>rate</em> of increase, not the <em>level</em> of prices. The bulk of the gap between forecast and actual <em>nominal</em> GDP is this price overshoot rather than extra real output. The second great miss is interest rates. CBO's baseline encoded the low-for-long regime everyone assumed in early 2020; instead the most aggressive tightening cycle in four decades pushed short rates and the ten-year yield far above the projected path. The zero-rate era that framed a decade of macro thinking ended abruptly.</p>\n\n<p>These are not independent surprises \u2014 they are two faces of one story. Enormous fiscal and monetary support met a supply-constrained reopening; demand snapped back hard (the strong real recovery and the tight labor market), that strength collided with disrupted supply (the inflation overshoot), and the overshoot forced the hiking cycle (the rates miss). The robust real economy and the nominal explosion are the same demand-driven event seen from different angles, not a run of unrelated luck.</p>\n\n<p>Beneath the aggregates the composition shifted too \u2014 the mix of consumption, investment, and trade did not settle back into its old grooves \u2014 but the headline reading is simple and worth holding onto: measured against the last forecast made before the world changed, we arrived at roughly the real economy that was expected, resting on a permanently higher price level and a permanently higher structure of interest rates.</p>\n"
+  "discussion": "<!-- Claude-written synthesis essay. The build (cbo2020.py build-explorer) reads this file\n     verbatim into data.json's meta.discussion, and the page renders it at the bottom under a\n     \"Synthesis \u00b7 written by Claude\" label. Descriptive + lightly causal; synthesizes patterns\n     rather than walking series-by-series. Re-check the directional claims against the freshly\n     rendered gaps on each refresh (the broad story is robust; specific magnitudes can move). -->\n<p>Set CBO's January-2020 baseline beside what actually happened and the surprises sort into one clean pattern: the <em>real</em> economy turned out close to \u2014 even somewhat better than \u2014 what was expected, while the <em>nominal</em> economy is almost unrecognizable. On this evidence the pandemic delivered a lasting nominal shock far more than a lasting real one.</p>\n\n<p>Start with the real side. After the deepest and fastest recession in modern memory, real GDP did not merely claw back to its pre-COVID path but pushed above it, and the job market returned faster and tighter than almost anyone projected \u2014 unemployment round-tripped to roughly the low rate CBO had penciled in, rather than grinding back over years as it did after 2008. That is the dog that didn't bark: the permanent \"scarring\" of output and employment that the 2008\u20132015 experience taught us to fear simply does not show up in the aggregates. Shown only the real-GDP and unemployment lines, a 2020 forecaster would feel broadly vindicated \u2014 having lived through a wild detour to get there.</p>\n\n<p>Show that same forecaster the price level and the path of interest rates, and the world is unrecognizable. The single largest break with the forecast is prices: the 2021\u20132023 surge stepped the price level well above anything in the baseline and never reversed \u2014 disinflation brought down the <em>rate</em> of increase, not the <em>level</em> of prices. The bulk of the gap between forecast and actual <em>nominal</em> GDP is this price overshoot rather than extra real output. The second great miss is interest rates. CBO's baseline encoded the low-for-long regime everyone assumed in early 2020; instead the most aggressive tightening cycle in four decades pushed short rates and the ten-year yield far above the projected path. The zero-rate era that framed a decade of macro thinking ended abruptly.</p>\n\n<p>These are not independent surprises \u2014 they are two faces of one story. Enormous fiscal and monetary support met a supply-constrained reopening; demand snapped back hard (the strong real recovery and the tight labor market), that strength collided with disrupted supply (the inflation overshoot), and the overshoot forced the hiking cycle (the rates miss). The robust real economy and the nominal explosion are the same demand-driven event seen from different angles, not a run of unrelated luck.</p>\n\n<p>Beneath the aggregates the composition shifted too \u2014 the mix of consumption, investment, and trade did not settle back into its old grooves \u2014 but the headline reading is simple and worth holding onto: measured against the last forecast made before the world changed, we arrived at roughly the real economy that was expected, resting on a permanently higher price level and a permanently higher structure of interest rates.</p>\n"
  },
  "sections": [
   "Output",
@@ -94,121 +94,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 22680.69,
+     "actual": 22704.65,
      "forecast": 23084.53
     },
     {
      "date": "2021Q2",
-     "actual": 23425.91,
+     "actual": 23456.71,
      "forecast": 23306.56
     },
     {
      "date": "2021Q3",
-     "actual": 23982.38,
+     "actual": 23998.84,
      "forecast": 23525.4
     },
     {
      "date": "2021Q4",
-     "actual": 24813.6,
+     "actual": 24823.19,
      "forecast": 23751.21
     },
     {
      "date": "2022Q1",
-     "actual": 25250.35,
+     "actual": 25259.99,
      "forecast": 23973.32
     },
     {
      "date": "2022Q2",
-     "actual": 25861.29,
+     "actual": 25869.35,
      "forecast": 24198.88
     },
     {
      "date": "2022Q3",
-     "actual": 26336.3,
+     "actual": 26335.37,
      "forecast": 24423.4
     },
     {
      "date": "2022Q4",
-     "actual": 26770.51,
+     "actual": 26774.12,
      "forecast": 24646.63
     },
     {
      "date": "2023Q1",
-     "actual": 27216.44,
+     "actual": 27241.28,
      "forecast": 24870.99
     },
     {
      "date": "2023Q2",
-     "actual": 27530.06,
+     "actual": 27533.92,
      "forecast": 25097.88
     },
     {
      "date": "2023Q3",
-     "actual": 28074.85,
+     "actual": 28064.03,
      "forecast": 25326.98
     },
     {
      "date": "2023Q4",
-     "actual": 28424.72,
+     "actual": 28464.31,
      "forecast": 25558.79
     },
     {
      "date": "2024Q1",
-     "actual": 28708.16,
+     "actual": 28793.19,
      "forecast": 25790.2
     },
     {
      "date": "2024Q2",
-     "actual": 29147.04,
+     "actual": 29232.96,
      "forecast": 26022.32
     },
     {
      "date": "2024Q3",
-     "actual": 29511.66,
+     "actual": 29568.26,
      "forecast": 26255.84
     },
     {
      "date": "2024Q4",
-     "actual": 29825.18,
+     "actual": 29929.55,
      "forecast": 26489.97
     },
     {
      "date": "2025Q1",
-     "actual": 30042.11,
+     "actual": 30171.98,
      "forecast": 26723.9
     },
     {
      "date": "2025Q2",
-     "actual": 30485.73,
+     "actual": 30630.17,
      "forecast": 26961.27
     },
     {
      "date": "2025Q3",
-     "actual": 31098.03,
+     "actual": 31180.49,
      "forecast": 27194.54
     },
     {
      "date": "2025Q4",
-     "actual": 31422.53,
+     "actual": 31462.52,
      "forecast": 27438.17
     },
     {
      "date": "2026Q1",
-     "actual": 31865.72,
+     "actual": 31906.27,
      "forecast": 27686.94
     },
     {
      "date": "2026Q2",
-     "actual": 32475.21,
+     "actual": 32563.03,
      "forecast": 27934.65
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 32475.21,
+    "actual": 32563.03,
     "forecast": 27934.65,
-    "gap_value": 4540.56,
-    "gap_pct": 16.25,
+    "gap_value": 4628.38,
+    "gap_pct": 16.57,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -288,121 +288,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 21082.13,
+     "actual": 21106.62,
      "forecast": 21550.66
     },
     {
      "date": "2021Q2",
-     "actual": 21440.93,
+     "actual": 21474.08,
      "forecast": 21643.1
     },
     {
      "date": "2021Q3",
-     "actual": 21617.83,
+     "actual": 21641.67,
      "forecast": 21733.14
     },
     {
      "date": "2021Q4",
-     "actual": 21988.74,
+     "actual": 22001.64,
      "forecast": 21825.75
     },
     {
      "date": "2022Q1",
-     "actual": 21932.71,
+     "actual": 21945.68,
      "forecast": 21913.32
     },
     {
      "date": "2022Q2",
-     "actual": 21967.04,
+     "actual": 21976.29,
      "forecast": 22003.96
     },
     {
      "date": "2022Q3",
-     "actual": 22125.62,
+     "actual": 22124.38,
      "forecast": 22092.76
     },
     {
      "date": "2022Q4",
-     "actual": 22278.35,
+     "actual": 22272.55,
      "forecast": 22178.69
     },
     {
      "date": "2023Q1",
-     "actual": 22439.61,
+     "actual": 22456.94,
      "forecast": 22264.92
     },
     {
      "date": "2023Q2",
-     "actual": 22580.5,
+     "actual": 22577.56,
      "forecast": 22352.22
     },
     {
      "date": "2023Q3",
-     "actual": 22840.99,
+     "actual": 22828.8,
      "forecast": 22439.66
     },
     {
      "date": "2023Q4",
-     "actual": 23033.78,
+     "actual": 23033.25,
      "forecast": 22527.68
     },
     {
      "date": "2024Q1",
-     "actual": 23082.12,
+     "actual": 23115.97,
      "forecast": 22614.68
     },
     {
      "date": "2024Q2",
-     "actual": 23286.51,
+     "actual": 23320.07,
      "forecast": 22701.21
     },
     {
      "date": "2024Q3",
-     "actual": 23478.57,
+     "actual": 23501.76,
      "forecast": 22788.07
     },
     {
      "date": "2024Q4",
-     "actual": 23586.54,
+     "actual": 23641.76,
      "forecast": 22874.44
     },
     {
      "date": "2025Q1",
-     "actual": 23548.21,
+     "actual": 23650.21,
      "forecast": 22960.43
     },
     {
      "date": "2025Q2",
-     "actual": 23770.98,
+     "actual": 23884.56,
      "forecast": 23048.2
     },
     {
      "date": "2025Q3",
-     "actual": 24026.83,
+     "actual": 24112.97,
      "forecast": 23131.19
     },
     {
      "date": "2025Q4",
-     "actual": 24055.75,
+     "actual": 24125.48,
      "forecast": 23221.91
     },
     {
      "date": "2026Q1",
-     "actual": 24180.42,
+     "actual": 24274.38,
      "forecast": 23315.58
     },
     {
      "date": "2026Q2",
-     "actual": 24270.6,
+     "actual": 24408.01,
      "forecast": 23407.13
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 24270.6,
+    "actual": 24408.01,
     "forecast": 23407.13,
-    "gap_value": 863.47,
-    "gap_pct": 3.69,
+    "gap_value": 1000.88,
+    "gap_pct": 4.28,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -482,121 +482,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 106.567,
+     "actual": 106.508,
      "forecast": 106.753
     },
     {
      "date": "2021Q2",
-     "actual": 108.184,
+     "actual": 108.097,
      "forecast": 107.323
     },
     {
      "date": "2021Q3",
-     "actual": 109.655,
+     "actual": 109.57,
      "forecast": 107.885
     },
     {
      "date": "2021Q4",
-     "actual": 111.484,
+     "actual": 111.408,
      "forecast": 108.459
     },
     {
      "date": "2022Q1",
-     "actual": 113.582,
+     "actual": 113.491,
      "forecast": 109.034
     },
     {
      "date": "2022Q2",
-     "actual": 115.658,
+     "actual": 115.534,
      "forecast": 109.608
     },
     {
      "date": "2022Q3",
-     "actual": 116.986,
+     "actual": 116.96,
      "forecast": 110.178
     },
     {
      "date": "2022Q4",
-     "actual": 118.176,
+     "actual": 118.165,
      "forecast": 110.751
     },
     {
      "date": "2023Q1",
-     "actual": 119.308,
+     "actual": 119.256,
      "forecast": 111.317
     },
     {
      "date": "2023Q2",
-     "actual": 120.19,
+     "actual": 120.142,
      "forecast": 111.883
     },
     {
      "date": "2023Q3",
-     "actual": 120.999,
+     "actual": 120.973,
      "forecast": 112.451
     },
     {
      "date": "2023Q4",
-     "actual": 121.546,
+     "actual": 121.651,
      "forecast": 113.02
     },
     {
      "date": "2024Q1",
-     "actual": 122.622,
+     "actual": 122.637,
      "forecast": 113.588
     },
     {
      "date": "2024Q2",
-     "actual": 123.409,
+     "actual": 123.387,
      "forecast": 114.155
     },
     {
      "date": "2024Q3",
-     "actual": 123.93,
+     "actual": 123.913,
      "forecast": 114.722
     },
     {
      "date": "2024Q4",
-     "actual": 124.703,
+     "actual": 124.711,
      "forecast": 115.288
     },
     {
      "date": "2025Q1",
-     "actual": 125.76,
+     "actual": 125.687,
      "forecast": 115.85
     },
     {
      "date": "2025Q2",
-     "actual": 126.424,
+     "actual": 126.434,
      "forecast": 116.414
     },
     {
      "date": "2025Q3",
-     "actual": 127.293,
+     "actual": 127.245,
      "forecast": 116.979
     },
     {
      "date": "2025Q4",
-     "actual": 128.2,
+     "actual": 128.097,
      "forecast": 117.546
     },
     {
      "date": "2026Q1",
-     "actual": 129.655,
+     "actual": 129.414,
      "forecast": 118.116
     },
     {
      "date": "2026Q2",
-     "actual": 131.286,
+     "actual": 131.006,
      "forecast": 118.687
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 131.286,
+    "actual": 131.006,
     "forecast": 118.687,
-    "gap_value": 12.6,
-    "gap_pct": 10.62,
+    "gap_value": 12.32,
+    "gap_pct": 10.38,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -676,121 +676,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 106.572,
+     "actual": 106.489,
      "forecast": 106.998
     },
     {
      "date": "2021Q2",
-     "actual": 108.087,
+     "actual": 108.001,
      "forecast": 107.566
     },
     {
      "date": "2021Q3",
-     "actual": 109.369,
+     "actual": 109.286,
      "forecast": 108.125
     },
     {
      "date": "2021Q4",
-     "actual": 110.792,
+     "actual": 110.69,
      "forecast": 108.688
     },
     {
      "date": "2022Q1",
-     "actual": 112.453,
+     "actual": 112.33,
      "forecast": 109.246
     },
     {
      "date": "2022Q2",
-     "actual": 113.795,
+     "actual": 113.674,
      "forecast": 109.8
     },
     {
      "date": "2022Q3",
-     "actual": 115.231,
+     "actual": 115.211,
      "forecast": 110.352
     },
     {
      "date": "2022Q4",
-     "actual": 116.565,
+     "actual": 116.543,
      "forecast": 110.908
     },
     {
      "date": "2023Q1",
-     "actual": 117.916,
+     "actual": 117.845,
      "forecast": 111.46
     },
     {
      "date": "2023Q2",
-     "actual": 119.069,
+     "actual": 119.027,
      "forecast": 112.014
     },
     {
      "date": "2023Q3",
-     "actual": 119.768,
+     "actual": 119.743,
      "forecast": 112.57
     },
     {
      "date": "2023Q4",
-     "actual": 120.402,
+     "actual": 120.513,
      "forecast": 113.13
     },
     {
      "date": "2024Q1",
-     "actual": 121.588,
+     "actual": 121.596,
      "forecast": 113.689
     },
     {
      "date": "2024Q2",
-     "actual": 122.455,
+     "actual": 122.442,
      "forecast": 114.249
     },
     {
      "date": "2024Q3",
-     "actual": 123.168,
+     "actual": 123.156,
      "forecast": 114.808
     },
     {
      "date": "2024Q4",
-     "actual": 123.997,
+     "actual": 124.001,
      "forecast": 115.368
     },
     {
      "date": "2025Q1",
-     "actual": 125.0,
+     "actual": 124.918,
      "forecast": 115.928
     },
     {
      "date": "2025Q2",
-     "actual": 125.804,
+     "actual": 125.825,
      "forecast": 116.49
     },
     {
      "date": "2025Q3",
-     "actual": 126.699,
+     "actual": 126.65,
      "forecast": 117.053
     },
     {
      "date": "2025Q4",
-     "actual": 127.533,
+     "actual": 127.431,
      "forecast": 117.619
     },
     {
      "date": "2026Q1",
-     "actual": 128.92,
+     "actual": 128.667,
      "forecast": 118.186
     },
     {
      "date": "2026Q2",
-     "actual": 130.008,
+     "actual": 129.72,
      "forecast": 118.756
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 130.008,
+    "actual": 129.72,
     "forecast": 118.756,
-    "gap_value": 11.25,
-    "gap_pct": 9.47,
+    "gap_value": 10.96,
+    "gap_pct": 9.23,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -870,121 +870,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 107.583,
+     "actual": 107.571,
      "forecast": 107.117
     },
     {
      "date": "2021Q2",
-     "actual": 109.258,
+     "actual": 109.233,
      "forecast": 107.686
     },
     {
      "date": "2021Q3",
-     "actual": 110.938,
+     "actual": 110.892,
      "forecast": 108.246
     },
     {
      "date": "2021Q4",
-     "actual": 112.847,
+     "actual": 112.824,
      "forecast": 108.822
     },
     {
      "date": "2022Q1",
-     "actual": 115.126,
+     "actual": 115.102,
      "forecast": 109.4
     },
     {
      "date": "2022Q2",
-     "actual": 117.728,
+     "actual": 117.715,
      "forecast": 109.975
     },
     {
      "date": "2022Q3",
-     "actual": 119.031,
+     "actual": 119.033,
      "forecast": 110.549
     },
     {
      "date": "2022Q4",
-     "actual": 120.164,
+     "actual": 120.211,
      "forecast": 111.127
     },
     {
      "date": "2023Q1",
-     "actual": 121.288,
+     "actual": 121.305,
      "forecast": 111.705
     },
     {
      "date": "2023Q2",
-     "actual": 121.92,
+     "actual": 121.953,
      "forecast": 112.283
     },
     {
      "date": "2023Q3",
-     "actual": 122.914,
+     "actual": 122.933,
      "forecast": 112.867
     },
     {
      "date": "2023Q4",
-     "actual": 123.405,
+     "actual": 123.579,
      "forecast": 113.455
     },
     {
      "date": "2024Q1",
-     "actual": 124.374,
+     "actual": 124.56,
      "forecast": 114.042
     },
     {
      "date": "2024Q2",
-     "actual": 125.167,
+     "actual": 125.355,
      "forecast": 114.629
     },
     {
      "date": "2024Q3",
-     "actual": 125.696,
+     "actual": 125.813,
      "forecast": 115.217
     },
     {
      "date": "2024Q4",
-     "actual": 126.45,
+     "actual": 126.596,
      "forecast": 115.806
     },
     {
      "date": "2025Q1",
-     "actual": 127.577,
+     "actual": 127.576,
      "forecast": 116.391
     },
     {
      "date": "2025Q2",
-     "actual": 128.248,
+     "actual": 128.243,
      "forecast": 116.977
     },
     {
      "date": "2025Q3",
-     "actual": 129.43,
+     "actual": 129.31,
      "forecast": 117.566
     },
     {
      "date": "2025Q4",
-     "actual": 130.624,
+     "actual": 130.412,
      "forecast": 118.156
     },
     {
      "date": "2026Q1",
-     "actual": 131.783,
+     "actual": 131.44,
      "forecast": 118.748
     },
     {
      "date": "2026Q2",
-     "actual": 133.805,
+     "actual": 133.411,
      "forecast": 119.342
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 133.805,
+    "actual": 133.411,
     "forecast": 119.342,
-    "gap_value": 14.46,
-    "gap_pct": 12.12,
+    "gap_value": 14.07,
+    "gap_pct": 11.79,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -1554,14 +1554,213 @@
      "date": "2026Q1",
      "actual": 177.498,
      "forecast": 171.836
+    },
+    {
+     "date": "2026Q2",
+     "actual": 179.01,
+     "forecast": 173.168
     }
    ],
    "latest": {
-    "date": "2026Q1",
-    "actual": 177.498,
-    "forecast": 171.836,
-    "gap_value": 5.66,
-    "gap_pct": 3.3,
+    "date": "2026Q2",
+    "actual": 179.01,
+    "forecast": 173.168,
+    "gap_value": 5.84,
+    "gap_pct": 3.37,
+    "gap_ppt": null,
+    "direction": "above"
+   }
+  },
+  {
+   "id": "oil_rac",
+   "name": "Imported Crude Oil (Refiners' Acq. Cost)",
+   "short_name": "Oil \u2014 imported RAC",
+   "section": "Prices",
+   "units": "Dollars per barrel",
+   "unit_type": "level",
+   "comparison": "pct",
+   "rebased": true,
+   "frequency": "quarterly",
+   "decimals": 0,
+   "view_label": null,
+   "data": [
+    {
+     "date": "2018Q1",
+     "actual": 58.19,
+     "forecast": null
+    },
+    {
+     "date": "2018Q2",
+     "actual": 64.65,
+     "forecast": null
+    },
+    {
+     "date": "2018Q3",
+     "actual": 66.27,
+     "forecast": null
+    },
+    {
+     "date": "2018Q4",
+     "actual": 55.0,
+     "forecast": null
+    },
+    {
+     "date": "2019Q1",
+     "actual": 55.84,
+     "forecast": null
+    },
+    {
+     "date": "2019Q2",
+     "actual": 62.87,
+     "forecast": null
+    },
+    {
+     "date": "2019Q3",
+     "actual": 57.3,
+     "forecast": null
+    },
+    {
+     "date": "2019Q4",
+     "actual": 55.52,
+     "forecast": 55.52
+    },
+    {
+     "date": "2020Q1",
+     "actual": 43.25,
+     "forecast": 60.35
+    },
+    {
+     "date": "2020Q2",
+     "actual": 25.15,
+     "forecast": 59.15
+    },
+    {
+     "date": "2020Q3",
+     "actual": 39.93,
+     "forecast": 57.78
+    },
+    {
+     "date": "2020Q4",
+     "actual": 40.77,
+     "forecast": 56.71
+    },
+    {
+     "date": "2021Q1",
+     "actual": 55.05,
+     "forecast": 55.86
+    },
+    {
+     "date": "2021Q2",
+     "actual": 64.52,
+     "forecast": 55.21
+    },
+    {
+     "date": "2021Q3",
+     "actual": 68.3,
+     "forecast": 54.68
+    },
+    {
+     "date": "2021Q4",
+     "actual": 73.59,
+     "forecast": 54.28
+    },
+    {
+     "date": "2022Q1",
+     "actual": 89.68,
+     "forecast": 54.01
+    },
+    {
+     "date": "2022Q2",
+     "actual": 107.82,
+     "forecast": 53.85
+    },
+    {
+     "date": "2022Q3",
+     "actual": 91.73,
+     "forecast": 53.74
+    },
+    {
+     "date": "2022Q4",
+     "actual": 78.15,
+     "forecast": 53.69
+    },
+    {
+     "date": "2023Q1",
+     "actual": 69.51,
+     "forecast": 53.83
+    },
+    {
+     "date": "2023Q2",
+     "actual": 71.62,
+     "forecast": 54.03
+    },
+    {
+     "date": "2023Q3",
+     "actual": 81.02,
+     "forecast": 54.27
+    },
+    {
+     "date": "2023Q4",
+     "actual": 75.91,
+     "forecast": 54.57
+    },
+    {
+     "date": "2024Q1",
+     "actual": 72.69,
+     "forecast": 54.95
+    },
+    {
+     "date": "2024Q2",
+     "actual": 79.67,
+     "forecast": 55.37
+    },
+    {
+     "date": "2024Q3",
+     "actual": 74.65,
+     "forecast": 55.81
+    },
+    {
+     "date": "2024Q4",
+     "actual": 69.4,
+     "forecast": 56.28
+    },
+    {
+     "date": "2025Q1",
+     "actual": 70.42,
+     "forecast": 56.77
+    },
+    {
+     "date": "2025Q2",
+     "actual": 64.25,
+     "forecast": 57.28
+    },
+    {
+     "date": "2025Q3",
+     "actual": 66.21,
+     "forecast": 57.78
+    },
+    {
+     "date": "2025Q4",
+     "actual": 59.34,
+     "forecast": 58.3
+    },
+    {
+     "date": "2026Q1",
+     "actual": 68.43,
+     "forecast": 58.81
+    },
+    {
+     "date": "2026Q2",
+     "actual": 92.92,
+     "forecast": 59.33
+    }
+   ],
+   "latest": {
+    "date": "2026Q2",
+    "actual": 92.92,
+    "forecast": 59.33,
+    "gap_value": 33.59,
+    "gap_pct": 56.62,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -1748,14 +1947,19 @@
      "date": "2026Q2",
      "actual": 95.65,
      "forecast": 60.33
+    },
+    {
+     "date": "2026Q3",
+     "actual": 86.96,
+     "forecast": 60.85
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 95.65,
-    "forecast": 60.33,
-    "gap_value": 35.32,
-    "gap_pct": 58.54,
+    "date": "2026Q3",
+    "actual": 86.96,
+    "forecast": 60.85,
+    "gap_value": 26.11,
+    "gap_pct": 42.91,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -1969,184 +2173,384 @@
    "data": [
     {
      "date": "2018Q1",
-     "actual": 251.413,
+     "actual": 251.34,
      "forecast": null
     },
     {
      "date": "2018Q2",
-     "actual": 254.363,
+     "actual": 254.293,
      "forecast": null
     },
     {
      "date": "2018Q3",
-     "actual": 257.493,
+     "actual": 257.417,
      "forecast": null
     },
     {
      "date": "2018Q4",
-     "actual": 260.347,
+     "actual": 260.27,
      "forecast": null
     },
     {
      "date": "2019Q1",
-     "actual": 263.637,
+     "actual": 263.537,
      "forecast": null
     },
     {
      "date": "2019Q2",
-     "actual": 266.803,
+     "actual": 266.73,
      "forecast": null
     },
     {
      "date": "2019Q3",
-     "actual": 270.13,
+     "actual": 270.04,
      "forecast": null
     },
     {
      "date": "2019Q4",
-     "actual": 274.797,
-     "forecast": 274.797
+     "actual": 274.7,
+     "forecast": 274.7
     },
     {
      "date": "2020Q1",
-     "actual": 280.017,
-     "forecast": 276.805
+     "actual": 279.893,
+     "forecast": 276.708
     },
     {
      "date": "2020Q2",
-     "actual": 281.663,
-     "forecast": 278.597
+     "actual": 281.557,
+     "forecast": 278.499
     },
     {
      "date": "2020Q3",
-     "actual": 292.31,
-     "forecast": 280.465
+     "actual": 292.223,
+     "forecast": 280.366
     },
     {
      "date": "2020Q4",
-     "actual": 305.46,
-     "forecast": 282.388
+     "actual": 305.347,
+     "forecast": 282.289
     },
     {
      "date": "2021Q1",
-     "actual": 316.413,
-     "forecast": 284.436
+     "actual": 316.267,
+     "forecast": 284.336
     },
     {
      "date": "2021Q2",
-     "actual": 330.733,
-     "forecast": 286.487
+     "actual": 330.593,
+     "forecast": 286.387
     },
     {
      "date": "2021Q3",
-     "actual": 345.453,
-     "forecast": 288.538
+     "actual": 345.347,
+     "forecast": 288.437
     },
     {
      "date": "2021Q4",
-     "actual": 358.543,
-     "forecast": 290.623
+     "actual": 358.35,
+     "forecast": 290.521
     },
     {
      "date": "2022Q1",
-     "actual": 373.857,
-     "forecast": 292.8
+     "actual": 373.63,
+     "forecast": 292.697
     },
     {
      "date": "2022Q2",
-     "actual": 385.95,
-     "forecast": 294.95
+     "actual": 385.713,
+     "forecast": 294.846
     },
     {
      "date": "2022Q3",
-     "actual": 385.15,
-     "forecast": 297.112
+     "actual": 384.947,
+     "forecast": 297.007
     },
     {
      "date": "2022Q4",
-     "actual": 385.81,
-     "forecast": 299.27
+     "actual": 385.443,
+     "forecast": 299.164
     },
     {
      "date": "2023Q1",
-     "actual": 389.28,
-     "forecast": 301.906
+     "actual": 388.933,
+     "forecast": 301.8
     },
     {
      "date": "2023Q2",
-     "actual": 396.597,
-     "forecast": 304.523
+     "actual": 396.307,
+     "forecast": 304.416
     },
     {
      "date": "2023Q3",
-     "actual": 405.067,
-     "forecast": 307.139
+     "actual": 404.8,
+     "forecast": 307.031
     },
     {
      "date": "2023Q4",
-     "actual": 410.117,
-     "forecast": 309.722
+     "actual": 409.587,
+     "forecast": 309.613
     },
     {
      "date": "2024Q1",
-     "actual": 414.92,
-     "forecast": 312.606
+     "actual": 414.343,
+     "forecast": 312.497
     },
     {
      "date": "2024Q2",
-     "actual": 419.613,
-     "forecast": 315.464
+     "actual": 419.127,
+     "forecast": 315.353
     },
     {
      "date": "2024Q3",
-     "actual": 423.583,
-     "forecast": 318.296
+     "actual": 423.177,
+     "forecast": 318.184
     },
     {
      "date": "2024Q4",
-     "actual": 429.483,
-     "forecast": 321.107
+     "actual": 428.827,
+     "forecast": 320.995
     },
     {
      "date": "2025Q1",
-     "actual": 433.247,
-     "forecast": 323.908
+     "actual": 432.547,
+     "forecast": 323.794
     },
     {
      "date": "2025Q2",
-     "actual": 432.597,
-     "forecast": 326.714
+     "actual": 432.053,
+     "forecast": 326.599
     },
     {
      "date": "2025Q3",
-     "actual": 433.763,
-     "forecast": 329.541
+     "actual": 433.423,
+     "forecast": 329.425
     },
     {
      "date": "2025Q4",
-     "actual": 438.507,
-     "forecast": 332.397
+     "actual": 437.83,
+     "forecast": 332.28
     },
     {
      "date": "2026Q1",
-     "actual": 441.44,
-     "forecast": 335.289
+     "actual": 441.007,
+     "forecast": 335.171
     },
     {
      "date": "2026Q2",
-     "actual": 441.86,
-     "forecast": 338.212
+     "actual": 441.84,
+     "forecast": 338.093
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 441.86,
-    "forecast": 338.212,
-    "gap_value": 103.65,
-    "gap_pct": 30.65,
+    "actual": 441.84,
+    "forecast": 338.093,
+    "gap_value": 103.75,
+    "gap_pct": 30.69,
     "gap_ppt": null,
     "direction": "above"
    }
+  },
+  {
+   "id": "exchange_rate",
+   "name": "Nominal Exchange Rate (Export-Weighted)",
+   "short_name": "Exchange rate",
+   "section": "Prices",
+   "units": "Index (nominal, broad dollar)",
+   "unit_type": "index",
+   "comparison": "pct",
+   "rebased": true,
+   "frequency": "quarterly",
+   "decimals": 1,
+   "view_label": null,
+   "data": [
+    {
+     "date": "2018Q1",
+     "actual": 107.996,
+     "forecast": null
+    },
+    {
+     "date": "2018Q2",
+     "actual": 110.618,
+     "forecast": null
+    },
+    {
+     "date": "2018Q3",
+     "actual": 113.649,
+     "forecast": null
+    },
+    {
+     "date": "2018Q4",
+     "actual": 115.7,
+     "forecast": null
+    },
+    {
+     "date": "2019Q1",
+     "actual": 114.555,
+     "forecast": null
+    },
+    {
+     "date": "2019Q2",
+     "actual": 115.429,
+     "forecast": null
+    },
+    {
+     "date": "2019Q3",
+     "actual": 116.475,
+     "forecast": null
+    },
+    {
+     "date": "2019Q4",
+     "actual": 116.414,
+     "forecast": 116.414
+    },
+    {
+     "date": "2020Q1",
+     "actual": 117.756,
+     "forecast": 116.353
+    },
+    {
+     "date": "2020Q2",
+     "actual": 121.834,
+     "forecast": 116.352
+    },
+    {
+     "date": "2020Q3",
+     "actual": 117.347,
+     "forecast": 116.39
+    },
+    {
+     "date": "2020Q4",
+     "actual": 113.917,
+     "forecast": 116.407
+    },
+    {
+     "date": "2021Q1",
+     "actual": 112.364,
+     "forecast": 116.3
+    },
+    {
+     "date": "2021Q2",
+     "actual": 111.826,
+     "forecast": 116.188
+    },
+    {
+     "date": "2021Q3",
+     "actual": 113.305,
+     "forecast": 116.08
+    },
+    {
+     "date": "2021Q4",
+     "actual": 114.967,
+     "forecast": 115.879
+    },
+    {
+     "date": "2022Q1",
+     "actual": 115.49,
+     "forecast": 115.677
+    },
+    {
+     "date": "2022Q2",
+     "actual": 118.964,
+     "forecast": 115.474
+    },
+    {
+     "date": "2022Q3",
+     "actual": 123.528,
+     "forecast": 115.271
+    },
+    {
+     "date": "2022Q4",
+     "actual": 124.813,
+     "forecast": 115.026
+    },
+    {
+     "date": "2023Q1",
+     "actual": 120.31,
+     "forecast": 114.78
+    },
+    {
+     "date": "2023Q2",
+     "actual": 119.397,
+     "forecast": 114.534
+    },
+    {
+     "date": "2023Q3",
+     "actual": 119.851,
+     "forecast": 114.287
+    },
+    {
+     "date": "2023Q4",
+     "actual": 121.55,
+     "forecast": 114.041
+    },
+    {
+     "date": "2024Q1",
+     "actual": 120.644,
+     "forecast": 113.832
+    },
+    {
+     "date": "2024Q2",
+     "actual": 122.516,
+     "forecast": 113.631
+    },
+    {
+     "date": "2024Q3",
+     "actual": 122.65,
+     "forecast": 113.438
+    },
+    {
+     "date": "2024Q4",
+     "actual": 125.776,
+     "forecast": 113.253
+    },
+    {
+     "date": "2025Q1",
+     "actual": 127.645,
+     "forecast": 113.075
+    },
+    {
+     "date": "2025Q2",
+     "actual": 122.415,
+     "forecast": 112.896
+    },
+    {
+     "date": "2025Q3",
+     "actual": 120.237,
+     "forecast": 112.716
+    },
+    {
+     "date": "2025Q4",
+     "actual": 120.749,
+     "forecast": 112.533
+    },
+    {
+     "date": "2026Q1",
+     "actual": 119.066,
+     "forecast": 112.35
+    },
+    {
+     "date": "2026Q2",
+     "actual": 119.304,
+     "forecast": 112.165
+    },
+    {
+     "date": "2026Q3",
+     "actual": 119.571,
+     "forecast": 111.979
+    }
+   ],
+   "latest": {
+    "date": "2026Q3",
+    "actual": 119.571,
+    "forecast": 111.979,
+    "gap_value": 7.59,
+    "gap_pct": 6.78,
+    "gap_ppt": null,
+    "direction": "above"
+   },
+   "note": "Actual = Fed nominal broad dollar index, a proxy for CBO's export-weighted measure (0.4% shape match to CBO's 2012-19 history); rebased to 2019Q4, so the different base years don't matter."
   },
   {
    "id": "unemployment",
@@ -2731,6 +3135,201 @@
    }
   },
   {
+   "id": "epop",
+   "name": "Employment-Population Ratio",
+   "short_name": "EPOP",
+   "section": "Labor",
+   "units": "Percent",
+   "unit_type": "rate",
+   "comparison": "ppt",
+   "rebased": false,
+   "frequency": "quarterly",
+   "decimals": 1,
+   "view_label": null,
+   "data": [
+    {
+     "date": "2018Q1",
+     "actual": 60.3,
+     "forecast": null
+    },
+    {
+     "date": "2018Q2",
+     "actual": 60.467,
+     "forecast": null
+    },
+    {
+     "date": "2018Q3",
+     "actual": 60.433,
+     "forecast": null
+    },
+    {
+     "date": "2018Q4",
+     "actual": 60.567,
+     "forecast": null
+    },
+    {
+     "date": "2019Q1",
+     "actual": 60.633,
+     "forecast": null
+    },
+    {
+     "date": "2019Q2",
+     "actual": 60.6,
+     "forecast": null
+    },
+    {
+     "date": "2019Q3",
+     "actual": 60.867,
+     "forecast": null
+    },
+    {
+     "date": "2019Q4",
+     "actual": 61.033,
+     "forecast": 60.993
+    },
+    {
+     "date": "2020Q1",
+     "actual": 60.667,
+     "forecast": 60.964
+    },
+    {
+     "date": "2020Q2",
+     "actual": 52.867,
+     "forecast": 60.946
+    },
+    {
+     "date": "2020Q3",
+     "actual": 56.1,
+     "forecast": 60.908
+    },
+    {
+     "date": "2020Q4",
+     "actual": 57.433,
+     "forecast": 60.876
+    },
+    {
+     "date": "2021Q1",
+     "actual": 57.567,
+     "forecast": 60.819
+    },
+    {
+     "date": "2021Q2",
+     "actual": 57.967,
+     "forecast": 60.746
+    },
+    {
+     "date": "2021Q3",
+     "actual": 58.6,
+     "forecast": 60.65
+    },
+    {
+     "date": "2021Q4",
+     "actual": 59.267,
+     "forecast": 60.55
+    },
+    {
+     "date": "2022Q1",
+     "actual": 59.9,
+     "forecast": 60.441
+    },
+    {
+     "date": "2022Q2",
+     "actual": 59.967,
+     "forecast": 60.326
+    },
+    {
+     "date": "2022Q3",
+     "actual": 60.067,
+     "forecast": 60.212
+    },
+    {
+     "date": "2022Q4",
+     "actual": 60.0,
+     "forecast": 60.096
+    },
+    {
+     "date": "2023Q1",
+     "actual": 60.3,
+     "forecast": 59.977
+    },
+    {
+     "date": "2023Q2",
+     "actual": 60.333,
+     "forecast": 59.86
+    },
+    {
+     "date": "2023Q3",
+     "actual": 60.4,
+     "forecast": 59.746
+    },
+    {
+     "date": "2023Q4",
+     "actual": 60.233,
+     "forecast": 59.634
+    },
+    {
+     "date": "2024Q1",
+     "actual": 60.233,
+     "forecast": 59.522
+    },
+    {
+     "date": "2024Q2",
+     "actual": 60.1,
+     "forecast": 59.41
+    },
+    {
+     "date": "2024Q3",
+     "actual": 60.033,
+     "forecast": 59.299
+    },
+    {
+     "date": "2024Q4",
+     "actual": 59.9,
+     "forecast": 59.191
+    },
+    {
+     "date": "2025Q1",
+     "actual": 59.967,
+     "forecast": 59.084
+    },
+    {
+     "date": "2025Q2",
+     "actual": 59.8,
+     "forecast": 58.981
+    },
+    {
+     "date": "2025Q3",
+     "actual": 59.633,
+     "forecast": 58.88
+    },
+    {
+     "date": "2025Q4",
+     "actual": 59.65,
+     "forecast": 58.782
+    },
+    {
+     "date": "2026Q1",
+     "actual": 59.3,
+     "forecast": 58.699
+    },
+    {
+     "date": "2026Q2",
+     "actual": 59.1,
+     "forecast": 58.623
+    }
+   ],
+   "latest": {
+    "date": "2026Q2",
+    "actual": 59.1,
+    "forecast": 58.623,
+    "gap_value": 0.48,
+    "gap_pct": null,
+    "gap_ppt": 0.48,
+    "direction": "above"
+   },
+   "note": "CBO did not publish EPOP; the CBO line is its civilian employment \u00f7 its civilian noninstitutional population (16+), which reproduces the actual ratio over CBO's own history."
+  },
+  {
    "id": "employment_hh",
    "name": "Civilian Employment (Household Survey)",
    "short_name": "Employment (HH)",
@@ -3104,16 +3703,16 @@
     },
     {
      "date": "2026Q2",
-     "actual": 158.903,
+     "actual": 158.85,
      "forecast": 154.959
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 158.903,
+    "actual": 158.85,
     "forecast": 154.959,
-    "gap_value": 3.94,
-    "gap_pct": 2.55,
+    "gap_value": 3.89,
+    "gap_pct": 2.51,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -3293,16 +3892,21 @@
     },
     {
      "date": "2026Q1",
-     "actual": 119.437,
+     "actual": 119.594,
      "forecast": 117.646
+    },
+    {
+     "date": "2026Q2",
+     "actual": 120.017,
+     "forecast": 118.181
     }
    ],
    "latest": {
-    "date": "2026Q1",
-    "actual": 119.437,
-    "forecast": 117.646,
-    "gap_value": 1.79,
-    "gap_pct": 1.52,
+    "date": "2026Q2",
+    "actual": 120.017,
+    "forecast": 118.181,
+    "gap_value": 1.84,
+    "gap_pct": 1.55,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -3482,16 +4086,21 @@
     },
     {
      "date": "2026Q1",
-     "actual": 105.793,
+     "actual": 105.802,
+     "forecast": 103.672
+    },
+    {
+     "date": "2026Q2",
+     "actual": 105.875,
      "forecast": 103.672
     }
    ],
    "latest": {
-    "date": "2026Q1",
-    "actual": 105.793,
+    "date": "2026Q2",
+    "actual": 105.875,
     "forecast": 103.672,
-    "gap_value": 2.12,
-    "gap_pct": 2.05,
+    "gap_value": 2.2,
+    "gap_pct": 2.12,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -3689,6 +4298,201 @@
     "gap_ppt": null,
     "direction": "above"
    }
+  },
+  {
+   "id": "households",
+   "name": "Households",
+   "short_name": "Households",
+   "section": "Population",
+   "units": "Millions",
+   "unit_type": "level",
+   "comparison": "pct",
+   "rebased": true,
+   "frequency": "quarterly",
+   "decimals": 1,
+   "view_label": null,
+   "data": [
+    {
+     "date": "2018Q1",
+     "actual": 120.662,
+     "forecast": null
+    },
+    {
+     "date": "2018Q2",
+     "actual": 121.143,
+     "forecast": null
+    },
+    {
+     "date": "2018Q3",
+     "actual": 121.267,
+     "forecast": null
+    },
+    {
+     "date": "2018Q4",
+     "actual": 122.396,
+     "forecast": null
+    },
+    {
+     "date": "2019Q1",
+     "actual": 122.255,
+     "forecast": null
+    },
+    {
+     "date": "2019Q2",
+     "actual": 122.329,
+     "forecast": null
+    },
+    {
+     "date": "2019Q3",
+     "actual": 122.617,
+     "forecast": null
+    },
+    {
+     "date": "2019Q4",
+     "actual": 123.848,
+     "forecast": 123.848
+    },
+    {
+     "date": "2020Q1",
+     "actual": 124.299,
+     "forecast": 124.151
+    },
+    {
+     "date": "2020Q2",
+     "actual": 126.727,
+     "forecast": 124.453
+    },
+    {
+     "date": "2020Q3",
+     "actual": 126.675,
+     "forecast": 124.743
+    },
+    {
+     "date": "2020Q4",
+     "actual": 125.818,
+     "forecast": 125.03
+    },
+    {
+     "date": "2021Q1",
+     "actual": 126.002,
+     "forecast": 125.309
+    },
+    {
+     "date": "2021Q2",
+     "actual": 126.286,
+     "forecast": 125.587
+    },
+    {
+     "date": "2021Q3",
+     "actual": 127.098,
+     "forecast": 125.868
+    },
+    {
+     "date": "2021Q4",
+     "actual": 127.704,
+     "forecast": 126.146
+    },
+    {
+     "date": "2022Q1",
+     "actual": 127.937,
+     "forecast": 126.423
+    },
+    {
+     "date": "2022Q2",
+     "actual": 128.215,
+     "forecast": 126.699
+    },
+    {
+     "date": "2022Q3",
+     "actual": 128.589,
+     "forecast": 126.975
+    },
+    {
+     "date": "2022Q4",
+     "actual": 129.728,
+     "forecast": 127.248
+    },
+    {
+     "date": "2023Q1",
+     "actual": 129.611,
+     "forecast": 127.52
+    },
+    {
+     "date": "2023Q2",
+     "actual": 130.057,
+     "forecast": 127.793
+    },
+    {
+     "date": "2023Q3",
+     "actual": 130.314,
+     "forecast": 128.065
+    },
+    {
+     "date": "2023Q4",
+     "actual": 131.084,
+     "forecast": 128.337
+    },
+    {
+     "date": "2024Q1",
+     "actual": 130.92,
+     "forecast": 128.606
+    },
+    {
+     "date": "2024Q2",
+     "actual": 131.32,
+     "forecast": 128.875
+    },
+    {
+     "date": "2024Q3",
+     "actual": 131.988,
+     "forecast": 129.142
+    },
+    {
+     "date": "2024Q4",
+     "actual": 132.247,
+     "forecast": 129.408
+    },
+    {
+     "date": "2025Q1",
+     "actual": 132.046,
+     "forecast": 129.672
+    },
+    {
+     "date": "2025Q2",
+     "actual": 132.514,
+     "forecast": 129.934
+    },
+    {
+     "date": "2025Q3",
+     "actual": 133.079,
+     "forecast": 130.195
+    },
+    {
+     "date": "2025Q4",
+     "actual": 133.673,
+     "forecast": 130.456
+    },
+    {
+     "date": "2026Q1",
+     "actual": 133.701,
+     "forecast": 130.73
+    },
+    {
+     "date": "2026Q2",
+     "actual": 133.811,
+     "forecast": 131.007
+    }
+   ],
+   "latest": {
+    "date": "2026Q2",
+    "actual": 133.811,
+    "forecast": 131.007,
+    "gap_value": 2.8,
+    "gap_pct": 2.14,
+    "gap_ppt": null,
+    "direction": "above"
+   },
+   "note": "Census Housing Vacancy Survey occupied housing units (= households), quarterly; matches CBO's households history to ~0.2% (2012-19)."
   },
   {
    "id": "ten_year",
@@ -4347,121 +5151,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 22224.77,
+     "actual": 22217.57,
      "forecast": 19584.58
     },
     {
      "date": "2021Q2",
-     "actual": 21117.07,
+     "actual": 21099.57,
      "forecast": 19773.81
     },
     {
      "date": "2021Q3",
-     "actual": 21227.93,
+     "actual": 21254.0,
      "forecast": 19959.14
     },
     {
      "date": "2021Q4",
-     "actual": 21425.87,
+     "actual": 21458.3,
      "forecast": 20150.29
     },
     {
      "date": "2022Q1",
-     "actual": 21633.5,
+     "actual": 21644.47,
      "forecast": 20402.18
     },
     {
      "date": "2022Q2",
-     "actual": 21913.33,
+     "actual": 21914.1,
      "forecast": 20589.76
     },
     {
      "date": "2022Q3",
-     "actual": 22354.17,
+     "actual": 22349.43,
      "forecast": 20778.28
     },
     {
      "date": "2022Q4",
-     "actual": 22714.2,
+     "actual": 22720.97,
      "forecast": 20970.16
     },
     {
      "date": "2023Q1",
-     "actual": 23108.67,
+     "actual": 23100.57,
      "forecast": 21238.69
     },
     {
      "date": "2023Q2",
-     "actual": 23461.53,
+     "actual": 23482.03,
      "forecast": 21438.85
     },
     {
      "date": "2023Q3",
-     "actual": 23735.33,
+     "actual": 23816.17,
      "forecast": 21642.21
     },
     {
      "date": "2023Q4",
-     "actual": 24034.6,
+     "actual": 24170.57,
      "forecast": 21832.1
     },
     {
      "date": "2024Q1",
-     "actual": 24478.73,
+     "actual": 24584.63,
      "forecast": 22107.46
     },
     {
      "date": "2024Q2",
-     "actual": 24800.77,
+     "actual": 24929.23,
      "forecast": 22314.87
     },
     {
      "date": "2024Q3",
-     "actual": 25021.7,
+     "actual": 25170.93,
      "forecast": 22524.69
     },
     {
      "date": "2024Q4",
-     "actual": 25322.43,
+     "actual": 25488.83,
      "forecast": 22730.62
     },
     {
      "date": "2025Q1",
-     "actual": 25717.73,
+     "actual": 25868.57,
      "forecast": 23019.84
     },
     {
      "date": "2025Q2",
-     "actual": 25987.53,
+     "actual": 26223.2,
      "forecast": 23235.61
     },
     {
      "date": "2025Q3",
-     "actual": 26269.57,
+     "actual": 26494.37,
      "forecast": 23452.86
     },
     {
      "date": "2025Q4",
-     "actual": 26424.87,
+     "actual": 26724.23,
      "forecast": 23672.61
     },
     {
      "date": "2026Q1",
-     "actual": 26649.4,
+     "actual": 27057.17,
      "forecast": 23970.62
     },
     {
      "date": "2026Q2",
-     "actual": 26896.57,
+     "actual": 27371.9,
      "forecast": 24197.74
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 26896.57,
+    "actual": 27371.9,
     "forecast": 24197.74,
-    "gap_value": 2698.83,
-    "gap_pct": 11.15,
+    "gap_value": 3174.16,
+    "gap_pct": 13.12,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -4541,122 +5345,122 @@
     },
     {
      "date": "2021Q1",
-     "actual": 97.99,
+     "actual": 97.855,
      "forecast": 86.742
     },
     {
      "date": "2021Q2",
-     "actual": 90.144,
+     "actual": 89.951,
      "forecast": 86.746
     },
     {
      "date": "2021Q3",
-     "actual": 88.515,
+     "actual": 88.563,
      "forecast": 86.744
     },
     {
      "date": "2021Q4",
-     "actual": 86.347,
+     "actual": 86.445,
      "forecast": 86.742
     },
     {
      "date": "2022Q1",
-     "actual": 85.676,
+     "actual": 85.687,
      "forecast": 87.013
     },
     {
      "date": "2022Q2",
-     "actual": 84.734,
+     "actual": 84.711,
      "forecast": 86.995
     },
     {
      "date": "2022Q3",
-     "actual": 84.88,
+     "actual": 84.865,
      "forecast": 86.984
     },
     {
      "date": "2022Q4",
-     "actual": 84.848,
+     "actual": 84.862,
      "forecast": 86.992
     },
     {
      "date": "2023Q1",
-     "actual": 84.907,
+     "actual": 84.8,
      "forecast": 87.311
     },
     {
      "date": "2023Q2",
-     "actual": 85.222,
+     "actual": 85.284,
      "forecast": 87.337
     },
     {
      "date": "2023Q3",
-     "actual": 84.543,
+     "actual": 84.864,
      "forecast": 87.368
     },
     {
      "date": "2023Q4",
-     "actual": 84.555,
+     "actual": 84.915,
      "forecast": 87.336
     },
     {
      "date": "2024Q1",
-     "actual": 85.268,
+     "actual": 85.383,
      "forecast": 87.644
     },
     {
      "date": "2024Q2",
-     "actual": 85.088,
+     "actual": 85.278,
      "forecast": 87.677
     },
     {
      "date": "2024Q3",
-     "actual": 84.786,
+     "actual": 85.128,
      "forecast": 87.714
     },
     {
      "date": "2024Q4",
-     "actual": 84.903,
+     "actual": 85.163,
      "forecast": 87.734
     },
     {
      "date": "2025Q1",
-     "actual": 85.606,
+     "actual": 85.737,
      "forecast": 88.072
     },
     {
      "date": "2025Q2",
-     "actual": 85.245,
+     "actual": 85.612,
      "forecast": 88.115
     },
     {
      "date": "2025Q3",
-     "actual": 84.473,
+     "actual": 84.971,
      "forecast": 88.176
     },
     {
      "date": "2025Q4",
-     "actual": 84.095,
+     "actual": 84.94,
      "forecast": 88.212
     },
     {
      "date": "2026Q1",
-     "actual": 83.63,
+     "actual": 84.802,
      "forecast": 88.52
     },
     {
      "date": "2026Q2",
-     "actual": 82.822,
+     "actual": 84.058,
      "forecast": 88.566
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 82.822,
+    "actual": 84.058,
     "forecast": 88.566,
-    "gap_value": -5.74,
+    "gap_value": -4.51,
     "gap_pct": null,
-    "gap_ppt": -5.74,
+    "gap_ppt": -4.51,
     "direction": "below"
    }
   },
@@ -4735,122 +5539,122 @@
     },
     {
      "date": "2021Q1",
-     "actual": 53.303,
+     "actual": 53.261,
      "forecast": 53.786
     },
     {
      "date": "2021Q2",
-     "actual": 52.949,
+     "actual": 52.904,
      "forecast": 53.845
     },
     {
      "date": "2021Q3",
-     "actual": 52.971,
+     "actual": 52.974,
      "forecast": 53.892
     },
     {
      "date": "2021Q4",
-     "actual": 52.537,
+     "actual": 52.494,
      "forecast": 53.918
     },
     {
      "date": "2022Q1",
-     "actual": 52.193,
+     "actual": 52.211,
      "forecast": 53.941
     },
     {
      "date": "2022Q2",
-     "actual": 51.404,
+     "actual": 51.397,
      "forecast": 53.949
     },
     {
      "date": "2022Q3",
-     "actual": 51.684,
+     "actual": 51.68,
      "forecast": 53.956
     },
     {
      "date": "2022Q4",
-     "actual": 51.135,
+     "actual": 51.157,
      "forecast": 53.981
     },
     {
      "date": "2023Q1",
-     "actual": 51.029,
+     "actual": 51.054,
      "forecast": 53.99
     },
     {
      "date": "2023Q2",
-     "actual": 51.19,
+     "actual": 51.282,
      "forecast": 53.994
     },
     {
      "date": "2023Q3",
-     "actual": 51.058,
+     "actual": 51.188,
      "forecast": 53.997
     },
     {
      "date": "2023Q4",
-     "actual": 51.062,
+     "actual": 51.098,
      "forecast": 54.019
     },
     {
      "date": "2024Q1",
-     "actual": 51.343,
+     "actual": 51.292,
      "forecast": 54.022
     },
     {
      "date": "2024Q2",
-     "actual": 51.27,
+     "actual": 51.197,
      "forecast": 54.025
     },
     {
      "date": "2024Q3",
-     "actual": 51.22,
+     "actual": 51.16,
      "forecast": 54.026
     },
     {
      "date": "2024Q4",
-     "actual": 51.33,
+     "actual": 51.135,
      "forecast": 54.052
     },
     {
      "date": "2025Q1",
-     "actual": 51.631,
+     "actual": 51.245,
      "forecast": 54.052
     },
     {
      "date": "2025Q2",
-     "actual": 51.205,
+     "actual": 50.946,
      "forecast": 54.047
     },
     {
      "date": "2025Q3",
-     "actual": 50.926,
+     "actual": 50.595,
      "forecast": 54.053
     },
     {
      "date": "2025Q4",
-     "actual": 50.758,
+     "actual": 50.672,
      "forecast": 54.051
     },
     {
      "date": "2026Q1",
-     "actual": 50.47,
+     "actual": 50.659,
      "forecast": 54.041
     },
     {
      "date": "2026Q2",
-     "actual": 49.978,
+     "actual": 50.209,
      "forecast": 54.042
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 49.978,
+    "actual": 50.209,
     "forecast": 54.042,
-    "gap_value": -4.06,
+    "gap_value": -3.83,
     "gap_pct": null,
-    "gap_ppt": -4.06,
+    "gap_ppt": -3.83,
     "direction": "below"
    }
   },
@@ -4929,122 +5733,122 @@
     },
     {
      "date": "2021Q1",
-     "actual": 43.555,
+     "actual": 43.514,
      "forecast": 43.78
     },
     {
      "date": "2021Q2",
-     "actual": 43.416,
+     "actual": 43.366,
      "forecast": 43.825
     },
     {
      "date": "2021Q3",
-     "actual": 43.576,
+     "actual": 43.566,
      "forecast": 43.859
     },
     {
      "date": "2021Q4",
-     "actual": 43.364,
+     "actual": 43.316,
      "forecast": 43.874
     },
     {
      "date": "2022Q1",
-     "actual": 43.136,
+     "actual": 43.155,
      "forecast": 43.89
     },
     {
      "date": "2022Q2",
-     "actual": 42.515,
+     "actual": 42.51,
      "forecast": 43.892
     },
     {
      "date": "2022Q3",
-     "actual": 42.823,
+     "actual": 42.808,
      "forecast": 43.893
     },
     {
      "date": "2022Q4",
-     "actual": 42.308,
+     "actual": 42.293,
      "forecast": 43.897
     },
     {
      "date": "2023Q1",
-     "actual": 42.178,
+     "actual": 42.134,
      "forecast": 43.898
     },
     {
      "date": "2023Q2",
-     "actual": 42.287,
+     "actual": 42.282,
      "forecast": 43.895
     },
     {
      "date": "2023Q3",
-     "actual": 42.159,
+     "actual": 42.187,
      "forecast": 43.892
     },
     {
      "date": "2023Q4",
-     "actual": 42.121,
+     "actual": 42.091,
      "forecast": 43.887
     },
     {
      "date": "2024Q1",
-     "actual": 42.321,
+     "actual": 42.258,
      "forecast": 43.883
     },
     {
      "date": "2024Q2",
-     "actual": 42.259,
+     "actual": 42.218,
      "forecast": 43.879
     },
     {
      "date": "2024Q3",
-     "actual": 42.215,
+     "actual": 42.222,
      "forecast": 43.874
     },
     {
      "date": "2024Q4",
-     "actual": 42.336,
+     "actual": 42.262,
      "forecast": 43.867
     },
     {
      "date": "2025Q1",
-     "actual": 42.569,
+     "actual": 42.39,
      "forecast": 43.86
     },
     {
      "date": "2025Q2",
-     "actual": 42.184,
+     "actual": 42.139,
      "forecast": 43.848
     },
     {
      "date": "2025Q3",
-     "actual": 41.962,
+     "actual": 41.825,
      "forecast": 43.846
     },
     {
      "date": "2025Q4",
-     "actual": 41.806,
+     "actual": 41.849,
      "forecast": 43.833
     },
     {
      "date": "2026Q1",
-     "actual": 41.569,
+     "actual": 41.795,
      "forecast": 43.818
     },
     {
      "date": "2026Q2",
-     "actual": 41.172,
+     "actual": 41.403,
      "forecast": 43.813
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 41.172,
+    "actual": 41.403,
     "forecast": 43.813,
-    "gap_value": -2.64,
+    "gap_value": -2.41,
     "gap_pct": null,
-    "gap_ppt": -2.64,
+    "gap_ppt": -2.41,
     "direction": "below"
    }
   },
@@ -5123,122 +5927,122 @@
     },
     {
      "date": "2021Q1",
-     "actual": 7.494,
+     "actual": 7.475,
      "forecast": 7.693
     },
     {
      "date": "2021Q2",
-     "actual": 7.893,
+     "actual": 7.867,
      "forecast": 7.691
     },
     {
      "date": "2021Q3",
-     "actual": 7.799,
+     "actual": 7.8,
      "forecast": 7.689
     },
     {
      "date": "2021Q4",
-     "actual": 7.478,
+     "actual": 7.517,
      "forecast": 7.701
     },
     {
      "date": "2022Q1",
-     "actual": 7.271,
+     "actual": 7.349,
      "forecast": 7.699
     },
     {
      "date": "2022Q2",
-     "actual": 7.152,
+     "actual": 7.206,
      "forecast": 7.696
     },
     {
      "date": "2022Q3",
-     "actual": 7.173,
+     "actual": 7.165,
      "forecast": 7.688
     },
     {
      "date": "2022Q4",
-     "actual": 7.102,
+     "actual": 6.974,
      "forecast": 7.694
     },
     {
      "date": "2023Q1",
-     "actual": 7.105,
+     "actual": 6.846,
      "forecast": 7.693
     },
     {
      "date": "2023Q2",
-     "actual": 7.017,
+     "actual": 6.658,
      "forecast": 7.693
     },
     {
      "date": "2023Q3",
-     "actual": 6.921,
+     "actual": 6.521,
      "forecast": 7.698
     },
     {
      "date": "2023Q4",
-     "actual": 6.893,
+     "actual": 6.472,
      "forecast": 7.666
     },
     {
      "date": "2024Q1",
-     "actual": 6.907,
+     "actual": 6.507,
      "forecast": 7.668
     },
     {
      "date": "2024Q2",
-     "actual": 6.907,
+     "actual": 6.527,
      "forecast": 7.668
     },
     {
      "date": "2024Q3",
-     "actual": 6.885,
+     "actual": 6.521,
      "forecast": 7.667
     },
     {
      "date": "2024Q4",
-     "actual": 6.922,
+     "actual": 6.529,
      "forecast": 7.666
     },
     {
      "date": "2025Q1",
-     "actual": 7.001,
+     "actual": 6.628,
      "forecast": 7.664
     },
     {
      "date": "2025Q2",
-     "actual": 6.905,
+     "actual": 6.559,
      "forecast": 7.664
     },
     {
      "date": "2025Q3",
-     "actual": 6.81,
+     "actual": 6.507,
      "forecast": 7.664
     },
     {
      "date": "2025Q4",
-     "actual": 6.719,
+     "actual": 6.454,
      "forecast": 7.665
     },
     {
      "date": "2026Q1",
-     "actual": 6.71,
+     "actual": 6.563,
      "forecast": 7.666
     },
     {
      "date": "2026Q2",
-     "actual": 6.66,
+     "actual": 6.517,
      "forecast": 7.667
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 6.66,
+    "actual": 6.517,
     "forecast": 7.667,
-    "gap_value": -1.01,
+    "gap_value": -1.15,
     "gap_pct": null,
-    "gap_ppt": -1.01,
+    "gap_ppt": -1.15,
     "direction": "below"
    },
    "note": "CBO side = farm + nonfarm proprietors' income summed; actual = total proprietors' income with IVA & CCAdj (quarterly)."
@@ -5318,12 +6122,12 @@
     },
     {
      "date": "2021Q1",
-     "actual": 3.326,
+     "actual": 3.324,
      "forecast": 3.591
     },
     {
      "date": "2021Q2",
-     "actual": 3.287,
+     "actual": 3.276,
      "forecast": 3.597
     },
     {
@@ -5333,107 +6137,107 @@
     },
     {
      "date": "2021Q4",
-     "actual": 3.224,
+     "actual": 3.233,
      "forecast": 3.608
     },
     {
      "date": "2022Q1",
-     "actual": 3.242,
+     "actual": 3.253,
      "forecast": 3.604
     },
     {
      "date": "2022Q2",
-     "actual": 3.327,
+     "actual": 3.334,
      "forecast": 3.624
     },
     {
      "date": "2022Q3",
-     "actual": 3.368,
+     "actual": 3.378,
      "forecast": 3.641
     },
     {
      "date": "2022Q4",
-     "actual": 3.43,
+     "actual": 3.454,
      "forecast": 3.658
     },
     {
      "date": "2023Q1",
-     "actual": 3.547,
+     "actual": 3.563,
      "forecast": 3.629
     },
     {
      "date": "2023Q2",
-     "actual": 3.625,
+     "actual": 3.626,
      "forecast": 3.618
     },
     {
      "date": "2023Q3",
-     "actual": 3.608,
+     "actual": 3.607,
      "forecast": 3.6
     },
     {
      "date": "2023Q4",
-     "actual": 3.636,
+     "actual": 3.615,
      "forecast": 3.588
     },
     {
      "date": "2024Q1",
-     "actual": 3.724,
+     "actual": 3.66,
      "forecast": 3.545
     },
     {
      "date": "2024Q2",
-     "actual": 3.67,
+     "actual": 3.606,
      "forecast": 3.531
     },
     {
      "date": "2024Q3",
-     "actual": 3.65,
+     "actual": 3.605,
      "forecast": 3.518
     },
     {
      "date": "2024Q4",
-     "actual": 3.677,
+     "actual": 3.662,
      "forecast": 3.504
     },
     {
      "date": "2025Q1",
-     "actual": 3.713,
+     "actual": 3.737,
      "forecast": 3.455
     },
     {
      "date": "2025Q2",
-     "actual": 3.671,
+     "actual": 3.732,
      "forecast": 3.444
     },
     {
      "date": "2025Q3",
-     "actual": 3.577,
+     "actual": 3.665,
      "forecast": 3.437
     },
     {
      "date": "2025Q4",
-     "actual": 3.536,
+     "actual": 3.642,
      "forecast": 3.432
     },
     {
      "date": "2026Q1",
-     "actual": 3.539,
+     "actual": 3.659,
      "forecast": 3.398
     },
     {
      "date": "2026Q2",
-     "actual": 3.542,
+     "actual": 3.668,
      "forecast": 3.397
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 3.542,
+    "actual": 3.668,
     "forecast": 3.397,
-    "gap_value": 0.15,
+    "gap_value": 0.27,
     "gap_pct": null,
-    "gap_ppt": 0.15,
+    "gap_ppt": 0.27,
     "direction": "above"
    }
   },
@@ -5512,122 +6316,122 @@
     },
     {
      "date": "2021Q1",
-     "actual": 6.51,
+     "actual": 6.526,
      "forecast": 7.503
     },
     {
      "date": "2021Q2",
-     "actual": 6.308,
+     "actual": 6.329,
      "forecast": 7.474
     },
     {
      "date": "2021Q3",
-     "actual": 6.118,
+     "actual": 6.13,
      "forecast": 7.446
     },
     {
      "date": "2021Q4",
-     "actual": 5.923,
+     "actual": 5.896,
      "forecast": 7.426
     },
     {
      "date": "2022Q1",
-     "actual": 5.894,
+     "actual": 5.781,
      "forecast": 7.406
     },
     {
      "date": "2022Q2",
-     "actual": 5.945,
+     "actual": 5.835,
      "forecast": 7.375
     },
     {
      "date": "2022Q3",
-     "actual": 6.045,
+     "actual": 6.041,
      "forecast": 7.354
     },
     {
      "date": "2022Q4",
-     "actual": 6.251,
+     "actual": 6.459,
      "forecast": 7.347
     },
     {
      "date": "2023Q1",
-     "actual": 6.433,
+     "actual": 6.99,
      "forecast": 7.401
     },
     {
      "date": "2023Q2",
-     "actual": 6.568,
+     "actual": 7.408,
      "forecast": 7.437
     },
     {
      "date": "2023Q3",
-     "actual": 6.592,
+     "actual": 7.628,
      "forecast": 7.478
     },
     {
      "date": "2023Q4",
-     "actual": 6.717,
+     "actual": 7.844,
      "forecast": 7.511
     },
     {
      "date": "2024Q1",
-     "actual": 6.642,
+     "actual": 7.671,
      "forecast": 7.576
     },
     {
      "date": "2024Q2",
-     "actual": 6.615,
+     "actual": 7.633,
      "forecast": 7.615
     },
     {
      "date": "2024Q3",
-     "actual": 6.54,
+     "actual": 7.589,
      "forecast": 7.66
     },
     {
      "date": "2024Q4",
-     "actual": 6.51,
+     "actual": 7.621,
      "forecast": 7.719
     },
     {
      "date": "2025Q1",
-     "actual": 6.506,
+     "actual": 7.735,
      "forecast": 7.819
     },
     {
      "date": "2025Q2",
-     "actual": 6.431,
+     "actual": 7.77,
      "forecast": 7.87
     },
     {
      "date": "2025Q3",
-     "actual": 6.338,
+     "actual": 7.732,
      "forecast": 7.92
     },
     {
      "date": "2025Q4",
-     "actual": 6.323,
+     "actual": 7.736,
      "forecast": 7.967
     },
     {
      "date": "2026Q1",
-     "actual": 6.263,
+     "actual": 7.672,
      "forecast": 8.04
     },
     {
      "date": "2026Q2",
-     "actual": 6.219,
+     "actual": 7.622,
      "forecast": 8.081
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 6.219,
+    "actual": 7.622,
     "forecast": 8.081,
-    "gap_value": -1.86,
+    "gap_value": -0.46,
     "gap_pct": null,
-    "gap_ppt": -1.86,
+    "gap_ppt": -0.46,
     "direction": "below"
    }
   },
@@ -5706,122 +6510,122 @@
     },
     {
      "date": "2021Q1",
-     "actual": 7.112,
+     "actual": 7.092,
      "forecast": 5.912
     },
     {
      "date": "2021Q2",
-     "actual": 7.444,
+     "actual": 7.417,
      "forecast": 5.913
     },
     {
      "date": "2021Q3",
-     "actual": 7.643,
+     "actual": 7.636,
      "forecast": 5.913
     },
     {
      "date": "2021Q4",
-     "actual": 7.641,
+     "actual": 7.667,
      "forecast": 5.91
     },
     {
      "date": "2022Q1",
-     "actual": 7.546,
+     "actual": 7.608,
      "forecast": 5.905
     },
     {
      "date": "2022Q2",
-     "actual": 7.495,
+     "actual": 7.542,
      "forecast": 5.9
     },
     {
      "date": "2022Q3",
-     "actual": 7.495,
+     "actual": 7.469,
      "forecast": 5.897
     },
     {
      "date": "2022Q4",
-     "actual": 7.581,
+     "actual": 7.421,
      "forecast": 5.897
     },
     {
      "date": "2023Q1",
-     "actual": 7.689,
+     "actual": 7.357,
      "forecast": 5.893
     },
     {
      "date": "2023Q2",
-     "actual": 7.801,
+     "actual": 7.364,
      "forecast": 5.89
     },
     {
      "date": "2023Q3",
-     "actual": 7.682,
+     "actual": 7.216,
      "forecast": 5.889
     },
     {
      "date": "2023Q4",
-     "actual": 7.713,
+     "actual": 7.267,
      "forecast": 5.891
     },
     {
      "date": "2024Q1",
-     "actual": 7.725,
+     "actual": 7.353,
      "forecast": 5.894
     },
     {
      "date": "2024Q2",
-     "actual": 7.636,
+     "actual": 7.33,
      "forecast": 5.899
     },
     {
      "date": "2024Q3",
-     "actual": 7.504,
+     "actual": 7.236,
      "forecast": 5.903
     },
     {
      "date": "2024Q4",
-     "actual": 7.433,
+     "actual": 7.15,
      "forecast": 5.906
     },
     {
      "date": "2025Q1",
-     "actual": 7.461,
+     "actual": 7.141,
      "forecast": 5.91
     },
     {
      "date": "2025Q2",
-     "actual": 7.364,
+     "actual": 7.018,
      "forecast": 5.914
     },
     {
      "date": "2025Q3",
-     "actual": 7.232,
+     "actual": 6.888,
      "forecast": 5.919
     },
     {
      "date": "2025Q4",
-     "actual": 7.181,
+     "actual": 6.841,
      "forecast": 5.921
     },
     {
      "date": "2026Q1",
-     "actual": 7.173,
+     "actual": 6.837,
      "forecast": 5.919
     },
     {
      "date": "2026Q2",
-     "actual": 7.035,
+     "actual": 6.695,
      "forecast": 5.918
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 7.035,
+    "actual": 6.695,
     "forecast": 5.918,
-    "gap_value": 1.12,
+    "gap_value": 0.78,
     "gap_pct": null,
-    "gap_ppt": 1.12,
+    "gap_ppt": 0.78,
     "direction": "above"
    }
   },
@@ -5900,117 +6704,122 @@
     },
     {
      "date": "2021Q1",
-     "actual": 12.523,
+     "actual": 12.5,
      "forecast": 10.141
     },
     {
      "date": "2021Q2",
-     "actual": 13.388,
+     "actual": 13.382,
      "forecast": 10.1
     },
     {
      "date": "2021Q3",
-     "actual": 13.198,
+     "actual": 13.218,
      "forecast": 10.053
     },
     {
      "date": "2021Q4",
-     "actual": 13.099,
+     "actual": 13.089,
      "forecast": 10.037
     },
     {
      "date": "2022Q1",
-     "actual": 12.564,
+     "actual": 12.586,
      "forecast": 10.055
     },
     {
      "date": "2022Q2",
-     "actual": 13.072,
+     "actual": 13.043,
      "forecast": 10.078
     },
     {
      "date": "2022Q3",
-     "actual": 13.203,
+     "actual": 13.249,
      "forecast": 10.097
     },
     {
      "date": "2022Q4",
-     "actual": 12.776,
+     "actual": 12.759,
      "forecast": 10.107
     },
     {
      "date": "2023Q1",
-     "actual": 12.949,
+     "actual": 12.873,
      "forecast": 10.131
     },
     {
      "date": "2023Q2",
-     "actual": 12.832,
+     "actual": 12.744,
      "forecast": 10.151
     },
     {
      "date": "2023Q3",
-     "actual": 12.997,
+     "actual": 12.892,
      "forecast": 10.163
     },
     {
      "date": "2023Q4",
-     "actual": 13.241,
+     "actual": 12.958,
      "forecast": 10.227
     },
     {
      "date": "2024Q1",
-     "actual": 12.845,
+     "actual": 12.616,
      "forecast": 10.25
     },
     {
      "date": "2024Q2",
-     "actual": 13.014,
+     "actual": 12.764,
      "forecast": 10.259
     },
     {
      "date": "2024Q3",
-     "actual": 12.726,
+     "actual": 12.48,
      "forecast": 10.257
     },
     {
      "date": "2024Q4",
-     "actual": 13.313,
+     "actual": 12.997,
      "forecast": 10.253
     },
     {
      "date": "2025Q1",
-     "actual": 13.058,
+     "actual": 12.882,
      "forecast": 10.247
     },
     {
      "date": "2025Q2",
-     "actual": 12.89,
+     "actual": 12.728,
      "forecast": 10.247
     },
     {
      "date": "2025Q3",
-     "actual": 13.201,
+     "actual": 12.997,
      "forecast": 10.222
     },
     {
      "date": "2025Q4",
-     "actual": 13.85,
+     "actual": 13.546,
      "forecast": 10.247
     },
     {
      "date": "2026Q1",
-     "actual": 13.891,
+     "actual": 13.557,
      "forecast": 10.261
+    },
+    {
+     "date": "2026Q2",
+     "actual": 14.463,
+     "forecast": 10.251
     }
    ],
    "latest": {
-    "date": "2026Q1",
-    "actual": 13.891,
-    "forecast": 10.261,
-    "gap_value": 3.63,
+    "date": "2026Q2",
+    "actual": 14.463,
+    "forecast": 10.251,
+    "gap_value": 4.21,
     "gap_pct": null,
-    "gap_ppt": 3.63,
+    "gap_ppt": 4.21,
     "direction": "above"
    }
   },
@@ -6089,117 +6898,122 @@
     },
     {
      "date": "2021Q1",
-     "actual": 10.664,
+     "actual": 10.649,
      "forecast": 7.764
     },
     {
      "date": "2021Q2",
-     "actual": 11.831,
+     "actual": 11.83,
      "forecast": 7.736
     },
     {
      "date": "2021Q3",
-     "actual": 11.591,
+     "actual": 11.599,
      "forecast": 7.704
     },
     {
      "date": "2021Q4",
-     "actual": 11.37,
+     "actual": 11.365,
      "forecast": 7.688
     },
     {
      "date": "2022Q1",
-     "actual": 10.965,
+     "actual": 11.007,
      "forecast": 7.708
     },
     {
      "date": "2022Q2",
-     "actual": 11.337,
+     "actual": 11.318,
      "forecast": 7.73
     },
     {
      "date": "2022Q3",
-     "actual": 11.407,
+     "actual": 11.388,
      "forecast": 7.746
     },
     {
      "date": "2022Q4",
-     "actual": 11.011,
+     "actual": 10.996,
      "forecast": 7.742
     },
     {
      "date": "2023Q1",
-     "actual": 11.245,
+     "actual": 11.2,
      "forecast": 7.755
     },
     {
      "date": "2023Q2",
-     "actual": 11.089,
+     "actual": 11.044,
      "forecast": 7.764
     },
     {
      "date": "2023Q3",
-     "actual": 11.231,
+     "actual": 11.157,
      "forecast": 7.765
     },
     {
      "date": "2023Q4",
-     "actual": 11.647,
+     "actual": 11.502,
      "forecast": 7.816
     },
     {
      "date": "2024Q1",
-     "actual": 11.299,
+     "actual": 11.133,
      "forecast": 7.832
     },
     {
      "date": "2024Q2",
-     "actual": 11.471,
+     "actual": 11.262,
      "forecast": 7.835
     },
     {
      "date": "2024Q3",
-     "actual": 11.326,
+     "actual": 11.153,
      "forecast": 7.829
     },
     {
      "date": "2024Q4",
-     "actual": 11.557,
+     "actual": 11.366,
      "forecast": 7.821
     },
     {
      "date": "2025Q1",
-     "actual": 11.441,
+     "actual": 11.264,
      "forecast": 7.812
     },
     {
      "date": "2025Q2",
-     "actual": 11.344,
+     "actual": 11.182,
      "forecast": 7.809
     },
     {
      "date": "2025Q3",
-     "actual": 11.523,
+     "actual": 11.382,
      "forecast": 7.783
     },
     {
      "date": "2025Q4",
-     "actual": 11.854,
+     "actual": 11.691,
      "forecast": 7.802
     },
     {
      "date": "2026Q1",
-     "actual": 12.127,
+     "actual": 11.931,
      "forecast": 7.814
+    },
+    {
+     "date": "2026Q2",
+     "actual": 12.785,
+     "forecast": 7.803
     }
    ],
    "latest": {
-    "date": "2026Q1",
-    "actual": 12.127,
-    "forecast": 7.814,
-    "gap_value": 4.31,
+    "date": "2026Q2",
+    "actual": 12.785,
+    "forecast": 7.803,
+    "gap_value": 4.98,
     "gap_pct": null,
-    "gap_ppt": 4.31,
+    "gap_ppt": 4.98,
     "direction": "above"
    }
   },
@@ -6278,121 +7092,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 14319.62,
+     "actual": 14323.49,
      "forecast": 14548.87
     },
     {
      "date": "2021Q2",
-     "actual": 14820.01,
+     "actual": 14827.75,
      "forecast": 14618.77
     },
     {
      "date": "2021Q3",
-     "actual": 14943.24,
+     "actual": 14950.94,
      "forecast": 14686.81
     },
     {
      "date": "2021Q4",
-     "actual": 15086.86,
+     "actual": 15091.56,
      "forecast": 14758.48
     },
     {
      "date": "2022Q1",
-     "actual": 15100.85,
+     "actual": 15106.04,
      "forecast": 14827.65
     },
     {
      "date": "2022Q2",
-     "actual": 15224.36,
+     "actual": 15230.65,
      "forecast": 14898.17
     },
     {
      "date": "2022Q3",
-     "actual": 15295.83,
+     "actual": 15273.95,
      "forecast": 14967.27
     },
     {
      "date": "2022Q4",
-     "actual": 15326.25,
+     "actual": 15303.31,
      "forecast": 15032.56
     },
     {
      "date": "2023Q1",
-     "actual": 15495.75,
+     "actual": 15468.85,
      "forecast": 15101.58
     },
     {
      "date": "2023Q2",
-     "actual": 15553.72,
+     "actual": 15503.62,
      "forecast": 15165.54
     },
     {
      "date": "2023Q3",
-     "actual": 15671.91,
+     "actual": 15609.13,
      "forecast": 15230.16
     },
     {
      "date": "2023Q4",
-     "actual": 15789.72,
+     "actual": 15731.54,
      "forecast": 15293.21
     },
     {
      "date": "2024Q1",
-     "actual": 15857.7,
+     "actual": 15800.15,
      "forecast": 15361.76
     },
     {
      "date": "2024Q2",
-     "actual": 16009.64,
+     "actual": 15952.6,
      "forecast": 15425.5
     },
     {
      "date": "2024Q3",
-     "actual": 16165.77,
+     "actual": 16098.45,
      "forecast": 15489.27
     },
     {
      "date": "2024Q4",
-     "actual": 16320.89,
+     "actual": 16267.1,
      "forecast": 15552.05
     },
     {
      "date": "2025Q1",
-     "actual": 16345.79,
+     "actual": 16293.3,
      "forecast": 15620.28
     },
     {
      "date": "2025Q2",
-     "actual": 16445.69,
+     "actual": 16378.32,
      "forecast": 15685.14
     },
     {
      "date": "2025Q3",
-     "actual": 16585.88,
+     "actual": 16526.18,
      "forecast": 15744.31
     },
     {
      "date": "2025Q4",
-     "actual": 16665.22,
+     "actual": 16604.58,
      "forecast": 15811.12
     },
     {
      "date": "2026Q1",
-     "actual": 16687.73,
+     "actual": 16634.16,
      "forecast": 15888.17
     },
     {
      "date": "2026Q2",
-     "actual": 16817.94,
+     "actual": 16788.69,
      "forecast": 15953.12
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 16817.94,
+    "actual": 16788.69,
     "forecast": 15953.12,
-    "gap_value": 864.82,
-    "gap_pct": 5.42,
+    "gap_value": 835.57,
+    "gap_pct": 5.24,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -6472,121 +7286,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 3849.33,
+     "actual": 3851.69,
      "forecast": 3961.86
     },
     {
      "date": "2021Q2",
-     "actual": 3799.03,
+     "actual": 3801.95,
      "forecast": 3986.39
     },
     {
      "date": "2021Q3",
-     "actual": 3937.3,
+     "actual": 3937.43,
      "forecast": 4011.84
     },
     {
      "date": "2021Q4",
-     "actual": 4191.77,
+     "actual": 4195.6,
      "forecast": 4032.89
     },
     {
      "date": "2022Q1",
-     "actual": 4272.38,
+     "actual": 4259.2,
      "forecast": 4050.04
     },
     {
      "date": "2022Q2",
-     "actual": 4176.99,
+     "actual": 4165.7,
      "forecast": 4067.71
     },
     {
      "date": "2022Q3",
-     "actual": 4105.29,
+     "actual": 4118.27,
      "forecast": 4085.57
     },
     {
      "date": "2022Q4",
-     "actual": 4184.98,
+     "actual": 4195.52,
      "forecast": 4103.67
     },
     {
      "date": "2023Q1",
-     "actual": 4108.54,
+     "actual": 4107.91,
      "forecast": 4115.87
     },
     {
      "date": "2023Q2",
-     "actual": 4180.75,
+     "actual": 4177.43,
      "forecast": 4136.28
     },
     {
      "date": "2023Q3",
-     "actual": 4275.53,
+     "actual": 4276.88,
      "forecast": 4157.04
     },
     {
      "date": "2023Q4",
-     "actual": 4313.17,
+     "actual": 4316.37,
      "forecast": 4180.43
     },
     {
      "date": "2024Q1",
-     "actual": 4296.25,
+     "actual": 4302.69,
      "forecast": 4196.16
     },
     {
      "date": "2024Q2",
-     "actual": 4381.98,
+     "actual": 4389.95,
      "forecast": 4216.4
     },
     {
      "date": "2024Q3",
-     "actual": 4392.18,
+     "actual": 4424.32,
      "forecast": 4236.61
     },
     {
      "date": "2024Q4",
-     "actual": 4315.56,
+     "actual": 4370.27,
      "forecast": 4257.8
     },
     {
      "date": "2025Q1",
-     "actual": 4547.95,
+     "actual": 4607.45,
      "forecast": 4272.92
     },
     {
      "date": "2025Q2",
-     "actual": 4382.82,
+     "actual": 4464.42,
      "forecast": 4293.32
     },
     {
      "date": "2025Q3",
-     "actual": 4383.19,
+     "actual": 4472.6,
      "forecast": 4313.87
     },
     {
      "date": "2025Q4",
-     "actual": 4408.3,
+     "actual": 4484.69,
      "forecast": 4335.56
     },
     {
      "date": "2026Q1",
-     "actual": 4492.86,
+     "actual": 4563.04,
      "forecast": 4351.76
     },
     {
      "date": "2026Q2",
-     "actual": 4526.29,
+     "actual": 4615.14,
      "forecast": 4380.1
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 4526.29,
+    "actual": 4615.14,
     "forecast": 4380.1,
-    "gap_value": 146.19,
-    "gap_pct": 3.34,
+    "gap_value": 235.04,
+    "gap_pct": 5.37,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -6666,121 +7480,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 2939.92,
+     "actual": 2943.18,
      "forecast": 3117.84
     },
     {
      "date": "2021Q2",
-     "actual": 3010.86,
+     "actual": 3012.48,
      "forecast": 3137.08
     },
     {
      "date": "2021Q3",
-     "actual": 2999.34,
+     "actual": 2999.65,
      "forecast": 3157.69
     },
     {
      "date": "2021Q4",
-     "actual": 3022.08,
+     "actual": 3025.42,
      "forecast": 3177.67
     },
     {
      "date": "2022Q1",
-     "actual": 3110.07,
+     "actual": 3109.13,
      "forecast": 3193.84
     },
     {
      "date": "2022Q2",
-     "actual": 3163.41,
+     "actual": 3159.96,
      "forecast": 3209.48
     },
     {
      "date": "2022Q3",
-     "actual": 3210.16,
+     "actual": 3210.76,
      "forecast": 3224.46
     },
     {
      "date": "2022Q4",
-     "actual": 3265.98,
+     "actual": 3272.79,
      "forecast": 3239.54
     },
     {
      "date": "2023Q1",
-     "actual": 3333.29,
+     "actual": 3346.36,
      "forecast": 3249.22
     },
     {
      "date": "2023Q2",
-     "actual": 3421.76,
+     "actual": 3432.35,
      "forecast": 3267.03
     },
     {
      "date": "2023Q3",
-     "actual": 3436.42,
+     "actual": 3449.74,
      "forecast": 3285.5
     },
     {
      "date": "2023Q4",
-     "actual": 3482.99,
+     "actual": 3500.21,
      "forecast": 3306.31
     },
     {
      "date": "2024Q1",
-     "actual": 3496.03,
+     "actual": 3525.23,
      "forecast": 3319.33
     },
     {
      "date": "2024Q2",
-     "actual": 3517.46,
+     "actual": 3547.54,
      "forecast": 3337.52
     },
     {
      "date": "2024Q3",
-     "actual": 3547.63,
+     "actual": 3599.33,
      "forecast": 3356.26
     },
     {
      "date": "2024Q4",
-     "actual": 3514.42,
+     "actual": 3593.43,
      "forecast": 3376.14
     },
     {
      "date": "2025Q1",
-     "actual": 3595.39,
+     "actual": 3686.23,
      "forecast": 3390.14
     },
     {
      "date": "2025Q2",
-     "actual": 3659.32,
+     "actual": 3754.41,
      "forecast": 3409.41
     },
     {
      "date": "2025Q3",
-     "actual": 3687.84,
+     "actual": 3789.75,
      "forecast": 3429.63
     },
     {
      "date": "2025Q4",
-     "actual": 3709.69,
+     "actual": 3809.82,
      "forecast": 3450.4
     },
     {
      "date": "2026Q1",
-     "actual": 3804.38,
+     "actual": 3900.92,
      "forecast": 3467.83
     },
     {
      "date": "2026Q2",
-     "actual": 3882.04,
+     "actual": 3985.73,
      "forecast": 3491.56
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 3882.04,
+    "actual": 3985.73,
     "forecast": 3491.56,
-    "gap_value": 390.48,
-    "gap_pct": 11.18,
+    "gap_value": 494.17,
+    "gap_pct": 14.15,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -6860,121 +7674,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 911.81,
+     "actual": 914.28,
      "forecast": 819.63
     },
     {
      "date": "2021Q2",
-     "actual": 901.7,
+     "actual": 902.93,
      "forecast": 822.55
     },
     {
      "date": "2021Q3",
-     "actual": 899.78,
+     "actual": 899.66,
      "forecast": 825.56
     },
     {
      "date": "2021Q4",
-     "actual": 905.83,
+     "actual": 904.7,
      "forecast": 828.38
     },
     {
      "date": "2022Q1",
-     "actual": 889.76,
+     "actual": 891.85,
      "forecast": 831.13
     },
     {
      "date": "2022Q2",
-     "actual": 863.93,
+     "actual": 864.23,
      "forecast": 834.01
     },
     {
      "date": "2022Q3",
-     "actual": 809.22,
+     "actual": 808.74,
      "forecast": 836.97
     },
     {
      "date": "2022Q4",
-     "actual": 762.08,
+     "actual": 759.32,
      "forecast": 840.07
     },
     {
      "date": "2023Q1",
-     "actual": 749.2,
+     "actual": 748.43,
      "forecast": 843.1
     },
     {
      "date": "2023Q2",
-     "actual": 756.91,
+     "actual": 754.1,
      "forecast": 845.97
     },
     {
      "date": "2023Q3",
-     "actual": 777.72,
+     "actual": 774.69,
      "forecast": 848.85
     },
     {
      "date": "2023Q4",
-     "actual": 780.63,
+     "actual": 776.5,
      "forecast": 851.63
     },
     {
      "date": "2024Q1",
-     "actual": 796.17,
+     "actual": 795.12,
      "forecast": 854.12
     },
     {
      "date": "2024Q2",
-     "actual": 792.17,
+     "actual": 789.4,
      "forecast": 856.34
     },
     {
      "date": "2024Q3",
-     "actual": 782.47,
+     "actual": 780.41,
      "forecast": 858.43
     },
     {
      "date": "2024Q4",
-     "actual": 790.68,
+     "actual": 785.6,
      "forecast": 860.42
     },
     {
      "date": "2025Q1",
-     "actual": 788.78,
+     "actual": 780.23,
      "forecast": 862.21
     },
     {
      "date": "2025Q2",
-     "actual": 778.53,
+     "actual": 771.63,
      "forecast": 863.8
     },
     {
      "date": "2025Q3",
-     "actual": 764.26,
+     "actual": 759.14,
      "forecast": 865.17
     },
     {
      "date": "2025Q4",
-     "actual": 760.99,
+     "actual": 755.74,
      "forecast": 866.55
     },
     {
      "date": "2026Q1",
-     "actual": 745.66,
+     "actual": 741.01,
      "forecast": 869.55
     },
     {
      "date": "2026Q2",
-     "actual": 748.45,
+     "actual": 746.15,
      "forecast": 873.92
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 748.45,
+    "actual": 746.15,
     "forecast": 873.92,
-    "gap_value": -125.47,
-    "gap_pct": -14.36,
+    "gap_value": -127.77,
+    "gap_pct": -14.62,
     "gap_ppt": null,
     "direction": "below"
    }
@@ -7054,120 +7868,120 @@
     },
     {
      "date": "2021Q1",
-     "actual": -10.35,
+     "actual": -13.36,
      "forecast": 23.13
     },
     {
      "date": "2021Q2",
-     "actual": -120.79,
+     "actual": -120.64,
      "forecast": 25.9
     },
     {
      "date": "2021Q3",
-     "actual": 16.77,
+     "actual": 16.64,
      "forecast": 28.18
     },
     {
      "date": "2021Q4",
-     "actual": 207.91,
+     "actual": 208.91,
      "forecast": 26.87
     },
     {
      "date": "2022Q1",
-     "actual": 227.36,
+     "actual": 210.73,
      "forecast": 25.41
     },
     {
      "date": "2022Q2",
-     "actual": 114.45,
+     "actual": 107.64,
      "forecast": 24.83
     },
     {
      "date": "2022Q3",
-     "actual": 79.72,
+     "actual": 90.21,
      "forecast": 25.01
     },
     {
      "date": "2022Q4",
-     "actual": 160.56,
+     "actual": 166.93,
      "forecast": 25.19
     },
     {
      "date": "2023Q1",
-     "actual": 43.45,
+     "actual": 31.42,
      "forecast": 24.71
     },
     {
      "date": "2023Q2",
-     "actual": 16.98,
+     "actual": 7.42,
      "forecast": 24.84
     },
     {
      "date": "2023Q3",
-     "actual": 67.47,
+     "actual": 60.32,
      "forecast": 24.68
     },
     {
      "date": "2023Q4",
-     "actual": 61.89,
+     "actual": 53.2,
      "forecast": 25.04
     },
     {
      "date": "2024Q1",
-     "actual": 12.41,
+     "actual": -3.74,
      "forecast": 25.5
     },
     {
      "date": "2024Q2",
-     "actual": 75.07,
+     "actual": 60.8,
      "forecast": 25.84
     },
     {
      "date": "2024Q3",
-     "actual": 69.43,
+     "actual": 54.8,
      "forecast": 25.81
     },
     {
      "date": "2024Q4",
-     "actual": 17.05,
+     "actual": 0.98,
      "forecast": 25.78
     },
     {
      "date": "2025Q1",
-     "actual": 171.97,
+     "actual": 154.0,
      "forecast": 25.51
     },
     {
      "date": "2025Q2",
-     "actual": -18.26,
+     "actual": -35.27,
      "forecast": 25.76
     },
     {
      "date": "2025Q3",
-     "actual": -23.94,
+     "actual": -45.93,
      "forecast": 25.51
     },
     {
      "date": "2025Q4",
-     "actual": -15.64,
+     "actual": -45.91,
      "forecast": 25.89
     },
     {
      "date": "2026Q1",
-     "actual": -16.69,
+     "actual": -34.67,
      "forecast": 22.17
     },
     {
      "date": "2026Q2",
-     "actual": -50.81,
+     "actual": -63.44,
      "forecast": 22.99
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": -50.81,
+    "actual": -63.44,
     "forecast": 22.99,
-    "gap_value": -73.8,
+    "gap_value": -86.43,
     "gap_pct": null,
     "gap_ppt": null,
     "direction": "below"
@@ -7249,121 +8063,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 3765.69,
+     "actual": 3769.15,
      "forecast": 3695.06
     },
     {
      "date": "2021Q2",
-     "actual": 3721.61,
+     "actual": 3735.3,
      "forecast": 3700.71
     },
     {
      "date": "2021Q3",
-     "actual": 3693.85,
+     "actual": 3703.35,
      "forecast": 3706.21
     },
     {
      "date": "2021Q4",
-     "actual": 3693.42,
+     "actual": 3697.34,
      "forecast": 3710.29
     },
     {
      "date": "2022Q1",
-     "actual": 3665.47,
+     "actual": 3661.09,
      "forecast": 3714.86
     },
     {
      "date": "2022Q2",
-     "actual": 3652.41,
+     "actual": 3649.43,
      "forecast": 3719.61
     },
     {
      "date": "2022Q3",
-     "actual": 3667.84,
+     "actual": 3665.56,
      "forecast": 3724.46
     },
     {
      "date": "2022Q4",
-     "actual": 3705.12,
+     "actual": 3707.35,
      "forecast": 3729.48
     },
     {
      "date": "2023Q1",
-     "actual": 3742.91,
+     "actual": 3760.64,
      "forecast": 3734.47
     },
     {
      "date": "2023Q2",
-     "actual": 3773.54,
+     "actual": 3806.37,
      "forecast": 3739.53
     },
     {
      "date": "2023Q3",
-     "actual": 3821.24,
+     "actual": 3862.72,
      "forecast": 3744.68
     },
     {
      "date": "2023Q4",
-     "actual": 3865.06,
+     "actual": 3911.66,
      "forecast": 3749.97
     },
     {
      "date": "2024Q1",
-     "actual": 3887.05,
+     "actual": 3945.4,
      "forecast": 3755.34
     },
     {
      "date": "2024Q2",
-     "actual": 3919.17,
+     "actual": 3980.9,
      "forecast": 3760.66
     },
     {
      "date": "2024Q3",
-     "actual": 3971.28,
+     "actual": 4031.5,
      "forecast": 3765.9
     },
     {
      "date": "2024Q4",
-     "actual": 4003.78,
+     "actual": 4066.83,
      "forecast": 3771.08
     },
     {
      "date": "2025Q1",
-     "actual": 3993.92,
+     "actual": 4060.42,
      "forecast": 3775.92
     },
     {
      "date": "2025Q2",
-     "actual": 3992.97,
+     "actual": 4083.66,
      "forecast": 3780.63
     },
     {
      "date": "2025Q3",
-     "actual": 4014.98,
+     "actual": 4099.82,
      "forecast": 3785.36
     },
     {
      "date": "2025Q4",
-     "actual": 3957.1,
+     "actual": 4040.53,
      "forecast": 3790.4
     },
     {
      "date": "2026Q1",
-     "actual": 4000.21,
+     "actual": 4087.45,
      "forecast": 3795.23
     },
     {
      "date": "2026Q2",
-     "actual": 3992.21,
+     "actual": 4086.61,
      "forecast": 3800.18
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 3992.21,
+    "actual": 4086.61,
     "forecast": 3800.18,
-    "gap_value": 192.03,
-    "gap_pct": 5.05,
+    "gap_value": 286.43,
+    "gap_pct": 7.54,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -7443,121 +8257,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 1509.22,
+     "actual": 1508.97,
      "forecast": 1399.39
     },
     {
      "date": "2021Q2",
-     "actual": 1475.61,
+     "actual": 1478.45,
      "forecast": 1401.91
     },
     {
      "date": "2021Q3",
-     "actual": 1447.59,
+     "actual": 1447.39,
      "forecast": 1404.34
     },
     {
      "date": "2021Q4",
-     "actual": 1459.69,
+     "actual": 1459.88,
      "forecast": 1405.45
     },
     {
      "date": "2022Q1",
-     "actual": 1428.92,
+     "actual": 1429.0,
      "forecast": 1406.85
     },
     {
      "date": "2022Q2",
-     "actual": 1415.38,
+     "actual": 1417.54,
      "forecast": 1408.21
     },
     {
      "date": "2022Q3",
-     "actual": 1410.62,
+     "actual": 1411.36,
      "forecast": 1409.6
     },
     {
      "date": "2022Q4",
-     "actual": 1441.58,
+     "actual": 1441.0,
      "forecast": 1411.03
     },
     {
      "date": "2023Q1",
-     "actual": 1456.3,
+     "actual": 1457.21,
      "forecast": 1412.44
     },
     {
      "date": "2023Q2",
-     "actual": 1456.11,
+     "actual": 1459.8,
      "forecast": 1414.0
     },
     {
      "date": "2023Q3",
-     "actual": 1480.35,
+     "actual": 1483.09,
      "forecast": 1415.5
     },
     {
      "date": "2023Q4",
-     "actual": 1492.76,
+     "actual": 1495.93,
      "forecast": 1417.11
     },
     {
      "date": "2024Q1",
-     "actual": 1495.78,
+     "actual": 1503.77,
      "forecast": 1418.75
     },
     {
      "date": "2024Q2",
-     "actual": 1511.47,
+     "actual": 1517.19,
      "forecast": 1420.4
     },
     {
      "date": "2024Q3",
-     "actual": 1542.94,
+     "actual": 1537.33,
      "forecast": 1421.89
     },
     {
      "date": "2024Q4",
-     "actual": 1559.48,
+     "actual": 1549.97,
      "forecast": 1423.35
     },
     {
      "date": "2025Q1",
-     "actual": 1537.22,
+     "actual": 1523.63,
      "forecast": 1424.48
     },
     {
      "date": "2025Q2",
-     "actual": 1516.6,
+     "actual": 1522.28,
      "forecast": 1425.61
     },
     {
      "date": "2025Q3",
-     "actual": 1526.55,
+     "actual": 1524.28,
      "forecast": 1426.74
     },
     {
      "date": "2025Q4",
-     "actual": 1458.65,
+     "actual": 1460.68,
      "forecast": 1428.22
     },
     {
      "date": "2026Q1",
-     "actual": 1491.86,
+     "actual": 1498.87,
      "forecast": 1429.52
     },
     {
      "date": "2026Q2",
-     "actual": 1476.39,
+     "actual": 1489.79,
      "forecast": 1430.98
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 1476.39,
+    "actual": 1489.79,
     "forecast": 1430.98,
-    "gap_value": 45.41,
-    "gap_pct": 3.17,
+    "gap_value": 58.81,
+    "gap_pct": 4.11,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -7637,121 +8451,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 2259.49,
+     "actual": 2263.2,
      "forecast": 2295.59
     },
     {
      "date": "2021Q2",
-     "actual": 2248.32,
+     "actual": 2259.11,
      "forecast": 2298.71
     },
     {
      "date": "2021Q3",
-     "actual": 2247.63,
+     "actual": 2257.12,
      "forecast": 2301.8
     },
     {
      "date": "2021Q4",
-     "actual": 2235.96,
+     "actual": 2239.73,
      "forecast": 2304.75
     },
     {
      "date": "2022Q1",
-     "actual": 2237.3,
+     "actual": 2233.01,
      "forecast": 2307.9
     },
     {
      "date": "2022Q2",
-     "actual": 2237.05,
+     "actual": 2232.17,
      "forecast": 2311.29
     },
     {
      "date": "2022Q3",
-     "actual": 2256.32,
+     "actual": 2253.36,
      "forecast": 2314.72
     },
     {
      "date": "2022Q4",
-     "actual": 2263.91,
+     "actual": 2266.59,
      "forecast": 2318.3
     },
     {
      "date": "2023Q1",
-     "actual": 2286.97,
+     "actual": 2303.32,
      "forecast": 2321.86
     },
     {
      "date": "2023Q2",
-     "actual": 2317.05,
+     "actual": 2345.46,
      "forecast": 2325.35
     },
     {
      "date": "2023Q3",
-     "actual": 2340.86,
+     "actual": 2378.62,
      "forecast": 2328.98
     },
     {
      "date": "2023Q4",
-     "actual": 2372.02,
+     "actual": 2414.33,
      "forecast": 2332.64
     },
     {
      "date": "2024Q1",
-     "actual": 2390.72,
+     "actual": 2439.94,
      "forecast": 2336.35
     },
     {
      "date": "2024Q2",
-     "actual": 2407.34,
+     "actual": 2462.0,
      "forecast": 2340.0
     },
     {
      "date": "2024Q3",
-     "actual": 2428.54,
+     "actual": 2492.48,
      "forecast": 2343.73
     },
     {
      "date": "2024Q4",
-     "actual": 2444.69,
+     "actual": 2515.1,
      "forecast": 2347.41
     },
     {
      "date": "2025Q1",
-     "actual": 2456.3,
+     "actual": 2533.74,
      "forecast": 2351.08
     },
     {
      "date": "2025Q2",
-     "actual": 2475.3,
+     "actual": 2557.85,
      "forecast": 2354.63
     },
     {
      "date": "2025Q3",
-     "actual": 2487.4,
+     "actual": 2571.85,
      "forecast": 2358.19
     },
     {
      "date": "2025Q4",
-     "actual": 2496.89,
+     "actual": 2575.28,
      "forecast": 2361.72
     },
     {
      "date": "2026Q1",
-     "actual": 2506.96,
+     "actual": 2584.45,
      "forecast": 2365.22
     },
     {
      "date": "2026Q2",
-     "actual": 2513.96,
+     "actual": 2592.23,
      "forecast": 2368.67
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 2513.96,
+    "actual": 2592.23,
     "forecast": 2368.67,
-    "gap_value": 145.29,
-    "gap_pct": 6.13,
+    "gap_value": 223.56,
+    "gap_pct": 9.44,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -7831,120 +8645,120 @@
     },
     {
      "date": "2021Q1",
-     "actual": -859.72,
+     "actual": -844.2,
      "forecast": -671.17
     },
     {
      "date": "2021Q2",
-     "actual": -904.26,
+     "actual": -894.92,
      "forecast": -681.19
     },
     {
      "date": "2021Q3",
-     "actual": -956.88,
+     "actual": -949.94,
      "forecast": -692.47
     },
     {
      "date": "2021Q4",
-     "actual": -984.63,
+     "actual": -983.23,
      "forecast": -698.79
     },
     {
      "date": "2022Q1",
-     "actual": -1106.84,
+     "actual": -1079.88,
      "forecast": -704.14
     },
     {
      "date": "2022Q2",
-     "actual": -1093.04,
+     "actual": -1074.21,
      "forecast": -708.27
     },
     {
      "date": "2022Q3",
-     "actual": -953.09,
+     "actual": -941.99,
      "forecast": -713.2
     },
     {
      "date": "2022Q4",
-     "actual": -944.52,
+     "actual": -939.3,
      "forecast": -717.47
     },
     {
      "date": "2023Q1",
-     "actual": -912.19,
+     "actual": -883.11,
      "forecast": -719.21
     },
     {
      "date": "2023Q2",
-     "actual": -928.11,
+     "actual": -910.55,
      "forecast": -722.87
     },
     {
      "date": "2023Q3",
-     "actual": -926.17,
+     "actual": -920.05,
      "forecast": -727.63
     },
     {
      "date": "2023Q4",
-     "actual": -934.15,
+     "actual": -927.92,
      "forecast": -732.88
     },
     {
      "date": "2024Q1",
-     "actual": -964.14,
+     "actual": -936.05,
      "forecast": -737.54
     },
     {
      "date": "2024Q2",
-     "actual": -1032.25,
+     "actual": -1012.18,
      "forecast": -741.88
     },
     {
      "date": "2024Q3",
-     "actual": -1064.89,
+     "actual": -1068.75,
      "forecast": -745.72
     },
     {
      "date": "2024Q4",
-     "actual": -1068.99,
+     "actual": -1080.17,
      "forecast": -749.97
     },
     {
      "date": "2025Q1",
-     "actual": -1380.72,
+     "actual": -1352.69,
      "forecast": -754.07
     },
     {
      "date": "2025Q2",
-     "actual": -1058.04,
+     "actual": -1051.72,
      "forecast": -757.65
     },
     {
      "date": "2025Q3",
-     "actual": -955.49,
+     "actual": -991.47,
      "forecast": -760.22
     },
     {
      "date": "2025Q4",
-     "actual": -968.66,
+     "actual": -1006.34,
      "forecast": -764.43
     },
     {
      "date": "2026Q1",
-     "actual": -1001.82,
+     "actual": -1019.47,
      "forecast": -771.16
     },
     {
      "date": "2026Q2",
-     "actual": -1074.66,
+     "actual": -1099.3,
      "forecast": -779.31
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": -1074.66,
+    "actual": -1099.3,
     "forecast": -779.31,
-    "gap_value": -295.35,
+    "gap_value": -319.99,
     "gap_pct": null,
     "gap_ppt": null,
     "direction": "below"
@@ -8026,121 +8840,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 2247.37,
+     "actual": 2248.41,
      "forecast": 2558.16
     },
     {
      "date": "2021Q2",
-     "actual": 2270.17,
+     "actual": 2269.97,
      "forecast": 2572.62
     },
     {
      "date": "2021Q3",
-     "actual": 2268.63,
+     "actual": 2270.79,
      "forecast": 2585.39
     },
     {
      "date": "2021Q4",
-     "actual": 2402.5,
+     "actual": 2398.96,
      "forecast": 2601.86
     },
     {
      "date": "2022Q1",
-     "actual": 2377.53,
+     "actual": 2376.72,
      "forecast": 2617.1
     },
     {
      "date": "2022Q2",
-     "actual": 2451.69,
+     "actual": 2450.71,
      "forecast": 2632.93
     },
     {
      "date": "2022Q3",
-     "actual": 2538.93,
+     "actual": 2539.22,
      "forecast": 2648.38
     },
     {
      "date": "2022Q4",
-     "actual": 2520.1,
+     "actual": 2517.07,
      "forecast": 2664.4
     },
     {
      "date": "2023Q1",
-     "actual": 2543.54,
+     "actual": 2537.31,
      "forecast": 2680.75
     },
     {
      "date": "2023Q2",
-     "actual": 2509.26,
+     "actual": 2508.23,
      "forecast": 2697.31
     },
     {
      "date": "2023Q3",
-     "actual": 2536.73,
+     "actual": 2538.27,
      "forecast": 2713.84
     },
     {
      "date": "2023Q4",
-     "actual": 2574.63,
+     "actual": 2576.91,
      "forecast": 2730.47
     },
     {
      "date": "2024Q1",
-     "actual": 2603.64,
+     "actual": 2594.79,
      "forecast": 2747.35
     },
     {
      "date": "2024Q2",
-     "actual": 2607.96,
+     "actual": 2614.47,
      "forecast": 2764.33
     },
     {
      "date": "2024Q3",
-     "actual": 2664.34,
+     "actual": 2658.61,
      "forecast": 2781.36
     },
     {
      "date": "2024Q4",
-     "actual": 2658.45,
+     "actual": 2656.65,
      "forecast": 2798.59
     },
     {
      "date": "2025Q1",
-     "actual": 2659.53,
+     "actual": 2673.1,
      "forecast": 2815.97
     },
     {
      "date": "2025Q2",
-     "actual": 2647.28,
+     "actual": 2659.32,
      "forecast": 2833.51
     },
     {
      "date": "2025Q3",
-     "actual": 2708.77,
+     "actual": 2720.04,
      "forecast": 2850.99
     },
     {
      "date": "2025Q4",
-     "actual": 2686.75,
+     "actual": 2691.14,
      "forecast": 2868.74
     },
     {
      "date": "2026Q1",
-     "actual": 2756.98,
+     "actual": 2780.14,
      "forecast": 2886.77
     },
     {
      "date": "2026Q2",
-     "actual": 2787.69,
+     "actual": 2814.54,
      "forecast": 2904.77
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 2787.69,
+    "actual": 2814.54,
     "forecast": 2904.77,
-    "gap_value": -117.08,
-    "gap_pct": -4.03,
+    "gap_value": -90.23,
+    "gap_pct": -3.11,
     "gap_ppt": null,
     "direction": "below"
    }
@@ -8220,121 +9034,121 @@
     },
     {
      "date": "2021Q1",
-     "actual": 3107.09,
+     "actual": 3092.6,
      "forecast": 3208.6
     },
     {
      "date": "2021Q2",
-     "actual": 3174.42,
+     "actual": 3164.89,
      "forecast": 3230.45
     },
     {
      "date": "2021Q3",
-     "actual": 3225.51,
+     "actual": 3220.73,
      "forecast": 3251.91
     },
     {
      "date": "2021Q4",
-     "actual": 3387.13,
+     "actual": 3382.19,
      "forecast": 3272.28
     },
     {
      "date": "2022Q1",
-     "actual": 3484.37,
+     "actual": 3456.6,
      "forecast": 3290.69
     },
     {
      "date": "2022Q2",
-     "actual": 3544.73,
+     "actual": 3524.93,
      "forecast": 3308.56
     },
     {
      "date": "2022Q3",
-     "actual": 3492.02,
+     "actual": 3481.22,
      "forecast": 3326.79
     },
     {
      "date": "2022Q4",
-     "actual": 3464.61,
+     "actual": 3456.37,
      "forecast": 3344.95
     },
     {
      "date": "2023Q1",
-     "actual": 3455.73,
+     "actual": 3420.43,
      "forecast": 3361.16
     },
     {
      "date": "2023Q2",
-     "actual": 3437.38,
+     "actual": 3418.78,
      "forecast": 3379.26
     },
     {
      "date": "2023Q3",
-     "actual": 3462.89,
+     "actual": 3458.33,
      "forecast": 3398.32
     },
     {
      "date": "2023Q4",
-     "actual": 3508.78,
+     "actual": 3504.82,
      "forecast": 3417.89
     },
     {
      "date": "2024Q1",
-     "actual": 3567.78,
+     "actual": 3530.84,
      "forecast": 3437.16
     },
     {
      "date": "2024Q2",
-     "actual": 3640.21,
+     "actual": 3626.66,
      "forecast": 3456.25
     },
     {
      "date": "2024Q3",
-     "actual": 3729.23,
+     "actual": 3727.35,
      "forecast": 3474.94
     },
     {
      "date": "2024Q4",
-     "actual": 3727.45,
+     "actual": 3736.82,
      "forecast": 3494.16
     },
     {
      "date": "2025Q1",
-     "actual": 4040.25,
+     "actual": 4025.79,
      "forecast": 3513.39
     },
     {
      "date": "2025Q2",
-     "actual": 3705.32,
+     "actual": 3711.04,
      "forecast": 3532.3
     },
     {
      "date": "2025Q3",
-     "actual": 3664.27,
+     "actual": 3711.51,
      "forecast": 3550.27
     },
     {
      "date": "2025Q4",
-     "actual": 3655.41,
+     "actual": 3697.48,
      "forecast": 3569.91
     },
     {
      "date": "2026Q1",
-     "actual": 3758.8,
+     "actual": 3799.61,
      "forecast": 3592.06
     },
     {
      "date": "2026Q2",
-     "actual": 3862.35,
+     "actual": 3913.83,
      "forecast": 3615.44
     }
    ],
    "latest": {
     "date": "2026Q2",
-    "actual": 3862.35,
+    "actual": 3913.83,
     "forecast": 3615.44,
-    "gap_value": 246.91,
-    "gap_pct": 6.83,
+    "gap_value": 298.39,
+    "gap_pct": 8.25,
     "gap_ppt": null,
     "direction": "above"
    }
