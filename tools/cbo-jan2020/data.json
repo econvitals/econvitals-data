@@ -5,7 +5,7 @@
   "rebase_quarter": "2019Q4",
   "as_of_quarter": "2026Q3",
   "window_start": "2018Q1",
-  "generated": "2026-10-06",
+  "generated": "2026-10-08",
   "source": "Bureau of Economic Analysis, BLS, Federal Reserve via FRED; Congressional Budget Office; author's calculations.",
   "discussion": "<!-- Claude-written synthesis essay. The build (cbo2020.py build-explorer) reads this file\n     verbatim into data.json's meta.discussion, and the page renders it at the bottom under a\n     \"Synthesis \u00b7 written by Claude\" label. Descriptive + lightly causal; synthesizes patterns\n     rather than walking series-by-series. Re-check the directional claims against the freshly\n     rendered gaps on each refresh (the broad story is robust; specific magnitudes can move). -->\n<p>Set CBO's January-2020 baseline beside what actually happened and the surprises sort into one clean pattern: the <em>real</em> economy turned out close to \u2014 even somewhat better than \u2014 what was expected, while the <em>nominal</em> economy is almost unrecognizable. On this evidence the pandemic delivered a lasting nominal shock far more than a lasting real one.</p>\n\n<p>Start with the real side. After the deepest and fastest recession in modern memory, real GDP did not merely claw back to its pre-COVID path but pushed above it, and the job market returned faster and tighter than almost anyone projected \u2014 unemployment round-tripped to roughly the low rate CBO had penciled in, rather than grinding back over years as it did after 2008. That is the dog that didn't bark: the permanent \"scarring\" of output and employment that the 2008\u20132015 experience taught us to fear simply does not show up in the aggregates. Shown only the real-GDP and unemployment lines, a 2020 forecaster would feel broadly vindicated \u2014 having lived through a wild detour to get there.</p>\n\n<p>Show that same forecaster the price level and the path of interest rates, and the world is unrecognizable. The single largest break with the forecast is prices: the 2021\u20132023 surge stepped the price level well above anything in the baseline and never reversed \u2014 disinflation brought down the <em>rate</em> of increase, not the <em>level</em> of prices. The bulk of the gap between forecast and actual <em>nominal</em> GDP is this price overshoot rather than extra real output. The second great miss is interest rates. CBO's baseline encoded the low-for-long regime everyone assumed in early 2020; instead the most aggressive tightening cycle in four decades pushed short rates and the ten-year yield far above the projected path. The zero-rate era that framed a decade of macro thinking ended abruptly.</p>\n\n<p>These are not independent surprises \u2014 they are two faces of one story. Enormous fiscal and monetary support met a supply-constrained reopening; demand snapped back hard (the strong real recovery and the tight labor market), that strength collided with disrupted supply (the inflation overshoot), and the overshoot forced the hiking cycle (the rates miss). The robust real economy and the nominal explosion are the same demand-driven event seen from different angles, not a run of unrelated luck.</p>\n\n<p>Beneath the aggregates the composition shifted too \u2014 the mix of consumption, investment, and trade did not settle back into its old grooves \u2014 but the headline reading is simple and worth holding onto: measured against the last forecast made before the world changed, we arrived at roughly the real economy that was expected, resting on a permanently higher price level and a permanently higher structure of interest rates.</p>\n"
  },
@@ -1950,16 +1950,16 @@
     },
     {
      "date": "2026Q3",
-     "actual": 86.96,
+     "actual": 87.11,
      "forecast": 60.85
     }
    ],
    "latest": {
     "date": "2026Q3",
-    "actual": 86.96,
+    "actual": 87.11,
     "forecast": 60.85,
-    "gap_value": 26.11,
-    "gap_pct": 42.91,
+    "gap_value": 26.26,
+    "gap_pct": 43.16,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -2146,14 +2146,19 @@
      "date": "2026Q2",
      "actual": 2.9533,
      "forecast": 2.4053
+    },
+    {
+     "date": "2026Q3",
+     "actual": 2.8733,
+     "forecast": 2.462
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 2.9533,
-    "forecast": 2.4053,
-    "gap_value": 0.55,
-    "gap_pct": 22.78,
+    "date": "2026Q3",
+    "actual": 2.8733,
+    "forecast": 2.462,
+    "gap_value": 0.41,
+    "gap_pct": 16.71,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -2734,15 +2739,20 @@
      "date": "2026Q2",
      "actual": 4.267,
      "forecast": 4.614
+    },
+    {
+     "date": "2026Q3",
+     "actual": 4.133,
+     "forecast": 4.621
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 4.267,
-    "forecast": 4.614,
-    "gap_value": -0.35,
+    "date": "2026Q3",
+    "actual": 4.133,
+    "forecast": 4.621,
+    "gap_value": -0.49,
     "gap_pct": null,
-    "gap_ppt": -0.35,
+    "gap_ppt": -0.49,
     "direction": "below"
    }
   },
@@ -2928,14 +2938,19 @@
      "date": "2026Q2",
      "actual": 169.81,
      "forecast": 168.123
+    },
+    {
+     "date": "2026Q3",
+     "actual": 169.711,
+     "forecast": 168.191
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 169.81,
-    "forecast": 168.123,
-    "gap_value": 1.69,
-    "gap_pct": 1.0,
+    "date": "2026Q3",
+    "actual": 169.711,
+    "forecast": 168.191,
+    "gap_value": 1.52,
+    "gap_pct": 0.9,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -3122,15 +3137,20 @@
      "date": "2026Q2",
      "actual": 61.7,
      "forecast": 61.458
+    },
+    {
+     "date": "2026Q3",
+     "actual": 61.6,
+     "forecast": 61.384
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 61.7,
-    "forecast": 61.458,
-    "gap_value": 0.24,
+    "date": "2026Q3",
+    "actual": 61.6,
+    "forecast": 61.384,
+    "gap_value": 0.22,
     "gap_pct": null,
-    "gap_ppt": 0.24,
+    "gap_ppt": 0.22,
     "direction": "above"
    }
   },
@@ -3316,15 +3336,20 @@
      "date": "2026Q2",
      "actual": 59.1,
      "forecast": 58.623
+    },
+    {
+     "date": "2026Q3",
+     "actual": 59.067,
+     "forecast": 58.547
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 59.1,
-    "forecast": 58.623,
-    "gap_value": 0.48,
+    "date": "2026Q3",
+    "actual": 59.067,
+    "forecast": 58.547,
+    "gap_value": 0.52,
     "gap_pct": null,
-    "gap_ppt": 0.48,
+    "gap_ppt": 0.52,
     "direction": "above"
    },
    "note": "CBO did not publish EPOP; the CBO line is its civilian employment \u00f7 its civilian noninstitutional population (16+), which reproduces the actual ratio over CBO's own history."
@@ -3511,14 +3536,19 @@
      "date": "2026Q2",
      "actual": 162.552,
      "forecast": 160.325
+    },
+    {
+     "date": "2026Q3",
+     "actual": 162.692,
+     "forecast": 160.378
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 162.552,
-    "forecast": 160.325,
-    "gap_value": 2.23,
-    "gap_pct": 1.39,
+    "date": "2026Q3",
+    "actual": 162.692,
+    "forecast": 160.378,
+    "gap_value": 2.31,
+    "gap_pct": 1.44,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -3705,14 +3735,19 @@
      "date": "2026Q2",
      "actual": 158.85,
      "forecast": 154.959
+    },
+    {
+     "date": "2026Q3",
+     "actual": 158.98,
+     "forecast": 155.063
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 158.85,
-    "forecast": 154.959,
-    "gap_value": 3.89,
-    "gap_pct": 2.51,
+    "date": "2026Q3",
+    "actual": 158.98,
+    "forecast": 155.063,
+    "gap_value": 3.92,
+    "gap_pct": 2.53,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -4287,14 +4322,19 @@
      "date": "2026Q2",
      "actual": 275.058,
      "forecast": 273.346
+    },
+    {
+     "date": "2026Q3",
+     "actual": 275.417,
+     "forecast": 273.79
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 275.058,
-    "forecast": 273.346,
-    "gap_value": 1.71,
-    "gap_pct": 0.63,
+    "date": "2026Q3",
+    "actual": 275.417,
+    "forecast": 273.79,
+    "gap_value": 1.63,
+    "gap_pct": 0.59,
     "gap_ppt": null,
     "direction": "above"
    }
@@ -4676,15 +4716,20 @@
      "date": "2026Q2",
      "actual": 4.423,
      "forecast": 2.869
+    },
+    {
+     "date": "2026Q3",
+     "actual": 4.757,
+     "forecast": 2.882
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 4.423,
-    "forecast": 2.869,
-    "gap_value": 1.55,
+    "date": "2026Q3",
+    "actual": 4.757,
+    "forecast": 2.882,
+    "gap_value": 1.87,
     "gap_pct": null,
-    "gap_ppt": 1.55,
+    "gap_ppt": 1.87,
     "direction": "above"
    }
   },
@@ -4870,15 +4915,20 @@
      "date": "2026Q2",
      "actual": 3.623,
      "forecast": 2.29
+    },
+    {
+     "date": "2026Q3",
+     "actual": 3.797,
+     "forecast": 2.297
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 3.623,
-    "forecast": 2.29,
-    "gap_value": 1.33,
+    "date": "2026Q3",
+    "actual": 3.797,
+    "forecast": 2.297,
+    "gap_value": 1.5,
     "gap_pct": null,
-    "gap_ppt": 1.33,
+    "gap_ppt": 1.5,
     "direction": "above"
    }
   },
@@ -5064,15 +5114,20 @@
      "date": "2026Q2",
      "actual": 3.633,
      "forecast": 2.46
+    },
+    {
+     "date": "2026Q3",
+     "actual": 3.67,
+     "forecast": 2.467
     }
    ],
    "latest": {
-    "date": "2026Q2",
-    "actual": 3.633,
-    "forecast": 2.46,
-    "gap_value": 1.17,
+    "date": "2026Q3",
+    "actual": 3.67,
+    "forecast": 2.467,
+    "gap_value": 1.2,
     "gap_pct": null,
-    "gap_ppt": 1.17,
+    "gap_ppt": 1.2,
     "direction": "above"
    }
   },
