@@ -181,47 +181,47 @@
           "id": "nar_affordability",
           "name": "NAR affordability index",
           "unit": "idx",
-          "val": "104.7",
+          "val": "105.4",
           "tone": "warm",
           "spark": [
-            106.7,
-            107.1,
-            108.7,
-            111.0,
+            107.3,
+            109.1,
+            111.4,
+            116.6,
             116.5,
-            116.1,
-            112.0,
-            108.0,
-            105.1,
-            101.8,
-            102.8,
-            104.7
+            112.5,
+            108.6,
+            104.6,
+            101.4,
+            102.7,
+            103.7,
+            105.4
           ],
           "ctx": "Higher = more affordable; 100 = a median-income family exactly qualifies for the median home. Improving YoY as <b>income growth</b> edges out price gains.",
           "_source": "fred",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "implied_pi",
           "name": "Implied P&I, median home",
           "unit": "/mo",
-          "val": "$2,377",
+          "val": "$2,313",
           "tone": "hot",
           "spark": [
-            2168,
-            2181,
-            2188,
-            2206,
-            2213,
-            2208,
-            2204,
-            2206,
-            2217,
+            2109,
+            2122,
+            2129,
+            2146,
+            2153,
+            2149,
+            2144,
+            2146,
+            2157,
+            2169,
+            2211,
             2229,
-            2272,
-            2291,
-            2349,
-            2377
+            2285,
+            2313
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
           "_source": "fred",
@@ -239,24 +239,24 @@
         {
           "id": "existing_sales",
           "k": "Existing-home sales (SAAR)",
-          "v": "3.98M",
-          "p": "4.06M",
-          "d": "−1.2%",
+          "v": "3.99M",
+          "p": "3.93M",
+          "d": "−2.2%",
           "dir": "dn",
           "s": "NAR",
           "_source": "fred",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "months_supply",
           "k": "Months' supply",
-          "v": "4.9",
-          "p": "4.6",
+          "v": "4.8",
+          "p": "4.8",
           "d": "+0.3",
           "dir": "up",
           "s": "NAR",
           "_source": "fred",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "total_inventory",
@@ -272,13 +272,13 @@
         {
           "id": "median_existing_price",
           "k": "Median existing-home price",
-          "v": "$429,100",
-          "p": "$436,400",
-          "d": "+1.6%",
+          "v": "$417,500",
+          "p": "$427,700",
+          "d": "+1.3%",
           "dir": "up",
           "s": "NAR",
           "_source": "fred",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "median_dom",
@@ -399,9 +399,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Oct 13 2026 · live via FRED · calibration editorial",
+  "asof": "Updated Oct 14 2026 · live via FRED · calibration editorial",
   "data_through": "Oct 8 2026",
-  "generated_at": "2026-10-13T02:47:17+00:00",
+  "generated_at": "2026-10-14T00:47:08+00:00",
   "sources": {
     "fred": 24,
     "config": 0,
