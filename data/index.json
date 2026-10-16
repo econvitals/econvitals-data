@@ -326,7 +326,7 @@
       "title": "China: Consumer Price Inflation",
       "type": "line",
       "units": "Percent, year-over-year",
-      "latest_date": "2026-08-01"
+      "latest_date": "2026-09-01"
     },
     {
       "slug": "china-exports-imports",
@@ -406,7 +406,7 @@
       "title": "Change in Commodity Prices",
       "type": "category_bar",
       "units": "Percent change, year to date",
-      "latest_date": "2026-10-15"
+      "latest_date": "2026-10-16"
     },
     {
       "slug": "composite-activity",
@@ -889,6 +889,22 @@
       "latest_date": "2026-08-01"
     },
     {
+      "slug": "corporate-cash-flow-capex",
+      "category": "Static/Investment",
+      "title": "U.S. Corporate Cash Flow and Capital Spending",
+      "type": "line",
+      "units": "Billions of dollars, SAAR",
+      "latest_date": "2026-04-01"
+    },
+    {
+      "slug": "corporate-financing-surplus-share-capex",
+      "category": "Static/Investment",
+      "title": "U.S. Corporate Financing Surplus as a Share of Capital Spending",
+      "type": "line",
+      "units": "Percent of capital spending",
+      "latest_date": "2026-04-01"
+    },
+    {
       "slug": "corporate-profit-share",
       "category": "Income and Outlays",
       "title": "Corporate Profits",
@@ -1054,7 +1070,7 @@
       "title": "Corporate Bond Spreads",
       "type": "line",
       "units": "Option-adjusted spread, percentage points",
-      "latest_date": "2026-10-13"
+      "latest_date": "2026-10-14"
     },
     {
       "slug": "current-account-balance",
@@ -1321,12 +1337,284 @@
       "latest_date": "Core"
     },
     {
+      "slug": "ec10-black-white-men-earnings",
+      "category": "Static/Ec10",
+      "title": "Median Black Men's Earnings Relative to White Men's",
+      "type": "xy_line",
+      "units": "Percent",
+      "latest_date": "2014"
+    },
+    {
+      "slug": "ec10-black-white-men-earnings-annotated",
+      "category": "Static/Ec10",
+      "title": "Median Black Men's Earnings Relative to White Men's",
+      "type": "xy_line",
+      "units": "Percent",
+      "latest_date": "2014.0"
+    },
+    {
       "slug": "ec10-break-up-big-tech",
       "category": "Static/Ec10",
       "title": "Would You Support or Oppose Breaking up Big Tech Companies?",
       "type": "period_compare",
       "units": "Percent",
       "latest_date": "2026-10-07"
+    },
+    {
+      "slug": "ec10-callback-race-criminal-record",
+      "category": "Static/Ec10",
+      "title": "Callback Rates Before and After Ban-the-Box, by Race",
+      "type": "period_compare",
+      "units": "Percent of applications",
+      "latest_date": "2015-01-01"
+    },
+    {
+      "slug": "ec10-card-krueger",
+      "category": "Static/Ec10",
+      "title": "Fast-Food Employment Before and After New Jersey's 1992 Minimum Wage Increase",
+      "type": "period_compare",
+      "units": "Full-time-equivalent employees per restaurant",
+      "latest_date": "1992-02-01"
+    },
+    {
+      "slug": "ec10-cbo-minimum-wage-elasticities",
+      "category": "Static/Ec10",
+      "title": "Short-Run Employment Elasticities for All Directly Affected Workers, by Study",
+      "type": "table",
+      "units": "",
+      "latest_date": "Derenoncourt and Montialoux (2018)"
+    },
+    {
+      "slug": "ec10-ceo-worker-pay-ratio",
+      "category": "Static/Ec10",
+      "title": "CEO Pay Relative to Worker Pay, 1980\u20132025",
+      "type": "line",
+      "units": "CEO pay divided by worker pay",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-child-tax-credit-expansion",
+      "category": "Static/Ec10",
+      "title": "Child Tax Credit, Single Parent With Two Children, 2021 and 2026",
+      "type": "xy_line",
+      "units": "Dollars",
+      "latest_date": "300000.0"
+    },
+    {
+      "slug": "ec10-child-tax-credit-schedule",
+      "category": "Static/Ec10",
+      "title": "Child Tax Credit, 2026",
+      "type": "xy_line",
+      "units": "Credit, dollars",
+      "latest_date": "300000.0"
+    },
+    {
+      "slug": "ec10-college-premium-actual-predicted",
+      "category": "Static/Ec10",
+      "title": "Actual and Predicted College Wage Premium, 1914\u20132017",
+      "type": "xy_line",
+      "units": "Log points",
+      "latest_date": "2017"
+    },
+    {
+      "slug": "ec10-college-wage-premium",
+      "category": "Static/Ec10",
+      "title": "College Wage Premium, 1914\u20132017",
+      "type": "xy_line",
+      "units": "Log points",
+      "latest_date": "2017"
+    },
+    {
+      "slug": "ec10-early-deaths-by-cause",
+      "category": "Static/Ec10",
+      "title": "Early Deaths by Cause, 2010",
+      "type": "columns",
+      "units": "Percent of deaths before age 80",
+      "latest_date": "2010-01-10"
+    },
+    {
+      "slug": "ec10-eitc-schedule",
+      "category": "Static/Ec10",
+      "title": "Earned Income Tax Credit, 2026",
+      "type": "xy_line",
+      "units": "Credit, dollars",
+      "latest_date": "300000.0"
+    },
+    {
+      "slug": "ec10-employer-premiums",
+      "category": "Static/Ec10",
+      "title": "Employer-Sponsored Health Insurance Premiums, 2025",
+      "type": "stack_column",
+      "units": "Average annual premium, dollars",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-family-health-spending",
+      "category": "Static/Ec10",
+      "title": "Health Spending for a Median-Income Family of Four, 2025",
+      "type": "stack_column",
+      "units": "Dollars per year",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-family-health-spending-distribution",
+      "category": "Static/Ec10",
+      "title": "Distribution of Health Spending for Families of Four, 2024",
+      "type": "xy_line",
+      "units": "Percent in each $2,000 range",
+      "latest_date": "60000.0"
+    },
+    {
+      "slug": "ec10-federal-income-tax-rates-by-income",
+      "category": "Static/Ec10",
+      "title": "Average Tax Rates by Income Group, 2022",
+      "type": "stack_column",
+      "units": "Percent of income before transfers and taxes",
+      "latest_date": "Top 1\npercent\n$2,701k"
+    },
+    {
+      "slug": "ec10-federal-spending-by-category",
+      "category": "Static/Ec10",
+      "title": "Federal Spending by Category, Fiscal Year 2025",
+      "type": "pie",
+      "units": "Percent of the total, excluding interest",
+      "latest_date": "2000-01-14"
+    },
+    {
+      "slug": "ec10-federal-spending-mix",
+      "category": "Static/Ec10",
+      "title": "Composition of Federal Spending, 1950 and 2025",
+      "type": "period_compare",
+      "units": "Percent of the total, excluding interest",
+      "latest_date": "2025-09-30"
+    },
+    {
+      "slug": "ec10-federal-state-minimum-wage",
+      "category": "Static/Ec10",
+      "title": "Federal and State Minimum Wages",
+      "type": "line",
+      "units": "Dollars per hour",
+      "latest_date": "2026-01-01"
+    },
+    {
+      "slug": "ec10-female-male-earnings-ratio",
+      "category": "Static/Ec10",
+      "title": "Women's Earnings Relative to Men's",
+      "type": "line",
+      "units": "Percent",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-gender-gap-components",
+      "category": "Static/Ec10",
+      "title": "Components of the Female-Male Wage Gap",
+      "type": "stack_column",
+      "units": "Percent of men's average hourly wage",
+      "latest_date": "2010-01-01"
+    },
+    {
+      "slug": "ec10-government-spending-gdp",
+      "category": "Static/Ec10",
+      "title": "Government Spending, 1930\u20132025",
+      "type": "stack",
+      "units": "Percent of GDP",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-health-spending-by-type",
+      "category": "Static/Ec10",
+      "title": "National Health Expenditures by Type, 2024",
+      "type": "columns",
+      "units": "Percent of total",
+      "latest_date": "2024-01-06"
+    },
+    {
+      "slug": "ec10-health-spending-share-of-gdp",
+      "category": "Static/Ec10",
+      "title": "National Health Expenditures",
+      "type": "line",
+      "units": "Percent of GDP",
+      "latest_date": "2024-01-01"
+    },
+    {
+      "slug": "ec10-hospital-prices-by-market-structure",
+      "category": "Static/Ec10",
+      "title": "Hospital Prices by Market Structure",
+      "type": "cycle_bar",
+      "units": "Percent difference in price",
+      "latest_date": "2000-01-03"
+    },
+    {
+      "slug": "ec10-hourly-wage-asian-white",
+      "category": "Static/Ec10",
+      "title": "Average Hourly Wage, 2025",
+      "type": "period_compare",
+      "units": "Dollars per hour; (%) = Asian as percent of white",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-hourly-wage-black-white",
+      "category": "Static/Ec10",
+      "title": "Average Hourly Wage, 2025",
+      "type": "period_compare",
+      "units": "Dollars per hour; (%) = Black as percent of white",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-hourly-wage-by-education-asian-white",
+      "category": "Static/Ec10",
+      "title": "Average Hourly Wage by Education, 2025",
+      "type": "period_compare",
+      "units": "Dollars per hour; (%) = Asian as percent of white",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-hourly-wage-by-education-black-white",
+      "category": "Static/Ec10",
+      "title": "Average Hourly Wage by Education, 2025",
+      "type": "period_compare",
+      "units": "Dollars per hour; (%) = Black as percent of white",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-hourly-wage-by-education-hispanic-white",
+      "category": "Static/Ec10",
+      "title": "Average Hourly Wage by Education, 2025",
+      "type": "period_compare",
+      "units": "Dollars per hour; (%) = Hispanic as percent of white",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-hourly-wage-by-education-women-men",
+      "category": "Static/Ec10",
+      "title": "Average Hourly Wage by Education, 2025",
+      "type": "period_compare",
+      "units": "Dollars per hour; (%) = women as percent of men",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-hourly-wage-distribution",
+      "category": "Static/Ec10",
+      "title": "Distribution of Hourly Wages, 2025",
+      "type": "xy_line",
+      "units": "Percent of workers, per dollar of hourly wage",
+      "latest_date": "100.0"
+    },
+    {
+      "slug": "ec10-hourly-wage-hispanic-white",
+      "category": "Static/Ec10",
+      "title": "Average Hourly Wage, 2025",
+      "type": "period_compare",
+      "units": "Dollars per hour; (%) = Hispanic as percent of white",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-hourly-wage-women-men",
+      "category": "Static/Ec10",
+      "title": "Average Hourly Wage, 2025",
+      "type": "period_compare",
+      "units": "Dollars per hour; (%) = women as percent of men",
+      "latest_date": "2025-01-01"
     },
     {
       "slug": "ec10-ideal-system",
@@ -1337,12 +1625,332 @@
       "latest_date": "2000-01-01"
     },
     {
+      "slug": "ec10-imports-share-gdp",
+      "category": "Static/Ec10",
+      "title": "Imports as a Share of GDP",
+      "type": "line",
+      "units": "Percent",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-imprisonment-rates-by-race",
+      "category": "Static/Ec10",
+      "title": "Imprisonment Rates by Race and Ethnicity",
+      "type": "xy_line",
+      "units": "Prisoners per 100,000 adults in each group",
+      "latest_date": "2023"
+    },
+    {
+      "slug": "ec10-laffer-curve",
+      "category": "Static/Ec10",
+      "title": "Revenue From a Tax on the Top 1 Percent",
+      "type": "xy_line",
+      "units": "Billions of dollars",
+      "latest_date": "100.0"
+    },
+    {
+      "slug": "ec10-life-expectancy-vs-health-spending",
+      "category": "Static/Ec10",
+      "title": "Life Expectancy and Health Spending per Person, 1970\u20132024",
+      "type": "xy_line",
+      "units": "Years, at birth",
+      "latest_date": "USA"
+    },
+    {
+      "slug": "ec10-lottery-10000-plays",
+      "category": "Static/Ec10",
+      "title": "Total Winnings From 10,000 Plays of a +$11/\u2212$10 Coin Flip",
+      "type": "xy_line",
+      "units": "Percent chance, per $100",
+      "latest_date": "9998"
+    },
+    {
+      "slug": "ec10-manager-bias-performance",
+      "category": "Static/Ec10",
+      "title": "Worker Performance and Manager Bias",
+      "type": "period_compare",
+      "units": "Change in items scanned per minute",
+      "latest_date": "2017-01-01"
+    },
+    {
+      "slug": "ec10-marginal-average-tax-rates",
+      "category": "Static/Ec10",
+      "title": "Marginal and Average Tax Rates, 2026",
+      "type": "xy_line",
+      "units": "Percent of earnings, married couple with two children",
+      "latest_date": "500000.0"
+    },
+    {
+      "slug": "ec10-mba-earnings-ratio",
+      "category": "Static/Ec10",
+      "title": "Women's Earnings Relative to Men's, by Years Since MBA",
+      "type": "period_compare",
+      "units": "Percent",
+      "latest_date": "2020-01-01"
+    },
+    {
+      "slug": "ec10-median-compensation",
+      "category": "Static/Ec10",
+      "title": "Median Compensation per Hour Worked, March 2026",
+      "type": "stack_column",
+      "units": "Dollars per hour worked",
+      "latest_date": "2026-03-01"
+    },
+    {
+      "slug": "ec10-oecd-government-spending",
+      "category": "Static/Ec10",
+      "title": "Government Spending in Advanced Economies, 2024",
+      "type": "columns",
+      "units": "Percent of GDP",
+      "latest_date": "2000-01-28"
+    },
+    {
+      "slug": "ec10-oecd-minimum-to-median",
+      "category": "Static/Ec10",
+      "title": "Minimum Wages Relative to the Median Wage, 2025",
+      "type": "columns",
+      "units": "Percent of the median wage",
+      "latest_date": "2000-01-24"
+    },
+    {
+      "slug": "ec10-oecd-real-minimum-wage",
+      "category": "Static/Ec10",
+      "title": "Hourly Minimum Wages in Advanced Economies, 2025",
+      "type": "columns",
+      "units": "2025 U.S. dollars, converted at purchasing power parity",
+      "latest_date": "2000-01-24"
+    },
+    {
+      "slug": "ec10-oecd-revenue-share-of-gdp",
+      "category": "Static/Ec10",
+      "title": "Government Revenue in Advanced Economies, 2025",
+      "type": "columns",
+      "units": "Percent of GDP",
+      "latest_date": "2000-01-28"
+    },
+    {
+      "slug": "ec10-other-federal-tax-rates-by-income",
+      "category": "Static/Ec10",
+      "title": "Average Tax Rates by Income Group, 2022",
+      "type": "stack_column",
+      "units": "Percent of income before transfers and taxes",
+      "latest_date": "Top 1\npercent\n$2,701k"
+    },
+    {
+      "slug": "ec10-poverty-family-of-four",
+      "category": "Static/Ec10",
+      "title": "Income of a Hypothetical Family of Four, 2026",
+      "type": "stack_column",
+      "units": "Dollars per year",
+      "latest_date": "Poverty\nline"
+    },
+    {
+      "slug": "ec10-preschool-mother-works",
+      "category": "Static/Ec10",
+      "title": "Agree That Preschool Children Suffer If Their Mother Works",
+      "type": "xy_line",
+      "units": "Percent agreeing",
+      "latest_date": "2002"
+    },
+    {
+      "slug": "ec10-receipts-share-of-gdp",
+      "category": "Static/Ec10",
+      "title": "Government Receipts",
+      "type": "stack",
+      "units": "Percent of GDP",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-single-parent-tax-rates",
+      "category": "Static/Ec10",
+      "title": "Tax and Transfer Rates for a Single Parent With One Child, 2026",
+      "type": "xy_line",
+      "units": "Percent",
+      "latest_date": "75000.0"
+    },
+    {
+      "slug": "ec10-snap-benefit-example",
+      "category": "Static/Ec10",
+      "title": "Calculating a Family's Monthly SNAP Benefit, Fiscal Year 2027",
+      "type": "table",
+      "units": "",
+      "latest_date": null
+    },
+    {
       "slug": "ec10-soup-survey",
       "category": "Static/Ec10",
       "title": "How Many People Were Involved in Getting You a Can of Soup?",
       "type": "cycle_bar",
       "units": "Percent of students, by answer",
       "latest_date": "2000-01-07"
+    },
+    {
+      "slug": "ec10-spm-market-vs-post-tax",
+      "category": "Static/Ec10",
+      "title": "Poverty Before and After Taxes and Transfers, 1967\u20132024",
+      "type": "gap",
+      "units": "Percent of people",
+      "latest_date": "2024-01-01"
+    },
+    {
+      "slug": "ec10-spm-poverty-by-group",
+      "category": "Static/Ec10",
+      "title": "Supplemental Poverty Rates by Group, 2025",
+      "type": "columns",
+      "units": "Percent of people in each group",
+      "latest_date": "2000-01-11"
+    },
+    {
+      "slug": "ec10-state-local-tax-rates-by-income",
+      "category": "Static/Ec10",
+      "title": "Average Tax Rates by Income Group",
+      "type": "stack_column",
+      "units": "Percent of family income",
+      "latest_date": "Top 1\npercent\n$2,701k"
+    },
+    {
+      "slug": "ec10-stock-returns-year-to-year",
+      "category": "Static/Ec10",
+      "title": "S&P 500 Returns in Consecutive Years",
+      "type": "scatter_fit",
+      "units": "Percent",
+      "latest_date": "2024"
+    },
+    {
+      "slug": "ec10-stylized-average-tax-rates",
+      "category": "Static/Ec10",
+      "title": "Stylized Average Tax Rates",
+      "type": "xy_line",
+      "units": "Percent of earnings",
+      "latest_date": "500000"
+    },
+    {
+      "slug": "ec10-tax-transfer-rates-by-income",
+      "category": "Static/Ec10",
+      "title": "Average Federal Tax and Transfer Rates by Income Group, 2022",
+      "type": "stack_column",
+      "units": "Percent of income before transfers and taxes",
+      "latest_date": "Top 1\npercent\n$2,701k"
+    },
+    {
+      "slug": "ec10-top-rate-vs-millionaire-rate",
+      "category": "Static/Ec10",
+      "title": "Federal Income Tax Rates at the Top",
+      "type": "line",
+      "units": "Percent; $1 million in 2026 dollars",
+      "latest_date": "2026-01-01"
+    },
+    {
+      "slug": "ec10-top1-share-pre-post-tax-oecd",
+      "category": "Static/Ec10",
+      "title": "Top 1% Income Share in Advanced Economies, 2023",
+      "type": "dumbbell",
+      "units": "Percent of national income",
+      "latest_date": "U.S."
+    },
+    {
+      "slug": "ec10-top1-share-psz-vs-as",
+      "category": "Static/Ec10",
+      "title": "Income Share of the Top 1% in the United States, 1968\u20132022",
+      "type": "line",
+      "units": "Percent of pre-tax national income",
+      "latest_date": "2022-01-01"
+    },
+    {
+      "slug": "ec10-total-tax-rates-by-income",
+      "category": "Static/Ec10",
+      "title": "Average Tax Rates by Income Group, 2022",
+      "type": "stack_column",
+      "units": "Percent of income before transfers and taxes",
+      "latest_date": "Top 1\npercent\n$2,701k"
+    },
+    {
+      "slug": "ec10-trucking-2020-2021",
+      "category": "Static/Ec10",
+      "title": "General Freight Trucking",
+      "type": "line",
+      "units": "Index, January 2020 = 100",
+      "latest_date": "2021-09-01"
+    },
+    {
+      "slug": "ec10-uninsured-rate",
+      "category": "Static/Ec10",
+      "title": "Uninsured Rate, 1963\u20132025",
+      "type": "xy_line",
+      "units": "Percent of the population",
+      "latest_date": "2025"
+    },
+    {
+      "slug": "ec10-unions-and-bottom90-share",
+      "category": "Static/Ec10",
+      "title": "Union Membership and the Income Share of the Bottom 90%, 1917\u20132025",
+      "type": "line",
+      "units": "Percent of workers",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-us-average-tariff-rate",
+      "category": "Static/Ec10",
+      "title": "Average U.S. Tariff Rate on Imports",
+      "type": "line",
+      "units": "Percent",
+      "latest_date": "2026-01-01"
+    },
+    {
+      "slug": "ec10-us-life-expectancy",
+      "category": "Static/Ec10",
+      "title": "U.S. Life Expectancy at Birth, 1900\u20132024",
+      "type": "line",
+      "units": "Years",
+      "latest_date": "2024-01-01"
+    },
+    {
+      "slug": "ec10-wage-growth-by-percentile-gender",
+      "category": "Static/Ec10",
+      "title": "Real Hourly Wage Growth by Percentile and Gender, 1979\u20132025",
+      "type": "grouped_bar",
+      "units": "Average annual percent change",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-wage-index-by-percentile",
+      "category": "Static/Ec10",
+      "title": "Real Hourly Wages by Percentile, 2013\u20132025",
+      "type": "line",
+      "units": "Index, 2013 = 100",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-weekly-earnings-by-education",
+      "category": "Static/Ec10",
+      "title": "Median Weekly Earnings by Education, 2025",
+      "type": "cycle_bar",
+      "units": "Dollars per week",
+      "latest_date": "2000-01-04"
+    },
+    {
+      "slug": "ec10-weekly-earnings-gap-by-race",
+      "category": "Static/Ec10",
+      "title": "Weekly Earnings Gap by Race and Ethnicity, 1979\u20132025",
+      "type": "line",
+      "units": "Percent of White workers' median",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-weekly-earnings-race-sex",
+      "category": "Static/Ec10",
+      "title": "Weekly Earnings by Race and Sex, 2025",
+      "type": "period_compare",
+      "units": "Percent of white men's median",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "ec10-years-of-schooling-by-birth-year",
+      "category": "Static/Ec10",
+      "title": "Mean Years of Schooling at Age 30 by Year of Birth",
+      "type": "xy_line",
+      "units": "Years",
+      "latest_date": "1987"
     },
     {
       "slug": "eci-benefits",
@@ -1974,7 +2582,7 @@
       "title": "Euro Area: 10-Year Sovereign Credit Premium",
       "type": "line",
       "units": "Basis points",
-      "latest_date": "2026-10-14"
+      "latest_date": "2026-10-15"
     },
     {
       "slug": "europe-ea-hicp",
@@ -2054,7 +2662,7 @@
       "title": "December Fed Funds Forecast vs. the Actual Rate",
       "type": "line",
       "units": "Percent",
-      "latest_date": "2026-10-14"
+      "latest_date": "2026-10-15"
     },
     {
       "slug": "fed-dots-forecast-error",
@@ -2729,6 +3337,22 @@
       "latest_date": "2026-08-01"
     },
     {
+      "slug": "hyperscaler-cash-flow-capex",
+      "category": "Static/AI-Tech",
+      "title": "Hyperscalers' Cash Flow and Capital Spending",
+      "type": "line",
+      "units": "Billions of dollars, four-quarter totals",
+      "latest_date": "2026-04-01"
+    },
+    {
+      "slug": "hyperscaler-financing-surplus-share-capex",
+      "category": "Static/AI-Tech",
+      "title": "Financing Surplus as a Share of Capital Spending: Five Hyperscalers and All U.S. Corporations",
+      "type": "line",
+      "units": "Percent of capital spending",
+      "latest_date": "2026-04-01"
+    },
+    {
       "slug": "industry-unemployment-scatter",
       "category": "Static/Employment",
       "title": "Industry Unemployment Rates: 2019 vs. 2025",
@@ -3038,7 +3662,7 @@
       "title": "Market Rents vs. CPI Shelter",
       "type": "line",
       "units": "Year-over-year percent change",
-      "latest_date": "2026-08-01"
+      "latest_date": "2026-09-01"
     },
     {
       "slug": "median-cpi",
@@ -3126,7 +3750,7 @@
       "title": "National House Price Indexes",
       "type": "line",
       "units": "Index, January 2012 = 100",
-      "latest_date": "2026-08-01"
+      "latest_date": "2026-09-01"
     },
     {
       "slug": "nbfi-loans",
@@ -4878,7 +5502,7 @@
       "title": "10-Year Treasury Yield Decomposition",
       "type": "stack",
       "units": "Percent",
-      "latest_date": "2026-10-14"
+      "latest_date": "2026-10-15"
     },
     {
       "slug": "ten-year-decomposition-monthly",
