@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-16T15:02:30+00:00",
+ "generated_at": "2026-10-16T15:31:12+00:00",
  "as_of": "2026-10-15",
  "n_rows": 19,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
@@ -9,25 +9,25 @@
    "rows": [
     {
      "label": "2-year",
-     "value": 4.82,
-     "as_of": "2026-10-14",
+     "value": 4.77,
+     "as_of": "2026-10-15",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/2Y",
-     "chg_1d": 0.03,
-     "chg_1w": 0.03,
-     "chg_ytd": 1.35
+     "chg_1d": -0.05,
+     "chg_1w": 0.0,
+     "chg_ytd": 1.3
     },
     {
      "label": "5-year",
-     "value": 5.0,
-     "as_of": "2026-10-14",
+     "value": 4.91,
+     "as_of": "2026-10-15",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/5Y",
-     "chg_1d": 0.0,
-     "chg_1w": -0.03,
-     "chg_ytd": 1.26
+     "chg_1d": -0.09,
+     "chg_1w": -0.12,
+     "chg_ytd": 1.17
     },
     {
      "label": "10-year",
@@ -42,14 +42,14 @@
     },
     {
      "label": "30-year",
-     "value": 5.52,
-     "as_of": "2026-10-14",
+     "value": 5.43,
+     "as_of": "2026-10-15",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/30Y",
-     "chg_1d": -0.04,
-     "chg_1w": -0.12,
-     "chg_ytd": 0.66
+     "chg_1d": -0.09,
+     "chg_1w": -0.24,
+     "chg_ytd": 0.57
     },
     {
      "label": "30-year mortgage",
@@ -64,14 +64,14 @@
     },
     {
      "label": "2s10s",
-     "value": 0.37,
-     "as_of": "2026-10-14",
+     "value": 0.33,
+     "as_of": "2026-10-15",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:par/2Y",
-     "chg_1d": -0.05,
-     "chg_1w": -0.11,
-     "chg_ytd": -0.35
+     "chg_1d": -0.04,
+     "chg_1w": -0.18,
+     "chg_ytd": -0.39
     }
    ]
   },
@@ -102,14 +102,14 @@
     },
     {
      "label": "5y5y fwd breakeven",
-     "value": 2.34,
-     "as_of": "2026-10-14",
+     "value": 2.31,
+     "as_of": "2026-10-15",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:real/10Y \u2212 ust:par/5Y \u2212 ust:real/5Y",
-     "chg_1d": 0.01,
-     "chg_1w": -0.01,
-     "chg_ytd": 0.12
+     "chg_1d": -0.03,
+     "chg_1w": -0.04,
+     "chg_ytd": 0.09
     }
    ]
   },
