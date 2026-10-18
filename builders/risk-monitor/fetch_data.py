@@ -534,7 +534,7 @@ def build():
             "phase_note": "Automatable core — 15 FRED gauges plus register and The "
                           "Read. Still to come: scrape/paid gauges (Shiller CAPE & "
                           "equity risk premium, FDIC bank capital, CFTC basis-trade "
-                          "short) and the monthly PDF email.",
+                          "short).",
         },
         "regime": {
             "stress": stress_score, "vuln": vuln_score,
