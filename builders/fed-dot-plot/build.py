@@ -46,6 +46,16 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
+
+# requests puts the full keyed URL into its exception text; the log is a public Actions log.
+# GitHub masks the exact secret, but a log line should not carry it in the first place.
+_KEYED = re.compile(r"(api_key=)[^&\s'\"]+")
+
+
+def _scrub(text: str) -> str:
+    """`text` with any FRED key value replaced by <redacted>."""
+    return _KEYED.sub(r"\1<redacted>", text)
+
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent  # builders/fed-dot-plot/ -> repo root
 OUT = REPO / "tools" / "fed-dot-plot" / "data.json"
@@ -355,7 +365,7 @@ def fetch_fred_fedfunds(api_key: str):
                 current = {"ym": o["date"], "rate": round(float(o["value"]), 3)}
                 break
     except Exception as e:  # noqa: BLE001
-        log(f"! DFF fetch failed ({e}); using monthly FEDFUNDS for 'current'")
+        log(f"! DFF fetch failed ({_scrub(str(e))}); using monthly FEDFUNDS for 'current'")
     return year_end, current
 
 
@@ -424,7 +434,7 @@ def main() -> int:
             log(f"FRED FEDFUNDS: realized year-ends {min(year_end)}–"
                 f"{max(year_end)}; current {current['rate']}% ({current['ym']})")
         except Exception as e:  # noqa: BLE001
-            log(f"! FRED fetch failed ({e}); continuing without overlay")
+            log(f"! FRED fetch failed ({_scrub(str(e))}); continuing without overlay")
     elif not args.no_fred:
         log("! FRED_API_KEY not set; continuing without overlay")
 

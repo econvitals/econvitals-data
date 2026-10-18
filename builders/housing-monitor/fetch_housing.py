@@ -35,6 +35,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import re
 import os
 import sys
 import time
@@ -42,6 +43,17 @@ from pathlib import Path
 
 import requests
 import yaml
+
+
+# requests puts the FULL keyed URL into its exception text ("400 Client Error ... for url:
+# ...?api_key=..."), and the failure reasons below are written into data.json and committed
+# to a PUBLIC repo. Take the key out before anything is stored (2026-10-18, pre-launch review).
+_KEYED = re.compile(r"(api_key=)[^&\s'\"]+")
+
+
+def _scrub(text: str) -> str:
+    """`text` with any FRED key value replaced by <redacted>."""
+    return _KEYED.sub(r"\1<redacted>", text)
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent  # builders/housing-monitor/ -> repo root
@@ -412,7 +424,7 @@ def main():
                     else:
                         USED["failed"] += 1
                         failures.append(key)
-                        reasons[key] = str(e)[:200]
+                        reasons[key] = _scrub(str(e))[:200]
                     prev = last_good.get(key)
                     if prev:
                         USED["last_good"] += 1
