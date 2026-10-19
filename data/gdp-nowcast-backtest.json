@@ -1,0 +1,192 @@
+{
+ "about": "Back-test from the Atlanta and New York Feds' own archives: each model's reading on the NY Fed's last Friday before BEA's advance estimate, and their plain average. The live composite record starts 2026-10-18.",
+ "rows": [
+  {
+   "quarter": "Q1 2023",
+   "advance": 1.06,
+   "as_of": "2023-04-21",
+   "gdpnow": 2.44,
+   "nyfed": 1.72,
+   "average": 2.08,
+   "errors": {
+    "gdpnow": 1.38,
+    "nyfed": 0.66,
+    "average": 1.02
+   }
+  },
+  {
+   "quarter": "Q2 2023",
+   "advance": 2.41,
+   "as_of": "2023-07-21",
+   "gdpnow": 2.4,
+   "nyfed": 1.08,
+   "average": 1.74,
+   "errors": {
+    "gdpnow": -0.01,
+    "nyfed": -1.33,
+    "average": -0.67
+   }
+  },
+  {
+   "quarter": "Q3 2023",
+   "advance": 4.88,
+   "as_of": "2023-10-20",
+   "gdpnow": 5.37,
+   "nyfed": 2.55,
+   "average": 3.96,
+   "errors": {
+    "gdpnow": 0.5,
+    "nyfed": -2.33,
+    "average": -0.92
+   }
+  },
+  {
+   "quarter": "Q4 2023",
+   "advance": 3.28,
+   "as_of": "2024-01-19",
+   "gdpnow": 2.38,
+   "nyfed": 2.41,
+   "average": 2.4,
+   "errors": {
+    "gdpnow": -0.9,
+    "nyfed": -0.87,
+    "average": -0.88
+   }
+  },
+  {
+   "quarter": "Q1 2024",
+   "advance": 1.59,
+   "as_of": "2024-04-19",
+   "gdpnow": 2.85,
+   "nyfed": 2.23,
+   "average": 2.54,
+   "errors": {
+    "gdpnow": 1.26,
+    "nyfed": 0.64,
+    "average": 0.95
+   }
+  },
+  {
+   "quarter": "Q2 2024",
+   "advance": 2.84,
+   "as_of": "2024-07-19",
+   "gdpnow": 2.73,
+   "nyfed": 2.01,
+   "average": 2.37,
+   "errors": {
+    "gdpnow": -0.11,
+    "nyfed": -0.83,
+    "average": -0.47
+   }
+  },
+  {
+   "quarter": "Q3 2024",
+   "advance": 2.82,
+   "as_of": "2024-09-27",
+   "gdpnow": 3.08,
+   "nyfed": 2.99,
+   "average": 3.03,
+   "errors": {
+    "gdpnow": 0.25,
+    "nyfed": 0.17,
+    "average": 0.21
+   }
+  },
+  {
+   "quarter": "Q4 2024",
+   "advance": 2.25,
+   "as_of": "2025-01-24",
+   "gdpnow": 3.01,
+   "nyfed": 2.56,
+   "average": 2.78,
+   "errors": {
+    "gdpnow": 0.76,
+    "nyfed": 0.31,
+    "average": 0.53
+   }
+  },
+  {
+   "quarter": "Q1 2025",
+   "advance": -0.28,
+   "as_of": "2025-04-25",
+   "gdpnow": -2.51,
+   "nyfed": 2.63,
+   "average": 0.06,
+   "errors": {
+    "gdpnow": -2.23,
+    "nyfed": 2.91,
+    "average": 0.34
+   }
+  },
+  {
+   "quarter": "Q2 2025",
+   "advance": 2.97,
+   "as_of": "2025-07-25",
+   "gdpnow": 2.38,
+   "nyfed": 1.68,
+   "average": 2.03,
+   "errors": {
+    "gdpnow": -0.59,
+    "nyfed": -1.29,
+    "average": -0.94
+   }
+  },
+  {
+   "quarter": "Q3 2025",
+   "advance": 4.34,
+   "as_of": "2025-11-28",
+   "gdpnow": 3.86,
+   "nyfed": 2.31,
+   "average": 3.08,
+   "errors": {
+    "gdpnow": -0.49,
+    "nyfed": -2.03,
+    "average": -1.26
+   }
+  },
+  {
+   "quarter": "Q4 2025",
+   "advance": 1.42,
+   "as_of": "2026-02-13",
+   "gdpnow": 3.64,
+   "nyfed": 2.71,
+   "average": 3.18,
+   "errors": {
+    "gdpnow": 2.22,
+    "nyfed": 1.29,
+    "average": 1.75
+   }
+  },
+  {
+   "quarter": "Q1 2026",
+   "advance": 1.99,
+   "as_of": "2026-04-24",
+   "gdpnow": 1.24,
+   "nyfed": 2.36,
+   "average": 1.8,
+   "errors": {
+    "gdpnow": -0.75,
+    "nyfed": 0.37,
+    "average": -0.19
+   }
+  },
+  {
+   "quarter": "Q2 2026",
+   "advance": 1.5,
+   "as_of": "2026-07-24",
+   "gdpnow": 1.68,
+   "nyfed": 2.82,
+   "average": 2.25,
+   "errors": {
+    "gdpnow": 0.18,
+    "nyfed": 1.32,
+    "average": 0.75
+   }
+  }
+ ],
+ "mae": {
+  "gdpnow": 0.83,
+  "nyfed": 1.17,
+  "average": 0.78
+ }
+}
