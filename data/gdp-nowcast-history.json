@@ -1,6 +1,37 @@
 {
  "about": "Econvitals' composite current-quarter GDP tracker: one snapshot per day per quarter (every leg and the composite) and one scored row per quarter once BEA's advance estimate is out. Values are percent, annual rate; errors in percentage points against the advance estimate.",
- "snapshots": [],
+ "snapshots": [
+  {
+   "date": "2026-10-19",
+   "quarter": "Q3 2026",
+   "composite": 3.28,
+   "band": 0.85,
+   "days_to_release": 10,
+   "legs": {
+    "gdpnow": {
+     "value": 3.64,
+     "as_of": "2026-10-15",
+     "weight": 0.54
+    },
+    "house": {
+     "value": 2.38,
+     "as_of": "2026-10-19",
+     "weight": 0.1
+    },
+    "nyfed": {
+     "value": 2.67,
+     "as_of": "2026-10-16",
+     "weight": 0.18
+    },
+    "street": {
+     "value": 3.3,
+     "as_of": "2026-10-16",
+     "weight": 0.18,
+     "n": 3
+    }
+   }
+  }
+ ],
  "scored": [],
  "updated": "2026-10-19"
 }
