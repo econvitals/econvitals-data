@@ -289,6 +289,14 @@
       "latest_date": "2026-04-01"
     },
     {
+      "slug": "building-equipment-contractors-real-wage",
+      "category": "Static/Labor",
+      "title": "Real Average Hourly Earnings of Electrical, Plumbing and HVAC Contractors",
+      "type": "line",
+      "units": "Dollars per hour, August 2026 prices",
+      "latest_date": "2026-08-01"
+    },
+    {
       "slug": "building-permits-by-type",
       "category": "Residential Construction",
       "title": "Building Permits by Structure Type",
@@ -406,7 +414,7 @@
       "title": "Change in Commodity Prices",
       "type": "category_bar",
       "units": "Percent change, year to date",
-      "latest_date": "2026-10-16"
+      "latest_date": "2026-10-19"
     },
     {
       "slug": "composite-activity",
@@ -583,6 +591,14 @@
       "type": "line",
       "units": "Standard deviation (pp)",
       "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "construction-jobs-nonres-vs-res",
+      "category": "Static/Labor",
+      "title": "Construction Employment: Nonresidential, Residential, and Heavy and Civil Engineering",
+      "type": "line",
+      "units": "Index, January 2023 = 100",
+      "latest_date": "2026-09-01"
     },
     {
       "slug": "construction-payrolls",
@@ -1151,6 +1167,14 @@
       "type": "line",
       "units": "Index, 2020 Q1 = 100",
       "latest_date": "2026-04-01"
+    },
+    {
+      "slug": "data-center-county-diff-in-diff",
+      "category": "Static/Labor",
+      "title": "Building Trades: Data-Center Counties vs. Others",
+      "type": "table",
+      "units": "Electrical, plumbing and HVAC contractors; percent change, 2021\u201322 to 2025\u201326",
+      "latest_date": null
     },
     {
       "slug": "data-center-nowcast",
@@ -1958,7 +1982,7 @@
       "title": "Euro Area: 10-Year Sovereign Credit Premium",
       "type": "line",
       "units": "Basis points",
-      "latest_date": "2026-10-15"
+      "latest_date": "2026-10-16"
     },
     {
       "slug": "europe-ea-hicp",
@@ -2481,6 +2505,38 @@
       "latest_date": "2026-08-01"
     },
     {
+      "slug": "gini-before-after-taxes-transfers",
+      "category": "Static/Income and Poverty",
+      "title": "Income Inequality Before and After Taxes and Transfers",
+      "type": "gap",
+      "units": "Gini coefficient",
+      "latest_date": "2022-01-01"
+    },
+    {
+      "slug": "gini-change-by-household-type-after",
+      "category": "Static/Income and Poverty",
+      "title": "Change in After-Tax-and-Transfer Inequality by Household Type",
+      "type": "barh_pair",
+      "units": "Change in Gini coefficient",
+      "latest_date": "2022-01-01"
+    },
+    {
+      "slug": "gini-change-by-household-type-market",
+      "category": "Static/Income and Poverty",
+      "title": "Change in Market-Income Inequality by Household Type",
+      "type": "barh_pair",
+      "units": "Change in Gini coefficient",
+      "latest_date": "2022-01-01"
+    },
+    {
+      "slug": "gini-change-by-income-measure",
+      "category": "Static/Income and Poverty",
+      "title": "Change in Income Inequality by Income Measure",
+      "type": "barh_pair",
+      "units": "Change in Gini coefficient",
+      "latest_date": "2022-01-01"
+    },
+    {
       "slug": "global-cpi-inflation",
       "category": "International",
       "title": "Consumer Price Inflation, Major Economies",
@@ -2681,6 +2737,22 @@
       "latest_date": "2025-01-01"
     },
     {
+      "slug": "household-payroll-crosswalk",
+      "category": "Employment",
+      "title": "Reconciling Household and Payroll Employment",
+      "type": "table",
+      "units": "Thousands; level is Sep 2026; level and 12-month change not seasonally adjusted",
+      "latest_date": "Payroll employment less household, payroll concept"
+    },
+    {
+      "slug": "household-payroll-crosswalk-monthly",
+      "category": "Employment",
+      "title": "Reconciling Household and Payroll Employment: Latest Month",
+      "type": "table",
+      "units": "Thousands, seasonally adjusted",
+      "latest_date": "Payroll employment less household, payroll concept"
+    },
+    {
       "slug": "housing-affordability-index",
       "category": "Residential Construction",
       "title": "Housing Affordability Index",
@@ -2735,6 +2807,14 @@
       "type": "scatter_fit",
       "units": "Percent, annual average",
       "latest_date": "Government"
+    },
+    {
+      "slug": "inequality-change-table",
+      "category": "Static/Income and Poverty",
+      "title": "Change in Income Inequality Before and After Taxes and Transfers",
+      "type": "table",
+      "units": "",
+      "latest_date": "Gini coefficient"
     },
     {
       "slug": "inflation-cross-category-sd",
@@ -4879,6 +4959,30 @@
       "type": "contrib_stack",
       "units": "Percent",
       "latest_date": "2026-10-01"
+    },
+    {
+      "slug": "top-share-change-after",
+      "category": "Static/Income and Poverty",
+      "title": "Change in Top Income Shares After Taxes and Transfers",
+      "type": "barh_pair",
+      "units": "Change in share of income, percentage points",
+      "latest_date": "2022-01-01"
+    },
+    {
+      "slug": "top-share-change-market",
+      "category": "Static/Income and Poverty",
+      "title": "Change in Top Income Shares, Market Income",
+      "type": "barh_pair",
+      "units": "Change in share of income, percentage points",
+      "latest_date": "2022-01-01"
+    },
+    {
+      "slug": "top1-share-before-after-taxes-transfers",
+      "category": "Static/Income and Poverty",
+      "title": "Top 1 Percent Income Share Before and After Taxes and Transfers",
+      "type": "gap",
+      "units": "Percent of income",
+      "latest_date": "2022-01-01"
     },
     {
       "slug": "trade-balance",
