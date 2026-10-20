@@ -30,8 +30,38 @@
      "n": 4
     }
    }
+  },
+  {
+   "date": "2026-10-20",
+   "quarter": "Q3 2026",
+   "composite": 3.26,
+   "band": 0.85,
+   "days_to_release": 9,
+   "legs": {
+    "gdpnow": {
+     "value": 3.64,
+     "as_of": "2026-10-15",
+     "weight": 0.54
+    },
+    "house": {
+     "value": 2.38,
+     "as_of": "2026-10-19",
+     "weight": 0.1
+    },
+    "nyfed": {
+     "value": 2.67,
+     "as_of": "2026-10-16",
+     "weight": 0.18
+    },
+    "street": {
+     "value": 3.2,
+     "as_of": "2026-10-19",
+     "weight": 0.18,
+     "n": 3
+    }
+   }
   }
  ],
  "scored": [],
- "updated": "2026-10-19"
+ "updated": "2026-10-20"
 }
