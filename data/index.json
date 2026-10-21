@@ -414,7 +414,7 @@
       "title": "Change in Commodity Prices",
       "type": "category_bar",
       "units": "Percent change, year to date",
-      "latest_date": "2026-10-20"
+      "latest_date": "2026-10-21"
     },
     {
       "slug": "composite-activity",
@@ -1249,6 +1249,14 @@
       "latest_date": "2026-09-30"
     },
     {
+      "slug": "debt-maturity-by-economy",
+      "category": "Static/IntlFiscal",
+      "title": "Average Maturity of Government Debt, Gross and Net of the Central Bank",
+      "type": "barh_pair",
+      "units": "Years, end-2025",
+      "latest_date": "Austria"
+    },
+    {
       "slug": "debt-stabilization-adjustment-table",
       "category": "Static/Fiscal",
       "title": "Primary Deficit Adjustment Needed to Stabilize the Debt by 2036",
@@ -2078,7 +2086,7 @@
       "title": "December Fed Funds Forecast vs. the Actual Rate",
       "type": "line",
       "units": "Percent",
-      "latest_date": "2026-10-19"
+      "latest_date": "2026-10-20"
     },
     {
       "slug": "fed-dots-forecast-error",
@@ -4982,7 +4990,7 @@
       "title": "10-Year Treasury Yield Decomposition",
       "type": "stack",
       "units": "Percent",
-      "latest_date": "2026-10-19"
+      "latest_date": "2026-10-20"
     },
     {
       "slug": "ten-year-decomposition-monthly",
@@ -5126,6 +5134,14 @@
       "title": "Duration of Marketable Treasury Debt",
       "type": "line",
       "units": "Years, since 2021",
+      "latest_date": "2026-09-30"
+    },
+    {
+      "slug": "treasury-debt-duration-mbs",
+      "category": "Fiscal",
+      "title": "Duration of Marketable Treasury Debt",
+      "type": "line",
+      "units": "Years",
       "latest_date": "2026-09-30"
     },
     {
@@ -5419,7 +5435,7 @@
     {
       "slug": "wage-pce-equivalent",
       "category": "Wages",
-      "title": "Wage Growth (PCE-Equivalent Units)",
+      "title": "Productivity-Adjusted Wage Growth (PCE-Equivalent Units)",
       "type": "line",
       "units": "Percent per year",
       "latest_date": "2026-09-01"
