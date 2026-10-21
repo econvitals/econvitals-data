@@ -17,6 +17,11 @@
 #                    and `source_url`. Spliced on like a fast feed, but only while it is
 #                    newer than BIS: once BIS catches up the block is ignored (the build
 #                    says so) and should be deleted. The page marks the row "entered by hand".
+#                    A hand entry must not go stale silently: once `verified` is more than
+#                    75 days old (build.py STALE_AFTER_DAYS) the workflow's last step,
+#                    `build.py --check-stale`, FAILS the run after the publish, naming the
+#                    bank and the date, so GitHub emails the owner. Re-read the bank's page
+#                    and bump `verified` (and value/date if it moved) to clear it.
 #
 # `lookback_months` is the window used to auto-classify the cycle phase from the
 # most recent rate change (a cut/hike inside the window = Cutting/Hiking; older

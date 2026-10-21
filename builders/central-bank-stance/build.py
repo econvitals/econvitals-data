@@ -67,6 +67,11 @@ BIS_URL = (
 SOURCE_URL = "https://data.bis.org/topics/CBPOL"
 HIST_YEARS_ON_PAGE = 3  # how much of the step path to ship for the sparkline
 BASIS_TOL = 0.011       # max |fast - BIS| on BIS's own last date before we refuse to splice
+# A hand entry (manual_rate) must not go stale silently. The RBI's MPC meets about every two
+# months, so a `verified` date more than this many days old means nobody re-read the bank's
+# page after a decision. `--check-stale` exits 1 on it; the workflow runs that AFTER the
+# publish, so the matrix still ships and GitHub's failure email is the alarm.
+STALE_AFTER_DAYS = 75
 
 
 # ----------------------------------------------------------------------------- fetch
@@ -158,6 +163,49 @@ def apply_manual(code: str, spec: dict, series: list[tuple[str, float]]):
         "date": date,
         "through": pts[-1][0],
     }
+
+
+def manual_age_days(spec: dict, today: date):
+    """Days since a bank's hand entry was last verified (its `verified`, else its `date`);
+    None when the bank has no manual_rate."""
+    m = spec.get("manual_rate")
+    if not m:
+        return None
+    v = m.get("verified") or m.get("date")
+    v = v if isinstance(v, date) else date.fromisoformat(str(v))
+    return (today - v).days
+
+
+def stale_manual_entries(cfg: dict, today: date, limit_days: int = STALE_AFTER_DAYS) -> list[dict]:
+    """Every hand entry older than `limit_days` (strictly: 75 days old is still fresh, 76 is
+    stale), as {code, name, verified, age_days}. Pure — reads only the config dict."""
+    out = []
+    for spec in cfg.get("banks", []):
+        age = manual_age_days(spec, today)
+        if age is not None and age > limit_days:
+            m = spec["manual_rate"]
+            out.append({"code": spec["code"], "name": spec["name"],
+                        "verified": str(m.get("verified") or m.get("date")), "age_days": age})
+    return out
+
+
+def check_stale(cfg: dict | None = None, today: date | None = None) -> int:
+    """`build.py --check-stale`: 0 when every hand entry is fresh, 1 (naming the bank and the
+    date) when one is older than STALE_AFTER_DAYS. The workflow's last step."""
+    cfg = cfg if cfg is not None else yaml.safe_load(CONFIG.read_text())
+    today = today or datetime.now(timezone.utc).date()
+    stale = stale_manual_entries(cfg, today)
+    hands = [s for s in cfg.get("banks", []) if s.get("manual_rate")]
+    if not stale:
+        print(f"hand entries fresh: {len(hands)} checked, none older than {STALE_AFTER_DAYS} days "
+              f"(today {today.isoformat()})")
+        return 0
+    for e in stale:
+        print(f"STALE HAND ENTRY: {e['name']} ({e['code']}) — manual_rate last verified "
+              f"{e['verified']}, {e['age_days']} days ago (limit {STALE_AFTER_DAYS}). Re-read the "
+              f"bank's own page, update `verified` (and value/date if it moved) in "
+              f"cb_matrix_config.yaml; the work order is in NEXT.md.", file=sys.stderr)
+    return 1
 
 
 # ----------------------------------------------------------------------------- derive
@@ -359,6 +407,10 @@ def main() -> None:
     }
 
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+    # Publish regardless — the row is dated on the page — but say so; --check-stale fails the run.
+    for e in stale_manual_entries(cfg, date.fromisoformat(today)):
+        print(f"WARNING stale hand entry: {e['name']} ({e['code']}) verified {e['verified']}, "
+              f"{e['age_days']} days ago", file=sys.stderr)
     s = payload["summary"]
     fastn = sum(1 for b in banks_out if b.get("fast"))
     handn = sum(1 for b in banks_out if b.get("manual"))
@@ -369,4 +421,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    if "--check-stale" in sys.argv[1:]:
+        sys.exit(check_stale())
     main()

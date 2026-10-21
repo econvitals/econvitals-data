@@ -51,3 +51,9 @@ jobs:
           done
           echo "cb-stance: push still failing after 5 attempts" >&2
           exit 1
+      # Runs AFTER the publish, so the matrix is already current and the page already dates a
+      # hand-entered row in orange; a failure here only makes GitHub email the owner. A
+      # manual_rate whose `verified` date is more than 75 days old (the RBI's MPC meets about
+      # every two months) was not re-read after a decision — re-enter it (NEXT.md, work order).
+      - name: Alarm — fail the run if a hand-entered rate has gone stale
+        run: python builders/central-bank-stance/build.py --check-stale
