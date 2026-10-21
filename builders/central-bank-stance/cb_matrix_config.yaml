@@ -22,6 +22,13 @@
 #                    `build.py --check-stale`, FAILS the run after the publish, naming the
 #                    bank and the date, so GitHub emails the owner. Re-read the bank's page
 #                    and bump `verified` (and value/date if it moved) to clear it.
+#                    The same step also fails when a bank that HAS a fast source (US, XM,
+#                    GB, CA, IN in fast_sources.FAST) was served by BIS this run with a BIS
+#                    observation more than 45 days old (build.py FEED_FALLBACK_AFTER_DAYS):
+#                    its feed failed AND BIS is stale, the India case. The page still
+#                    publishes the BIS value with its date; the failure email names the
+#                    bank, the source that failed and the BIS date. Fix the feed, or add a
+#                    manual_rate meanwhile.
 #
 # `lookback_months` is the window used to auto-classify the cycle phase from the
 # most recent rate change (a cut/hike inside the window = Cutting/Hiking; older

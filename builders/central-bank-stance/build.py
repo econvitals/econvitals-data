@@ -76,6 +76,10 @@ BASIS_TOL = 0.011       # max |fast - BIS| on BIS's own last date before we refu
 # page after a decision. `--check-stale` exits 1 on it; the workflow runs that AFTER the
 # publish, so the matrix still ships and GitHub's failure email is the alarm.
 STALE_AFTER_DAYS = 75
+# A bank with its own fast source that ends up served by BIS is only fine while BIS is
+# current. Past this many days the feed has failed AND BIS is stale (India's relay stopped
+# at 2026-07-23), so `--check-stale` fails the run on it too — same alarm, same channel.
+FEED_FALLBACK_AFTER_DAYS = 45
 
 
 # ----------------------------------------------------------------------------- fetch
@@ -197,22 +201,54 @@ def stale_manual_entries(cfg: dict, today: date, limit_days: int = STALE_AFTER_D
     return out
 
 
-def check_stale(cfg: dict | None = None, today: date | None = None) -> int:
-    """`build.py --check-stale`: 0 when every hand entry is fresh, 1 (naming the bank and the
-    date) when one is older than STALE_AFTER_DAYS. The workflow's last step."""
+def fallen_back_rows(banks: list[dict], today: date, fast: dict | None = None,
+                     limit_days: int = FEED_FALLBACK_AFTER_DAYS) -> list[dict]:
+    """Rows in a built data.json whose bank HAS a fast source but was served by BIS this run
+    (not fast, not a hand entry), with BIS's last observation more than `limit_days` old —
+    the feed failed and BIS is stale. {code, name, source, as_of, age_days}. Pure."""
+    fast = fast if fast is not None else fast_sources.FAST
+    out = []
+    for b in banks:
+        if b.get("code") not in fast or b.get("fast") or b.get("manual") or not b.get("as_of"):
+            continue
+        age = (today - date.fromisoformat(str(b["as_of"]))).days
+        if age > limit_days:
+            out.append({"code": b["code"], "name": b.get("name", b["code"]),
+                        "source": fast[b["code"]][0], "as_of": str(b["as_of"]), "age_days": age})
+    return out
+
+
+def check_stale(cfg: dict | None = None, today: date | None = None,
+                banks: list[dict] | None = None) -> int:
+    """`build.py --check-stale`, the workflow's last step (after the publish): 0 when every hand
+    entry is fresh and every bank with its own fast source was served by it or by a current
+    BIS; 1 — naming the bank and the dates — when a hand entry is older than STALE_AFTER_DAYS
+    or a fast-sourced bank fell back to a BIS observation older than FEED_FALLBACK_AFTER_DAYS."""
     cfg = cfg if cfg is not None else yaml.safe_load(CONFIG.read_text())
     today = today or datetime.now(timezone.utc).date()
+    if banks is None:
+        banks = json.loads(OUT.read_text()).get("banks", []) if OUT.exists() else []
     stale = stale_manual_entries(cfg, today)
+    fell = fallen_back_rows(banks, today)
     hands = [s for s in cfg.get("banks", []) if s.get("manual_rate")]
-    if not stale:
-        print(f"hand entries fresh: {len(hands)} checked, none older than {STALE_AFTER_DAYS} days "
-              f"(today {today.isoformat()})")
+    fed = [b for b in banks if b.get("code") in fast_sources.FAST]
+    if not stale and not fell:
+        print(f"hand entries fresh: {len(hands)} checked, none older than {STALE_AFTER_DAYS} days; "
+              f"fast sources: {len(fed)} banks checked, none on a BIS observation older than "
+              f"{FEED_FALLBACK_AFTER_DAYS} days (today {today.isoformat()})")
         return 0
     for e in stale:
         print(f"STALE HAND ENTRY: {e['name']} ({e['code']}) — manual_rate last verified "
               f"{e['verified']}, {e['age_days']} days ago (limit {STALE_AFTER_DAYS}). Re-read the "
               f"bank's own page, update `verified` (and value/date if it moved) in "
               f"cb_matrix_config.yaml; the work order is in NEXT.md.", file=sys.stderr)
+    for e in fell:
+        print(f"FEED DOWN: {e['name']} ({e['code']}) — its own source ({e['source']}) did not "
+              f"serve this run and the row fell back to BIS, whose last observation is "
+              f"{e['as_of']}, {e['age_days']} days old (limit {FEED_FALLBACK_AFTER_DAYS}). The "
+              f"page publishes that stale value with its date; see the build step's stderr for "
+              f"why the source failed (a refused fetch, a changed page, a basis mismatch).",
+              file=sys.stderr)
     return 1
 
 
@@ -419,6 +455,9 @@ def main() -> None:
     for e in stale_manual_entries(cfg, date.fromisoformat(today)):
         print(f"WARNING stale hand entry: {e['name']} ({e['code']}) verified {e['verified']}, "
               f"{e['age_days']} days ago", file=sys.stderr)
+    for e in fallen_back_rows(banks_out, date.fromisoformat(today)):
+        print(f"WARNING feed down: {e['name']} ({e['code']}) fell back to BIS at {e['as_of']}, "
+              f"{e['age_days']} days old", file=sys.stderr)
     s = payload["summary"]
     fastn = sum(1 for b in banks_out if b.get("fast"))
     handn = sum(1 for b in banks_out if b.get("manual"))

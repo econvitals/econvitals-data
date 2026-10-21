@@ -206,8 +206,8 @@ class StaleRule(unittest.TestCase):
     def test_check_stale_exit_codes_and_message(self):
         out, err = io.StringIO(), io.StringIO()
         with redirect_stdout(out), redirect_stderr(err):
-            rc_fresh = build.check_stale(cfg(india(verified=TODAY)), TODAY)
-            rc_stale = build.check_stale(cfg(india(verified=TODAY - timedelta(days=90))), TODAY)
+            rc_fresh = build.check_stale(cfg(india(verified=TODAY)), TODAY, banks=[])
+            rc_stale = build.check_stale(cfg(india(verified=TODAY - timedelta(days=90))), TODAY, banks=[])
         self.assertEqual(rc_fresh, 0)
         self.assertEqual(rc_stale, 1)
         self.assertIn("hand entries fresh", out.getvalue())
@@ -215,6 +215,48 @@ class StaleRule(unittest.TestCase):
         self.assertIn("STALE HAND ENTRY: Reserve Bank of India (IN)", msg)
         self.assertIn((TODAY - timedelta(days=90)).isoformat(), msg)
         self.assertIn("90 days ago", msg)
+
+    # ---- the 45-day rule: a fast-sourced bank left on a stale BIS observation ----
+    def row(self, code, as_of, fast=False, manual=False, name=None):
+        return {"code": code, "name": name or code, "as_of": as_of, "fast": fast, "manual": manual}
+
+    def test_fast_sourced_bank_on_stale_bis_is_flagged_with_source_and_date(self):
+        rows = [self.row("IN", "2026-07-23", name="Reserve Bank of India")]
+        fell = build.fallen_back_rows(rows, TODAY)
+        self.assertEqual(len(fell), 1)
+        self.assertEqual(fell[0]["code"], "IN")
+        self.assertEqual(fell[0]["as_of"], "2026-07-23")
+        self.assertEqual(fell[0]["age_days"], 90)
+        self.assertTrue(fell[0]["source"].startswith("Reserve Bank of India"))
+
+    def test_limit_is_45_days_and_45_is_still_fine(self):
+        self.assertEqual(build.FEED_FALLBACK_AFTER_DAYS, 45)
+        ok = self.row("IN", (TODAY - timedelta(days=45)).isoformat())
+        bad = self.row("IN", (TODAY - timedelta(days=46)).isoformat())
+        self.assertEqual(build.fallen_back_rows([ok], TODAY), [])
+        self.assertEqual(len(build.fallen_back_rows([bad], TODAY)), 1)
+
+    def test_served_by_its_feed_or_by_hand_or_without_a_feed_is_not_flagged(self):
+        rows = [self.row("IN", "2026-07-23", fast=True),            # the feed served
+                self.row("IN", "2026-10-21", manual=True),          # a hand entry served
+                self.row("JP", "2026-01-01"),                       # no fast source configured
+                self.row("US", TODAY.isoformat())]                  # BIS, but current
+        self.assertEqual(build.fallen_back_rows(rows, TODAY), [])
+
+    def test_check_stale_fails_on_a_fallen_back_feed_naming_bank_source_and_bis_date(self):
+        rows = [self.row("IN", "2026-07-23", name="Reserve Bank of India"), self.row("US", TODAY.isoformat(), fast=True)]
+        out, err = io.StringIO(), io.StringIO()
+        with redirect_stdout(out), redirect_stderr(err):
+            rc = build.check_stale(cfg(), TODAY, banks=rows)
+            rc_ok = build.check_stale(cfg(), TODAY, banks=[self.row("IN", "2026-10-21", fast=True)])
+        self.assertEqual(rc, 1)
+        self.assertEqual(rc_ok, 0)
+        msg = err.getvalue()
+        self.assertIn("FEED DOWN: Reserve Bank of India (IN)", msg)
+        self.assertIn("rbi.org.in", msg)
+        self.assertIn("2026-07-23", msg)
+        self.assertIn("90 days old", msg)
+        self.assertIn("fast sources: 1 banks checked", out.getvalue())
 
     def test_the_shipped_config_carries_no_hand_entry_and_india_has_a_fast_source(self):
         import yaml
@@ -224,7 +266,7 @@ class StaleRule(unittest.TestCase):
         self.assertIn("IN", fs.FAST)
         self.assertTrue(fs.FAST["IN"][0].startswith("Reserve Bank of India"))
         with redirect_stdout(io.StringIO()):
-            self.assertEqual(build.check_stale(c, TODAY), 0)
+            self.assertEqual(build.check_stale(c, TODAY, banks=[]), 0)
 
 
 if __name__ == "__main__":
