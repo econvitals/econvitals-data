@@ -1,24 +1,16 @@
 {
   "meta": {
-    "generated_at": "2026-10-21T11:42:46+00:00",
+    "generated_at": "2026-10-21T14:14:55+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
       "FRED (Board of Governors) — federal funds target range",
       "ECB Data Portal — deposit facility rate",
       "Bank of England — Bank Rate (IUDBEDR)",
-      "Bank of Canada — target for the overnight rate"
+      "Bank of Canada — target for the overnight rate",
+      "Reserve Bank of India — Policy Repo Rate (rbi.org.in home page + MPC resolutions)"
     ],
-    "manual_entries": [
-      {
-        "code": "IN",
-        "name": "Reserve Bank of India",
-        "date": "2026-10-07",
-        "through": "2026-10-21",
-        "source": "Reserve Bank of India — Resolution of the Monetary Policy Committee, October 5–7, 2026 (entered by hand)",
-        "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742"
-      }
-    ],
+    "manual_entries": [],
     "source_url": "https://data.bis.org/topics/CBPOL",
     "lookback_months": 6,
     "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path."
@@ -41,7 +33,7 @@
       "instrument": "Federal Funds Rate (target range)",
       "rate": 3.875,
       "rate_display": "3.75–4.00%",
-      "as_of": "2026-10-20",
+      "as_of": "2026-10-21",
       "as_of_source": "FRED (Board of Governors) — federal funds target range",
       "fast": true,
       "manual": false,
@@ -110,7 +102,7 @@
           "value": 3.875
         },
         {
-          "date": "2026-10-20",
+          "date": "2026-10-21",
           "value": 3.875
         }
       ]
@@ -369,7 +361,7 @@
       "instrument": "Overnight Rate",
       "rate": 2.25,
       "rate_display": "2.25%",
-      "as_of": "2026-10-19",
+      "as_of": "2026-10-20",
       "as_of_source": "Bank of Canada — target for the overnight rate",
       "fast": true,
       "manual": false,
@@ -442,7 +434,7 @@
           "value": 2.25
         },
         {
-          "date": "2026-10-19",
+          "date": "2026-10-20",
           "value": 2.25
         }
       ]
@@ -928,9 +920,9 @@
       "rate": 5.5,
       "rate_display": "5.50%",
       "as_of": "2026-10-21",
-      "as_of_source": "Reserve Bank of India — Resolution of the Monetary Policy Committee, October 5–7, 2026 (entered by hand)",
-      "fast": false,
-      "manual": true,
+      "as_of_source": "Reserve Bank of India — Policy Repo Rate (rbi.org.in home page + MPC resolutions)",
+      "fast": true,
+      "manual": false,
       "last_move": {
         "date": "2026-10-07",
         "delta_bps": 25,

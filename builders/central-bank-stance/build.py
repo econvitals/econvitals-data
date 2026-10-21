@@ -6,10 +6,13 @@ Pulls daily policy-rate history for 12 major central banks from the BIS
 "Central bank policy rates" dataset (WS_CBPOL) and writes a single self-contained
 `data.json` into tools/central-bank-stance/, which the Lab page reads.
 
-BIS publishes in batches and can trail by a week, so for the four majors that publish
-their own machine-readable policy rate — the Fed, ECB, Bank of England and Bank of
-Canada — `fast_sources.py` tops the history up to the current day before anything is
-derived (see `apply_fast`). Every row carries the date it is current through.
+BIS publishes in batches and can trail by a week — and can stop: it has not relayed the
+Reserve Bank of India since 2026-07-23. So for five banks — the Fed, ECB, Bank of England
+and Bank of Canada from their machine-readable feeds, and the RBI from its own web pages —
+`fast_sources.py` tops the history up to the current day before anything is derived (see
+`apply_fast`). Every row carries the date it is current through and the source that served
+it. The order for any bank is: its own fast source, then BIS, then (only if the config
+carries one) a hand entry.
 
 For each bank we derive, straight from the rate history:
   - current rate (the Fed is shown as its 25bp target range around the BIS midpoint)
@@ -22,12 +25,13 @@ For each bank we derive, straight from the rate history:
 "Next expected move" is a desk view set in cb_matrix_config.yaml; when unset the
 page shows an automatic qualitative lean from the phase. BIS has no forward path.
 
-A bank BIS has stopped relaying and no feed may serve can carry a `manual_rate` in the
+A bank BIS has stopped relaying and no source can serve can carry a `manual_rate` in the
 config — the value, its decision date and the source, entered by hand from the central
 bank's own release (see `apply_manual`). It is spliced on like a fast feed, only while it
-is newer than the BIS history, and the row says it was entered by hand. India since
-2026-10 is the case: BIS's D.IN series stops at 2026-07-23 and Jason's rule (2026-10-09)
-is that the RBI's site is not scraped, so the rate is typed in from the MPC resolution.
+is newer than everything else, and the row says it was entered by hand. It is the
+emergency fallback, not a routine: India carried one for a day (2026-10-21) between the
+BIS relay stopping and the RBI fast source going in; `--check-stale` fails the run if one
+is left unverified for more than STALE_AFTER_DAYS.
 
 Refreshes every 3 hours via .github/workflows/central-bank-stance.yml. BIS and three
 of the four fast feeds are keyless; the US target range needs FRED_API_KEY (already a
@@ -109,8 +113,11 @@ def apply_fast(code: str, series: list[tuple[str, float]]):
     if not entry:
         return series, None
     label, fn = entry
+    # The feed must cover BIS's own last date to be checked against it, so when BIS has
+    # stopped (India: 2026-07-23) the window is widened back to that date.
+    start = min(fast_sources.lookback_start(), series[-1][0])
     try:
-        fast = fn(fast_sources.lookback_start())
+        fast = fn(start)
     except Exception as e:  # noqa: BLE001
         print(f"[{code}] fast source unavailable ({e!r}); BIS only", file=sys.stderr)
         return series, None
@@ -151,8 +158,9 @@ def apply_manual(code: str, spec: dict, series: list[tuple[str, float]]):
     verified = str(m.get("verified") or date)
     bis_date = series[-1][0]
     if date <= bis_date:
-        print(f"[{code}] BIS has caught up to the hand entry ({bis_date} >= {date}); "
-              f"ignoring manual_rate — delete it from the config", file=sys.stderr)
+        print(f"[{code}] the series already runs past the hand entry ({bis_date} >= {date}, "
+              f"from BIS or the bank's own source); ignoring manual_rate — delete it from the "
+              f"config", file=sys.stderr)
         return series, None
     pts = [(date, value)]
     if verified > date:

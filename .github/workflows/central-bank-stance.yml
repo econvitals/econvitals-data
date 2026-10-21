@@ -6,10 +6,11 @@ name: Central Bank Stance refresh
 # repo via raw URLs — no Netlify deploy is involved.
 #
 # Every 3 hours rather than daily (2026-09-16): BIS publishes in batches and can trail a
-# week, so the Fed, ECB, BoE and BoC rows are now topped up from each central bank's own
-# feed, which moves the day a rate takes effect. The job commits only when a number
-# actually changes, so the extra runs cost nothing downstream.
-# Secrets required: FRED_API_KEY (the US target range; the other three feeds are keyless).
+# week, so the Fed, ECB, BoE and BoC rows are topped up from each central bank's own feed,
+# which moves the day a rate takes effect — and since 2026-10-21 the RBI row from the RBI's
+# own web pages, because BIS stopped relaying India in July 2026. The job commits only when
+# a number actually changes, so the extra runs cost nothing downstream.
+# Secrets required: FRED_API_KEY (the US target range; the other four sources are keyless).
 
 on:
   schedule:
