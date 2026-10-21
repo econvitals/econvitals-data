@@ -841,6 +841,14 @@
       "latest_date": "2026-08-01"
     },
     {
+      "slug": "core-pce-tracker",
+      "category": "PCE/Temp",
+      "title": "Core PCE Inflation",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-09-01"
+    },
+    {
       "slug": "core-pce-tracking",
       "category": "PCE/Temp",
       "title": "Core PCE Inflation \u2014 Tracking the Current Month",
@@ -903,6 +911,14 @@
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "core-services-pce-ex-housing-tracker",
+      "category": "PCE/Temp",
+      "title": "Core Services PCE Inflation Excluding Housing",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-09-01"
     },
     {
       "slug": "corporate-cash-flow-capex",
@@ -3105,6 +3121,14 @@
       "latest_date": "2026-08-01"
     },
     {
+      "slug": "market-based-core-pce-tracker",
+      "category": "PCE/Temp",
+      "title": "Market-Based Core PCE Inflation",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-09-01"
+    },
+    {
       "slug": "market-rent-vs-cpi-shelter",
       "category": "CPI",
       "title": "Market Rents vs. CPI Shelter",
@@ -3545,6 +3569,14 @@
       "latest_date": "2026-08-01"
     },
     {
+      "slug": "pce-contributions-1m-tracker",
+      "category": "PCE/Temp",
+      "title": "Contributions to PCE Inflation",
+      "type": "contrib_stack",
+      "units": "1-month percent change, annual rate",
+      "latest_date": "2026-09-01"
+    },
+    {
       "slug": "pce-contributions-split-12m",
       "category": "PCE",
       "title": "Contributions to PCE Inflation",
@@ -3617,20 +3649,20 @@
       "latest_date": "2026-08-01"
     },
     {
-      "slug": "pce-inflation-forecast",
-      "category": "PCE/Temp",
-      "title": "PCE Inflation",
-      "type": "bar_line",
-      "units": "Percent change, annual rate",
-      "latest_date": "2026-08-01"
-    },
-    {
       "slug": "pce-inflation-skewness",
       "category": "Static/Inflation",
       "title": "PCE Inflation Skewness",
       "type": "line",
       "units": "Mean minus median category inflation, 12-month (pp)",
       "latest_date": "2026-04-01"
+    },
+    {
+      "slug": "pce-inflation-tracker",
+      "category": "PCE/Temp",
+      "title": "PCE Inflation",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-09-01"
     },
     {
       "slug": "pce-inflation-tracking",
@@ -5137,6 +5169,14 @@
       "latest_date": "2026-08-01"
     },
     {
+      "slug": "trimmed-mean-pce-tracker",
+      "category": "PCE/Temp",
+      "title": "Trimmed Mean PCE Inflation",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-09-01"
+    },
+    {
       "slug": "ulc-and-prices",
       "category": "Productivity",
       "title": "Nonfarm Business Sector Unit Labor Costs and Prices",
@@ -5159,6 +5199,14 @@
       "type": "line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "underlying-inflation-pce-tracker",
+      "category": "PCE/Temp",
+      "title": "Underlying PCE Inflation",
+      "type": "line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-09-01"
     },
     {
       "slug": "unemployment-by-duration",
