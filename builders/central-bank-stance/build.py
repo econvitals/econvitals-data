@@ -22,6 +22,13 @@ For each bank we derive, straight from the rate history:
 "Next expected move" is a desk view set in cb_matrix_config.yaml; when unset the
 page shows an automatic qualitative lean from the phase. BIS has no forward path.
 
+A bank BIS has stopped relaying and no feed may serve can carry a `manual_rate` in the
+config — the value, its decision date and the source, entered by hand from the central
+bank's own release (see `apply_manual`). It is spliced on like a fast feed, only while it
+is newer than the BIS history, and the row says it was entered by hand. India since
+2026-10 is the case: BIS's D.IN series stops at 2026-07-23 and Jason's rule (2026-10-09)
+is that the RBI's site is not scraped, so the rate is typed in from the MPC resolution.
+
 Refreshes every 3 hours via .github/workflows/central-bank-stance.yml. BIS and three
 of the four fast feeds are keyless; the US target range needs FRED_API_KEY (already a
 secret on this repo). Without the key the US row simply falls back to BIS.
@@ -120,6 +127,39 @@ def apply_fast(code: str, series: list[tuple[str, float]]):
     return series + newer, {"label": label, "through": newer[-1][0], "gained_days": gained}
 
 
+# ---------------------------------------------------------------------- hand entry
+def apply_manual(code: str, spec: dict, series: list[tuple[str, float]]):
+    """Splice a hand-entered rate onto the BIS history for one bank.
+
+    `manual_rate` in cb_matrix_config.yaml carries `value`, `date` (the decision date — the
+    RBI's moves take effect the same day, as BIS records them) and `source`, plus `verified`,
+    the day the bank's own page was last read showing that value. The entry is used ONLY
+    while it is newer than BIS: the moment BIS's last date reaches it, it is ignored and the
+    row goes back to BIS untouched, so a stale block retires itself. The move is appended at
+    its date and held flat through `verified`, so the row's "through" date is the day a human
+    last checked it — not today, which nobody checked.
+    """
+    m = spec.get("manual_rate")
+    if not m:
+        return series, None
+    date, value = str(m["date"]), float(m["value"])
+    verified = str(m.get("verified") or date)
+    bis_date = series[-1][0]
+    if date <= bis_date:
+        print(f"[{code}] BIS has caught up to the hand entry ({bis_date} >= {date}); "
+              f"ignoring manual_rate — delete it from the config", file=sys.stderr)
+        return series, None
+    pts = [(date, value)]
+    if verified > date:
+        pts.append((verified, value))
+    return series + pts, {
+        "label": str(m.get("source") or "Entered by hand from the central bank's own release"),
+        "url": str(m.get("source_url") or ""),
+        "date": date,
+        "through": pts[-1][0],
+    }
+
+
 # ----------------------------------------------------------------------------- derive
 def change_points(series: list[tuple[str, float]]) -> list[tuple[str, float]]:
     """First obs + every date where the level changes (the full step path)."""
@@ -216,6 +256,7 @@ def main() -> None:
 
     banks_out = []
     as_of_dates = []
+    manual_entries = []
     for spec in cfg["banks"]:
         code = spec["code"]
         try:
@@ -229,6 +270,11 @@ def main() -> None:
             continue
 
         series, fast = apply_fast(code, series)
+        series, manual = apply_manual(code, spec, series)
+        if manual:
+            manual_entries.append({"code": code, "name": spec["name"], "date": manual["date"],
+                                   "through": manual["through"], "source": manual["label"],
+                                   "source_url": manual["url"]})
         as_of, rate = series[-1]
         as_of_dates.append(as_of)
         mv = last_move(series)
@@ -268,9 +314,10 @@ def main() -> None:
             "rate": round(rate, 3),
             "rate_display": fed_range(rate) if code == "US" else fmt_rate(rate),
             "as_of": as_of,
-            "as_of_source": (fast["label"] if fast else
+            "as_of_source": (fast["label"] if fast else manual["label"] if manual else
                              "BIS — Central bank policy rates (WS_CBPOL)"),
             "fast": bool(fast),
+            "manual": bool(manual),
             "last_move": (mv | {"display": mv_display}) if mv else None,
             "phase": phase,
             "phase_source": phase_source,
@@ -290,6 +337,7 @@ def main() -> None:
             "title": "Global Central Bank Stance Matrix",
             "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
             "fast_sources": [lbl for lbl, _ in fast_sources.FAST.values()],
+            "manual_entries": manual_entries,
             "source_url": SOURCE_URL,
             "lookback_months": lookback,
             "note": ("Cycle phase is a transparent heuristic derived from the size and "
@@ -313,9 +361,11 @@ def main() -> None:
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
     s = payload["summary"]
     fastn = sum(1 for b in banks_out if b.get("fast"))
+    handn = sum(1 for b in banks_out if b.get("manual"))
     print(f"wrote {OUT.name} — {s['total']} banks "
           f"({s['cutting']} cutting · {s['hold']} on hold · {s['hiking']} hiking) "
-          f"as of {s['as_of_min']}–{s['as_of']}; {fastn} on a same-day feed")
+          f"as of {s['as_of_min']}–{s['as_of']}; {fastn} on a same-day feed, "
+          f"{handn} entered by hand")
 
 
 if __name__ == "__main__":

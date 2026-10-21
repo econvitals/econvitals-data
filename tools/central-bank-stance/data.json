@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-21T04:40:40+00:00",
+    "generated_at": "2026-10-21T08:09:08+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -9,17 +9,27 @@
       "Bank of England — Bank Rate (IUDBEDR)",
       "Bank of Canada — target for the overnight rate"
     ],
+    "manual_entries": [
+      {
+        "code": "IN",
+        "name": "Reserve Bank of India",
+        "date": "2026-10-07",
+        "through": "2026-10-21",
+        "source": "Reserve Bank of India — Resolution of the Monetary Policy Committee, October 5–7, 2026 (entered by hand)",
+        "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742"
+      }
+    ],
     "source_url": "https://data.bis.org/topics/CBPOL",
     "lookback_months": 6,
     "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path."
   },
   "summary": {
     "as_of": "2026-10-21",
-    "as_of_min": "2026-07-23",
+    "as_of_min": "2026-10-08",
     "total": 12,
     "cutting": 0,
-    "hold": 8,
-    "hiking": 4,
+    "hold": 7,
+    "hiking": 5,
     "paused": 3
   },
   "banks": [
@@ -34,6 +44,7 @@
       "as_of": "2026-10-20",
       "as_of_source": "FRED (Board of Governors) — federal funds target range",
       "fast": true,
+      "manual": false,
       "last_move": {
         "date": "2026-09-17",
         "delta_bps": 25,
@@ -115,6 +126,7 @@
       "as_of": "2026-10-21",
       "as_of_source": "ECB Data Portal — deposit facility rate",
       "fast": true,
+      "manual": false,
       "last_move": {
         "date": "2026-09-16",
         "delta_bps": 25,
@@ -216,6 +228,7 @@
       "as_of": "2026-10-13",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
+      "manual": false,
       "last_move": {
         "date": "2026-09-24",
         "delta_bps": 25,
@@ -277,6 +290,7 @@
       "as_of": "2026-10-19",
       "as_of_source": "Bank of England — Bank Rate (IUDBEDR)",
       "fast": true,
+      "manual": false,
       "last_move": {
         "date": "2025-12-18",
         "delta_bps": -25,
@@ -358,6 +372,7 @@
       "as_of": "2026-10-19",
       "as_of_source": "Bank of Canada — target for the overnight rate",
       "fast": true,
+      "manual": false,
       "last_move": {
         "date": "2025-10-30",
         "delta_bps": -25,
@@ -443,6 +458,7 @@
       "as_of": "2026-10-08",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
+      "manual": false,
       "last_move": {
         "date": "2026-09-30",
         "delta_bps": 25,
@@ -528,6 +544,7 @@
       "as_of": "2026-10-13",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
+      "manual": false,
       "last_move": {
         "date": "2025-06-20",
         "delta_bps": -25,
@@ -597,6 +614,7 @@
       "as_of": "2026-10-13",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
+      "manual": false,
       "last_move": {
         "date": "2025-10-01",
         "delta_bps": -25,
@@ -682,6 +700,7 @@
       "as_of": "2026-10-08",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
+      "manual": false,
       "last_move": {
         "date": "2026-09-25",
         "delta_bps": 25,
@@ -759,6 +778,7 @@
       "as_of": "2026-10-09",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
+      "manual": false,
       "last_move": {
         "date": "2026-09-03",
         "delta_bps": 25,
@@ -852,6 +872,7 @@
       "as_of": "2026-10-13",
       "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
       "fast": false,
+      "manual": false,
       "last_move": {
         "date": "2025-05-20",
         "delta_bps": -10,
@@ -904,23 +925,24 @@
       "country": "India",
       "flag": "🇮🇳",
       "instrument": "Policy Repo Rate",
-      "rate": 5.25,
-      "rate_display": "5.25%",
-      "as_of": "2026-07-23",
-      "as_of_source": "BIS — Central bank policy rates (WS_CBPOL)",
+      "rate": 5.5,
+      "rate_display": "5.50%",
+      "as_of": "2026-10-21",
+      "as_of_source": "Reserve Bank of India — Resolution of the Monetary Policy Committee, October 5–7, 2026 (entered by hand)",
       "fast": false,
+      "manual": true,
       "last_move": {
-        "date": "2025-12-05",
-        "delta_bps": -25,
-        "direction": "down",
-        "display": "▼ 25 bp · Dec 2025"
+        "date": "2026-10-07",
+        "delta_bps": 25,
+        "direction": "up",
+        "display": "▲ 25 bp · Oct 2026"
       },
-      "phase": "On Hold",
+      "phase": "Hiking",
       "phase_source": "auto",
-      "ytd_bps": 0,
-      "ytd_display": "0 bp",
+      "ytd_bps": 25,
+      "ytd_display": "+25 bp",
       "next_move": {
-        "text": "On hold; data-dependent",
+        "text": "Further hikes likely",
         "kind": "auto",
         "edited": ""
       },
@@ -950,8 +972,12 @@
           "value": 5.25
         },
         {
-          "date": "2026-07-23",
-          "value": 5.25
+          "date": "2026-10-07",
+          "value": 5.5
+        },
+        {
+          "date": "2026-10-21",
+          "value": 5.5
         }
       ]
     }

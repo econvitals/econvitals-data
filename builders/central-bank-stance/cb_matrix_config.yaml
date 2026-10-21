@@ -11,6 +11,12 @@
 #                    bank's current phase. Set this to a real OIS/market call when
 #                    you have one — e.g. "v 25bp by Sep 2026".
 #   next_move_edited : optional ISO date stamp shown next to a desk view.
+#   manual_rate    : a rate entered BY HAND for a bank BIS has stopped relaying and no
+#                    feed may serve — `value`, `date` (the decision date), `verified`
+#                    (the day the bank's own page was last read at that value), `source`
+#                    and `source_url`. Spliced on like a fast feed, but only while it is
+#                    newer than BIS: once BIS catches up the block is ignored (the build
+#                    says so) and should be deleted. The page marks the row "entered by hand".
 #
 # `lookback_months` is the window used to auto-classify the cycle phase from the
 # most recent rate change (a cut/hike inside the window = Cutting/Hiking; older
@@ -106,3 +112,14 @@ banks:
     country: India
     flag: "\U0001F1EE\U0001F1F3"
     instrument: Policy Repo Rate
+    # BIS stopped relaying the RBI's rate after 2026-07-23, and the RBI's own data files sit
+    # behind a bot wall; Jason's rule (2026-10-09, macrolib/india.py) is that the RBI's site is
+    # not scraped. So the rate is typed in here from the RBI's MPC resolution. Re-enter it after
+    # each MPC decision (the next is early December 2026) while BIS stays stopped; once BIS
+    # catches up to `date` the build ignores this block and it can go.
+    manual_rate:
+      value: 5.50
+      date: 2026-10-07
+      verified: 2026-10-21
+      source: "Reserve Bank of India — Resolution of the Monetary Policy Committee, October 5–7, 2026 (entered by hand)"
+      source_url: "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742"
