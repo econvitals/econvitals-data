@@ -59,7 +59,7 @@
           },
           "badge": "Cooling",
           "note": "14th straight month of deceleration; weakest since Jun 2023.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-07-01"
         },
         {
@@ -79,7 +79,7 @@
           },
           "badge": "Falling",
           "note": "Prices now losing ground to inflation — the quiet correction.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-07-01"
         },
         {
@@ -99,7 +99,7 @@
           },
           "badge": "Stretched",
           "note": "Dallas Fed's single best leading indicator; well above fundamentals.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-07-01"
         },
         {
@@ -119,7 +119,7 @@
           },
           "badge": "Stretched",
           "note": "Near the top of its modern range; long-run mean ≈3.5×, '06 peak 4.7×. Pairs the current median price with annual median income that lags ~18 months, so the ratio runs a touch high between income vintages.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-04-01"
         },
         {
@@ -139,7 +139,7 @@
           },
           "badge": "Near peak",
           "note": "The cumulative run-up since before the pandemic. Repeat-sales, so a change in which homes happen to sell cannot move it.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-07-01"
         }
       ]
@@ -174,7 +174,7 @@
             7.4
           ],
           "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-10-15"
         },
         {
@@ -198,7 +198,7 @@
             105.4
           ],
           "ctx": "Higher = more affordable; 100 = a median-income family exactly qualifies for the median home. Improving YoY as <b>income growth</b> edges out price gains.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-09-01"
         },
         {
@@ -224,7 +224,7 @@
             2313
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-10-15"
         }
       ]
@@ -244,7 +244,7 @@
           "d": "−2.2%",
           "dir": "dn",
           "s": "NAR",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-09-01"
         },
         {
@@ -255,7 +255,7 @@
           "d": "+0.3",
           "dir": "up",
           "s": "NAR",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-09-01"
         },
         {
@@ -266,7 +266,7 @@
           "d": "+5.4%",
           "dir": "up",
           "s": "Realtor.com",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-09-01"
         },
         {
@@ -277,7 +277,7 @@
           "d": "+1.3%",
           "dir": "up",
           "s": "NAR",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-09-01"
         },
         {
@@ -288,7 +288,7 @@
           "d": "−1 days",
           "dir": "dn",
           "s": "Realtor.com",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-09-01"
         },
         {
@@ -299,7 +299,7 @@
           "d": "−0.1 pt",
           "dir": "dn",
           "s": "Realtor.com",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-09-01"
         },
         {
@@ -310,7 +310,7 @@
           "d": "−2.0%",
           "dir": "dn",
           "s": "Census",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-08-01"
         },
         {
@@ -321,7 +321,7 @@
           "d": "−7.4%",
           "dir": "dn",
           "s": "Census",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-09-01"
         }
       ]
@@ -350,7 +350,7 @@
           },
           "badge": "Rising, low",
           "note": "All-bank single-family mortgage delinquency (Fed, SA). Off the floor but far below the ~11% crisis peak.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-04-01"
         },
         {
@@ -370,7 +370,7 @@
           },
           "badge": "Strong",
           "note": "Z.1 owners' equity share near record; the structural firebreak vs. 2006.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-04-01"
         },
         {
@@ -390,7 +390,7 @@
           },
           "badge": "Easing a touch",
           "note": "SLOOS net % of banks tightening on GSE-eligible mortgages. Negative = a small net share easing — supportive, not restrictive.",
-          "_source": "fred",
+          "_source": "last-good",
           "_date": "2026-07-01"
         }
       ]
@@ -399,18 +399,58 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Oct 21 2026 · live via FRED · calibration editorial",
+  "asof": "Updated Oct 22 2026 · 19 of 19 live indicators unavailable, held at last reported value · calibration editorial",
   "data_through": "Oct 15 2026",
-  "generated_at": "2026-10-21T00:16:42+00:00",
+  "generated_at": "2026-10-22T00:20:29+00:00",
   "sources": {
-    "fred": 24,
+    "fred": 0,
     "config": 0,
-    "last_good": 0,
-    "failed": 0,
+    "last_good": 19,
+    "failed": 19,
     "known_broken": 0
   },
-  "stale_rows": [],
-  "stale_reasons": {},
+  "stale_rows": [
+    "valuation/cs_yoy",
+    "valuation/real_yoy",
+    "valuation/price_to_rent",
+    "valuation/price_to_income",
+    "valuation/median_vs_2019",
+    "affordability/mortgage30",
+    "affordability/nar_affordability",
+    "affordability/implied_pi",
+    "activity/existing_sales",
+    "activity/months_supply",
+    "activity/total_inventory",
+    "activity/median_existing_price",
+    "activity/median_dom",
+    "activity/price_drops",
+    "activity/new_home_sales",
+    "activity/housing_starts",
+    "stress/seriously_delinquent",
+    "stress/equity_cushion",
+    "stress/lending_standards"
+  ],
+  "stale_reasons": {
+    "valuation/cs_yoy": "Expecting value: line 1 column 1 (char 0)",
+    "valuation/real_yoy": "Expecting value: line 1 column 1 (char 0)",
+    "valuation/price_to_rent": "Expecting value: line 1 column 1 (char 0)",
+    "valuation/price_to_income": "Expecting value: line 1 column 1 (char 0)",
+    "valuation/median_vs_2019": "Expecting value: line 1 column 1 (char 0)",
+    "affordability/mortgage30": "Expecting value: line 1 column 1 (char 0)",
+    "affordability/nar_affordability": "Expecting value: line 1 column 1 (char 0)",
+    "affordability/implied_pi": "Expecting value: line 1 column 1 (char 0)",
+    "activity/existing_sales": "Expecting value: line 1 column 1 (char 0)",
+    "activity/months_supply": "Expecting value: line 1 column 1 (char 0)",
+    "activity/total_inventory": "Expecting value: line 1 column 1 (char 0)",
+    "activity/median_existing_price": "Expecting value: line 1 column 1 (char 0)",
+    "activity/median_dom": "Expecting value: line 1 column 1 (char 0)",
+    "activity/price_drops": "Expecting value: line 1 column 1 (char 0)",
+    "activity/new_home_sales": "Expecting value: line 1 column 1 (char 0)",
+    "activity/housing_starts": "Expecting value: line 1 column 1 (char 0)",
+    "stress/seriously_delinquent": "Expecting value: line 1 column 1 (char 0)",
+    "stress/equity_cushion": "Expecting value: line 1 column 1 (char 0)",
+    "stress/lending_standards": "Expecting value: line 1 column 1 (char 0)"
+  },
   "known_broken_rows": [],
   "known_broken_reasons": {}
 }
