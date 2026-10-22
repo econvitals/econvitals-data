@@ -6,6 +6,11 @@ design — which is why finished investigations belong here and never under `## 
 
 Written by `jobhost-ops/next_archive.py`, daily. Newest sweep first.
 
+## Swept 2026-10-22
+
+### Next
+- ~~Stance Matrix, India: after each RBI MPC decision (next: early December 2026) re-enter `manual_rate` for `IN` in `builders/central-bank-stance/cb_matrix_config.yaml` from the RBI's "Resolution of the Monetary Policy Committee" press release (value, decision date, `verified` = the day you read rbi.org.in's "Policy Repo Rate" box, the press-release URL), then run `python3 builders/central-bank-stance/build.py` and commit config + data.json. Done = the India row shows the new rate and date. The reminder is the alarm: once `verified` is more than 75 days old, the Action's last step (`build.py --check-stale`) fails the run after the publish and GitHub emails the owner naming the bank and date — bumping `verified` clears it. When the build prints "BIS has caught up to the hand entry", delete the block instead.~~ (Superseded the same day: India is read from the RBI's own site, `fast_sources.rbi_in`; the hand entry is retired.)
+
 ## Swept 2026-09-21
 
 ### Next
