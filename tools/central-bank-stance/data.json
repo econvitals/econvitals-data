@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-21T21:38:18+00:00",
+    "generated_at": "2026-10-22T04:37:49+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -16,7 +16,7 @@
     "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path."
   },
   "summary": {
-    "as_of": "2026-10-21",
+    "as_of": "2026-10-22",
     "as_of_min": "2026-10-08",
     "total": 12,
     "cutting": 0,
@@ -115,7 +115,7 @@
       "instrument": "Deposit Facility Rate",
       "rate": 2.5,
       "rate_display": "2.50%",
-      "as_of": "2026-10-21",
+      "as_of": "2026-10-22",
       "as_of_source": "ECB Data Portal — deposit facility rate",
       "fast": true,
       "manual": false,
@@ -204,7 +204,7 @@
           "value": 2.5
         },
         {
-          "date": "2026-10-21",
+          "date": "2026-10-22",
           "value": 2.5
         }
       ]
@@ -919,7 +919,7 @@
       "instrument": "Policy Repo Rate",
       "rate": 5.5,
       "rate_display": "5.50%",
-      "as_of": "2026-10-21",
+      "as_of": "2026-10-22",
       "as_of_source": "Reserve Bank of India — Policy Repo Rate (rbi.org.in home page + MPC resolutions)",
       "fast": true,
       "manual": false,
@@ -968,7 +968,7 @@
           "value": 5.5
         },
         {
-          "date": "2026-10-21",
+          "date": "2026-10-22",
           "value": 5.5
         }
       ]
