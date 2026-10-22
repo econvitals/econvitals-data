@@ -1,185 +1,21 @@
 {
   "meta": {
-    "generated_at": "2026-10-21T22:10:23+00:00",
-    "run_date": "2026-10-21",
+    "generated_at": "2026-10-22T10:36:49+00:00",
+    "run_date": "2026-10-22",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "source_failures": [
       {
         "source": "last-good carry-forward",
-        "reason": "43 of 43 lost rows/values restored from the last good build (2026-10-21T10:36:11+00:00) \u2014 a source this build reads live (FRED?) answered nothing; see the per-item entries"
-      },
-      {
-        "source": "sections.quick_lookup.items[Real GDP]",
-        "reason": "row vanished in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.charts[Real GDP].points",
-        "reason": "list emptied in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.charts[Real final sales to private domestic purchasers].points",
-        "reason": "list emptied in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.invest.overall_i",
-        "reason": "node missing in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.invest.equipment",
-        "reason": "node missing in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.invest.structures",
-        "reason": "node missing in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.invest.ipp",
-        "reason": "node missing in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.contrib",
-        "reason": "node missing in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Expenditure].rows[GDP]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Expenditure].rows[Consumption]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Expenditure].rows[Business fixed investment]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Expenditure].rows[Residential]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Expenditure].rows[Government]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Expenditure].rows[Exports]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Expenditure].rows[Imports]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Other measures].rows[GDI]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Other measures].rows[Average of GDP & GDI]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Other measures].rows[Real final sales to private domestic purchasers]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Other measures].rows[Real disposable personal income]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Other measures].rows[GDP price index]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.gdp.table.groups[Productivity & costs].rows[Employment Cost Index]",
-        "reason": "cells latest_q, q4q4 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.labor.rates.blocks[Household / establishment].rows[Initial claims (4wk avg)]",
-        "reason": "row vanished in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.labor.rates.blocks[Household / establishment].rows[Continuing claims]",
-        "reason": "row vanished in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.wages.rows[Employment Cost Index]",
-        "reason": "cells ann_12 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.financial.charts[10-year decomposition].points",
-        "reason": "list emptied in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.financial.table.groups[Credit & risk].rows[NFCI]",
-        "reason": "cells value null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.other.tables[Activity & consumer].rows[Real PCE]",
-        "reason": "cells c1, c2 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.other.tables[Activity & consumer].rows[Durable goods orders]",
-        "reason": "cells c1, c2 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.other.tables[Activity & consumer].rows[Core capex orders]",
-        "reason": "cells c1, c2 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.other.tables[Activity & consumer].rows[Saving rate (%)]",
-        "reason": "cells c1, c2 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.other.tables[Housing].rows[New home sales (k)]",
-        "reason": "cells c1, c2 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.other.tables[Housing].rows[Case-Shiller]",
-        "reason": "cells c1, c2 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.other.tables[Inflation expectations].rows[5y breakeven (%)]",
-        "reason": "cells c1, c2 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.other.tables[Inflation expectations].rows[5y5y forward (%)]",
-        "reason": "cells c1, c2 null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
+        "reason": "2 of 2 lost rows/values restored from the last good build (2026-10-21T10:36:11+00:00) \u2014 a source this build reads live (FRED?) answered nothing; see the per-item entries"
       },
       {
         "source": "sections.international.chart.points[Canada]",
         "reason": "row vanished in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
       },
       {
-        "source": "sections.international.table.rows[United States].gdp_qq",
-        "reason": "value null in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.international.table.rows[United States].gdp",
-        "reason": "value null in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
         "source": "sections.international.table.rows[Canada]",
-        "reason": "cells gdp_qq, gdp, cpi null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.international.table.rows[France].gdp_qq",
-        "reason": "value null in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.international.table.rows[Germany].gdp_qq",
-        "reason": "value null in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.international.table.rows[Italy].gdp_qq",
-        "reason": "value null in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.international.table.rows[Japan].gdp_qq",
-        "reason": "value null in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
-      },
-      {
-        "source": "sections.international.table.rows[Japan].unemp",
-        "reason": "value null in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
+        "reason": "cells cpi null and the period moved in this build \u2014 restored from the last good build of 2026-10-21T10:36:11+00:00"
       }
     ]
   },
@@ -246,7 +82,7 @@
           "label": "Fed funds target",
           "value": 3.875,
           "display": "3.75\u20134.00%",
-          "period": "2026-10-21",
+          "period": "2026-10-22",
           "change": null,
           "change_display": null,
           "provenance": "hard"
@@ -280,11 +116,11 @@
         },
         {
           "label": "Brent",
-          "value": 109.730003,
-          "display": "$110",
-          "period": "2026-10-21",
-          "change": 80.3,
-          "change_display": "+80.3% YTD",
+          "value": 111.589996,
+          "display": "$112",
+          "period": "2026-10-22",
+          "change": 83.4,
+          "change_display": "+83.4% YTD",
           "provenance": "hard"
         },
         {
@@ -308,9 +144,9 @@
             "source": "Econvitals Composite",
             "value": 3.2,
             "quarter": "Q3 2026",
-            "as_of": "2026-10-21",
+            "as_of": "2026-10-22",
             "provenance": "hard",
-            "band": 0.85,
+            "band": 0.75,
             "legs": 4,
             "composite": true
           },
@@ -318,7 +154,7 @@
             "source": "Econvitals estimate",
             "value": 2.4,
             "quarter": "Q3 2026",
-            "as_of": "2026-10-21",
+            "as_of": "2026-10-22",
             "provenance": "hard"
           },
           {
@@ -339,8 +175,8 @@
         "composite": {
           "quarter": "Q3 2026",
           "value": 3.17,
-          "band": 0.85,
-          "days_to_release": 8,
+          "band": 0.75,
+          "days_to_release": 7,
           "advance_release": "2026-10-29",
           "legs": [
             {
@@ -358,7 +194,7 @@
               "value": 2.38,
               "raw": 2.38,
               "adjustment": 0.0,
-              "as_of": "2026-10-21",
+              "as_of": "2026-10-22",
               "weight": 0.1
             },
             {
@@ -400,14 +236,14 @@
           ],
           "house": {
             "value": 2.38,
-            "as_of": "2026-10-21",
+            "as_of": "2026-10-22",
             "stage": "trade_prices",
             "withheld": false
           },
           "moved": "GDPNow -0.1 to 3.5 on 2026-10-20, mostly housing after Housing starts; NY Fed unchanged at 2.7 on 2026-10-16.",
           "target": "BEA advance estimate",
           "method": "Fixed weights by days to the advance estimate: Econvitals' own estimate 10%; of the rest, equal beyond 45 days, then GDPNow 0.5 at 15-45 days and 0.6 inside 15 days, the NY Fed model and the Street median sharing the remainder. Until a tracker updates after a release, it is moved by half of Econvitals' own estimate's change since its last update. Band = GDPNow's average miss at this horizon.",
-          "as_of": "2026-10-21"
+          "as_of": "2026-10-22"
         }
       },
       "charts": [
@@ -6973,6 +6809,18 @@
               "breakeven": 2.35,
               "real": 2.74,
               "nominal": 5.09
+            },
+            {
+              "date": "2026-10-19",
+              "breakeven": 2.35,
+              "real": 2.8,
+              "nominal": 5.15
+            },
+            {
+              "date": "2026-10-20",
+              "breakeven": 2.35,
+              "real": 2.77,
+              "nominal": 5.12
             }
           ],
           "series": [
@@ -10666,6 +10514,11 @@
               "date": "2026-10-19",
               "ig": 0.87,
               "hy": 3.29
+            },
+            {
+              "date": "2026-10-20",
+              "ig": 0.87,
+              "hy": 3.33
             }
           ],
           "series": [
@@ -10796,18 +10649,18 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 16.68,
-                "as_of": "2026-10-21",
-                "chg_1d": -0.63,
-                "chg_1w": -0.19,
-                "chg_ytd": 1.73,
+                "value": 18.36,
+                "as_of": "2026-10-22",
+                "chg_1d": 1.68,
+                "chg_1w": 1.9,
+                "chg_ytd": 3.41,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "NFCI",
                 "value": -0.5,
-                "as_of": "2026-10-09",
+                "as_of": "2026-10-16",
                 "chg_1d": null,
                 "chg_1w": 0.01,
                 "chg_ytd": 0.04,
@@ -10821,32 +10674,32 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 101.69,
-                "as_of": "2026-10-21",
-                "chg_1d": -0.0,
-                "chg_1w": -0.8,
-                "chg_ytd": 3.5,
+                "value": 101.64,
+                "as_of": "2026-10-22",
+                "chg_1d": -0.1,
+                "chg_1w": -0.4,
+                "chg_ytd": 3.4,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1232,
-                "as_of": "2026-10-21",
-                "chg_1d": 0.0,
-                "chg_1w": -0.1,
-                "chg_ytd": 4.4,
+                "value": 1.1222,
+                "as_of": "2026-10-22",
+                "chg_1d": 0.1,
+                "chg_1w": 0.1,
+                "chg_ytd": 4.5,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3392,
-                "as_of": "2026-10-21",
-                "chg_1d": -0.1,
-                "chg_1w": -0.9,
+                "value": 1.3384,
+                "as_of": "2026-10-22",
+                "chg_1d": 0.1,
+                "chg_1w": -0.5,
                 "chg_ytd": 0.5,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10854,43 +10707,43 @@
               },
               {
                 "label": "USD/JPY",
-                "value": 158.1,
-                "as_of": "2026-10-21",
-                "chg_1d": -0.0,
-                "chg_1w": 0.1,
-                "chg_ytd": 0.8,
+                "value": 156.9,
+                "as_of": "2026-10-22",
+                "chg_1d": -0.8,
+                "chg_1w": -0.7,
+                "chg_ytd": 0.0,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8243,
-                "as_of": "2026-10-21",
-                "chg_1d": -0.0,
+                "value": 0.8212,
+                "as_of": "2026-10-22",
+                "chg_1d": -0.4,
                 "chg_1w": -0.3,
-                "chg_ytd": 3.9,
+                "chg_ytd": 3.5,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CAD",
-                "value": 1.4047,
-                "as_of": "2026-10-21",
+                "value": 1.4028,
+                "as_of": "2026-10-22",
                 "chg_1d": -0.1,
-                "chg_1w": -1.0,
-                "chg_ytd": 2.4,
+                "chg_1w": -0.8,
+                "chg_ytd": 2.2,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CNY",
-                "value": 6.67,
-                "as_of": "2026-10-21",
+                "value": 6.66,
+                "as_of": "2026-10-22",
                 "chg_1d": -0.2,
-                "chg_1w": -0.4,
+                "chg_1w": -0.3,
                 "chg_ytd": -4.7,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10903,61 +10756,61 @@
             "rows": [
               {
                 "label": "WTI",
-                "value": 97.9,
-                "as_of": "2026-10-21",
-                "chg_1d": -3.8,
-                "chg_1w": 2.9,
-                "chg_ytd": 40.6,
+                "value": 99.2,
+                "as_of": "2026-10-22",
+                "chg_1d": 2.1,
+                "chg_1w": 1.3,
+                "chg_ytd": 41.9,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent",
-                "value": 109.9,
-                "as_of": "2026-10-21",
-                "chg_1d": 1.1,
-                "chg_1w": 3.8,
-                "chg_ytd": 49.1,
+                "value": 111.8,
+                "as_of": "2026-10-22",
+                "chg_1d": 3.0,
+                "chg_1w": 5.9,
+                "chg_ytd": 50.9,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas",
-                "value": 2.78,
-                "as_of": "2026-10-21",
-                "chg_1d": -0.19,
-                "chg_1w": -0.42,
-                "chg_ytd": -0.84,
+                "value": 2.76,
+                "as_of": "2026-10-22",
+                "chg_1d": -0.03,
+                "chg_1w": -0.47,
+                "chg_ytd": -0.86,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold",
-                "value": 4157.0,
-                "as_of": "2026-10-21",
-                "chg_1d": 14.0,
-                "chg_1w": 49.0,
-                "chg_ytd": -173.0,
+                "value": 4107.0,
+                "as_of": "2026-10-22",
+                "chg_1d": -43.0,
+                "chg_1w": -63.0,
+                "chg_ytd": -222.0,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver",
-                "value": 57.96,
-                "as_of": "2026-10-21",
-                "chg_1d": 0.25,
-                "chg_1w": 2.41,
-                "chg_ytd": -12.6,
+                "value": 56.12,
+                "as_of": "2026-10-22",
+                "chg_1d": -1.3,
+                "chg_1w": -0.71,
+                "chg_ytd": -14.43,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper",
-                "value": 6.57,
-                "as_of": "2026-10-21",
-                "chg_1d": 0.0,
-                "chg_1w": -0.04,
-                "chg_ytd": 0.93,
+                "value": 6.43,
+                "as_of": "2026-10-22",
+                "chg_1d": -0.11,
+                "chg_1w": -0.08,
+                "chg_ytd": 0.79,
                 "is_yield": false,
                 "provenance": "hard"
               }
@@ -10968,10 +10821,10 @@
             "rows": [
               {
                 "label": "S&P 500",
-                "value": 7758.0,
+                "value": 7757.0,
                 "as_of": "2026-10-21",
                 "chg_1d": 45.0,
-                "chg_1w": 39.0,
+                "chg_1w": 38.0,
                 "chg_ytd": 912.0,
                 "is_yield": false,
                 "provenance": "hard"
@@ -10990,7 +10843,7 @@
         "upper": 4.0,
         "midpoint": 3.875,
         "display": "3.75\u20134.00%",
-        "as_of": "2026-10-20"
+        "as_of": "2026-10-21"
       },
       "actual_path": [
         {
@@ -12164,15 +12017,19 @@
         {
           "date": "2026-10-20",
           "midpoint": 3.875
+        },
+        {
+          "date": "2026-10-21",
+          "midpoint": 3.875
         }
       ],
       "replication": {
         "available": true,
         "source": "CME FedWatch End-of-Day API",
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
-        "reporting_date": "2026-10-20",
+        "reporting_date": "2026-10-21",
         "anchor_midpoint": 3.875,
-        "anchor_source": "inferred (nearest-meeting modal range)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-10-21)",
         "current_range_bp": [
           375,
           400
@@ -12183,12 +12040,12 @@
           {
             "outcome": "Hold",
             "moves": 0,
-            "prob": 0.8339
+            "prob": 0.8561
           },
           {
             "outcome": "1 hike",
             "moves": 1,
-            "prob": 0.1661
+            "prob": 0.1439
           }
         ],
         "checkpoints": [
@@ -12197,23 +12054,23 @@
             "date": "2026-10-28",
             "implied_rate": 3.875,
             "net_moves": 0.0,
-            "expected_rate": 3.9165,
+            "expected_rate": 3.911,
             "modal_rate": 3.875,
             "modal_range_bp": [
               375,
               400
             ],
-            "net_moves_expected": 0.17,
+            "net_moves_expected": 0.14,
             "distribution": [
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.8339
+                "prob": 0.8561
               },
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.1661
+                "prob": 0.1439
               }
             ]
           },
@@ -12222,41 +12079,41 @@
             "date": "2026-12-09",
             "implied_rate": 4.125,
             "net_moves": 1.0,
-            "expected_rate": 4.1317,
+            "expected_rate": 4.1304,
             "modal_rate": 4.125,
             "modal_range_bp": [
               400,
               425
             ],
-            "net_moves_expected": 1.03,
+            "net_moves_expected": 1.02,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.7409
+                "prob": 0.769
               },
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.1429
+                "prob": 0.1263
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.1161
+                "prob": 0.1046
               }
             ]
           }
         ],
         "year_end_implied": 4.125,
         "moves_priced_year_end": 1.0,
-        "year_end_expected": 4.1317,
+        "year_end_expected": 4.1304,
         "year_end_modal": 4.125,
-        "year_end_sigma": 0.1271,
-        "moves_priced_year_end_expected": 1.03,
+        "year_end_sigma": 0.12,
+        "moves_priced_year_end_expected": 1.02,
         "now_curve": [
           {
-            "date": "2026-10-21",
+            "date": "2026-10-22",
             "rate": 3.875
           },
           {
@@ -12270,7 +12127,7 @@
         ],
         "now_curve_modal": [
           {
-            "date": "2026-10-21",
+            "date": "2026-10-22",
             "rate": 3.875
           },
           {
@@ -12284,16 +12141,16 @@
         ],
         "now_curve_expected": [
           {
-            "date": "2026-10-21",
+            "date": "2026-10-22",
             "rate": 3.875
           },
           {
             "date": "2026-10-28",
-            "rate": 3.9165
+            "rate": 3.911
           },
           {
             "date": "2026-12-09",
-            "rate": 4.1317
+            "rate": 4.1304
           }
         ],
         "repricing_since_2025": {
@@ -12305,7 +12162,7 @@
           "moves_added_expected": 4.36,
           "curve": [
             {
-              "date": "2026-10-21",
+              "date": "2026-10-22",
               "rate": 3.125
             },
             {
@@ -12319,7 +12176,7 @@
           ],
           "curve_expected": [
             {
-              "date": "2026-10-21",
+              "date": "2026-10-22",
               "rate": 3.0812
             },
             {
@@ -12335,83 +12192,83 @@
         "meetings": [
           {
             "date": "2026-10-28",
-            "reporting_date": "2026-10-20",
+            "reporting_date": "2026-10-21",
             "modal_range_bp": [
               375,
               400
             ],
             "modal_rate": 3.875,
-            "expected_rate": 3.9165,
-            "sigma": 0.093,
-            "net_moves_expected": 0.17,
+            "expected_rate": 3.911,
+            "sigma": 0.0878,
+            "net_moves_expected": 0.14,
             "distribution": [
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.8339
+                "prob": 0.8561
               },
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.1661
+                "prob": 0.1439
               }
             ],
             "ranges": [
               {
                 "lo": 375,
                 "hi": 400,
-                "prob": 0.83393
+                "prob": 0.85607
               },
               {
                 "lo": 400,
                 "hi": 425,
-                "prob": 0.16607
+                "prob": 0.14393
               }
             ]
           },
           {
             "date": "2026-12-09",
-            "reporting_date": "2026-10-20",
+            "reporting_date": "2026-10-21",
             "modal_range_bp": [
               400,
               425
             ],
             "modal_rate": 4.125,
-            "expected_rate": 4.1317,
-            "sigma": 0.1271,
-            "net_moves_expected": 1.03,
+            "expected_rate": 4.1304,
+            "sigma": 0.12,
+            "net_moves_expected": 1.02,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.7409
+                "prob": 0.769
               },
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.1429
+                "prob": 0.1263
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.1161
+                "prob": 0.1046
               }
             ],
             "ranges": [
               {
                 "lo": 375,
                 "hi": 400,
-                "prob": 0.11613
+                "prob": 0.10463
               },
               {
                 "lo": 400,
                 "hi": 425,
-                "prob": 0.74092
+                "prob": 0.76903
               },
               {
                 "lo": 425,
                 "hi": 450,
-                "prob": 0.14294
+                "prob": 0.12634
               }
             ]
           }
@@ -12989,8 +12846,8 @@
             },
             {
               "label": "5y breakeven (%)",
-              "c1": 2.38,
-              "c2": 2.29,
+              "c1": 2.4,
+              "c2": 2.3,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
@@ -12999,8 +12856,8 @@
             },
             {
               "label": "5y5y forward (%)",
-              "c1": 2.32,
-              "c2": 2.25,
+              "c1": 2.34,
+              "c2": 2.26,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
@@ -13222,7 +13079,7 @@
           {
             "country": "France",
             "gdp_qq": 0.1,
-            "gdp": 0.0,
+            "gdp": 0.5,
             "unemp": 8.2,
             "cpi": 3.4,
             "core": 1.8,
@@ -13233,7 +13090,7 @@
           {
             "country": "Germany",
             "gdp_qq": 1.3,
-            "gdp": 1.2,
+            "gdp": 1.0,
             "unemp": 4.0,
             "cpi": 3.3,
             "core": 2.5,
@@ -13244,18 +13101,18 @@
           {
             "country": "Italy",
             "gdp_qq": 0.6,
-            "gdp": 0.8,
+            "gdp": 1.0,
             "unemp": 6.2,
             "cpi": 4.2,
             "core": 1.9,
-            "ten": 4.36,
+            "ten": 3.99,
             "pol": 2.5,
             "asof": "Sep 2026"
           },
           {
             "country": "Japan",
             "gdp_qq": 1.4,
-            "gdp": 1.6,
+            "gdp": 0.7,
             "unemp": 2.5,
             "cpi": 1.9,
             "core": 1.7,
