@@ -3,14 +3,7 @@
     "generated_at": "2026-10-22T16:17:47+00:00",
     "run_date": "2026-10-22",
     "schema_version": "2.0",
-    "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
-    "stale_inputs": [
-      {
-        "path": "wages.pce_equivalent",
-        "published": "Oct 2026",
-        "built": "Sep 2026"
-      }
-    ]
+    "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures"
   },
   "sections": {
     "quick_lookup": {
@@ -1601,9 +1594,9 @@
       ],
       "footnote": "Real earnings deflate nominal pay by the CPI: all employees by CPI-U, production and nonsupervisory employees by CPI-W \u2014 the deflators BLS's Real Earnings release uses for each group.",
       "pce_equivalent": {
-        "value": 0.15,
-        "date": "2026-10-01",
-        "through": "Oct 2026"
+        "value": 1.73,
+        "date": "2026-09-01",
+        "through": "Sep 2026"
       }
     },
     "inflation": {
