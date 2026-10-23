@@ -80,10 +80,13 @@ STALE_AFTER_DAYS = 75
 # current. Past this many days the feed has failed AND BIS is stale (India's relay stopped
 # at 2026-07-23), so `--check-stale` fails the run on it too — same alarm, same channel.
 FEED_FALLBACK_AFTER_DAYS = 45
-# A hand-written desk view (`next_move` in the config) is a dated opinion about the next
-# meeting. It expires when the bank has decided since it was written, or after this many
-# days; an expired view is published as "Review pending" (never as stale text) and
-# `--check-stale` fails the run on it, so the desk is told to rewrite it.
+# Hand-written text in the config — a desk view (`next_move`) and a phase override
+# (`phase_override`) — is a dated opinion. It expires when the bank has made a policy
+# decision since it was written, after this many days, or when it is undated. An expired
+# desk view is published as "Review pending" (never as stale text) and an expired override
+# is dropped so the rule speaks; the build WARNs and `meta.review_pending` names the banks
+# for the daily ops mail. Not a `--check-stale` failure: the page is already honest about
+# it, and a failing Action every three hours until someone rewrites two sentences is noise.
 DESK_VIEW_MAX_AGE_DAYS = 60
 
 
@@ -223,17 +226,14 @@ def fallen_back_rows(banks: list[dict], today: date, fast: dict | None = None,
     return out
 
 
-def desk_view_expired(spec: dict, last_move_date: str | None, today: date,
+def hand_text_expired(edited, last_move_date: str | None, today: date, date_key: str,
                       max_age_days: int = DESK_VIEW_MAX_AGE_DAYS):
-    """Why a bank's hand-written `next_move` should no longer be shown, or None while it
-    stands. Expired when it is undated (no `next_move_edited`), written before the bank's
-    most recent policy decision (its last-move date from the rate history), or more than
-    `max_age_days` old (60 days old is still shown, 61 is not). Pure."""
-    if not spec.get("next_move"):
-        return None
-    edited = spec.get("next_move_edited")
+    """Why a piece of hand-written config text dated `edited` should no longer be used, or
+    None while it stands: undated, written before the bank's most recent policy decision (its
+    last-move date from the rate history), or more than `max_age_days` old (60 days old still
+    stands, 61 does not). Pure."""
     if not edited:
-        return "undated — no next_move_edited"
+        return f"undated — no {date_key}"
     ed = edited if isinstance(edited, date) else date.fromisoformat(str(edited))
     if last_move_date and ed < date.fromisoformat(str(last_move_date)):
         return (f"written {ed.isoformat()}, before the bank's latest decision on "
@@ -242,6 +242,35 @@ def desk_view_expired(spec: dict, last_move_date: str | None, today: date,
     if age > max_age_days:
         return f"written {ed.isoformat()}, {age} days ago (limit {max_age_days})"
     return None
+
+
+def desk_view_expired(spec: dict, last_move_date: str | None, today: date,
+                      max_age_days: int = DESK_VIEW_MAX_AGE_DAYS):
+    """Why a bank's hand-written `next_move` should no longer be shown, or None while it stands
+    (dated by `next_move_edited`)."""
+    if not spec.get("next_move"):
+        return None
+    return hand_text_expired(spec.get("next_move_edited"), last_move_date, today,
+                             "next_move_edited", max_age_days)
+
+
+def override_expired(spec: dict, last_move_date: str | None, today: date,
+                     max_age_days: int = DESK_VIEW_MAX_AGE_DAYS):
+    """Why a bank's hand-set `phase_override` should be dropped so the rule speaks, or None
+    while it stands (dated by `phase_override_edited`)."""
+    if not spec.get("phase_override"):
+        return None
+    return hand_text_expired(spec.get("phase_override_edited"), last_move_date, today,
+                             "phase_override_edited", max_age_days)
+
+
+def resolve_phase(spec: dict, mv, today: date, lookback_months: int):
+    """(phase, phase_source, expired_override_reason): the override while it stands, else the
+    rule — classify_phase on the last move. Pure; what main() publishes for the pill."""
+    reason = override_expired(spec, mv["date"] if mv else None, today)
+    if spec.get("phase_override") and not reason:
+        return str(spec["phase_override"]), "override", None
+    return classify_phase(mv, today.isoformat(), lookback_months), "auto", reason
 
 
 def expired_desk_views(banks: list[dict]) -> list[dict]:
@@ -257,29 +286,49 @@ def expired_desk_views(banks: list[dict]) -> list[dict]:
     return out
 
 
+def expired_overrides(banks: list[dict]) -> list[dict]:
+    """Rows whose phase override the build dropped as expired (the pill shows the rule's
+    phase; the row carries `override_expired`). {code, name, edited, was, reason}. Pure."""
+    out = []
+    for b in banks:
+        ov = b.get("override_expired")
+        if ov:
+            out.append({"code": b.get("code"), "name": b.get("name", b.get("code")), **ov})
+    return out
+
+
+def review_pending(banks: list[dict]) -> list[str]:
+    """Bank codes with any expired hand-written text — what the daily ops mail reads from
+    meta.review_pending. Sorted, unique."""
+    codes = {e["code"] for e in expired_desk_views(banks)} | {e["code"] for e in expired_overrides(banks)}
+    return sorted(c for c in codes if c)
+
+
 def check_stale(cfg: dict | None = None, today: date | None = None,
                 banks: list[dict] | None = None) -> int:
     """`build.py --check-stale`, the workflow's last step (after the publish): 0 when every hand
-    entry is fresh, every bank with its own fast source was served by it or by a current BIS,
-    and no desk view has expired; 1 — naming the bank and the dates — when a hand entry is
-    older than STALE_AFTER_DAYS, a fast-sourced bank fell back to a BIS observation older than
-    FEED_FALLBACK_AFTER_DAYS, or a hand-written next-move view was withheld as "Review
-    pending" (see desk_view_expired). The page publishes in every case; this is the alarm."""
+    entry is fresh and every bank with its own fast source was served by it or by a current
+    BIS; 1 — naming the bank and the dates — when a hand entry is older than STALE_AFTER_DAYS
+    or a fast-sourced bank fell back to a BIS observation older than FEED_FALLBACK_AFTER_DAYS.
+    Those are DATA-correctness failures and GitHub's failure email is their alarm. Expired desk
+    views and overrides are NOT failures: the page already says "Review pending" / shows the
+    rule, so they are only counted here and named in meta.review_pending, which the daily ops
+    mail reads (jobhost-ops ops_health.check_stance_review_pending)."""
     cfg = cfg if cfg is not None else yaml.safe_load(CONFIG.read_text())
     today = today or datetime.now(timezone.utc).date()
     if banks is None:
         banks = json.loads(OUT.read_text()).get("banks", []) if OUT.exists() else []
     stale = stale_manual_entries(cfg, today)
     fell = fallen_back_rows(banks, today)
-    views = expired_desk_views(banks)
+    pending = review_pending(banks)
     hands = [s for s in cfg.get("banks", []) if s.get("manual_rate")]
     fed = [b for b in banks if b.get("code") in fast_sources.FAST]
-    desks = [b for b in banks if (b.get("next_move") or {}).get("kind") in ("desk", "pending")]
-    if not stale and not fell and not views:
+    note = (f"review pending (not a failure; the ops mail reports it): {', '.join(pending)}"
+            if pending else "no hand-written text pending review")
+    if not stale and not fell:
         print(f"hand entries fresh: {len(hands)} checked, none older than {STALE_AFTER_DAYS} days; "
               f"fast sources: {len(fed)} banks checked, none on a BIS observation older than "
-              f"{FEED_FALLBACK_AFTER_DAYS} days; desk views: {len(desks)} checked, none expired "
-              f"(today {today.isoformat()})")
+              f"{FEED_FALLBACK_AFTER_DAYS} days; {note} (today {today.isoformat()})")
         return 0
     for e in stale:
         print(f"STALE HAND ENTRY: {e['name']} ({e['code']}) — manual_rate last verified "
@@ -293,11 +342,7 @@ def check_stale(cfg: dict | None = None, today: date | None = None,
               f"page publishes that stale value with its date; see the build step's stderr for "
               f"why the source failed (a refused fetch, a changed page, a basis mismatch).",
               file=sys.stderr)
-    for e in views:
-        print(f"DESK VIEW EXPIRED: {e['name']} ({e['code']}) — the hand-written next-move view "
-              f"\"{e['was']}\" (edited {e['edited'] or 'undated'}) is {e['reason']}; the page shows "
-              f"\"Review pending\" until next_move is rewritten and next_move_edited re-dated in "
-              f"cb_matrix_config.yaml (or both removed, for the automatic lean).", file=sys.stderr)
+    print(note, file=sys.stderr)
     return 1
 
 
@@ -420,8 +465,10 @@ def main() -> None:
         as_of_dates.append(as_of)
         mv = last_move(series)
 
-        phase = spec.get("phase_override") or classify_phase(mv, today, lookback)
-        phase_source = "override" if spec.get("phase_override") else "auto"
+        phase, phase_source, ov_reason = resolve_phase(spec, mv, date.fromisoformat(today), lookback)
+        override_dropped = ({"edited": str(spec.get("phase_override_edited", "") or ""),
+                             "was": str(spec["phase_override"]), "reason": ov_reason}
+                            if ov_reason else None)
 
         jan1 = f"{today[:4]}-01-01"
         base = value_on_or_before(series, jan1)
@@ -468,6 +515,7 @@ def main() -> None:
             "last_move": (mv | {"display": mv_display}) if mv else None,
             "phase": phase,
             "phase_source": phase_source,
+            "override_expired": override_dropped,
             "ytd_bps": ytd_bps,
             "ytd_display": fmt_bps(ytd_bps) if ytd_bps is not None else "—",
             "next_move": next_move,
@@ -487,6 +535,8 @@ def main() -> None:
             "manual_entries": manual_entries,
             "desk_view_max_age_days": DESK_VIEW_MAX_AGE_DAYS,
             "desk_views_expired": expired_desk_views(banks_out),
+            "overrides_expired": expired_overrides(banks_out),
+            "review_pending": review_pending(banks_out),
             "source_url": SOURCE_URL,
             "lookback_months": lookback,
             "note": ("Cycle phase is a transparent heuristic derived from the size and "
@@ -518,6 +568,10 @@ def main() -> None:
     for e in expired_desk_views(banks_out):
         print(f"WARNING desk view expired: {e['name']} ({e['code']}) \"{e['was']}\" "
               f"(edited {e['edited'] or 'undated'}) — {e['reason']}; published as Review pending",
+              file=sys.stderr)
+    for e in expired_overrides(banks_out):
+        print(f"WARNING phase override expired: {e['name']} ({e['code']}) \"{e['was']}\" "
+              f"(edited {e['edited'] or 'undated'}) — {e['reason']}; dropped, the rule speaks",
               file=sys.stderr)
     s = payload["summary"]
     fastn = sum(1 for b in banks_out if b.get("fast"))

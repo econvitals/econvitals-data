@@ -285,25 +285,63 @@ class StaleRule(unittest.TestCase):
     def test_undated_desk_view_expires(self):
         self.assertIn("undated", build.desk_view_expired(self.desk(None), "2026-01-01", TODAY))
 
-    def test_check_stale_fails_on_an_expired_desk_view_naming_the_bank(self):
+    def test_expired_desk_view_is_review_pending_but_not_a_check_stale_failure(self):
         rows = [{"code": "AU", "name": "Reserve Bank of Australia", "as_of": TODAY.isoformat(),
                  "next_move": {"text": "Review pending", "kind": "pending", "edited": "2026-06-16",
                                "was": "No change expected; data-dependent",
                                "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"}},
                 {"code": "NO", "name": "Norges Bank", "as_of": TODAY.isoformat(),
-                 "next_move": {"text": "Steady", "kind": "desk", "edited": TODAY.isoformat()}}]
+                 "next_move": {"text": "Steady", "kind": "desk", "edited": TODAY.isoformat()},
+                 "override_expired": {"edited": "2026-06-16", "was": "On Hold",
+                                      "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"}},
+                {"code": "US", "name": "Federal Reserve", "as_of": TODAY.isoformat(), "fast": True,
+                 "next_move": {"text": "Further hikes likely", "kind": "auto", "edited": ""}}]
+        self.assertEqual(build.review_pending(rows), ["AU", "NO"])
+        self.assertEqual([e["code"] for e in build.expired_overrides(rows)], ["NO"])
         out, err = io.StringIO(), io.StringIO()
         with redirect_stdout(out), redirect_stderr(err):
             rc = build.check_stale(cfg(), TODAY, banks=rows)
-            rc_ok = build.check_stale(cfg(), TODAY, banks=rows[1:])
-        self.assertEqual(rc, 1)
-        self.assertEqual(rc_ok, 0)
-        msg = err.getvalue()
-        self.assertIn("DESK VIEW EXPIRED: Reserve Bank of Australia (AU)", msg)
-        self.assertIn("No change expected; data-dependent", msg)
-        self.assertIn("edited 2026-06-16", msg)
-        self.assertIn("2026-09-30", msg)
-        self.assertIn("desk views: 1 checked, none expired", out.getvalue())
+        self.assertEqual(rc, 0, "expired hand text is the ops mail's business, not an Action failure")
+        self.assertIn("review pending (not a failure; the ops mail reports it): AU, NO", out.getvalue())
+        self.assertEqual(err.getvalue(), "")
+
+    # ---- phase overrides expire the same way, and then the rule speaks ----
+    def au(self, override_edited):
+        spec = {"code": "AU", "name": "Reserve Bank of Australia", "phase_override": "On Hold"}
+        if override_edited is not None:
+            spec["phase_override_edited"] = override_edited
+        return spec
+
+    def test_override_before_the_latest_decision_is_dropped_and_the_rule_says_hiking(self):
+        mv = {"date": "2026-09-30", "delta_bps": 25, "direction": "up"}
+        phase, source, reason = build.resolve_phase(self.au(date(2026, 6, 16)), mv, TODAY, 6)
+        self.assertEqual((phase, source), ("Hiking", "auto"))
+        self.assertIn("before the bank's latest decision on 2026-09-30", reason)
+
+    def test_fresh_override_stands(self):
+        mv = {"date": "2026-09-30", "delta_bps": 25, "direction": "up"}
+        self.assertEqual(build.resolve_phase(self.au(date(2026, 10, 1)), mv, TODAY, 6), ("On Hold", "override", None))
+
+    def test_override_over_60_days_or_undated_is_dropped(self):
+        mv = {"date": "2026-01-15", "delta_bps": 25, "direction": "up"}
+        self.assertIsNone(build.override_expired(self.au(TODAY - timedelta(days=60)), "2026-01-15", TODAY))
+        self.assertIn("61 days ago", build.override_expired(self.au(TODAY - timedelta(days=61)), "2026-01-15", TODAY))
+        self.assertIn("undated — no phase_override_edited", build.override_expired(self.au(None), "2026-01-15", TODAY))
+        phase, source, _ = build.resolve_phase(self.au(None), mv, TODAY, 6)
+        self.assertEqual((phase, source), ("On Hold", "auto"))   # the rule: a hike 9 months ago = On Hold
+
+    def test_no_override_is_just_the_rule(self):
+        mv = {"date": "2026-09-30", "delta_bps": 25, "direction": "up"}
+        self.assertEqual(build.resolve_phase({"code": "US", "name": "Fed"}, mv, TODAY, 6), ("Hiking", "auto", None))
+
+    def test_the_shipped_config_dates_every_override_and_desk_view(self):
+        import yaml
+        c = yaml.safe_load(build.CONFIG.read_text())
+        for s in c["banks"]:
+            if s.get("phase_override"):
+                self.assertTrue(s.get("phase_override_edited"), f"{s['code']}: phase_override needs phase_override_edited")
+            if s.get("next_move"):
+                self.assertTrue(s.get("next_move_edited"), f"{s['code']}: next_move needs next_move_edited")
 
     def test_the_shipped_config_carries_no_hand_entry_and_india_has_a_fast_source(self):
         import yaml

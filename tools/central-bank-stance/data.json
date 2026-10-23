@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-23T13:17:07+00:00",
+    "generated_at": "2026-10-23T13:24:34+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -28,6 +28,26 @@
         "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"
       }
     ],
+    "overrides_expired": [
+      {
+        "code": "AU",
+        "name": "Reserve Bank of Australia",
+        "edited": "2026-06-16",
+        "was": "On Hold",
+        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"
+      },
+      {
+        "code": "NO",
+        "name": "Norges Bank",
+        "edited": "2026-06-16",
+        "was": "On Hold",
+        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"
+      }
+    ],
+    "review_pending": [
+      "AU",
+      "NO"
+    ],
     "source_url": "https://data.bis.org/topics/CBPOL",
     "lookback_months": 6,
     "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path."
@@ -37,8 +57,8 @@
     "as_of_min": "2026-10-13",
     "total": 12,
     "cutting": 0,
-    "hold": 7,
-    "hiking": 5,
+    "hold": 5,
+    "hiking": 7,
     "paused": 3
   },
   "banks": [
@@ -62,6 +82,7 @@
       },
       "phase": "Hiking",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 25,
       "ytd_display": "+25 bp",
       "next_move": {
@@ -144,6 +165,7 @@
       },
       "phase": "Hiking",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 50,
       "ytd_display": "+50 bp",
       "next_move": {
@@ -246,6 +268,7 @@
       },
       "phase": "Hiking",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 50,
       "ytd_display": "+50 bp",
       "next_move": {
@@ -308,6 +331,7 @@
       },
       "phase": "On Hold",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 0,
       "ytd_display": "0 bp",
       "next_move": {
@@ -390,6 +414,7 @@
       },
       "phase": "On Hold",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 0,
       "ytd_display": "0 bp",
       "next_move": {
@@ -474,8 +499,13 @@
         "direction": "up",
         "display": "▲ 25 bp · Sep 2026"
       },
-      "phase": "On Hold",
-      "phase_source": "override",
+      "phase": "Hiking",
+      "phase_source": "auto",
+      "override_expired": {
+        "edited": "2026-06-16",
+        "was": "On Hold",
+        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"
+      },
       "ytd_bps": 100,
       "ytd_display": "+100 bp",
       "next_move": {
@@ -564,6 +594,7 @@
       },
       "phase": "Paused",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 0,
       "ytd_display": "0 bp",
       "next_move": {
@@ -634,6 +665,7 @@
       },
       "phase": "Paused",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 0,
       "ytd_display": "0 bp",
       "next_move": {
@@ -718,8 +750,13 @@
         "direction": "up",
         "display": "▲ 25 bp · Sep 2026"
       },
-      "phase": "On Hold",
-      "phase_source": "override",
+      "phase": "Hiking",
+      "phase_source": "auto",
+      "override_expired": {
+        "edited": "2026-06-16",
+        "was": "On Hold",
+        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"
+      },
       "ytd_bps": 50,
       "ytd_display": "+50 bp",
       "next_move": {
@@ -800,6 +837,7 @@
       },
       "phase": "Hiking",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 50,
       "ytd_display": "+50 bp",
       "next_move": {
@@ -894,6 +932,7 @@
       },
       "phase": "Paused",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 0,
       "ytd_display": "0 bp",
       "next_move": {
@@ -952,6 +991,7 @@
       },
       "phase": "Hiking",
       "phase_source": "auto",
+      "override_expired": null,
       "ytd_bps": 25,
       "ytd_display": "+25 bp",
       "next_move": {

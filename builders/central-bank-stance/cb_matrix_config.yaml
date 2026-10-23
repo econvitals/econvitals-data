@@ -6,6 +6,11 @@
 #
 # What you can set per bank:
 #   phase_override : force the cycle phase   (Hiking | On Hold | Cutting | Paused)
+#   phase_override_edited : the ISO date the override was written — REQUIRED with
+#                    phase_override. It EXPIRES exactly like a desk view (below): once the
+#                    bank has decided after that date, after 60 days, or if undated, the
+#                    build drops it so the rule speaks, prints a WARNING, and lists the bank
+#                    in meta.review_pending for the daily ops mail.
 #   next_move      : a desk view of the next expected move (free text). If unset,
 #                    the page shows an automatic qualitative lean derived from the
 #                    bank's current phase. Set this to a real OIS/market call when
@@ -15,10 +20,11 @@
 #                    that date (its last move, from the rate history), or once the date
 #                    is more than 60 days old (build.py DESK_VIEW_MAX_AGE_DAYS), or when
 #                    it is undated, the page shows "Review pending" in its place (never
-#                    the stale text), the build prints a WARNING, and the workflow's
-#                    last step `build.py --check-stale` FAILS the run after the publish,
-#                    naming the bank — so GitHub emails the owner. Rewrite next_move and
-#                    re-date next_move_edited to clear it, or remove both for the auto lean.
+#                    the stale text), the build prints a WARNING, and the bank is listed in
+#                    meta.review_pending, which the daily 6:10 ops mail reports (jobhost-ops
+#                    ops_health.check_stance_review_pending). NOT an Action failure — the
+#                    page is already honest about it. Rewrite next_move and re-date
+#                    next_move_edited to clear it, or remove both for the auto lean.
 #   manual_rate    : EMERGENCY FALLBACK — a rate entered BY HAND for a bank BIS has stopped
 #                    relaying and whose own source is down too — `value`, `date` (the decision date), `verified`
 #                    (the day the bank's own page was last read at that value), `source`
@@ -88,7 +94,10 @@ banks:
     instrument: Cash Rate
     # One +25bp move shouldn't read as a hiking cycle — hold the stance neutral
     # until there's a real path. Remove these to let BIS auto-classify again.
+    # (Written 2026-06-16; the RBA hiked 2026-09-30, so both expired and the rule speaks
+    # until the desk rewrites them with fresh dates.)
     phase_override: On Hold
+    phase_override_edited: 2026-06-16
     next_move: "No change expected; data-dependent"
     next_move_edited: 2026-06-16
 
@@ -111,7 +120,10 @@ banks:
     instrument: Policy Rate
     # One +25bp move shouldn't read as a hiking cycle — hold the stance neutral
     # until there's a real path. Remove these to let BIS auto-classify again.
+    # (Written 2026-06-16; Norges Bank hiked 2026-09-25, so both expired and the rule speaks
+    # until the desk rewrites them with fresh dates.)
     phase_override: On Hold
+    phase_override_edited: 2026-06-16
     next_move: "No change expected; data-dependent"
     next_move_edited: 2026-06-16
 
