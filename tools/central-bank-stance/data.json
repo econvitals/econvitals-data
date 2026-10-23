@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-23T11:33:02+00:00",
+    "generated_at": "2026-10-23T13:17:07+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -11,6 +11,23 @@
       "Reserve Bank of India — Policy Repo Rate (rbi.org.in home page + MPC resolutions)"
     ],
     "manual_entries": [],
+    "desk_view_max_age_days": 60,
+    "desk_views_expired": [
+      {
+        "code": "AU",
+        "name": "Reserve Bank of Australia",
+        "edited": "2026-06-16",
+        "was": "No change expected; data-dependent",
+        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"
+      },
+      {
+        "code": "NO",
+        "name": "Norges Bank",
+        "edited": "2026-06-16",
+        "was": "No change expected; data-dependent",
+        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"
+      }
+    ],
     "source_url": "https://data.bis.org/topics/CBPOL",
     "lookback_months": 6,
     "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path."
@@ -33,7 +50,7 @@
       "instrument": "Federal Funds Rate (target range)",
       "rate": 3.875,
       "rate_display": "3.75–4.00%",
-      "as_of": "2026-10-22",
+      "as_of": "2026-10-23",
       "as_of_source": "FRED (Board of Governors) — federal funds target range",
       "fast": true,
       "manual": false,
@@ -102,7 +119,7 @@
           "value": 3.875
         },
         {
-          "date": "2026-10-22",
+          "date": "2026-10-23",
           "value": 3.875
         }
       ]
@@ -361,7 +378,7 @@
       "instrument": "Overnight Rate",
       "rate": 2.25,
       "rate_display": "2.25%",
-      "as_of": "2026-10-21",
+      "as_of": "2026-10-22",
       "as_of_source": "Bank of Canada — target for the overnight rate",
       "fast": true,
       "manual": false,
@@ -434,7 +451,7 @@
           "value": 2.25
         },
         {
-          "date": "2026-10-21",
+          "date": "2026-10-22",
           "value": 2.25
         }
       ]
@@ -462,9 +479,11 @@
       "ytd_bps": 100,
       "ytd_display": "+100 bp",
       "next_move": {
-        "text": "No change expected; data-dependent",
-        "kind": "desk",
-        "edited": "2026-06-16"
+        "text": "Review pending",
+        "kind": "pending",
+        "edited": "2026-06-16",
+        "was": "No change expected; data-dependent",
+        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"
       },
       "path": [
         {
@@ -704,9 +723,11 @@
       "ytd_bps": 50,
       "ytd_display": "+50 bp",
       "next_move": {
-        "text": "No change expected; data-dependent",
-        "kind": "desk",
-        "edited": "2026-06-16"
+        "text": "Review pending",
+        "kind": "pending",
+        "edited": "2026-06-16",
+        "was": "No change expected; data-dependent",
+        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"
       },
       "path": [
         {

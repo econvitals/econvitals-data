@@ -10,7 +10,15 @@
 #                    the page shows an automatic qualitative lean derived from the
 #                    bank's current phase. Set this to a real OIS/market call when
 #                    you have one — e.g. "v 25bp by Sep 2026".
-#   next_move_edited : optional ISO date stamp shown next to a desk view.
+#   next_move_edited : the ISO date the desk view was written — REQUIRED with next_move.
+#                    A desk view EXPIRES: once the bank has made a policy decision after
+#                    that date (its last move, from the rate history), or once the date
+#                    is more than 60 days old (build.py DESK_VIEW_MAX_AGE_DAYS), or when
+#                    it is undated, the page shows "Review pending" in its place (never
+#                    the stale text), the build prints a WARNING, and the workflow's
+#                    last step `build.py --check-stale` FAILS the run after the publish,
+#                    naming the bank — so GitHub emails the owner. Rewrite next_move and
+#                    re-date next_move_edited to clear it, or remove both for the auto lean.
 #   manual_rate    : EMERGENCY FALLBACK — a rate entered BY HAND for a bank BIS has stopped
 #                    relaying and whose own source is down too — `value`, `date` (the decision date), `verified`
 #                    (the day the bank's own page was last read at that value), `source`

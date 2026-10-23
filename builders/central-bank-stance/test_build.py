@@ -258,6 +258,53 @@ class StaleRule(unittest.TestCase):
         self.assertIn("90 days old", msg)
         self.assertIn("fast sources: 1 banks checked", out.getvalue())
 
+    # ---- desk views expire: before the bank's latest decision, after 60 days, or undated ----
+    def desk(self, edited, text="No change expected; data-dependent"):
+        spec = {"code": "AU", "name": "Reserve Bank of Australia", "next_move": text}
+        if edited is not None:
+            spec["next_move_edited"] = edited
+        return spec
+
+    def test_no_desk_view_never_expires(self):
+        self.assertIsNone(build.desk_view_expired({"code": "US", "name": "Fed"}, "2026-09-17", TODAY))
+
+    def test_fresh_desk_view_after_the_latest_decision_stands(self):
+        self.assertIsNone(build.desk_view_expired(self.desk(date(2026, 10, 1)), "2026-09-30", TODAY))
+        self.assertIsNone(build.desk_view_expired(self.desk("2026-10-01"), None, TODAY))
+
+    def test_desk_view_written_before_the_latest_decision_expires(self):
+        r = build.desk_view_expired(self.desk(date(2026, 6, 16)), "2026-09-30", TODAY)
+        self.assertIn("before the bank's latest decision on 2026-09-30", r)
+
+    def test_desk_view_over_60_days_old_expires_even_with_no_decision_since(self):
+        self.assertEqual(build.DESK_VIEW_MAX_AGE_DAYS, 60)
+        self.assertIsNone(build.desk_view_expired(self.desk(TODAY - timedelta(days=60)), "2026-01-01", TODAY))
+        r = build.desk_view_expired(self.desk(TODAY - timedelta(days=61)), "2026-01-01", TODAY)
+        self.assertIn("61 days ago (limit 60)", r)
+
+    def test_undated_desk_view_expires(self):
+        self.assertIn("undated", build.desk_view_expired(self.desk(None), "2026-01-01", TODAY))
+
+    def test_check_stale_fails_on_an_expired_desk_view_naming_the_bank(self):
+        rows = [{"code": "AU", "name": "Reserve Bank of Australia", "as_of": TODAY.isoformat(),
+                 "next_move": {"text": "Review pending", "kind": "pending", "edited": "2026-06-16",
+                               "was": "No change expected; data-dependent",
+                               "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"}},
+                {"code": "NO", "name": "Norges Bank", "as_of": TODAY.isoformat(),
+                 "next_move": {"text": "Steady", "kind": "desk", "edited": TODAY.isoformat()}}]
+        out, err = io.StringIO(), io.StringIO()
+        with redirect_stdout(out), redirect_stderr(err):
+            rc = build.check_stale(cfg(), TODAY, banks=rows)
+            rc_ok = build.check_stale(cfg(), TODAY, banks=rows[1:])
+        self.assertEqual(rc, 1)
+        self.assertEqual(rc_ok, 0)
+        msg = err.getvalue()
+        self.assertIn("DESK VIEW EXPIRED: Reserve Bank of Australia (AU)", msg)
+        self.assertIn("No change expected; data-dependent", msg)
+        self.assertIn("edited 2026-06-16", msg)
+        self.assertIn("2026-09-30", msg)
+        self.assertIn("desk views: 1 checked, none expired", out.getvalue())
+
     def test_the_shipped_config_carries_no_hand_entry_and_india_has_a_fast_source(self):
         import yaml
         c = yaml.safe_load(build.CONFIG.read_text())

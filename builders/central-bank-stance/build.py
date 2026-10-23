@@ -80,6 +80,11 @@ STALE_AFTER_DAYS = 75
 # current. Past this many days the feed has failed AND BIS is stale (India's relay stopped
 # at 2026-07-23), so `--check-stale` fails the run on it too — same alarm, same channel.
 FEED_FALLBACK_AFTER_DAYS = 45
+# A hand-written desk view (`next_move` in the config) is a dated opinion about the next
+# meeting. It expires when the bank has decided since it was written, or after this many
+# days; an expired view is published as "Review pending" (never as stale text) and
+# `--check-stale` fails the run on it, so the desk is told to rewrite it.
+DESK_VIEW_MAX_AGE_DAYS = 60
 
 
 # ----------------------------------------------------------------------------- fetch
@@ -218,24 +223,63 @@ def fallen_back_rows(banks: list[dict], today: date, fast: dict | None = None,
     return out
 
 
+def desk_view_expired(spec: dict, last_move_date: str | None, today: date,
+                      max_age_days: int = DESK_VIEW_MAX_AGE_DAYS):
+    """Why a bank's hand-written `next_move` should no longer be shown, or None while it
+    stands. Expired when it is undated (no `next_move_edited`), written before the bank's
+    most recent policy decision (its last-move date from the rate history), or more than
+    `max_age_days` old (60 days old is still shown, 61 is not). Pure."""
+    if not spec.get("next_move"):
+        return None
+    edited = spec.get("next_move_edited")
+    if not edited:
+        return "undated — no next_move_edited"
+    ed = edited if isinstance(edited, date) else date.fromisoformat(str(edited))
+    if last_move_date and ed < date.fromisoformat(str(last_move_date)):
+        return (f"written {ed.isoformat()}, before the bank's latest decision on "
+                f"{last_move_date}")
+    age = (today - ed).days
+    if age > max_age_days:
+        return f"written {ed.isoformat()}, {age} days ago (limit {max_age_days})"
+    return None
+
+
+def expired_desk_views(banks: list[dict]) -> list[dict]:
+    """Rows in a built data.json whose next-move cell is 'Review pending' — the build withheld
+    an expired desk view. {code, name, edited, was, reason}. Pure."""
+    out = []
+    for b in banks:
+        nm = b.get("next_move") or {}
+        if nm.get("kind") == "pending":
+            out.append({"code": b.get("code"), "name": b.get("name", b.get("code")),
+                        "edited": nm.get("edited", ""), "was": nm.get("was", ""),
+                        "reason": nm.get("reason", "")})
+    return out
+
+
 def check_stale(cfg: dict | None = None, today: date | None = None,
                 banks: list[dict] | None = None) -> int:
     """`build.py --check-stale`, the workflow's last step (after the publish): 0 when every hand
-    entry is fresh and every bank with its own fast source was served by it or by a current
-    BIS; 1 — naming the bank and the dates — when a hand entry is older than STALE_AFTER_DAYS
-    or a fast-sourced bank fell back to a BIS observation older than FEED_FALLBACK_AFTER_DAYS."""
+    entry is fresh, every bank with its own fast source was served by it or by a current BIS,
+    and no desk view has expired; 1 — naming the bank and the dates — when a hand entry is
+    older than STALE_AFTER_DAYS, a fast-sourced bank fell back to a BIS observation older than
+    FEED_FALLBACK_AFTER_DAYS, or a hand-written next-move view was withheld as "Review
+    pending" (see desk_view_expired). The page publishes in every case; this is the alarm."""
     cfg = cfg if cfg is not None else yaml.safe_load(CONFIG.read_text())
     today = today or datetime.now(timezone.utc).date()
     if banks is None:
         banks = json.loads(OUT.read_text()).get("banks", []) if OUT.exists() else []
     stale = stale_manual_entries(cfg, today)
     fell = fallen_back_rows(banks, today)
+    views = expired_desk_views(banks)
     hands = [s for s in cfg.get("banks", []) if s.get("manual_rate")]
     fed = [b for b in banks if b.get("code") in fast_sources.FAST]
-    if not stale and not fell:
+    desks = [b for b in banks if (b.get("next_move") or {}).get("kind") in ("desk", "pending")]
+    if not stale and not fell and not views:
         print(f"hand entries fresh: {len(hands)} checked, none older than {STALE_AFTER_DAYS} days; "
               f"fast sources: {len(fed)} banks checked, none on a BIS observation older than "
-              f"{FEED_FALLBACK_AFTER_DAYS} days (today {today.isoformat()})")
+              f"{FEED_FALLBACK_AFTER_DAYS} days; desk views: {len(desks)} checked, none expired "
+              f"(today {today.isoformat()})")
         return 0
     for e in stale:
         print(f"STALE HAND ENTRY: {e['name']} ({e['code']}) — manual_rate last verified "
@@ -249,6 +293,11 @@ def check_stale(cfg: dict | None = None, today: date | None = None,
               f"page publishes that stale value with its date; see the build step's stderr for "
               f"why the source failed (a refused fetch, a changed page, a basis mismatch).",
               file=sys.stderr)
+    for e in views:
+        print(f"DESK VIEW EXPIRED: {e['name']} ({e['code']}) — the hand-written next-move view "
+              f"\"{e['was']}\" (edited {e['edited'] or 'undated'}) is {e['reason']}; the page shows "
+              f"\"Review pending\" until next_move is rewritten and next_move_edited re-dated in "
+              f"cb_matrix_config.yaml (or both removed, for the automatic lean).", file=sys.stderr)
     return 1
 
 
@@ -379,8 +428,14 @@ def main() -> None:
         ytd_bps = round((rate - base) * 100) if base is not None else None
 
         if spec.get("next_move"):
-            next_move = {"text": str(spec["next_move"]), "kind": "desk",
-                         "edited": str(spec.get("next_move_edited", ""))}
+            edited = str(spec.get("next_move_edited", "") or "")
+            reason = desk_view_expired(spec, mv["date"] if mv else None, date.fromisoformat(today))
+            if reason:
+                # Never publish stale hand text: the cell says so, the alarm says who.
+                next_move = {"text": "Review pending", "kind": "pending", "edited": edited,
+                             "was": str(spec["next_move"]), "reason": reason}
+            else:
+                next_move = {"text": str(spec["next_move"]), "kind": "desk", "edited": edited}
         else:
             next_move = {"text": AUTO_LEAN[phase], "kind": "auto", "edited": ""}
 
@@ -430,6 +485,8 @@ def main() -> None:
             "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
             "fast_sources": [lbl for lbl, _ in fast_sources.FAST.values()],
             "manual_entries": manual_entries,
+            "desk_view_max_age_days": DESK_VIEW_MAX_AGE_DAYS,
+            "desk_views_expired": expired_desk_views(banks_out),
             "source_url": SOURCE_URL,
             "lookback_months": lookback,
             "note": ("Cycle phase is a transparent heuristic derived from the size and "
@@ -458,6 +515,10 @@ def main() -> None:
     for e in fallen_back_rows(banks_out, date.fromisoformat(today)):
         print(f"WARNING feed down: {e['name']} ({e['code']}) fell back to BIS at {e['as_of']}, "
               f"{e['age_days']} days old", file=sys.stderr)
+    for e in expired_desk_views(banks_out):
+        print(f"WARNING desk view expired: {e['name']} ({e['code']}) \"{e['was']}\" "
+              f"(edited {e['edited'] or 'undated'}) — {e['reason']}; published as Review pending",
+              file=sys.stderr)
     s = payload["summary"]
     fastn = sum(1 for b in banks_out if b.get("fast"))
     handn = sum(1 for b in banks_out if b.get("manual"))
