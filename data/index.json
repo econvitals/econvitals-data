@@ -117,7 +117,7 @@
       "category": "Static/AI-Tech",
       "title": "AI Coverage: Theoretical Potential vs. Observed Usage",
       "type": "barh_pair",
-      "units": "Share of tasks (0\u20131 scale)",
+      "units": "Share of tasks (0–1 scale)",
       "latest_date": "Business & finance"
     },
     {
@@ -371,7 +371,7 @@
     {
       "slug": "china-share-us-imports-value-added",
       "category": "Static/Trade-Policy",
-      "title": "China\u2019s Share of U.S. Goods Imports: Gross vs. Value Added",
+      "title": "China’s Share of U.S. Goods Imports: Gross vs. Value Added",
       "type": "line",
       "units": "Percent",
       "latest_date": "2022-01-01"
@@ -379,7 +379,7 @@
     {
       "slug": "china-value-share-us-goods-imports",
       "category": "Static/Trade-Policy",
-      "title": "China\u2019s Share of U.S. Goods Imports, Counting Chinese Content Made Elsewhere",
+      "title": "China’s Share of U.S. Goods Imports, Counting Chinese Content Made Elsewhere",
       "type": "line",
       "units": "Percent",
       "latest_date": "2026-01-01"
@@ -428,6 +428,22 @@
       "slug": "composite-inflation",
       "category": "Other/Composites",
       "title": "Composite Inflation Indicators: Surprise and Absolute",
+      "type": "line",
+      "units": "Standard deviations",
+      "latest_date": "2026-10-16"
+    },
+    {
+      "slug": "composite-vs-forecasts",
+      "category": "Other/Composites",
+      "title": "The Economy Relative to Forecasts",
+      "type": "line",
+      "units": "Standard deviations",
+      "latest_date": "2026-10-16"
+    },
+    {
+      "slug": "composite-vs-past",
+      "category": "Other/Composites",
+      "title": "The Economy Relative to Its Past Performance",
       "type": "line",
       "units": "Standard deviations",
       "latest_date": "2026-10-16"
@@ -621,13 +637,13 @@
       "category": "Static/Confidence",
       "title": "2025 Consumer Confidence vs. Its History",
       "type": "barh",
-      "units": "Percentile of 1980\u20132019 annual values",
+      "units": "Percentile of 1980–2019 annual values",
       "latest_date": "2025-01-01"
     },
     {
       "slug": "consumer-confidence-change-since-2019",
       "category": "Static/Confidence",
-      "title": "Change in Consumer Confidence, 2019\u20132025",
+      "title": "Change in Consumer Confidence, 2019–2025",
       "type": "barh",
       "units": "Change in index, 2019 average to 2025 average",
       "latest_date": "2025-01-01"
@@ -851,7 +867,7 @@
     {
       "slug": "core-pce-tracking",
       "category": "PCE/Temp",
-      "title": "Core PCE Inflation \u2014 Tracking the Current Month",
+      "title": "Core PCE Inflation — Tracking the Current Month",
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-09-01"
@@ -1189,7 +1205,7 @@
       "category": "Static/Labor",
       "title": "Building Trades: Data-Center Counties vs. Others",
       "type": "table",
-      "units": "Electrical, plumbing and HVAC contractors; percent change, 2021\u201322 to 2025\u201326",
+      "units": "Electrical, plumbing and HVAC contractors; percent change, 2021–22 to 2025–26",
       "latest_date": null
     },
     {
@@ -1315,7 +1331,7 @@
     {
       "slug": "deficit-vs-unemployment",
       "category": "Static/Fiscal",
-      "title": "Deficit vs. Unemployment Rate, FY1960\u20132026",
+      "title": "Deficit vs. Unemployment Rate, FY1960–2026",
       "type": "scatter_fit",
       "units": "Percent of GDP",
       "latest_date": "2026"
@@ -1555,7 +1571,7 @@
     {
       "slug": "employment-rate-historical",
       "category": "Static/Labor",
-      "title": "Employment Rate, 1900\u20132026",
+      "title": "Employment Rate, 1900–2026",
       "type": "line",
       "units": "Percent of Labor Force Employed",
       "latest_date": "2026-05-01"
@@ -1611,9 +1627,9 @@
     {
       "slug": "epop-15-64-us-demog-by-economy",
       "category": "Static/IntlLabor",
-      "title": "Employment Rate Ages 15\u201364 With U.S. Demographics",
+      "title": "Employment Rate Ages 15–64 With U.S. Demographics",
       "type": "barh",
-      "units": "Percent of population ages 15\u201364",
+      "units": "Percent of population ages 15–64",
       "latest_date": "2000-01-25"
     },
     {
@@ -1717,7 +1733,7 @@
       "category": "Static/IntlLabor",
       "title": "Employment-Population Ratio, Advanced Economies",
       "type": "barh",
-      "units": "Percent of population ages 15\u201364, seasonally adjusted",
+      "units": "Percent of population ages 15–64, seasonally adjusted",
       "latest_date": "2000-01-25"
     },
     {
@@ -1747,17 +1763,17 @@
     {
       "slug": "epop-us-vs-oecd-15-24",
       "category": "Static/IntlLabor",
-      "title": "Employment-Population Ratio, Ages 15\u201324",
+      "title": "Employment-Population Ratio, Ages 15–24",
       "type": "gap",
-      "units": "Percent of population ages 15\u201324",
+      "units": "Percent of population ages 15–24",
       "latest_date": "2025-01-01"
     },
     {
       "slug": "epop-us-vs-oecd-25-54",
       "category": "Static/IntlLabor",
-      "title": "Employment-Population Ratio, Ages 25\u201354",
+      "title": "Employment-Population Ratio, Ages 25–54",
       "type": "gap",
-      "units": "Percent of population ages 25\u201354",
+      "units": "Percent of population ages 25–54",
       "latest_date": "2025-01-01"
     },
     {
@@ -1811,17 +1827,17 @@
     {
       "slug": "epop-us-vs-oecd-men-15-24",
       "category": "Static/IntlLabor",
-      "title": "Employment-Population Ratio, Men 15\u201324",
+      "title": "Employment-Population Ratio, Men 15–24",
       "type": "gap",
-      "units": "Percent of men ages 15\u201324",
+      "units": "Percent of men ages 15–24",
       "latest_date": "2025-01-01"
     },
     {
       "slug": "epop-us-vs-oecd-men-25-54",
       "category": "Static/IntlLabor",
-      "title": "Employment-Population Ratio, Men 25\u201354",
+      "title": "Employment-Population Ratio, Men 25–54",
       "type": "gap",
-      "units": "Percent of men ages 25\u201354",
+      "units": "Percent of men ages 25–54",
       "latest_date": "2025-01-01"
     },
     {
@@ -1843,17 +1859,17 @@
     {
       "slug": "epop-us-vs-oecd-women-15-24",
       "category": "Static/IntlLabor",
-      "title": "Employment-Population Ratio, Women 15\u201324",
+      "title": "Employment-Population Ratio, Women 15–24",
       "type": "gap",
-      "units": "Percent of women ages 15\u201324",
+      "units": "Percent of women ages 15–24",
       "latest_date": "2025-01-01"
     },
     {
       "slug": "epop-us-vs-oecd-women-25-54",
       "category": "Static/IntlLabor",
-      "title": "Employment-Population Ratio, Women 25\u201354",
+      "title": "Employment-Population Ratio, Women 25–54",
       "type": "gap",
-      "units": "Percent of women ages 25\u201354",
+      "units": "Percent of women ages 25–54",
       "latest_date": "2025-01-01"
     },
     {
@@ -1867,7 +1883,7 @@
     {
       "slug": "epop-women-25-54-by-children-change-panels",
       "category": "Static/IntlLabor",
-      "title": "Change in Employment Rate of Women 25\u201354 Since 2006, by Children",
+      "title": "Change in Employment Rate of Women 25–54 Since 2006, by Children",
       "type": "barh",
       "units": "Employment-population ratio, change in points",
       "latest_date": "under6"
@@ -1875,7 +1891,7 @@
     {
       "slug": "epop-women-25-54-by-children-level-panels",
       "category": "Static/IntlLabor",
-      "title": "Employment Rate of Women 25\u201354, by Children",
+      "title": "Employment Rate of Women 25–54, by Children",
       "type": "barh",
       "units": "Employment-population ratio, percent",
       "latest_date": "under6"
@@ -1883,9 +1899,9 @@
     {
       "slug": "epop-women-25-54-mothers",
       "category": "Static/IntlLabor",
-      "title": "Employment-Population Ratio, Women 25\u201354, With and Without Children: United States",
+      "title": "Employment-Population Ratio, Women 25–54, With and Without Children: United States",
       "type": "line",
-      "units": "Percent of women ages 25\u201354",
+      "units": "Percent of women ages 25–54",
       "latest_date": "2026-01-01"
     },
     {
@@ -1893,7 +1909,7 @@
       "category": "Static/IntlLabor",
       "title": "Change in Employment Rate Since 2006, Mothers",
       "type": "barh",
-      "units": "Employment-population ratio, women 25\u201354, percentage-point change",
+      "units": "Employment-population ratio, women 25–54, percentage-point change",
       "latest_date": "2025-01-17"
     },
     {
@@ -1901,7 +1917,7 @@
       "category": "Static/IntlLabor",
       "title": "Employment Rate, Mothers",
       "type": "barh",
-      "units": "Employment-population ratio, women 25\u201354, percent",
+      "units": "Employment-population ratio, women 25–54, percent",
       "latest_date": "2025-01-20"
     },
     {
@@ -1909,7 +1925,7 @@
       "category": "Static/IntlLabor",
       "title": "Change in Employment Rate Since 2006, Women Without Children",
       "type": "barh",
-      "units": "Employment-population ratio, women 25\u201354, percentage-point change",
+      "units": "Employment-population ratio, women 25–54, percentage-point change",
       "latest_date": "2025-01-16"
     },
     {
@@ -1917,7 +1933,7 @@
       "category": "Static/IntlLabor",
       "title": "Employment Rate, Women Without Children",
       "type": "barh",
-      "units": "Employment-population ratio, women 25\u201354, percent",
+      "units": "Employment-population ratio, women 25–54, percent",
       "latest_date": "2025-01-19"
     },
     {
@@ -1925,7 +1941,7 @@
       "category": "Static/IntlLabor",
       "title": "Change in Employment Rate Since 2006, Mothers of Children Under 6",
       "type": "barh",
-      "units": "Employment-population ratio, women 25\u201354, percentage-point change",
+      "units": "Employment-population ratio, women 25–54, percentage-point change",
       "latest_date": "2025-01-18"
     },
     {
@@ -1933,7 +1949,7 @@
       "category": "Static/IntlLabor",
       "title": "Employment Rate, Mothers of Children Under 6",
       "type": "barh",
-      "units": "Employment-population ratio, women 25\u201354, percent",
+      "units": "Employment-population ratio, women 25–54, percent",
       "latest_date": "2025-01-20"
     },
     {
@@ -2091,7 +2107,7 @@
     {
       "slug": "fed-dots-forecast-error",
       "category": "Fed",
-      "title": "Error in the FOMC\u2019s One-Year-Ahead Federal Funds Rate Projection",
+      "title": "Error in the FOMC’s One-Year-Ahead Federal Funds Rate Projection",
       "type": "bar",
       "units": "Percentage points; above zero = rates ended higher than the dots projected",
       "latest_date": "2026-12-31"
@@ -2973,7 +2989,7 @@
       "category": "Static/Fiscal",
       "title": "Impact of Major Deficit Legislation and Proposals on the Primary Deficit",
       "type": "table",
-      "units": "Change in the primary deficit in the final year of the estimate (\u2212 = deficit reduction)",
+      "units": "Change in the primary deficit in the final year of the estimate (− = deficit reduction)",
       "latest_date": null
     },
     {
@@ -3373,7 +3389,7 @@
       "category": "Static/Fiscal",
       "title": "Noninterest Outlays vs. Unemployment Rate",
       "type": "scatter_fit",
-      "units": "Percent of GDP, FY1960\u20132026",
+      "units": "Percent of GDP, FY1960–2026",
       "latest_date": "2026"
     },
     {
@@ -3675,7 +3691,7 @@
     {
       "slug": "pce-inflation-tracking",
       "category": "PCE/Temp",
-      "title": "PCE Inflation \u2014 Tracking the Current Month",
+      "title": "PCE Inflation — Tracking the Current Month",
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-09-01"
@@ -3717,7 +3733,7 @@
       "category": "Static/Fiscal",
       "title": "Primary Deficit vs. Unemployment Rate",
       "type": "scatter_fit",
-      "units": "Percent of GDP, FY1960\u20132026",
+      "units": "Percent of GDP, FY1960–2026",
       "latest_date": "2026"
     },
     {
@@ -4245,7 +4261,7 @@
       "category": "Static/Employment",
       "title": "Real Median Weekly Earnings: Women by Race",
       "type": "line",
-      "units": "1982\u201384 dollars per week",
+      "units": "1982–84 dollars per week",
       "latest_date": "2026-01-01"
     },
     {
@@ -4723,7 +4739,7 @@
     {
       "slug": "revenue-vs-unemployment",
       "category": "Static/Fiscal",
-      "title": "Revenue vs. Unemployment Rate, FY1960\u20132026",
+      "title": "Revenue vs. Unemployment Rate, FY1960–2026",
       "type": "scatter_fit",
       "units": "Percent of GDP",
       "latest_date": "2026"
@@ -4789,7 +4805,7 @@
       "category": "Static/Confidence",
       "title": "Impact of Consumer Sentiment on Consumption",
       "type": "line",
-      "units": "Rolling 40-quarter coefficient: consumer sentiment \u2192 next-quarter real PCE growth",
+      "units": "Rolling 40-quarter coefficient: consumer sentiment → next-quarter real PCE growth",
       "latest_date": "2025-10-01"
     },
     {
