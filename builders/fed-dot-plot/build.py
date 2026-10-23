@@ -316,54 +316,79 @@ def build_meeting(date8: str, html: str) -> dict | None:
 # --------------------------------------------------------------------------- #
 # FRED actual federal funds rate
 # --------------------------------------------------------------------------- #
+def _fred_obs(api_key: str, series_id: str, start: str, **extra) -> dict:
+    """{date: value} for one FRED series from `start` (missing values dropped)."""
+    url = "https://api.stlouisfed.org/fred/series/observations"
+    params = {"series_id": series_id, "api_key": api_key, "file_type": "json",
+              "observation_start": start, **extra}
+    r = requests.get(url, params=params, headers=HEADERS, timeout=30)
+    r.raise_for_status()
+    out = {}
+    for o in r.json().get("observations", []):
+        v = o.get("value")
+        if v not in (None, ".", ""):
+            out[o["date"]] = float(v)
+    return out
+
+
+def _on_or_before(series: dict, iso: str):
+    ks = [k for k in series if k <= iso]
+    return series[max(ks)] if ks else None
+
+
+RANGE_FROM = "2008-12-16"   # the FOMC's first target RANGE (0-0.25%); a single target before
+
+
+def year_end_targets(upper: dict, lower: dict, single: dict, today) -> dict:
+    """year_end[Y] = the policy target in force on December 31 of Y, the concept the dots
+    project: the MIDPOINT of the target range (FRED DFEDTARU / DFEDTARL) from December 2008,
+    and the single target rate (FRED DFEDTAR) before that. Only completed years appear.
+
+    Until 2026-10-23 this was proxied by the following January's average effective funds
+    rate, which turned a projection that landed exactly on the range the Fed set (December
+    2016's 1.375 for end-2017; the range was 1.25-1.50) into a +0.04 "miss" (Jason's call
+    after the outside review: score the dots against the midpoint). Pure, for the test."""
+    years = sorted({int(k[:4]) for k in list(upper) + list(lower) + list(single)})
+    out = {}
+    for y in years:
+        if dt.date(y, 12, 31) > today:
+            continue
+        iso = f"{y}-12-31"
+        if iso >= RANGE_FROM:
+            u, lo = _on_or_before(upper, iso), _on_or_before(lower, iso)
+            if u is None or lo is None:
+                continue
+            out[str(y)] = round((u + lo) / 2, 3)
+        else:
+            t = _on_or_before(single, iso)
+            if t is not None:
+                out[str(y)] = round(t, 3)
+    return out
+
+
 def fetch_fred_fedfunds(api_key: str):
     """Return (year_end, current).
 
-    year_end[Y] = realized policy rate at the END of calendar year Y, proxied by
-    the FOLLOWING January's effective funds rate. The dots are target-range
-    midpoints at year-end; using next-January avoids the mid-December-hike
-    blending that drags December's own monthly average ~0.2-0.3pp below the
-    actual year-end target (e.g. end-2022 was a 4.375 midpoint, but December's
-    average prints ~4.10). Falls back to December of Y if January is missing.
-    Only completed years appear.
+    year_end[Y] = the target-range midpoint in force at the END of calendar year Y (the
+    single target before December 2008) -- see year_end_targets().
 
     current = the latest DAILY effective funds rate (FRED DFF). FEDFUNDS is monthly,
     so the "Current" reference line on the chart was up to five weeks stale and could
     sit at the pre-decision rate on the very day a meeting moved it."""
-    url = "https://api.stlouisfed.org/fred/series/observations"
-    params = {
-        "series_id": "FEDFUNDS",
-        "api_key": api_key,
-        "file_type": "json",
-        "observation_start": "2011-01-01",
-    }
-    r = requests.get(url, params=params, headers=HEADERS, timeout=30)
-    r.raise_for_status()
-    by_ym = {}
-    for o in r.json().get("observations", []):
-        v = o.get("value")
-        if v not in (None, ".", ""):
-            by_ym[o["date"][:7]] = float(v)
-    if not by_ym:
-        return {}, None
-    year_end = {}
-    for ym in by_ym:
-        if ym.endswith("-12"):
-            y = ym[:4]
-            nxt_jan = f"{int(y) + 1}-01"
-            year_end[y] = round(by_ym.get(nxt_jan, by_ym[ym]), 3)
-    last_ym = max(by_ym)
-    current = {"ym": last_ym, "rate": round(by_ym[last_ym], 3)}
+    upper = _fred_obs(api_key, "DFEDTARU", RANGE_FROM)
+    lower = _fred_obs(api_key, "DFEDTARL", RANGE_FROM)
+    single = _fred_obs(api_key, "DFEDTAR", "2008-01-01")     # ends 2008-12-15
+    year_end = year_end_targets(upper, lower, single, dt.date.today())
+    current = None
+    by_ym = _fred_obs(api_key, "FEDFUNDS", "2024-01-01")
+    if by_ym:
+        last_ym = max(by_ym)
+        current = {"ym": last_ym[:7], "rate": round(by_ym[last_ym], 3)}
     try:  # prefer the daily series; the monthly one above is the fallback
-        dr = requests.get(url, params={**params, "series_id": "DFF",
-                                       "observation_start": "2024-01-01",
-                                       "sort_order": "desc", "limit": 5},
-                          headers=HEADERS, timeout=30)
-        dr.raise_for_status()
-        for o in dr.json().get("observations", []):
-            if o.get("value") not in (None, ".", ""):
-                current = {"ym": o["date"], "rate": round(float(o["value"]), 3)}
-                break
+        daily = _fred_obs(api_key, "DFF", "2024-01-01", sort_order="desc", limit=5)
+        if daily:
+            d0 = max(daily)
+            current = {"ym": d0, "rate": round(daily[d0], 3)}
     except Exception as e:  # noqa: BLE001
         log(f"! DFF fetch failed ({_scrub(str(e))}); using monthly FEDFUNDS for 'current'")
     return year_end, current
@@ -431,7 +456,7 @@ def main() -> int:
     if not args.no_fred and api_key:
         try:
             year_end, current = fetch_fred_fedfunds(api_key)
-            log(f"FRED FEDFUNDS: realized year-ends {min(year_end)}–"
+            log(f"FRED target midpoints: realized year-ends {min(year_end)}–"
                 f"{max(year_end)}; current {current['rate']}% ({current['ym']})")
         except Exception as e:  # noqa: BLE001
             log(f"! FRED fetch failed ({_scrub(str(e))}); continuing without overlay")
@@ -457,7 +482,8 @@ def main() -> int:
 
     out = {
         "source": "Federal Reserve, Summary of Economic Projections, "
-                  "Figure 2 (accessible HTML). Actual rate: FRED FEDFUNDS.",
+                  "Figure 2 (accessible HTML). Realized rate: the year-end target-range "
+                  "midpoint, FRED DFEDTARU/DFEDTARL (DFEDTAR before December 2008).",
         "n_meetings": len(meetings),
         "first_meeting": meetings[0]["date"],
         "latest_meeting": meetings[-1]["date"],
