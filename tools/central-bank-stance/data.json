@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-23T21:21:55+00:00",
+    "generated_at": "2026-10-23T22:04:07+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -50,7 +50,7 @@
     ],
     "source_url": "https://data.bis.org/topics/CBPOL",
     "lookback_months": 6,
-    "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is a desk view set in cb_matrix_config.yaml (or an automatic lean from the phase); BIS publishes no forward path."
+    "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is either the editor's dated desk view or an automatic lean from the phase; hand entries and desk views are set by the editor, and BIS publishes no forward path."
   },
   "summary": {
     "as_of": "2026-10-23",

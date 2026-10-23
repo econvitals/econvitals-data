@@ -541,9 +541,9 @@ def main() -> None:
             "lookback_months": lookback,
             "note": ("Cycle phase is a transparent heuristic derived from the size and "
                      "recency of each bank's last policy-rate change, not an official "
-                     "central-bank characterization. “Next move” is a desk view "
-                     "set in cb_matrix_config.yaml (or an automatic lean from the phase); "
-                     "BIS publishes no forward path."),
+                     "central-bank characterization. “Next move” is either the editor's "
+                     "dated desk view or an automatic lean from the phase; hand entries and "
+                     "desk views are set by the editor, and BIS publishes no forward path."),
         },
         "summary": {
             "as_of": max(as_of_dates) if as_of_dates else None,
