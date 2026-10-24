@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-10-24T10:35:12+00:00",
+    "generated_at": "2026-10-24T16:16:07+00:00",
     "run_date": "2026-10-24",
-    "builder_commit": "300629bc",
+    "builder_commit": "5b0071c6",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures"
   },
@@ -161,7 +161,7 @@
         ],
         "composite": {
           "quarter": "Q3 2026",
-          "value": 3.18,
+          "value": 3.2,
           "band": 0.75,
           "days_to_release": 5,
           "advance_release": "2026-10-29",
@@ -196,12 +196,12 @@
             {
               "key": "street",
               "source": "Street median",
-              "value": 3.2,
-              "raw": 3.2,
+              "value": 3.3,
+              "raw": 3.3,
               "adjustment": 0.0,
               "as_of": "2026-10-23",
               "weight": 0.18,
-              "n": 4
+              "n": 5
             }
           ],
           "street_firms": [
@@ -213,12 +213,17 @@
             {
               "house": "Morgan Stanley",
               "value": 3.1,
-              "as_of": "2026-10-23"
+              "as_of": "2026-10-20"
             },
             {
               "house": "Goldman Sachs",
               "value": 3.3,
               "as_of": "2026-10-21"
+            },
+            {
+              "house": "J.P. Morgan",
+              "value": 3.5,
+              "as_of": "2026-10-23"
             },
             {
               "house": "BofA",
@@ -10759,11 +10764,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.67,
-                "as_of": "2026-10-23",
+                "value": 6.66,
+                "as_of": "2026-10-24",
                 "chg_1d": -0.1,
-                "chg_1w": -0.2,
-                "chg_ytd": -4.6,
+                "chg_1w": -0.3,
+                "chg_ytd": -4.7,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -12062,7 +12067,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-10-23",
         "anchor_midpoint": 3.875,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-10-23)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-10-24)",
         "current_range_bp": [
           375,
           400
