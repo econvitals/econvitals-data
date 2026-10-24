@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-24T04:31:06+00:00",
+    "generated_at": "2026-10-24T09:01:07+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -12,42 +12,9 @@
     ],
     "manual_entries": [],
     "desk_view_max_age_days": 60,
-    "desk_views_expired": [
-      {
-        "code": "AU",
-        "name": "Reserve Bank of Australia",
-        "edited": "2026-06-16",
-        "was": "No change expected; data-dependent",
-        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"
-      },
-      {
-        "code": "NO",
-        "name": "Norges Bank",
-        "edited": "2026-06-16",
-        "was": "No change expected; data-dependent",
-        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"
-      }
-    ],
-    "overrides_expired": [
-      {
-        "code": "AU",
-        "name": "Reserve Bank of Australia",
-        "edited": "2026-06-16",
-        "was": "On Hold",
-        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"
-      },
-      {
-        "code": "NO",
-        "name": "Norges Bank",
-        "edited": "2026-06-16",
-        "was": "On Hold",
-        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"
-      }
-    ],
-    "review_pending": [
-      "AU",
-      "NO"
-    ],
+    "desk_views_expired": [],
+    "overrides_expired": [],
+    "review_pending": [],
     "source_url": "https://data.bis.org/topics/CBPOL",
     "lookback_months": 6,
     "note": "Cycle phase is a transparent heuristic derived from the size and recency of each bank's last policy-rate change, not an official central-bank characterization. “Next move” is either the editor's dated desk view or an automatic lean from the phase; hand entries and desk views are set by the editor, and BIS publishes no forward path."
@@ -501,19 +468,13 @@
       },
       "phase": "Hiking",
       "phase_source": "auto",
-      "override_expired": {
-        "edited": "2026-06-16",
-        "was": "On Hold",
-        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"
-      },
+      "override_expired": null,
       "ytd_bps": 100,
       "ytd_display": "+100 bp",
       "next_move": {
-        "text": "Review pending",
-        "kind": "pending",
-        "edited": "2026-06-16",
-        "was": "No change expected; data-dependent",
-        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-30"
+        "text": "Further hikes likely",
+        "kind": "auto",
+        "edited": ""
       },
       "path": [
         {
@@ -752,19 +713,13 @@
       },
       "phase": "Hiking",
       "phase_source": "auto",
-      "override_expired": {
-        "edited": "2026-06-16",
-        "was": "On Hold",
-        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"
-      },
+      "override_expired": null,
       "ytd_bps": 50,
       "ytd_display": "+50 bp",
       "next_move": {
-        "text": "Review pending",
-        "kind": "pending",
-        "edited": "2026-06-16",
-        "was": "No change expected; data-dependent",
-        "reason": "written 2026-06-16, before the bank's latest decision on 2026-09-25"
+        "text": "Further hikes likely",
+        "kind": "auto",
+        "edited": ""
       },
       "path": [
         {
