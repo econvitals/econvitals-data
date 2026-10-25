@@ -1,0 +1,326 @@
+{
+ "meta": {
+  "generated_at": "2026-10-25T08:20:31+00:00",
+  "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
+  "call_window_days": 45,
+  "quote_window_days": 21,
+  "reader_updated": null,
+  "banks_with_calls": 0,
+  "banks_with_statement": 12,
+  "errors": []
+ },
+ "banks": {
+  "US": {
+   "code": "US",
+   "name": "Federal Reserve",
+   "window_from": "2026-09-16",
+   "latest_decision": "2026-09-16",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-16",
+    "title": "Federal Reserve issues FOMC statement",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+    "summary": "Fed raised the federal funds rate 25bp to 3.75-4%, citing elevated inflation and solid growth; signaled continued tightening to speed return to 2% inflation goal.",
+    "quote": "Today's policy action will support a timelier return to the Committee's 2 percent goal.",
+    "vote": "12-0",
+    "tilt": "hawkish",
+    "summarized_at": "2026-10-25T08:20:27+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "XM": {
+   "code": "XM",
+   "name": "European Central Bank",
+   "window_from": "2026-09-10",
+   "latest_decision": "2026-09-10",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-10",
+    "title": "Monetary policy decisions",
+    "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
+    "summary": "ECB raised all three key rates by 25bp (deposit rate to 2.50%) due to Middle East-driven inflation pressures. Future decisions remain data-dependent, meeting-by-meeting, with no pre-commitment to a rate path.",
+    "quote": "The Governing Council is not pre-committing to a particular rate path.",
+    "vote": null,
+    "tilt": "hawkish",
+    "summarized_at": "2026-10-25T08:20:31+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "GB": {
+   "code": "GB",
+   "name": "Bank of England",
+   "window_from": "2026-09-17",
+   "latest_decision": "2026-09-17",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-17",
+    "title": "Bank rate maintained at 3.75% - September 2026 Monetary Policy Summary and Minutes",
+    "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
+    "summary": "BoE held Bank Rate at 3.75% amid an energy-driven inflation spike to 3.1%, citing upside inflation risks from the Middle East conflict, and signaled readiness to act further if needed to secure the 2% target.",
+    "quote": "The Committee stands ready to act as necessary to ensure that CPI inflation remains on track to meet the 2% target in the medium term.",
+    "vote": "6-3; three members preferred a 25bp increase to 4%",
+    "tilt": "hawkish",
+    "summarized_at": "2026-10-25T08:20:01+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "CA": {
+   "code": "CA",
+   "name": "Bank of Canada",
+   "window_from": "2026-09-10",
+   "latest_decision": "2026-09-02",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-02",
+    "title": "Bank of Canada maintains the policy rate at 2¼%",
+    "url": "https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/",
+    "summary": "BoC held rate at 2.25%, citing inflation near forecast but rising oil/tariff risks and uncertain growth. Will assess recovery sustainability and inflation outlook, ready to adjust policy as needed.",
+    "quote": "Governing Council will assess the sustainability of the economic rebound and the outlook for inflation, and is prepared to adjust monetary policy as needed.",
+    "vote": null,
+    "tilt": "hawkish",
+    "summarized_at": "2026-10-25T08:19:49+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "AU": {
+   "code": "AU",
+   "name": "Reserve Bank of Australia",
+   "window_from": "2026-09-29",
+   "latest_decision": "2026-09-29",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-29",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "url": "https://www.rba.gov.au/media-releases/2026/mr-26-27.html",
+    "summary": "RBA raised the cash rate 25bp to 4.60% to curb elevated inflation driven by energy prices and capacity pressures, signaling readiness to hike further if needed to return inflation to target.",
+    "quote": "The Board will continue to do what it considers necessary to bring inflation sustainably back to target, including increasing the cash rate target further if needed.",
+    "vote": "unanimous",
+    "tilt": "hawkish",
+    "summarized_at": "2026-10-25T08:19:45+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "CH": {
+   "code": "CH",
+   "name": "Swiss National Bank",
+   "window_from": "2026-09-24",
+   "latest_decision": "2026-09-24",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-24",
+    "title": "2026-09-24 - Monetary policy assessment of 24 September 2026",
+    "url": "https://www.snb.ch/en/publications/communication/press-releases-restricted/pre_20260924",
+    "summary": "SNB held its policy rate at 0%, unchanged. Inflation forecasts edged up slightly but remain within price stability range; rate expected to stay at 0% across the forecast horizon.",
+    "quote": "The forecast is based on the assumption that the SNB policy rate is 0% over the entire forecast horizon.",
+    "vote": null,
+    "tilt": "neutral",
+    "summarized_at": "2026-10-25T08:19:53+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "SE": {
+   "code": "SE",
+   "name": "Sveriges Riksbank",
+   "window_from": "2026-09-24",
+   "latest_decision": "2026-09-24",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-24",
+    "title": "Policy rate unchanged at 1.75 per cent",
+    "url": "https://www.riksbank.se/en-gb/press-and-published/notices-and-press-releases/press-releases/2026/policy-rate-unchanged-at-16.75-per-cent",
+    "summary": "Riksbank held its policy rate at 1.75%, but signaled larger future rate hikes than previously projected due to stronger growth and ongoing supply shocks, with increases likely starting this year.",
+    "quote": "If the outlook for inflation and economic activity remains unchanged, it is expected that the increases to the policy rate will begin this year.",
+    "vote": null,
+    "tilt": "hawkish",
+    "summarized_at": "2026-10-25T08:20:23+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "NO": {
+   "code": "NO",
+   "name": "Norges Bank",
+   "window_from": "2026-09-24",
+   "latest_decision": "2026-09-24",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-24",
+    "title": "Policy rate raised to 4.50%",
+    "url": "https://www.norges-bank.no/en/news-events/news/Press-releases/2026/2026-09-24-rate/",
+    "summary": "Norges Bank raised its policy rate 25bp to 4.50% to curb persistently above-target inflation, signaling rates stay elevated longer than previously projected, with readiness to hike further if needed.",
+    "quote": "It will likely be necessary to keep the policy rate elevated for a time, and the Committee is prepared to raise the policy rate further if needed to bring inflation down to the 2% target within a reasonable time horizon",
+    "vote": null,
+    "tilt": "hawkish",
+    "summarized_at": "2026-10-25T08:20:15+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "NZ": {
+   "code": "NZ",
+   "name": "Reserve Bank of New Zealand",
+   "window_from": "2026-09-10",
+   "latest_decision": "2026-09-02",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-02",
+    "title": "OCR increased by 25 basis points to 2.75%",
+    "url": "https://www.rbnz.govt.nz/news-and-events/news/2026/09/ocr-increased-by-25-basis-points-to-2-75",
+    "summary": "No substantive statement text provided beyond title and generic description, so details of the decision and guidance cannot be determined.",
+    "quote": "Monetary Policy Statement media release and the MPC's Record of Meeting, which summarises the committee's discussions.",
+    "vote": null,
+    "tilt": "neutral",
+    "summarized_at": "2026-10-25T08:20:19+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "JP": {
+   "code": "JP",
+   "name": "Bank of Japan",
+   "window_from": "2026-09-18",
+   "latest_decision": "2026-09-18",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-09-18",
+    "title": "Change in the Guideline for Money Market Operations",
+    "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
+    "summary": "BOJ raised the policy rate 25bp to around 1.25%, calling it accommodation adjustment. It signaled continued gradual rate hikes ahead as underlying inflation nears 2% target.",
+    "quote": "the Bank will continue to raise the policy interest rate and adjust the degree of monetary accommodation, in response to developments in economic activity and prices as well as financial conditions.",
+    "vote": "7-2; Asada and Sato dissented, preferring to hold rates unchanged",
+    "tilt": "hawkish",
+    "summarized_at": "2026-10-25T08:20:11+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "CN": {
+   "code": "CN",
+   "name": "People's Bank of China",
+   "window_from": "2026-10-20",
+   "latest_decision": "2026-10-20",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-10-20",
+    "title": "Announcement on Loan Prime Rate (October 20, 2026)",
+    "url": "https://www.pbc.gov.cn/en/3688229/3688335/3730276/3883798/2026102014240299288/index.html",
+    "summary": "PBOC kept the one-year LPR at 3.0% and the over-five-year LPR at 3.5%, unchanged, effective until the next monthly release, with no explicit forward guidance given.",
+    "quote": "The rates are effective until the next release.",
+    "vote": null,
+    "tilt": "neutral",
+    "summarized_at": "2026-10-25T08:19:57+00:00",
+    "model": "claude-sonnet-5"
+   }
+  },
+  "IN": {
+   "code": "IN",
+   "name": "Reserve Bank of India",
+   "window_from": "2026-10-07",
+   "latest_decision": "2026-10-07",
+   "lean": {
+    "hold": 0,
+    "hike": 0,
+    "cut": 0
+   },
+   "n_desks": 0,
+   "consensus": null,
+   "calls": [],
+   "market_quotes": [],
+   "statement": {
+    "announced": "2026-10-07",
+    "title": "Resolution of the Monetary Policy Committee (MPC) October 5 to 7, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+    "summary": "RBI's MPC unanimously raised the repo rate 25bp to 5.50%, shifting stance to 'calibrated tightening,' signaling rate cuts are off the table near-term; further hikes or pauses possible depending on inflation and growth data.",
+    "quote": "It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause.",
+    "vote": "6-0 on rate; stance vote 4-2, two members (Dr. Nagesh Kumar and Prof. Ram Singh) preferred retaining neutral stance",
+    "tilt": "hawkish",
+    "summarized_at": "2026-10-25T08:20:06+00:00",
+    "model": "claude-sonnet-5"
+   }
+  }
+ }
+}
