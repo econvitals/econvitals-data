@@ -6,6 +6,11 @@ design — which is why finished investigations belong here and never under `## 
 
 Written by `jobhost-ops/next_archive.py`, daily. Newest sweep first.
 
+## Swept 2026-10-25
+
+### Next
+- ~~**Stance Matrix: enter the Reserve Bank of New Zealand's decision dates in `builders/central-bank-stance/meetings.yaml`.** rbnz.govt.nz answers 403 to every automated fetch (2026-10-25), so `NZ.dates` is empty and the page's next-meeting cell for New Zealand reads as not published; the 6:10 mail names it daily (`calendar_running_out`). Done = the OCR decision dates through 2027 copied from the RBNZ's monetary-policy decision-dates page (open it in a browser; the URL is in the file) with `fetched` bumped, and the mail line gone.~~
+
 ## Swept 2026-10-22
 
 ### Next
