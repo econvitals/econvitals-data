@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-10-24T20:29:51+00:00",
-    "run_date": "2026-10-24",
-    "builder_commit": "5cbdb324",
+    "generated_at": "2026-10-25T08:35:03+00:00",
+    "run_date": "2026-10-25",
+    "builder_commit": "2779d658",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures"
   },
@@ -69,7 +69,7 @@
           "label": "Fed funds target",
           "value": 3.875,
           "display": "3.75\u20134.00%",
-          "period": "2026-10-24",
+          "period": "2026-10-25",
           "change": null,
           "change_display": null,
           "provenance": "hard"
@@ -103,11 +103,11 @@
         },
         {
           "label": "Brent",
-          "value": 116.720001,
-          "display": "$117",
+          "value": 111.699997,
+          "display": "$112",
           "period": "2026-10-23",
-          "change": 91.8,
-          "change_display": "+91.8% YTD",
+          "change": 83.6,
+          "change_display": "+83.6% YTD",
           "provenance": "hard"
         },
         {
@@ -131,7 +131,7 @@
             "source": "Econvitals Composite",
             "value": 3.2,
             "quarter": "Q3 2026",
-            "as_of": "2026-10-24",
+            "as_of": "2026-10-25",
             "provenance": "hard",
             "band": 0.75,
             "legs": 4,
@@ -163,7 +163,7 @@
           "quarter": "Q3 2026",
           "value": 3.2,
           "band": 0.75,
-          "days_to_release": 5,
+          "days_to_release": 4,
           "advance_release": "2026-10-29",
           "legs": [
             {
@@ -240,7 +240,7 @@
           "moved": "GDPNow -0.1 to 3.5 on 2026-10-20, mostly housing after Housing starts; NY Fed unchanged at 2.7 on 2026-10-23.",
           "target": "BEA advance estimate",
           "method": "Fixed weights by days to the advance estimate: Econvitals' own estimate 10%; of the rest, equal beyond 45 days, then GDPNow 0.5 at 15-45 days and 0.6 inside 15 days, the NY Fed model and the Street median sharing the remainder. Until a tracker updates after a release, it is moved by half of Econvitals' own estimate's change since its last update. Band = GDPNow's average miss at this horizon.",
-          "as_of": "2026-10-24"
+          "as_of": "2026-10-25"
         }
       },
       "charts": [
@@ -10709,10 +10709,10 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1205,
-                "as_of": "2026-10-23",
-                "chg_1d": 0.1,
-                "chg_1w": 0.2,
+                "value": 1.1202,
+                "as_of": "2026-10-24",
+                "chg_1d": 0.0,
+                "chg_1w": 0.1,
                 "chg_ytd": 4.6,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10720,10 +10720,10 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3375,
-                "as_of": "2026-10-23",
-                "chg_1d": 0.2,
-                "chg_1w": -0.3,
+                "value": 1.3374,
+                "as_of": "2026-10-24",
+                "chg_1d": -0.0,
+                "chg_1w": -0.5,
                 "chg_ytd": 0.6,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10732,9 +10732,9 @@
               {
                 "label": "USD/JPY",
                 "value": 156.8,
-                "as_of": "2026-10-23",
+                "as_of": "2026-10-24",
                 "chg_1d": 0.0,
-                "chg_1w": -0.8,
+                "chg_1w": -1.0,
                 "chg_ytd": -0.0,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10743,7 +10743,7 @@
               {
                 "label": "USD/CHF",
                 "value": 0.8241,
-                "as_of": "2026-10-24",
+                "as_of": "2026-10-25",
                 "chg_1d": -0.1,
                 "chg_1w": -0.3,
                 "chg_ytd": 3.9,
@@ -10753,22 +10753,22 @@
               },
               {
                 "label": "USD/CAD",
-                "value": 1.4001,
-                "as_of": "2026-10-23",
-                "chg_1d": -0.0,
+                "value": 1.4003,
+                "as_of": "2026-10-24",
+                "chg_1d": 0.0,
                 "chg_1w": -0.8,
-                "chg_ytd": 2.0,
+                "chg_ytd": 2.1,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CNY",
-                "value": 6.66,
+                "value": 6.67,
                 "as_of": "2026-10-24",
-                "chg_1d": -0.1,
-                "chg_1w": -0.3,
-                "chg_ytd": -4.7,
+                "chg_1d": 0.0,
+                "chg_1w": -0.1,
+                "chg_ytd": -4.6,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -10791,22 +10791,22 @@
               },
               {
                 "label": "Brent ($/bbl, front-month)",
-                "value": 116.7,
+                "value": 111.7,
                 "as_of": "2026-10-23",
-                "chg_1d": 3.1,
-                "chg_1w": 6.2,
-                "chg_ytd": 91.8,
+                "chg_1d": -1.3,
+                "chg_1w": 1.7,
+                "chg_ytd": 83.6,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas ($/MMBtu, front-month)",
-                "value": 2.64,
+                "value": 3.05,
                 "as_of": "2026-10-23",
-                "chg_1d": -5.6,
-                "chg_1w": -15.3,
-                "chg_ytd": -28.4,
+                "chg_1d": 9.1,
+                "chg_1w": -2.1,
+                "chg_ytd": -17.3,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -10824,22 +10824,22 @@
               },
               {
                 "label": "Silver ($/oz, front-month)",
-                "value": 53.71,
+                "value": 53.95,
                 "as_of": "2026-10-23",
-                "chg_1d": -1.9,
-                "chg_1w": -5.8,
-                "chg_ytd": -23.4,
+                "chg_1d": -1.5,
+                "chg_1w": -5.3,
+                "chg_ytd": -23.1,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper ($/lb, front-month)",
-                "value": 6.48,
+                "value": 6.51,
                 "as_of": "2026-10-23",
-                "chg_1d": 1.8,
-                "chg_1w": -0.8,
-                "chg_ytd": 15.0,
+                "chg_1d": 2.3,
+                "chg_1w": -0.4,
+                "chg_ytd": 15.6,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -10873,7 +10873,7 @@
         "upper": 4.0,
         "midpoint": 3.875,
         "display": "3.75\u20134.00%",
-        "as_of": "2026-10-23"
+        "as_of": "2026-10-24"
       },
       "actual_path": [
         {
@@ -12059,6 +12059,10 @@
         {
           "date": "2026-10-23",
           "midpoint": 3.875
+        },
+        {
+          "date": "2026-10-24",
+          "midpoint": 3.875
         }
       ],
       "replication": {
@@ -12151,7 +12155,7 @@
         "moves_priced_year_end_expected": 0.83,
         "now_curve": [
           {
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "rate": 3.875
           },
           {
@@ -12165,7 +12169,7 @@
         ],
         "now_curve_modal": [
           {
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "rate": 3.875
           },
           {
@@ -12179,7 +12183,7 @@
         ],
         "now_curve_expected": [
           {
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "rate": 3.875
           },
           {
@@ -12200,7 +12204,7 @@
           "moves_added_expected": 4.17,
           "curve": [
             {
-              "date": "2026-10-24",
+              "date": "2026-10-25",
               "rate": 3.125
             },
             {
@@ -12214,7 +12218,7 @@
           ],
           "curve_expected": [
             {
-              "date": "2026-10-24",
+              "date": "2026-10-25",
               "rate": 3.0812
             },
             {
