@@ -49,7 +49,7 @@ import io
 import json
 import sys
 import urllib.request
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 try:
@@ -58,11 +58,18 @@ except ImportError:  # pragma: no cover
     sys.exit("PyYAML is required: pip install pyyaml")
 
 import fast_sources
+import markets as markets_mod
+import diffusion as diffusion_mod
+import feeds as feeds_mod
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent  # builders/central-bank-stance/ -> repo root
 CONFIG = HERE / "cb_matrix_config.yaml"
+MEETINGS = HERE / "meetings.yaml"
 OUT = REPO / "tools" / "central-bank-stance" / "data.json"
+# The full text of each bank's latest decision statement, for the fleet host's desk job to
+# summarize (macro-briefing cb_desk.py); the page never reads it.
+STATEMENTS = REPO / "tools" / "central-bank-stance" / "statements.json"
 
 BIS_URL = (
     "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/"
@@ -88,6 +95,12 @@ FEED_FALLBACK_AFTER_DAYS = 45
 # for the daily ops mail. Not a `--check-stale` failure: the page is already honest about
 # it, and a failing Action every three hours until someone rewrites two sentences is noise.
 DESK_VIEW_MAX_AGE_DAYS = 60
+# meetings.yaml is hand-maintained once a year from each bank's own schedule page. When a
+# bank's last listed decision date is within this many days of today (and the bank has no
+# rule, like the PBoC's 20th-of-the-month fixing), the bank is listed in meta.calendar_running_out
+# and the daily 6:10 ops mail names it (jobhost-ops ops_health) — not an Action failure, because a
+# bank whose site refuses automation (the RBNZ, 2026-10-25) would otherwise fail every run.
+CALENDAR_RUNWAY_DAYS = 60
 
 
 # ----------------------------------------------------------------------------- fetch
@@ -346,6 +359,69 @@ def check_stale(cfg: dict | None = None, today: date | None = None,
     return 1
 
 
+# -------------------------------------------------------------------------- meetings
+def load_meetings(path: Path = MEETINGS) -> dict:
+    """meetings.yaml → {code: {"dates": [iso...], "rule", "source_url", "note"}}; PyYAML reads the
+    dates as date objects, so they are normalized to ISO strings here."""
+    if not path.exists():
+        return {}
+    raw = yaml.safe_load(path.read_text()) or {}
+    out = {}
+    for code, b in (raw.get("banks") or {}).items():
+        dates = sorted(str(d) for d in (b.get("dates") or []))
+        out[str(code)] = {"dates": dates, "rule": b.get("rule"), "source_url": b.get("source_url"),
+                          "note": b.get("note"), "fetched": str(raw.get("fetched") or "")}
+    return out
+
+
+def lpr_20th(today: date) -> str:
+    """The PBoC's Loan Prime Rate is fixed on the 20th of each month, or the next business day
+    (weekends only — Chinese public holidays are not modeled, so a holiday month can read a day or
+    two early)."""
+    y, m = today.year, today.month
+    for _ in range(2):
+        d = date(y, m, 20)
+        while d.weekday() >= 5:
+            d += timedelta(days=1)
+        if d >= today:
+            return d.isoformat()
+        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    return date(y, m, 20).isoformat()
+
+
+def next_meeting_for(code: str, meetings: dict, today: date) -> dict | None:
+    """{"date", "days_until", "source": "calendar"|"rule", "source_url", "calendar_through"} or
+    None when the calendar has nothing ahead for the bank."""
+    m = meetings.get(code)
+    if not m:
+        return None
+    t = today.isoformat()
+    if m.get("rule") == "lpr_20th":
+        d = lpr_20th(today)
+        return {"date": d, "days_until": (date.fromisoformat(d) - today).days, "source": "rule",
+                "source_url": m.get("source_url"), "calendar_through": None, "note": m.get("note")}
+    ahead = [d for d in m["dates"] if d >= t]
+    if not ahead:
+        return None
+    return {"date": ahead[0], "days_until": (date.fromisoformat(ahead[0]) - today).days,
+            "source": "calendar", "source_url": m.get("source_url"),
+            "calendar_through": m["dates"][-1], "note": m.get("note")}
+
+
+def calendar_running_out(meetings: dict, today: date, runway_days: int = CALENDAR_RUNWAY_DAYS) -> list[dict]:
+    """Banks whose listed dates end within `runway_days` of today (or hold no future date at
+    all), excluding rule-based banks. {code, through, days_left}."""
+    out = []
+    for code, m in meetings.items():
+        if m.get("rule"):
+            continue
+        through = m["dates"][-1] if m["dates"] else None
+        days_left = (date.fromisoformat(through) - today).days if through else -1
+        if days_left < runway_days:
+            out.append({"code": code, "through": through, "days_left": days_left})
+    return out
+
+
 # ----------------------------------------------------------------------------- derive
 def change_points(series: list[tuple[str, float]]) -> list[tuple[str, float]]:
     """First obs + every date where the level changes (the full step path)."""
@@ -418,11 +494,14 @@ def fmt_bps(n: int) -> str:
     return f"{'+' if n > 0 else '−'}{abs(n)} bp"
 
 
+# The automatic lean is a DESCRIPTION of where the rule puts the bank, never a forecast: a single
+# September hike must not make the matrix say "further hikes likely" (it did until 2026-10-25).
+# What the desks and markets expect lives in desk.json and the `market` field.
 AUTO_LEAN = {
-    "Cutting": "Further cuts likely",
-    "Hiking": "Further hikes likely",
-    "On Hold": "On hold; data-dependent",
-    "Paused": "Extended hold",
+    "Cutting": "In a cutting cycle (rule)",
+    "Hiking": "In a hiking cycle (rule)",
+    "On Hold": "On hold (rule)",
+    "Paused": "Long pause (rule)",
 }
 
 
@@ -440,6 +519,29 @@ def main() -> None:
         except Exception:  # noqa: BLE001
             prior = {}
 
+    meetings = load_meetings()
+    try:
+        market_all = markets_mod.all_markets(today=date.fromisoformat(today))
+    except Exception as e:  # noqa: BLE001 — the module never raises, but the matrix must not die on it
+        print(f"markets: all_markets failed ({e!r}); no market layer this run", file=sys.stderr)
+        market_all = {}
+    try:
+        diffusion = diffusion_mod.build_diffusion(today=date.fromisoformat(today))
+    except Exception as e:  # noqa: BLE001
+        print(f"diffusion: build_diffusion failed ({e!r}); keeping the prior index", file=sys.stderr)
+        diffusion = None
+    if (not diffusion or not diffusion.get("months")) and OUT.exists():
+        try:  # a BIS hiccup must not blank a 26-year series on the page: carry the last good one
+            diffusion = json.loads(OUT.read_text()).get("diffusion") or diffusion
+        except Exception:  # noqa: BLE001
+            pass
+    try:
+        decisions = feeds_mod.all_decisions(today=date.fromisoformat(today))
+    except Exception as e:  # noqa: BLE001
+        print(f"feeds: all_decisions failed ({e!r}); keeping prior decisions", file=sys.stderr)
+        decisions = {}
+    feed_errors = []
+    statements = {}
     banks_out = []
     as_of_dates = []
     manual_entries = []
@@ -494,6 +596,25 @@ def main() -> None:
         if path[-1][0] != win[-1][0]:
             path.append(win[-1])
 
+        # The bank's own latest DECISION release (feeds.py). A feed that would not read this run
+        # keeps the prior run's decision on the page and is named in meta.feed_errors.
+        dec = decisions.get(code) or {}
+        if dec.get("announced"):
+            decision = {k: dec.get(k) for k in ("announced", "title", "url", "excerpt", "source_url",
+                                                 "label", "note", "items_seen", "fetched_at")}
+            decision["error"] = None
+            if dec.get("text") or dec.get("excerpt"):
+                statements[code] = {"bank": spec["name"], "announced": dec["announced"],
+                                    "title": dec.get("title"), "url": dec.get("url"),
+                                    "text": dec.get("text") or dec.get("excerpt"), "note": dec.get("note")}
+        else:
+            err = dec.get("error") or "no decision found"
+            feed_errors.append({"code": code, "error": err})
+            decision = dict((prior.get(code) or {}).get("decision") or {}) or {
+                "announced": None, "title": None, "url": None, "excerpt": None,
+                "source_url": dec.get("source_url"), "label": dec.get("label")}
+            decision["error"] = err
+            decision["fetched_at"] = dec.get("fetched_at")
         mv_display = None
         if mv:
             arrow = "▲" if mv["direction"] == "up" else "▼"
@@ -519,6 +640,9 @@ def main() -> None:
             "ytd_bps": ytd_bps,
             "ytd_display": fmt_bps(ytd_bps) if ytd_bps is not None else "—",
             "next_move": next_move,
+            "decision": decision,
+            "next_meeting": next_meeting_for(code, meetings, date.fromisoformat(today)),
+            "market": market_all.get(code),
             "path": [{"date": d, "value": round(v, 3)} for d, v in path],
         })
 
@@ -537,6 +661,12 @@ def main() -> None:
             "desk_views_expired": expired_desk_views(banks_out),
             "overrides_expired": expired_overrides(banks_out),
             "review_pending": review_pending(banks_out),
+            "feed_errors": feed_errors,
+            "feed_sources": {c: f.get("label") for c, f in feeds_mod.FEEDS.items()},
+            "meetings_fetched": next((m.get("fetched") for m in meetings.values()), None),
+            "calendar_running_out": calendar_running_out(meetings, date.fromisoformat(today)),
+            "market_sources": sorted({s["source"] for b in banks_out
+                                      for s in ((b.get("market") or {}).get("sources") or [])}),
             "source_url": SOURCE_URL,
             "lookback_months": lookback,
             "note": ("Cycle phase is a transparent heuristic derived from the size and "
@@ -555,9 +685,24 @@ def main() -> None:
             "paused": tally["Paused"],
         },
         "banks": banks_out,
+        "diffusion": diffusion,
     }
 
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+    # statements.json keeps the previous text for a bank whose feed failed this run, so the desk
+    # job always has something to summarize and never re-summarizes an unchanged statement.
+    prior_st = {}
+    if STATEMENTS.exists():
+        try:
+            prior_st = (json.loads(STATEMENTS.read_text()).get("banks") or {})
+        except Exception:  # noqa: BLE001
+            prior_st = {}
+    merged = {c: statements.get(c) or prior_st.get(c) for c in sorted(set(statements) | set(prior_st))}
+    STATEMENTS.write_text(json.dumps({"generated_at": payload["meta"]["generated_at"],
+                                      "banks": {c: v for c, v in merged.items() if v}},
+                                     indent=1, ensure_ascii=False))
+    for e in feed_errors:
+        print(f"WARNING feed: {e['code']} — {e['error']}", file=sys.stderr)
     # Publish regardless — the row is dated on the page — but say so; --check-stale fails the run.
     for e in stale_manual_entries(cfg, date.fromisoformat(today)):
         print(f"WARNING stale hand entry: {e['name']} ({e['code']}) verified {e['verified']}, "
@@ -573,6 +718,9 @@ def main() -> None:
         print(f"WARNING phase override expired: {e['name']} ({e['code']}) \"{e['was']}\" "
               f"(edited {e['edited'] or 'undated'}) — {e['reason']}; dropped, the rule speaks",
               file=sys.stderr)
+    for e in payload["meta"]["calendar_running_out"]:
+        print(f"WARNING calendar running out: {e['code']} listed through {e['through'] or 'nothing ahead'} "
+              f"({e['days_left']} days left; limit {CALENDAR_RUNWAY_DAYS})", file=sys.stderr)
     s = payload["summary"]
     fastn = sum(1 for b in banks_out if b.get("fast"))
     handn = sum(1 for b in banks_out if b.get("manual"))

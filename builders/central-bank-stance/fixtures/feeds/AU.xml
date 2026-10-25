@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:cb="http://www.cbwiki.net/wiki/index.php/Specification_1.2/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://purl.org/rss/1.0/" xsi:schemaLocation="http://www.w3.org/1999/02/22-rdf-syntax-ns# rdf.xsd">
+  <channel rdf:about="https://www.rba.gov.au/rss/rss-cb-media-releases.xml">
+    <title>Reserve Bank of Australia | Media Releases</title>
+    <link>https://www.rba.gov.au/rss/index.html</link>
+    <description>Media Releases issued by the Reserve Bank of Australia.</description>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="https://www.rba.gov.au/media-releases/2026/mr-26-29.html"/>
+      </rdf:Seq>
+    </items>
+    <dc:date>2026-10-14T14:00:00+11:00</dc:date>
+    <dc:publisher>Reserve Bank of Australia</dc:publisher>
+    <dc:language>en</dc:language>
+  </channel>
+  <item rdf:about="https://www.rba.gov.au/media-releases/2026/mr-26-29.html">
+    <title>Appointment of Chief Risk Officer</title>
+    <link>https://www.rba.gov.au/media-releases/2026/mr-26-29.html</link>
+    <description>Media release number 2026-29: Rachael Phelan has been appointed as Chief Risk Officer at the RBA, leading our Risk function and responsible for the delivery of the Bank's risk strategy.</description>
+    <dc:date>2026-10-14T14:00:00+11:00</dc:date>
+    <cb:news rdf:parseType="Resource">
+      <rdf:type rdf:resource="http://www.cbwiki.net/wiki/index.php/RSS-CB_1.2_RDF_Schema#Media-Releases"/>
+      <cb:simpleTitle>Appointment of Chief Risk Officer</cb:simpleTitle>
+      <cb:occurrenceDate>2026-10-14T14:00:00+11:00</cb:occurrenceDate>
+      <cb:institutionAbbrev>RBA</cb:institutionAbbrev>
+    </cb:news>
+  </item>
+</rdf:RDF>

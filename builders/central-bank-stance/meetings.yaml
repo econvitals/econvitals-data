@@ -1,0 +1,65 @@
+# Scheduled policy-decision dates, read from each bank's own site. Hand-maintained once a year;
+# build.py --check-stale fails when any bank's last listed date is within 60 days of today.
+fetched: 2026-10-25
+banks:
+  US:
+    name: Federal Reserve
+    source_url: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+    note: decision day = second day of the two-day meeting; 2027 dates are tentative until confirmed at the preceding meeting
+    dates: [2026-10-28, 2026-12-09, 2027-01-27, 2027-03-17, 2027-04-28, 2027-06-09, 2027-07-28, 2027-09-15, 2027-10-27, 2027-12-08]
+  XM:
+    name: European Central Bank
+    source_url: https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html
+    note: monetary policy Governing Council meetings only (day 2, press-conference day); non-monetary and General Council meetings excluded
+    dates: [2026-10-29, 2026-12-17, 2027-02-04, 2027-03-18, 2027-04-29, 2027-06-10, 2027-07-22, 2027-09-09, 2027-10-28, 2027-12-16]
+  GB:
+    name: Bank of England
+    source_url: https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates
+    note: MPC announcement dates; 2027 listed as confirmed
+    dates: [2026-11-05, 2026-12-17, 2027-02-04, 2027-03-18, 2027-04-29, 2027-06-17, 2027-07-29, 2027-09-16, 2027-11-04, 2027-12-16]
+  CA:
+    name: Bank of Canada
+    source_url: https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/schedule/
+    note: fixed announcement dates
+    dates: [2026-10-28, 2026-12-09, 2027-01-27, 2027-03-03, 2027-04-28, 2027-06-02, 2027-07-21, 2027-09-08, 2027-10-27, 2027-12-08]
+  AU:
+    name: Reserve Bank of Australia
+    source_url: https://www.rba.gov.au/schedules-events/board-meeting-schedules.html
+    note: Monetary Policy Board meetings; decision day = second day of the two-day meeting
+    dates: [2026-11-03, 2026-12-08, 2027-02-09, 2027-03-23, 2027-05-04, 2027-06-22, 2027-08-10, 2027-09-28, 2027-11-02, 2027-12-14]
+  CH:
+    name: Swiss National Bank
+    source_url: https://www.snb.ch/en/services-events/digital-services/event-schedule
+    note: quarterly monetary policy assessments (press release 09:30 CET)
+    dates: [2026-12-10, 2027-03-18, 2027-06-24, 2027-09-23, 2027-12-16]
+  SE:
+    name: Sveriges Riksbank
+    source_url: https://www.riksbank.se/en-gb/press-and-published/calendar/calendar-2027/
+    note: decision publication day (the day after the Executive Board meeting); 2027 published only through June as of 2026-10-25 — second half of 2027 not yet on the calendar
+    dates: [2026-11-04, 2026-12-16, 2027-02-03, 2027-03-24, 2027-05-05, 2027-06-22]
+  "NO":
+    name: Norges Bank
+    source_url: https://www.norges-bank.no/en/news-events/calendar/policy-rate-decisions/
+    note: policy rate decision announcement dates (10:00 CET)
+    dates: [2026-11-05, 2026-12-17, 2027-01-21, 2027-03-18, 2027-05-05, 2027-06-17, 2027-08-19, 2027-09-23, 2027-11-04, 2027-12-16]
+  NZ:
+    name: Reserve Bank of New Zealand
+    source_url: https://www.rbnz.govt.nz/monetary-policy/about-monetary-policy/monetary-policy-decision-dates
+    note: "could not fetch https://www.rbnz.govt.nz/monetary-policy/about-monetary-policy/monetary-policy-decision-dates on 2026-10-25: HTTP 403 'Website unavailable' from rbnz.govt.nz on every fetcher and user agent (also the hub/news August 2026-February 2027 dates release); nothing filled in from third parties"
+    dates: []
+  JP:
+    name: Bank of Japan
+    source_url: https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm
+    note: decision day = second (last) day of the two-day MPM
+    dates: [2026-10-30, 2026-12-18, 2027-01-22, 2027-03-18, 2027-04-28, 2027-06-11, 2027-07-22, 2027-09-22, 2027-10-29, 2027-12-17]
+  IN:
+    name: Reserve Bank of India
+    source_url: https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62422
+    note: MPC decision/announcement day = last day of the three-day meeting; schedule published per fiscal year (2026-27 release dated 2026-03-23) — the 2027-28 schedule (April 2027 onward) is not yet published
+    dates: [2026-12-04, 2027-02-05]
+  CN:
+    name: People's Bank of China
+    rule: lpr_20th      # 1-year LPR fixing: the 20th, or the next business day
+    source_url: http://www.pbc.gov.cn/en/3688229/3688335/3883798/index.html
+    note: not fetched by design; the monthly Loan Prime Rate is published on the 20th or the next business day when the 20th is a weekend or holiday
+    dates: []

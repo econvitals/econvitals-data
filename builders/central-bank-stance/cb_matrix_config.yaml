@@ -11,10 +11,12 @@
 #                    bank has decided after that date, after 60 days, or if undated, the
 #                    build drops it so the rule speaks, prints a WARNING, and lists the bank
 #                    in meta.review_pending for the daily ops mail.
-#   next_move      : a desk view of the next expected move (free text). If unset,
-#                    the page shows an automatic qualitative lean derived from the
-#                    bank's current phase. Set this to a real OIS/market call when
-#                    you have one — e.g. "v 25bp by Sep 2026".
+#   next_move      : an EDITOR'S OVERRIDE of the next-move view (free text) — rarely needed since
+#                    2026-10-25: what the desks expect is compiled automatically from the macro@
+#                    mailbox into desk.json (macro-briefing cb_desk.py) and what markets price
+#                    comes from markets.py, both shown beside the rule's phase. Leave unset unless
+#                    you want to overrule the compiled view with a sentence of your own; the
+#                    automatic fallback is a description of the phase ("In a hiking cycle (rule)").
 #   next_move_edited : the ISO date the desk view was written — REQUIRED with next_move.
 #                    A desk view EXPIRES: once the bank has made a policy decision after
 #                    that date (its last move, from the rate history), or once the date
@@ -43,6 +45,11 @@
 #                    publishes the BIS value with its date; the failure email names the
 #                    bank, the source that failed and the BIS date. Fix the feed, or add a
 #                    manual_rate meanwhile.
+#
+# Two more files sit beside this one and are NOT overrides: `meetings.yaml` (each bank's scheduled
+# decision dates, hand-copied once a year from the bank's own schedule page — a bank whose dates
+# run out within 60 days is named in the 6:10 ops mail) and the press-feed table in `feeds.py`
+# (each bank's official RSS feed and the title pattern of its decision release).
 #
 # `lookback_months` is the window used to auto-classify the cycle phase from the
 # most recent rate change (a cut/hike inside the window = Cutting/Hiking; older

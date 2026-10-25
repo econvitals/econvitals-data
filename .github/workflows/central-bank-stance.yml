@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install dependencies
-        run: pip install pyyaml
+        run: pip install pyyaml openpyxl   # openpyxl reads the Bank of England's OIS workbook (markets.py)
       - name: Build Central Bank Stance Matrix data (BIS + same-day central-bank feeds)
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}

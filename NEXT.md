@@ -1,6 +1,7 @@
 # NEXT — econvitals-data
 
 ## Next
+- **Stance Matrix: enter the Reserve Bank of New Zealand's decision dates in `builders/central-bank-stance/meetings.yaml`.** rbnz.govt.nz answers 403 to every automated fetch (2026-10-25), so `NZ.dates` is empty and the page's next-meeting cell for New Zealand reads as not published; the 6:10 mail names it daily (`calendar_running_out`). Done = the OCR decision dates through 2027 copied from the RBNZ's monetary-policy decision-dates page (open it in a browser; the URL is in the file) with `fetched` bumped, and the mail line gone.
 
 ## Decided against
 - **A same-day feed for the Bank of Japan row in the Stance Matrix** (Jason, 2026-09-16, when the Fed/ECB/BoE/BoC fast lane was built). The BoJ publishes no machine-readable series for the policy target; the only daily option is the actual uncollateralized overnight call rate off a 1.3MB Shift-JIS page at stat-search.boj.or.jp (`FM01'STRDCLUCON`, ~2 days behind), which is a market rate needing rounding to the nearest target step. More work than the other four combined, more fragile, worse answer. JP stays on BIS.
