@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-23T21:30:06+00:00",
- "as_of": "2026-10-22",
+ "generated_at": "2026-10-26T13:02:57+00:00",
+ "as_of": "2026-10-23",
  "n_rows": 19,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
  "groups": [
@@ -9,47 +9,47 @@
    "rows": [
     {
      "label": "2-year",
-     "value": 4.65,
-     "as_of": "2026-10-22",
+     "value": 4.69,
+     "as_of": "2026-10-23",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/2Y",
-     "chg_1d": -0.16,
-     "chg_1w": -0.12,
-     "chg_ytd": 1.18
+     "chg_1d": 0.04,
+     "chg_1w": -0.05,
+     "chg_ytd": 1.22
     },
     {
      "label": "5-year",
-     "value": 4.78,
-     "as_of": "2026-10-22",
+     "value": 4.82,
+     "as_of": "2026-10-23",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/5Y",
-     "chg_1d": -0.17,
-     "chg_1w": -0.13,
-     "chg_ytd": 1.05
+     "chg_1d": 0.04,
+     "chg_1w": -0.07,
+     "chg_ytd": 1.09
     },
     {
      "label": "10-year",
-     "value": 4.96,
-     "as_of": "2026-10-22",
+     "value": 5.0,
+     "as_of": "2026-10-23",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y",
-     "chg_1d": -0.17,
-     "chg_1w": -0.14,
-     "chg_ytd": 0.78
+     "chg_1d": 0.04,
+     "chg_1w": -0.09,
+     "chg_ytd": 0.82
     },
     {
      "label": "30-year",
-     "value": 5.29,
-     "as_of": "2026-10-22",
+     "value": 5.33,
+     "as_of": "2026-10-23",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/30Y",
-     "chg_1d": -0.13,
-     "chg_1w": -0.14,
-     "chg_ytd": 0.45
+     "chg_1d": 0.04,
+     "chg_1w": -0.1,
+     "chg_ytd": 0.49
     },
     {
      "label": "30-year mortgage",
@@ -65,12 +65,12 @@
     {
      "label": "2s10s",
      "value": 0.31,
-     "as_of": "2026-10-22",
+     "as_of": "2026-10-23",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:par/2Y",
-     "chg_1d": -0.01,
-     "chg_1w": -0.02,
+     "chg_1d": 0.0,
+     "chg_1w": -0.04,
      "chg_ytd": -0.4
     }
    ]
@@ -80,36 +80,36 @@
    "rows": [
     {
      "label": "Real 10y",
-     "value": 2.64,
-     "as_of": "2026-10-22",
+     "value": 2.66,
+     "as_of": "2026-10-23",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:real/10Y",
-     "chg_1d": -0.12,
-     "chg_1w": -0.14,
-     "chg_ytd": 0.71
+     "chg_1d": 0.02,
+     "chg_1w": -0.08,
+     "chg_ytd": 0.73
     },
     {
      "label": "10y breakeven",
-     "value": 2.32,
-     "as_of": "2026-10-22",
+     "value": 2.34,
+     "as_of": "2026-10-23",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:real/10Y",
-     "chg_1d": -0.05,
-     "chg_1w": 0.0,
-     "chg_ytd": 0.07
+     "chg_1d": 0.02,
+     "chg_1w": -0.01,
+     "chg_ytd": 0.09
     },
     {
      "label": "5y5y fwd breakeven",
-     "value": 2.19,
-     "as_of": "2026-10-22",
+     "value": 2.2,
+     "as_of": "2026-10-23",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:real/10Y \u2212 ust:par/5Y \u2212 ust:real/5Y",
-     "chg_1d": -0.15,
-     "chg_1w": -0.12,
-     "chg_ytd": -0.05
+     "chg_1d": 0.01,
+     "chg_1w": -0.13,
+     "chg_ytd": -0.04
     }
    ]
   },
@@ -118,14 +118,14 @@
    "rows": [
     {
      "label": "VIX",
-     "value": 16.68,
-     "as_of": "2026-10-21",
+     "value": 19.03,
+     "as_of": "2026-10-22",
      "is_yield": false,
      "provenance": "hard",
      "source_key": "fred:VIXCLS",
-     "chg_1d": -0.63,
-     "chg_1w": -0.19,
-     "chg_ytd": 1.73
+     "chg_1d": 2.35,
+     "chg_1w": 2.57,
+     "chg_ytd": 4.08
     },
     {
      "label": "NFCI",
@@ -222,14 +222,14 @@
    "rows": [
     {
      "label": "Brent",
-     "value": 126.5,
-     "as_of": "2026-10-14",
+     "value": 115.2,
+     "as_of": "2026-10-20",
      "is_yield": false,
      "provenance": "hard",
      "source_key": "fred:DCOILBRENTEU",
-     "chg_1d": 0.8,
-     "chg_1w": 0.5,
-     "chg_ytd": 65.2
+     "chg_1d": -3.6,
+     "chg_1w": -10.6,
+     "chg_ytd": 53.9
     }
    ]
   },
