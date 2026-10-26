@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-26T12:55:37+00:00",
+    "generated_at": "2026-10-26T20:28:06+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -89,7 +89,7 @@
         "label": "Federal Reserve monetary policy press releases (RSS)",
         "note": null,
         "items_seen": 15,
-        "fetched_at": "2026-10-26T12:53:50+00:00",
+        "fetched_at": "2026-10-26T20:27:20+00:00",
         "error": null
       },
       "next_meeting": {
@@ -106,11 +106,11 @@
         "sources": [
           {
             "source": "Kalshi",
-            "asof": "2026-10-26T12:53:09.952Z",
+            "asof": "2026-10-26T20:26:35.843Z",
             "decision_date": "2026-10-28",
             "p_cut": 0.0192,
-            "p_hold": 0.9038,
-            "p_hike": 0.0769,
+            "p_hold": 0.8846,
+            "p_hike": 0.0961,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -124,12 +124,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.9038,
+                "prob": 0.8846,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.0673,
+                "prob": 0.0865,
                 "moves": 1
               },
               {
@@ -145,7 +145,7 @@
           },
           {
             "source": "CME futures (chartbook)",
-            "asof": "2026-10-26T12:53:10Z",
+            "asof": "2026-10-26T20:27:11Z",
             "decision_date": null,
             "p_cut": null,
             "p_hold": null,
@@ -173,11 +173,11 @@
           },
           {
             "source": "Polymarket",
-            "asof": "2026-10-26T12:53:11Z",
+            "asof": "2026-10-26T20:27:12Z",
             "decision_date": "2026-10-28",
-            "p_cut": 0.002,
-            "p_hold": 0.944,
-            "p_hike": 0.0585,
+            "p_cut": 0.001,
+            "p_hold": 0.9265,
+            "p_hike": 0.0785,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -186,17 +186,17 @@
               },
               {
                 "label": "Cut 25 bp",
-                "prob": 0.0015,
+                "prob": 0.0005,
                 "moves": -1
               },
               {
                 "label": "Hold",
-                "prob": 0.944,
+                "prob": 0.9265,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.055,
+                "prob": 0.075,
                 "moves": 1
               },
               {
@@ -209,9 +209,9 @@
             "thin": false,
             "url": "https://polymarket.com/event/fed-decision-in-october-20260617190323537",
             "event_title": "Fed Decision in October?",
-            "liquidity_usd": 8905977,
-            "volume_usd": 68276850,
-            "prob_sum": 1.0045
+            "liquidity_usd": 6381742,
+            "volume_usd": 73174212,
+            "prob_sum": 1.006
           }
         ],
         "errors": {},
@@ -309,7 +309,7 @@
         "label": "European Central Bank press releases (RSS) + Governing Council decisions listing",
         "note": "the feed's 15 items held no decision; read the bank's listing page instead",
         "items_seen": 29,
-        "fetched_at": "2026-10-26T12:53:51+00:00",
+        "fetched_at": "2026-10-26T20:27:22+00:00",
         "error": null
       },
       "next_meeting": {
@@ -326,11 +326,11 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-26T12:53:11Z",
+            "asof": "2026-10-26T20:27:12Z",
             "decision_date": "2026-10-29",
             "p_cut": 0.001,
-            "p_hold": 0.981,
-            "p_hike": 0.0175,
+            "p_hold": 0.9795,
+            "p_hike": 0.0185,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -344,12 +344,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.981,
+                "prob": 0.9795,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.017,
+                "prob": 0.018,
                 "moves": 1
               },
               {
@@ -362,9 +362,9 @@
             "thin": false,
             "url": "https://polymarket.com/event/ecb-interest-rates-october-2026-20260723225848778",
             "event_title": "ECB Interest Rates: October 2026",
-            "liquidity_usd": 67838,
-            "volume_usd": 658413,
-            "prob_sum": 0.9995
+            "liquidity_usd": 55897,
+            "volume_usd": 659425,
+            "prob_sum": 0.999
           }
         ],
         "errors": {},
@@ -482,7 +482,7 @@
         "label": "Bank of Japan What's New (RSS) + Monetary Policy Releases listing",
         "note": "the feed's 51 items held no decision; read the bank's listing page instead",
         "items_seen": 85,
-        "fetched_at": "2026-10-26T12:53:55+00:00",
+        "fetched_at": "2026-10-26T20:27:28+00:00",
         "error": null
       },
       "next_meeting": {
@@ -572,7 +572,7 @@
         "label": "Bank of England news (RSS)",
         "note": null,
         "items_seen": 50,
-        "fetched_at": "2026-10-26T12:53:52+00:00",
+        "fetched_at": "2026-10-26T20:27:22+00:00",
         "error": null
       },
       "next_meeting": {
@@ -589,11 +589,11 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-26T12:53:11Z",
+            "asof": "2026-10-26T20:27:12Z",
             "decision_date": "2026-11-05",
             "p_cut": 0.0025,
-            "p_hold": 0.028,
-            "p_hike": 0.9735,
+            "p_hold": 0.025,
+            "p_hike": 0.9755,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -607,12 +607,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.028,
+                "prob": 0.025,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.9695,
+                "prob": 0.9715,
                 "moves": 1
               },
               {
@@ -625,9 +625,9 @@
             "thin": false,
             "url": "https://polymarket.com/event/bank-of-england-decision-in-november-20260730150602252",
             "event_title": "Bank of England decision in November?",
-            "liquidity_usd": 32262,
+            "liquidity_usd": 30500,
             "volume_usd": 414756,
-            "prob_sum": 1.004
+            "prob_sum": 1.003
           },
           {
             "source": "Bank of England OIS curve",
@@ -760,7 +760,7 @@
         "label": "Bank of Canada press releases (RSS)",
         "note": null,
         "items_seen": 10,
-        "fetched_at": "2026-10-26T12:53:52+00:00",
+        "fetched_at": "2026-10-26T20:27:24+00:00",
         "error": null
       },
       "next_meeting": {
@@ -874,7 +874,7 @@
         "label": "Reserve Bank of Australia media releases (RSS) + media-releases listing",
         "note": "the feed's 1 items held no decision; read the bank's listing page instead",
         "items_seen": 11,
-        "fetched_at": "2026-10-26T12:53:53+00:00",
+        "fetched_at": "2026-10-26T20:27:25+00:00",
         "error": null
       },
       "next_meeting": {
@@ -988,7 +988,7 @@
         "label": "Swiss National Bank monetary policy releases (RSS)",
         "note": null,
         "items_seen": 15,
-        "fetched_at": "2026-10-26T12:54:01+00:00",
+        "fetched_at": "2026-10-26T20:27:32+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1086,7 +1086,7 @@
         "label": "Sveriges Riksbank press releases (RSS)",
         "note": null,
         "items_seen": 10,
-        "fetched_at": "2026-10-26T12:53:54+00:00",
+        "fetched_at": "2026-10-26T20:27:26+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1200,7 +1200,7 @@
         "label": "Norges Bank press releases (RSS)",
         "note": null,
         "items_seen": 5,
-        "fetched_at": "2026-10-26T12:54:02+00:00",
+        "fetched_at": "2026-10-26T20:27:34+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1306,7 +1306,7 @@
         "label": "Reserve Bank of New Zealand news (RSS)",
         "note": "statement page not read (HTTPError: HTTP Error 403: Forbidden); excerpt is the feed's summary",
         "items_seen": 50,
-        "fetched_at": "2026-10-26T12:53:54+00:00",
+        "fetched_at": "2026-10-26T20:27:26+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1428,7 +1428,7 @@
         "label": "People's Bank of China — Loan Prime Rate announcements (listing page, no feed)",
         "note": null,
         "items_seen": 10,
-        "fetched_at": "2026-10-26T12:54:04+00:00",
+        "fetched_at": "2026-10-26T20:27:37+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1514,7 +1514,7 @@
         "label": "Reserve Bank of India press releases (RSS) + Monetary Policy Statements listing",
         "note": "the feed's 10 items held no decision; read the bank's listing page instead",
         "items_seen": 14,
-        "fetched_at": "2026-10-26T12:53:59+00:00",
+        "fetched_at": "2026-10-26T20:27:31+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1531,15 +1531,15 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-26T12:53:12Z",
+            "asof": "2026-10-26T20:27:12Z",
             "decision_date": "2026-12-04",
-            "p_cut": 0.029,
-            "p_hold": 0.135,
-            "p_hike": 0.845,
+            "p_cut": 0.027,
+            "p_hold": 0.14,
+            "p_hike": 0.84,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
-                "prob": 0.005,
+                "prob": 0.003,
                 "moves": -2
               },
               {
@@ -1549,12 +1549,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.135,
+                "prob": 0.14,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.775,
+                "prob": 0.77,
                 "moves": 1
               },
               {
@@ -1567,9 +1567,9 @@
             "thin": true,
             "url": "https://polymarket.com/event/reserve-bank-of-india-decision-in-december-2026",
             "event_title": "Reserve Bank of India decision in December",
-            "liquidity_usd": 14436,
-            "volume_usd": 18157,
-            "prob_sum": 1.009
+            "liquidity_usd": 9621,
+            "volume_usd": 18192,
+            "prob_sum": 1.007
           }
         ],
         "errors": {},
@@ -1618,7 +1618,7 @@
       "n_banks": 38,
       "n_series": 41,
       "window_months": 3,
-      "generated_at": "2026-10-26T12:53:12+00:00",
+      "generated_at": "2026-10-26T20:27:12+00:00",
       "fetch_mode": "wildcard",
       "dropped": [],
       "not_counted_latest": [
