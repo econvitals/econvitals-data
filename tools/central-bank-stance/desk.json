@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-10-27T10:40:22+00:00",
+  "generated_at": "2026-10-27T22:30:14+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
@@ -18,13 +18,46 @@
    "window_from": "2026-09-16",
    "latest_decision": "2026-09-16",
    "lean": {
-    "hold": 0,
+    "hold": 3,
     "hike": 1,
     "cut": 0
    },
-   "n_desks": 1,
-   "consensus": "Hike",
+   "n_desks": 4,
+   "consensus": "Hold",
    "calls": [
+    {
+     "institution": "PNC",
+     "person": "Ershang Liang",
+     "call": "hold",
+     "size_bp": 0,
+     "meeting": "2026-10-28",
+     "path": "hike 25bp in December 2026 and January 2027",
+     "note": "mortgage rates to stay elevated above 6.5%, weighing on housing demand and affordability",
+     "as_of": "2026-10-27",
+     "msg_id": "1a17e086e82137a6"
+    },
+    {
+     "institution": "JPM",
+     "person": "Jay Barry",
+     "call": "hold",
+     "size_bp": 0,
+     "meeting": "2026-10-28",
+     "path": "patient path through this hiking cycle; front-end rates anchored",
+     "note": "September hike followed 0.2% core PCE print, holding into forecasted 0.3% core PCE",
+     "as_of": "2026-10-27",
+     "msg_id": "1a17ef7caf83c61c"
+    },
+    {
+     "institution": "Evenflow",
+     "person": "Sumerlin",
+     "call": "hold",
+     "size_bp": 0,
+     "meeting": "2026-10-28",
+     "path": "December hike likely (every-other-meeting pace); one more hike possible in March 2027 if equities hold up",
+     "note": "Inflation settled near 3%, financial conditions tightening, Vice Chairs signaled a skip",
+     "as_of": "2026-10-27",
+     "msg_id": "1a17db204c41a00b"
+    },
     {
      "institution": "BOFA",
      "person": "Cabana, Braizinha, Cohen and Levingston",
@@ -55,6 +88,24 @@
      "p_cut": null,
      "as_of": "2026-10-27",
      "msg_id": "1a17bbcb26d6d8dd"
+    },
+    {
+     "institution": "Citi",
+     "quote": "Market is not pricing in a hike this year",
+     "meeting": null,
+     "p_hike": null,
+     "p_cut": null,
+     "as_of": "2026-10-27",
+     "msg_id": "1a17d0a363abba54"
+    },
+    {
+     "institution": "Evenflow",
+     "quote": "A December hike is priced in at eighty percent, with some traders placing a flyer on a 50-basis point hike (8 percent odds).",
+     "meeting": "2026-12-16",
+     "p_hike": 0.8,
+     "p_cut": null,
+     "as_of": "2026-10-27",
+     "msg_id": "1a17db204c41a00b"
     }
    ],
    "statement": {
@@ -74,7 +125,7 @@
     "measure": "CPI excluding food and energy (BLS, via FRED)",
     "source": "fred:CPILFESL|yoy",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -110,7 +161,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -146,7 +197,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -182,7 +233,7 @@
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -218,7 +269,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -254,7 +305,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -290,7 +341,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -326,7 +377,7 @@
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -363,7 +414,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -399,7 +450,7 @@
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -435,7 +486,7 @@
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -471,7 +522,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-10-27T10:40:05+00:00",
+    "fetched_at": "2026-10-27T22:30:05+00:00",
     "stale": false,
     "error": null
    }
