@@ -1,10 +1,20 @@
 {
   "meta": {
-    "generated_at": "2026-10-28T20:31:58+00:00",
+    "generated_at": "2026-10-28T21:50:10+00:00",
     "run_date": "2026-10-28",
-    "builder_commit": "f096447e8",
+    "builder_commit": "9d390303e",
     "schema_version": "2.0",
-    "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures"
+    "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
+    "source_failures": [
+      {
+        "source": "last-good carry-forward",
+        "reason": "1 of 1 lost rows/values restored from the last good build (2026-10-28T20:31:58+00:00) \u2014 a source this build reads live (FRED?) answered nothing; see the per-item entries"
+      },
+      {
+        "source": "sections.international.table.rows[Canada]",
+        "reason": "cells cpi null and the period moved in this build \u2014 restored from the last good build of 2026-10-28T20:31:58+00:00"
+      }
+    ]
   },
   "sections": {
     "quick_lookup": {
@@ -103,11 +113,11 @@
         },
         {
           "label": "Brent",
-          "value": 110.190002,
+          "value": 110.440002,
           "display": "$110",
           "period": "2026-10-28",
-          "change": 81.1,
-          "change_display": "+81.1% YTD",
+          "change": 81.5,
+          "change_display": "+81.5% YTD",
           "provenance": "hard"
         },
         {
@@ -2603,6 +2613,7 @@
           }
         },
         "charts": {
+          "core-cpi-vs-pce": "core-cpi-vs-pce-tracker",
           "core-pce": "core-pce-tracker",
           "market-based-core-pce": "market-based-core-pce-tracker",
           "core-services-pce-ex-housing": "core-services-pce-ex-housing-tracker",
@@ -10731,11 +10742,11 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1152,
+                "value": 1.1155,
                 "as_of": "2026-10-28",
-                "chg_1d": -0.2,
+                "chg_1d": -0.3,
                 "chg_1w": 0.6,
-                "chg_ytd": 5.1,
+                "chg_ytd": 5.0,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -10753,10 +10764,10 @@
               },
               {
                 "label": "USD/JPY",
-                "value": 157.9,
+                "value": 157.8,
                 "as_of": "2026-10-28",
-                "chg_1d": -0.0,
-                "chg_1w": 0.7,
+                "chg_1d": -0.1,
+                "chg_1w": 0.6,
                 "chg_ytd": 0.6,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10764,10 +10775,10 @@
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8283,
+                "value": 0.8277,
                 "as_of": "2026-10-28",
-                "chg_1d": -0.1,
-                "chg_1w": 1.0,
+                "chg_1d": -0.2,
+                "chg_1w": 0.9,
                 "chg_ytd": 4.4,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10775,7 +10786,7 @@
               },
               {
                 "label": "USD/CAD",
-                "value": 1.3998,
+                "value": 1.3992,
                 "as_of": "2026-10-28",
                 "chg_1d": -0.4,
                 "chg_1w": -0.1,
@@ -10802,22 +10813,22 @@
             "rows": [
               {
                 "label": "WTI ($/bbl, front-month)",
-                "value": 101.6,
+                "value": 101.9,
                 "as_of": "2026-10-28",
-                "chg_1d": 1.7,
-                "chg_1w": 4.6,
-                "chg_ytd": 77.0,
+                "chg_1d": 2.0,
+                "chg_1w": 4.9,
+                "chg_ytd": 77.5,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent ($/bbl, front-month)",
-                "value": 110.2,
+                "value": 110.4,
                 "as_of": "2026-10-28",
-                "chg_1d": -3.2,
-                "chg_1w": 1.3,
-                "chg_ytd": 81.1,
+                "chg_1d": -3.0,
+                "chg_1w": 1.5,
+                "chg_ytd": 81.5,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -10827,8 +10838,8 @@
                 "value": 3.03,
                 "as_of": "2026-10-28",
                 "chg_1d": 12.3,
-                "chg_1w": 8.5,
-                "chg_ytd": -17.9,
+                "chg_1w": 8.6,
+                "chg_ytd": -17.8,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -10846,22 +10857,22 @@
               },
               {
                 "label": "Silver ($/oz, front-month)",
-                "value": 54.24,
+                "value": 54.04,
                 "as_of": "2026-10-28",
-                "chg_1d": -0.1,
-                "chg_1w": -5.5,
-                "chg_ytd": -22.7,
+                "chg_1d": -0.5,
+                "chg_1w": -5.9,
+                "chg_ytd": -22.9,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper ($/lb, front-month)",
-                "value": 6.69,
+                "value": 6.68,
                 "as_of": "2026-10-28",
-                "chg_1d": 1.1,
-                "chg_1w": 2.3,
-                "chg_ytd": 18.9,
+                "chg_1d": 0.9,
+                "chg_1w": 2.1,
+                "chg_ytd": 18.7,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -13128,10 +13139,6 @@
           {
             "country": "United States",
             "cpi": 3.7
-          },
-          {
-            "country": "Canada",
-            "cpi": 3.1
           },
           {
             "country": "United Kingdom",
