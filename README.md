@@ -14,7 +14,13 @@ pattern. History is compacted monthly (orphan-branch swap, Saturday chore).
 
 Removals: the chartbook publish deletes the `data/` and `img/` files of any chart that is still
 awaiting review, retired or deleted (`render/deliver_dashboard_pngs.py` `withdrawn_slugs()`, since
-2026-10-08), unless a page still names it; other writers' files are never touched. Its daily
+2026-10-08), unless a page still names it; other writers' files are never touched. It also never
+publishes, and withdraws, a chart that is never for the web — the Ec10 lecture exhibits, and any
+chart marked `web: false` because its history belongs to another publisher (the ISM indexes and
+NAR's housing affordability index came off on 2026-10-27, Jason: proprietary history; ISM,
+Conference Board, S&P Global, Chicago PMI and NAR history never goes here without the publisher's
+written permission). **Old copies of those two files remain in this repo's public git history**; the
+take-down did not rewrite it. Its daily
 `render/check_data_repo_strays.py` names any file nothing on the site reads.
 
 Spec: `chartbook/REBUILD.md` (Stage B, the data plane). Created 2026-08-10.
