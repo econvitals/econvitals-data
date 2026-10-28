@@ -1134,7 +1134,7 @@
       "title": "Corporate Bond Spreads",
       "type": "line",
       "units": "Option-adjusted spread, percentage points",
-      "latest_date": "2026-10-23"
+      "latest_date": "2026-10-26"
     },
     {
       "slug": "current-account-balance",
@@ -2038,7 +2038,7 @@
       "title": "Euro Area: 10-Year Sovereign Credit Premium",
       "type": "line",
       "units": "Basis points",
-      "latest_date": "2026-10-26"
+      "latest_date": "2026-10-27"
     },
     {
       "slug": "europe-ea-hicp",
@@ -3414,7 +3414,7 @@
       "title": "National Financial Conditions Index",
       "type": "line",
       "units": "Index (positive = tighter than average)",
-      "latest_date": "2026-10-16"
+      "latest_date": "2026-10-23"
     },
     {
       "slug": "nondurable-goods-payrolls",
@@ -5062,7 +5062,7 @@
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-10-23"
+      "latest_date": "2026-10-27"
     },
     {
       "slug": "sp500-earnings-mag7",
@@ -5078,7 +5078,7 @@
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-10-23"
+      "latest_date": "2026-10-27"
     },
     {
       "slug": "sp500-vs-10y-since-oct6",
@@ -5333,6 +5333,14 @@
       "category": "Financial",
       "title": "Treasury Yield Curve",
       "type": "curve",
+      "units": "Percent",
+      "latest_date": "2026-10-27"
+    },
+    {
+      "slug": "treasury-yields-before-sept-and-oct-fomc",
+      "category": "Static/Financial",
+      "title": "Treasury Yields Before the September and October FOMC Meetings",
+      "type": "period_compare",
       "units": "Percent",
       "latest_date": "2026-10-27"
     },
