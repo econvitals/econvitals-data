@@ -321,6 +321,14 @@
       "latest_date": "2025-01-01"
     },
     {
+      "slug": "card-delinquency-transitions-by-age",
+      "category": "Consumer Finance",
+      "title": "Credit Card Balances Newly 90+ Days Late, by Age of Borrower",
+      "type": "line",
+      "units": "Percent of balances, four-quarter flow",
+      "latest_date": "2026-04-01"
+    },
+    {
       "slug": "cbo-sensitivity-table",
       "category": "Static/Fiscal",
       "title": "How Much a 0.1-Point Change in the Economic Assumptions Moves the 2036 Budget",
@@ -414,7 +422,7 @@
       "title": "Change in Commodity Prices",
       "type": "category_bar",
       "units": "Percent change, year to date",
-      "latest_date": "2026-10-27"
+      "latest_date": "2026-10-28"
     },
     {
       "slug": "composite-activity",
@@ -719,6 +727,14 @@
       "type": "line",
       "units": "Index, 1966 Q1 = 100",
       "latest_date": "2026-10-01"
+    },
+    {
+      "slug": "consumers-in-collections",
+      "category": "Consumer Finance",
+      "title": "Consumers With a Debt in Third-Party Collections",
+      "type": "line",
+      "units": "Percent of consumers with a credit report",
+      "latest_date": "2026-04-01"
     },
     {
       "slug": "consumption-wealth-relative-to-dpi",
@@ -2102,7 +2118,7 @@
       "title": "December Fed Funds Forecast vs. the Actual Rate",
       "type": "line",
       "units": "Percent",
-      "latest_date": "2026-10-26"
+      "latest_date": "2026-10-27"
     },
     {
       "slug": "fed-dots-forecast-error",
@@ -2287,6 +2303,14 @@
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "foreclosures-and-bankruptcies",
+      "category": "Consumer Finance",
+      "title": "Consumers With a New Foreclosure or Bankruptcy",
+      "type": "line",
+      "units": "Thousands of consumers per quarter",
+      "latest_date": "2026-04-01"
     },
     {
       "slug": "foreign-gdp-us-exports",
@@ -2729,6 +2753,14 @@
       "latest_date": "2025-01-01"
     },
     {
+      "slug": "homeowners-equity-share",
+      "category": "Consumer Finance",
+      "title": "Homeowners\u2019 Equity as a Share of Home Values",
+      "type": "line",
+      "units": "Percent",
+      "latest_date": "2026-04-01"
+    },
+    {
       "slug": "hourly-compensation-growth",
       "category": "Productivity",
       "title": "Nonfarm Business Sector Hourly Compensation",
@@ -2742,6 +2774,22 @@
       "title": "Nonfarm Business Sector Hours Worked",
       "type": "bar_line",
       "units": "Percent change, annual rate",
+      "latest_date": "2026-04-01"
+    },
+    {
+      "slug": "house-prices-to-income-and-rent",
+      "category": "Consumer Finance",
+      "title": "House Prices Relative to Income and to Rents",
+      "type": "line",
+      "units": "Index, January 2000 = 100",
+      "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "household-debt-by-type-to-income",
+      "category": "Consumer Finance",
+      "title": "Household Debt by Type Relative to Disposable Income",
+      "type": "line",
+      "units": "Percent of disposable personal income",
       "latest_date": "2026-04-01"
     },
     {
@@ -2993,6 +3041,14 @@
       "latest_date": "2026-09-01"
     },
     {
+      "slug": "leverage-by-wealth-group",
+      "category": "Consumer Finance",
+      "title": "Household Debt Relative to Assets, by Wealth Group",
+      "type": "line",
+      "units": "Liabilities as a percent of assets",
+      "latest_date": "2026-04-01"
+    },
+    {
       "slug": "lfpr-adjusted-16-24",
       "category": "Employment/Aging-Adjusted",
       "title": "Labor Force Participation Rate, Actual vs. Age/Sex-Adjusted (Ages 16-24)",
@@ -3071,6 +3127,14 @@
       "type": "line",
       "units": "Percent",
       "latest_date": "2026-09-01"
+    },
+    {
+      "slug": "loans-to-lower-credit-scores",
+      "category": "Consumer Finance",
+      "title": "Share of New Loans Going to Borrowers With Credit Scores Below 660",
+      "type": "line",
+      "units": "Percent of origination volume",
+      "latest_date": "2026-04-01"
     },
     {
       "slug": "local-government-payrolls",
@@ -3209,12 +3273,28 @@
       "latest_date": "2026-09-01"
     },
     {
+      "slug": "missed-payment-probability-by-income",
+      "category": "Consumer Finance",
+      "title": "Expected Chance of Missing a Debt Payment, by Income",
+      "type": "line",
+      "units": "Mean probability over the next three months, percent",
+      "latest_date": "2026-09-01"
+    },
+    {
       "slug": "months-supply-new-homes",
       "category": "Residential Construction",
       "title": "Months\u2019 Supply of New Homes",
       "type": "line",
       "units": "Months",
       "latest_date": "2026-09-01"
+    },
+    {
+      "slug": "mortgage-rate-30-year",
+      "category": "Consumer Finance",
+      "title": "30-Year Fixed Mortgage Rate",
+      "type": "line",
+      "units": "Percent",
+      "latest_date": "2026-10-22"
     },
     {
       "slug": "motor-vehicle-insurance-cpi",
@@ -3737,6 +3817,14 @@
       "latest_date": "2026-08-01"
     },
     {
+      "slug": "personal-interest-payments-to-income",
+      "category": "Consumer Finance",
+      "title": "Personal Interest Payments Relative to Disposable Income",
+      "type": "line",
+      "units": "Percent of disposable personal income",
+      "latest_date": "2026-08-01"
+    },
+    {
       "slug": "personal-saving",
       "category": "Income and Outlays",
       "title": "Personal Saving",
@@ -4129,6 +4217,14 @@
       "latest_date": "2026-07-01"
     },
     {
+      "slug": "qcew-private-job-growth",
+      "category": "Employment",
+      "title": "Private Job Growth in Two Counts",
+      "type": "line",
+      "units": "Percent change from a year earlier",
+      "latest_date": "2026-03-01"
+    },
+    {
       "slug": "quits-layoffs-rate",
       "category": "JOLTS",
       "title": "Quits and Layoffs and Discharges Rates",
@@ -4505,6 +4601,14 @@
       "latest_date": "2036-12-31"
     },
     {
+      "slug": "real-net-worth-by-wealth-group",
+      "category": "Consumer Finance",
+      "title": "Real Net Worth by Wealth Group",
+      "type": "line",
+      "units": "Index, Q4 2019 = 100, adjusted for inflation",
+      "latest_date": "2026-04-01"
+    },
+    {
       "slug": "real-nondefense",
       "category": "GDP",
       "title": "Real Federal Nondefense",
@@ -4777,11 +4881,35 @@
       "latest_date": "2026-09-01"
     },
     {
+      "slug": "scf-debt-burden-over-40-by-income",
+      "category": "Static/Household Finance",
+      "title": "Families Paying More Than 40% of Income on Debt, by Income Group",
+      "type": "line",
+      "units": "Percent of families with debt",
+      "latest_date": "2025-01-01"
+    },
+    {
       "slug": "scf-debtors-past-due",
       "category": "Static/Household Finance",
       "title": "Families With Debt Who Were 60 or More Days Late on a Payment",
       "type": "category_bar",
       "units": "Percent of families with debt",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "scf-median-net-worth-by-age",
+      "category": "Static/Household Finance",
+      "title": "Median Family Net Worth, by Age",
+      "type": "line",
+      "units": "Thousands of 2025 dollars",
+      "latest_date": "2025-01-01"
+    },
+    {
+      "slug": "scf-median-net-worth-by-income",
+      "category": "Static/Household Finance",
+      "title": "Median Family Net Worth, by Income Group",
+      "type": "line",
+      "units": "Thousands of 2025 dollars",
       "latest_date": "2025-01-01"
     },
     {
@@ -4895,6 +5023,14 @@
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-09-01"
+    },
+    {
+      "slug": "single-family-mortgage-delinquency",
+      "category": "Consumer Finance",
+      "title": "Delinquency Rate on Single-Family Mortgages at Banks",
+      "type": "line",
+      "units": "Percent of balances, 30+ days past due",
+      "latest_date": "2026-04-01"
     },
     {
       "slug": "sloos-ci-lending-standards",
@@ -5022,7 +5158,7 @@
       "title": "10-Year Treasury Yield Decomposition",
       "type": "stack",
       "units": "Percent",
-      "latest_date": "2026-10-26"
+      "latest_date": "2026-10-27"
     },
     {
       "slug": "ten-year-decomposition-monthly",
@@ -5511,6 +5647,14 @@
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-08-01"
+    },
+    {
+      "slug": "wealth-shares-by-group",
+      "category": "Consumer Finance",
+      "title": "Share of Household Wealth, by Wealth Group",
+      "type": "line",
+      "units": "Percent of total net worth",
+      "latest_date": "2026-04-01"
     },
     {
       "slug": "wealth-to-income-ratio",
