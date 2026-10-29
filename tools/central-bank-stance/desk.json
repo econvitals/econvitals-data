@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-10-29T10:40:20+00:00",
+  "generated_at": "2026-10-29T22:30:14+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
@@ -18,13 +18,35 @@
    "window_from": "2026-10-28",
    "latest_decision": "2026-10-28",
    "lean": {
-    "hold": 2,
-    "hike": 7,
+    "hold": 1,
+    "hike": 10,
     "cut": 0
    },
-   "n_desks": 9,
+   "n_desks": 11,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "Piper Sandler",
+     "person": "Kurt Lewis",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": null,
+     "path": "hikes expected in December and March",
+     "note": "committee communications/voting signaled stronger December lean",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1875e55bbb1dd4"
+    },
+    {
+     "institution": "PNC",
+     "person": "Faucher",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12-09",
+     "path": "additional hike at mid-March FOMC meeting",
+     "note": "September PCE inflation (0.5% headline, 0.3% core) supports hike despite weak income growth",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1885c33ca2401b"
+    },
     {
      "institution": "MS",
      "person": "Gapen",
@@ -35,6 +57,39 @@
      "note": "Measured approach, tightening FCI, Warsh's productivity-led growth view reduce need for aggressive tightening",
      "as_of": "2026-10-29",
      "msg_id": "1a185c07a8747e33"
+    },
+    {
+     "institution": "GS",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12-09",
+     "path": "cuts resuming late 2027/early 2028",
+     "note": "continued disinflation progress expected but one more hike seen first",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1887317f998e90"
+    },
+    {
+     "institution": "EV",
+     "person": "Krishna Guha",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": null,
+     "path": "December hike expected; March hike a bit more likely than not; risk of stopping at one more hike or skipping Dec if FCI tightens sharply",
+     "note": "Warsh weighing AI-driven FCI tightening against hot inflation and higher energy",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1871b3528f506a"
+    },
+    {
+     "institution": "Citi",
+     "person": "Hollenhorst/Clark",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": null,
+     "path": "base case one more hike in December; would not be surprised by a pause",
+     "note": "Warsh said economy not overheating, limiting appetite for further hikes",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1875878e949063"
     },
     {
      "institution": "BOFA",
@@ -59,17 +114,6 @@
      "msg_id": "1a184f6dabef1a7d"
     },
     {
-     "institution": "PNC",
-     "person": "Gus Faucher",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12-09",
-     "path": "hold late Jan 2027, hike again 25bp mid-March 2027 to 4.25-4.50%, then hold indefinitely",
-     "note": "inflation running hot, majority of FOMC signaling future hikes warranted; Oct hold seen as avoiding pre-midterm political controversy",
-     "as_of": "2026-10-28",
-     "msg_id": "1a184093eddec307"
-    },
-    {
      "institution": "PANTH",
      "person": "Tombs",
      "call": "hike",
@@ -92,17 +136,6 @@
      "msg_id": "1a1848456a058ef4"
     },
     {
-     "institution": "GS",
-     "person": "Mericle",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12-09",
-     "path": "peak 4.00-4.25%; possible third hike in March 2027 if inflation runs higher than expected",
-     "note": "sticking to every-other-meeting hiking pace",
-     "as_of": "2026-10-28",
-     "msg_id": "1a18480fd4f2187d"
-    },
-    {
      "institution": "Federal Reserve",
      "person": null,
      "call": "hold",
@@ -112,20 +145,18 @@
      "note": "FOMC left target range at 3.75-4.00%; two dissents (Cook, Hammack) preferred a 25bp hike",
      "as_of": "2026-10-28",
      "msg_id": "1a183b79be921803"
-    },
-    {
-     "institution": "Citi",
-     "person": "Hollenhorst/Clark",
-     "call": "hold",
-     "size_bp": null,
-     "meeting": "2026-10-28",
-     "path": null,
-     "note": "Hold with two or three dissents favoring hikes; Warsh expected to signal hike cycle not over",
-     "as_of": "2026-10-28",
-     "msg_id": "1a1822fd4d798dcb"
     }
    ],
    "market_quotes": [
+    {
+     "institution": "Citi",
+     "quote": "Markets price in an 83.9% chance of one more hike this year",
+     "meeting": null,
+     "p_hike": 0.839,
+     "p_cut": null,
+     "as_of": "2026-10-29",
+     "msg_id": "1a1875878e949063"
+    },
     {
      "institution": "John Authers at Bloomberg",
      "quote": "Markets see only a 7% chance of a hike at today's FOMC",
@@ -152,15 +183,6 @@
      "p_cut": 0.0,
      "as_of": "2026-10-28",
      "msg_id": "1a184093eddec307"
-    },
-    {
-     "institution": "MPP",
-     "quote": "Markets are still pricing roughly a 75-78% chance of a December hike, and all 100 economists in the Reuters survey expect one",
-     "meeting": "2026-12-16",
-     "p_hike": 0.78,
-     "p_cut": null,
-     "as_of": "2026-10-28",
-     "msg_id": "1a184385836cf4d4"
     }
    ],
    "statement": {
@@ -180,7 +202,7 @@
     "measure": "CPI excluding food and energy (BLS, via FRED)",
     "source": "fred:CPILFESL|yoy",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -188,26 +210,48 @@
   "XM": {
    "code": "XM",
    "name": "European Central Bank",
-   "window_from": "2026-09-14",
-   "latest_decision": "2026-09-10",
+   "window_from": "2026-10-29",
+   "latest_decision": "2026-10-29",
    "lean": {
-    "hold": 2,
+    "hold": 4,
     "hike": 2,
     "cut": 0
    },
-   "n_desks": 4,
-   "consensus": "Split",
+   "n_desks": 6,
+   "consensus": "Hold",
    "calls": [
     {
-     "institution": "GS",
+     "institution": "SGH",
      "person": null,
      "call": "hike",
      "size_bp": 25,
-     "meeting": "2026-12-01",
-     "path": "peak policy rate 2.75%",
-     "note": "GS house forecast, Macro at a Glance",
-     "as_of": "2026-10-28",
-     "msg_id": "1a1850a4c48658ad"
+     "meeting": "2026-12",
+     "path": "deposit rate to 2.75%; March (first meeting of Lagarde's successor) expected to hold unchanged absent a major Middle East escalation or sustained gas-price increases",
+     "note": "energy shock lifting headline inflation but tighter financing conditions limiting passthrough to core, reducing risk of second-round effects",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1898a0d3ff12a4"
+    },
+    {
+     "institution": "JPM",
+     "person": "Fuzesi",
+     "call": "hold",
+     "size_bp": null,
+     "meeting": "2026-10-29",
+     "path": "Hikes expected in December and March, with risk skewed to a further move beyond that",
+     "note": "Lagarde said direction of travel toward hikes is clear to all members; held off on accumulating uncertainty and stable underlying inflation/wages",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1883b6f0df14ae"
+    },
+    {
+     "institution": "GS",
+     "person": null,
+     "call": "hold",
+     "size_bp": 0,
+     "meeting": "2026-10-29",
+     "path": null,
+     "note": "ECB held at 2.5%, in line with GS and consensus",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1887317f998e90"
     },
     {
      "institution": "EV",
@@ -215,43 +259,43 @@
      "call": "hold",
      "size_bp": 0,
      "meeting": "2026-10-29",
-     "path": "one more hike in December possible, could be knocked out if France deteriorates further",
-     "note": "financial-conditions tightening (yields, French spreads, AI FCI) substituting for hikes; no sign of second-round energy effects",
-     "as_of": "2026-10-28",
-     "msg_id": "1a180c6687effc94"
+     "path": "at most one more hike in December, and the ECB might even defer that, given French-crisis-driven FCI tightening the ECB sees as mostly unwarranted",
+     "note": "dovish skip balancing energy-driven upside inflation risk against downside growth risk and unwarranted FCI tightening from France spreads/US yield spillovers",
+     "as_of": "2026-10-29",
+     "msg_id": "1a187f174054f40a"
     },
     {
-     "institution": "BOFA",
-     "person": "Ruben Segura-Cayuela",
-     "call": "hold",
-     "size_bp": 0,
-     "meeting": "2026-10-29",
-     "path": "expect a December hike, then quarterly cuts from Sep-27",
-     "note": "dovish tilt as tighter financial conditions offset renewed energy-price risks",
-     "as_of": "2026-10-28",
-     "msg_id": "1a180ca01c9028cf"
-    },
-    {
-     "institution": "Tweeddale Advisors",
-     "person": "Bathgate",
+     "institution": "Citi",
+     "person": "Marès / Giani",
      "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12-17",
+     "path": "possible further 25bp hike in March, now more conditional given leadership change",
+     "note": "Lagarde signaled a hike was discussed; likely upward revision to inflation outlook in December projections",
+     "as_of": "2026-10-29",
+     "msg_id": "1a188788da4c4f42"
+    },
+    {
+     "institution": "Berenberg",
+     "person": "Wishart",
+     "call": "hold",
      "size_bp": null,
-     "meeting": null,
-     "path": "continue steering markets to deliver currently priced hikes, risks skewed to hiking more",
-     "note": "following Lagarde's 2023 supply-shock framework, tracking actual consumer energy prices",
-     "as_of": "2026-10-27",
-     "msg_id": "1a17f9b7cafbbb8b"
+     "meeting": "2026-10-29",
+     "path": "Expects one more 25bp hike on 17 December, with an outside chance of no further hike; sees market pricing of two-to-three further hikes as too aggressive",
+     "note": "Underlying inflation and wage growth contained; energy prices are the sole driver of accelerating headline HICP inflation",
+     "as_of": "2026-10-29",
+     "msg_id": "1a18842ce40c685f"
     }
    ],
    "market_quotes": [
     {
-     "institution": "Tweeddale Advisors",
-     "quote": "3.3% peak in Euribor priced",
-     "meeting": null,
+     "institution": "Berenberg",
+     "quote": "Market prices two or three further rate increases beyond the ECB's expected December hike, which Berenberg views as an overestimate of the tightening the ECB will deliver.",
+     "meeting": "2026-12-17",
      "p_hike": null,
      "p_cut": null,
-     "as_of": "2026-10-27",
-     "msg_id": "1a17f9b7cafbbb8b"
+     "as_of": "2026-10-29",
+     "msg_id": "1a18842ce40c685f"
     }
    ],
    "statement": {
@@ -271,7 +315,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -340,7 +384,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -352,12 +396,23 @@
    "latest_decision": "2026-10-28",
    "lean": {
     "hold": 0,
-    "hike": 3,
+    "hike": 4,
     "cut": 0
    },
-   "n_desks": 3,
+   "n_desks": 4,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "GS",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-10-28",
+     "path": "expect hold in December, final 25bp hike in January",
+     "note": "BoC emphasized rising cost pressures",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1887317f998e90"
+    },
     {
      "institution": "MPP",
      "person": null,
@@ -420,7 +475,7 @@
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -478,7 +533,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -514,7 +569,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -562,7 +617,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -598,7 +653,7 @@
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -609,23 +664,23 @@
    "window_from": "2026-10-28",
    "latest_decision": "2026-10-28",
    "lean": {
-    "hold": 0,
-    "hike": 1,
+    "hold": 1,
+    "hike": 0,
     "cut": 0
    },
    "n_desks": 1,
-   "consensus": "Hike",
+   "consensus": "Hold",
    "calls": [
     {
      "institution": "GS",
-     "person": "Andrew Boak",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12-01",
-     "path": "final 25bp hike expected in March to 3.25%, peak below current market pricing of 3.75% by Aug 2027",
-     "note": "RBNZ held in October 4-3 split but guided to further increases",
-     "as_of": "2026-10-28",
-     "msg_id": "1a1809f05bfad2ea"
+     "person": null,
+     "call": "hold",
+     "size_bp": 0,
+     "meeting": "2026-10",
+     "path": null,
+     "note": "RBNZ surprised with hold at 2.75% in split 4-3 decision",
+     "as_of": "2026-10-29",
+     "msg_id": "1a1887317f998e90"
     }
    ],
    "market_quotes": [
@@ -666,7 +721,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -735,7 +790,7 @@
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -771,7 +826,7 @@
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -807,7 +862,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-10-29T10:40:05+00:00",
+    "fetched_at": "2026-10-29T22:30:05+00:00",
     "stale": false,
     "error": null
    }
