@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-10-29T10:35:32+00:00",
+    "generated_at": "2026-10-29T12:36:06+00:00",
     "run_date": "2026-10-29",
-    "builder_commit": "4642e6607",
+    "builder_commit": "ec9890e19",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures"
   },
@@ -13,9 +13,9 @@
       "items": [
         {
           "label": "Real GDP",
-          "value": 2.220208,
-          "display": "2.2% ar.",
-          "period": "Q2 2026 \u00b7 last reported",
+          "value": 3.369619,
+          "display": "3.4% ar.",
+          "period": "Q3 2026 \u00b7 last reported",
           "change": null,
           "change_display": null,
           "provenance": "hard"
@@ -40,18 +40,18 @@
         },
         {
           "label": "PCE 12-mo",
-          "value": 3.419032,
-          "display": "3.4%",
-          "period": "Aug 2026",
+          "value": 3.648874,
+          "display": "3.6%",
+          "period": "Sep 2026",
           "change": null,
           "change_display": null,
           "provenance": "hard"
         },
         {
           "label": "Core PCE 12-mo",
-          "value": 3.007596,
-          "display": "3.0%",
-          "period": "Aug 2026",
+          "value": 3.12116,
+          "display": "3.1%",
+          "period": "Sep 2026",
           "change": null,
           "change_display": null,
           "provenance": "hard"
@@ -103,11 +103,11 @@
         },
         {
           "label": "Brent",
-          "value": 110.300003,
-          "display": "$110",
+          "value": 110.510002,
+          "display": "$111",
           "period": "2026-10-29",
-          "change": 81.3,
-          "change_display": "+81.3% YTD",
+          "change": 81.6,
+          "change_display": "+81.6% YTD",
           "provenance": "hard"
         },
         {
@@ -129,7 +129,7 @@
         "items": [
           {
             "source": "Econvitals Composite",
-            "value": 3.1,
+            "value": 3.2,
             "quarter": "Q3 2026",
             "as_of": "2026-10-29",
             "provenance": "hard",
@@ -139,7 +139,7 @@
           },
           {
             "source": "Econvitals estimate",
-            "value": 2.5,
+            "value": 2.7,
             "quarter": "Q3 2026",
             "as_of": "2026-10-29",
             "provenance": "hard"
@@ -161,8 +161,8 @@
         ],
         "composite": {
           "quarter": "Q3 2026",
-          "value": 3.0844,
-          "shown": 3.1,
+          "value": 3.2251,
+          "shown": 3.2,
           "band": 0.75,
           "days_to_release": 0,
           "advance_release": "2026-10-29",
@@ -170,17 +170,17 @@
             {
               "key": "gdpnow",
               "source": "Atlanta Fed GDPNow",
-              "value": 3.2101,
+              "value": 3.338,
               "raw": 3.2721,
-              "adjustment": -0.062,
+              "adjustment": 0.0659,
               "as_of": "2026-10-28",
               "weight": 0.54
             },
             {
               "key": "house",
               "source": "Econvitals estimate",
-              "value": 2.456,
-              "raw": 2.456,
+              "value": 2.7118,
+              "raw": 2.7118,
               "adjustment": 0.0,
               "as_of": "2026-10-29",
               "weight": 0.1
@@ -188,18 +188,18 @@
             {
               "key": "nyfed",
               "source": "NY Fed Staff Nowcast",
-              "value": 2.708,
+              "value": 2.8359,
               "raw": 2.67,
-              "adjustment": 0.038,
+              "adjustment": 0.1659,
               "as_of": "2026-10-23",
               "weight": 0.18
             },
             {
               "key": "street",
               "source": "Street median",
-              "value": 3.433,
+              "value": 3.5609,
               "raw": 3.4,
-              "adjustment": 0.033,
+              "adjustment": 0.1609,
               "as_of": "2026-10-28",
               "weight": 0.18,
               "n": 5
@@ -233,9 +233,9 @@
             }
           ],
           "house": {
-            "value": 2.456,
+            "value": 2.7118,
             "as_of": "2026-10-29",
-            "stage": "advance_indicators",
+            "stage": "pce",
             "withheld": false
           },
           "moved": "GDPNow \u22120.1 to 3.3 on 2026-10-28, mostly inventories after Advance Economic Indicators; NY Fed unchanged at 2.7 on 2026-10-23.",
@@ -309,6 +309,12 @@
               "date": "2026-04-01",
               "q1_ann": 2.220208,
               "q4_yoy": 2.191575
+            },
+            {
+              "q": "Q3 2026",
+              "date": "2026-07-01",
+              "q1_ann": 3.369619,
+              "q4_yoy": 2.065739
             }
           ],
           "series": [
@@ -406,60 +412,62 @@
       ],
       "invest": {
         "overall_i": {
-          "latest_q": 4.646405,
-          "q4q4": 3.376026,
-          "through": "Q2 2026"
+          "latest_q": 19.419758,
+          "q4q4": 7.868356,
+          "through": "Q3 2026"
         },
         "equipment": {
-          "latest_q": 13.435293,
-          "q4q4": 11.150573,
-          "through": "Q2 2026"
+          "latest_q": 20.875511,
+          "q4q4": 14.077119,
+          "through": "Q3 2026"
         },
         "structures": {
-          "latest_q": 0.113779,
-          "q4q4": -6.786124,
-          "through": "Q2 2026"
+          "latest_q": null,
+          "q4q4": null,
+          "through": "Q3 2026",
+          "pending": true
         },
         "ipp": {
-          "latest_q": 9.199727,
-          "q4q4": 8.630917,
-          "through": "Q2 2026"
+          "latest_q": null,
+          "q4q4": null,
+          "through": "Q3 2026",
+          "pending": true
         }
       },
       "contrib": {
-        "through": "Q2 2026",
+        "through": "Q3 2026",
         "cols": {
           "pce": {
-            "q": 2.51,
-            "y": 1.6825
+            "q": 2.52,
+            "y": 1.7
           },
           "bfi": {
-            "q": 1.25,
-            "y": 0.8625
+            "q": 1.78,
+            "y": 1.1725
           },
           "residential": {
-            "q": 0.1,
-            "y": -0.1275
+            "q": -0.12,
+            "y": -0.095
           },
           "government": {
-            "q": -0.01,
-            "y": 0.015
+            "q": 0.9,
+            "y": 0.17
           },
           "exports": {
-            "q": 0.56,
-            "y": 0.63
+            "q": -0.68,
+            "y": 0.2125
           },
           "imports": {
-            "q": -1.66,
-            "y": -0.7275
+            "q": -2.64,
+            "y": -1.39
           },
           "inventories": {
-            "q": -0.53,
-            "y": -0.1325
+            "q": 1.61,
+            "y": 0.305
           },
           "net_exports": {
-            "q": -1.1,
-            "y": -0.0975
+            "q": -3.32,
+            "y": -1.1775
           }
         }
       },
@@ -470,51 +478,51 @@
             "rows": [
               {
                 "label": "GDP",
-                "latest_q": 2.220208,
-                "q4q4": 2.191575,
-                "through": "Q2 2026",
+                "latest_q": 3.369619,
+                "q4q4": 2.065739,
+                "through": "Q3 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Consumption",
-                "latest_q": 3.768022,
-                "q4q4": 2.505544,
-                "through": "Q2 2026",
+                "latest_q": 3.774623,
+                "q4q4": 2.533811,
+                "through": "Q3 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Business fixed investment",
-                "latest_q": 8.983374,
-                "q4q4": 6.16104,
-                "through": "Q2 2026",
+                "latest_q": 12.727458,
+                "q4q4": 8.368782,
+                "through": "Q3 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Residential",
-                "latest_q": 2.805244,
-                "q4q4": -3.301582,
-                "through": "Q2 2026",
+                "latest_q": -3.342102,
+                "q4q4": -2.542351,
+                "through": "Q3 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Government",
-                "latest_q": -0.082569,
-                "q4q4": 0.072313,
-                "through": "Q2 2026",
+                "latest_q": 5.277671,
+                "q4q4": 0.967578,
+                "through": "Q3 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Exports",
-                "latest_q": 5.042168,
-                "q4q4": 5.836755,
-                "through": "Q2 2026",
+                "latest_q": -5.741999,
+                "q4q4": 1.955595,
+                "through": "Q3 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Imports",
-                "latest_q": 12.578119,
-                "q4q4": 5.464587,
-                "through": "Q2 2026",
+                "latest_q": 19.674327,
+                "q4q4": 10.293945,
+                "through": "Q3 2026",
                 "provenance": "hard"
               }
             ]
@@ -524,10 +532,11 @@
             "rows": [
               {
                 "label": "GDI",
-                "latest_q": 2.644786,
-                "q4q4": 2.745595,
-                "through": "Q2 2026",
-                "provenance": "hard"
+                "latest_q": null,
+                "q4q4": null,
+                "through": "Q3 2026",
+                "provenance": "hard",
+                "pending": true
               },
               {
                 "label": "Average of GDP & GDI",
@@ -538,10 +547,11 @@
               },
               {
                 "label": "Real final sales to private domestic purchasers",
-                "latest_q": 4.590571,
-                "q4q4": 2.847338,
-                "through": "Q2 2026",
-                "provenance": "hard"
+                "latest_q": null,
+                "q4q4": null,
+                "through": "Q3 2026",
+                "provenance": "hard",
+                "pending": true
               },
               {
                 "label": "Real disposable personal income",
@@ -552,9 +562,9 @@
               },
               {
                 "label": "GDP price index",
-                "latest_q": 6.098687,
-                "q4q4": 4.019148,
-                "through": "Q2 2026",
+                "latest_q": 2.273736,
+                "q4q4": 3.733599,
+                "through": "Q3 2026",
                 "provenance": "hard"
               }
             ]
@@ -564,31 +574,35 @@
             "rows": [
               {
                 "label": "Productivity",
-                "latest_q": 1.42231,
-                "q4q4": 2.242194,
-                "through": "Q2 2026",
-                "provenance": "hard"
+                "latest_q": null,
+                "q4q4": null,
+                "through": "Q3 2026",
+                "provenance": "hard",
+                "pending": true
               },
               {
                 "label": "Compensation per hour",
-                "latest_q": 2.603449,
-                "q4q4": 3.671086,
-                "through": "Q2 2026",
-                "provenance": "hard"
+                "latest_q": null,
+                "q4q4": null,
+                "through": "Q3 2026",
+                "provenance": "hard",
+                "pending": true
               },
               {
                 "label": "Unit labor costs",
-                "latest_q": 1.166694,
-                "q4q4": 1.397726,
-                "through": "Q2 2026",
-                "provenance": "hard"
+                "latest_q": null,
+                "q4q4": null,
+                "through": "Q3 2026",
+                "provenance": "hard",
+                "pending": true
               },
               {
                 "label": "Employment Cost Index",
-                "latest_q": 3.600791,
-                "q4q4": 3.383125,
-                "through": "Q2 2026",
-                "provenance": "hard"
+                "latest_q": null,
+                "q4q4": null,
+                "through": "Q3 2026",
+                "provenance": "hard",
+                "pending": true
               }
             ]
           }
@@ -1236,19 +1250,19 @@
               },
               {
                 "label": "Initial claims (4wk avg)",
-                "latest": 198.0,
-                "m1_ago": 202.0,
-                "y1_ago": 228.0,
-                "through": "2026-10-17",
+                "latest": 197.0,
+                "m1_ago": 200.0,
+                "y1_ago": 227.0,
+                "through": "2026-10-24",
                 "unit": "k",
                 "provenance": "hard"
               },
               {
                 "label": "Continuing claims",
-                "latest": 1728.0,
-                "m1_ago": 1712.0,
-                "y1_ago": 1947.0,
-                "through": "2026-10-10",
+                "latest": 1701.0,
+                "m1_ago": 1699.0,
+                "y1_ago": 1953.0,
+                "through": "2026-10-17",
                 "unit": "k",
                 "provenance": "hard"
               }
@@ -1621,201 +1635,207 @@
       "title": "Inflation",
       "charts": [
         {
-          "title": "Core CPI Inflation",
+          "title": "Core PCE Inflation",
           "sub": "Percent change, annual rate",
           "start": "2024",
           "points": [
             {
               "m": "Jan 2024",
               "date": "2024-01-01",
-              "chg_1m_ann": 4.392613,
-              "chg_3m_ann": 3.726602
+              "chg_1m_ann": 5.158957,
+              "chg_3m_ann": 2.957759
             },
             {
               "m": "Feb 2024",
               "date": "2024-02-01",
-              "chg_1m_ann": 4.85806,
-              "chg_3m_ann": 4.123845
+              "chg_1m_ann": 3.715237,
+              "chg_3m_ann": 3.513527
             },
             {
               "m": "Mar 2024",
               "date": "2024-03-01",
-              "chg_1m_ann": 4.770988,
-              "chg_3m_ann": 4.673692
+              "chg_1m_ann": 4.492327,
+              "chg_3m_ann": 4.45384
             },
             {
               "m": "Apr 2024",
               "date": "2024-04-01",
-              "chg_1m_ann": 3.295033,
-              "chg_3m_ann": 4.305554
+              "chg_1m_ann": 2.345858,
+              "chg_3m_ann": 3.513997
             },
             {
               "m": "May 2024",
               "date": "2024-05-01",
-              "chg_1m_ann": 1.697951,
-              "chg_3m_ann": 3.247028
+              "chg_1m_ann": 1.522149,
+              "chg_3m_ann": 2.779182
             },
             {
               "m": "Jun 2024",
               "date": "2024-06-01",
-              "chg_1m_ann": 1.118569,
-              "chg_3m_ann": 2.033046
+              "chg_1m_ann": 2.588919,
+              "chg_3m_ann": 2.151287
             },
             {
               "m": "Jul 2024",
               "date": "2024-07-01",
-              "chg_1m_ann": 2.092738,
-              "chg_3m_ann": 1.635631
+              "chg_1m_ann": 2.023965,
+              "chg_3m_ann": 2.044081
             },
             {
               "m": "Aug 2024",
               "date": "2024-08-01",
-              "chg_1m_ann": 3.090527,
-              "chg_3m_ann": 2.097437
+              "chg_1m_ann": 2.598981,
+              "chg_3m_ann": 2.403602
             },
             {
               "m": "Sep 2024",
               "date": "2024-09-01",
-              "chg_1m_ann": 3.748272,
-              "chg_3m_ann": 2.974927
+              "chg_1m_ann": 3.233706,
+              "chg_3m_ann": 2.617695
             },
             {
               "m": "Oct 2024",
               "date": "2024-10-01",
-              "chg_1m_ann": 3.802401,
-              "chg_3m_ann": 3.54656
+              "chg_1m_ann": 3.495517,
+              "chg_3m_ann": 3.108714
             },
             {
               "m": "Nov 2024",
               "date": "2024-11-01",
-              "chg_1m_ann": 3.509019,
-              "chg_3m_ann": 3.686485
+              "chg_1m_ann": 1.689627,
+              "chg_3m_ann": 2.803185
             },
             {
               "m": "Dec 2024",
               "date": "2024-12-01",
-              "chg_1m_ann": 2.262028,
-              "chg_3m_ann": 3.188983
+              "chg_1m_ann": 2.041619,
+              "chg_3m_ann": 2.405947
             },
             {
               "m": "Jan 2025",
               "date": "2025-01-01",
-              "chg_1m_ann": 5.240947,
-              "chg_3m_ann": 3.663479
+              "chg_1m_ann": 4.044158,
+              "chg_3m_ann": 2.586583
             },
             {
               "m": "Feb 2025",
               "date": "2025-02-01",
-              "chg_1m_ann": 3.10014,
-              "chg_3m_ann": 3.526803
+              "chg_1m_ann": 3.850983,
+              "chg_3m_ann": 3.308301
             },
             {
               "m": "Mar 2025",
               "date": "2025-03-01",
-              "chg_1m_ann": 0.832744,
-              "chg_3m_ann": 3.042217
+              "chg_1m_ann": 1.371728,
+              "chg_3m_ann": 3.081735
             },
             {
               "m": "Apr 2025",
               "date": "2025-04-01",
-              "chg_1m_ann": 2.90071,
-              "chg_3m_ann": 2.272704
+              "chg_1m_ann": 3.705277,
+              "chg_3m_ann": 2.969698
             },
             {
               "m": "May 2025",
               "date": "2025-05-01",
-              "chg_1m_ann": 1.577142,
-              "chg_3m_ann": 1.766612
+              "chg_1m_ann": 2.847108,
+              "chg_3m_ann": 2.636838
             },
             {
               "m": "Jun 2025",
               "date": "2025-06-01",
-              "chg_1m_ann": 2.844687,
-              "chg_3m_ann": 2.439018
+              "chg_1m_ann": 3.046056,
+              "chg_3m_ann": 3.19883
             },
             {
               "m": "Jul 2025",
               "date": "2025-07-01",
-              "chg_1m_ann": 3.81539,
-              "chg_3m_ann": 2.741649
+              "chg_1m_ann": 2.210246,
+              "chg_3m_ann": 2.700517
             },
             {
               "m": "Aug 2025",
               "date": "2025-08-01",
-              "chg_1m_ann": 3.780633,
-              "chg_3m_ann": 3.479258
+              "chg_1m_ann": 2.720848,
+              "chg_3m_ann": 2.658473
             },
             {
               "m": "Sep 2025",
               "date": "2025-09-01",
-              "chg_1m_ann": 2.644814,
-              "chg_3m_ann": 3.412179
+              "chg_1m_ann": 2.821562,
+              "chg_3m_ann": 2.583869
+            },
+            {
+              "m": "Oct 2025",
+              "date": "2025-10-01",
+              "chg_1m_ann": 2.147848,
+              "chg_3m_ann": 2.562989
             },
             {
               "m": "Nov 2025",
               "date": "2025-11-01",
-              "chg_1m_ann": 2.293616,
-              "chg_3m_ann": 2.904402
+              "chg_1m_ann": 1.884523,
+              "chg_3m_ann": 2.283884
             },
             {
               "m": "Dec 2025",
               "date": "2025-12-01",
-              "chg_1m_ann": 2.830883,
-              "chg_3m_ann": 2.589529
+              "chg_1m_ann": 3.854048,
+              "chg_3m_ann": 2.625107
             },
             {
               "m": "Jan 2026",
               "date": "2026-01-01",
-              "chg_1m_ann": 3.598561,
-              "chg_3m_ann": 2.906294
+              "chg_1m_ann": 4.847564,
+              "chg_3m_ann": 3.521367
             },
             {
               "m": "Feb 2026",
               "date": "2026-02-01",
-              "chg_1m_ann": 2.623633,
-              "chg_3m_ann": 3.01684
+              "chg_1m_ann": 4.107476,
+              "chg_3m_ann": 4.268845
             },
             {
               "m": "Mar 2026",
               "date": "2026-03-01",
-              "chg_1m_ann": 2.375008,
-              "chg_3m_ann": 2.864381
+              "chg_1m_ann": 3.111074,
+              "chg_3m_ann": 4.019603
             },
             {
               "m": "Apr 2026",
               "date": "2026-04-01",
-              "chg_1m_ann": 4.61225,
-              "chg_3m_ann": 3.198795
+              "chg_1m_ann": 3.447874,
+              "chg_3m_ann": 3.554649
             },
             {
               "m": "May 2026",
               "date": "2026-05-01",
-              "chg_1m_ann": 2.525925,
-              "chg_3m_ann": 3.166032
+              "chg_1m_ann": 3.782891,
+              "chg_3m_ann": 3.446916
             },
             {
               "m": "Jun 2026",
               "date": "2026-06-01",
-              "chg_1m_ann": -0.199745,
-              "chg_3m_ann": 2.293796
+              "chg_1m_ann": 1.61121,
+              "chg_3m_ann": 2.942882
             },
             {
               "m": "Jul 2026",
               "date": "2026-07-01",
-              "chg_1m_ann": 2.616067,
-              "chg_3m_ann": 1.638966
+              "chg_1m_ann": 1.665278,
+              "chg_3m_ann": 2.348154
             },
             {
               "m": "Aug 2026",
               "date": "2026-08-01",
-              "chg_1m_ann": 3.533515,
-              "chg_3m_ann": 1.970839
+              "chg_1m_ann": 3.189819,
+              "chg_3m_ann": 2.152824
             },
             {
               "m": "Sep 2026",
               "date": "2026-09-01",
-              "chg_1m_ann": 4.093012,
-              "chg_3m_ann": 3.412404
+              "chg_1m_ann": 3.864838,
+              "chg_3m_ann": 2.902522
             }
           ],
           "series": [
@@ -2014,20 +2034,20 @@
             {
               "date": "2026-07-01",
               "core_cpi": 2.466518,
-              "core_pce": 2.983468,
-              "diff": -0.51695
+              "core_pce": 2.995339,
+              "diff": -0.528821
             },
             {
               "date": "2026-08-01",
               "core_cpi": 2.446163,
-              "core_pce": 3.007596,
-              "diff": -0.561433
+              "core_pce": 3.034442,
+              "diff": -0.588279
             },
             {
               "date": "2026-09-01",
               "core_cpi": 2.565841,
-              "core_pce": null,
-              "diff": null
+              "core_pce": 3.12116,
+              "diff": -0.555319
             }
           ],
           "series": [
@@ -2066,7 +2086,7 @@
                 "ann_1": 8.066272,
                 "ann_3": 4.562342,
                 "ann_6": 3.66922,
-                "yoy": 3.737685,
+                "yoy": 3.717251,
                 "through": "Sep 2026",
                 "provenance": "hard"
               },
@@ -2146,96 +2166,98 @@
           },
           {
             "name": "PCE",
-            "through": "Aug 2026",
+            "through": "Sep 2026",
             "rows": [
               {
                 "label": "PCE",
-                "ann_1": 3.787558,
-                "ann_3": 1.034152,
-                "ann_6": 3.567415,
-                "yoy": 3.419032,
-                "through": "Aug 2026",
+                "ann_1": 6.051726,
+                "ann_3": 3.558178,
+                "ann_6": 3.335456,
+                "yoy": 3.648874,
+                "through": "Sep 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Core PCE",
-                "ann_1": 3.010014,
-                "ann_3": 2.046398,
-                "ann_6": 2.744271,
-                "yoy": 3.007596,
-                "through": "Aug 2026",
+                "ann_1": 3.864838,
+                "ann_3": 2.902522,
+                "ann_6": 2.9227,
+                "yoy": 3.12116,
+                "through": "Sep 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Market-based core PCE",
-                "ann_1": 3.481161,
-                "ann_3": 2.407503,
-                "ann_6": 2.814874,
-                "yoy": 3.02642,
-                "through": "Aug 2026",
+                "ann_1": 4.143245,
+                "ann_3": 2.935562,
+                "ann_6": 2.850342,
+                "yoy": 3.118339,
+                "through": "Sep 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Median PCE",
-                "ann_1": 2.3064,
-                "ann_3": 2.257,
-                "ann_6": 2.6895,
-                "yoy": 2.5671,
-                "through": "Aug 2026",
-                "provenance": "hard"
+                "ann_1": 3.0034,
+                "ann_3": 2.6508,
+                "ann_6": 2.7055,
+                "yoy": 2.6404,
+                "through": "Sep 2026",
+                "provenance": "hard",
+                "est": true
               },
               {
                 "label": "Trimmed-mean PCE",
-                "ann_1": 1.92,
-                "ann_3": 1.7698,
-                "ann_6": 2.3465,
-                "yoy": 2.1879,
-                "through": "Aug 2026",
-                "provenance": "hard"
+                "ann_1": 2.8405,
+                "ann_3": 2.2092,
+                "ann_6": 2.3914,
+                "yoy": 2.2436,
+                "through": "Sep 2026",
+                "provenance": "hard",
+                "est": true
               },
               {
                 "label": "Core goods",
-                "ann_1": 0.311057,
-                "ann_3": 0.904557,
-                "ann_6": 1.050456,
-                "yoy": 1.965334,
-                "through": "Aug 2026",
+                "ann_1": 2.391803,
+                "ann_3": 1.662508,
+                "ann_6": 1.171262,
+                "yoy": 1.984109,
+                "through": "Sep 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Core services",
-                "ann_1": 3.893798,
-                "ann_3": 2.415075,
-                "ann_6": 3.296897,
-                "yoy": 3.346316,
-                "through": "Aug 2026",
+                "ann_1": 4.351973,
+                "ann_3": 3.305299,
+                "ann_6": 3.494691,
+                "yoy": 3.490749,
+                "through": "Sep 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Housing",
-                "ann_1": 2.252863,
-                "ann_3": 2.696255,
-                "ann_6": 3.596377,
-                "yoy": 2.993597,
-                "through": "Aug 2026",
+                "ann_1": 3.909922,
+                "ann_3": 3.104787,
+                "ann_6": 3.714664,
+                "yoy": 3.151798,
+                "through": "Sep 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Food",
-                "ann_1": 0.373008,
-                "ann_3": 0.806052,
-                "ann_6": 1.224753,
-                "yoy": 1.920155,
-                "through": "Aug 2026",
+                "ann_1": -0.190503,
+                "ann_3": -0.268948,
+                "ann_6": 1.476672,
+                "yoy": 1.485282,
+                "through": "Sep 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Energy",
-                "ann_1": 31.50134,
-                "ann_3": -18.746885,
-                "ann_6": 30.661338,
-                "yoy": 16.845702,
-                "through": "Aug 2026",
+                "ann_1": 87.021334,
+                "ann_3": 27.528077,
+                "ann_6": 16.72285,
+                "yoy": 21.282113,
+                "through": "Sep 2026",
                 "provenance": "hard"
               }
             ]
@@ -2245,7 +2267,7 @@
       "adjusted": {
         "pce": {
           "basis": "PCE",
-          "through": "Aug 2026",
+          "through": "Sep 2026",
           "source_version": "release",
           "measures": [
             "Overall",
@@ -2261,71 +2283,71 @@
             {
               "label": "Overall",
               "delta": 0.0,
-              "h1": 3.787558,
-              "h3": 1.034152,
-              "h6": 3.567415,
-              "h12": 3.419032
+              "h1": 6.051726,
+              "h3": 3.558178,
+              "h6": 3.335456,
+              "h12": 3.648874
             },
             {
               "label": "Core",
               "delta": 0.019337,
-              "h1": 3.029351,
-              "h3": 2.065735,
-              "h6": 2.763608,
-              "h12": 3.026933
+              "h1": 3.884175,
+              "h3": 2.921859,
+              "h6": 2.942037,
+              "h12": 3.140497
             },
             {
               "label": "Core ex Housing",
               "delta": 0.225224,
-              "h1": 3.395121,
-              "h3": 2.133977,
-              "h6": 2.787459,
-              "h12": 3.236887
+              "h1": 4.085264,
+              "h3": 3.083937,
+              "h6": 2.978476,
+              "h12": 3.34075
             },
             {
               "label": "Core ex Housing and Used Cars",
               "delta": 0.215258,
-              "h1": 3.368342,
-              "h3": 2.121864,
-              "h6": 2.809369,
-              "h12": 3.309612
+              "h1": 4.018119,
+              "h3": 3.031998,
+              "h6": 2.970252,
+              "h12": 3.402424
             },
             {
               "label": "Core Services ex Housing",
               "delta": -0.761366,
-              "h1": 3.63315,
-              "h3": 1.569932,
-              "h6": 2.442834,
-              "h12": 2.694032
+              "h1": 3.726669,
+              "h3": 2.607804,
+              "h6": 2.667196,
+              "h12": 2.834952
             },
             {
               "label": "Market Core",
               "delta": 0.111159,
-              "h1": 3.59232,
-              "h3": 2.518661,
-              "h6": 2.926032,
-              "h12": 3.137578
+              "h1": 4.254403,
+              "h3": 3.04672,
+              "h6": 2.961501,
+              "h12": 3.229498
             },
             {
               "label": "Median",
               "delta": -0.496371,
-              "h1": 1.810057,
-              "h3": 1.7606,
-              "h6": 2.193107,
-              "h12": 2.070736
+              "h1": 2.506995,
+              "h3": 2.154469,
+              "h6": 2.209089,
+              "h12": 2.144046
             },
             {
               "label": "Trimmed Mean",
               "delta": 0.003668,
-              "h1": 1.923668,
-              "h3": 1.773513,
-              "h6": 2.350121,
-              "h12": 2.191551
+              "h1": 2.844168,
+              "h3": 2.212863,
+              "h6": 2.395057,
+              "h12": 2.247269
             }
           ],
           "ecumenical": {
-            "value": 2.480747,
-            "through": "Aug 2026"
+            "value": 2.965876,
+            "through": "Sep 2026"
           }
         },
         "cpi": {
@@ -2403,215 +2425,6 @@
             "value": 2.44921,
             "through": "Sep 2026"
           }
-        }
-      },
-      "tracker": {
-        "month": "Sep 2026",
-        "actual_through": "Aug 2026",
-        "pce_release": "2026-10-29",
-        "show_until": "2026-10-29T08:30:00-04:00",
-        "inputs": "After CPI, PPI and import prices",
-        "note": "Sep 2026 is Econvitals' tracking estimate from the released CPI, PPI and import prices, including its own median and trimmed mean; BEA publishes it Oct 29.",
-        "bank_pce": {
-          "name": "PCE",
-          "through": "Sep 2026",
-          "rows": [
-            {
-              "label": "PCE",
-              "ann_1": 6.294618,
-              "ann_3": 3.536421,
-              "ann_6": 3.324601,
-              "yoy": 3.64343,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            },
-            {
-              "label": "Core PCE",
-              "ann_1": 3.958038,
-              "ann_3": 2.826053,
-              "ann_6": 2.884451,
-              "yoy": 3.101996,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            },
-            {
-              "label": "Market-based core PCE",
-              "ann_1": 4.281801,
-              "ann_3": 3.161847,
-              "ann_6": 2.963329,
-              "yoy": 3.174964,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            },
-            {
-              "label": "Median PCE",
-              "ann_1": 2.918322,
-              "ann_3": 2.622581,
-              "ann_6": 2.691322,
-              "yoy": 2.633352,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            },
-            {
-              "label": "Trimmed-mean PCE",
-              "ann_1": 2.782877,
-              "ann_3": 2.190101,
-              "ann_6": 2.381824,
-              "yoy": 2.238825,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            },
-            {
-              "label": "Core goods",
-              "ann_1": 2.414311,
-              "ann_3": 1.582908,
-              "ann_6": 1.131646,
-              "yoy": 1.96414,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            },
-            {
-              "label": "Core services",
-              "ann_1": 4.694061,
-              "ann_3": 3.303555,
-              "ann_6": 3.493817,
-              "yoy": 3.490312,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            },
-            {
-              "label": "Housing",
-              "ann_1": 3.90831,
-              "ann_3": 3.104254,
-              "ann_6": 3.714396,
-              "yoy": 3.151664,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            },
-            {
-              "label": "Food",
-              "ann_1": -0.275651,
-              "ann_3": -0.294299,
-              "ann_6": 1.463774,
-              "yoy": 1.478832,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            },
-            {
-              "label": "Energy",
-              "ann_1": 88.781253,
-              "ann_3": 27.724506,
-              "ann_6": 16.812708,
-              "yoy": 21.328788,
-              "through": "Sep 2026",
-              "provenance": "hard",
-              "est": true
-            }
-          ]
-        },
-        "adjusted_pce": {
-          "basis": "PCE",
-          "through": "Sep 2026",
-          "source_version": "tracker",
-          "measures": [
-            "Overall",
-            "Core",
-            "Core ex Housing",
-            "Core ex Housing and Used Cars",
-            "Core Services ex Housing",
-            "Market Core",
-            "Median",
-            "Trimmed Mean"
-          ],
-          "rows": [
-            {
-              "label": "Overall",
-              "delta": 0.0,
-              "h1": 6.294618,
-              "h3": 3.536421,
-              "h6": 3.324601,
-              "h12": 3.64343
-            },
-            {
-              "label": "Core",
-              "delta": 0.019337,
-              "h1": 3.977375,
-              "h3": 2.84539,
-              "h6": 2.903788,
-              "h12": 3.121333
-            },
-            {
-              "label": "Core ex Housing",
-              "delta": 0.225224,
-              "h1": 4.195697,
-              "h3": 2.991303,
-              "h6": 2.932196,
-              "h12": 3.317525
-            },
-            {
-              "label": "Core ex Housing and Used Cars",
-              "delta": 0.215258,
-              "h1": 4.123568,
-              "h3": 2.935462,
-              "h6": 2.922001,
-              "h12": 3.378195
-            },
-            {
-              "label": "Core Services ex Housing",
-              "delta": -0.761366,
-              "h1": 3.907667,
-              "h3": 2.51713,
-              "h6": 2.621823,
-              "h12": 2.812226
-            },
-            {
-              "label": "Market Core",
-              "delta": 0.111159,
-              "h1": 4.392959,
-              "h3": 3.273006,
-              "h6": 3.074488,
-              "h12": 3.286123
-            },
-            {
-              "label": "Median",
-              "delta": -0.496371,
-              "h1": 2.421951,
-              "h3": 2.12621,
-              "h6": 2.194951,
-              "h12": 2.136981
-            },
-            {
-              "label": "Trimmed Mean",
-              "delta": 0.003668,
-              "h1": 2.786545,
-              "h3": 2.19377,
-              "h6": 2.385493,
-              "h12": 2.242494
-            }
-          ],
-          "ecumenical": {
-            "value": 2.927098,
-            "through": "Sep 2026"
-          }
-        },
-        "charts": {
-          "core-cpi-vs-pce": "core-cpi-vs-pce-tracker",
-          "core-pce": "core-pce-tracker",
-          "market-based-core-pce": "market-based-core-pce-tracker",
-          "core-services-pce-ex-housing": "core-services-pce-ex-housing-tracker",
-          "trimmed-mean-pce": "trimmed-mean-pce-tracker",
-          "pce-inflation": "pce-inflation-tracker",
-          "underlying-inflation-pce": "underlying-inflation-pce-tracker",
-          "pce-contributions-1m": "pce-contributions-1m-tracker"
         }
       }
     },
@@ -10617,31 +10430,31 @@
               },
               {
                 "label": "5-year",
-                "value": 4.87,
-                "as_of": "2026-10-28",
-                "chg_1d": 0.03,
-                "chg_1w": -0.1,
-                "chg_ytd": 1.15,
+                "value": 4.85,
+                "as_of": "2026-10-29",
+                "chg_1d": -0.02,
+                "chg_1w": 0.08,
+                "chg_ytd": 1.13,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "10-year",
-                "value": 5.05,
-                "as_of": "2026-10-28",
-                "chg_1d": 0.05,
-                "chg_1w": -0.1,
-                "chg_ytd": 0.88,
+                "value": 5.03,
+                "as_of": "2026-10-29",
+                "chg_1d": -0.02,
+                "chg_1w": 0.07,
+                "chg_ytd": 0.86,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "30-year",
-                "value": 5.36,
-                "as_of": "2026-10-28",
-                "chg_1d": 0.06,
-                "chg_1w": -0.08,
-                "chg_ytd": 0.52,
+                "value": 5.35,
+                "as_of": "2026-10-29",
+                "chg_1d": -0.01,
+                "chg_1w": 0.06,
+                "chg_ytd": 0.51,
                 "is_yield": true,
                 "provenance": "hard"
               },
@@ -10708,11 +10521,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 17.06,
+                "value": 17.17,
                 "as_of": "2026-10-29",
-                "chg_1d": 0.15,
-                "chg_1w": -1.97,
-                "chg_ytd": 2.11,
+                "chg_1d": 0.26,
+                "chg_1w": -1.86,
+                "chg_ytd": 2.22,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -10744,7 +10557,7 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1143,
+                "value": 1.1142,
                 "as_of": "2026-10-29",
                 "chg_1d": 0.1,
                 "chg_1w": 0.5,
@@ -10755,11 +10568,11 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3322,
+                "value": 1.333,
                 "as_of": "2026-10-29",
-                "chg_1d": 0.0,
-                "chg_1w": 0.4,
-                "chg_ytd": 1.0,
+                "chg_1d": -0.0,
+                "chg_1w": 0.3,
+                "chg_ytd": 0.9,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -10769,41 +10582,41 @@
                 "value": 158.0,
                 "as_of": "2026-10-29",
                 "chg_1d": 0.1,
-                "chg_1w": 0.8,
-                "chg_ytd": 0.8,
+                "chg_1w": 0.7,
+                "chg_ytd": 0.7,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8286,
+                "value": 0.828,
                 "as_of": "2026-10-29",
-                "chg_1d": 0.1,
+                "chg_1d": -0.0,
                 "chg_1w": 0.4,
-                "chg_ytd": 4.5,
+                "chg_ytd": 4.4,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CAD",
-                "value": 1.3992,
+                "value": 1.3981,
                 "as_of": "2026-10-29",
-                "chg_1d": -0.0,
+                "chg_1d": -0.1,
                 "chg_1w": -0.1,
-                "chg_ytd": 2.0,
+                "chg_ytd": 1.9,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CNY",
-                "value": 6.65,
+                "value": 6.66,
                 "as_of": "2026-10-29",
-                "chg_1d": -0.2,
-                "chg_1w": -0.3,
-                "chg_ytd": -4.9,
+                "chg_1d": -0.1,
+                "chg_1w": -0.1,
+                "chg_ytd": -4.7,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -10815,66 +10628,66 @@
             "rows": [
               {
                 "label": "WTI ($/bbl, front-month)",
-                "value": 101.4,
+                "value": 101.8,
                 "as_of": "2026-10-29",
-                "chg_1d": -1.3,
-                "chg_1w": 2.0,
-                "chg_ytd": 76.7,
+                "chg_1d": -1.0,
+                "chg_1w": 2.3,
+                "chg_ytd": 77.2,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent ($/bbl, front-month)",
-                "value": 110.3,
+                "value": 110.5,
                 "as_of": "2026-10-29",
-                "chg_1d": -4.4,
-                "chg_1w": -2.5,
-                "chg_ytd": 81.3,
+                "chg_1d": -4.2,
+                "chg_1w": -2.4,
+                "chg_ytd": 81.6,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas ($/MMBtu, front-month)",
-                "value": 3.04,
+                "value": 2.99,
                 "as_of": "2026-10-29",
-                "chg_1d": 7.8,
-                "chg_1w": 8.6,
-                "chg_ytd": -17.6,
+                "chg_1d": 6.2,
+                "chg_1w": 7.0,
+                "chg_ytd": -18.9,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold ($/oz, front-month)",
-                "value": 4042.0,
+                "value": 4035.0,
                 "as_of": "2026-10-29",
-                "chg_1d": -0.2,
-                "chg_1w": -0.4,
-                "chg_ytd": -6.9,
+                "chg_1d": -0.4,
+                "chg_1w": -0.6,
+                "chg_ytd": -7.0,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver ($/oz, front-month)",
-                "value": 52.81,
+                "value": 52.6,
                 "as_of": "2026-10-29",
-                "chg_1d": -1.2,
-                "chg_1w": -3.6,
-                "chg_ytd": -24.7,
+                "chg_1d": -1.6,
+                "chg_1w": -4.0,
+                "chg_ytd": -25.0,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper ($/lb, front-month)",
-                "value": 6.59,
+                "value": 6.6,
                 "as_of": "2026-10-29",
-                "chg_1d": -0.8,
-                "chg_1w": 3.6,
-                "chg_ytd": 17.1,
+                "chg_1d": -0.6,
+                "chg_1w": 3.7,
+                "chg_ytd": 17.2,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -12122,7 +11935,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-10-28",
         "anchor_midpoint": 3.875,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-10-28)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-10-29)",
         "current_range_bp": [
           375,
           400
@@ -12902,13 +12715,13 @@
             },
             {
               "label": "Interest payments, % of income",
-              "c1": 2.6,
-              "c2": 2.5,
+              "c1": 2.5,
+              "c2": 2.6,
               "c1pct": false,
               "c2pct": false,
               "decimals": 1,
               "provenance": "hard",
-              "through": "Aug 2026"
+              "through": "Sep 2026"
             },
             {
               "label": "90+ days delinquent, all consumer credit (%)",
@@ -13180,8 +12993,8 @@
         "rows": [
           {
             "country": "United States",
-            "gdp_qq": 2.2,
-            "gdp": 2.2,
+            "gdp_qq": 3.4,
+            "gdp": 2.1,
             "unemp": 4.2,
             "cpi": 3.7,
             "core": 2.6,
