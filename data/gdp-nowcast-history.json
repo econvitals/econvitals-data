@@ -334,6 +334,33 @@
    }
   }
  ],
- "scored": [],
+ "scored": [
+  {
+   "quarter": "Q3 2026",
+   "advance": 3.4,
+   "release_date": "2026-10-29",
+   "scored_from": "2026-10-28",
+   "composite": 3.1526,
+   "composite_error": -0.25,
+   "legs": {
+    "gdpnow": {
+     "value": 3.2721,
+     "error": -0.13
+    },
+    "house": {
+     "value": 2.58,
+     "error": -0.82
+    },
+    "nyfed": {
+     "value": 2.77,
+     "error": -0.63
+    },
+    "street": {
+     "value": 3.495,
+     "error": 0.1
+    }
+   }
+  }
+ ],
  "updated": "2026-10-29"
 }
