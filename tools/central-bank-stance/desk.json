@@ -1,10 +1,10 @@
 {
  "meta": {
-  "generated_at": "2026-10-29T22:30:14+00:00",
+  "generated_at": "2026-10-30T10:40:24+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
-  "reader_updated": "2026-10-29",
+  "reader_updated": "2026-10-30",
   "banks_with_calls": 8,
   "banks_with_statement": 12,
   "banks_with_core": 12,
@@ -26,6 +26,28 @@
    "consensus": "Hike",
    "calls": [
     {
+     "institution": "MS",
+     "person": "Gapen",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": "another 25bp hike in March 2027",
+     "note": "growth resilient but supply-side driven; October FOMC messaging consistent with gradual tightening",
+     "as_of": "2026-10-30",
+     "msg_id": "1a18b33508fa64df"
+    },
+    {
+     "institution": "BOFA",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": "additional 25bp hike March 2027; terminal 4.25-4.5% held through end-2027",
+     "note": "3Q data show the economy running hot and inflation too high; risk is Fed falling behind the curve",
+     "as_of": "2026-10-30",
+     "msg_id": "1a18bf4c6eb38764"
+    },
+    {
      "institution": "Piper Sandler",
      "person": "Kurt Lewis",
      "call": "hike",
@@ -46,17 +68,6 @@
      "note": "September PCE inflation (0.5% headline, 0.3% core) supports hike despite weak income growth",
      "as_of": "2026-10-29",
      "msg_id": "1a1885c33ca2401b"
-    },
-    {
-     "institution": "MS",
-     "person": "Gapen",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": null,
-     "path": "Two more 25bp hikes in December and March to 4.25-4.5% terminal",
-     "note": "Measured approach, tightening FCI, Warsh's productivity-led growth view reduce need for aggressive tightening",
-     "as_of": "2026-10-29",
-     "msg_id": "1a185c07a8747e33"
     },
     {
      "institution": "GS",
@@ -90,17 +101,6 @@
      "note": "Warsh said economy not overheating, limiting appetite for further hikes",
      "as_of": "2026-10-29",
      "msg_id": "1a1875878e949063"
-    },
-    {
-     "institution": "BOFA",
-     "person": "Bhave",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": null,
-     "path": "Quarterly cadence hikes Dec'26 and Mar'27 to 4.25-4.5% terminal, held through end-2027",
-     "note": "Fed moving slower risks falling behind the curve",
-     "as_of": "2026-10-29",
-     "msg_id": "1a187029587ab3af"
     },
     {
      "institution": "SGH Macro Advisors",
@@ -202,7 +202,7 @@
     "measure": "CPI excluding food and energy (BLS, via FRED)",
     "source": "fred:CPILFESL|yoy",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -213,13 +213,35 @@
    "window_from": "2026-10-29",
    "latest_decision": "2026-10-29",
    "lean": {
-    "hold": 4,
-    "hike": 2,
+    "hold": 3,
+    "hike": 4,
     "cut": 0
    },
-   "n_desks": 6,
-   "consensus": "Hold",
+   "n_desks": 7,
+   "consensus": "Hike",
    "calls": [
+    {
+     "institution": "EV",
+     "person": "Guha",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": "measured approach; FCI tightening could defer/kill the hike, worse energy shock with second-round effects would require more",
+     "note": "balancing higher-for-longer energy upside inflation risk against FCI tightening from France stress",
+     "as_of": "2026-10-30",
+     "msg_id": "1a18b130975eaf91"
+    },
+    {
+     "institution": "BOFA",
+     "person": null,
+     "call": "hike",
+     "size_bp": null,
+     "meeting": "2026-12",
+     "path": "possibly again in March",
+     "note": "Dec no longer seen as a done deal given risk balance shift",
+     "as_of": "2026-10-30",
+     "msg_id": "1a18bf4623083243"
+    },
     {
      "institution": "SGH",
      "person": null,
@@ -252,17 +274,6 @@
      "note": "ECB held at 2.5%, in line with GS and consensus",
      "as_of": "2026-10-29",
      "msg_id": "1a1887317f998e90"
-    },
-    {
-     "institution": "EV",
-     "person": "Krishna Guha",
-     "call": "hold",
-     "size_bp": 0,
-     "meeting": "2026-10-29",
-     "path": "at most one more hike in December, and the ECB might even defer that, given French-crisis-driven FCI tightening the ECB sees as mostly unwarranted",
-     "note": "dovish skip balancing energy-driven upside inflation risk against downside growth risk and unwarranted FCI tightening from France spreads/US yield spillovers",
-     "as_of": "2026-10-29",
-     "msg_id": "1a187f174054f40a"
     },
     {
      "institution": "Citi",
@@ -315,7 +326,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -327,12 +338,45 @@
    "latest_decision": "2026-09-17",
    "lean": {
     "hold": 0,
-    "hike": 2,
+    "hike": 5,
     "cut": 0
    },
-   "n_desks": 2,
+   "n_desks": 5,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "Citi",
+     "person": "May Rostom",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-11",
+     "path": "second hike in February 2027",
+     "note": "CPI at 3.5%, Citi sees Q1 CPI at 4.2%, inflation above target through most of 2027",
+     "as_of": "2026-10-30",
+     "msg_id": "1a18b9f2c02c8012"
+    },
+    {
+     "institution": "BOFA",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-11",
+     "path": "short, gradual, precautionary hiking cycle; second hike in February",
+     "note": "risk-management hike; views market pricing as excessive",
+     "as_of": "2026-10-30",
+     "msg_id": "1a18bf4623083243"
+    },
+    {
+     "institution": "SGH",
+     "person": "Regina Schleiger",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-11-05",
+     "path": "second 25bp hike to 4.25% on Feb 4, 2027; third hike possible at April 29 round depending on spring pay settlements and January energy price cap",
+     "note": "Budget delivered no reason to slam brakes; higher OBR inflation forecast (peak 3.8% Q1-2027) backs hikes but labor slack limits to two",
+     "as_of": "2026-10-29",
+     "msg_id": "1a18a4b079f80c8e"
+    },
     {
      "institution": "EV",
      "person": "Krishna Guha",
@@ -357,6 +401,15 @@
     }
    ],
    "market_quotes": [
+    {
+     "institution": "Citi",
+     "quote": "Huw Pill commented that he thought ~100bps of tightening priced by markets was excessive, prompting the front end to rally",
+     "meeting": "2026-11",
+     "p_hike": null,
+     "p_cut": null,
+     "as_of": "2026-10-30",
+     "msg_id": "1a18b9f2c02c8012"
+    },
     {
      "institution": "Tweeddale Advisors",
      "quote": "4.9% BoE peak priced - compared to 5.25% (April) and 4.75% (July) forward guidance",
@@ -384,7 +437,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -475,7 +528,7 @@
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -487,12 +540,23 @@
    "latest_decision": "2026-09-29",
    "lean": {
     "hold": 0,
-    "hike": 1,
+    "hike": 2,
     "cut": 0
    },
-   "n_desks": 1,
+   "n_desks": 2,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "BOFA",
+     "person": null,
+     "call": "hike",
+     "size_bp": null,
+     "meeting": "2026-11-03",
+     "path": null,
+     "note": "stronger-than-expected CPI print prompted BofA to close its AU 2s10s flattener as the cycle nears its peak",
+     "as_of": "2026-10-30",
+     "msg_id": "1a18b49f1d61dca6"
+    },
     {
      "institution": "GS",
      "person": "Andrew Boak",
@@ -533,7 +597,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -569,7 +633,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -617,7 +681,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -653,7 +717,7 @@
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -721,7 +785,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -729,50 +793,29 @@
   "JP": {
    "code": "JP",
    "name": "Bank of Japan",
-   "window_from": "2026-09-18",
-   "latest_decision": "2026-09-18",
+   "window_from": "2026-10-30",
+   "latest_decision": "2026-10-30",
    "lean": {
-    "hold": 2,
-    "hike": 0,
+    "hold": 0,
+    "hike": 1,
     "cut": 0
    },
-   "n_desks": 2,
-   "consensus": "Hold",
+   "n_desks": 1,
+   "consensus": "Hike",
    "calls": [
     {
-     "institution": "EV",
-     "person": "Krishna Guha",
-     "call": "hold",
-     "size_bp": 0,
-     "meeting": "2026-10-30",
-     "path": "Next hike likely December; terminal/neutral roughly 2%, maybe a bit higher",
-     "note": "Underlying inflation durably reached 2% target; focus shifts to anchoring, not accelerating hikes",
-     "as_of": "2026-10-29",
-     "msg_id": "1a185ecbb4f89f08"
-    },
-    {
-     "institution": "BOFA",
-     "person": null,
-     "call": "hold",
-     "size_bp": 0,
-     "meeting": "2026-10-30",
-     "path": "Continued quarterly hikes, next move likely December",
-     "note": "Outlook Report to judge underlying inflation has reached 2% for the first time",
-     "as_of": "2026-10-29",
-     "msg_id": "1a185ee448cd3462"
+     "institution": "Citi",
+     "person": "Sosuke Nakamura",
+     "call": "hike",
+     "size_bp": null,
+     "meeting": "2026-12",
+     "path": "further hikes at a quarterly pace through mid-2027, terminal rate 2%",
+     "note": "underlying inflation has reached a level consistent with 2% target, BoJ says 'phase has changed'",
+     "as_of": "2026-10-30",
+     "msg_id": "1a18baf8217e6bb4"
     }
    ],
-   "market_quotes": [
-    {
-     "institution": "BOFA",
-     "quote": "Rates: Limited scope for further front-end repricing as additional BoJ hikes are largely priced in",
-     "meeting": null,
-     "p_hike": null,
-     "p_cut": null,
-     "as_of": "2026-10-29",
-     "msg_id": "1a185ee448cd3462"
-    }
-   ],
+   "market_quotes": [],
    "statement": {
     "announced": "2026-09-18",
     "title": "Change in the Guideline for Money Market Operations",
@@ -790,7 +833,7 @@
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -826,7 +869,7 @@
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -862,7 +905,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-10-29T22:30:05+00:00",
+    "fetched_at": "2026-10-30T10:40:05+00:00",
     "stale": false,
     "error": null
    }
