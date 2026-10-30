@@ -354,5 +354,19 @@ class StaleRule(unittest.TestCase):
             self.assertEqual(build.check_stale(c, TODAY, banks=[]), 0)
 
 
+class FeedErrorDates(unittest.TestCase):
+    def test_a_feed_that_stays_down_keeps_its_first_date(self):
+        got = build.dated_feed_errors([{"code": "AU", "error": "403"}],
+                                      [{"code": "AU", "error": "403", "since": "2026-10-30T09:56:57+00:00"}],
+                                      "2026-10-30T12:00:00+00:00")
+        self.assertEqual(got[0]["since"], "2026-10-30T09:56:57+00:00")
+
+    def test_a_new_failure_or_one_after_a_gap_starts_now(self):
+        now = "2026-10-30T12:00:00+00:00"
+        self.assertEqual(build.dated_feed_errors([{"code": "NZ", "error": "x"}], [], now)[0]["since"], now)
+        self.assertEqual(build.dated_feed_errors([{"code": "NZ", "error": "x"}],
+                                                 [{"code": "AU", "since": "2026-10-01T00:00:00+00:00"}], now)[0]["since"], now)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

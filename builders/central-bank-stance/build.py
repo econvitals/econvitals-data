@@ -506,6 +506,15 @@ AUTO_LEAN = {
 
 
 # ----------------------------------------------------------------------------- main
+def dated_feed_errors(errors: list[dict], prior: list[dict], now: str) -> list[dict]:
+    """Each feed error with the build it first appeared in (`since`), carried from the last
+    build while the feed stays down. A bank that refuses one build is usually back by the next
+    (the RBA, 2026-10-30, after twenty clean builds), so the 6:10 mail reports only a feed that
+    has stayed down (ops_health.check_stance_builder_flags)."""
+    first = {e.get("code"): e.get("since") for e in prior if isinstance(e, dict)}
+    return [{**e, "since": first.get(e.get("code")) or now} for e in errors]
+
+
 def main() -> None:
     cfg = yaml.safe_load(CONFIG.read_text())
     lookback = int(cfg.get("lookback_months", 6))
@@ -513,9 +522,12 @@ def main() -> None:
 
     # prior snapshot, used to keep a row alive if a single fetch fails this run
     prior = {}
+    prior_feed_errors = []
     if OUT.exists():
         try:
-            prior = {b["code"]: b for b in json.loads(OUT.read_text()).get("banks", [])}
+            prior_doc = json.loads(OUT.read_text())
+            prior = {b["code"]: b for b in prior_doc.get("banks", [])}
+            prior_feed_errors = (prior_doc.get("meta") or {}).get("feed_errors") or []
         except Exception:  # noqa: BLE001
             prior = {}
 
@@ -650,9 +662,10 @@ def main() -> None:
     for b in banks_out:
         tally[b["phase"]] = tally.get(b["phase"], 0) + 1
 
+    generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     payload = {
         "meta": {
-            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "generated_at": generated_at,
             "title": "Global Central Bank Stance Matrix",
             "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
             "fast_sources": [lbl for lbl, _ in fast_sources.FAST.values()],
@@ -661,7 +674,7 @@ def main() -> None:
             "desk_views_expired": expired_desk_views(banks_out),
             "overrides_expired": expired_overrides(banks_out),
             "review_pending": review_pending(banks_out),
-            "feed_errors": feed_errors,
+            "feed_errors": dated_feed_errors(feed_errors, prior_feed_errors, generated_at),
             "feed_sources": {c: f.get("label") for c, f in feeds_mod.FEEDS.items()},
             "meetings_fetched": next((m.get("fetched") for m in meetings.values()), None),
             "calendar_running_out": calendar_running_out(meetings, date.fromisoformat(today)),
