@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-30T11:10:14+00:00",
+    "generated_at": "2026-10-30T17:59:42+00:00",
     "title": "Global Central Bank Stance Matrix",
     "source": "BIS — Central bank policy rates (WS_CBPOL), daily, end of period",
     "fast_sources": [
@@ -48,8 +48,8 @@
     "as_of_min": "2026-10-19",
     "total": 12,
     "cutting": 0,
-    "hold": 5,
-    "hiking": 7,
+    "hold": 4,
+    "hiking": 8,
     "paused": 3
   },
   "banks": [
@@ -61,7 +61,7 @@
       "instrument": "Federal Funds Rate (target range)",
       "rate": 3.875,
       "rate_display": "3.75–4.00%",
-      "as_of": "2026-10-29",
+      "as_of": "2026-10-30",
       "as_of_source": "FRED (Board of Governors) — federal funds target range",
       "fast": true,
       "manual": false,
@@ -90,7 +90,7 @@
         "label": "Federal Reserve monetary policy press releases (RSS)",
         "note": null,
         "items_seen": 15,
-        "fetched_at": "2026-10-30T11:09:06+00:00",
+        "fetched_at": "2026-10-30T17:58:56+00:00",
         "error": null
       },
       "next_meeting": {
@@ -107,35 +107,35 @@
         "sources": [
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:08:56.521Z",
+            "asof": "2026-10-30T17:58:48.535Z",
             "decision_date": "2026-12-09",
-            "p_cut": 0.0194,
-            "p_hold": 0.2524,
-            "p_hike": 0.7281,
+            "p_cut": 0.019,
+            "p_hold": 0.2571,
+            "p_hike": 0.7238,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
-                "prob": 0.0097,
+                "prob": 0.0095,
                 "moves": -2
               },
               {
                 "label": "Cut 25 bp",
-                "prob": 0.0097,
+                "prob": 0.0095,
                 "moves": -1
               },
               {
                 "label": "Hold",
-                "prob": 0.2524,
+                "prob": 0.2571,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.7087,
+                "prob": 0.6952,
                 "moves": 1
               },
               {
                 "label": "Hike >25 bp",
-                "prob": 0.0194,
+                "prob": 0.0286,
                 "moves": 2
               }
             ],
@@ -146,7 +146,7 @@
           },
           {
             "source": "CME futures (chartbook)",
-            "asof": "2026-10-30T11:08:56Z",
+            "asof": "2026-10-30T17:58:48Z",
             "decision_date": null,
             "p_cut": null,
             "p_hold": null,
@@ -174,11 +174,11 @@
           },
           {
             "source": "Polymarket",
-            "asof": "2026-10-30T11:08:57Z",
+            "asof": "2026-10-30T17:58:49Z",
             "decision_date": "2026-12-09",
-            "p_cut": 0.0095,
+            "p_cut": 0.01,
             "p_hold": 0.245,
-            "p_hike": 0.7435,
+            "p_hike": 0.7395,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -187,7 +187,7 @@
               },
               {
                 "label": "Cut 25 bp",
-                "prob": 0.006,
+                "prob": 0.0065,
                 "moves": -1
               },
               {
@@ -202,7 +202,7 @@
               },
               {
                 "label": "Hike >25 bp",
-                "prob": 0.0185,
+                "prob": 0.0145,
                 "moves": 2
               }
             ],
@@ -210,9 +210,9 @@
             "thin": false,
             "url": "https://polymarket.com/event/fed-decision-in-december-20260729232808632",
             "event_title": "Fed Decision in December?",
-            "liquidity_usd": 1645264,
-            "volume_usd": 9145127,
-            "prob_sum": 0.998
+            "liquidity_usd": 1592250,
+            "volume_usd": 9540855,
+            "prob_sum": 0.9945
           }
         ],
         "errors": {},
@@ -269,7 +269,7 @@
           "value": 3.875
         },
         {
-          "date": "2026-10-29",
+          "date": "2026-10-30",
           "value": 3.875
         }
       ]
@@ -311,7 +311,7 @@
         "label": "European Central Bank press releases (RSS) + Governing Council decisions listing",
         "note": null,
         "items_seen": 15,
-        "fetched_at": "2026-10-30T11:09:07+00:00",
+        "fetched_at": "2026-10-30T17:58:57+00:00",
         "error": null
       },
       "next_meeting": {
@@ -328,11 +328,11 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-30T11:08:57Z",
+            "asof": "2026-10-30T17:58:49Z",
             "decision_date": "2026-12-17",
             "p_cut": 0.013,
-            "p_hold": 0.145,
-            "p_hike": 0.822,
+            "p_hold": 0.15,
+            "p_hike": 0.817,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -346,12 +346,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.145,
+                "prob": 0.15,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.815,
+                "prob": 0.81,
                 "moves": 1
               },
               {
@@ -364,17 +364,17 @@
             "thin": false,
             "url": "https://polymarket.com/event/ecb-interest-rates-december-2026",
             "event_title": "ECB Interest Rates: December 2026",
-            "liquidity_usd": 10843,
-            "volume_usd": 49777,
+            "liquidity_usd": 13438,
+            "volume_usd": 49874,
             "prob_sum": 0.98
           },
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:08:58Z",
+            "asof": "2026-10-30T17:58:49Z",
             "decision_date": "2026-12-17",
             "p_cut": 0.02,
-            "p_hold": 0.145,
-            "p_hike": 0.835,
+            "p_hold": 0.155,
+            "p_hike": 0.825,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -388,12 +388,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.145,
+                "prob": 0.155,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.82,
+                "prob": 0.81,
                 "moves": 1
               },
               {
@@ -407,7 +407,7 @@
             "url": "https://kalshi.com/markets/kxcbdecisioneu",
             "ticker": "KXCBDECISIONEU-26DEC17",
             "event_title": "European Central Bank rate decision in December",
-            "volume_contracts": 7772,
+            "volume_contracts": 7902,
             "prob_sum": 1.0
           }
         ],
@@ -527,7 +527,7 @@
         "label": "Bank of Japan What's New (RSS) + Monetary Policy Releases listing",
         "note": null,
         "items_seen": 51,
-        "fetched_at": "2026-10-30T11:09:12+00:00",
+        "fetched_at": "2026-10-30T17:59:00+00:00",
         "error": null
       },
       "next_meeting": {
@@ -544,11 +544,11 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-18",
-            "p_cut": 0.036,
-            "p_hold": 0.175,
-            "p_hike": 0.7925,
+            "p_cut": 0.0365,
+            "p_hold": 0.145,
+            "p_hike": 0.793,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -557,12 +557,12 @@
               },
               {
                 "label": "Cut 25 bp",
-                "prob": 0.018,
+                "prob": 0.0185,
                 "moves": -1
               },
               {
                 "label": "Hold",
-                "prob": 0.175,
+                "prob": 0.145,
                 "moves": 0
               },
               {
@@ -572,24 +572,24 @@
               },
               {
                 "label": "Hike >25 bp",
-                "prob": 0.0175,
+                "prob": 0.018,
                 "moves": 2
               }
             ],
             "implied_path": [],
-            "thin": false,
+            "thin": true,
             "url": "https://polymarket.com/event/bank-of-japan-decision-in-december-20260918",
             "event_title": "Bank of Japan Decision in December?",
-            "liquidity_usd": 10863,
-            "volume_usd": 30245,
-            "prob_sum": 1.0035
+            "liquidity_usd": 8921,
+            "volume_usd": 30376,
+            "prob_sum": 0.9745
           },
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-18",
             "p_cut": 0.02,
-            "p_hold": 0.17,
+            "p_hold": 0.155,
             "p_hike": 0.755,
             "outcomes": [
               {
@@ -604,7 +604,7 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.17,
+                "prob": 0.155,
                 "moves": 0
               },
               {
@@ -623,9 +623,9 @@
             "url": "https://kalshi.com/markets/kxcbdecisionjapan",
             "ticker": "KXCBDECISIONJAPAN-26DEC17",
             "event_title": "Bank of Japan rate decision in December",
-            "volume_contracts": 7467,
-            "prob_sum": 0.945,
-            "note": "bracket prices sum to 0.945, not 1"
+            "volume_contracts": 7521,
+            "prob_sum": 0.93,
+            "note": "bracket prices sum to 0.930, not 1"
           }
         ],
         "errors": {},
@@ -704,7 +704,7 @@
         "label": "Bank of England news (RSS)",
         "note": null,
         "items_seen": 50,
-        "fetched_at": "2026-10-30T11:09:08+00:00",
+        "fetched_at": "2026-10-30T17:58:57+00:00",
         "error": null
       },
       "next_meeting": {
@@ -721,10 +721,10 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-30T11:08:58Z",
+            "asof": "2026-10-30T17:58:49Z",
             "decision_date": "2026-11-05",
             "p_cut": 0.001,
-            "p_hold": 0.018,
+            "p_hold": 0.021,
             "p_hike": 0.981,
             "outcomes": [
               {
@@ -739,7 +739,7 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.018,
+                "prob": 0.021,
                 "moves": 0
               },
               {
@@ -757,13 +757,13 @@
             "thin": false,
             "url": "https://polymarket.com/event/bank-of-england-decision-in-november-20260730150602252",
             "event_title": "Bank of England decision in November?",
-            "liquidity_usd": 67515,
-            "volume_usd": 442004,
-            "prob_sum": 1.0
+            "liquidity_usd": 44053,
+            "volume_usd": 442017,
+            "prob_sum": 1.003
           },
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:08:58Z",
+            "asof": "2026-10-30T17:58:49Z",
             "decision_date": "2026-11-05",
             "p_cut": 0.01,
             "p_hold": 0.01,
@@ -805,7 +805,7 @@
           },
           {
             "source": "Bank of England OIS curve",
-            "asof": "2026-10-28",
+            "asof": "2026-10-29",
             "decision_date": null,
             "p_cut": null,
             "p_hold": null,
@@ -815,27 +815,27 @@
               {
                 "date": "2027-01",
                 "months": 3,
-                "rate": 4.18
+                "rate": 4.161
               },
               {
                 "date": "2027-04",
                 "months": 6,
-                "rate": 4.545
+                "rate": 4.508
               },
               {
                 "date": "2027-10",
                 "months": 12,
-                "rate": 4.949
+                "rate": 4.896
               },
               {
                 "date": "2028-10",
                 "months": 24,
-                "rate": 4.905
+                "rate": 4.842
               }
             ],
             "thin": false,
             "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/latest-yield-curve-data.zip",
-            "curve_date": "2026-10-28",
+            "curve_date": "2026-10-29",
             "note": "instantaneous OIS forward rate (sheet '1. fwds, short end'); the curve date is the latest in the Bank's current-month file"
           }
         ],
@@ -904,25 +904,25 @@
       "country": "Canada",
       "flag": "🇨🇦",
       "instrument": "Overnight Rate",
-      "rate": 2.25,
-      "rate_display": "2.25%",
-      "as_of": "2026-10-28",
+      "rate": 2.5,
+      "rate_display": "2.50%",
+      "as_of": "2026-10-29",
       "as_of_source": "Bank of Canada — target for the overnight rate",
       "fast": true,
       "manual": false,
       "last_move": {
-        "date": "2025-10-30",
-        "delta_bps": -25,
-        "direction": "down",
-        "display": "▼ 25 bp · Oct 2025"
+        "date": "2026-10-29",
+        "delta_bps": 25,
+        "direction": "up",
+        "display": "▲ 25 bp · Oct 2026"
       },
-      "phase": "On Hold",
+      "phase": "Hiking",
       "phase_source": "auto",
       "override_expired": null,
-      "ytd_bps": 0,
-      "ytd_display": "0 bp",
+      "ytd_bps": 25,
+      "ytd_display": "+25 bp",
       "next_move": {
-        "text": "On hold (rule)",
+        "text": "In a hiking cycle (rule)",
         "kind": "auto",
         "edited": ""
       },
@@ -935,7 +935,7 @@
         "label": "Bank of Canada press releases (RSS)",
         "note": null,
         "items_seen": 10,
-        "fetched_at": "2026-10-30T11:09:08+00:00",
+        "fetched_at": "2026-10-30T17:58:58+00:00",
         "error": null
       },
       "next_meeting": {
@@ -952,35 +952,35 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-09",
-            "p_cut": 0.0035,
-            "p_hold": 0.69,
-            "p_hike": 0.3025,
+            "p_cut": 0.0025,
+            "p_hold": 0.51,
+            "p_hike": 0.446,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
-                "prob": 0.0015,
+                "prob": 0.001,
                 "moves": -2
               },
               {
                 "label": "Cut 25 bp",
-                "prob": 0.002,
+                "prob": 0.0015,
                 "moves": -1
               },
               {
                 "label": "Hold",
-                "prob": 0.69,
+                "prob": 0.51,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.3,
+                "prob": 0.445,
                 "moves": 1
               },
               {
                 "label": "Hike >25 bp",
-                "prob": 0.0025,
+                "prob": 0.001,
                 "moves": 2
               }
             ],
@@ -988,17 +988,17 @@
             "thin": false,
             "url": "https://polymarket.com/event/bank-of-canada-decision-in-december-20260908230600011",
             "event_title": "Bank of Canada Decision in December?",
-            "liquidity_usd": 64076,
-            "volume_usd": 92848,
-            "prob_sum": 0.996
+            "liquidity_usd": 63565,
+            "volume_usd": 153271,
+            "prob_sum": 0.9585
           },
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-09",
             "p_cut": 0.01,
-            "p_hold": 0.695,
-            "p_hike": 0.32,
+            "p_hold": 0.505,
+            "p_hike": 0.48,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -1012,12 +1012,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.695,
+                "prob": 0.505,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.315,
+                "prob": 0.475,
                 "moves": 1
               },
               {
@@ -1031,8 +1031,8 @@
             "url": "https://kalshi.com/markets/kxcbdecisioncanada",
             "ticker": "KXCBDECISIONCANADA-26DEC",
             "event_title": "Bank of Canada decision in Dec 2026?",
-            "volume_contracts": 57275,
-            "prob_sum": 1.025
+            "volume_contracts": 59729,
+            "prob_sum": 0.995
           }
         ],
         "errors": {},
@@ -1093,8 +1093,8 @@
           "value": 2.25
         },
         {
-          "date": "2026-10-28",
-          "value": 2.25
+          "date": "2026-10-29",
+          "value": 2.5
         }
       ]
     },
@@ -1135,7 +1135,7 @@
         "label": "Reserve Bank of Australia media releases (RSS) + media-releases listing",
         "note": "the feed's 1 items held no decision; read the bank's listing page instead",
         "items_seen": 11,
-        "fetched_at": "2026-10-30T11:09:09+00:00",
+        "fetched_at": "2026-10-30T17:58:59+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1177,15 +1177,15 @@
           },
           {
             "source": "Polymarket",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-11-03",
-            "p_cut": 0.0025,
-            "p_hold": 0.111,
-            "p_hike": 0.8815,
+            "p_cut": 0.002,
+            "p_hold": 0.0965,
+            "p_hike": 0.902,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
-                "prob": 0.001,
+                "prob": 0.0005,
                 "moves": -2
               },
               {
@@ -1195,12 +1195,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.111,
+                "prob": 0.0965,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.879,
+                "prob": 0.8995,
                 "moves": 1
               },
               {
@@ -1213,17 +1213,17 @@
             "thin": false,
             "url": "https://polymarket.com/event/reserve-bank-of-australia-decision-in-november",
             "event_title": "Reserve Bank of Australia Decision in November",
-            "liquidity_usd": 52842,
-            "volume_usd": 261169,
-            "prob_sum": 0.995
+            "liquidity_usd": 43136,
+            "volume_usd": 261855,
+            "prob_sum": 1.0005
           },
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-11-03",
             "p_cut": 0.01,
-            "p_hold": 0.115,
-            "p_hike": 0.88,
+            "p_hold": 0.09,
+            "p_hike": 0.915,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -1237,12 +1237,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.115,
+                "prob": 0.09,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.875,
+                "prob": 0.91,
                 "moves": 1
               },
               {
@@ -1256,8 +1256,8 @@
             "url": "https://kalshi.com/markets/kxcbdecisionaustralia",
             "ticker": "KXCBDECISIONAUSTRALIA-26NOV02",
             "event_title": "Reserve Bank of Australia rate decision in November",
-            "volume_contracts": 74669,
-            "prob_sum": 1.005
+            "volume_contracts": 77565,
+            "prob_sum": 1.015
           }
         ],
         "errors": {},
@@ -1360,7 +1360,7 @@
         "label": "Swiss National Bank monetary policy releases (RSS)",
         "note": null,
         "items_seen": 15,
-        "fetched_at": "2026-10-30T11:09:19+00:00",
+        "fetched_at": "2026-10-30T17:59:04+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1377,11 +1377,11 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-10",
             "p_cut": 0.007,
-            "p_hold": 0.867,
-            "p_hike": 0.1225,
+            "p_hold": 0.8665,
+            "p_hike": 0.1155,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -1395,12 +1395,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.867,
+                "prob": 0.8665,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.1215,
+                "prob": 0.1145,
                 "moves": 1
               },
               {
@@ -1413,17 +1413,17 @@
             "thin": false,
             "url": "https://polymarket.com/event/swiss-national-bank-decision-in-december-2026",
             "event_title": "Swiss National Bank decision in December?",
-            "liquidity_usd": 17802,
-            "volume_usd": 70693,
-            "prob_sum": 0.9965
+            "liquidity_usd": 15453,
+            "volume_usd": 70713,
+            "prob_sum": 0.989
           },
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-10",
             "p_cut": 0.015,
             "p_hold": 0.87,
-            "p_hike": 0.155,
+            "p_hike": 0.15,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -1442,7 +1442,7 @@
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.125,
+                "prob": 0.12,
                 "moves": 1
               },
               {
@@ -1457,7 +1457,7 @@
             "ticker": "KXCBDSWISS-26DEC10",
             "event_title": "Swiss National Bank rate decision in December",
             "volume_contracts": 31583,
-            "prob_sum": 1.04
+            "prob_sum": 1.035
           }
         ],
         "errors": {},
@@ -1544,7 +1544,7 @@
         "label": "Sveriges Riksbank press releases (RSS)",
         "note": null,
         "items_seen": 10,
-        "fetched_at": "2026-10-30T11:09:11+00:00",
+        "fetched_at": "2026-10-30T17:59:00+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1561,11 +1561,11 @@
         "sources": [
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-11-04",
             "p_cut": 0.01,
-            "p_hold": 0.12,
-            "p_hike": 0.875,
+            "p_hold": 0.115,
+            "p_hike": 0.88,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -1579,12 +1579,12 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.12,
+                "prob": 0.115,
                 "moves": 0
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.855,
+                "prob": 0.86,
                 "moves": 1
               },
               {
@@ -1598,7 +1598,7 @@
             "url": "https://kalshi.com/markets/kxcbdsweden",
             "ticker": "KXCBDSWEDEN-26NOV04",
             "event_title": "Sweden rate decision in November",
-            "volume_contracts": 35181,
+            "volume_contracts": 35188,
             "prob_sum": 1.005
           }
         ],
@@ -1702,7 +1702,7 @@
         "label": "Norges Bank press releases (RSS)",
         "note": null,
         "items_seen": 5,
-        "fetched_at": "2026-10-30T11:09:19+00:00",
+        "fetched_at": "2026-10-30T17:59:05+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1719,7 +1719,7 @@
         "sources": [
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:09:00Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-11-05",
             "p_cut": 0.01,
             "p_hold": 0.97,
@@ -1852,7 +1852,7 @@
         "label": "Reserve Bank of New Zealand news (RSS)",
         "note": "statement page not read (HTTPError: HTTP Error 403: Forbidden); excerpt is the feed's summary",
         "items_seen": 50,
-        "fetched_at": "2026-10-30T11:09:11+00:00",
+        "fetched_at": "2026-10-30T17:59:00+00:00",
         "error": null
       },
       "next_meeting": {
@@ -1869,11 +1869,11 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-30T11:09:00Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-09",
             "p_cut": 0.014,
             "p_hold": 0.245,
-            "p_hike": 0.7415,
+            "p_hike": 0.7365,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -1892,7 +1892,7 @@
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.7,
+                "prob": 0.695,
                 "moves": 1
               },
               {
@@ -1905,13 +1905,13 @@
             "thin": false,
             "url": "https://polymarket.com/event/reserve-bank-of-new-zealand-decision-in-december-20260908230600001",
             "event_title": "Reserve Bank of New Zealand decision in December?",
-            "liquidity_usd": 13220,
+            "liquidity_usd": 14919,
             "volume_usd": 50971,
-            "prob_sum": 1.0005
+            "prob_sum": 0.9955
           },
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:09:00Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-09",
             "p_cut": 0.03,
             "p_hold": 0.245,
@@ -2060,7 +2060,7 @@
         "label": "People's Bank of China — Loan Prime Rate announcements (listing page, no feed)",
         "note": null,
         "items_seen": 10,
-        "fetched_at": "2026-10-30T11:09:22+00:00",
+        "fetched_at": "2026-10-30T17:59:08+00:00",
         "error": null
       },
       "next_meeting": {
@@ -2147,7 +2147,7 @@
         "label": "Reserve Bank of India press releases (RSS) + Monetary Policy Statements listing",
         "note": "the feed's 10 items held no decision; read the bank's listing page instead",
         "items_seen": 14,
-        "fetched_at": "2026-10-30T11:09:17+00:00",
+        "fetched_at": "2026-10-30T17:59:03+00:00",
         "error": null
       },
       "next_meeting": {
@@ -2164,11 +2164,11 @@
         "sources": [
           {
             "source": "Polymarket",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-04",
-            "p_cut": 0.009,
+            "p_cut": 0.01,
             "p_hold": 0.205,
-            "p_hike": 0.8,
+            "p_hike": 0.785,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -2177,7 +2177,7 @@
               },
               {
                 "label": "Cut 25 bp",
-                "prob": 0.0065,
+                "prob": 0.0075,
                 "moves": -1
               },
               {
@@ -2187,12 +2187,12 @@
               },
               {
                 "label": "Hike 25 bp",
-                "prob": 0.645,
+                "prob": 0.65,
                 "moves": 1
               },
               {
                 "label": "Hike >25 bp",
-                "prob": 0.155,
+                "prob": 0.135,
                 "moves": 2
               }
             ],
@@ -2200,17 +2200,17 @@
             "thin": true,
             "url": "https://polymarket.com/event/reserve-bank-of-india-decision-in-december-2026",
             "event_title": "Reserve Bank of India decision in December",
-            "liquidity_usd": 24455,
-            "volume_usd": 22646,
-            "prob_sum": 1.014
+            "liquidity_usd": 12880,
+            "volume_usd": 22676,
+            "prob_sum": 1.0
           },
           {
             "source": "Kalshi",
-            "asof": "2026-10-30T11:08:59Z",
+            "asof": "2026-10-30T17:58:50Z",
             "decision_date": "2026-12-04",
             "p_cut": 0.02,
-            "p_hold": 0.205,
-            "p_hike": 0.79,
+            "p_hold": 0.21,
+            "p_hike": 0.78,
             "outcomes": [
               {
                 "label": "Cut >25 bp",
@@ -2224,7 +2224,7 @@
               },
               {
                 "label": "Hold",
-                "prob": 0.205,
+                "prob": 0.21,
                 "moves": 0
               },
               {
@@ -2234,7 +2234,7 @@
               },
               {
                 "label": "Hike >25 bp",
-                "prob": 0.105,
+                "prob": 0.095,
                 "moves": 2
               }
             ],
@@ -2243,8 +2243,8 @@
             "url": "https://kalshi.com/markets/kxcbdecisionindia",
             "ticker": "KXCBDECISIONINDIA-26DEC04",
             "event_title": "Reserve Bank of India rate decision in December",
-            "volume_contracts": 18112,
-            "prob_sum": 1.015
+            "volume_contracts": 18127,
+            "prob_sum": 1.01
           }
         ],
         "errors": {},
@@ -2294,7 +2294,7 @@
       "n_banks": 38,
       "n_series": 41,
       "window_months": 3,
-      "generated_at": "2026-10-30T11:09:00+00:00",
+      "generated_at": "2026-10-30T17:58:50+00:00",
       "fetch_mode": "wildcard",
       "dropped": [],
       "not_counted_latest": [
