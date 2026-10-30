@@ -910,7 +910,7 @@
       "title": "Core PCE vs. Trimmed Mean PCE",
       "type": "gap",
       "units": "12-month percent change",
-      "latest_date": "2026-08-01"
+      "latest_date": "2026-09-01"
     },
     {
       "slug": "core-services-cpi",
@@ -2465,6 +2465,14 @@
       "latest_date": "2026-07-01"
     },
     {
+      "slug": "gdp-contrib-net-exports-tracker",
+      "category": "GDP/Temp",
+      "title": "Contribution of Net Exports to Real GDP Growth",
+      "type": "bar",
+      "units": "Percentage points, annual rate",
+      "latest_date": "2026-10-01"
+    },
+    {
       "slug": "gdp-contrib-pce-cs",
       "category": "GDP",
       "title": "Contribution of Consumption to Real GDP Growth",
@@ -2519,6 +2527,14 @@
       "type": "contrib_stack",
       "units": "Percentage points, annual rate",
       "latest_date": "2026-07-01"
+    },
+    {
+      "slug": "gdp-contributions-summary-tracker",
+      "category": "GDP/Temp",
+      "title": "Contributions to Real GDP Growth",
+      "type": "contrib_stack",
+      "units": "Percentage points, annual rate",
+      "latest_date": "2026-10-01"
     },
     {
       "slug": "gdp-gdi",
@@ -4441,6 +4457,14 @@
       "latest_date": "2026-07-01"
     },
     {
+      "slug": "real-final-sales-pdp-tracker",
+      "category": "GDP/Temp",
+      "title": "Real Final Sales to Private Domestic Purchasers",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-10-01"
+    },
+    {
       "slug": "real-fixed-investment",
       "category": "GDP",
       "title": "Real Fixed Investment",
@@ -4497,6 +4521,14 @@
       "latest_date": "2026-07-01"
     },
     {
+      "slug": "real-gdp-tracker",
+      "category": "GDP/Temp",
+      "title": "Real GDP Growth",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-10-01"
+    },
+    {
       "slug": "real-gdp-vs-potential",
       "category": "GDP",
       "title": "Real GDP and CBO Potential GDP",
@@ -4527,6 +4559,14 @@
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-07-01"
+    },
+    {
+      "slug": "real-government-tracker",
+      "category": "GDP/Temp",
+      "title": "Real Government Consumption and Investment",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-10-01"
     },
     {
       "slug": "real-gross-domestic-purchases",
@@ -4633,6 +4673,14 @@
       "latest_date": "2026-07-01"
     },
     {
+      "slug": "real-nonres-fixed-investment-tracker",
+      "category": "GDP/Temp",
+      "title": "Real Nonresidential Fixed Investment",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-10-01"
+    },
+    {
       "slug": "real-nonres-structures",
       "category": "GDP",
       "title": "Real Nonresidential Structures",
@@ -4705,6 +4753,14 @@
       "latest_date": "2026-07-01"
     },
     {
+      "slug": "real-pce-tracker",
+      "category": "GDP/Temp",
+      "title": "Real Personal Consumption Expenditures",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-10-01"
+    },
+    {
       "slug": "real-policy-rate-sd",
       "category": "Static",
       "title": "Standard Deviation of Real Policy Rates Across 12 Central Banks",
@@ -4719,6 +4775,14 @@
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-07-01"
+    },
+    {
+      "slug": "real-residential-investment-tracker",
+      "category": "GDP/Temp",
+      "title": "Real Residential Fixed Investment",
+      "type": "bar_line",
+      "units": "Percent change, annual rate",
+      "latest_date": "2026-10-01"
     },
     {
       "slug": "real-state-local",
@@ -5166,7 +5230,7 @@
       "title": "10-Year Treasury Yield Decomposition",
       "type": "stack",
       "units": "Percent",
-      "latest_date": "2026-10-28"
+      "latest_date": "2026-10-29"
     },
     {
       "slug": "ten-year-decomposition-monthly",
