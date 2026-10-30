@@ -155,10 +155,9 @@
           "id": "mortgage30",
           "name": "30-yr fixed mortgage",
           "unit": "%",
-          "val": "7.32",
+          "val": "7.24",
           "tone": "warm",
           "spark": [
-            6.58,
             6.66,
             6.69,
             6.67,
@@ -171,11 +170,12 @@
             7.28,
             7.4,
             7.4,
-            7.32
+            7.32,
+            7.24
           ],
           "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
           "_source": "fred",
-          "_date": "2026-10-22"
+          "_date": "2026-10-29"
         },
         {
           "id": "nar_affordability",
@@ -191,10 +191,9 @@
           "id": "implied_pi",
           "name": "Implied P&I, median home",
           "unit": "/mo",
-          "val": "$2,294",
+          "val": "$2,276",
           "tone": "hot",
           "spark": [
-            2129,
             2146,
             2153,
             2149,
@@ -207,11 +206,12 @@
             2285,
             2313,
             2313,
-            2294
+            2294,
+            2276
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
           "_source": "fred",
-          "_date": "2026-10-22"
+          "_date": "2026-10-29"
         }
       ]
     },
@@ -385,9 +385,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Oct 29 2026 · live via FRED · calibration editorial",
-  "data_through": "Oct 22 2026",
-  "generated_at": "2026-10-29T01:27:36+00:00",
+  "asof": "Updated Oct 30 2026 · live via FRED · calibration editorial",
+  "data_through": "Oct 29 2026",
+  "generated_at": "2026-10-30T01:28:51+00:00",
   "sources": {
     "fred": 24,
     "config": 0,
