@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-10-31T10:36:55+00:00",
+    "generated_at": "2026-10-31T16:17:43+00:00",
     "run_date": "2026-10-31",
-    "builder_commit": "355424097",
+    "builder_commit": "95827fb42",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-10-31T06:38:05-04:00"
+      "as_of": "2026-10-31T12:18:58-04:00"
     }
   },
   "sections": {
@@ -10711,11 +10711,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.65,
-                "as_of": "2026-10-30",
+                "value": 6.64,
+                "as_of": "2026-10-31",
                 "chg_1d": -0.1,
-                "chg_1w": -0.2,
-                "chg_ytd": -4.8,
+                "chg_1w": -0.4,
+                "chg_ytd": -5.0,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -12042,7 +12042,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-10-30",
         "anchor_midpoint": 3.875,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-10-30)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-10-31)",
         "current_range_bp": [
           375,
           400
