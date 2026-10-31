@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-10-30T22:12:06+00:00",
+    "generated_at": "2026-10-31T02:28:43+00:00",
     "run_date": "2026-10-30",
-    "builder_commit": "b4e2b773f",
+    "builder_commit": "f622458a6",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-10-30T18:13:05-04:00"
+      "as_of": "2026-10-30T22:30:00-04:00"
     }
   },
   "sections": {
@@ -6751,6 +6751,12 @@
               "breakeven": 2.38,
               "real": 2.67,
               "nominal": 5.05
+            },
+            {
+              "date": "2026-10-29",
+              "breakeven": 2.35,
+              "real": 2.63,
+              "nominal": 4.98
             }
           ],
           "series": [
@@ -10479,6 +10485,11 @@
               "date": "2026-10-28",
               "ig": 0.86,
               "hy": 3.14
+            },
+            {
+              "date": "2026-10-29",
+              "ig": 0.89,
+              "hy": 3.26
             }
           ],
           "series": [
@@ -10681,7 +10692,7 @@
                 "value": 0.8249,
                 "as_of": "2026-10-30",
                 "chg_1d": 0.1,
-                "chg_1w": 0.2,
+                "chg_1w": 0.1,
                 "chg_ytd": 4.0,
                 "is_yield": false,
                 "provenance": "hard",
@@ -10689,7 +10700,7 @@
               },
               {
                 "label": "USD/CAD",
-                "value": 1.397,
+                "value": 1.3973,
                 "as_of": "2026-10-30",
                 "chg_1d": -0.1,
                 "chg_1w": -0.2,
@@ -12029,7 +12040,7 @@
         "available": true,
         "source": "CME FedWatch End-of-Day API",
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
-        "reporting_date": "2026-10-29",
+        "reporting_date": "2026-10-30",
         "anchor_midpoint": 3.875,
         "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-10-30)",
         "current_range_bp": [
@@ -12042,12 +12053,12 @@
           {
             "outcome": "1 hike",
             "moves": 1,
-            "prob": 0.7444
+            "prob": 0.7215
           },
           {
             "outcome": "Hold",
             "moves": 0,
-            "prob": 0.2556
+            "prob": 0.2785
           }
         ],
         "checkpoints": [
@@ -12056,33 +12067,33 @@
             "date": "2026-12-09",
             "implied_rate": 4.125,
             "net_moves": 1.0,
-            "expected_rate": 4.0611,
+            "expected_rate": 4.0554,
             "modal_rate": 4.125,
             "modal_range_bp": [
               400,
               425
             ],
-            "net_moves_expected": 0.74,
+            "net_moves_expected": 0.72,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.7444
+                "prob": 0.7215
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.2556
+                "prob": 0.2785
               }
             ]
           }
         ],
         "year_end_implied": 4.125,
         "moves_priced_year_end": 1.0,
-        "year_end_expected": 4.0611,
+        "year_end_expected": 4.0554,
         "year_end_modal": 4.125,
-        "year_end_sigma": 0.109,
-        "moves_priced_year_end_expected": 0.74,
+        "year_end_sigma": 0.1121,
+        "moves_priced_year_end_expected": 0.72,
         "now_curve": [
           {
             "date": "2026-10-30",
@@ -12110,7 +12121,7 @@
           },
           {
             "date": "2026-12-09",
-            "rate": 4.0611
+            "rate": 4.0554
           }
         ],
         "repricing_since_2025": {
@@ -12119,7 +12130,7 @@
           "moves_added": 4.0,
           "year_end_expected": 3.0412,
           "year_end_modal": 3.125,
-          "moves_added_expected": 4.08,
+          "moves_added_expected": 4.06,
           "curve": [
             {
               "date": "2026-10-30",
@@ -12144,37 +12155,37 @@
         "meetings": [
           {
             "date": "2026-12-09",
-            "reporting_date": "2026-10-29",
+            "reporting_date": "2026-10-30",
             "modal_range_bp": [
               400,
               425
             ],
             "modal_rate": 4.125,
-            "expected_rate": 4.0611,
-            "sigma": 0.109,
-            "net_moves_expected": 0.74,
+            "expected_rate": 4.0554,
+            "sigma": 0.1121,
+            "net_moves_expected": 0.72,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.7444
+                "prob": 0.7215
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.2556
+                "prob": 0.2785
               }
             ],
             "ranges": [
               {
                 "lo": 375,
                 "hi": 400,
-                "prob": 0.25556
+                "prob": 0.27852
               },
               {
                 "lo": 400,
                 "hi": 425,
-                "prob": 0.74444
+                "prob": 0.72148
               }
             ]
           }
@@ -12762,8 +12773,8 @@
             },
             {
               "label": "5y breakeven (%)",
-              "c1": 2.47,
-              "c2": 2.37,
+              "c1": 2.46,
+              "c2": 2.38,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
@@ -12772,8 +12783,8 @@
             },
             {
               "label": "5y5y forward (%)",
-              "c1": 2.23,
-              "c2": 2.23,
+              "c1": 2.22,
+              "c2": 2.2,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
@@ -12870,8 +12881,8 @@
           "rows": [
             {
               "label": "30-year mortgage rate (%)",
-              "c1": 7.32,
-              "c2": 6.27,
+              "c1": 7.24,
+              "c2": 6.19,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
@@ -13106,7 +13117,7 @@
             "cpi": 3.1,
             "core": 2.1,
             "ten": 3.88,
-            "pol": 2.25,
+            "pol": 2.5,
             "asof": "Sep 2026"
           },
           {
@@ -13193,7 +13204,7 @@
             "unemp": 5.2,
             "cpi": 4.6,
             "core": 4.4,
-            "ten": 15.28,
+            "ten": 15.39,
             "pol": 13.75,
             "asof": "Sep 2026"
           }
