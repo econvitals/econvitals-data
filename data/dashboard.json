@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-01T11:41:22+00:00",
+    "generated_at": "2026-11-01T17:19:10+00:00",
     "run_date": "2026-11-01",
-    "builder_commit": "95827fb42",
+    "builder_commit": "0d3d1a59a",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-01T06:43:04-05:00"
+      "as_of": "2026-11-01T12:21:04-05:00"
     }
   },
   "sections": {
@@ -151,7 +151,7 @@
             "source": "Econvitals estimate",
             "value": 1.6,
             "quarter": "Q4 2026",
-            "as_of": "2026-10-30",
+            "as_of": "2026-11-01",
             "provenance": "hard"
           },
           {
@@ -164,7 +164,7 @@
         ],
         "composite": {
           "quarter": "Q4 2026",
-          "value": 3.0604,
+          "value": 3.0605,
           "shown": 3.1,
           "band": 1.4,
           "days_to_release": null,
@@ -173,26 +173,26 @@
             {
               "key": "gdpnow",
               "source": "Atlanta Fed GDPNow",
-              "value": 3.2217,
+              "value": 3.2218,
               "raw": 3.2217,
-              "adjustment": 0.0,
+              "adjustment": 0.0001,
               "as_of": "2026-10-29",
               "weight": 0.9
             },
             {
               "key": "house",
               "source": "Econvitals estimate",
-              "value": 1.6085,
-              "raw": 1.6085,
+              "value": 1.6088,
+              "raw": 1.6088,
               "adjustment": 0.0,
-              "as_of": "2026-10-30",
+              "as_of": "2026-11-01",
               "weight": 0.1
             }
           ],
           "street_firms": null,
           "house": {
-            "value": 1.6085,
-            "as_of": "2026-10-30",
+            "value": 1.6088,
+            "as_of": "2026-11-01",
             "stage": "gdp",
             "withheld": false
           },
@@ -211,7 +211,7 @@
             "label": "advance estimate",
             "value": 3.4
           },
-          "as_of": "2026-10-30",
+          "as_of": "2026-11-01",
           "stage_label": null,
           "method": "BEA's advance estimate, moved line by line as the source data BEA had to assume or has since revised (construction spending, retail sales, trade, inventories, state and local jobs, software revenue) come in, scaled by how far such news has moved BEA's second estimates in the past."
         }
@@ -597,15 +597,15 @@
                   "label": "GDP",
                   "indent": 0,
                   "latest_q": 3.1,
-                  "q4q4": 2.784501
+                  "q4q4": 2.784526
                 },
                 {
                   "label": "Consumption",
                   "indent": 0,
                   "latest_q": 2.6,
-                  "q4q4": 2.710318,
+                  "q4q4": 2.710351,
                   "contrib_q": 1.8,
-                  "contrib_y": 1.822253
+                  "contrib_y": 1.822275
                 },
                 {
                   "label": "Investment",
@@ -615,35 +615,35 @@
                   "label": "Business fixed investment",
                   "indent": 1,
                   "latest_q": 8.0,
-                  "q4q4": 9.880246,
+                  "q4q4": 9.87955,
                   "contrib_q": 1.2,
-                  "contrib_y": 1.390193
+                  "contrib_y": 1.390091
                 },
                 {
                   "label": "Equipment",
                   "indent": 2,
                   "latest_q": 11.3,
-                  "q4q4": 15.236859
+                  "q4q4": 15.237237
                 },
                 {
                   "label": "Non-residential structures",
                   "indent": 2,
                   "latest_q": 2.8,
-                  "q4q4": -0.437102
+                  "q4q4": -0.439424
                 },
                 {
                   "label": "Intellectual property products",
                   "indent": 2,
                   "latest_q": 7.0,
-                  "q4q4": 10.002153
+                  "q4q4": 10.001284
                 },
                 {
                   "label": "Residential",
                   "indent": 1,
                   "latest_q": -4.7,
-                  "q4q4": -3.268049,
+                  "q4q4": -3.26816,
                   "contrib_q": -0.2,
-                  "contrib_y": -0.120274
+                  "contrib_y": -0.120277
                 },
                 {
                   "label": "Change in inventories",
@@ -655,15 +655,15 @@
                   "label": "Government",
                   "indent": 0,
                   "latest_q": 1.1,
-                  "q4q4": 2.726891,
+                  "q4q4": 2.727015,
                   "contrib_q": 0.2,
-                  "contrib_y": 0.470455
+                  "contrib_y": 0.47048
                 },
                 {
                   "label": "Net exports",
                   "indent": 0,
                   "contrib_q": -0.5,
-                  "contrib_y": -1.228429
+                  "contrib_y": -1.228359
                 }
               ]
             },
@@ -674,7 +674,7 @@
                   "label": "Real final sales to private domestic purchasers",
                   "indent": 0,
                   "latest_q": 3.2,
-                  "q4q4": 3.637369
+                  "q4q4": 3.637273
                 }
               ]
             }
@@ -10711,11 +10711,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.65,
-                "as_of": "2026-10-31",
-                "chg_1d": 0.0,
-                "chg_1w": -0.2,
-                "chg_ytd": -4.8,
+                "value": 6.64,
+                "as_of": "2026-11-01",
+                "chg_1d": -0.2,
+                "chg_1w": -0.3,
+                "chg_ytd": -5.0,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -12046,7 +12046,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-10-30",
         "anchor_midpoint": 3.875,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-10-31)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-01)",
         "current_range_bp": [
           375,
           400
@@ -13137,8 +13137,8 @@
           },
           {
             "country": "France",
-            "gdp_qq": 0.1,
-            "gdp": 0.5,
+            "gdp_qq": -0.5,
+            "gdp": -0.1,
             "unemp": 8.5,
             "cpi": 3.4,
             "core": 1.8,
@@ -13148,8 +13148,8 @@
           },
           {
             "country": "Germany",
-            "gdp_qq": 1.3,
-            "gdp": 1.0,
+            "gdp_qq": 0.9,
+            "gdp": 1.2,
             "unemp": 4.1,
             "cpi": 3.3,
             "core": 2.5,
@@ -13159,8 +13159,8 @@
           },
           {
             "country": "Italy",
-            "gdp_qq": 0.6,
-            "gdp": 1.0,
+            "gdp_qq": 0.1,
+            "gdp": 0.8,
             "unemp": 6.3,
             "cpi": 4.2,
             "core": 1.9,
