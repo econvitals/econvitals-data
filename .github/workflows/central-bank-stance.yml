@@ -42,7 +42,8 @@ jobs:
         run: |
           git config user.name "cb-stance-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add tools/central-bank-stance/data.json
+          # statements.json too: the desk job on the fleet host summarizes new decisions from it.
+          git add tools/central-bank-stance/data.json tools/central-bank-stance/statements.json
           git diff --cached --quiet && { echo "no changes"; exit 0; }
           git commit -m "cb-stance: refresh policy rates"
           for i in 1 2 3 4 5; do
