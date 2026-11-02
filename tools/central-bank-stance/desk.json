@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-02T11:40:31+00:00",
+  "generated_at": "2026-11-02T14:19:05+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
@@ -197,15 +197,15 @@
     }
    ],
    "statement": {
-    "announced": "2026-09-16",
+    "announced": "2026-10-28",
     "title": "Federal Reserve issues FOMC statement",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
-    "summary": "Fed raised federal funds rate target 25bp to 3.75-4%, citing elevated inflation and solid growth; signals intent to keep tightening policy to speed return to 2% inflation goal.",
-    "quote": "Today's policy action will support a timelier return to the Committee's 2 percent goal.",
-    "vote": "12-0",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "summary": "The Fed held the federal funds rate at 3.75%-4% by a 10-2 vote. It said inflation remains elevated, more information will guide the appropriate stance, and the Committee will deliver price stability. Two members wanted a quarter-point hike.",
+    "quote": "The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal.",
+    "vote": "10-2; Lisa D. Cook and Beth M. Hammack preferred to raise the target range by 1/4 percentage point",
     "tilt": "hawkish",
-    "summarized_at": "2026-10-25T08:23:36+00:00",
-    "model": "claude-sonnet-5"
+    "summarized_at": "2026-11-02T14:19:02+00:00",
+    "model": "claude-sonnet-5-5"
    },
    "core_inflation": {
     "value": 2.57,
@@ -213,7 +213,7 @@
     "measure": "CPI excluding food and energy (BLS, via FRED)",
     "source": "fred:CPILFESL|yoy",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -330,15 +330,15 @@
     }
    ],
    "statement": {
-    "announced": "2026-09-10",
+    "announced": "2026-10-29",
     "title": "Monetary policy decisions",
-    "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
-    "summary": "ECB raised key rates by 25bp to counter Middle East-driven inflation pressures, to 2.50%/2.65%/2.90%. Future decisions will be data-dependent, meeting-by-meeting, with no pre-commitment to a rate path.",
+    "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+    "summary": "The ECB held its three key rates unchanged, with the deposit rate at 2.50%. Rising energy prices threaten higher inflation and weaker growth. Policy stays data-dependent, meeting by meeting, with no pre-commitment to a particular rate path.",
     "quote": "The Governing Council is not pre-committing to a particular rate path.",
     "vote": null,
-    "tilt": "hawkish",
-    "summarized_at": "2026-10-25T08:23:39+00:00",
-    "model": "claude-sonnet-5"
+    "tilt": "neutral",
+    "summarized_at": "2026-11-02T14:19:05+00:00",
+    "model": "claude-sonnet-5-5"
    },
    "core_inflation": {
     "value": 2.5,
@@ -346,7 +346,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -497,7 +497,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -594,15 +594,15 @@
     }
    ],
    "statement": {
-    "announced": "2026-09-02",
-    "title": "Bank of Canada maintains the policy rate at 2¼%",
-    "url": "https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/",
-    "summary": "BoC held the overnight rate at 2.25%. Rate kept steady as growth and inflation tracked forecasts, but rising oil-related inflation risks and new tariffs add uncertainty; Bank stands ready to adjust policy as needed.",
-    "quote": "Governing Council will assess the sustainability of the economic rebound and the outlook for inflation, and is prepared to adjust monetary policy as needed.",
+    "announced": "2026-10-28",
+    "title": "Bank of Canada raises the policy rate by 25 basis points to 2½%",
+    "url": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
+    "summary": "The Bank of Canada raised its overnight rate target 25 basis points to 2.5% because inflation is higher and more persistent, driven by energy prices. It said further increases may be needed but will proceed carefully given uncertainty.",
+    "quote": "There could be a need to increase the policy rate further, but given uncertainties, Governing Council agreed to proceed carefully.",
     "vote": null,
     "tilt": "hawkish",
-    "summarized_at": "2026-10-25T08:23:07+00:00",
-    "model": "claude-sonnet-5"
+    "summarized_at": "2026-11-02T14:18:49+00:00",
+    "model": "claude-sonnet-5-5"
    },
    "core_inflation": {
     "value": 2.06,
@@ -610,7 +610,7 @@
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -699,7 +699,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -735,7 +735,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -824,7 +824,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -904,7 +904,7 @@
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -966,15 +966,15 @@
     }
    ],
    "statement": {
-    "announced": "2026-09-02",
-    "title": "OCR increased by 25 basis points to 2.75%",
-    "url": "https://www.rbnz.govt.nz/news-and-events/news/2026/09/ocr-increased-by-25-basis-points-to-2-75",
-    "summary": "OCR increased by 25 basis points to 2.75%.",
+    "announced": "2026-10-28",
+    "title": "OCR held at 2.75%",
+    "url": "https://www.rbnz.govt.nz/news-and-events/news/2026/10/ocr-held-at-2-75-percent",
+    "summary": "OCR held at 2.75%.",
     "quote": null,
     "vote": null,
     "tilt": null,
     "note": "statement text not readable by automation; the release title stands in for a summary",
-    "summarized_at": "2026-10-25T08:23:29+00:00",
+    "summarized_at": "2026-11-02T14:18:59+00:00",
     "model": null
    },
    "core_inflation": {
@@ -983,7 +983,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -1037,15 +1037,15 @@
    ],
    "market_quotes": [],
    "statement": {
-    "announced": "2026-09-18",
-    "title": "Change in the Guideline for Money Market Operations",
-    "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
-    "summary": "BOJ raised policy rate 25bp to around 1.25%, citing inflation nearing 2% target. Signals continued gradual rate hikes ahead, pace dependent on data including Middle East and FX impacts.",
-    "quote": "the Bank will continue to raise the policy interest rate and adjust the degree of monetary accommodation, in response to developments in economic activity and prices as well as financial conditions.",
-    "vote": "7-2; two members preferred maintaining the previous guideline",
-    "tilt": "hawkish",
-    "summarized_at": "2026-10-25T08:23:25+00:00",
-    "model": "claude-sonnet-5"
+    "announced": "2026-10-30",
+    "title": "Statement on Monetary Policy",
+    "url": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf",
+    "summary": "The Bank of Japan kept its overnight call rate target at around 1.25 percent, with one member wanting 1.5 percent. It also raised its annual ETF sales pace to about 860 billion yen from 330 billion, starting January 2027.",
+    "quote": "The Bank will encourage the uncollateralized overnight call rate to remain at around 1.25 percent.",
+    "vote": "8-1; Takata Hajime preferred raising the rate to around 1.5 percent",
+    "tilt": "neutral",
+    "summarized_at": "2026-11-02T14:18:59+00:00",
+    "model": "claude-sonnet-5-5"
    },
    "core_inflation": {
     "value": 2.1,
@@ -1053,7 +1053,7 @@
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -1089,7 +1089,7 @@
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
@@ -1125,7 +1125,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-11-02T11:40:05+00:00",
+    "fetched_at": "2026-11-02T14:18:31+00:00",
     "stale": false,
     "error": null
    }
