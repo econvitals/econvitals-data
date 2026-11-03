@@ -4,7 +4,7 @@
      judgment is Jason's; edit freely. Separate paragraphs with a blank line and
      begin each with **Bold lead-in.** -->
 
-**The setup is the dangerous one.** Markets are calm while the balance sheet is stretched — stress sits near its 40th historical percentile, vulnerability near its 80th. That low-stress / high-vulnerability combination is the "building" regime: the quiet stretch in which leverage and valuations accumulate, and in which a shock does the most damage precisely because nobody is positioned for it.
+**The setup is the dangerous one.** Markets are calm while the balance sheet is stretched — stress sits near its 40th historical percentile, vulnerability near its 87th. That low-stress / high-vulnerability combination is the "building" regime: the quiet stretch in which leverage and valuations accumulate, and in which a shock does the most damage precisely because nobody is positioned for it.
 
 **Where the fragility lives is valuation and leverage, not households.** Equity market cap is near 218% of GDP and home prices are rich relative to rents, while corporate leverage and the federal interest burden keep climbing. The reassuring counterpoint is the household sector: debt-to-GDP is near its lowest in decades and debt-service is contained. The vulnerability is concentrated in asset prices and in corporate and public balance sheets, not on kitchen tables.
 
