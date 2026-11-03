@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-03T05:02:28+00:00",
+    "generated_at": "2026-11-03T05:45:27+00:00",
     "run_date": "2026-11-03",
-    "builder_commit": "50eaa0627",
+    "builder_commit": "14d27f9bf",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-03T00:04:12-05:00"
+      "as_of": "2026-11-03T00:46:44-05:00"
     }
   },
   "sections": {
@@ -113,11 +113,11 @@
         },
         {
           "label": "Brent",
-          "value": 104.769997,
+          "value": 105.379997,
           "display": "$105",
-          "period": "2026-11-02",
-          "change": 72.2,
-          "change_display": "+72.2% YTD",
+          "period": "2026-11-03",
+          "change": 73.2,
+          "change_display": "+73.2% YTD",
           "provenance": "hard"
         },
         {
@@ -6776,6 +6776,191 @@
               "type": "line"
             }
           ]
+        },
+        {
+          "title": "Corporate credit spread",
+          "sub": "Percentage points",
+          "start": "2026",
+          "source": "Federal Reserve Board.",
+          "points": [
+            {
+              "date": "2024-01-01",
+              "gz": 1.11,
+              "ebp": -0.039
+            },
+            {
+              "date": "2024-02-01",
+              "gz": 1.11,
+              "ebp": -0.104
+            },
+            {
+              "date": "2024-03-01",
+              "gz": 1.061,
+              "ebp": -0.06
+            },
+            {
+              "date": "2024-04-01",
+              "gz": 1.024,
+              "ebp": -0.173
+            },
+            {
+              "date": "2024-05-01",
+              "gz": 0.991,
+              "ebp": -0.1
+            },
+            {
+              "date": "2024-06-01",
+              "gz": 1.102,
+              "ebp": 0.005
+            },
+            {
+              "date": "2024-07-01",
+              "gz": 1.079,
+              "ebp": -0.058
+            },
+            {
+              "date": "2024-08-01",
+              "gz": 1.102,
+              "ebp": -0.006
+            },
+            {
+              "date": "2024-09-01",
+              "gz": 1.058,
+              "ebp": -0.064
+            },
+            {
+              "date": "2024-10-01",
+              "gz": 0.99,
+              "ebp": -0.334
+            },
+            {
+              "date": "2024-11-01",
+              "gz": 0.955,
+              "ebp": -0.194
+            },
+            {
+              "date": "2024-12-01",
+              "gz": 0.941,
+              "ebp": -0.433
+            },
+            {
+              "date": "2025-01-01",
+              "gz": 0.902,
+              "ebp": -0.267
+            },
+            {
+              "date": "2025-02-01",
+              "gz": 1.001,
+              "ebp": -0.223
+            },
+            {
+              "date": "2025-03-01",
+              "gz": 1.125,
+              "ebp": -0.002
+            },
+            {
+              "date": "2025-04-01",
+              "gz": 1.269,
+              "ebp": -0.058
+            },
+            {
+              "date": "2025-05-01",
+              "gz": 1.026,
+              "ebp": -0.169
+            },
+            {
+              "date": "2025-06-01",
+              "gz": 0.994,
+              "ebp": -0.185
+            },
+            {
+              "date": "2025-07-01",
+              "gz": 0.927,
+              "ebp": -0.204
+            },
+            {
+              "date": "2025-08-01",
+              "gz": 0.942,
+              "ebp": -0.152
+            },
+            {
+              "date": "2025-09-01",
+              "gz": 0.894,
+              "ebp": -0.286
+            },
+            {
+              "date": "2025-10-01",
+              "gz": 0.94,
+              "ebp": -0.253
+            },
+            {
+              "date": "2025-11-01",
+              "gz": 0.945,
+              "ebp": -0.198
+            },
+            {
+              "date": "2025-12-01",
+              "gz": 0.91,
+              "ebp": -0.207
+            },
+            {
+              "date": "2026-01-01",
+              "gz": 0.856,
+              "ebp": -0.258
+            },
+            {
+              "date": "2026-02-01",
+              "gz": 0.974,
+              "ebp": -0.257
+            },
+            {
+              "date": "2026-03-01",
+              "gz": 1.032,
+              "ebp": -0.262
+            },
+            {
+              "date": "2026-04-01",
+              "gz": 0.921,
+              "ebp": -0.199
+            },
+            {
+              "date": "2026-05-01",
+              "gz": 0.835,
+              "ebp": -0.373
+            },
+            {
+              "date": "2026-06-01",
+              "gz": 0.862,
+              "ebp": -0.285
+            },
+            {
+              "date": "2026-07-01",
+              "gz": 0.842,
+              "ebp": -0.31
+            },
+            {
+              "date": "2026-08-01",
+              "gz": 0.879,
+              "ebp": -0.225
+            },
+            {
+              "date": "2026-09-01",
+              "gz": 0.926,
+              "ebp": -0.392
+            }
+          ],
+          "series": [
+            {
+              "key": "gz",
+              "label": "Credit spread",
+              "type": "line"
+            },
+            {
+              "key": "ebp",
+              "label": "Excess bond premium",
+              "type": "line"
+            }
+          ]
         }
       ],
       "table": {
@@ -6917,10 +7102,10 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 101.75,
-                "as_of": "2026-11-02",
-                "chg_1d": -0.1,
-                "chg_1w": -0.2,
+                "value": 101.74,
+                "as_of": "2026-11-03",
+                "chg_1d": -0.0,
+                "chg_1w": -0.6,
                 "chg_ytd": 3.5,
                 "is_yield": false,
                 "provenance": "hard",
@@ -6928,9 +7113,9 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.119,
+                "value": 1.1196,
                 "as_of": "2026-11-03",
-                "chg_1d": -0.0,
+                "chg_1d": -0.1,
                 "chg_1w": -0.1,
                 "chg_ytd": 4.7,
                 "is_yield": false,
@@ -6939,9 +7124,9 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3409,
+                "value": 1.3415,
                 "as_of": "2026-11-03",
-                "chg_1d": -0.0,
+                "chg_1d": -0.1,
                 "chg_1w": -0.3,
                 "chg_ytd": 0.3,
                 "is_yield": false,
@@ -6954,29 +7139,29 @@
                 "as_of": "2026-11-03",
                 "chg_1d": -0.0,
                 "chg_1w": 0.1,
-                "chg_ytd": 0.7,
+                "chg_ytd": 0.6,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8182,
+                "value": 0.8181,
                 "as_of": "2026-11-03",
-                "chg_1d": -0.0,
-                "chg_1w": -0.7,
-                "chg_ytd": 3.2,
+                "chg_1d": -0.1,
+                "chg_1w": -0.8,
+                "chg_ytd": 3.1,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CAD",
-                "value": 1.398,
+                "value": 1.397,
                 "as_of": "2026-11-03",
-                "chg_1d": -0.0,
+                "chg_1d": -0.1,
                 "chg_1w": -0.1,
-                "chg_ytd": 1.9,
+                "chg_ytd": 1.8,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -6999,66 +7184,66 @@
             "rows": [
               {
                 "label": "WTI ($/bbl, front-month)",
-                "value": 96.5,
-                "as_of": "2026-11-02",
-                "chg_1d": -7.4,
-                "chg_1w": -5.2,
-                "chg_ytd": 68.0,
+                "value": 97.2,
+                "as_of": "2026-11-03",
+                "chg_1d": 0.8,
+                "chg_1w": -2.7,
+                "chg_ytd": 69.3,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent ($/bbl, front-month)",
-                "value": 104.8,
-                "as_of": "2026-11-02",
-                "chg_1d": -10.9,
-                "chg_1w": -9.5,
-                "chg_ytd": 72.2,
+                "value": 105.4,
+                "as_of": "2026-11-03",
+                "chg_1d": 0.6,
+                "chg_1w": -7.4,
+                "chg_ytd": 73.3,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas ($/MMBtu, front-month)",
-                "value": 2.86,
-                "as_of": "2026-11-02",
-                "chg_1d": -1.4,
-                "chg_1w": 9.8,
-                "chg_ytd": -22.5,
+                "value": 2.88,
+                "as_of": "2026-11-03",
+                "chg_1d": 1.0,
+                "chg_1w": 6.9,
+                "chg_ytd": -21.8,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold ($/oz, front-month)",
-                "value": 3970.0,
-                "as_of": "2026-11-02",
-                "chg_1d": 1.8,
-                "chg_1w": -1.7,
-                "chg_ytd": -8.6,
+                "value": 3927.0,
+                "as_of": "2026-11-03",
+                "chg_1d": -1.1,
+                "chg_1w": -3.6,
+                "chg_ytd": -9.5,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver ($/oz, front-month)",
-                "value": 50.72,
-                "as_of": "2026-11-02",
-                "chg_1d": 3.3,
-                "chg_1w": -6.3,
-                "chg_ytd": -27.7,
+                "value": 49.24,
+                "as_of": "2026-11-03",
+                "chg_1d": -2.9,
+                "chg_1w": -9.3,
+                "chg_ytd": -29.8,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper ($/lb, front-month)",
-                "value": 6.54,
-                "as_of": "2026-11-02",
-                "chg_1d": 1.3,
-                "chg_1w": 0.5,
-                "chg_ytd": 16.2,
+                "value": 6.42,
+                "as_of": "2026-11-03",
+                "chg_1d": -1.9,
+                "chg_1w": -3.1,
+                "chg_ytd": 14.0,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
