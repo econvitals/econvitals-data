@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-03T17:20:25+00:00",
+    "generated_at": "2026-11-03T20:22:07+00:00",
     "run_date": "2026-11-03",
-    "builder_commit": "139102bbf",
+    "builder_commit": "d79dd43a9",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-03T12:22:07-05:00"
+      "as_of": "2026-11-03T15:23:35-05:00"
     }
   },
   "sections": {
@@ -104,20 +104,20 @@
         },
         {
           "label": "S&P 500",
-          "value": 7576.0,
-          "display": "7,576",
+          "value": 7570.0,
+          "display": "7,570",
           "period": "2026-11-03",
-          "change": 10.7,
-          "change_display": "+10.7% YTD",
+          "change": 10.6,
+          "change_display": "+10.6% YTD",
           "provenance": "hard"
         },
         {
           "label": "Brent",
-          "value": 103.220001,
-          "display": "$103",
+          "value": 104.330002,
+          "display": "$104",
           "period": "2026-11-03",
-          "change": 69.6,
-          "change_display": "+69.6% YTD",
+          "change": 71.5,
+          "change_display": "+71.5% YTD",
           "provenance": "hard"
         },
         {
@@ -6996,21 +6996,21 @@
               },
               {
                 "label": "5-year",
-                "value": 4.75,
+                "value": 4.74,
                 "as_of": "2026-11-03",
-                "chg_1d": 0.06,
-                "chg_1w": -0.09,
-                "chg_ytd": 1.03,
+                "chg_1d": 0.05,
+                "chg_1w": -0.1,
+                "chg_ytd": 1.02,
                 "is_yield": true,
                 "provenance": "hard"
               },
               {
                 "label": "10-year",
-                "value": 4.96,
+                "value": 4.95,
                 "as_of": "2026-11-03",
                 "chg_1d": 0.06,
-                "chg_1w": -0.03,
-                "chg_ytd": 0.8,
+                "chg_1w": -0.04,
+                "chg_ytd": 0.79,
                 "is_yield": true,
                 "provenance": "hard"
               },
@@ -7087,11 +7087,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 20.83,
+                "value": 20.81,
                 "as_of": "2026-11-03",
-                "chg_1d": -0.32,
-                "chg_1w": 3.31,
-                "chg_ytd": 5.88,
+                "chg_1d": -0.34,
+                "chg_1w": 3.29,
+                "chg_ytd": 5.86,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -7112,10 +7112,10 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 101.82,
+                "value": 101.86,
                 "as_of": "2026-11-03",
                 "chg_1d": 0.1,
-                "chg_1w": -0.5,
+                "chg_1w": -0.4,
                 "chg_ytd": 3.6,
                 "is_yield": false,
                 "provenance": "hard",
@@ -7123,9 +7123,9 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1194,
+                "value": 1.1191,
                 "as_of": "2026-11-03",
-                "chg_1d": -0.1,
+                "chg_1d": -0.0,
                 "chg_1w": -0.1,
                 "chg_ytd": 4.7,
                 "is_yield": false,
@@ -7134,7 +7134,7 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3417,
+                "value": 1.3415,
                 "as_of": "2026-11-03",
                 "chg_1d": -0.1,
                 "chg_1w": -0.3,
@@ -7145,11 +7145,11 @@
               },
               {
                 "label": "USD/JPY",
-                "value": 158.5,
+                "value": 158.7,
                 "as_of": "2026-11-03",
-                "chg_1d": 0.4,
-                "chg_1w": 0.5,
-                "chg_ytd": 1.1,
+                "chg_1d": 0.5,
+                "chg_1w": 0.7,
+                "chg_ytd": 1.2,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -7167,22 +7167,22 @@
               },
               {
                 "label": "USD/CAD",
-                "value": 1.3995,
+                "value": 1.4005,
                 "as_of": "2026-11-03",
                 "chg_1d": 0.1,
-                "chg_1w": 0.0,
-                "chg_ytd": 2.0,
+                "chg_1w": 0.1,
+                "chg_ytd": 2.1,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/CNY",
-                "value": 6.66,
+                "value": 6.67,
                 "as_of": "2026-11-03",
-                "chg_1d": 0.2,
-                "chg_1w": -0.0,
-                "chg_ytd": -4.8,
+                "chg_1d": 0.3,
+                "chg_1w": 0.1,
+                "chg_ytd": -4.6,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -7194,66 +7194,66 @@
             "rows": [
               {
                 "label": "WTI ($/bbl, front-month)",
-                "value": 95.6,
+                "value": 96.6,
                 "as_of": "2026-11-03",
-                "chg_1d": -0.9,
-                "chg_1w": -4.3,
-                "chg_ytd": 66.5,
+                "chg_1d": 0.2,
+                "chg_1w": -3.3,
+                "chg_ytd": 68.3,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent ($/bbl, front-month)",
-                "value": 103.2,
+                "value": 104.3,
                 "as_of": "2026-11-03",
-                "chg_1d": -1.5,
-                "chg_1w": -9.4,
-                "chg_ytd": 69.6,
+                "chg_1d": -0.4,
+                "chg_1w": -8.4,
+                "chg_ytd": 71.5,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas ($/MMBtu, front-month)",
-                "value": 2.89,
+                "value": 2.91,
                 "as_of": "2026-11-03",
-                "chg_1d": 1.2,
-                "chg_1w": 7.2,
-                "chg_ytd": -21.6,
+                "chg_1d": 2.0,
+                "chg_1w": 8.0,
+                "chg_ytd": -21.0,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold ($/oz, front-month)",
-                "value": 3940.0,
+                "value": 3931.0,
                 "as_of": "2026-11-03",
-                "chg_1d": -0.7,
-                "chg_1w": -3.3,
-                "chg_ytd": -9.2,
+                "chg_1d": -1.0,
+                "chg_1w": -3.5,
+                "chg_ytd": -9.4,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver ($/oz, front-month)",
-                "value": 49.78,
+                "value": 49.51,
                 "as_of": "2026-11-03",
-                "chg_1d": -1.8,
-                "chg_1w": -8.3,
-                "chg_ytd": -29.0,
+                "chg_1d": -2.4,
+                "chg_1w": -8.8,
+                "chg_ytd": -29.4,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Copper ($/lb, front-month)",
-                "value": 6.4,
+                "value": 6.39,
                 "as_of": "2026-11-03",
-                "chg_1d": -2.2,
-                "chg_1w": -3.4,
-                "chg_ytd": 13.6,
+                "chg_1d": -2.4,
+                "chg_1w": -3.6,
+                "chg_ytd": 13.4,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -7265,11 +7265,11 @@
             "rows": [
               {
                 "label": "S&P 500",
-                "value": 7576.0,
+                "value": 7570.0,
                 "as_of": "2026-11-03",
-                "chg_1d": 35.0,
-                "chg_1w": -146.0,
-                "chg_ytd": 731.0,
+                "chg_1d": 29.0,
+                "chg_1w": -153.0,
+                "chg_ytd": 724.0,
                 "is_yield": false,
                 "provenance": "hard"
               }
