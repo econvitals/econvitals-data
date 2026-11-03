@@ -1,14 +1,14 @@
 {
  "meta": {
-  "generated_at": "2026-11-03T11:40:33+00:00",
+  "generated_at": "2026-11-03T23:30:29+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
   "reader_updated": "2026-11-03",
-  "banks_with_calls": 10,
+  "banks_with_calls": 11,
   "banks_with_statement": 12,
   "banks_with_core": 12,
-  "core_note": "Real policy rate = (1 + nominal policy rate) / (1 + core inflation over the last 12 months) - 1, each country's core CPI measure read agency-direct (macrolib; for the U.S., CPI ex food and energy, not PCE); India uses headline CPI, which has no official core.",
+  "core_note": "Real policy rate = (1 + nominal policy rate) / (1 + core inflation over the last 12 months) - 1, each country’s core CPI measure from its statistics office, read agency-direct through macrolib except the U.S. (BLS’s CPI ex food and energy, via FRED; not PCE); India uses headline CPI, which has no official core.",
   "errors": []
  },
  "banks": {
@@ -160,6 +160,15 @@
    ],
    "market_quotes": [
     {
+     "institution": "Citi Research",
+     "quote": "Market is not pricing in a hike this year",
+     "meeting": null,
+     "p_hike": 0.0,
+     "p_cut": null,
+     "as_of": "2026-11-03",
+     "msg_id": "1a1a139459a544ee"
+    },
+    {
      "institution": "Citi",
      "quote": "Market is not pricing in a hike this year",
      "meeting": null,
@@ -185,15 +194,6 @@
      "p_cut": null,
      "as_of": "2026-11-01",
      "msg_id": "1a196eed00b56df7"
-    },
-    {
-     "institution": "MPP",
-     "quote": "CME FedWatch priced roughly a 90-93% chance of no change at the October meeting",
-     "meeting": "2026-10-28",
-     "p_hike": 0.08,
-     "p_cut": 0.0,
-     "as_of": "2026-11-01",
-     "msg_id": "1a19805588daa780"
     }
    ],
    "statement": {
@@ -213,7 +213,7 @@
     "measure": "CPI excluding food and energy (BLS, via FRED)",
     "source": "fred:CPILFESL|yoy",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -224,13 +224,24 @@
    "window_from": "2026-10-29",
    "latest_decision": "2026-10-29",
    "lean": {
-    "hold": 3,
-    "hike": 4,
+    "hold": 2,
+    "hike": 5,
     "cut": 0
    },
    "n_desks": 7,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "GS",
+     "person": "Stehn",
+     "call": "hike",
+     "size_bp": null,
+     "meeting": "2026-12",
+     "path": "One more hike in December; low hurdle for a March hike with stronger data, significant hurdle to speed up",
+     "note": "Higher energy prices and tighter financial conditions, core upside limited by weak second-round effects",
+     "as_of": "2026-11-03",
+     "msg_id": "1a1a23de765ad690"
+    },
     {
      "institution": "JPM",
      "person": null,
@@ -287,17 +298,6 @@
      "msg_id": "1a1898a0d3ff12a4"
     },
     {
-     "institution": "GS",
-     "person": null,
-     "call": "hold",
-     "size_bp": 0,
-     "meeting": "2026-10-29",
-     "path": null,
-     "note": "ECB held at 2.5%, in line with GS and consensus",
-     "as_of": "2026-10-29",
-     "msg_id": "1a1887317f998e90"
-    },
-    {
      "institution": "Berenberg",
      "person": "Wishart",
      "call": "hold",
@@ -346,7 +346,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -508,7 +508,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -621,7 +621,7 @@
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -629,16 +629,27 @@
   "AU": {
    "code": "AU",
    "name": "Reserve Bank of Australia",
-   "window_from": "2026-09-29",
-   "latest_decision": "2026-09-29",
+   "window_from": "2026-11-03",
+   "latest_decision": "2026-11-03",
    "lean": {
     "hold": 0,
-    "hike": 4,
+    "hike": 2,
     "cut": 0
    },
-   "n_desks": 4,
+   "n_desks": 2,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "MA",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-11",
+     "path": "cash rate at or near peak; cuts unlikely before late 2027; December hike a risk",
+     "note": "Report of the RBA's November decision (hike to 4.85%); desk sees rate near peak.",
+     "as_of": "2026-11-03",
+     "msg_id": "1a1a369f0d41c50b"
+    },
     {
      "institution": "Citi",
      "person": null,
@@ -649,71 +660,19 @@
      "note": "Citi Asia daily lists Citi call of 25bp hike, prior 4.60%",
      "as_of": "2026-11-03",
      "msg_id": "1a19f52ba56c8775"
-    },
-    {
-     "institution": "GS",
-     "person": null,
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": null,
-     "path": null,
-     "note": "GS 4.85% versus last 4.6%, in line with consensus",
-     "as_of": "2026-11-01",
-     "msg_id": "1a198cb5c9e88ace"
-    },
-    {
-     "institution": "JPM",
-     "person": "Chinoy",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": null,
-     "path": null,
-     "note": "Australia's 3Q inflation stronger than forecast; JPM now expects RBA to hike 25bp next week",
-     "as_of": "2026-10-31",
-     "msg_id": "1a190655e8bf86df"
-    },
-    {
-     "institution": "BOFA",
-     "person": null,
-     "call": "hike",
-     "size_bp": null,
-     "meeting": "2026-11-03",
-     "path": null,
-     "note": "stronger-than-expected CPI print prompted BofA to close its AU 2s10s flattener as the cycle nears its peak",
-     "as_of": "2026-10-30",
-     "msg_id": "1a18b49f1d61dca6"
     }
    ],
-   "market_quotes": [
-    {
-     "institution": "MPP",
-     "quote": "The Reserve Bank of Australia is expected to hike to 4.85% from 4.60% on Monday evening U.S. time",
-     "meeting": "2026-11-02",
-     "p_hike": null,
-     "p_cut": null,
-     "as_of": "2026-10-30",
-     "msg_id": "1a18e8ce7c062d77"
-    },
-    {
-     "institution": "MPP",
-     "quote": "If underlying inflation continues to firm, pressure for a fifth hike this year from the current 4.60% cash rate is likely to build",
-     "meeting": "2026-11-03",
-     "p_hike": null,
-     "p_cut": null,
-     "as_of": "2026-10-28",
-     "msg_id": "1a18268438351626"
-    }
-   ],
+   "market_quotes": [],
    "statement": {
-    "announced": "2026-09-29",
+    "announced": "2026-11-03",
     "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
-    "url": "https://www.rba.gov.au/media-releases/2026/mr-26-27.html",
-    "summary": "RBA raised the cash rate 25bp to 4.60% amid elevated inflation from energy prices and capacity pressures. Signals readiness to hike further if needed to return inflation to target.",
-    "quote": "The Board will continue to do what it considers necessary to bring inflation sustainably back to target, including increasing the cash rate target further if needed.",
-    "vote": "unanimous",
+    "url": "https://www.rba.gov.au/media-releases/2026/mr-26-30.html",
+    "summary": "The RBA raised the cash rate target 25 basis points to 4.85 percent, citing broad-based inflation and a higher forecast path. It will stay data-dependent and do what is necessary to return inflation sustainably to target.",
+    "quote": "The Board will continue to do what it considers necessary to bring inflation sustainably back to target.",
+    "vote": "6-3; three members voted to leave the cash rate target unchanged at 4.60 percent",
     "tilt": "hawkish",
-    "summarized_at": "2026-10-25T08:23:03+00:00",
-    "model": "claude-sonnet-5"
+    "summarized_at": "2026-11-03T23:30:29+00:00",
+    "model": "claude-sonnet-5-5"
    },
    "core_inflation": {
     "value": 3.6,
@@ -721,7 +680,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -757,7 +716,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -846,7 +805,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -926,7 +885,7 @@
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1005,7 +964,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1017,12 +976,23 @@
    "latest_decision": "2026-10-30",
    "lean": {
     "hold": 1,
-    "hike": 2,
+    "hike": 3,
     "cut": 0
    },
-   "n_desks": 3,
+   "n_desks": 4,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "The Asia Group",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": "1.5% in December; possibly 1.75% around March, then a pause",
+     "note": "December hike seen as near-certain; Ueda signaled possible move while avoiding commitment to a pace",
+     "as_of": "2026-11-03",
+     "msg_id": "1a1a337cdcf81c1b"
+    },
     {
      "institution": "JPM",
      "person": null,
@@ -1075,7 +1045,7 @@
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1123,7 +1093,7 @@
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1135,12 +1105,24 @@
    "latest_decision": "2026-10-07",
    "lean": {
     "hold": 0,
-    "hike": 0,
+    "hike": 1,
     "cut": 0
    },
-   "n_desks": 0,
-   "consensus": null,
-   "calls": [],
+   "n_desks": 1,
+   "consensus": "Hike",
+   "calls": [
+    {
+     "institution": "JPM",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12-16",
+     "path": null,
+     "note": "mislabelled; see below",
+     "as_of": "2026-11-03",
+     "msg_id": "1a1a164fe4c9f31d"
+    }
+   ],
    "market_quotes": [],
    "statement": {
     "announced": "2026-10-07",
@@ -1159,7 +1141,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-11-03T11:40:05+00:00",
+    "fetched_at": "2026-11-03T23:30:05+00:00",
     "stale": false,
     "error": null
    }
