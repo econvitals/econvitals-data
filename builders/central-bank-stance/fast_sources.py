@@ -275,7 +275,7 @@ def rbi_in(start: str, fetch=None, post=None) -> list[tuple[str, float]]:
 
 
 FAST = {
-    "US": ("FRED (Board of Governors) — federal funds target range", fed_us),
+    "US": ("Federal Reserve Board via FRED — federal funds target range", fed_us),
     "XM": ("ECB Data Portal — deposit facility rate", ecb_xm),
     "GB": ("Bank of England — Bank Rate (IUDBEDR)", boe_gb),
     "CA": ("Bank of Canada — target for the overnight rate", boc_ca),
