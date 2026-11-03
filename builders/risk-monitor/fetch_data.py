@@ -16,8 +16,11 @@ tension legible. A small regime quadrant on top places us in the 2x2 of
 Stress (low/high) x Vulnerability (low/high); the dangerous cell is
 low-stress / high-vulnerability.
 
-Launch set = the automatable core: every strip below is a pure FRED pull (a few
-are simple ratios computed from two FRED series). The fragile scrapes (Shiller
+Launch set = the automatable core: every strip below is a FRED pull (a few are
+simple ratios computed from two series), except the home-price side of price-to-rent,
+which is FHFA's purchase-only house price index read straight from FHFA's keyless
+master file (since 2026-11-02: FRED's Case-Shiller series is tagged "Copyrighted:
+Pre-approval required" and must not appear on econvitals.org). The fragile scrapes (Shiller
 CAPE/ERP, FDIC capital, NY Fed files, UMich, GPR, policy-uncertainty) and the
 CFTC basis-trade / Treasury FiscalData additions come in a later hardening pass.
 
@@ -35,12 +38,12 @@ full available history:
 No wall-clock timestamp is written into data.json (only real data dates), so a
 no-op run produces no diff and the updater makes no spurious commit.
 
-Pure Python standard library (urllib, json) — no pip installs — so it runs
+Pure Python standard library (urllib, json, csv) — no pip installs — so it runs
 identically on a laptop and in GitHub Actions.
 
 Run:  python3 fetch_data.py
 """
-import json, os, re, sys, time, urllib.parse, urllib.request
+import csv, io, json, os, re, sys, time, urllib.parse, urllib.request
 from bisect import bisect_right
 from datetime import date, timedelta
 from pathlib import Path
@@ -50,6 +53,10 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent  # builders/risk-monitor/ -> repo root
 OUT = REPO / "lab" / "risk-monitor" / "data.json"
 FRED = "https://api.stlouisfed.org/fred/series/observations"
+# FHFA's House Price Index master file (keyless, public domain, ~17 MB) — every HPI series.
+FHFA_MASTER = "https://www.fhfa.gov/hpi/download/monthly/hpi_master.csv"
+FHFA_COLUMNS = ["hpi_type", "hpi_flavor", "frequency", "level", "place_name", "place_id",
+                "yr", "period", "index_nsa", "index_sa", "rstderr", "note"]
 
 # Colorblind-safe risk ramp (low -> high). Blue->amber->red avoids the red/green
 # confusion of RdYlGn. Canonical home is tokens.yaml (promote via chartbook-edit
@@ -105,12 +112,51 @@ def fred_raw(code, start="1900-01-01"):
             time.sleep(1.5 * (attempt + 1))
 
 
+def fhfa_us_po_monthly(col="index_nsa"):
+    """FHFA U.S. purchase-only HPI, monthly (Jan 1991 = 100), as sorted (date, value) rows.
+    `index_nsa` (the default) is not seasonally adjusted — the match for CPI rent's NSA
+    CUUR0000SEHA; `index_sa` is the adjusted one. A small vendored copy of macrolib/fhfa.py's
+    `fhfa:HPI_PO_NSA` (the Action has no macrolib), keeping its guards: an HTML page in place
+    of the file, a changed header or a truncated body raises rather than parsing."""
+    req = urllib.request.Request(FHFA_MASTER, headers={
+        "User-Agent": "econvitals-data risk-monitor (+https://github.com/econvitals/econvitals-data)"})
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                text = r.read().decode("utf-8-sig", errors="replace")
+            first = text[:4096].split("\n", 1)[0].strip()
+            if first.lower().startswith("<") or "<html" in text[:4096].lower():
+                raise RuntimeError("FHFA served an HTML page, not the HPI master CSV")
+            if [c.strip() for c in first.split(",")] != FHFA_COLUMNS:
+                raise RuntimeError(f"FHFA HPI master CSV header changed: {first[:200]!r}")
+            if text.count("\n") < 100_000:
+                raise RuntimeError(f"FHFA HPI master CSV truncated ({text.count(chr(10))} lines)")
+            out = []
+            for row in csv.DictReader(io.StringIO(text)):
+                if (row["hpi_type"] == "traditional" and row["hpi_flavor"] == "purchase-only"
+                        and row["frequency"] == "monthly" and row["place_id"].strip() == "USA"):
+                    v = (row[col] or "").strip()
+                    if v not in ("", "-", ".", "NA"):
+                        out.append((date(int(row["yr"]), int(row["period"]), 1),
+                                    float(v.replace(",", ""))))
+            if len(out) < 300:
+                raise RuntimeError(f"FHFA HPI master CSV: only {len(out)} U.S. monthly rows")
+            out.sort()
+            return out
+        except Exception:  # noqa
+            if attempt == 3:
+                raise
+            time.sleep(1.5 * (attempt + 1))
+
+
 _CACHE = {}
 
 
 def series(code):
+    """A FRED series id, or `fhfa:HPI_PO_NSA` for FHFA's own house price index."""
     if code not in _CACHE:
-        _CACHE[code] = fred_raw(code)
+        _CACHE[code] = (fhfa_us_po_monthly("index_nsa") if code == "fhfa:HPI_PO_NSA"
+                        else fred_raw(code))
     return list(_CACHE[code])
 
 
@@ -124,8 +170,9 @@ def _by_month(rows):
 
 
 def price_to_rent():
-    """Case-Shiller home price / CPI rent, both indexed to the first common month."""
-    home = _by_month(series("CSUSHPINSA"))
+    """FHFA purchase-only home price (NSA) / CPI rent (NSA), both indexed to the first
+    common month (Jan 1991, where FHFA's monthly index starts)."""
+    home = _by_month(series("fhfa:HPI_PO_NSA"))
     rent = _by_month(series("CUUR0000SEHA"))
     keys = sorted(set(home) & set(rent))
     h0, r0 = home[keys[0]][1], rent[keys[0]][1]
@@ -238,6 +285,8 @@ def build_strip(cfg):
     else:
         rows = series(cfg["fred"][0])
         codes = cfg["fred"]
+    # A strip with a non-FRED input names it beside its FRED ids (only price-to-rent today).
+    other = {"fhfa": cfg["fhfa"]} if cfg.get("fhfa") else {}
     dates = [d for d, _ in rows]
     vals = [v for _, v in rows]
     sorted_vals = sorted(vals)
@@ -266,7 +315,7 @@ def build_strip(cfg):
 
     return {
         "id": cfg["id"], "label": cfg["label"], "group": cfg["group"],
-        "fred": codes, "unit": unit, "freq": cfg["freq"],
+        "fred": codes, **other, "unit": unit, "freq": cfg["freq"],
         "higher_is_riskier": higher,
         "value": round(cur_v, 4), "value_fmt": fmt_value(cur_v, unit, dec, scale),
         "asof": dates[-1].isoformat(), "asof_label": asof_label(dates[-1], cfg["freq"]),
@@ -335,11 +384,11 @@ INDICATORS = [
 
     # -- VULNERABILITIES ----------------------------------------------------- valuations
     {"panel": "vulnerabilities", "group": "Asset valuations", "id": "price-to-rent",
-     "label": "Home price-to-rent", "fred": ["CSUSHPINSA", "CUUR0000SEHA"],
+     "label": "Home price-to-rent", "fred": ["CUUR0000SEHA"], "fhfa": ["HPI_PO_NSA"],
      "compute": "price_to_rent", "freq": "monthly",
      "unit": "index", "decimals": 1, "higher_is_riskier": True,
-     "note": "Case-Shiller home prices relative to CPI rent, both indexed to the "
-             "start of the sample; high means housing is dear versus rents."},
+     "note": "FHFA purchase-only home prices relative to CPI rent, both not seasonally "
+             "adjusted and indexed to January 1991; high means housing is dear versus rents."},
     {"panel": "vulnerabilities", "group": "Asset valuations", "id": "equity-mktcap-gdp",
      "label": "Equity market cap / GDP", "fred": ["NCBEILQ027S", "GDP"],
      "compute": "equity_mktcap_gdp", "freq": "quarterly",
@@ -524,15 +573,15 @@ def build():
         "meta": {
             "title": "Risk Monitor",
             "data_through": data_through,
-            "live_source": "FRED",
+            "live_source": "FRED; home prices from FHFA",
             "ramp": RAMP,
             "window_note": "Each strip's marker is the current value's percentile "
                            "over the indicator's full available history, oriented so "
                            "rightward = riskier. The ghost marker is the value ~one "
                            "month earlier (prior quarter for quarterly series). "
                            "Strips with under 10 years of history are flagged.",
-            "phase_note": "Automatable core — 15 FRED gauges plus register and The "
-                          "Read. Still to come: scrape/paid gauges (Shiller CAPE & "
+            "phase_note": "Automatable core — 15 gauges from FRED and FHFA plus register "
+                          "and The Read. Still to come: scrape/paid gauges (Shiller CAPE & "
                           "equity risk premium, FDIC bank capital, CFTC basis-trade "
                           "short).",
         },

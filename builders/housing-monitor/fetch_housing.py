@@ -5,14 +5,19 @@ fetch_housing.py — daily refresh for the Housing Bubble Monitor lab page.
 Reads housing_config.yaml (the editorial layout + per-indicator `source:` specs),
 pulls live values, and writes data.json in the shape housing.js renders.
 
-DATA SOURCING — FRED, directly. Every config key that has a `source:` block is a FRED
-series id; there is one fetch path and no vendor in front of it.
+DATA SOURCING — FRED and FHFA, each directly. A series id in a `source:` block is a FRED
+series id unless it carries the `fhfa:` prefix, which reads FHFA's own House Price Index
+master file (public domain) — see `fhfa_series`. House prices come from FHFA, not FRED,
+since 2026-11-02: FRED's Case-Shiller series is tagged "Copyrighted: Pre-approval required"
+and the St. Louis Fed asked that it not appear on econvitals.org.
 
 RESILIENCE: every indicator is computed in its own try/except, so the page never
 blanks. A failed row is served from last-good.json — the dated value that row last
 returned live — and only falls back to the editorial `val`/`spark`/`v` in config
 when there is no last-good entry. Every row carries `_source`
-(fred / last-good / fallback / editorial) and, where one exists, `_date`; the
+(fred / fhfa / last-good / fallback / editorial; `fhfa` = fetched live this run with
+FHFA house prices in it, any partner series such as CPI still from FRED) and, where one
+exists, `_date`; the
 per-run tally goes in data.json's `sources` and the failed keys in `stale_rows`.
 `data_through` is computed from real observation dates only, never from today.
 Any UNDECLARED failure makes the run exit 1, so a refresh that could not refresh is
@@ -25,7 +30,7 @@ is red every night for a fault nobody can fix from here stops being read, and hi
 the next real one.
 
 Credentials resolve env var → ~/.config/macro-dashboard/.env (same as the chartbook
-clients): FRED_API_KEY.
+clients): FRED_API_KEY. FHFA is keyless.
 
 Run:
   python fetch_housing.py            # writes ./data.json
@@ -33,7 +38,9 @@ Run:
 """
 from __future__ import annotations
 
+import csv
 import datetime as dt
+import io
 import json
 import re
 import os
@@ -109,8 +116,66 @@ def fred_series(series_id, start="1995-01-01"):
     return obs
 
 
+# ── FHFA House Price Index, direct from FHFA ─────────────────────────────────
+# FHFA's one master file (~17 MB, keyless, public domain) carries every HPI series. This
+# is a small vendored copy of what macrolib/fhfa.py does for `fhfa:HPI_PO` — the Action has
+# no macrolib — and it keeps that module's guards: refuse an HTML page served in place of
+# the file, a changed header, or a truncated body, so a broken download raises (and the row
+# goes to last-good) instead of parsing into a short or wrong series.
+FHFA_MASTER_URL = "https://www.fhfa.gov/hpi/download/monthly/hpi_master.csv"
+FHFA_COLUMNS = ["hpi_type", "hpi_flavor", "frequency", "level", "place_name", "place_id",
+                "yr", "period", "index_nsa", "index_sa", "rstderr", "note"]
+# Config name -> the column read off the U.S. monthly purchase-only rows. Monthly observations
+# are dated the first of the month, FRED's convention, so they line up with CPI and rent.
+FHFA_SERIES = {"HPI_PO": "index_sa", "HPI_PO_NSA": "index_nsa"}
+_fhfa_rows = None
+
+
+def _fhfa_us_po_monthly():
+    global _fhfa_rows
+    if _fhfa_rows is not None:
+        return _fhfa_rows
+    r = SESSION.get(FHFA_MASTER_URL, timeout=180, headers={
+        "User-Agent": "econvitals-data housing-monitor (+https://github.com/econvitals/econvitals-data)"})
+    r.raise_for_status()
+    text = r.content.decode("utf-8-sig", errors="replace")
+    first = text[:4096].split("\n", 1)[0].strip()
+    if first.lower().startswith("<") or "<html" in text[:4096].lower():
+        raise RuntimeError("FHFA served an HTML page, not the HPI master CSV — the file moved?")
+    if [c.strip() for c in first.split(",")] != FHFA_COLUMNS:
+        raise RuntimeError("FHFA HPI master CSV header changed: %r" % first[:200])
+    if text.count("\n") < 100_000:
+        raise RuntimeError("FHFA HPI master CSV is truncated (%d lines)" % text.count("\n"))
+    rows = [row for row in csv.DictReader(io.StringIO(text))
+            if row["hpi_type"] == "traditional" and row["hpi_flavor"] == "purchase-only"
+            and row["frequency"] == "monthly" and row["place_id"].strip() == "USA"]
+    if len(rows) < 300:
+        raise RuntimeError("FHFA HPI master CSV: only %d U.S. monthly purchase-only rows" % len(rows))
+    _fhfa_rows = rows
+    return rows
+
+
+def fhfa_series(name):
+    """FHFA U.S. purchase-only HPI, monthly (Jan 1991 = 100): `HPI_PO` seasonally
+    adjusted, `HPI_PO_NSA` not. Returns sorted list[(date, value)]."""
+    col = FHFA_SERIES.get(name)
+    if col is None:
+        raise RuntimeError("unknown FHFA series %r (one of %s)" % (name, ", ".join(FHFA_SERIES)))
+    obs = []
+    for row in _fhfa_us_po_monthly():
+        v = (row.get(col) or "").strip()
+        if v in ("", "-", ".", "NA"):
+            continue
+        obs.append((dt.date(int(row["yr"]), int(row["period"]), 1), float(v.replace(",", ""))))
+    obs.sort(key=lambda o: o[0])
+    if not obs:
+        raise RuntimeError("FHFA %s: no observations" % name)
+    return obs
+
+
 # ── resolver ─────────────────────────────────────────────────────────────────
-# fred      — series fetched live this run
+# fred      — FRED series fetched live this run
+# fhfa      — FHFA house-price series fetched live this run (FHFA's own file, not FRED)
 # config    — rows served from the editorial value (no source block, or a failed
 #             fetch with nothing in the last-good store)
 # last_good — rows served from a previously fetched, dated value
@@ -122,7 +187,10 @@ def fred_series(series_id, start="1995-01-01"):
 #             as chartbook's render/known_broken_charts.txt, and the same rule: it is a
 #             DEBT LIST, not a dismissal — `until` is a review date and the run fails
 #             again once it passes, so nothing can quietly become permanent.
-USED = {"fred": 0, "config": 0, "last_good": 0, "failed": 0, "known_broken": 0}
+USED = {"fred": 0, "fhfa": 0, "config": 0, "last_good": 0, "failed": 0, "known_broken": 0}
+# Providers the row being computed has read from (reset per row in main), so a row with an
+# FHFA house-price series in it is tagged `_source: "fhfa"` rather than "fred".
+_ROW_PROVIDERS = set()
 
 VALUE_KEYS = ("val", "spark", "v", "p", "d", "dir")
 
@@ -145,11 +213,17 @@ def _kb_current(kb):
 
 
 def get_series(key):
-    """Series for a config key — every key is a FRED series id. Returns sorted
-    list[(date, value)]. Raises if FRED yields nothing, which the caller turns into
-    "keep the editorial value already in config"."""
+    """Series for a config key — `fhfa:<name>` reads FHFA's master file, anything else is
+    a FRED series id. Returns sorted list[(date, value)]. Raises if the source yields
+    nothing, which the caller turns into "serve last-good, else the config value"."""
+    if str(key).startswith("fhfa:"):
+        obs = fhfa_series(key[len("fhfa:"):])
+        USED["fhfa"] += 1
+        _ROW_PROVIDERS.add("fhfa")
+        return obs
     obs = fred_series(key)
     USED["fred"] += 1
+    _ROW_PROVIDERS.add("fred")
     return obs
 
 
@@ -202,9 +276,9 @@ def t_yoy(src):
 
 
 def t_real_yoy(src):
-    cs = get_series(src["series"])
+    hp = get_series(src["series"])
     cpi = get_series(src["deflator"])
-    real = [(d, v / val_on_or_before(cpi, d)) for d, v in cs if val_on_or_before(cpi, d)]
+    real = [(d, v / val_on_or_before(cpi, d)) for d, v in hp if val_on_or_before(cpi, d)]
     ld, lv = real[-1]
     ya = val_on_or_before(real, ld - dt.timedelta(days=365))
     pct = (lv / ya - 1) * 100
@@ -381,7 +455,11 @@ def main():
     cfg = yaml.safe_load(CONFIG_PATH.read_text())
 
     last_good = load_last_good()
-    fresh_good = dict(last_good)   # carried forward, refreshed row by row
+    # Carried forward, refreshed row by row — but only for rows the config still wires, so
+    # a row that is renamed or re-sourced does not leave its old value in the public store.
+    wired_keys = {"%s/%s" % (sec["id"], item.get("id"))
+                  for sec in cfg["sections"] for item in sec["items"] if item.get("source")}
+    fresh_good = {k: v for k, v in last_good.items() if k in wired_keys}
 
     sections_out = []
     dates = []
@@ -402,11 +480,12 @@ def main():
                 row["_source"] = "editorial"
             else:
                 wired += 1
+                _ROW_PROVIDERS.clear()
                 try:
                     res = TRANSFORMS[src["transform"]](src)
                     keep = {k: res[k] for k in VALUE_KEYS if k in res}
                     row.update(keep)
-                    row["_source"] = "fred"
+                    row["_source"] = "fhfa" if "fhfa" in _ROW_PROVIDERS else "fred"
                     if res.get("date"):
                         row["_date"] = res["date"].isoformat()
                         dates.append(res["date"])
@@ -450,7 +529,7 @@ def main():
     # dates (live or last-good). With nothing dated it stays empty and the page
     # renders "—"; it must never fall back to today's wall clock.
     freshest = max(dates) if dates else None
-    asof = "Updated %s · live via FRED · calibration editorial" % fmt_date(today)
+    asof = "Updated %s · live via FRED and FHFA · calibration editorial" % fmt_date(today)
     held_n = USED["failed"] + USED["known_broken"]
     if held_n:
         asof = ("Updated %s · %d of %d live indicators unavailable, held at last "

@@ -5,10 +5,10 @@ name: Housing Monitor refresh
 # now lives in builders/housing-monitor/ and the data publishes from this repo via raw
 # URLs — no Netlify deploy is involved.
 #
-# FRED-ONLY here: econvitals is deliberately Macrobond-free (Macrobond is retired),
-# so no macrolib/Macrobond secrets. fetch_housing.py's Macrobond attempt always
-# fails and falls through to FRED; no synthetic (FRED-less) series remain as of
-# 2026-07-30 (FRED added native equivalents for the last two).
+# FRED plus FHFA here: econvitals is deliberately Macrobond-free (Macrobond is retired),
+# so no macrolib/Macrobond secrets. House prices come straight from FHFA's keyless HPI
+# master file (since 2026-11-02, replacing FRED's pre-approval-only Case-Shiller); every
+# other series is FRED.
 # Secrets required: FRED_API_KEY.
 
 on:
@@ -33,7 +33,7 @@ jobs:
           python-version: "3.12"
       - name: Install dependencies
         run: pip install -r builders/housing-monitor/requirements.txt
-      - name: Fetch housing data (FRED)
+      - name: Fetch housing data (FRED + FHFA)
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python builders/housing-monitor/fetch_housing.py

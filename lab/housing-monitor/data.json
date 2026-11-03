@@ -43,10 +43,10 @@
       "kind": "gauges",
       "items": [
         {
-          "id": "cs_yoy",
-          "name": "Case-Shiller national, YoY",
+          "id": "hpi_yoy",
+          "name": "FHFA house price index, YoY",
           "unit": "% nom",
-          "val": "+2.1",
+          "val": "+2.4",
           "pos": 24,
           "tone": "cool",
           "band": [
@@ -58,15 +58,15 @@
             "label": "avg ≈5%"
           },
           "badge": "Cooling",
-          "note": "14th straight month of deceleration; weakest since Jun 2023.",
-          "_source": "fred",
+          "note": "FHFA’s purchase-only index (repeat sales on conforming mortgages). Near 2–2½% for a year, about half its long-run pace.",
+          "_source": "fhfa",
           "_date": "2026-08-01"
         },
         {
           "id": "real_yoy",
           "name": "Real home price, YoY (CPI-adj.)",
           "unit": "% real",
-          "val": "−1.2",
+          "val": "−0.9",
           "pos": 18,
           "tone": "cool",
           "band": [
@@ -78,15 +78,15 @@
             "label": "0%"
           },
           "badge": "Falling",
-          "note": "Prices now losing ground to inflation — the quiet correction.",
-          "_source": "fred",
+          "note": "FHFA house prices deflated by the CPI. Prices now losing ground to inflation — the quiet correction.",
+          "_source": "fhfa",
           "_date": "2026-08-01"
         },
         {
           "id": "price_to_rent",
           "name": "Price-to-rent ratio",
           "unit": "idx, 2000=100",
-          "val": "131",
+          "val": "129",
           "pos": 79,
           "tone": "hot",
           "band": [
@@ -98,8 +98,8 @@
             "label": "fund."
           },
           "badge": "Stretched",
-          "note": "Dallas Fed's single best leading indicator; well above fundamentals.",
-          "_source": "fred",
+          "note": "FHFA house prices over CPI rent. Dallas Fed's single best leading indicator; well above fundamentals.",
+          "_source": "fhfa",
           "_date": "2026-08-01"
         },
         {
@@ -126,7 +126,7 @@
           "id": "median_vs_2019",
           "name": "Home prices vs. 2019",
           "unit": "% cum.",
-          "val": "+60",
+          "val": "+65",
           "pos": 84,
           "tone": "hot",
           "band": [
@@ -138,8 +138,8 @@
             "label": "'19"
           },
           "badge": "Near peak",
-          "note": "The cumulative run-up since before the pandemic. Repeat-sales, so a change in which homes happen to sell cannot move it.",
-          "_source": "fred",
+          "note": "The cumulative run-up since before the pandemic, on FHFA’s index. Repeat-sales, so a change in which homes happen to sell cannot move it.",
+          "_source": "fhfa",
           "_date": "2026-08-01"
         }
       ]
@@ -385,11 +385,12 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker's colour is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Nov 3 2026 · live via FRED · calibration editorial",
+  "asof": "Updated Nov 3 2026 · live via FRED and FHFA · calibration editorial",
   "data_through": "Oct 29 2026",
-  "generated_at": "2026-11-03T03:14:19+00:00",
+  "generated_at": "2026-11-03T04:33:06+00:00",
   "sources": {
-    "fred": 24,
+    "fred": 20,
+    "fhfa": 4,
     "config": 0,
     "last_good": 0,
     "failed": 0,

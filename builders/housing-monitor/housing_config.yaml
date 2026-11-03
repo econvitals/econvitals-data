@@ -2,7 +2,8 @@
 # Housing Bubble Monitor — editorial config (the ONLY file hand-edited post-build)
 # ----------------------------------------------------------------------------
 # fetch_housing.py reads this, pulls live values for every indicator that has a
-# `source:` block (from FRED — each key IS a FRED series id), and writes data.json
+# `source:` block (each key IS a FRED series id, except `fhfa:HPI_PO`, which is FHFA's
+# purchase-only house price index read from FHFA's own file), and writes data.json
 # in the shape housing.js renders. Everything NOT computed lives here:
 #
 #   pos   0(cool)–100(hot) — current temperature on the gauge. EDITORIAL, not
@@ -19,6 +20,10 @@
 # To wire a parked row to live data: give it a `source:` block whose `series` is a
 # FRED id (see the wired rows for the pattern). To re-calibrate: edit pos / band /
 # ref / tone / note.
+#
+# NO FRED SERIES TAGGED "Copyrighted: Pre-approval required" may be used here (St. Louis
+# Fed takedown request, 2026-11-02). That is why house prices are FHFA's, not Case-Shiller's:
+# FRED's CSUSHPISA is S&P CoreLogic's licensed index. Check a new FRED id's tags first.
 # ============================================================================
 
 masthead:
@@ -49,14 +54,14 @@ verdict:
 # this file were once value-verified against their twin on the retired Macrobond
 # feed, before that subscription ended 2026-07-25: MORTGAGE30US, EXHOSLUSM495S,
 # HOSSUPUSM673N, MSPUS, HSN1F, HOSMEDUSM052N, HOEREPHRE, CPIAUCSL and HOUST (that
-# last one matched to rel 0.000). The rest were never twinned — CSUSHPISA is a
-# licensed S&P product that vendor tier didn't carry, and CUSR0000SEHA,
+# last one matched to rel 0.000). The rest were never twinned — CUSR0000SEHA,
 # MEHOINUSA646N, FIXHAI, DRSFRMACBS, SUBLPDHMSENQ, ACTLISCOUUS, PRIREDCOUUS,
-# MEDDAYONMARUS are FRED-native here.
+# MEDDAYONMARUS are FRED-native here. `fhfa:HPI_PO` (FHFA's U.S. purchase-only index,
+# monthly, SA) replaced Case-Shiller CSUSHPISA on 2026-11-02; the builder's parse of FHFA's
+# file matched FRED's twin HPIPONM226S on all 428 months that day.
 #
 # HOSMEDUSM052N's FRED history only goes back to 2025-06 (a genuinely new series),
-# so the "vs. 2019" gauge below can't be recomputed from it and keeps its frozen
-# editorial value — not fixable without a paid source.
+# so the "vs. 2019" gauge below reads a repeat-sales index instead (see its comment).
 
 sections:
   # ── 01 · Price & valuation ────────────────────────────────────────────────
@@ -66,39 +71,39 @@ sections:
     tag: "momentum cool · levels stretched"
     kind: gauges
     items:
-      - id: cs_yoy
-        name: "Case-Shiller national, YoY"
+      - id: hpi_yoy
+        name: "FHFA house price index, YoY"
         unit: "% nom"
-        val: "+0.7"
+        val: "+2.4"
         pos: 24
         tone: cool
         band: [6, 96]
         ref: {pos: 52, label: "avg ≈5%"}
         badge: "Cooling"
-        note: "14th straight month of deceleration; weakest since Jun 2023."
-        source: {transform: yoy, series: CSUSHPISA, fmt: {decimals: 1, sign: true}}
+        note: "FHFA’s purchase-only index (repeat sales on conforming mortgages). Near 2–2½% for a year, about half its long-run pace."
+        source: {transform: yoy, series: "fhfa:HPI_PO", fmt: {decimals: 1, sign: true}}
       - id: real_yoy
         name: "Real home price, YoY (CPI-adj.)"
         unit: "% real"
-        val: "−2.4"
+        val: "−0.9"
         pos: 18
         tone: cool
         band: [8, 94]
         ref: {pos: 50, label: "0%"}
         badge: "Falling"
-        note: "Prices now losing ground to inflation — the quiet correction."
-        source: {transform: real_yoy, series: CSUSHPISA, deflator: CPIAUCSL, fmt: {decimals: 1, sign: true}}
+        note: "FHFA house prices deflated by the CPI. Prices now losing ground to inflation — the quiet correction."
+        source: {transform: real_yoy, series: "fhfa:HPI_PO", deflator: CPIAUCSL, fmt: {decimals: 1, sign: true}}
       - id: price_to_rent
         name: "Price-to-rent ratio"
         unit: "idx, 2000=100"
-        val: "131"
+        val: "129"
         pos: 79
         tone: hot
         band: [40, 88]
         ref: {pos: 45, label: "fund."}
         badge: "Stretched"
-        note: "Dallas Fed's single best leading indicator; well above fundamentals."
-        source: {transform: ratio_index, num: CSUSHPISA, den: CUSR0000SEHA, base_year: 2000, fmt: {decimals: 0}}
+        note: "FHFA house prices over CPI rent. Dallas Fed's single best leading indicator; well above fundamentals."
+        source: {transform: ratio_index, num: "fhfa:HPI_PO", den: CUSR0000SEHA, base_year: 2000, fmt: {decimals: 0}}
       - id: price_to_income
         name: "Price-to-income ratio"
         unit: "× median"
@@ -113,13 +118,13 @@ sections:
       - id: median_vs_2019
         name: "Home prices vs. 2019"
         unit: "% cum."
-        val: "+58"
+        val: "+65"
         pos: 84
         tone: hot
         band: [30, 90]
         ref: {pos: 30, label: "'19"}
         badge: "Near peak"
-        note: "The cumulative run-up since before the pandemic. Repeat-sales, so a change in which homes happen to sell cannot move it."
+        note: "The cumulative run-up since before the pandemic, on FHFA’s index. Repeat-sales, so a change in which homes happen to sell cannot move it."
         # RE-ANCHORED 2026-09-20, and the row is live again. It used to read NAR's median
         # existing-home sale price (HOSMEDUSM052N) against a 2019 base. FRED truncated every
         # NAR series to a rolling 13 months on 2026-08-11 and ALFRED holds NO earlier vintage
@@ -128,12 +133,13 @@ sections:
         # Of the two closures NEXT.md offered, this is the second: pinning NAR's 2019 monthly
         # medians as a constant needs a citable source for twelve numbers, and NAR does not
         # publish that history free, so it would have been a hand-typed figure with no
-        # provenance -- the one thing the house never does. Case-Shiller carries the full
-        # record, is already the source for the two rows above, and is REPEAT-SALES, which is
-        # a better answer for a valuation tile than a median contaminated by mix shift. What
-        # changed with it: the tile is "Home prices", not "Median sale price", because those
-        # are different measures and the label has to say which one is on the page.
-        source: {transform: pct_vs_year, series: CSUSHPISA, base_year: 2019, fmt: {decimals: 0, sign: true}}
+        # provenance -- the one thing the house never does. A REPEAT-SALES index carries the
+        # full record and is a better answer for a valuation tile than a median contaminated
+        # by mix shift; the tile is "Home prices", not "Median sale price", because those are
+        # different measures and the label has to say which one is on the page. It read
+        # Case-Shiller until 2026-11-02 and FHFA's purchase-only index since (FRED's
+        # Case-Shiller is pre-approval-only — see the header).
+        source: {transform: pct_vs_year, series: "fhfa:HPI_PO", base_year: 2019, fmt: {decimals: 0, sign: true}}
 
   # ── 02 · Affordability ──────────────────────────────────────────────────--
   - id: affordability

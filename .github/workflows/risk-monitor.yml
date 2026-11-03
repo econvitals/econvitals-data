@@ -1,6 +1,7 @@
 name: Risk Monitor refresh
 
-# Daily refresh of lab/risk-monitor/data.json. All gauges are FRED pulls; the
+# Daily refresh of lab/risk-monitor/data.json. All gauges are FRED pulls except the
+# home-price side of price-to-rent (FHFA's keyless HPI master file, since 2026-11-02); the
 # editorial register.yaml + read.md (in builders/risk-monitor/) are re-baked in each
 # run (PyYAML). Commits the changed JSON only. Fast market gauges move daily.
 # Relocated from econvitals/site (2026-08-10, chart-system rebuild Stage B): the data
@@ -29,7 +30,7 @@ jobs:
           python-version: "3.12"
       - name: Install dependencies
         run: pip install -r builders/risk-monitor/requirements.txt
-      - name: Fetch risk data (FRED)
+      - name: Fetch risk data (FRED + FHFA)
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python builders/risk-monitor/fetch_data.py

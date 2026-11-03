@@ -5,9 +5,13 @@ Build data.json for the AI Monitor (jasonfurman.org/test/ai-monitor/).
 Phase 1 data layer. Two kinds of inputs are merged:
 
   * AUTO   — series pulled live at each run:
-             - FRED: Indeed software-dev postings, BEA GDP contributions
-               (info-processing equipment + software), nonfarm business
-               productivity (output per hour).
+             - FRED: BEA GDP contributions (info-processing equipment +
+               software), nonfarm business productivity (output per hour).
+             - Indeed Hiring Lab job postings tracker (GitHub, CC BY 4.0):
+               US software-development postings index, "total postings".
+               (Until 2026-11-02 this came from FRED's IHLIDXUSTPSOFTDEVE,
+               tagged "Copyrighted: Pre-approval required" there; Indeed's own
+               release is the same index and is openly licensed.)
              - Census C30 (privsatime.xlsx): data-center construction, SAAR.
              - Indeed Hiring Lab ai-tracker (GitHub, CC-BY 4.0): AI share of
                US job postings.
@@ -29,6 +33,7 @@ Design rules (match test/how-americans-are-doing):
 
 Run:  python3 fetch_data.py
 """
+import csv
 import io
 import json
 import os
@@ -56,13 +61,19 @@ BASKET = ["NVDA", "MSFT", "GOOGL", "AMZN", "META", "AVGO", "TSM", "AMD",
 # Alphabet share classes, so GOOG rides along for the weight sum.
 MAG7 = ["AAPL", "MSFT", "GOOGL", "GOOG", "AMZN", "NVDA", "META", "TSLA"]
 
-FRED_SOFTDEV = "IHLIDXUSTPSOFTDEVE"       # Indeed US software-dev postings, daily index
 FRED_CONTRIB_IPE = "Y034RY2Q224SBEA"      # GDP contribution: info-processing equipment
 FRED_CONTRIB_SW = "B985RY2Q224SBEA"       # GDP contribution: software
 FRED_OPHNFB = "OPHNFB"                    # Nonfarm business real output per hour
 
 C30_URL = "https://www.census.gov/construction/c30/xlsx/privsatime.xlsx"
 INDEED_AI_URL = "https://raw.githubusercontent.com/hiring-lab/ai-tracker/main/AI_posting.csv"
+# Indeed Hiring Lab's job postings tracker, by sector (CC BY 4.0). The "Software Development"
+# rows with variable "total postings" are the index FRED relayed as IHLIDXUSTPSOFTDEVE
+# (daily, Feb 1 2020 = 100): checked 2026-11-02, all 2,457 days 2020-02-01..2026-10-23 equal
+# to FRED's to its two published decimals ("new postings" is a different index).
+INDEED_SECTOR_URL = ("https://raw.githubusercontent.com/hiring-lab/job_postings_tracker/"
+                     "master/US/job_postings_by_sector_US.csv")
+INDEED_SOFTDEV = ("Software Development", "total postings")
 SPY_URL = ("https://www.ssga.com/us/en/intermediary/library-content/products/"
            "fund-data/etfs/us/holdings-daily-us-en-spy.xlsx")
 
@@ -255,7 +266,19 @@ def build_indeed_ai():
 
 
 def build_softdev():
-    obs = fred_obs(FRED_SOFTDEV, start="2018-01-01")
+    txt = http_get(INDEED_SECTOR_URL, timeout=120).decode("utf-8-sig")
+    name, var = INDEED_SOFTDEV
+    obs = []
+    for r in csv.DictReader(io.StringIO(txt)):
+        if r.get("display_name") == name and r.get("variable") == var \
+                and r.get("jobcountry", "US") == "US":
+            d, v = r["date"], (r.get("indeed_job_postings_index") or "").strip()
+            if v:
+                obs.append((int(d[:4]), int(d[5:7]), int(d[8:10]), float(v)))
+    if len(obs) < 365:
+        raise RuntimeError(f"Indeed job_postings_tracker: only {len(obs)} {name!r} / {var!r} rows")
+    obs.sort()
+    obs = [(y, m, v) for y, m, _, v in obs]
     monthly = monthly_mean(obs)
     ly, lm, _ = obs[-1]
     return {
@@ -460,8 +483,8 @@ SCOREBOARD_DEF = [
      "url": "https://github.com/hiring-lab/ai-tracker"},
     {"id": "indeed_swdev", "n": 6, "mode": "auto",
      "indicator": "Software-development postings index",
-     "source": "Indeed via FRED",
-     "url": "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE"},
+     "source": "Indeed Hiring Lab (CC BY 4.0)",
+     "url": "https://github.com/hiring-lab/job_postings_tracker"},
     {"id": "challenger_ai_share", "n": 7, "mode": "manual",
      "indicator": "AI-cited layoff announcements, share of total cuts",
      "source": "Challenger, Gray & Christmas", "url": "https://www.challengergray.com"},
@@ -500,7 +523,7 @@ def build_scoreboard(manual, indeed_ai, softdev, inhouse):
                        chart={"title": "US software-development job postings",
                               "units": "index, Feb 1 2020 = 100", "freq": "m",
                               "asof": softdev["asof"],
-                              "source": "Indeed via FRED (IHLIDXUSTPSOFTDEVE)",
+                              "source": "Indeed Hiring Lab (CC BY 4.0)",
                               "series": [{"name": "Postings index",
                                           "data": softdev["series"]}]})
         else:

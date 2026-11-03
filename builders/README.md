@@ -42,10 +42,19 @@ the editorial placeholder from `housing_config.yaml` labeled "live via FRED" and
 `data_through` with TODAY'S date, then exit 0 — so a broken feed read on the page as a fresh
 print and reported green. It now serves the failed row from `lab/housing-monitor/last-good.json`
 (the dated value that row last returned live, committed beside `data.json`), tags every row with
-`_source` (fred / last-good / fallback / editorial) and `_date`, computes `data_through` from real
+`_source` (fred / fhfa / last-good / fallback / editorial) and `_date`, computes `data_through` from real
 observation dates only, and exits 1. The commit step runs `if: always()` so the last-good page
 still publishes while the job reports red. Any new builder that keeps serving on a fetch failure
 owes the same three things: a dated last-good store, a per-row source flag, and a nonzero exit.
+
+**No FRED series tagged “Copyrighted: Pre-approval required” (St. Louis Fed takedown request,
+2026-11-02).** Check a new FRED id’s tags (`fred/series/tags`, the `cc` group) before wiring it;
+a licensed series is replaced from a permitted source, not dropped. So far: the housing and risk
+monitors read FHFA’s purchase-only house price index straight from FHFA’s keyless master file
+(`https://www.fhfa.gov/hpi/download/monthly/hpi_master.csv`, public domain) in place of FRED’s
+Case-Shiller, and the AI monitor reads Indeed’s software-development postings index from Indeed
+Hiring Lab’s own GitHub release (`hiring-lab/job_postings_tracker`, CC BY 4.0) in place of FRED’s
+`IHLIDXUSTPSOFTDEVE` — the same index to two decimals.
 
 **Not here:** maclow (private sell-side content — its builder, Action and data stay in
 `econvitals/site`), and built-vs-trend (its `lab/built-vs-trend/` data was copied once and
