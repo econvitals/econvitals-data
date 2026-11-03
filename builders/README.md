@@ -23,23 +23,23 @@ This is a PUBLIC repo — keys come only from those secrets (each script also fa
 
 **Builder inputs.** Editorial/config inputs that only the builder reads live next to the
 script in `builders/<slug>/` (`housing_config.yaml`, `cb_matrix_config.yaml`, the risk
-monitor's `register.yaml` + `read.md`). Data inputs that were seeded into this repo's
+monitor’s `register.yaml` + `read.md`). Data inputs that were seeded into this repo’s
 mirrored directories are read from there, so there is exactly one copy:
 `lab/ai-monitor/manual.json` + `inhouse.json` (update recipe:
 `builders/ai-monitor/manual_SOURCES.md`) and `lab/how-americans-are-doing/curated.json`.
 `lab/poverty-safety-net/geo.json` is committed and only rewritten if missing.
 
 **Push discipline (required for any writer of this repo).** Many writers push here — these
-crons, the fleet host's refresh pipeline, auto-pushes — so a plain `git push` can be
-rejected. Every workflow's commit step is the standard pattern: stage ONLY its own output,
+crons, the fleet host’s refresh pipeline, auto-pushes — so a plain `git push` can be
+rejected. Every workflow’s commit step is the standard pattern: stage ONLY its own output,
 skip the commit when nothing changed, then a 5-attempt push loop that rebases on the
 latest main (`git pull --rebase --autostash origin main`) after each rejection and fails
 loudly only if all five attempts lose the race. Copy that pattern into any new workflow;
-do not "simplify" it away.
+do not “simplify” it away.
 
 **A failed fetch is a failed run (housing-monitor, 2026-09-08).** Its fetcher used to publish
-the editorial placeholder from `housing_config.yaml` labeled "live via FRED" and stamped
-`data_through` with TODAY'S date, then exit 0 — so a broken feed read on the page as a fresh
+the editorial placeholder from `housing_config.yaml` labeled “live via FRED” and stamped
+`data_through` with TODAY’S date, then exit 0 — so a broken feed read on the page as a fresh
 print and reported green. It now serves the failed row from `lab/housing-monitor/last-good.json`
 (the dated value that row last returned live, committed beside `data.json`), tags every row with
 `_source` (fred / fhfa / last-good / fallback / editorial) and `_date`, computes `data_through` from real

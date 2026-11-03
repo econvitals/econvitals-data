@@ -10,7 +10,7 @@
 #         computed. Jason's calibration vs. the indicator's own history.
 #   band  [lo,hi] on the same 0–100 scale — the shaded historical range.
 #   ref   reference tick {pos,label} — e.g. the long-run average or the '06 peak.
-#   tone  cool | warm | hot — the marker colour (editorial temperature).
+#   tone  cool | warm | hot — the marker color (editorial temperature).
 #   badge short status chip.   note  one-line read.   slot:true  ◇ awaiting a feed.
 #
 # The fetcher fills val / spark / table v,p,d / asof from data. If a fetch fails
@@ -301,6 +301,6 @@ sections:
 footer:
   note: >-
     Each gauge places the current reading on a cool→hot scale relative to its own
-    history; the marker's colour is the editorial temperature, not the raw value.
+    history; the marker’s color is the editorial temperature, not the raw value.
     Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a
     published index — the live values underneath are real and sourced.
