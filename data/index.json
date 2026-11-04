@@ -2689,11 +2689,19 @@
       "latest_date": "2026-09-01"
     },
     {
+      "slug": "goods-balance-ex-data-centers-ytd-pct-gdp",
+      "category": "International Trade",
+      "title": "Goods Balance Excluding Data-Center Goods",
+      "type": "cycle_bar",
+      "units": "Percent of GDP, year to date through September",
+      "latest_date": "2026-01-01"
+    },
+    {
       "slug": "goods-balance-ex-gold-ytd-pct-gdp",
       "category": "International Trade",
       "title": "Goods Balance Excluding Gold: Year to Date",
       "type": "cycle_bar",
-      "units": "Percent of GDP, year to date through August",
+      "units": "Percent of GDP, year to date through September",
       "latest_date": "2026-01-01"
     },
     {
@@ -2911,6 +2919,14 @@
       "type": "line",
       "units": "Percent of capital spending",
       "latest_date": "2026-04-01"
+    },
+    {
+      "slug": "imports-data-centers-vs-other",
+      "category": "International Trade",
+      "title": "Goods Imports: Data-Center Goods vs. Everything Else",
+      "type": "line",
+      "units": "Index, 2024 Q4 = 100",
+      "latest_date": "2026-07-01"
     },
     {
       "slug": "industry-unemployment-scatter",
@@ -3438,7 +3454,7 @@
       "title": "National Financial Conditions Index",
       "type": "line",
       "units": "Index (positive = tighter than average)",
-      "latest_date": "2026-10-23"
+      "latest_date": "2026-10-30"
     },
     {
       "slug": "nondurable-goods-payrolls",
@@ -5134,7 +5150,7 @@
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-11-03"
+      "latest_date": "2026-11-04"
     },
     {
       "slug": "sp500-earnings-mag7",
@@ -5150,7 +5166,7 @@
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-11-03"
+      "latest_date": "2026-11-04"
     },
     {
       "slug": "sp500-vs-10y-since-oct6",
@@ -5281,6 +5297,22 @@
       "latest_date": "2026-09-01"
     },
     {
+      "slug": "trade-balance-change-since-2024",
+      "category": "International Trade",
+      "title": "Change in the Trade Balance by Component",
+      "type": "barh",
+      "units": "Billions of dollars",
+      "latest_date": "All other goods"
+    },
+    {
+      "slug": "trade-balance-data-centers-ytd-pct-gdp",
+      "category": "International Trade",
+      "title": "Trade Balance in Data-Center Goods",
+      "type": "cycle_bar",
+      "units": "Percent of GDP, year to date through September",
+      "latest_date": "2026-01-01"
+    },
+    {
       "slug": "trade-balance-decomposition",
       "category": "International Trade",
       "title": "Decomposition of the U.S. Trade Balance",
@@ -5289,11 +5321,19 @@
       "latest_date": "2025-01-01"
     },
     {
+      "slug": "trade-balance-ex-data-centers-ytd-pct-gdp",
+      "category": "International Trade",
+      "title": "Trade Balance Excluding Data-Center Goods",
+      "type": "cycle_bar",
+      "units": "Percent of GDP, year to date through September",
+      "latest_date": "2026-01-01"
+    },
+    {
       "slug": "trade-balance-ex-gold-ytd-pct-gdp",
       "category": "International Trade",
       "title": "Trade Balance Excluding Gold: Year to Date",
       "type": "cycle_bar",
-      "units": "Percent of GDP, year to date through August",
+      "units": "Percent of GDP, year to date through September",
       "latest_date": "2026-01-01"
     },
     {
