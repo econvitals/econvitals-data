@@ -262,7 +262,7 @@
       "title": "Brent Crude Oil Price",
       "type": "line",
       "units": "Dollars per barrel",
-      "latest_date": "2026-10-27"
+      "latest_date": "2026-11-03"
     },
     {
       "slug": "brent-futures",
@@ -3305,6 +3305,14 @@
       "latest_date": "2026-06-01"
     },
     {
+      "slug": "midterm-stock-moves-by-industry",
+      "category": "Static/Financial",
+      "title": "Stock Moves the Day After the Midterms, by Industry",
+      "type": "clumped_barh",
+      "units": "Percent change, Tuesday close to Wednesday close",
+      "latest_date": "2026-11-04"
+    },
+    {
       "slug": "mining-logging-payrolls",
       "category": "Employment",
       "title": "Mining and Logging Employment",
@@ -5134,7 +5142,7 @@
       "title": "Software Development Job Postings on Indeed",
       "type": "line",
       "units": "Index (Feb 1, 2020 = 100)",
-      "latest_date": "2026-10-23"
+      "latest_date": "2026-10-30"
     },
     {
       "slug": "software-publishers-payrolls",
@@ -5303,6 +5311,14 @@
       "type": "barh",
       "units": "Billions of dollars",
       "latest_date": "All other goods"
+    },
+    {
+      "slug": "trade-balance-data-centers-stack-ytd-pct-gdp",
+      "category": "International Trade",
+      "title": "Trade Balance: Data-Center Goods vs. Everything Else",
+      "type": "contrib_stack",
+      "units": "Percent of GDP, year to date through September",
+      "latest_date": "2026-01-01"
     },
     {
       "slug": "trade-balance-data-centers-ytd-pct-gdp",
