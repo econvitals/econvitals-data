@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-05T11:42:55+00:00",
+    "generated_at": "2026-11-05T13:33:05+00:00",
     "run_date": "2026-11-05",
-    "builder_commit": "b76c77bc4",
+    "builder_commit": "0e8969e8d",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-05T06:44:21-05:00"
+      "as_of": "2026-11-05T08:34:30-05:00"
     }
   },
   "sections": {
@@ -113,11 +113,11 @@
         },
         {
           "label": "Brent",
-          "value": 96.029999,
-          "display": "$96",
+          "value": 97.260002,
+          "display": "$97",
           "period": "2026-11-05",
-          "change": 57.8,
-          "change_display": "+57.8% YTD",
+          "change": 59.8,
+          "change_display": "+59.8% YTD",
           "provenance": "hard"
         },
         {
@@ -549,23 +549,23 @@
             "rows": [
               {
                 "label": "Productivity",
-                "latest_q": 1.42231,
-                "q4q4": 2.242194,
-                "through": "Q2 2026",
+                "latest_q": 3.554555,
+                "q4q4": 2.057524,
+                "through": "Q3 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Compensation per hour",
-                "latest_q": 2.603449,
-                "q4q4": 3.671086,
-                "through": "Q2 2026",
+                "latest_q": 2.867067,
+                "q4q4": 4.493561,
+                "through": "Q3 2026",
                 "provenance": "hard"
               },
               {
                 "label": "Unit labor costs",
-                "latest_q": 1.166694,
-                "q4q4": 1.397726,
-                "through": "Q2 2026",
+                "latest_q": -0.662872,
+                "q4q4": 2.386126,
+                "through": "Q3 2026",
                 "provenance": "hard"
               },
               {
@@ -1701,14 +1701,14 @@
           "label": "Compensation per hour",
           "ann_1": null,
           "ann_3": null,
-          "ann_12": 3.671086,
-          "through": "Q2 2026",
+          "ann_12": 4.493561,
+          "through": "Q3 2026",
           "provenance": "hard"
         }
       ],
       "footnote": "Real earnings deflate nominal pay by the CPI: all employees by CPI-U, production and nonsupervisory employees by CPI-W \u2014 the deflators BLS's Real Earnings release uses for each group.",
       "pce_equivalent": {
-        "value": 1.7227,
+        "value": 1.6378,
         "date": "2026-09-01",
         "through": "Sep 2026"
       }
@@ -7093,11 +7093,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 16.85,
+                "value": 16.83,
                 "as_of": "2026-11-05",
-                "chg_1d": 0.24,
-                "chg_1w": -0.35,
-                "chg_ytd": 1.9,
+                "chg_1d": 0.22,
+                "chg_1w": -0.37,
+                "chg_ytd": 1.88,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -7118,18 +7118,18 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 101.57,
+                "value": 101.61,
                 "as_of": "2026-11-05",
                 "chg_1d": 0.1,
-                "chg_1w": -0.5,
-                "chg_ytd": 3.3,
+                "chg_1w": -0.4,
+                "chg_ytd": 3.4,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "EUR/USD",
-                "value": 1.1219,
+                "value": 1.1218,
                 "as_of": "2026-11-05",
                 "chg_1d": 0.1,
                 "chg_1w": -0.3,
@@ -7140,20 +7140,20 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3452,
+                "value": 1.3462,
                 "as_of": "2026-11-05",
                 "chg_1d": 0.1,
                 "chg_1w": -0.6,
-                "chg_ytd": 0.0,
+                "chg_ytd": -0.0,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "USD/JPY",
-                "value": 158.4,
+                "value": 158.5,
                 "as_of": "2026-11-05",
-                "chg_1d": -0.0,
+                "chg_1d": 0.0,
                 "chg_1w": 0.4,
                 "chg_ytd": 1.0,
                 "is_yield": false,
@@ -7162,7 +7162,7 @@
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8179,
+                "value": 0.8178,
                 "as_of": "2026-11-05",
                 "chg_1d": 0.1,
                 "chg_1w": -0.7,
@@ -7173,11 +7173,11 @@
               },
               {
                 "label": "USD/CAD",
-                "value": 1.3961,
+                "value": 1.3973,
                 "as_of": "2026-11-05",
-                "chg_1d": -0.1,
-                "chg_1w": -0.2,
-                "chg_ytd": 1.7,
+                "chg_1d": -0.0,
+                "chg_1w": -0.1,
+                "chg_ytd": 1.8,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -7200,55 +7200,55 @@
             "rows": [
               {
                 "label": "WTI ($/bbl, front-month)",
-                "value": 88.8,
+                "value": 89.9,
                 "as_of": "2026-11-05",
-                "chg_1d": 0.8,
-                "chg_1w": -12.9,
-                "chg_ytd": 54.7,
+                "chg_1d": 2.0,
+                "chg_1w": -11.9,
+                "chg_ytd": 56.6,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Brent ($/bbl, front-month)",
-                "value": 96.1,
+                "value": 97.3,
                 "as_of": "2026-11-05",
-                "chg_1d": 1.5,
-                "chg_1w": -16.4,
-                "chg_ytd": 57.8,
+                "chg_1d": 2.8,
+                "chg_1w": -15.3,
+                "chg_ytd": 59.9,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Natural gas ($/MMBtu, front-month)",
-                "value": 2.94,
+                "value": 2.96,
                 "as_of": "2026-11-05",
-                "chg_1d": -0.6,
-                "chg_1w": -0.3,
-                "chg_ytd": -20.2,
+                "chg_1d": 0.1,
+                "chg_1w": 0.3,
+                "chg_ytd": -19.7,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold ($/oz, front-month)",
-                "value": 4145.0,
+                "value": 4124.0,
                 "as_of": "2026-11-05",
-                "chg_1d": 1.8,
-                "chg_1w": 2.8,
-                "chg_ytd": -4.5,
+                "chg_1d": 1.2,
+                "chg_1w": 2.3,
+                "chg_ytd": -5.0,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver ($/oz, front-month)",
-                "value": 52.88,
+                "value": 52.56,
                 "as_of": "2026-11-05",
-                "chg_1d": 1.4,
-                "chg_1w": 1.3,
-                "chg_ytd": -24.6,
+                "chg_1d": 0.8,
+                "chg_1w": 0.7,
+                "chg_ytd": -25.1,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -8535,7 +8535,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-11-04",
         "anchor_midpoint": 3.875,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-04)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-05)",
         "current_range_bp": [
           375,
           400
@@ -9687,7 +9687,7 @@
             "unemp": 5.2,
             "cpi": 4.6,
             "core": 4.4,
-            "ten": 15.55,
+            "ten": 15.18,
             "pol": 13.75,
             "asof": "Sep 2026"
           }
