@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-06T11:40:17+00:00",
+  "generated_at": "2026-11-06T23:30:12+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
@@ -18,13 +18,101 @@
    "window_from": "2026-10-28",
    "latest_decision": "2026-10-28",
    "lean": {
-    "hold": 3,
-    "hike": 11,
+    "hold": 2,
+    "hike": 13,
     "cut": 0
    },
-   "n_desks": 14,
+   "n_desks": 15,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "The Lindsey Group",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": null,
+     "note": "Report brought nothing to deter a December hike; credit conditions a risk",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b19caccefac87"
+    },
+    {
+     "institution": "Piper Sandler",
+     "person": "Kurt Lewis",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": "hike in March, then pause at 4.25-4.50%",
+     "note": "gradual tightening; strong October labor data",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b2a340c217ddc"
+    },
+    {
+     "institution": "PNC",
+     "person": "LeBlanc",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": "another hike in March",
+     "note": "Strong, broad October jobs report",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b1607fb381b74"
+    },
+    {
+     "institution": "MS",
+     "person": "Gapen",
+     "call": "hike",
+     "size_bp": null,
+     "meeting": "2026-12",
+     "path": null,
+     "note": "strong payrolls keep Fed on track for December hike",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b15e484e2a79c"
+    },
+    {
+     "institution": "JPM",
+     "person": "Feroli",
+     "call": "hike",
+     "size_bp": null,
+     "meeting": null,
+     "path": "Hike in December; then quarterly pace absent inflation surprise",
+     "note": "Data suggest little need to insure against labor risks; more restraint warranted",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b1dd2213d3c44"
+    },
+    {
+     "institution": "Evenflow",
+     "person": "Sumerlin",
+     "call": "hike",
+     "size_bp": null,
+     "meeting": "2026-12",
+     "path": null,
+     "note": "report makes it hard to pass up expected hike",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b12578797717e"
+    },
+    {
+     "institution": "EV",
+     "person": "Krishna Guha",
+     "call": "hike",
+     "size_bp": null,
+     "meeting": "2026-12",
+     "path": "one more hike is base case, conditional on market stabilization",
+     "note": "strong payrolls support remaining hike if markets durably stabilize",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b271372dd907c"
+    },
+    {
+     "institution": "Citi",
+     "person": "Hollenhorst",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": null,
+     "note": "labor market stable and not inflationary; hold possible if tech sell-off continues",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b157d0d39fc8e"
+    },
     {
      "institution": "BOFA",
      "person": null,
@@ -48,39 +136,6 @@
      "msg_id": "1a1ad83a93afdfd3"
     },
     {
-     "institution": "JPM",
-     "person": null,
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12",
-     "path": null,
-     "note": "Continues to expect a 25bp hike at the December FOMC meeting.",
-     "as_of": "2026-11-05",
-     "msg_id": "1a1addfc59e504bf"
-    },
-    {
-     "institution": "EV",
-     "person": "Guha",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12",
-     "path": "One further hike after December is unlikely; two-hike total baseline then pause",
-     "note": "Dovish hike in December more likely than not, but could slip to January if FCI still in motion",
-     "as_of": "2026-11-05",
-     "msg_id": "1a1ad3512117b426"
-    },
-    {
-     "institution": "The Lindsey Group",
-     "person": null,
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12",
-     "path": null,
-     "note": "Hike likely barring worsening credit conditions or weak consumption; oil pass-through concern",
-     "as_of": "2026-11-04",
-     "msg_id": "1a1a6a6194e29bea"
-    },
-    {
      "institution": "GS",
      "person": null,
      "call": "hike",
@@ -92,17 +147,6 @@
      "msg_id": "1a1a88e1590bcdf4"
     },
     {
-     "institution": "Citi",
-     "person": "Porto",
-     "call": "hold",
-     "size_bp": 0,
-     "meeting": "2026-11-04",
-     "path": "on hold in coming meetings",
-     "note": "Post-election deterioration in inflation expectations; Selic still substantially contractionary",
-     "as_of": "2026-11-04",
-     "msg_id": "1a1a8e2e75b58837"
-    },
-    {
      "institution": "MPP",
      "person": null,
      "call": "hold",
@@ -112,39 +156,6 @@
      "note": "Hawkish rhetoric plus elevated yields substitute for further hikes",
      "as_of": "2026-11-01",
      "msg_id": "1a1976e29f1949ba"
-    },
-    {
-     "institution": "MS",
-     "person": "Gapen",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12",
-     "path": "another 25bp hike in March 2027",
-     "note": "growth resilient but supply-side driven; October FOMC messaging consistent with gradual tightening",
-     "as_of": "2026-10-30",
-     "msg_id": "1a18b33508fa64df"
-    },
-    {
-     "institution": "Piper Sandler",
-     "person": "Kurt Lewis",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": null,
-     "path": "hikes expected in December and March",
-     "note": "committee communications/voting signaled stronger December lean",
-     "as_of": "2026-10-29",
-     "msg_id": "1a1875e55bbb1dd4"
-    },
-    {
-     "institution": "PNC",
-     "person": "Faucher",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12-09",
-     "path": "additional hike at mid-March FOMC meeting",
-     "note": "September PCE inflation (0.5% headline, 0.3% core) supports hike despite weak income growth",
-     "as_of": "2026-10-29",
-     "msg_id": "1a1885c33ca2401b"
     },
     {
      "institution": "SGH Macro Advisors",
@@ -182,6 +193,24 @@
    ],
    "market_quotes": [
     {
+     "institution": "Bridgewater",
+     "quote": "interest rate markets price potential economic weakness by meaningfully reducing expectations of further hikes",
+     "meeting": null,
+     "p_hike": null,
+     "p_cut": null,
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b0f5a1a77c82e"
+    },
+    {
+     "institution": "PNC",
+     "quote": "Odds of a December rate hike are back up to near 80%",
+     "meeting": "2026-12",
+     "p_hike": 0.8,
+     "p_cut": null,
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b1607fb381b74"
+    },
+    {
      "institution": "EV",
      "quote": "market pricing for a December hike is still 65-70 per cent at the time of writing",
      "meeting": "2026-12",
@@ -198,24 +227,6 @@
      "p_cut": null,
      "as_of": "2026-11-05",
      "msg_id": "1a1adaa58ae944e4"
-    },
-    {
-     "institution": "JPM",
-     "quote": "Market pricing for a Fed rate hike at the December FOMC meeting declined from around 80% to just under 70%.",
-     "meeting": "2026-12",
-     "p_hike": 0.7,
-     "p_cut": null,
-     "as_of": "2026-11-05",
-     "msg_id": "1a1addfc59e504bf"
-    },
-    {
-     "institution": "JPM",
-     "quote": "OIS forwards have taken a full hike out",
-     "meeting": null,
-     "p_hike": null,
-     "p_cut": null,
-     "as_of": "2026-11-04",
-     "msg_id": "1a1a8a4e26f1156e"
     }
    ],
    "statement": {
@@ -235,7 +246,7 @@
     "measure": "CPI excluding food and energy (BLS, via FRED)",
     "source": "fred:CPILFESL|yoy",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -255,14 +266,14 @@
    "calls": [
     {
      "institution": "JPM",
-     "person": "Fuzesi",
+     "person": "Monteiro",
      "call": "hike",
      "size_bp": null,
      "meeting": null,
-     "path": "two more ECB hikes (December and March); third hike risk less clear",
-     "note": "Energy prices still elevated despite post-midterm fall; offsets from growth risks and eased financial conditions",
-     "as_of": "2026-11-05",
-     "msg_id": "1a1aa98ad86d51b0"
+     "path": "Hikes in December and March, taking deposit rate to 3%",
+     "note": "Limited core pass-through, but energy shock adjustment shifts to policy rates",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b203b7aa6a202"
     },
     {
      "institution": "UIA",
@@ -410,7 +421,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -421,13 +432,35 @@
    "window_from": "2026-11-05",
    "latest_decision": "2026-11-05",
    "lean": {
-    "hold": 3,
-    "hike": 3,
+    "hold": 2,
+    "hike": 5,
     "cut": 0
    },
-   "n_desks": 6,
-   "consensus": "Split",
+   "n_desks": 7,
+   "consensus": "Hike",
    "calls": [
+    {
+     "institution": "JPM",
+     "person": "Monks",
+     "call": "hike",
+     "size_bp": null,
+     "meeting": null,
+     "path": "Next hike in February; December live",
+     "note": "Hawkish BoE; December needs second-round effects",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b19bc27193df0"
+    },
+    {
+     "institution": "BOFA",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": null,
+     "path": "another hike in Feb with risk of a third; earlier December move risk has risen",
+     "note": "Hawkish 8-1 vote, though some pushback on market pricing of 4 hikes.",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b0ba7b18acf4f"
+    },
     {
      "institution": "SGH Macro Advisors",
      "person": "Schleiger",
@@ -438,17 +471,6 @@
      "note": "Four MPC members signal more tightening; 4% only mildly restrictive against inflation projection peaking at 4.9%.",
      "as_of": "2026-11-05",
      "msg_id": "1a1adf0c9bf0cc4b"
-    },
-    {
-     "institution": "JPM",
-     "person": "Monks",
-     "call": "hold",
-     "size_bp": 0,
-     "meeting": "2026-12-17",
-     "path": "Next hike in February; December live but unlikely back-to-back; 1-2 more hikes total",
-     "note": "Lower energy prices ease urgency, absent knock-on effects from energy.",
-     "as_of": "2026-11-05",
-     "msg_id": "1a1ac8c3f61bb44d"
     },
     {
      "institution": "GS",
@@ -532,7 +554,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -550,6 +572,17 @@
    "n_desks": 6,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "Citi",
+     "person": "Clark",
+     "call": "hold",
+     "size_bp": 0,
+     "meeting": "2026-12",
+     "path": "No further hikes in 2027",
+     "note": "Slowing employment, negative output gap, underlying inflation pressure downward",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b1f90b64d35ef"
+    },
     {
      "institution": "JPM",
      "person": null,
@@ -571,17 +604,6 @@
      "note": "Energy-driven inflation expected to last longer and feed through; soft labor and growth favor waiting for January forecast",
      "as_of": "2026-10-30",
      "msg_id": "1a18e166974600c4"
-    },
-    {
-     "institution": "Citi",
-     "person": "Clark",
-     "call": "hold",
-     "size_bp": 0,
-     "meeting": null,
-     "path": null,
-     "note": "Expects no more BoC rate hikes; latest headline inflation forecasts premised on too-strong energy pass-through",
-     "as_of": "2026-10-30",
-     "msg_id": "1a18e189cb860504"
     },
     {
      "institution": "GS",
@@ -645,7 +667,7 @@
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -726,7 +748,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -762,7 +784,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -774,11 +796,11 @@
    "latest_decision": "2026-11-04",
    "lean": {
     "hold": 1,
-    "hike": 1,
+    "hike": 2,
     "cut": 0
    },
-   "n_desks": 2,
-   "consensus": "Split",
+   "n_desks": 3,
+   "consensus": "Hike",
    "calls": [
     {
      "institution": "JPM",
@@ -786,10 +808,21 @@
      "call": "hold",
      "size_bp": 0,
      "meeting": "2026-12",
-     "path": "next hike in March",
-     "note": "Weak October core CPIF and little urgency from the Executive Board reduce December hike odds",
-     "as_of": "2026-11-05",
-     "msg_id": "1a1ab0c10848aa3f"
+     "path": "Hike in March, third hike in 2Q; February risk",
+     "note": "Bar high for December given easing energy prices",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b188d1aaa51f5"
+    },
+    {
+     "institution": "BOFA",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": null,
+     "path": "one more 25bp hike in 1Q27",
+     "note": "Riksbank hiked to 2% with unchanged path signalling further tightening in 1H27.",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b0ba7b18acf4f"
     },
     {
      "institution": "Citi",
@@ -803,7 +836,17 @@
      "msg_id": "1a1a63c1de02227b"
     }
    ],
-   "market_quotes": [],
+   "market_quotes": [
+    {
+     "institution": "JPM",
+     "quote": "consistent with the 80% probability implied by September's rate path",
+     "meeting": null,
+     "p_hike": 0.8,
+     "p_cut": null,
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b188d1aaa51f5"
+    }
+   ],
    "statement": {
     "announced": "2026-11-04",
     "title": "Policy rate raised to 2 per cent",
@@ -821,7 +864,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -832,23 +875,34 @@
    "window_from": "2026-11-05",
    "latest_decision": "2026-11-05",
    "lean": {
-    "hold": 2,
+    "hold": 3,
     "hike": 0,
     "cut": 0
    },
-   "n_desks": 2,
+   "n_desks": 3,
    "consensus": "Hold",
    "calls": [
     {
      "institution": "JPM",
-     "person": "Allan Monks",
+     "person": "Monks",
      "call": "hold",
      "size_bp": 0,
-     "meeting": "2026-11-05",
-     "path": "Sticks with a March hike; risks of an earlier move, including December",
-     "note": "Recent drop in energy prices and currency appreciation ease urgency, though underlying inflation is near 3%.",
-     "as_of": "2026-11-05",
-     "msg_id": "1a1ab5edc0b1a16f"
+     "meeting": "2026-12",
+     "path": "Final hike in March; earlier move a risk",
+     "note": "Energy easing offsets hawkish guidance; sticky underlying inflation",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b188d1aaa51f5"
+    },
+    {
+     "institution": "BOFA",
+     "person": null,
+     "call": "hold",
+     "size_bp": 0,
+     "meeting": null,
+     "path": "policy rate has likely peaked at 4.5%",
+     "note": "Norges on hold, preserving tightening bias.",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b0ba7b18acf4f"
     },
     {
      "institution": "Citi",
@@ -880,7 +934,7 @@
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -959,7 +1013,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1040,7 +1094,7 @@
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1060,14 +1114,14 @@
    "calls": [
     {
      "institution": "JPM",
-     "person": "Ge",
+     "person": "Feng Zhu",
      "call": "hold",
-     "size_bp": null,
+     "size_bp": 0,
      "meeting": null,
-     "path": null,
-     "note": "Not an explicit call; omitted",
-     "as_of": "2026-11-05",
-     "msg_id": "1a1acfaa6e7e800d"
+     "path": "overnight rate and LPRs hold through 1Q27",
+     "note": "Effective easing in funding costs and repriced relending reduce case for further cuts; transmission is the constraint.",
+     "as_of": "2026-11-06",
+     "msg_id": "1a1b0d2b9bb13716"
     },
     {
      "institution": "Citi",
@@ -1099,7 +1153,7 @@
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1168,7 +1222,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-11-06T11:40:05+00:00",
+    "fetched_at": "2026-11-06T23:30:05+00:00",
     "stale": false,
     "error": null
    }
