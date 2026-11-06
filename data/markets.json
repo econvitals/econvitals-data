@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-05T22:30:05+00:00",
- "as_of": "2026-11-04",
+ "generated_at": "2026-11-06T13:40:07+00:00",
+ "as_of": "2026-11-05",
  "n_rows": 17,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
  "groups": [
@@ -9,58 +9,58 @@
    "rows": [
     {
      "label": "2-year",
-     "value": 4.58,
-     "as_of": "2026-11-04",
+     "value": 4.46,
+     "as_of": "2026-11-05",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/2Y",
-     "chg_1d": -0.03,
-     "chg_1w": -0.09,
-     "chg_ytd": 1.11
+     "chg_1d": -0.12,
+     "chg_1w": -0.15,
+     "chg_ytd": 0.99
     },
     {
      "label": "5-year",
-     "value": 4.69,
-     "as_of": "2026-11-04",
+     "value": 4.59,
+     "as_of": "2026-11-05",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/5Y",
-     "chg_1d": -0.05,
-     "chg_1w": -0.16,
-     "chg_ytd": 0.96
+     "chg_1d": -0.1,
+     "chg_1w": -0.19,
+     "chg_ytd": 0.86
     },
     {
      "label": "10-year",
-     "value": 4.9,
-     "as_of": "2026-11-04",
+     "value": 4.84,
+     "as_of": "2026-11-05",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y",
-     "chg_1d": -0.05,
-     "chg_1w": -0.15,
-     "chg_ytd": 0.72
+     "chg_1d": -0.06,
+     "chg_1w": -0.14,
+     "chg_ytd": 0.66
     },
     {
      "label": "30-year",
-     "value": 5.28,
-     "as_of": "2026-11-04",
+     "value": 5.25,
+     "as_of": "2026-11-05",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/30Y",
-     "chg_1d": -0.04,
-     "chg_1w": -0.09,
-     "chg_ytd": 0.44
+     "chg_1d": -0.03,
+     "chg_1w": -0.07,
+     "chg_ytd": 0.41
     },
     {
      "label": "2s10s",
-     "value": 0.32,
-     "as_of": "2026-11-04",
+     "value": 0.38,
+     "as_of": "2026-11-05",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:par/2Y",
-     "chg_1d": -0.02,
-     "chg_1w": -0.06,
-     "chg_ytd": -0.39
+     "chg_1d": 0.06,
+     "chg_1w": 0.01,
+     "chg_ytd": -0.33
     }
    ]
   },
@@ -69,35 +69,35 @@
    "rows": [
     {
      "label": "Real 10y",
-     "value": 2.64,
-     "as_of": "2026-11-04",
+     "value": 2.6,
+     "as_of": "2026-11-05",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:real/10Y",
-     "chg_1d": -0.01,
+     "chg_1d": -0.04,
      "chg_1w": -0.03,
-     "chg_ytd": 0.71
+     "chg_ytd": 0.67
     },
     {
      "label": "10y breakeven",
-     "value": 2.26,
-     "as_of": "2026-11-04",
+     "value": 2.24,
+     "as_of": "2026-11-05",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:real/10Y",
-     "chg_1d": -0.04,
-     "chg_1w": -0.12,
-     "chg_ytd": 0.01
+     "chg_1d": -0.02,
+     "chg_1w": -0.11,
+     "chg_ytd": -0.01
     },
     {
      "label": "5y5y fwd breakeven",
      "value": 2.22,
-     "as_of": "2026-11-04",
+     "as_of": "2026-11-05",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:real/10Y \u2212 ust:par/5Y \u2212 ust:real/5Y",
-     "chg_1d": 0.01,
-     "chg_1w": -0.05,
+     "chg_1d": 0.0,
+     "chg_1w": -0.01,
      "chg_ytd": -0.02
     }
    ]
