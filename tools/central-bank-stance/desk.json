@@ -1,10 +1,10 @@
 {
  "meta": {
-  "generated_at": "2026-11-09T23:30:12+00:00",
+  "generated_at": "2026-11-10T11:40:21+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
-  "reader_updated": "2026-11-09",
+  "reader_updated": "2026-11-10",
   "banks_with_calls": 11,
   "banks_with_statement": 12,
   "banks_with_core": 12,
@@ -257,7 +257,7 @@
     "measure": "CPI excluding food and energy (BLS, via FRED)",
     "source": "fred:CPILFESL|yoy",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -452,7 +452,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -585,7 +585,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -698,7 +698,7 @@
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -779,7 +779,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -787,7 +787,7 @@
   "CH": {
    "code": "CH",
    "name": "Swiss National Bank",
-   "window_from": "2026-09-25",
+   "window_from": "2026-09-26",
    "latest_decision": "2026-09-24",
    "lean": {
     "hold": 0,
@@ -815,7 +815,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -895,7 +895,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -918,11 +918,11 @@
      "person": "Monks",
      "call": "hold",
      "size_bp": 0,
-     "meeting": "2026-12",
-     "path": "Final hike in March; earlier move a risk",
-     "note": "Energy easing offsets hawkish guidance; sticky underlying inflation",
-     "as_of": "2026-11-06",
-     "msg_id": "1a1b188d1aaa51f5"
+     "meeting": null,
+     "path": "One further hike in March next year",
+     "note": "Core inflation back in line with Norges Bank and lower oil prices ease near-term hike pressure",
+     "as_of": "2026-11-10",
+     "msg_id": "1a1c4de5964b1f90"
     },
     {
      "institution": "BOFA",
@@ -960,12 +960,12 @@
     "model": "claude-sonnet-5-5"
    },
    "core_inflation": {
-    "value": 3.0,
-    "period": "2026-09",
+    "value": 2.7,
+    "period": "2026-10",
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1044,7 +1044,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1064,14 +1064,14 @@
    "calls": [
     {
      "institution": "Citi",
-     "person": "Sheets",
+     "person": "Nakamura",
      "call": "hike",
      "size_bp": null,
-     "meeting": null,
-     "path": "Further tightening by year-end",
-     "note": "Higher oil prices pushing up headline inflation",
-     "as_of": "2026-11-09",
-     "msg_id": "1a1c1aa0b9ef6a03"
+     "meeting": "2026-12",
+     "path": "Base case December hike; may follow a Fed December hike; delay possible if stocks fall to lower-50,000 range",
+     "note": "Economy and prices sufficiently justify a hike; underlying CPI approaching target-consistent level",
+     "as_of": "2026-11-10",
+     "msg_id": "1a1c45841e5bc9eb"
     },
     {
      "institution": "GS",
@@ -1125,7 +1125,7 @@
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1195,7 +1195,7 @@
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1273,7 +1273,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-11-09T23:30:05+00:00",
+    "fetched_at": "2026-11-10T11:40:05+00:00",
     "stale": false,
     "error": null
    }
