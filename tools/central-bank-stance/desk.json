@@ -1,10 +1,10 @@
 {
  "meta": {
-  "generated_at": "2026-11-10T23:30:18+00:00",
+  "generated_at": "2026-11-11T11:40:22+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
-  "reader_updated": "2026-11-10",
+  "reader_updated": "2026-11-11",
   "banks_with_calls": 11,
   "banks_with_statement": 12,
   "banks_with_core": 12,
@@ -68,6 +68,17 @@
      "note": "Broad core CPI acceleration makes further hikes unavoidable",
      "as_of": "2026-11-10",
      "msg_id": "1a1c7941be985f26"
+    },
+    {
+     "institution": "GS",
+     "person": "Mericle",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12-09",
+     "path": "third 25bp hike in March 2027; terminal 3.25-3.5%; cuts begin December 2027",
+     "note": "October CPI surprised to upside for third month; inflation expected to fall by end-2027",
+     "as_of": "2026-11-10",
+     "msg_id": "1a1c7c5c342b3e10"
     },
     {
      "institution": "Evenflow",
@@ -202,17 +213,6 @@
      "msg_id": "1a1b03940a1d7fe1"
     },
     {
-     "institution": "GS",
-     "person": null,
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12",
-     "path": "peak 4.00-4.25%; another hike possible in March 2027",
-     "note": "higher inflation could prompt further tightening",
-     "as_of": "2026-11-04",
-     "msg_id": "1a1a88e1590bcdf4"
-    },
-    {
      "institution": "SGH Macro Advisors",
      "person": "Tim Duy",
      "call": "hike",
@@ -237,6 +237,24 @@
    ],
    "market_quotes": [
     {
+     "institution": "Bloomberg (John Authers)",
+     "quote": "A fed funds hike next month is back at a 100% probability.",
+     "meeting": "2026-12",
+     "p_hike": 1.0,
+     "p_cut": null,
+     "as_of": "2026-11-11",
+     "msg_id": "1a1c8c542d28a517"
+    },
+    {
+     "institution": "Robin Brooks",
+     "quote": "Markets now price 30 basis points in hikes for December, up from 22; about 75bp of hikes through mid-2027.",
+     "meeting": "2026-12",
+     "p_hike": null,
+     "p_cut": null,
+     "as_of": "2026-11-11",
+     "msg_id": "1a1ca1377fc47976"
+    },
+    {
      "institution": "Berenberg",
      "quote": "Markets are pricing in a 98% probability that the Fed will raise its benchmark interest rate by 25bp to 4.00%–4.25%",
      "meeting": "2026-12-09",
@@ -253,24 +271,6 @@
      "p_cut": null,
      "as_of": "2026-11-10",
      "msg_id": "1a1c5e4b2cbca4ac"
-    },
-    {
-     "institution": "PNC",
-     "quote": "December rate hike odds jumped to just over 100% on the news, pricing in some chance of a 50bps hike on top of fully pricing in a 25bps hike.",
-     "meeting": "2026-12",
-     "p_hike": 1.0,
-     "p_cut": null,
-     "as_of": "2026-11-10",
-     "msg_id": "1a1c606a28fa3876"
-    },
-    {
-     "institution": "EV",
-     "quote": "expectations price more than 25bp in December and around three more hikes by mid-2027",
-     "meeting": null,
-     "p_hike": null,
-     "p_cut": null,
-     "as_of": "2026-11-10",
-     "msg_id": "1a1c6b3f926681c6"
     }
    ],
    "statement": {
@@ -290,7 +290,7 @@
     "measure": "CPI excluding food and energy (BLS, via FRED)",
     "source": "fred:CPILFESL|yoy",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -485,7 +485,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -618,7 +618,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -731,7 +731,7 @@
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -812,7 +812,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -820,7 +820,7 @@
   "CH": {
    "code": "CH",
    "name": "Swiss National Bank",
-   "window_from": "2026-09-26",
+   "window_from": "2026-09-27",
    "latest_decision": "2026-09-24",
    "lean": {
     "hold": 0,
@@ -848,7 +848,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -928,7 +928,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -998,7 +998,7 @@
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1077,7 +1077,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1158,7 +1158,7 @@
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1223,12 +1223,12 @@
     "model": "claude-sonnet-5"
    },
    "core_inflation": {
-    "value": 1.0,
-    "period": "2026-09",
+    "value": 0.8,
+    "period": "2026-10",
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1306,7 +1306,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-11-10T23:30:05+00:00",
+    "fetched_at": "2026-11-11T11:40:05+00:00",
     "stale": false,
     "error": null
    }
