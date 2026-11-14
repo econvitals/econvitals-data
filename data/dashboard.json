@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-13T23:11:32+00:00",
+    "generated_at": "2026-11-14T03:39:23+00:00",
     "run_date": "2026-11-13",
-    "builder_commit": "dbb503897",
+    "builder_commit": "aa4e17f2c",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-13T18:13:42-05:00"
+      "as_of": "2026-11-13T22:41:05-05:00"
     }
   },
   "sections": {
@@ -139,7 +139,7 @@
         "items": [
           {
             "source": "Econvitals Composite",
-            "value": 3.1,
+            "value": 3.0,
             "quarter": "Q4 2026",
             "as_of": "2026-11-13",
             "provenance": "hard",
@@ -165,14 +165,14 @@
             "source": "NY Fed Staff Nowcast",
             "value": 2.9,
             "quarter": "Q4 2026",
-            "as_of": "2026-11-06",
+            "as_of": "2026-11-13",
             "provenance": "hard"
           }
         ],
         "composite": {
           "quarter": "Q4 2026",
-          "value": 3.1112,
-          "shown": 3.1,
+          "value": 3.0343,
+          "shown": 3.0,
           "band": 1.4,
           "days_to_release": null,
           "advance_release": null,
@@ -198,10 +198,10 @@
             {
               "key": "nyfed",
               "source": "NY Fed Staff Nowcast",
-              "value": 3.1009,
-              "raw": 2.9,
-              "adjustment": 0.2009,
-              "as_of": "2026-10-30",
+              "value": 2.93,
+              "raw": 2.93,
+              "adjustment": 0.0,
+              "as_of": "2026-11-13",
               "weight": 0.45
             }
           ],
@@ -212,7 +212,7 @@
             "stage": "ppi",
             "withheld": false
           },
-          "moved": "GDPNow unchanged at 3.5 on 2026-11-09 after Wholesale trade; NY Fed +0.1 to 2.9 on 2026-10-30.",
+          "moved": "GDPNow unchanged at 3.5 on 2026-11-09 after Wholesale trade; NY Fed unchanged at 2.9 on 2026-11-13.",
           "target": "BEA advance estimate",
           "method": "Fixed weights by days to the advance estimate: Econvitals' own estimate 10%; of the rest, equal beyond 45 days, then GDPNow 0.5 at 15-45 days and 0.6 inside 15 days, the NY Fed model and the Street median sharing the remainder. Until a tracker updates after a release, it is moved by half of Econvitals' own estimate's change since its last update. Band = GDPNow's average miss at this horizon.",
           "as_of": "2026-11-13"
@@ -612,8 +612,8 @@
                 {
                   "label": "GDP",
                   "indent": 0,
-                  "latest_q": 3.1,
-                  "q4q4": 2.797164
+                  "latest_q": 3.0,
+                  "q4q4": 2.777992
                 },
                 {
                   "label": "Consumption",
@@ -7075,6 +7075,12 @@
               "breakeven": 2.2,
               "real": 2.78,
               "nominal": 4.98
+            },
+            {
+              "date": "2026-11-12",
+              "breakeven": 2.24,
+              "real": 2.86,
+              "nominal": 5.1
             }
           ],
           "series": [
@@ -8876,7 +8882,7 @@
         "available": true,
         "source": "CME FedWatch End-of-Day API",
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
-        "reporting_date": "2026-11-12",
+        "reporting_date": "2026-11-13",
         "anchor_midpoint": 3.875,
         "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-13)",
         "current_range_bp": [
@@ -8889,12 +8895,12 @@
           {
             "outcome": "1 hike",
             "moves": 1,
-            "prob": 0.8548
+            "prob": 0.9419
           },
           {
             "outcome": "2 hikes",
             "moves": 2,
-            "prob": 0.1452
+            "prob": 0.0581
           }
         ],
         "checkpoints": [
@@ -8903,33 +8909,33 @@
             "date": "2026-12-09",
             "implied_rate": 4.125,
             "net_moves": 1.0,
-            "expected_rate": 4.1613,
+            "expected_rate": 4.1395,
             "modal_rate": 4.125,
             "modal_range_bp": [
               400,
               425
             ],
-            "net_moves_expected": 1.15,
+            "net_moves_expected": 1.06,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.8548
+                "prob": 0.9419
               },
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.1452
+                "prob": 0.0581
               }
             ]
           }
         ],
         "year_end_implied": 4.125,
         "moves_priced_year_end": 1.0,
-        "year_end_expected": 4.1613,
+        "year_end_expected": 4.1395,
         "year_end_modal": 4.125,
-        "year_end_sigma": 0.0881,
-        "moves_priced_year_end_expected": 1.15,
+        "year_end_sigma": 0.0585,
+        "moves_priced_year_end_expected": 1.06,
         "now_curve": [
           {
             "date": "2026-11-13",
@@ -8957,7 +8963,7 @@
           },
           {
             "date": "2026-12-09",
-            "rate": 4.1613
+            "rate": 4.1395
           }
         ],
         "repricing_since_2025": {
@@ -8966,7 +8972,7 @@
           "moves_added": 4.0,
           "year_end_expected": 3.0412,
           "year_end_modal": 3.125,
-          "moves_added_expected": 4.48,
+          "moves_added_expected": 4.39,
           "curve": [
             {
               "date": "2026-11-13",
@@ -8991,37 +8997,37 @@
         "meetings": [
           {
             "date": "2026-12-09",
-            "reporting_date": "2026-11-12",
+            "reporting_date": "2026-11-13",
             "modal_range_bp": [
               400,
               425
             ],
             "modal_rate": 4.125,
-            "expected_rate": 4.1613,
-            "sigma": 0.0881,
-            "net_moves_expected": 1.15,
+            "expected_rate": 4.1395,
+            "sigma": 0.0585,
+            "net_moves_expected": 1.06,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.8548
+                "prob": 0.9419
               },
               {
                 "outcome": "2 hikes",
                 "moves": 2,
-                "prob": 0.1452
+                "prob": 0.0581
               }
             ],
             "ranges": [
               {
                 "lo": 400,
                 "hi": 425,
-                "prob": 0.85481
+                "prob": 0.94185
               },
               {
                 "lo": 425,
                 "hi": 450,
-                "prob": 0.14519
+                "prob": 0.05815
               }
             ]
           }
@@ -9211,7 +9217,11 @@
             {
               "date": "2026-10-01",
               "umich1y": 4.7,
-              "cleveland10y": 2.726
+              "cleveland10y": 2.736
+            },
+            {
+              "date": "2026-11-01",
+              "cleveland10y": 2.666
             }
           ],
           "series": [
@@ -9579,27 +9589,27 @@
             },
             {
               "label": "Cleveland 1-yr (%)",
-              "c1": 2.98,
-              "c2": 2.73,
+              "c1": 3.04,
+              "c2": 2.7,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
               "provenance": "hard",
-              "through": "Oct 2026"
+              "through": "Nov 2026"
             },
             {
               "label": "Cleveland 10-yr (%)",
-              "c1": 2.73,
-              "c2": 2.3,
+              "c1": 2.67,
+              "c2": 2.31,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
               "provenance": "hard",
-              "through": "Oct 2026"
+              "through": "Nov 2026"
             },
             {
               "label": "5y breakeven (%)",
-              "c1": 2.31,
+              "c1": 2.3,
               "c2": 2.37,
               "c1pct": false,
               "c2pct": false,
@@ -9609,8 +9619,8 @@
             },
             {
               "label": "5y5y forward (%)",
-              "c1": 2.17,
-              "c2": 2.17,
+              "c1": 2.18,
+              "c2": 2.19,
               "c1pct": false,
               "c2pct": false,
               "decimals": 2,
@@ -10030,7 +10040,7 @@
             "unemp": 5.2,
             "cpi": 4.6,
             "core": 4.4,
-            "ten": 15.35,
+            "ten": 15.24,
             "pol": 13.75,
             "asof": "Oct 2026"
           }
