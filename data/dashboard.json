@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-14T11:45:09+00:00",
+    "generated_at": "2026-11-14T17:22:44+00:00",
     "run_date": "2026-11-14",
-    "builder_commit": "8194019a4",
+    "builder_commit": "5d231b317",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-14T06:46:35-05:00"
+      "as_of": "2026-11-14T12:24:43-05:00"
     }
   },
   "sections": {
@@ -7444,9 +7444,9 @@
                 "label": "EUR/USD",
                 "value": 1.1023,
                 "as_of": "2026-11-13",
-                "chg_1d": 0.3,
-                "chg_1w": 1.2,
-                "chg_ytd": 6.2,
+                "chg_1d": -0.3,
+                "chg_1w": -1.2,
+                "chg_ytd": -6.2,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -7455,9 +7455,9 @@
                 "label": "GBP/USD",
                 "value": 1.3212,
                 "as_of": "2026-11-13",
-                "chg_1d": 0.2,
-                "chg_1w": 1.1,
-                "chg_ytd": 1.8,
+                "chg_1d": -0.2,
+                "chg_1w": -1.1,
+                "chg_ytd": -1.8,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -7497,11 +7497,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.67,
-                "as_of": "2026-11-13",
-                "chg_1d": 0.0,
-                "chg_1w": -0.1,
-                "chg_ytd": -4.6,
+                "value": 6.66,
+                "as_of": "2026-11-14",
+                "chg_1d": -0.1,
+                "chg_1w": -0.2,
+                "chg_ytd": -4.7,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -7595,7 +7595,7 @@
             ]
           }
         ],
-        "footnote": "All rows are live/intraday, the publisher's own same-day close, or weekly-by-nature (mortgage, NFCI). The 2-year, 2s10s, real 10y and the two breakevens are the U.S. Treasury's official curve for the last completed session \u2014 there is no intraday quote for a 2-year or for TIPS \u2014 so the slope is that session's 10-year less that session's 2-year, and will not exactly equal the intraday 10-year shown above it. Dollar (DXY) is the ICE dollar index. FX changes are signed from the dollar's perspective (+ = stronger dollar): EUR/USD and GBP/USD are dollars-per-foreign-unit, so their signs are flipped; DXY, USD/JPY, USD/CHF, USD/CAD and USD/CNY are already up = stronger dollar."
+        "footnote": "All rows are live/intraday, the publisher's own same-day close, or weekly-by-nature (mortgage, NFCI). The 2-year, 2s10s, real 10y and the two breakevens are the U.S. Treasury's official curve for the last completed session \u2014 there is no intraday quote for a 2-year or for TIPS \u2014 so the slope is that session's 10-year less that session's 2-year, and will not exactly equal the intraday 10-year shown above it. Dollar (DXY) is the ICE dollar index. FX rows are market quotes: EUR/USD and GBP/USD are dollars per euro or pound, USD/JPY, USD/CHF, USD/CAD and USD/CNY are foreign currency per dollar, and each change is the change in the quote shown."
       }
     },
     "fed": {
@@ -8884,7 +8884,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-11-13",
         "anchor_midpoint": 3.875,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-13)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-14)",
         "current_range_bp": [
           375,
           400
