@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-15T11:41:00+00:00",
+    "generated_at": "2026-11-15T17:29:07+00:00",
     "run_date": "2026-11-15",
-    "builder_commit": "5d231b317",
+    "builder_commit": "ed7235943",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-15T06:42:58-05:00"
+      "as_of": "2026-11-15T12:30:47-05:00"
     }
   },
   "sections": {
@@ -7498,7 +7498,7 @@
               {
                 "label": "USD/CNY",
                 "value": 6.67,
-                "as_of": "2026-11-14",
+                "as_of": "2026-11-15",
                 "chg_1d": 0.0,
                 "chg_1w": -0.0,
                 "chg_ytd": -4.6,
@@ -8888,7 +8888,7 @@
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
         "reporting_date": "2026-11-13",
         "anchor_midpoint": 3.875,
-        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-14)",
+        "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-15)",
         "current_range_bp": [
           375,
           400
