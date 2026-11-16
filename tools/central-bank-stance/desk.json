@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-16T11:40:25+00:00",
+  "generated_at": "2026-11-16T23:30:10+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
@@ -33,6 +33,16 @@
      "meeting": "2026-12",
      "path": "hikes in January and March, peak 4.75-5%",
      "note": "Fed must accelerate hikes as inflation is embedded",
+     "as_of": "2026-11-16"
+    },
+    {
+     "institution": "PNC",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": "Baseline hikes every other meeting; risk of consecutive 25bp hikes",
+     "note": "Hot broad-based inflation and strong October payrolls",
      "as_of": "2026-11-16"
     },
     {
@@ -113,16 +123,6 @@
      "meeting": "2026-12",
      "path": "further hikes in January and April to 4.50-4.75%, then pause",
      "note": "Strong inflation data; labor market not inflationary source; 50bp very unlikely",
-     "as_of": "2026-11-13"
-    },
-    {
-     "institution": "PNC",
-     "person": "Rankin",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": null,
-     "path": "two more 25bp hikes through early 2027",
-     "note": "Elevated producer cost pressures support further tightening",
      "as_of": "2026-11-13"
     },
     {
@@ -246,12 +246,12 @@
      "as_of": "2026-11-16"
     },
     {
-     "institution": "Jared Bernstein",
-     "quote": "Market probabilities for a hike are 89% for a quarter-point hike and 11% for a 50 bps hike",
-     "meeting": "2026-12-09",
-     "p_hike": 1.0,
+     "institution": "Citi Research",
+     "quote": "Market is pricing in a hike this year",
+     "meeting": null,
+     "p_hike": null,
      "p_cut": null,
-     "as_of": "2026-11-15"
+     "as_of": "2026-11-16"
     }
    ],
    "statement": {
@@ -271,7 +271,7 @@
     "measure": "CPI excluding food and energy (BLS); October 2025 base (never collected: the shutdown) = the Sep/Nov 2025 geometric average",
     "source": "bls:CUSR0000SA0L1E|yoy",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -289,6 +289,16 @@
    "n_desks": 11,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "SGH Macro Advisors",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": "Hike to 2.75% in December; March hike to 3% possible; bar higher after December",
+     "note": "Energy shock raises risk of second-round effects; optionality kept for 2027",
+     "as_of": "2026-11-16"
+    },
     {
      "institution": "JPM",
      "person": "Monteiro",
@@ -337,16 +347,6 @@
      "meeting": null,
      "path": "continue raising rates, potentially in December and beyond",
      "note": "headline near 4% too high for the ECB to ignore despite stable core",
-     "as_of": "2026-11-04"
-    },
-    {
-     "institution": "SGH Macro Advisors",
-     "person": "Victor Mendez-Barreira",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12-17",
-     "path": "Hike to 2.75% in December, then lean toward unchanged rates through 2027",
-     "note": "Muted core and services inflation and contained wages; hike brings policy to mildly restrictive territory",
      "as_of": "2026-11-04"
     },
     {
@@ -435,7 +435,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -579,7 +579,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -590,22 +590,32 @@
    "window_from": "2026-10-28",
    "latest_decision": "2026-10-28",
    "lean": {
-    "hold": 3,
-    "hike": 3,
+    "hold": 4,
+    "hike": 2,
     "cut": 0
    },
    "n_desks": 6,
-   "consensus": "Split",
+   "consensus": "Hold",
    "calls": [
     {
-     "institution": "Citi",
+     "institution": "MPP",
      "person": null,
+     "call": "hold",
+     "size_bp": null,
+     "meeting": "2026-12-09",
+     "path": null,
+     "note": "Firm monthly core and rising CPI-common argue against ruling out further tightening; BoC cautious ahead of decision.",
+     "as_of": "2026-11-16"
+    },
+    {
+     "institution": "Citi",
+     "person": "Veronica Clark",
      "call": "hold",
      "size_bp": 0,
      "meeting": "2026-12",
      "path": null,
-     "note": "pass-through of energy costs not evident in data; soft demand limits core inflation",
-     "as_of": "2026-11-13"
+     "note": "Soft CPI, core ~2%, little energy pass-through; BoC guided to proceed carefully on hikes.",
+     "as_of": "2026-11-16"
     },
     {
      "institution": "GS",
@@ -636,16 +646,6 @@
      "path": "Skip December 9, hike 25bp to 2.75% on Jan 27; pause there as that is BOC's assumed neutral midpoint",
      "note": "Energy-driven inflation expected to last longer and feed through; soft labor and growth favor waiting for January forecast",
      "as_of": "2026-10-30"
-    },
-    {
-     "institution": "MPP",
-     "person": null,
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-10-28",
-     "path": "further hikes may be needed as inflation expected above 3% through most of 2027",
-     "note": "elevated energy costs and stronger-than-expected growth (Q2 GDP 3.3% ar, Q3 est. 2%)",
-     "as_of": "2026-10-28"
     },
     {
      "institution": "ING Economics",
@@ -680,12 +680,12 @@
     "model": "claude-sonnet-5-5"
    },
    "core_inflation": {
-    "value": 2.06,
-    "period": "2026-09",
+    "value": 1.79,
+    "period": "2026-10",
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -762,7 +762,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -798,7 +798,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -874,7 +874,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -941,7 +941,7 @@
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1016,7 +1016,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1102,7 +1102,7 @@
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1113,13 +1113,23 @@
    "window_from": "2026-10-20",
    "latest_decision": "2026-10-20",
    "lean": {
-    "hold": 2,
+    "hold": 3,
     "hike": 0,
     "cut": 1
    },
-   "n_desks": 3,
+   "n_desks": 4,
    "consensus": "Hold",
    "calls": [
+    {
+     "institution": "Citi Research",
+     "person": "Tamayo",
+     "call": "hold",
+     "size_bp": null,
+     "meeting": null,
+     "path": null,
+     "note": "placeholder removed",
+     "as_of": "2026-11-16"
+    },
     {
      "institution": "Citi",
      "person": null,
@@ -1169,7 +1179,7 @@
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1253,7 +1263,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-11-16T11:40:05+00:00",
+    "fetched_at": "2026-11-16T23:30:05+00:00",
     "stale": false,
     "error": null
    }
