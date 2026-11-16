@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """The stance-matrix builder's guards: the RBI fast source's parses (on saved copies of the
-RBI's pages, fixtures/), the India fallback order (RBI -> BIS -> manual_rate), out-of-range
-rejection, and the 75-day rule for hand-entered rates (stale_manual_entries / check_stale).
+RBI's pages, fixtures/), the Fed's target range off the Board's own openmarket.htm (a saved copy,
+fixtures/fomc_openmarket.htm, read 2026-11-15) and its FRED fallback, the India fallback order
+(RBI -> BIS -> manual_rate), out-of-range rejection, and the 75-day rule for hand-entered rates (stale_manual_entries / check_stale).
 
 Standard library only, no network:  python3 builders/central-bank-stance/test_build.py
 """
 import io
+import os
 import sys
 import unittest
 from contextlib import redirect_stderr, redirect_stdout
@@ -23,6 +25,7 @@ LISTING = (FIX / "rbi_listing_fy2026-27.html").read_text()
 LISTING_PREV = (FIX / "rbi_listing_fy2025-26.html").read_text()
 RES = {d: (FIX / f"rbi_resolution_{d}.html").read_text()
        for d in ("2026-10-07", "2026-08-05", "2026-06-05", "2026-04-08", "2026-02-06", "2025-12-05")}
+FOMC_PAGE = (FIX / "fomc_openmarket.htm").read_text()
 PRID = {"63742": "2026-10-07", "63287": "2026-08-05", "62863": "2026-06-05", "62514": "2026-04-08",
         "62169": "2026-02-06", "61749": "2025-12-05"}
 
@@ -156,6 +159,88 @@ class IndiaFallbackOrder(unittest.TestCase):
         with redirect_stderr(io.StringIO()):
             build.apply_fast("IN", [("2025-01-02", 5.25), ("2025-01-03", 5.25)])
         self.assertEqual(seen["start"], "2025-01-03")
+
+
+class FedTargetFromTheBoard(unittest.TestCase):
+    """fast_sources.parse_fomc_target / fed_us on the Board's page as saved 2026-11-15."""
+
+    def test_every_row_including_the_shaded_ones(self):
+        rows = fs.parse_fomc_target(FOMC_PAGE)
+        self.assertEqual(len(rows), 60)                    # 2003-06-25 .. 2026-09-17, the Board's count
+        self.assertEqual(rows[0], ("2003-06-25", 1.0, 1.0))
+        d = dict((r[0], (r[1], r[2])) for r in rows)
+        self.assertEqual(d["2008-12-16"], (0.0, 0.25))     # the move to a range ("75-100" bp)
+        self.assertEqual(d["2008-04-30"], (2.0, 2.0))      # a `<tr class="alt">` row
+        self.assertEqual(d["2015-12-17"], (0.25, 0.5))     # the effective day, not the 16th
+        self.assertEqual(d["2020-03-04"], (1.0, 1.25))     # the Board's own 2024 correction (March 4*)
+        self.assertEqual(rows[-1], ("2026-09-17", 3.75, 4.0))
+
+    def test_a_dropped_row_breaks_the_chain_and_is_refused(self):
+        page = FOMC_PAGE.replace("<td class=\"bold stub\" nowrap=\"nowrap\" scope=\"row\">October 30</td>",
+                                 "", 1)
+        i = FOMC_PAGE.find("October 30")
+        start, end = FOMC_PAGE.rfind("<tr", 0, i), FOMC_PAGE.find("</tr>", i) + len("</tr>")
+        with self.assertRaises(ValueError):
+            fs.parse_fomc_target(FOMC_PAGE[:start] + FOMC_PAGE[end:])
+        with self.assertRaises(ValueError):                # a 3-cell row
+            fs.parse_fomc_target(page)
+
+    def test_a_page_without_the_table_heading_is_refused(self):
+        with self.assertRaises(ValueError):
+            fs.parse_fomc_target(FOMC_PAGE.replace("target federal funds rate or range", "rates"))
+        with self.assertRaises(ValueError):
+            fs.parse_fomc_target("<html>Service unavailable</html>")
+
+    def test_calendar_day_midpoints_from_start(self):
+        rows = fs.parse_fomc_target(FOMC_PAGE)
+        s = dict(fs.target_midpoints(rows, "2015-12-15", "2015-12-18"))
+        self.assertEqual(s, {"2015-12-15": 0.125, "2015-12-16": 0.125,
+                             "2015-12-17": 0.375, "2015-12-18": 0.375})
+        s = fs.target_midpoints(rows, "2026-09-15", "2026-11-15")
+        self.assertEqual(len(s), 62)
+        self.assertEqual(dict(s)["2026-09-16"], 3.625)
+        self.assertEqual(dict(s)["2026-09-17"], 3.875)
+        with self.assertRaises(ValueError):                # before the page's first row
+            fs.target_midpoints(rows, "2002-01-01", "2002-01-05")
+
+    def test_board_first_fred_only_on_failure_and_the_row_says_which(self):
+        saved = (fs.fed_us_board, fs.fed_us_fred)
+        env = dict(os.environ)
+        try:
+            fs.fed_us_board = lambda start: [("2026-11-14", 3.875), ("2026-11-15", 3.875)]
+            fs.fed_us_fred = lambda start: self.fail("FRED read while the Board answered")
+            self.assertEqual(fs.fed_us("2026-11-14")[-1], ("2026-11-15", 3.875))
+            self.assertEqual(fs.fed_us.served_by, fs.FED_BOARD_LABEL)
+
+            def down(start):
+                raise OSError("HTTP 503")
+            fs.fed_us_board = down
+            fs.fed_us_fred = lambda start: [("2026-11-15", 3.875)]
+            os.environ["FRED_API_KEY"] = "test"
+            with redirect_stderr(io.StringIO()):
+                self.assertEqual(fs.fed_us("2026-11-14"), [("2026-11-15", 3.875)])
+            self.assertEqual(fs.fed_us.served_by, fs.FED_FRED_LABEL)
+
+            os.environ.pop("FRED_API_KEY")
+            with self.assertRaises(RuntimeError):
+                fs.fed_us("2026-11-14")
+        finally:
+            fs.fed_us_board, fs.fed_us_fred = saved
+            os.environ.clear()
+            os.environ.update(env)
+
+    def test_the_spliced_row_credits_the_source_that_served(self):
+        saved = fs.FAST["US"]
+        def feed(start):
+            feed.served_by = "FRED (test)"
+            return [("2026-11-10", 3.875), ("2026-11-15", 3.875)]
+        try:
+            fs.FAST["US"] = (fs.FED_BOARD_LABEL, feed)
+            s, fast = build.apply_fast("US", [("2026-11-09", 3.875), ("2026-11-10", 3.875)])
+            self.assertEqual(fast["label"], "FRED (test)")
+            self.assertEqual(s[-1], ("2026-11-15", 3.875))
+        finally:
+            fs.FAST["US"] = saved
 
 
 def cfg(*banks):

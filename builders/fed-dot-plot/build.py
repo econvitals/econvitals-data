@@ -4,9 +4,10 @@ Fed Dot Plot Animator — data builder.
 
 Scrapes the Federal Reserve's Summary of Economic Projections (SEP) "Figure 2"
 dot-plot tables (the per-participant federal-funds-rate projections) straight
-from the Fed's own accessible-version HTML pages, overlays the realized
-effective federal funds rate from FRED, and writes a single self-contained
-data.json next to this script.
+from the Fed's own accessible-version HTML pages, overlays the realized rate —
+the year-end FOMC target from the Board's openmarket.htm and the current H.15
+effective federal funds rate, FRED only as the fallback when either Board
+source fails — and writes a single self-contained data.json next to this script.
 
 The Fed is the single source of truth. Each SEP meeting has a deterministic
 accessible-HTML URL:
@@ -26,8 +27,8 @@ up with no code change. This is what makes the page "update after every FOMC
 meeting" (the four SEP meetings a year — March, June, September, December).
 
 Run:
-    FRED_API_KEY=... python build.py
-    python build.py --no-fred        # skip the actual-FFR overlay (offline)
+    python build.py                  # FRED_API_KEY=... only arms the FRED fallback
+    python build.py --no-actual      # skip the realized-rate overlay (offline)
 
 Requirements: requests, beautifulsoup4  (see requirements.txt)
 """
@@ -314,10 +315,184 @@ def build_meeting(date8: str, html: str) -> dict | None:
 
 
 # --------------------------------------------------------------------------- #
-# FRED actual federal funds rate
+# The realized rate: the Federal Reserve Board's own pages, FRED only as fallback
 # --------------------------------------------------------------------------- #
+# Two Board sources, both read with plain HTTP (the Action has no macrolib; these mirror its
+# `frb:FOMC/…` and `frb:H15/…` readers):
+#   * the FOMC's target, openmarket.htm — one table per year of CHANGES ONLY, 2003 on (the
+#     1990-2002 archive is not needed: the year-ends scored here start in 2008), each row dated
+#     by the day the new target or range TOOK EFFECT. Checked 2026-11-15 against FRED's
+#     DFEDTARU/DFEDTARL over 2008-12-16..2026-11-15: identical on 6,542 of 6,544 calendar days;
+#     FRED dates the first two hikes of the range era by the announcement (2015-12-16,
+#     2016-12-14), the Board by the effective day — no December 31 is affected;
+#   * the H.15 effective federal funds rate, RIFSPFF_N.B (daily, business days) and
+#     RIFSPFF_N.M (monthly), from the release's own XML package — FRED's DFF and FEDFUNDS are
+#     relays of the same numbers.
+# FRED (FRED_API_KEY) is read only when a Board source fails, and `source` then says so.
+FOMC_TARGET_URL = f"{FED}/openmarket.htm"
+H15_XML_URL = "https://www.federalreserve.gov/releases/h15/data/FRB_H15_xml.zip"
+_FOMC_HEADING = "target federal funds rate or range"
+_FOMC_YEAR = re.compile(r"<h4>\s*(\d{4})\s*</h4>(.*?)</table>", re.S)
+_FOMC_ROW = re.compile(r"<tr\b[^>]*>(.*?)</tr>", re.S)     # NOT `<tr>`: half the rows are <tr class="alt">
+_FOMC_CELL = re.compile(r"<t([dh])\b[^>]*>(.*?)</t[dh]>", re.S)
+_FOMC_LEVEL = re.compile(r"^(\d+(?:\.\d+)?)(?:-(\d+(?:\.\d+)?))?$")
+
+
+def _cell_text(s: str) -> str:
+    return re.sub(r"\s+", " ", BeautifulSoup(s, "html.parser").get_text()).replace("\xa0", " ").strip()
+
+
+def _fomc_bp(cell: str):
+    """'25' -> (25, 25); '75-100' -> (75, 100) (December 2008); '...' / '0' -> None."""
+    c = cell.strip()
+    if c in ("", "...", "…", "0", "—", "-"):
+        return None
+    m = re.match(r"^(\d+)(?:\s*-\s*(\d+))?$", c)
+    if not m:
+        raise ValueError(f"FOMC target page: change cell {cell!r} is not basis points")
+    a = int(m.group(1))
+    return (a, int(m.group(2)) if m.group(2) else a)
+
+
+def parse_fomc_target(page: str) -> list[tuple[str, float, float]]:
+    """[(effective ISO date, lower, upper)] ascending, off the Board's openmarket.htm; a single
+    target (before 2008-12-16) has lower == upper. The Board's own identity is checked on every
+    row — its change column must equal the difference between its level and the row before it —
+    so a dropped or misread row raises instead of bending the step series. Pure, for the test."""
+    if len(page) < 2048 or _FOMC_HEADING not in page:
+        raise ValueError(f"FOMC target page answered ({len(page):,} chars) without its table "
+                         f"heading {_FOMC_HEADING!r}; refused")
+    rows = []
+    for ym in _FOMC_YEAR.finditer(page):
+        year = int(ym.group(1))
+        for rm in _FOMC_ROW.finditer(ym.group(2)):
+            cells = _FOMC_CELL.findall(rm.group(1))
+            if not cells or cells[0][0] == "h":
+                continue
+            vals = [_cell_text(c) for _, c in cells]
+            if len(vals) != 4:
+                raise ValueError(f"FOMC target page: a {year} row has {len(vals)} cells ({vals})")
+            day = vals[0].rstrip("*† ").strip()
+            d = None
+            for fmt in ("%B %d %Y", "%b %d %Y", "%b. %d %Y"):
+                try:
+                    d = dt.datetime.strptime(f"{day} {year}", fmt).date()
+                    break
+                except ValueError:
+                    continue
+            if d is None:
+                raise ValueError(f"FOMC target page: cannot read the date {vals[0]!r} under {year}")
+            lm = _FOMC_LEVEL.match(vals[3].replace(" ", ""))
+            if not lm:
+                raise ValueError(f"FOMC target page: the level on {d} reads {vals[3]!r}")
+            lo = float(lm.group(1))
+            hi = float(lm.group(2)) if lm.group(2) else lo
+            if not (0.0 <= lo <= hi <= 25.0) or hi - lo > 1.0:
+                raise ValueError(f"FOMC target page: the level on {d} reads {vals[3]!r}")
+            rows.append((d, lo, hi, _fomc_bp(vals[1]), _fomc_bp(vals[2])))
+    rows.sort(key=lambda r: r[0])
+    if len(rows) < 20:
+        raise ValueError(f"FOMC target page parsed to {len(rows)} rows; refused as a short history")
+    if len({r[0] for r in rows}) != len(rows):
+        raise ValueError("FOMC target page: two rows on the same date")
+    for prev, cur in zip(rows, rows[1:]):
+        up, down = cur[3], cur[4]
+        if (up is None) == (down is None):
+            raise ValueError(f"FOMC target page: the {cur[0]} row is neither an increase nor a decrease")
+        sign, (a, b) = (1, up) if up is not None else (-1, down)
+        if {round((cur[1] - prev[1]) * 100), round((cur[2] - prev[2]) * 100)} != {sign * a, sign * b}:
+            raise ValueError(f"FOMC target page: the level chain breaks at {cur[0]} (row before: "
+                             f"{prev[0]} {prev[1]:g}-{prev[2]:g}); a change is missing or misread")
+    return [(r[0].isoformat(), r[1], r[2]) for r in rows]
+
+
+def _eastern_today() -> dt.date:
+    try:
+        from zoneinfo import ZoneInfo
+        return dt.datetime.now(ZoneInfo("America/New_York")).date()
+    except Exception:  # noqa: BLE001 — no tz database: EST is never more than an hour off
+        return (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=5)).date()
+
+
+def target_dailies(rows, through: str):
+    """(upper, lower, single) as {iso: value}, one key per CALENDAR day like FRED's series:
+    the range from RANGE_FROM through `through`, the single target from 2008-01-01 (what the
+    FRED read asked for; no earlier year-end is scored) to the day before the range began."""
+    upper, lower, single = {}, {}, {}
+    i = 0
+    d, last = dt.date(2008, 1, 1), dt.date.fromisoformat(through)
+    if rows[0][0] > d.isoformat():
+        raise ValueError(f"FOMC target page starts {rows[0][0]}, after 2008-01-01")
+    while d <= last:
+        iso = d.isoformat()
+        while i + 1 < len(rows) and rows[i + 1][0] <= iso:
+            i += 1
+        _, lo, hi = rows[i]
+        if iso >= RANGE_FROM:
+            upper[iso], lower[iso] = hi, lo
+        else:
+            single[iso] = lo
+        d += dt.timedelta(days=1)
+    return upper, lower, single
+
+
+def board_targets():
+    """(upper, lower, single) from the Board's openmarket.htm, through today (Eastern) — or
+    through the newest row, when a decision afternoon has posted tomorrow's effective range."""
+    r = get(FOMC_TARGET_URL)
+    if r is None:
+        raise RuntimeError(f"HTTP 404 at {FOMC_TARGET_URL}")
+    rows = parse_fomc_target(r.text)
+    return target_dailies(rows, max(_eastern_today().isoformat(), rows[-1][0]))
+
+
+_H15_SERIES = re.compile(r'<kf:Series\b[^>]*SERIES_NAME="(RIFSPFF_N\.[BM])"[^>]*>(.*?)</kf:Series>', re.S)
+_H15_OBS = re.compile(r'<frb:Obs\b[^>]*?OBS_STATUS="([^"]*)"[^>]*?OBS_VALUE="([^"]*)"'
+                      r'[^>]*?TIME_PERIOD="(\d{4}-\d{2}-\d{2})"')
+
+
+def parse_h15_fedfunds(xml_text: str) -> tuple[dict, dict]:
+    """(daily, monthly) {iso: value} for the effective federal funds rate off H15_data.xml —
+    RIFSPFF_N.B (business days) and RIFSPFF_N.M (monthly averages, which the package dates
+    by the LAST day of the month). A day with no rate is written OBS_STATUS="ND" with
+    OBS_VALUE="-9999" (680 of them in RIFSPFF_N.B — the holidays): only status "A" is a
+    value, or the "Current" line could read -9999. Pure, for the test."""
+    out = {}
+    for m in _H15_SERIES.finditer(xml_text):
+        obs = {}
+        for status, v, d in _H15_OBS.findall(m.group(2)):
+            if status != "A":
+                continue
+            try:
+                x = float(v)
+            except ValueError:
+                continue
+            if x > -1000:                       # belt and braces against the -9999 sentinel
+                obs[d] = x
+        out[m.group(1)] = obs
+    daily, monthly = out.get("RIFSPFF_N.B") or {}, out.get("RIFSPFF_N.M") or {}
+    if len(daily) < 1000 or len(monthly) < 100:
+        raise ValueError(f"H.15 package: RIFSPFF_N.B {len(daily)} days, RIFSPFF_N.M "
+                         f"{len(monthly)} months — not the release; refused")
+    return daily, monthly
+
+
+def board_h15_fedfunds() -> tuple[dict, dict]:
+    import io
+    import zipfile
+    r = requests.get(H15_XML_URL, headers=HEADERS, timeout=120)
+    r.raise_for_status()
+    if r.content[:2] != b"PK":
+        raise ValueError(f"H.15 package is not a ZIP (starts {r.content[:40]!r})")
+    with zipfile.ZipFile(io.BytesIO(r.content)) as z:
+        name = next((n for n in z.namelist() if n.lower() == "h15_data.xml"), None)
+        if name is None:
+            raise ValueError(f"H.15 package has no H15_data.xml ({z.namelist()})")
+        return parse_h15_fedfunds(z.read(name).decode("utf-8", "replace"))
+
+
 def _fred_obs(api_key: str, series_id: str, start: str, **extra) -> dict:
-    """{date: value} for one FRED series from `start` (missing values dropped)."""
+    """{date: value} for one FRED series from `start` (missing values dropped) — the fallback."""
     url = "https://api.stlouisfed.org/fred/series/observations"
     params = {"series_id": series_id, "api_key": api_key, "file_type": "json",
               "observation_start": start, **extra}
@@ -341,8 +516,9 @@ RANGE_FROM = "2008-12-16"   # the FOMC's first target RANGE (0-0.25%); a single 
 
 def year_end_targets(upper: dict, lower: dict, single: dict, today) -> dict:
     """year_end[Y] = the policy target in force on December 31 of Y, the concept the dots
-    project: the MIDPOINT of the target range (FRED DFEDTARU / DFEDTARL) from December 2008,
-    and the single target rate (FRED DFEDTAR) before that. Only completed years appear.
+    project: the MIDPOINT of the target range from December 2008, and the single target rate
+    before that (the Board's openmarket.htm; FRED's DFEDTARU / DFEDTARL / DFEDTAR only when
+    the Board's page fails). Only completed years appear.
 
     Until 2026-10-23 this was proxied by the following January's average effective funds
     rate, which turned a projection that landed exactly on the range the Fed set (December
@@ -366,32 +542,67 @@ def year_end_targets(upper: dict, lower: dict, single: dict, today) -> dict:
     return out
 
 
-def fetch_fred_fedfunds(api_key: str):
-    """Return (year_end, current).
+def current_rate(daily: dict, monthly: dict):
+    """The "Current" reference line: the latest DAILY effective rate, else the latest monthly
+    average (the monthly series was up to five weeks stale and could sit at the pre-decision
+    rate on the very day a meeting moved it — hence daily first)."""
+    if daily:
+        d0 = max(daily)
+        return {"ym": d0, "rate": round(daily[d0], 3)}
+    if monthly:
+        m0 = max(monthly)
+        return {"ym": m0[:7], "rate": round(monthly[m0], 3)}
+    return None
 
-    year_end[Y] = the target-range midpoint in force at the END of calendar year Y (the
-    single target before December 2008) -- see year_end_targets().
 
-    current = the latest DAILY effective funds rate (FRED DFF). FEDFUNDS is monthly,
-    so the "Current" reference line on the chart was up to five weeks stale and could
-    sit at the pre-decision rate on the very day a meeting moved it."""
-    upper = _fred_obs(api_key, "DFEDTARU", RANGE_FROM)
-    lower = _fred_obs(api_key, "DFEDTARL", RANGE_FROM)
-    single = _fred_obs(api_key, "DFEDTAR", "2008-01-01")     # ends 2008-12-15
+def fetch_actual(api_key: str):
+    """Return (year_end, current, credits): the Board first for each leg, FRED (when a key is
+    set) only for a leg whose Board source failed. `credits` names what served each leg."""
+    credits = {}
+    try:
+        upper, lower, single = board_targets()
+        credits["target"] = "board"
+    except Exception as e:  # noqa: BLE001
+        if not api_key:
+            raise
+        log(f"! the Board's target page failed ({_scrub(str(e))}); falling back to FRED")
+        upper = _fred_obs(api_key, "DFEDTARU", RANGE_FROM)
+        lower = _fred_obs(api_key, "DFEDTARL", RANGE_FROM)
+        single = _fred_obs(api_key, "DFEDTAR", "2008-01-01")     # ends 2008-12-15
+        credits["target"] = "fred"
     year_end = year_end_targets(upper, lower, single, dt.date.today())
     current = None
-    by_ym = _fred_obs(api_key, "FEDFUNDS", "2024-01-01")
-    if by_ym:
-        last_ym = max(by_ym)
-        current = {"ym": last_ym[:7], "rate": round(by_ym[last_ym], 3)}
-    try:  # prefer the daily series; the monthly one above is the fallback
-        daily = _fred_obs(api_key, "DFF", "2024-01-01", sort_order="desc", limit=5)
-        if daily:
-            d0 = max(daily)
-            current = {"ym": d0, "rate": round(daily[d0], 3)}
+    try:
+        daily, monthly = board_h15_fedfunds()
+        current = current_rate(daily, monthly)
+        credits["current"] = "board"
     except Exception as e:  # noqa: BLE001
-        log(f"! DFF fetch failed ({_scrub(str(e))}); using monthly FEDFUNDS for 'current'")
-    return year_end, current
+        if api_key:
+            log(f"! the Board's H.15 package failed ({_scrub(str(e))}); falling back to FRED")
+            monthly = {k: v for k, v in _fred_obs(api_key, "FEDFUNDS", "2024-01-01").items()}
+            try:  # prefer the daily series; the monthly one is the fallback
+                daily = _fred_obs(api_key, "DFF", "2024-01-01", sort_order="desc", limit=5)
+            except Exception as e2:  # noqa: BLE001
+                log(f"! DFF fetch failed ({_scrub(str(e2))}); using monthly FEDFUNDS for 'current'")
+                daily = {}
+            current = current_rate(daily, monthly)
+            credits["current"] = "fred"
+        else:
+            log(f"! the Board's H.15 package failed ({_scrub(str(e))}) and FRED_API_KEY is not set; "
+                f"no 'current' line")
+    return year_end, current, credits
+
+
+def source_line(credits: dict) -> str:
+    """The data.json `source` credit, naming only what actually served this run."""
+    tgt = ("the Federal Reserve Board's target history (openmarket.htm)" if credits.get("target") == "board"
+           else "FRED DFEDTARU/DFEDTARL (DFEDTAR before December 2008), the Board's page having failed")
+    cur = {"board": "the Board's H.15 effective federal funds rate (daily)",
+           "fred": "FRED DFF (the Board's H.15 having failed)"}.get(credits.get("current"))
+    out = ("Federal Reserve, Summary of Economic Projections, Figure 2 (accessible HTML). "
+           f"Realized rate: the year-end target-range midpoint (the single target before "
+           f"December 2008), {tgt}")
+    return out + (f"; current: {cur}." if cur else ".")
 
 
 # --------------------------------------------------------------------------- #
@@ -419,8 +630,8 @@ def attach_errors(meetings: list[dict], year_end: dict):
 # --------------------------------------------------------------------------- #
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--no-fred", action="store_true",
-                    help="skip the FRED actual-FFR overlay")
+    ap.add_argument("--no-actual", "--no-fred", dest="no_actual", action="store_true",
+                    help="skip the realized-rate overlay (offline); --no-fred is the old name")
     args = ap.parse_args()
 
     dates = discover_dates()
@@ -451,17 +662,16 @@ def main() -> int:
         log("FATAL: no meetings parsed")
         return 1
 
-    year_end, current = {}, None
+    year_end, current, credits = {}, None, {}
     api_key = os.environ.get("FRED_API_KEY", "").strip()
-    if not args.no_fred and api_key:
+    if not args.no_actual:
         try:
-            year_end, current = fetch_fred_fedfunds(api_key)
-            log(f"FRED target midpoints: realized year-ends {min(year_end)}–"
-                f"{max(year_end)}; current {current['rate']}% ({current['ym']})")
+            year_end, current, credits = fetch_actual(api_key)
+            log(f"target midpoints ({credits.get('target')}): realized year-ends {min(year_end)}–"
+                f"{max(year_end)}; current ({credits.get('current')}) "
+                f"{current['rate'] if current else '—'}% ({current['ym'] if current else '—'})")
         except Exception as e:  # noqa: BLE001
-            log(f"! FRED fetch failed ({_scrub(str(e))}); continuing without overlay")
-    elif not args.no_fred:
-        log("! FRED_API_KEY not set; continuing without overlay")
+            log(f"! realized-rate fetch failed ({_scrub(str(e))}); continuing without overlay")
 
     attach_errors(meetings, year_end)
 
@@ -481,9 +691,7 @@ def main() -> int:
     ]
 
     out = {
-        "source": "Federal Reserve, Summary of Economic Projections, "
-                  "Figure 2 (accessible HTML). Realized rate: the year-end target-range "
-                  "midpoint, FRED DFEDTARU/DFEDTARL (DFEDTAR before December 2008).",
+        "source": source_line(credits),
         "n_meetings": len(meetings),
         "first_meeting": meetings[0]["date"],
         "latest_meeting": meetings[-1]["date"],

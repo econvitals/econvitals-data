@@ -9,8 +9,8 @@ The pages that render this data live in `econvitals/site` — no page code is he
 
 | Builder | Output | Schedule | Repo secret |
 |:---:|:---:|:---:|:---:|
-| central-bank-stance | tools/central-bank-stance/data.json | daily 07:10 UTC | none (BIS, keyless) |
-| fed-dot-plot | tools/fed-dot-plot/data.json | Wed/Thu/Sun 20:30 UTC | FRED_API_KEY |
+| central-bank-stance | tools/central-bank-stance/data.json | every 3 hours (:10) | FRED_API_KEY (fallback only: the Fed's target range is read off the Board's own page) |
+| fed-dot-plot | tools/fed-dot-plot/data.json | Wed/Thu/Sun 20:30 UTC | FRED_API_KEY (fallback only: the realized rate is read from the Board's own pages) |
 | housing-monitor | lab/housing-monitor/data.json + last-good.json | daily 22:00 UTC | FRED_API_KEY |
 | risk-monitor | lab/risk-monitor/data.json | daily 22:30 UTC | FRED_API_KEY |
 | ai-monitor | lab/ai-monitor/data.json | daily 23:00 UTC | FRED_API_KEY |

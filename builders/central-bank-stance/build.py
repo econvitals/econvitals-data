@@ -7,8 +7,8 @@ Pulls daily policy-rate history for 12 major central banks from the BIS
 `data.json` into tools/central-bank-stance/, which the Lab page reads.
 
 BIS publishes in batches and can trail by a week — and can stop: it has not relayed the
-Reserve Bank of India since 2026-07-23. So for five banks — the Fed, ECB, Bank of England
-and Bank of Canada from their machine-readable feeds, and the RBI from its own web pages —
+Reserve Bank of India since 2026-07-23. So for five banks — the ECB, Bank of England and
+Bank of Canada from their machine-readable feeds, the Fed and the RBI from their own web pages —
 `fast_sources.py` tops the history up to the current day before anything is derived (see
 `apply_fast`). Every row carries the date it is current through and the source that served
 it. The order for any bank is: its own fast source, then BIS, then (only if the config
@@ -33,9 +33,10 @@ emergency fallback, not a routine: India carried one for a day (2026-10-21) betw
 BIS relay stopping and the RBI fast source going in; `--check-stale` fails the run if one
 is left unverified for more than STALE_AFTER_DAYS.
 
-Refreshes every 3 hours via .github/workflows/central-bank-stance.yml. BIS and three
-of the four fast feeds are keyless; the US target range needs FRED_API_KEY (already a
-secret on this repo). Without the key the US row simply falls back to BIS.
+Refreshes every 3 hours via .github/workflows/central-bank-stance.yml. BIS and every fast
+feed are keyless: the US target range is read off the Board's own page (openmarket.htm),
+and FRED_API_KEY (a secret on this repo) is used only when that page fails, for FRED's
+DFEDTARU/DFEDTARL. With neither, the US row simply falls back to BIS.
 Run by hand any time with:  python3 build.py
 
 This is an experimental Lab monitor: the phase classification is a transparent
@@ -148,6 +149,9 @@ def apply_fast(code: str, series: list[tuple[str, float]]):
         return series, None
     if not fast:
         return series, None
+    # A feed with a fallback of its own (the Fed: the Board's page, FRED only if it fails)
+    # names the one that answered, so the row never credits a source that did not serve it.
+    label = getattr(fn, "served_by", None) or label
 
     bis_date, bis_value = series[-1]
     ref = value_on_or_before(fast, bis_date)

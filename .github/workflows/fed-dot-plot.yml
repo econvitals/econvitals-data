@@ -1,12 +1,13 @@
 name: Fed dot-plot refresh
 
 # Rebuilds tools/fed-dot-plot/data.json from the Fed's SEP "Figure 2" pages and the
-# FRED actual-rate overlay, committing only on change. The dots update 4x/year (Mar,
+# realized-rate overlay — the year-end FOMC target from the Board's openmarket.htm and the
+# current rate from the Board's H.15 package (since 2026-11-15) — committing only on change. The dots update 4x/year (Mar,
 # Jun, Sep, Dec — released Wednesday 2pm ET), so a Wednesday run publishes the new dot
 # plot same-day; Thursday backs it up and Sunday keeps the actual rate current.
 # Relocated from econvitals/site (2026-08-10, chart-system rebuild Stage B): the builder
 # now lives in builders/fed-dot-plot/ and the data publishes from this repo via raw URLs.
-# Secrets required: FRED_API_KEY.
+# Secrets: FRED_API_KEY, used ONLY as the fallback when a Board source fails.
 
 on:
   schedule:
