@@ -1,5 +1,12 @@
 {
  "about": "Econvitals' composite current-quarter GDP tracker: one snapshot per day per quarter (every leg and the composite) and one scored row per quarter once BEA's advance estimate is out. Values are percent, annual rate; errors in percentage points against the advance estimate.",
+ "corrections": [
+  {
+   "date": "2026-11-15",
+   "snapshots": "Q4 2026, 2026-10-29 to 2026-11-05",
+   "what": "Rebuilt with the New York Fed Staff Nowcast leg, which these snapshots had left out although the New York Fed's workbook carried its fourth-quarter readings (2.81 percent as of October 23, 2.9 as of October 30) in its Forecasts By Horizon sheet; its Forecasts By Quarter sheet gained a 2026Q4 column only on November 6. Each snapshot uses the latest reading dated on or before its day, the same weights and pass-through as the live rule, and the other legs exactly as recorded."
+  }
+ ],
  "snapshots": [
   {
    "date": "2026-10-19",
@@ -336,160 +343,200 @@
   {
    "date": "2026-10-29",
    "quarter": "Q4 2026",
-   "composite": 3.0604,
-   "shown": 3.1,
+   "composite": 2.8751,
+   "shown": 2.9,
    "band": 1.4,
    "days_to_release": null,
    "legs": {
     "gdpnow": {
      "value": 3.2217,
      "as_of": "2026-10-29",
-     "weight": 0.9
+     "weight": 0.45
     },
     "house": {
      "value": 1.6085,
      "as_of": "2026-10-29",
      "weight": 0.1
+    },
+    "nyfed": {
+     "value": 2.81,
+     "as_of": "2026-10-23",
+     "weight": 0.45
     }
    }
   },
   {
    "date": "2026-10-30",
    "quarter": "Q4 2026",
-   "composite": 3.0604,
-   "shown": 3.1,
+   "composite": 2.9156,
+   "shown": 2.9,
    "band": 1.4,
    "days_to_release": null,
    "legs": {
     "gdpnow": {
      "value": 3.2217,
      "as_of": "2026-10-29",
-     "weight": 0.9
+     "weight": 0.45
     },
     "house": {
      "value": 1.6085,
      "as_of": "2026-10-30",
      "weight": 0.1
+    },
+    "nyfed": {
+     "value": 2.9,
+     "as_of": "2026-10-30",
+     "weight": 0.45
     }
    }
   },
   {
    "date": "2026-10-31",
    "quarter": "Q4 2026",
-   "composite": 3.0604,
-   "shown": 3.1,
+   "composite": 2.9156,
+   "shown": 2.9,
    "band": 1.4,
    "days_to_release": null,
    "legs": {
     "gdpnow": {
      "value": 3.2217,
      "as_of": "2026-10-29",
-     "weight": 0.9
+     "weight": 0.45
     },
     "house": {
      "value": 1.6085,
      "as_of": "2026-10-30",
      "weight": 0.1
+    },
+    "nyfed": {
+     "value": 2.9,
+     "as_of": "2026-10-30",
+     "weight": 0.45
     }
    }
   },
   {
    "date": "2026-11-01",
    "quarter": "Q4 2026",
-   "composite": 3.0605,
-   "shown": 3.1,
+   "composite": 2.9158,
+   "shown": 2.9,
    "band": 1.4,
    "days_to_release": null,
    "legs": {
     "gdpnow": {
      "value": 3.2218,
      "as_of": "2026-10-29",
-     "weight": 0.9
+     "weight": 0.45
     },
     "house": {
      "value": 1.6088,
      "as_of": "2026-11-01",
      "weight": 0.1
+    },
+    "nyfed": {
+     "value": 2.9002,
+     "as_of": "2026-10-30",
+     "weight": 0.45
     }
    }
   },
   {
    "date": "2026-11-02",
    "quarter": "Q4 2026",
-   "composite": 3.5134,
-   "shown": 3.5,
+   "composite": 3.1094,
+   "shown": 3.1,
    "band": 1.4,
    "days_to_release": null,
    "legs": {
     "gdpnow": {
      "value": 3.7383,
      "as_of": "2026-11-02",
-     "weight": 0.9
+     "weight": 0.45
     },
     "house": {
      "value": 1.4896,
      "as_of": "2026-11-02",
      "weight": 0.1
+    },
+    "nyfed": {
+     "value": 2.8405,
+     "as_of": "2026-10-30",
+     "weight": 0.45
     }
    }
   },
   {
    "date": "2026-11-03",
    "quarter": "Q4 2026",
-   "composite": 3.52,
-   "shown": 3.5,
+   "composite": 3.116,
+   "shown": 3.1,
    "band": 1.4,
    "days_to_release": null,
    "legs": {
     "gdpnow": {
      "value": 3.7443,
      "as_of": "2026-11-02",
-     "weight": 0.9
+     "weight": 0.45
     },
     "house": {
      "value": 1.5015,
      "as_of": "2026-11-03",
      "weight": 0.1
+    },
+    "nyfed": {
+     "value": 2.8465,
+     "as_of": "2026-10-30",
+     "weight": 0.45
     }
    }
   },
   {
    "date": "2026-11-04",
    "quarter": "Q4 2026",
-   "composite": 3.3202,
-   "shown": 3.3,
+   "composite": 3.2179,
+   "shown": 3.2,
    "band": 1.4,
    "days_to_release": null,
    "legs": {
     "gdpnow": {
      "value": 3.4408,
      "as_of": "2026-11-04",
-     "weight": 0.9
+     "weight": 0.45
     },
     "house": {
      "value": 2.2353,
      "as_of": "2026-11-04",
      "weight": 0.1
+    },
+    "nyfed": {
+     "value": 3.2134,
+     "as_of": "2026-10-30",
+     "weight": 0.45
     }
    }
   },
   {
    "date": "2026-11-05",
    "quarter": "Q4 2026",
-   "composite": 3.3202,
-   "shown": 3.3,
+   "composite": 3.2179,
+   "shown": 3.2,
    "band": 1.4,
    "days_to_release": null,
    "legs": {
     "gdpnow": {
      "value": 3.4408,
      "as_of": "2026-11-04",
-     "weight": 0.9
+     "weight": 0.45
     },
     "house": {
      "value": 2.2353,
      "as_of": "2026-11-05",
      "weight": 0.1
+    },
+    "nyfed": {
+     "value": 3.2134,
+     "as_of": "2026-10-30",
+     "weight": 0.45
     }
    }
   },
