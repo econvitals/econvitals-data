@@ -21,7 +21,8 @@ every derived field (last move, phase, YTD, sparkline) recompute unchanged.
                              resolution press releases
 
 The RBI one is different in kind: the RBI publishes no machine-readable series (its data
-files sit behind a bot wall, DBIE is an encrypted gateway), so `rbi_in` reads the bank's
+files sit behind a bot wall, DBIE is an encrypted gateway), so `rbi_in` (macrolib's
+`rbi.py` since 2026-11-15, the one RBI parser — see the India section) reads the bank's
 own web pages — the home page's "Policy Repo Rate : X%" box for today's value and the
 Monetary Policy Statements listing for the decision dates and sizes. Added 2026-10-21 at
 Jason's word, reversing his 2026-10-09 ruling not to scrape the RBI; the BIS relay of
@@ -134,144 +135,28 @@ def boc_ca(start: str) -> list[tuple[str, float]]:
 
 
 # ------------------------------------------------------------------------ India
-RBI_HOME = "https://www.rbi.org.in/"
-RBI_LISTING = "https://www.rbi.org.in/scripts/Annualpolicy.aspx"
-RBI_RATE_RANGE = (0.0, 20.0)   # a repo rate outside this is a parse gone wrong, not a policy
-RBI_MAX_YEARS_BACK = 3         # fiscal-year listings to walk back for an anchor at/before `start`
-_RBI_UP = ("increase", "raise", "hike")
-_RBI_DOWN = ("reduce", "cut", "lower")
+# The RBI reader is macrolib's since 2026-11-15 (`macrolib/rbi.py`): ONE parser for this matrix
+# and for `india:POLICY_RATE`, which puts India back on the chartbook's policy-rate charts — the
+# 2026-10-21 ruling said to port it rather than write a second one. This Action has no macrolib
+# (a private repo; the workflow installs only pyyaml and openpyxl), so `rbi.py` beside this file
+# is a BYTE-IDENTICAL copy of macrolib's, imported only where macrolib is not installed.
+# test_rbi_copy.py here and macrolib's tests/test_rbi.py fail the moment the two differ. Edit
+# macrolib/rbi.py and copy it over — never edit the copy. Its parses are unchanged from the
+# 2026-10-21 reader that lived here (test_build.py's RBI tests run against it untouched).
+try:
+    from macrolib import rbi as _rbi
+except ImportError:                   # the GitHub Action: the copy beside this file
+    import rbi as _rbi
 
-
-def _text(html_: str) -> str:
-    """Tags out, entities in, whitespace collapsed — the regexes below read prose."""
-    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", html_)))
-
-
-def _rbi_rate(v) -> float:
-    r = float(v)
-    lo, hi = RBI_RATE_RANGE
-    if not (lo < r < hi):
-        raise ValueError(f"RBI repo rate {r} is outside {lo}-{hi}: a parse gone wrong")
-    return r
-
-
-def _rbi_date(s: str) -> str:
-    return datetime.strptime(s.strip(), "%b %d, %Y").date().isoformat()
-
-
-def parse_rbi_home(html_: str) -> float:
-    """Today's policy repo rate from the home page's Current Rates box ('Policy Repo Rate : 5.50%')."""
-    m = re.search(r"Policy Repo Rate\s*:\s*(\d+(?:\.\d+)?)\s*%", _text(html_))
-    if not m:
-        raise ValueError("RBI home page: no 'Policy Repo Rate : X%' text")
-    return _rbi_rate(m.group(1))
-
-
-def parse_rbi_listing(html_: str) -> list[tuple[str, str]]:
-    """(iso date, press-release URL) of every 'Resolution of the Monetary Policy Committee' on a
-    Monetary Policy Statements listing (one fiscal year), newest first."""
-    out = []
-    parts = re.split(r'<td class="tableheader"><b>([A-Z][a-z]{2} \d{2}, \d{4})</b></td>', html_)
-    for i in range(1, len(parts), 2):
-        m = re.search(r'Resolution of the Monetary Policy Committee[^<]*<BR>\s*<DIR>\s*<li>'
-                      r'<a href="([^"]+)"', parts[i + 1], re.I)
-        if m:
-            out.append((_rbi_date(parts[i]), html.unescape(m.group(1))))
-    return out
-
-
-def parse_rbi_listing_form(html_: str) -> tuple[dict, int]:
-    """The listing's hidden form fields plus its invisible submit button, and the fiscal-year id
-    at the top of its year tree (2027 = 2026-27). Earlier years come back from a plain POST of
-    these fields with `hdnYear` set — what the page's own GetYear() does."""
-    fields = {}
-    for m in re.finditer(r'<input[^>]+type="hidden"[^>]*>', html_):
-        t = m.group(0)
-        n, v = re.search(r'name="([^"]+)"', t), re.search(r'value="([^"]*)"', t)
-        if n:
-            fields[n.group(1)] = html.unescape(v.group(1)) if v else ""
-    b = re.search(r'<input[^>]+id="btn"[^>]*>', html_)
-    if b:
-        n, v = re.search(r'name="([^"]+)"', b.group(0)), re.search(r'value="([^"]*)"', b.group(0))
-        if n:
-            fields[n.group(1)] = v.group(1) if v else ""
-    y = re.search(r'class="year_tree"[^>]*\bid="(\d{4})"', html_)
-    if not y or "__VIEWSTATE" not in fields:
-        raise ValueError("RBI listing: no year tree or no form state")
-    return fields, int(y.group(1))
-
-
-def parse_rbi_resolution(html_: str) -> tuple[str, float, float | None]:
-    """(iso decision date, repo rate decided, repo rate it replaced) from one MPC resolution
-    press release. The RBI's moves take effect the day they are announced, which is how BIS
-    dates them too. The rate it replaced is None when the text names a move but not its size."""
-    t = _text(html_)
-    d = re.search(r"Date\s*:\s*([A-Z][a-z]{2} \d{2}, \d{4})", t)
-    if not d:
-        raise ValueError("RBI resolution: no 'Date :' line")
-    m = re.search(r"policy repo rate\b.{0,200}?\b(?:to|at)\s+(\d+(?:\.\d+)?)\s*per\s*cent", t, re.I)
-    if not m:
-        raise ValueError("RBI resolution: no 'policy repo rate ... X per cent' sentence")
-    rate = _rbi_rate(m.group(1))
-    lead = t[max(0, m.start() - 90):m.start()].lower()
-    if "unchanged" in t[m.start():m.end()].lower() or re.search(r"\bkeep\b|\bretain", lead):
-        return _rbi_date(d.group(1)), rate, rate
-    direction = (1 if any(w in lead for w in _RBI_UP) else -1 if any(w in lead for w in _RBI_DOWN) else 0)
-    size = re.search(r"policy repo rate\b[^.]{0,120}?\bby\s+(\d+)\s*(?:bps|basis points)", t, re.I)
-    if direction and size:
-        return _rbi_date(d.group(1)), rate, _rbi_rate(rate - direction * int(size.group(1)) / 100)
-    return _rbi_date(d.group(1)), rate, (rate if not direction else None)
-
-
-def _post(url: str, fields: dict) -> str:
-    data = urllib.parse.urlencode(fields).encode()
-    req = urllib.request.Request(url, data=data, headers={
-        **UA, "Content-Type": "application/x-www-form-urlencoded", "Referer": url})
-    return urllib.request.urlopen(req, timeout=TIMEOUT).read().decode("utf-8", "replace")
-
-
-def rbi_in(start: str, fetch=None, post=None) -> list[tuple[str, float]]:
-    """Policy repo rate as the step series of MPC decisions back to `start`, closed with today's
-    reading from the home page — the same basis as BIS's D.IN (decision day = effective day).
-
-    Reads: the home page (today's value), the Monetary Policy Statements listing (which press
-    releases are MPC resolutions, and when), walking back a fiscal year at a time until a decision
-    dated on or before `start` is in hand, and those resolutions (rate decided, size of the move).
-    The home page must agree with the latest resolution or the whole series is refused — the two
-    pages are the cross-check on each other. One anchor point is added the day before the oldest
-    decision, at the rate that decision says it replaced, so BIS's last date can be matched even
-    when it falls between meetings. `fetch` and `post` are injectable for tests.
-    """
-    fetch, post = fetch or _get, post or _post
-    now = parse_rbi_home(fetch(RBI_HOME))
-    listing = fetch(RBI_LISTING)
-    items = parse_rbi_listing(listing)
-    fields, fy = parse_rbi_listing_form(listing)
-    back = 0
-    while (not items or items[-1][0] > start) and back < RBI_MAX_YEARS_BACK:
-        back += 1
-        earlier = post(RBI_LISTING, {**fields, "hdnYear": str(fy - back)})
-        items += parse_rbi_listing(earlier)
-        fields = parse_rbi_listing_form(earlier)[0]
-    decisions = []
-    for _, url in items:               # newest first; stop once anchored at/before start
-        d, rate, prev = parse_rbi_resolution(fetch(url))
-        decisions.append((d, rate, prev))
-        if d <= start:
-            break
-    if not decisions:
-        raise ValueError("RBI listing: no MPC resolutions found")
-    if abs(decisions[0][1] - now) > 0.011:
-        raise ValueError(f"RBI home page shows {now} but the latest MPC resolution "
-                         f"({decisions[0][0]}) decided {decisions[0][1]}; not splicing")
-    series = [(d, r) for d, r, _ in decisions]
-    oldest_d, _, oldest_prev = decisions[-1]
-    if oldest_prev is not None:
-        series.append(((date.fromisoformat(oldest_d) - timedelta(days=1)).isoformat(), oldest_prev))
-    today = date.today().isoformat()
-    if today > decisions[0][0]:
-        series.append((today, now))
-    return _clean(series)
+RBI_HOME = _rbi.RBI_HOME
+RBI_LISTING = _rbi.RBI_LISTING
+RBI_RATE_RANGE = _rbi.RBI_RATE_RANGE
+RBI_MAX_YEARS_BACK = _rbi.RBI_MAX_YEARS_BACK
+parse_rbi_home = _rbi.parse_rbi_home
+parse_rbi_listing = _rbi.parse_rbi_listing
+parse_rbi_listing_form = _rbi.parse_rbi_listing_form
+parse_rbi_resolution = _rbi.parse_rbi_resolution
+rbi_in = _rbi.rbi_in                  # (start, fetch=None, post=None, today=None) -> [(iso, rate)]
 
 
 FAST = {
