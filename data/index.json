@@ -278,7 +278,7 @@
       "title": "U.S. Dollar, Broad Trade-Weighted Index",
       "type": "line",
       "units": "Index, Jan 2006 = 100",
-      "latest_date": "2026-11-06"
+      "latest_date": "2026-11-13"
     },
     {
       "slug": "brt-ceo-economic-outlook",
@@ -727,6 +727,14 @@
       "type": "line",
       "units": "Index, 1966 Q1 = 100",
       "latest_date": "2026-10-01"
+    },
+    {
+      "slug": "consumer-spending-drag-each-recession",
+      "category": "Static/GDP",
+      "title": "The Drag From Consumer Spending in Each Recession",
+      "type": "columns",
+      "units": "Shortfall in contribution to real GDP growth, peak to trough, pp",
+      "latest_date": "2020-01-01"
     },
     {
       "slug": "consumers-in-collections",
@@ -3857,6 +3865,14 @@
       "latest_date": "2026-09-01"
     },
     {
+      "slug": "pce-share-dpi-vs-two-models",
+      "category": "Static/Household Finance",
+      "title": "Consumer Spending Since 2019 Compared With Two Models",
+      "type": "line",
+      "units": "Percent of disposable personal income",
+      "latest_date": "2026-07-01"
+    },
+    {
       "slug": "pce-underlying-6m",
       "category": "PCE",
       "title": "Overall, Core, and Trimmed Mean PCE Inflation",
@@ -5198,7 +5214,7 @@
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-11-16"
+      "latest_date": "2026-11-17"
     },
     {
       "slug": "sp500-earnings-mag7",
@@ -5209,12 +5225,28 @@
       "latest_date": "2026-03-31"
     },
     {
+      "slug": "sp500-option-implied-20pct-fall",
+      "category": "Static/Financial",
+      "title": "The Price of Insurance Against a Stock Market Fall",
+      "type": "line",
+      "units": "Percent",
+      "latest_date": "2026-10-28"
+    },
+    {
+      "slug": "sp500-option-implied-decline-table",
+      "category": "Static/Financial",
+      "title": "Option-Implied Probability That the S&P 500\nWill Be Down in December 2027",
+      "type": "table",
+      "units": "Decline from the November 13, 2026 close to December 17, 2027",
+      "latest_date": null
+    },
+    {
       "slug": "sp500-recent",
       "category": "Financial",
       "title": "S&P 500",
       "type": "line",
       "units": "Index",
-      "latest_date": "2026-11-16"
+      "latest_date": "2026-11-17"
     },
     {
       "slug": "sp500-vs-10y-since-oct6",
@@ -5263,6 +5295,22 @@
       "type": "bar_line",
       "units": "Percent change, annual rate",
       "latest_date": "2026-10-01"
+    },
+    {
+      "slug": "stock-fall-gdp-growth-table",
+      "category": "Static/Financial",
+      "title": "How Much a Stock Market Fall Would Reduce GDP Growth Over the Next Year",
+      "type": "table",
+      "units": "Percentage points of GDP growth over the next year",
+      "latest_date": "Severe case: 50 percent"
+    },
+    {
+      "slug": "stock-wealth-effect-rolling-20y",
+      "category": "Static/Household Finance",
+      "title": "Spending per Dollar of Stock Wealth, Estimated Over Rolling 20-Year Periods",
+      "type": "line",
+      "units": "Cents per dollar of stock wealth",
+      "latest_date": "2026-07-01"
     },
     {
       "slug": "tariffs-addition-12m-inflation",
@@ -5839,6 +5887,22 @@
       "type": "bar",
       "units": "Standard deviations from 10-year norm",
       "latest_date": "2026-07-01"
+    },
+    {
+      "slug": "us-stock-declines-since-1946",
+      "category": "Static/Financial",
+      "title": "U.S. Stock Market Declines of 20 Percent or More Since 1946",
+      "type": "columns",
+      "units": "Peak-to-trough fall, percent",
+      "latest_date": "2021-11-08"
+    },
+    {
+      "slug": "us-stock-market-value-gdp",
+      "category": "Static/Financial",
+      "title": "The Value of U.S. Stocks Relative to GDP",
+      "type": "line",
+      "units": "Market value, percent of GDP",
+      "latest_date": "2026-04-01"
     },
     {
       "slug": "used-vehicles-cpi",
