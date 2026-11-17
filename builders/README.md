@@ -12,7 +12,6 @@ The pages that render this data live in `econvitals/site` — no page code is he
 | central-bank-stance | tools/central-bank-stance/data.json | every 3 hours (:10) | FRED_API_KEY (fallback only: the Fed's target range is read off the Board's own page) |
 | fed-dot-plot | tools/fed-dot-plot/data.json | Wed/Thu/Sun 20:30 UTC | FRED_API_KEY (fallback only: the realized rate is read from the Board's own pages) |
 | housing-monitor | lab/housing-monitor/data.json + last-good.json | daily 22:00 UTC | FRED_API_KEY |
-| risk-monitor | lab/risk-monitor/data.json | daily 22:30 UTC | FRED_API_KEY |
 | ai-monitor | lab/ai-monitor/data.json | daily 23:00 UTC | FRED_API_KEY |
 | how-americans-are-doing | lab/how-americans-are-doing/data.json | monthly, 1st 12:00 UTC | FRED_API_KEY |
 | poverty-safety-net | lab/poverty-safety-net/data.json | monthly, 3rd 08:30 UTC | CENSUS_API_KEY |
@@ -22,8 +21,7 @@ This is a PUBLIC repo — keys come only from those secrets (each script also fa
 `~/.config/macro-dashboard/.env` for local runs); never commit a key.
 
 **Builder inputs.** Editorial/config inputs that only the builder reads live next to the
-script in `builders/<slug>/` (`housing_config.yaml`, `cb_matrix_config.yaml`, the risk
-monitor’s `register.yaml` + `read.md`). Data inputs that were seeded into this repo’s
+script in `builders/<slug>/` (`housing_config.yaml`, `cb_matrix_config.yaml`). Data inputs that were seeded into this repo’s
 mirrored directories are read from there, so there is exactly one copy:
 `lab/ai-monitor/manual.json` + `inhouse.json` (update recipe:
 `builders/ai-monitor/manual_SOURCES.md`) and `lab/how-americans-are-doing/curated.json`.
@@ -49,8 +47,8 @@ owes the same three things: a dated last-good store, a per-row source flag, and 
 
 **No FRED series tagged “Copyrighted: Pre-approval required” (St. Louis Fed takedown request,
 2026-11-02).** Check a new FRED id’s tags (`fred/series/tags`, the `cc` group) before wiring it;
-a licensed series is replaced from a permitted source, not dropped. So far: the housing and risk
-monitors read FHFA’s purchase-only house price index straight from FHFA’s keyless master file
+a licensed series is replaced from a permitted source, not dropped. So far: the housing monitor
+reads FHFA’s purchase-only house price index straight from FHFA’s keyless master file
 (`https://www.fhfa.gov/hpi/download/monthly/hpi_master.csv`, public domain) in place of FRED’s
 Case-Shiller, and the AI monitor reads Indeed’s software-development postings index from Indeed
 Hiring Lab’s own GitHub release (`hiring-lab/job_postings_tracker`, CC BY 4.0) in place of FRED’s
@@ -58,4 +56,6 @@ Hiring Lab’s own GitHub release (`hiring-lab/job_postings_tracker`, CC BY 4.0)
 
 **Not here:** maclow (private sell-side content — its builder, Action and data stay in
 `econvitals/site`), and built-vs-trend (its `lab/built-vs-trend/` data was copied once and
-has no writer).
+has no writer). The Risk Monitor’s builder, its nightly Action and its data file left this repo on
+2026-11-17: the page was rebuilt from scratch and now builds on the fleet host from
+`econvitals-site/lab/risk-monitor/build.py`, which writes its data file beside the page in the site repo.
