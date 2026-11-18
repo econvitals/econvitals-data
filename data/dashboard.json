@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-18T11:41:56+00:00",
+    "generated_at": "2026-11-18T11:52:24+00:00",
     "run_date": "2026-11-18",
-    "builder_commit": "119eb1db0",
+    "builder_commit": "d318a352e",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,18 +13,8 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-18T06:43:32-05:00"
-    },
-    "source_failures": [
-      {
-        "source": "last-good carry-forward",
-        "reason": "1 of 1 lost rows/values restored from the last good build (2026-11-17T17:23:42+00:00) \u2014 a source this build reads live (FRED?) answered nothing; see the per-item entries"
-      },
-      {
-        "source": "sections.international.table.rows[Canada]",
-        "reason": "cells cpi null and the period moved in this build \u2014 restored from the last good build of 2026-11-17T17:23:42+00:00"
-      }
-    ]
+      "as_of": "2026-11-18T06:53:44-05:00"
+    }
   },
   "sections": {
     "quick_lookup": {
@@ -123,11 +113,11 @@
         },
         {
           "label": "Brent",
-          "value": 89.900002,
+          "value": 89.93,
           "display": "$90",
           "period": "2026-11-18",
-          "change": 47.7,
-          "change_display": "+47.7% YTD",
+          "change": 47.8,
+          "change_display": "+47.8% YTD",
           "provenance": "hard"
         },
         {
@@ -7460,11 +7450,11 @@
             "rows": [
               {
                 "label": "VIX",
-                "value": 23.98,
+                "value": 24.12,
                 "as_of": "2026-11-18",
-                "chg_1d": -1.48,
-                "chg_1w": 6.49,
-                "chg_ytd": 9.03,
+                "chg_1d": -1.34,
+                "chg_1w": 6.63,
+                "chg_ytd": 9.17,
                 "is_yield": false,
                 "provenance": "hard"
               },
@@ -7485,7 +7475,7 @@
             "rows": [
               {
                 "label": "Dollar (DXY)",
-                "value": 103.79,
+                "value": 103.81,
                 "as_of": "2026-11-18",
                 "chg_1d": 0.3,
                 "chg_1w": 0.9,
@@ -7496,21 +7486,21 @@
               },
               {
                 "label": "EUR/USD",
-                "value": 1.0969,
+                "value": 1.0963,
                 "as_of": "2026-11-18",
                 "chg_1d": -0.3,
                 "chg_1w": -0.8,
-                "chg_ytd": -6.6,
+                "chg_ytd": -6.7,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3162,
+                "value": 1.316,
                 "as_of": "2026-11-18",
-                "chg_1d": -0.3,
-                "chg_1w": -0.5,
+                "chg_1d": -0.4,
+                "chg_1w": -0.6,
                 "chg_ytd": -2.2,
                 "is_yield": false,
                 "provenance": "hard",
@@ -7518,9 +7508,9 @@
               },
               {
                 "label": "USD/JPY",
-                "value": 159.3,
+                "value": 159.4,
                 "as_of": "2026-11-18",
-                "chg_1d": -0.0,
+                "chg_1d": 0.0,
                 "chg_1w": -0.3,
                 "chg_ytd": 1.6,
                 "is_yield": false,
@@ -7529,10 +7519,10 @@
               },
               {
                 "label": "USD/CHF",
-                "value": 0.8422,
+                "value": 0.8427,
                 "as_of": "2026-11-18",
-                "chg_1d": 0.2,
-                "chg_1w": 0.8,
+                "chg_1d": 0.3,
+                "chg_1w": 0.9,
                 "chg_ytd": 6.2,
                 "is_yield": false,
                 "provenance": "hard",
@@ -7540,9 +7530,9 @@
               },
               {
                 "label": "USD/CAD",
-                "value": 1.4313,
+                "value": 1.4308,
                 "as_of": "2026-11-18",
-                "chg_1d": 0.2,
+                "chg_1d": 0.1,
                 "chg_1w": 0.4,
                 "chg_ytd": 4.3,
                 "is_yield": false,
@@ -7551,11 +7541,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.67,
+                "value": 6.65,
                 "as_of": "2026-11-18",
-                "chg_1d": -0.0,
-                "chg_1w": -0.1,
-                "chg_ytd": -4.7,
+                "chg_1d": -0.2,
+                "chg_1w": -0.2,
+                "chg_ytd": -4.8,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -7567,11 +7557,11 @@
             "rows": [
               {
                 "label": "WTI ($/bbl, front-month)",
-                "value": 83.8,
+                "value": 83.9,
                 "as_of": "2026-11-18",
                 "chg_1d": -2.5,
                 "chg_1w": -3.1,
-                "chg_ytd": 46.0,
+                "chg_ytd": 46.1,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -7580,7 +7570,7 @@
                 "label": "Brent ($/bbl, front-month)",
                 "value": 89.9,
                 "as_of": "2026-11-18",
-                "chg_1d": -3.5,
+                "chg_1d": -3.4,
                 "chg_1w": -3.1,
                 "chg_ytd": 47.8,
                 "pct_change": true,
@@ -7589,33 +7579,33 @@
               },
               {
                 "label": "Natural gas ($/MMBtu, front-month)",
-                "value": 3.19,
+                "value": 3.21,
                 "as_of": "2026-11-18",
-                "chg_1d": -0.6,
-                "chg_1w": -0.8,
-                "chg_ytd": -13.5,
+                "chg_1d": -0.0,
+                "chg_1w": -0.2,
+                "chg_ytd": -13.0,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Gold ($/oz, front-month)",
-                "value": 3769.0,
+                "value": 3766.0,
                 "as_of": "2026-11-18",
                 "chg_1d": -2.5,
-                "chg_1w": -5.8,
-                "chg_ytd": -13.2,
+                "chg_1w": -5.9,
+                "chg_ytd": -13.3,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
               },
               {
                 "label": "Silver ($/oz, front-month)",
-                "value": 45.67,
+                "value": 45.56,
                 "as_of": "2026-11-18",
-                "chg_1d": -3.4,
-                "chg_1w": -12.0,
-                "chg_ytd": -34.9,
+                "chg_1d": -3.6,
+                "chg_1w": -12.2,
+                "chg_ytd": -35.0,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -7624,9 +7614,9 @@
                 "label": "Copper ($/lb, front-month)",
                 "value": 5.74,
                 "as_of": "2026-11-18",
-                "chg_1d": -3.9,
-                "chg_1w": -8.5,
-                "chg_ytd": 2.0,
+                "chg_1d": -4.0,
+                "chg_1w": -8.6,
+                "chg_ytd": 1.9,
                 "pct_change": true,
                 "is_yield": false,
                 "provenance": "hard"
@@ -9943,6 +9933,10 @@
             "cpi": 4.0
           },
           {
+            "country": "Canada",
+            "cpi": 3.1
+          },
+          {
             "country": "United Kingdom",
             "cpi": 3.6
           },
@@ -10064,7 +10058,7 @@
             "country": "Japan",
             "gdp_qq": -0.1,
             "gdp": 1.2,
-            "unemp": 2.4,
+            "unemp": 2.5,
             "cpi": 2.1,
             "core": 2.1,
             "ten": 2.97,
