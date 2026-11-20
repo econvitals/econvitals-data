@@ -1,10 +1,10 @@
 {
  "meta": {
-  "generated_at": "2026-11-19T23:30:50+00:00",
+  "generated_at": "2026-11-20T11:40:18+00:00",
   "source": "Desk research received by the macro@ mailbox (named houses), read daily by macro-briefing reader.py; statements summarized from each bank's own release",
   "call_window_days": 45,
   "quote_window_days": 21,
-  "reader_updated": "2026-11-19",
+  "reader_updated": "2026-11-20",
   "banks_with_calls": 11,
   "banks_with_statement": 12,
   "banks_with_core": 12,
@@ -19,12 +19,32 @@
    "latest_decision": "2026-10-28",
    "lean": {
     "hold": 2,
-    "hike": 21,
+    "hike": 22,
     "cut": 0
    },
-   "n_desks": 23,
+   "n_desks": 24,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "Robin Brooks",
+     "person": "Waller",
+     "call": "hike",
+     "size_bp": 50,
+     "meeting": "2026-12",
+     "path": null,
+     "note": "Brooks says Waller tied a 50bp December hike to the October core CPI outturn.",
+     "as_of": "2026-11-20"
+    },
+    {
+     "institution": "MS",
+     "person": "Gapen",
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12",
+     "path": "25bp hikes in December and March, then hold through 2027 and easing in 2028",
+     "note": "Resilient growth and slow disinflation, with gradual pace given financial-conditions concerns",
+     "as_of": "2026-11-20"
+    },
     {
      "institution": "St. Louis Fed (Musalem view, not a desk)",
      "person": "Musalem",
@@ -76,24 +96,14 @@
      "as_of": "2026-11-19"
     },
     {
-     "institution": "MS",
-     "person": "Gapen",
-     "call": "hike",
-     "size_bp": 25,
-     "meeting": "2026-12",
-     "path": "another 25bp in March",
-     "note": "high bar for 50bp; a hot jobs report could meet it",
-     "as_of": "2026-11-18"
-    },
-    {
      "institution": "GS",
-     "person": null,
+     "person": "Mericle",
      "call": "hike",
      "size_bp": 25,
      "meeting": "2026-12",
-     "path": "another 25bp in March 2027 to 4.25-4.5% peak; cuts from Nov 2027 to 3.25-3.5%",
-     "note": "",
-     "as_of": "2026-11-18"
+     "path": "Another 25bp hike in March to 4.25-4.5%; cuts to 3.25-3.5% from November 2027",
+     "note": "Inflation pressures broad-based; hikes continue until inflation falls",
+     "as_of": "2026-11-19"
     },
     {
      "institution": "Evenflow",
@@ -291,7 +301,7 @@
     "measure": "CPI excluding food and energy (BLS); October 2025 base (never collected: the shutdown) = the Sep/Nov 2025 geometric average",
     "source": "bls:CUSR0000SA0L1E|yoy",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -302,13 +312,23 @@
    "window_from": "2026-10-29",
    "latest_decision": "2026-10-29",
    "lean": {
-    "hold": 2,
-    "hike": 9,
+    "hold": 1,
+    "hike": 10,
     "cut": 0
    },
    "n_desks": 11,
    "consensus": "Hike",
    "calls": [
+    {
+     "institution": "Berenberg",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12-17",
+     "path": "No more than one final hike; deposit rate to 2.75%; cumulative hikes since early 2026 limited to 75bp",
+     "note": "Winter momentum softens; energy base effects drive sharp inflation decline after March 2027",
+     "as_of": "2026-11-20"
+    },
     {
      "institution": "UIA",
      "person": null,
@@ -408,16 +428,6 @@
      "path": "deposit rate to 2.75%; March (first meeting of Lagarde's successor) expected to hold unchanged absent a major Middle East escalation or sustained gas-price increases",
      "note": "energy shock lifting headline inflation but tighter financing conditions limiting passthrough to core, reducing risk of second-round effects",
      "as_of": "2026-10-29"
-    },
-    {
-     "institution": "Berenberg",
-     "person": "Wishart",
-     "call": "hold",
-     "size_bp": null,
-     "meeting": "2026-10-29",
-     "path": "Expects one more 25bp hike on 17 December, with an outside chance of no further hike; sees market pricing of two-to-three further hikes as too aggressive",
-     "note": "Underlying inflation and wage growth contained; energy prices are the sole driver of accelerating headline HICP inflation",
-     "as_of": "2026-10-29"
     }
    ],
    "market_quotes": [
@@ -455,7 +465,7 @@
     "measure": "HICP excluding energy, food, alcohol and tobacco (Eurostat)",
     "source": "CORE_CPI/EA",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -609,7 +619,7 @@
     "measure": "CPI excluding energy, food, alcohol and tobacco (ONS)",
     "source": "CORE_CPI/GBR",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -706,7 +716,7 @@
     "measure": "CPI excluding food and energy (Statistics Canada)",
     "source": "CORE_CPI/CAN",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -792,7 +802,7 @@
     "measure": "Trimmed mean CPI, monthly (ABS; the RBA's measure)",
     "source": "CORE_CPI/AUS",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -800,7 +810,7 @@
   "CH": {
    "code": "CH",
    "name": "Swiss National Bank",
-   "window_from": "2026-10-05",
+   "window_from": "2026-10-06",
    "latest_decision": "2026-09-24",
    "lean": {
     "hold": 0,
@@ -828,7 +838,7 @@
     "measure": "Core inflation 1: CPI ex fresh and seasonal products, energy and fuel (FSO)",
     "source": "CORE_CPI/CHE",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -904,7 +914,7 @@
     "measure": "CPIF excluding energy (Statistics Sweden; the Riksbank's measure)",
     "source": "CORE_CPI/SWE",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -971,7 +981,7 @@
     "measure": "CPI-ATE: ex energy, adjusted for taxes (Statistics Norway; Norges Bank's measure)",
     "source": "CORE_CPI/NOR",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1029,7 +1039,7 @@
     "measure": "CPI ex food, household energy and vehicle fuels, quarterly (Stats NZ)",
     "source": "CORE_CPI/NZL",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1041,12 +1051,32 @@
    "latest_decision": "2026-10-30",
    "lean": {
     "hold": 2,
-    "hike": 2,
+    "hike": 4,
     "cut": 0
    },
-   "n_desks": 4,
-   "consensus": "Split",
+   "n_desks": 6,
+   "consensus": "Hike",
    "calls": [
+    {
+     "institution": "UIA",
+     "person": null,
+     "call": "hike",
+     "size_bp": null,
+     "meeting": "2026-12",
+     "path": "possibly another hike in early 2027; beyond that a bet",
+     "note": "underlying inflation at or slightly above 2% target justifies further hikes",
+     "as_of": "2026-11-20"
+    },
+    {
+     "institution": "SGH Macro Advisors",
+     "person": null,
+     "call": "hike",
+     "size_bp": 25,
+     "meeting": "2026-12-18",
+     "path": "Further hikes in March and June at three-month pace toward a 2%-3% terminal zone",
+     "note": "Board debating pace to neutral; hawks Takata and Tamura leave July 2027, adding urgency",
+     "as_of": "2026-11-19"
+    },
     {
      "institution": "GS",
      "person": null,
@@ -1110,12 +1140,12 @@
     "model": "claude-sonnet-5-5"
    },
    "core_inflation": {
-    "value": 2.1,
-    "period": "2026-09",
+    "value": 2.2,
+    "period": "2026-10",
     "measure": "CPI excluding fresh food (Statistics Bureau; the BoJ's 'core')",
     "source": "CORE_CPI/JPN",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1123,68 +1153,57 @@
   "CN": {
    "code": "CN",
    "name": "People's Bank of China",
-   "window_from": "2026-10-20",
-   "latest_decision": "2026-10-20",
+   "window_from": "2026-11-20",
+   "latest_decision": "2026-11-20",
    "lean": {
-    "hold": 3,
+    "hold": 2,
     "hike": 0,
-    "cut": 1
+    "cut": 0
    },
-   "n_desks": 4,
+   "n_desks": 2,
    "consensus": "Hold",
    "calls": [
     {
-     "institution": "JPM",
-     "person": "Tingting Ge",
+     "institution": "GS",
+     "person": "Goohoon Kwon",
      "call": "hold",
      "size_bp": 0,
-     "meeting": null,
-     "path": "no cut by year-end; 10bp cut pushed to 2Q27",
-     "note": "PBoC 3Q report points to limited room for rate cuts; policy rate 1.25%.",
-     "as_of": "2026-11-17"
-    },
-    {
-     "institution": "Citi Research",
-     "person": "Tamayo",
-     "call": "hold",
-     "size_bp": null,
-     "meeting": null,
+     "meeting": "2026-11-26",
      "path": null,
-     "note": "placeholder removed",
-     "as_of": "2026-11-16"
+     "note": "hawkish hold, close call; weak consumption, soft labor, subdued non-tech sectors",
+     "as_of": "2026-11-20"
     },
     {
      "institution": "Citi",
      "person": null,
      "call": "hold",
-     "size_bp": null,
+     "size_bp": 0,
      "meeting": null,
-     "path": "on hold this year, resuming cuts next year",
-     "note": "investment stabilization on track but 2027 concerns",
-     "as_of": "2026-11-16"
-    },
-    {
-     "institution": "GS",
-     "person": null,
-     "call": "cut",
-     "size_bp": null,
-     "meeting": null,
-     "path": "falling Chinese interest rates in 2027 with a stronger CNY",
-     "note": "Inflation forecast well below consensus; stronger current account.",
-     "as_of": "2026-11-12"
+     "path": null,
+     "note": "Citi expects no change in LPR fixing (prior 3.00%/3.50%)",
+     "as_of": "2026-11-20"
     }
    ],
-   "market_quotes": [],
+   "market_quotes": [
+    {
+     "institution": "GS",
+     "quote": "The Bloomberg consensus currently expects a 25bp hike at this meeting.",
+     "meeting": "2026-11-26",
+     "p_hike": null,
+     "p_cut": null,
+     "as_of": "2026-11-20"
+    }
+   ],
    "statement": {
-    "announced": "2026-10-20",
-    "title": "Announcement on Loan Prime Rate (October 20, 2026)",
-    "url": "https://www.pbc.gov.cn/en/3688229/3688335/3730276/3883798/2026102014240299288/index.html",
-    "summary": "PBOC kept the one-year LPR at 3.0% and the over-five-year LPR at 3.5%, unchanged, effective until the next monthly release.",
+    "announced": "2026-11-20",
+    "title": "Announcement on Loan Prime Rate (November 20, 2026)",
+    "url": "https://www.pbc.gov.cn/en/3688229/3688335/3730276/3883798/2026112015142928273/index.html",
+    "summary": "The PBOC announced its Loan Prime Rates: one-year at 3.0% and over-five-year at 3.5%, effective until the next release. No forward guidance was given.",
     "quote": "The rates are effective until the next release.",
     "vote": null,
     "tilt": "neutral",
-    "summarized_at": "2026-10-25T08:23:13+00:00",
-    "model": "claude-sonnet-5"
+    "summarized_at": "2026-11-20T11:40:18+00:00",
+    "model": "claude-sonnet-5-5"
    },
    "core_inflation": {
     "value": 0.8,
@@ -1192,7 +1211,7 @@
     "measure": "CPI excluding food and energy (National Bureau of Statistics)",
     "source": "CORE_CPI/CHN",
     "is_core": true,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
@@ -1276,7 +1295,7 @@
     "measure": "HEADLINE CPI — India publishes no official core measure (MoSPI)",
     "source": "CPI/IND",
     "is_core": false,
-    "fetched_at": "2026-11-19T23:30:05+00:00",
+    "fetched_at": "2026-11-20T11:40:05+00:00",
     "stale": false,
     "error": null
    }
