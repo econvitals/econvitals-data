@@ -155,10 +155,9 @@
           "id": "mortgage30",
           "name": "30-yr fixed mortgage",
           "unit": "%",
-          "val": "7.11",
+          "val": "7.28",
           "tone": "warm",
           "spark": [
-            6.67,
             6.65,
             6.66,
             6.71,
@@ -171,11 +170,12 @@
             7.32,
             7.24,
             7.18,
-            7.11
+            7.11,
+            7.28
           ],
           "ctx": "In a <b>6.4–6.6%</b> band all year. Down from <b>6.84%</b> a year ago; rate-cut hopes faded on the energy shock.",
           "_source": "fred",
-          "_date": "2026-11-12"
+          "_date": "2026-11-19"
         },
         {
           "id": "nar_affordability",
@@ -191,10 +191,9 @@
           "id": "implied_pi",
           "name": "Implied P&I, median home",
           "unit": "/mo",
-          "val": "$2,243",
+          "val": "$2,281",
           "tone": "hot",
           "spark": [
-            2144,
             2140,
             2142,
             2153,
@@ -207,11 +206,12 @@
             2290,
             2272,
             2258,
-            2243
+            2243,
+            2281
           ],
           "ctx": "20% down on the median, at the prevailing rate. Before taxes & insurance — still near record in dollar terms.",
           "_source": "fred",
-          "_date": "2026-11-12"
+          "_date": "2026-11-19"
         }
       ]
     },
@@ -385,9 +385,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker’s color is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Nov 19 2026 · live via FRED and FHFA · calibration editorial",
-  "data_through": "Nov 12 2026",
-  "generated_at": "2026-11-19T02:53:58+00:00",
+  "asof": "Updated Nov 20 2026 · live via FRED and FHFA · calibration editorial",
+  "data_through": "Nov 19 2026",
+  "generated_at": "2026-11-20T02:46:39+00:00",
   "sources": {
     "fred": 20,
     "fhfa": 4,
