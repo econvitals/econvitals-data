@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-20T23:10:39+00:00",
+    "generated_at": "2026-11-21T03:34:39+00:00",
     "run_date": "2026-11-20",
-    "builder_commit": "3fb975674",
+    "builder_commit": "e866e1be8",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-20T18:11:33-05:00"
+      "as_of": "2026-11-20T22:35:27-05:00"
     }
   },
   "sections": {
@@ -624,6 +624,114 @@
           "Latest quarter (ar.)",
           "4-quarter"
         ]
+      },
+      "tracker": {
+        "quarter": "Q4 2026",
+        "actual_through": "Q3 2026",
+        "show_until": null,
+        "note": "Q4 2026 is Econvitals' tracking estimate: GDP is the Econvitals Composite of all the trackers above; the components blend the two that publish a breakdown, GDPNow and Econvitals' estimate, at their composite weights.",
+        "table": {
+          "groups": [
+            {
+              "name": "Expenditure",
+              "rows": [
+                {
+                  "label": "GDP",
+                  "indent": 0,
+                  "latest_q": 2.6,
+                  "q4q4": 2.67607
+                },
+                {
+                  "label": "Consumption",
+                  "indent": 0,
+                  "latest_q": 2.4,
+                  "q4q4": 2.652423,
+                  "contrib_q": 1.6,
+                  "contrib_y": 1.783224
+                },
+                {
+                  "label": "Investment",
+                  "indent": 0
+                },
+                {
+                  "label": "Business fixed investment",
+                  "indent": 1,
+                  "latest_q": 8.9,
+                  "q4q4": 10.123677,
+                  "contrib_q": 1.3,
+                  "contrib_y": 1.424223
+                },
+                {
+                  "label": "Equipment",
+                  "indent": 2,
+                  "latest_q": 12.7,
+                  "q4q4": 15.597344
+                },
+                {
+                  "label": "Non-residential structures",
+                  "indent": 2,
+                  "latest_q": 4.4,
+                  "q4q4": -0.050359
+                },
+                {
+                  "label": "Intellectual property products",
+                  "indent": 2,
+                  "latest_q": 7.2,
+                  "q4q4": 10.051244
+                },
+                {
+                  "label": "Residential",
+                  "indent": 1,
+                  "latest_q": -7.9,
+                  "q4q4": -4.091123,
+                  "contrib_q": -0.3,
+                  "contrib_y": -0.15038
+                },
+                {
+                  "label": "Change in inventories",
+                  "indent": 1,
+                  "contrib_q": 0.4,
+                  "contrib_y": 0.427063
+                },
+                {
+                  "label": "Government",
+                  "indent": 0,
+                  "latest_q": 1.2,
+                  "q4q4": 2.7559,
+                  "contrib_q": 0.2,
+                  "contrib_y": 0.475409
+                },
+                {
+                  "label": "Net exports",
+                  "indent": 0,
+                  "contrib_q": -0.4,
+                  "contrib_y": -1.223808
+                }
+              ]
+            },
+            {
+              "name": "Other measures",
+              "rows": [
+                {
+                  "label": "Real final sales to private domestic purchasers",
+                  "indent": 0,
+                  "latest_q": 3.1,
+                  "q4q4": 3.596458
+                }
+              ]
+            }
+          ]
+        },
+        "charts": {
+          "real-gdp": "real-gdp-tracker",
+          "gdp-contributions-summary": "gdp-contributions-summary-tracker",
+          "real-final-sales-pdp": "real-final-sales-pdp-tracker",
+          "real-pce": "real-pce-tracker",
+          "real-nonres-fixed-investment": "real-nonres-fixed-investment-tracker",
+          "real-residential-investment": "real-residential-investment-tracker",
+          "real-government": "real-government-tracker",
+          "gdp-contrib-net-exports": "gdp-contrib-net-exports-tracker"
+        }
       }
     },
     "labor": {
@@ -8864,7 +8972,7 @@
         "available": true,
         "source": "CME FedWatch End-of-Day API",
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
-        "reporting_date": "2026-11-19",
+        "reporting_date": "2026-11-20",
         "anchor_midpoint": 3.875,
         "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-20)",
         "current_range_bp": [
@@ -8877,12 +8985,12 @@
           {
             "outcome": "1 hike",
             "moves": 1,
-            "prob": 0.9789
+            "prob": 0.897
           },
           {
-            "outcome": "2 hikes",
-            "moves": 2,
-            "prob": 0.0211
+            "outcome": "Hold",
+            "moves": 0,
+            "prob": 0.103
           }
         ],
         "checkpoints": [
@@ -8891,33 +8999,33 @@
             "date": "2026-12-09",
             "implied_rate": 4.125,
             "net_moves": 1.0,
-            "expected_rate": 4.1303,
+            "expected_rate": 4.0993,
             "modal_rate": 4.125,
             "modal_range_bp": [
               400,
               425
             ],
-            "net_moves_expected": 1.02,
+            "net_moves_expected": 0.9,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.9789
+                "prob": 0.897
               },
               {
-                "outcome": "2 hikes",
-                "moves": 2,
-                "prob": 0.0211
+                "outcome": "Hold",
+                "moves": 0,
+                "prob": 0.103
               }
             ]
           }
         ],
         "year_end_implied": 4.125,
         "moves_priced_year_end": 1.0,
-        "year_end_expected": 4.1303,
+        "year_end_expected": 4.0993,
         "year_end_modal": 4.125,
-        "year_end_sigma": 0.0359,
-        "moves_priced_year_end_expected": 1.02,
+        "year_end_sigma": 0.076,
+        "moves_priced_year_end_expected": 0.9,
         "now_curve": [
           {
             "date": "2026-11-20",
@@ -8945,7 +9053,7 @@
           },
           {
             "date": "2026-12-09",
-            "rate": 4.1303
+            "rate": 4.0993
           }
         ],
         "repricing_since_2025": {
@@ -8954,7 +9062,7 @@
           "moves_added": 4.0,
           "year_end_expected": 3.0412,
           "year_end_modal": 3.125,
-          "moves_added_expected": 4.36,
+          "moves_added_expected": 4.23,
           "curve": [
             {
               "date": "2026-11-20",
@@ -8979,37 +9087,37 @@
         "meetings": [
           {
             "date": "2026-12-09",
-            "reporting_date": "2026-11-19",
+            "reporting_date": "2026-11-20",
             "modal_range_bp": [
               400,
               425
             ],
             "modal_rate": 4.125,
-            "expected_rate": 4.1303,
-            "sigma": 0.0359,
-            "net_moves_expected": 1.02,
+            "expected_rate": 4.0993,
+            "sigma": 0.076,
+            "net_moves_expected": 0.9,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.9789
+                "prob": 0.897
               },
               {
-                "outcome": "2 hikes",
-                "moves": 2,
-                "prob": 0.0211
+                "outcome": "Hold",
+                "moves": 0,
+                "prob": 0.103
               }
             ],
             "ranges": [
               {
-                "lo": 400,
-                "hi": 425,
-                "prob": 0.97889
+                "lo": 375,
+                "hi": 400,
+                "prob": 0.10296
               },
               {
-                "lo": 425,
-                "hi": 450,
-                "prob": 0.02111
+                "lo": 400,
+                "hi": 425,
+                "prob": 0.89704
               }
             ]
           }
@@ -9930,7 +10038,7 @@
             "unemp": 6.7,
             "cpi": 3.1,
             "core": 1.8,
-            "ten": 3.9,
+            "ten": 3.87,
             "pol": 2.5,
             "asof": "Oct 2026"
           },
