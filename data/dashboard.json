@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-21T17:17:43+00:00",
+    "generated_at": "2026-11-21T21:41:19+00:00",
     "run_date": "2026-11-21",
-    "builder_commit": "4f8bb4bde",
+    "builder_commit": "2d75a603e",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-21T12:18:25-05:00"
+      "as_of": "2026-11-21T16:44:12-05:00"
     }
   },
   "sections": {
@@ -171,7 +171,7 @@
         ],
         "composite": {
           "quarter": "Q4 2026",
-          "value": 2.6262,
+          "value": 2.6112,
           "shown": 2.6,
           "band": 1.4,
           "days_to_release": null,
@@ -207,12 +207,12 @@
             {
               "key": "street",
               "source": "Street median",
-              "value": 2.1,
-              "raw": 2.1,
+              "value": 2.05,
+              "raw": 2.05,
               "adjustment": 0.0,
               "as_of": "2026-11-20",
               "weight": 0.3,
-              "n": 3
+              "n": 4
             }
           ],
           "street_firms": [
@@ -220,6 +220,11 @@
               "house": "Moody's Analytics",
               "value": 0.8,
               "as_of": "2026-11-17"
+            },
+            {
+              "house": "J.P. Morgan",
+              "value": 2.0,
+              "as_of": "2026-11-20"
             },
             {
               "house": "Morgan Stanley",
@@ -639,7 +644,7 @@
                   "label": "GDP",
                   "indent": 0,
                   "latest_q": 2.6,
-                  "q4q4": 2.67607
+                  "q4q4": 2.672318
                 },
                 {
                   "label": "Consumption",
@@ -10094,7 +10099,7 @@
             "country": "Japan",
             "gdp_qq": -0.1,
             "gdp": 1.2,
-            "unemp": 2.4,
+            "unemp": 2.5,
             "cpi": 2.3,
             "core": 2.2,
             "ten": 2.97,
