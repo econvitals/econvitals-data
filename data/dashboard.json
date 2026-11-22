@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-22T11:39:04+00:00",
+    "generated_at": "2026-11-22T17:18:25+00:00",
     "run_date": "2026-11-22",
-    "builder_commit": "aa073e3c8",
+    "builder_commit": "8652d8434",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-22T06:39:50-05:00"
+      "as_of": "2026-11-22T12:19:02-05:00"
     }
   },
   "sections": {
@@ -7564,11 +7564,11 @@
               },
               {
                 "label": "USD/CNY",
-                "value": 6.68,
-                "as_of": "2026-11-21",
-                "chg_1d": 0.0,
-                "chg_1w": 0.2,
-                "chg_ytd": -4.5,
+                "value": 6.66,
+                "as_of": "2026-11-22",
+                "chg_1d": -0.2,
+                "chg_1w": -0.0,
+                "chg_ytd": -4.7,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -10103,7 +10103,7 @@
             "country": "Japan",
             "gdp_qq": -0.1,
             "gdp": 1.2,
-            "unemp": 2.4,
+            "unemp": 2.5,
             "cpi": 2.3,
             "core": 2.2,
             "ten": 2.97,
