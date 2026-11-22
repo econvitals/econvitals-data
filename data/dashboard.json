@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-22T17:18:25+00:00",
+    "generated_at": "2026-11-22T21:34:11+00:00",
     "run_date": "2026-11-22",
-    "builder_commit": "8652d8434",
+    "builder_commit": "493684894",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-22T12:19:02-05:00"
+      "as_of": "2026-11-22T16:34:49-05:00"
     }
   },
   "sections": {
@@ -210,7 +210,7 @@
               "value": 2.05,
               "raw": 2.05,
               "adjustment": 0.0,
-              "as_of": "2026-11-20",
+              "as_of": "2026-11-21",
               "weight": 0.3,
               "n": 4
             }
@@ -224,7 +224,7 @@
             {
               "house": "J.P. Morgan",
               "value": 2.0,
-              "as_of": "2026-11-20"
+              "as_of": "2026-11-21"
             },
             {
               "house": "Morgan Stanley",
@@ -7520,11 +7520,11 @@
               },
               {
                 "label": "GBP/USD",
-                "value": 1.3086,
-                "as_of": "2026-11-21",
+                "value": 1.3081,
+                "as_of": "2026-11-22",
                 "chg_1d": 0.0,
-                "chg_1w": -0.7,
-                "chg_ytd": -2.7,
+                "chg_1w": -0.8,
+                "chg_ytd": -2.8,
                 "is_yield": false,
                 "provenance": "hard",
                 "pct_change": true
@@ -7532,8 +7532,8 @@
               {
                 "label": "USD/JPY",
                 "value": 158.6,
-                "as_of": "2026-11-21",
-                "chg_1d": -0.0,
+                "as_of": "2026-11-22",
+                "chg_1d": 0.0,
                 "chg_1w": -0.5,
                 "chg_ytd": 1.1,
                 "is_yield": false,
@@ -7543,7 +7543,7 @@
               {
                 "label": "USD/CHF",
                 "value": 0.8396,
-                "as_of": "2026-11-21",
+                "as_of": "2026-11-22",
                 "chg_1d": -0.1,
                 "chg_1w": -0.0,
                 "chg_ytd": 5.9,
@@ -7553,9 +7553,9 @@
               },
               {
                 "label": "USD/CAD",
-                "value": 1.4343,
-                "as_of": "2026-11-21",
-                "chg_1d": -0.0,
+                "value": 1.4341,
+                "as_of": "2026-11-22",
+                "chg_1d": 0.0,
                 "chg_1w": 0.3,
                 "chg_ytd": 4.5,
                 "is_yield": false,
