@@ -422,7 +422,7 @@
       "title": "Change in Commodity Prices",
       "type": "category_bar",
       "units": "Percent change, year to date",
-      "latest_date": "2026-11-23"
+      "latest_date": "2026-11-24"
     },
     {
       "slug": "composite-activity",
@@ -1329,6 +1329,14 @@
       "latest_date": "Greece"
     },
     {
+      "slug": "december-retail-sales-vs-average-month",
+      "category": "Static/Retail",
+      "title": "December Retail Sales Relative to an Average Month",
+      "type": "line",
+      "units": "Percent above the average of the surrounding 12 months",
+      "latest_date": "2025-01-01"
+    },
+    {
       "slug": "deficit-by-economy",
       "category": "Static/IntlFiscal",
       "title": "Deficit/GDP for Advanced Economies, 2025",
@@ -2054,7 +2062,7 @@
       "title": "Euro Area: 10-Year Sovereign Credit Premium",
       "type": "line",
       "units": "Basis points",
-      "latest_date": "2026-11-20"
+      "latest_date": "2026-11-23"
     },
     {
       "slug": "europe-ea-hicp",
@@ -2134,7 +2142,7 @@
       "title": "December Fed Funds Forecast vs. the Actual Rate",
       "type": "line",
       "units": "Percent",
-      "latest_date": "2026-11-20"
+      "latest_date": "2026-11-23"
     },
     {
       "slug": "fed-dots-forecast-error",
@@ -2791,6 +2799,14 @@
       "type": "bar_line",
       "units": "Thousands of jobs per month",
       "latest_date": "2026-10-01"
+    },
+    {
+      "slug": "holiday-sales-vs-season-length",
+      "category": "Static/Retail",
+      "title": "Length of the Holiday Shopping Season and November\u2013December Retail Sales",
+      "type": "scatter_fit",
+      "units": "Percent",
+      "latest_date": "2025"
     },
     {
       "slug": "homeland-security-outlays-gdp",
@@ -5342,7 +5358,7 @@
       "title": "10-Year Treasury Yield Decomposition",
       "type": "stack",
       "units": "Percent",
-      "latest_date": "2026-11-20"
+      "latest_date": "2026-11-23"
     },
     {
       "slug": "ten-year-decomposition-monthly",
@@ -5351,6 +5367,30 @@
       "type": "contrib_stack",
       "units": "Percent",
       "latest_date": "2026-11-01"
+    },
+    {
+      "slug": "thanksgiving-dinner-groups",
+      "category": "Static/Inflation",
+      "title": "What Is Driving the Price of Thanksgiving Dinner",
+      "type": "barh",
+      "units": "Percent change from a year earlier",
+      "latest_date": "2026-10-01"
+    },
+    {
+      "slug": "thanksgiving-dinner-inflation",
+      "category": "Static/Inflation",
+      "title": "Thanksgiving Dinner Inflation",
+      "type": "line",
+      "units": "12-month percent change",
+      "latest_date": "2026-10-01"
+    },
+    {
+      "slug": "thanksgiving-dinner-items",
+      "category": "Static/Inflation",
+      "title": "Thanksgiving Dinner Prices, Item by Item",
+      "type": "barh",
+      "units": "Percent change from a year earlier",
+      "latest_date": "2026-10-01"
     },
     {
       "slug": "top-share-change-after",
