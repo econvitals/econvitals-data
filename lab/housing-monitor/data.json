@@ -46,7 +46,7 @@
           "id": "hpi_yoy",
           "name": "FHFA house price index, YoY",
           "unit": "% nom",
-          "val": "+2.4",
+          "val": "+2.5",
           "pos": 24,
           "tone": "cool",
           "band": [
@@ -60,13 +60,13 @@
           "badge": "Cooling",
           "note": "FHFA’s purchase-only index (repeat sales on conforming mortgages). Near 2–2½% for a year, about half its long-run pace.",
           "_source": "fhfa",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "real_yoy",
           "name": "Real home price, YoY (CPI-adj.)",
           "unit": "% real",
-          "val": "−0.9",
+          "val": "−1.2",
           "pos": 18,
           "tone": "cool",
           "band": [
@@ -80,7 +80,7 @@
           "badge": "Falling",
           "note": "FHFA house prices deflated by the CPI. Prices now losing ground to inflation — the quiet correction.",
           "_source": "fhfa",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "price_to_rent",
@@ -100,7 +100,7 @@
           "badge": "Stretched",
           "note": "FHFA house prices over CPI rent. Dallas Fed's single best leading indicator; well above fundamentals.",
           "_source": "fhfa",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         },
         {
           "id": "price_to_income",
@@ -140,7 +140,7 @@
           "badge": "Near peak",
           "note": "The cumulative run-up since before the pandemic, on FHFA’s index. Repeat-sales, so a change in which homes happen to sell cannot move it.",
           "_source": "fhfa",
-          "_date": "2026-08-01"
+          "_date": "2026-09-01"
         }
       ]
     },
@@ -385,9 +385,9 @@
   "footer": {
     "note": "Each gauge places the current reading on a cool→hot scale relative to its own history; the marker’s color is the editorial temperature, not the raw value. Calibration of <code>pos</code> and <code>band</code> is editorial judgment, not a published index — the live values underneath are real and sourced."
   },
-  "asof": "Updated Nov 24 2026 · live via FRED and FHFA · calibration editorial",
+  "asof": "Updated Nov 25 2026 · live via FRED and FHFA · calibration editorial",
   "data_through": "Nov 19 2026",
-  "generated_at": "2026-11-24T05:42:06+00:00",
+  "generated_at": "2026-11-25T04:43:22+00:00",
   "sources": {
     "fred": 20,
     "fhfa": 4,
