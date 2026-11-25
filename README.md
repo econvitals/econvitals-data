@@ -10,7 +10,7 @@ Layout mirrors the site's paths one-to-one: `data/`, `img/`, `lab/<slug>/`, `too
 
 Writers: the chartbook release desk and slow lane on the fleet host, plus the relocated
 lab/tools refresh workflows. Every writer must push with the fetch + merge --ff-only retry
-pattern. History is compacted monthly (orphan-branch swap, Saturday chore).
+pattern. History is NOT compacted: a monthly compaction was planned and never built (no job, script or Action exists; checked 2026-11-24), so every past version of every file stays publicly retrievable, including through forks and CDNs. Never commit anything here that could not stay public forever.
 
 Removals: the chartbook publish deletes the `data/` and `img/` files of any chart that is still
 awaiting review, retired or deleted (`render/deliver_dashboard_pngs.py` `withdrawn_slugs()`, since
