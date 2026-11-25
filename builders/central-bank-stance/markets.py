@@ -116,8 +116,14 @@ ASX_MAX_AGE_DAYS = 10    # older than this, the tracker is stale (it updates eve
 THIN_LIQUIDITY_USD = 10_000
 THIN_VOLUME_USD = 25_000
 # The bracket Yes prices should sum to ~1; outside this band the book is out of line and the
-# source carries a note (the numbers are still reported, unnormalized).
+# source carries a note (the numbers are still reported, unnormalized — the page scales what it
+# shows to 100 and says so).
 PROB_SUM_TOL = 0.05
+# Outside THIS band the brackets are not a reading at all: a partial ladder (Norges Bank on
+# 2026-11-24: hike 0.17, hold 0, cut 0 — the other brackets had no price) or a book far out of
+# line. Such a source keeps its outcomes and prob_sum but carries p_cut/p_hold/p_hike = None
+# and `incomplete: true`, and the page prints "thin market, no reading" instead of numbers.
+LADDER_BAND = (0.9, 1.1)
 
 # How each bank's monthly decision event is titled on Polymarket. Case-insensitive: the same
 # listing writes "Decision" for some banks and "decision" for others, and has changed it.
@@ -187,10 +193,13 @@ def _source(name: str, url: str, **kw) -> dict:
 
 
 def _probs(outcomes: list[dict]) -> dict:
-    """p_cut / p_hold / p_hike from [{moves, prob}], rounded to 4 places."""
+    """p_cut / p_hold / p_hike from [{moves, prob}], rounded to 4 places — or, when the
+    brackets add to something outside LADDER_BAND, all three None and `incomplete: True`."""
     cut = sum(o["prob"] for o in outcomes if o["moves"] < 0)
     hold = sum(o["prob"] for o in outcomes if o["moves"] == 0)
     hike = sum(o["prob"] for o in outcomes if o["moves"] > 0)
+    if not (LADDER_BAND[0] <= cut + hold + hike <= LADDER_BAND[1]):
+        return {"p_cut": None, "p_hold": None, "p_hike": None, "incomplete": True}
     return {"p_cut": round(cut, 4), "p_hold": round(hold, 4), "p_hike": round(hike, 4)}
 
 

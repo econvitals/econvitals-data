@@ -188,6 +188,22 @@ class PolymarketParses(unittest.TestCase):
         s = mk.polymarket_source(ev, "XM", TODAY)
         self.assertIn("sum to 1.200", s["note"])
         self.assertEqual(s["prob_sum"], 1.2)
+        # 1.2 is outside LADDER_BAND: no reading, never numbers that add to 120%.
+        self.assertTrue(s["incomplete"])
+        self.assertEqual((s["p_cut"], s["p_hold"], s["p_hike"]), (None, None, None))
+
+    def test_partial_ladder_is_no_reading(self):
+        # Norges Bank, 2026-11-24: only the hike bracket had a price, 0.17 — shown live as
+        # "17% hike · 0% cut · 0% hold". A ladder that adds to well under 1 is not a reading.
+        outs = [{"label": "Cut 25 bp", "prob": 0.0, "moves": -1}, {"label": "Hold", "prob": 0.0, "moves": 0},
+                {"label": "Hike 25 bp", "prob": 0.17, "moves": 1}]
+        p = mk._probs(outs)
+        self.assertTrue(p["incomplete"])
+        self.assertEqual((p["p_cut"], p["p_hold"], p["p_hike"]), (None, None, None))
+        # A ladder a few points over 1 (the mids of five brackets) is still a reading, unscaled.
+        p = mk._probs([{"label": "Hold", "prob": 0.76, "moves": 0}, {"label": "Hike 25 bp", "prob": 0.28, "moves": 1}])
+        self.assertNotIn("incomplete", p)
+        self.assertEqual((p["p_hold"], p["p_hike"]), (0.76, 0.28))
 
 
 @unittest.skipUnless(HAVE_OPENPYXL, "openpyxl not installed here (the Action installs it)")

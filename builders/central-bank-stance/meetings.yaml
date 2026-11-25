@@ -60,6 +60,6 @@ banks:
   CN:
     name: People's Bank of China
     rule: lpr_20th      # 1-year LPR fixing: the 20th, or the next business day
-    source_url: http://www.pbc.gov.cn/en/3688229/3688335/3883798/index.html
+    source_url: https://www.pbc.gov.cn/en/3688229/3688335/3730276/3883798/index.html   # the LPR announcements; the path without /3730276/ is a 404 (2026-11-24)
     note: not fetched by design; the monthly Loan Prime Rate is published on the 20th or the next business day when the 20th is a weekend or holiday
     dates: []
