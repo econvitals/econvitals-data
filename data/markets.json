@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T16:30:06+00:00",
+ "generated_at": "2026-11-25T17:00:06+00:00",
  "as_of": "2026-11-24",
  "n_rows": 9,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
@@ -16,7 +16,18 @@
      "source_key": "ust:par/2Y",
      "chg_1d": 0.0,
      "chg_1w": -0.17,
-     "chg_ytd": 1.16
+     "chg_ytd": 1.16,
+     "basis": "official close",
+     "source": "U.S. Department of the Treasury",
+     "official": {
+      "value": 4.63,
+      "as_of": "2026-11-24",
+      "chg_ytd": 1.16
+     },
+     "ytd_base": {
+      "date": "2025-12-31",
+      "value": 3.47
+     }
     },
     {
      "label": "5-year",
@@ -27,7 +38,18 @@
      "source_key": "ust:par/5Y",
      "chg_1d": -0.05,
      "chg_1w": -0.21,
-     "chg_ytd": 0.96
+     "chg_ytd": 0.96,
+     "basis": "official close",
+     "source": "U.S. Department of the Treasury",
+     "official": {
+      "value": 4.69,
+      "as_of": "2026-11-24",
+      "chg_ytd": 0.96
+     },
+     "ytd_base": {
+      "date": "2025-12-31",
+      "value": 3.73
+     }
     },
     {
      "label": "10-year",
@@ -38,7 +60,18 @@
      "source_key": "ust:par/10Y",
      "chg_1d": -0.01,
      "chg_1w": -0.19,
-     "chg_ytd": 0.73
+     "chg_ytd": 0.73,
+     "basis": "official close",
+     "source": "U.S. Department of the Treasury",
+     "official": {
+      "value": 4.91,
+      "as_of": "2026-11-24",
+      "chg_ytd": 0.73
+     },
+     "ytd_base": {
+      "date": "2025-12-31",
+      "value": 4.18
+     }
     },
     {
      "label": "30-year",
@@ -49,7 +82,18 @@
      "source_key": "ust:par/30Y",
      "chg_1d": 0.01,
      "chg_1w": -0.16,
-     "chg_ytd": 0.46
+     "chg_ytd": 0.46,
+     "basis": "official close",
+     "source": "U.S. Department of the Treasury",
+     "official": {
+      "value": 5.3,
+      "as_of": "2026-11-24",
+      "chg_ytd": 0.46
+     },
+     "ytd_base": {
+      "date": "2025-12-31",
+      "value": 4.84
+     }
     },
     {
      "label": "2s10s",
@@ -60,7 +104,9 @@
      "source_key": "ust:par/10Y \u2212 ust:par/2Y",
      "chg_1d": -0.01,
      "chg_1w": -0.02,
-     "chg_ytd": -0.43
+     "chg_ytd": -0.43,
+     "basis": "official close",
+     "source": "U.S. Department of the Treasury"
     }
    ]
   },
@@ -76,7 +122,9 @@
      "source_key": "ust:real/10Y",
      "chg_1d": 0.0,
      "chg_1w": -0.1,
-     "chg_ytd": 0.86
+     "chg_ytd": 0.86,
+     "basis": "official close",
+     "source": "U.S. Department of the Treasury"
     },
     {
      "label": "10y breakeven",
@@ -87,7 +135,9 @@
      "source_key": "ust:par/10Y \u2212 ust:real/10Y",
      "chg_1d": -0.01,
      "chg_1w": -0.09,
-     "chg_ytd": -0.13
+     "chg_ytd": -0.13,
+     "basis": "official close",
+     "source": "U.S. Department of the Treasury"
     },
     {
      "label": "5y5y fwd breakeven",
@@ -98,7 +148,9 @@
      "source_key": "ust:par/10Y \u2212 ust:real/10Y \u2212 ust:par/5Y \u2212 ust:real/5Y",
      "chg_1d": 0.02,
      "chg_1w": -0.03,
-     "chg_ytd": -0.11
+     "chg_ytd": -0.11,
+     "basis": "official close",
+     "source": "U.S. Department of the Treasury"
     }
    ]
   },
