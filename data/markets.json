@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-25T22:30:02+00:00",
- "as_of": "2026-11-24",
+ "generated_at": "2026-11-26T14:01:17+00:00",
+ "as_of": "2026-11-25",
  "n_rows": 9,
  "source": "chart-library store, buyer markets lane (chartbook render/markets_update.py)",
  "groups": [
@@ -9,20 +9,20 @@
    "rows": [
     {
      "label": "2-year",
-     "value": 4.63,
-     "as_of": "2026-11-24",
+     "value": 4.61,
+     "as_of": "2026-11-25",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/2Y",
-     "chg_1d": 0.0,
-     "chg_1w": -0.17,
-     "chg_ytd": 1.16,
+     "chg_1d": -0.02,
+     "chg_1w": -0.19,
+     "chg_ytd": 1.14,
      "basis": "official close",
      "source": "U.S. Department of the Treasury",
      "official": {
-      "value": 4.63,
-      "as_of": "2026-11-24",
-      "chg_ytd": 1.16
+      "value": 4.61,
+      "as_of": "2026-11-25",
+      "chg_ytd": 1.14
      },
      "ytd_base": {
       "date": "2025-12-31",
@@ -31,20 +31,20 @@
     },
     {
      "label": "5-year",
-     "value": 4.69,
-     "as_of": "2026-11-24",
+     "value": 4.65,
+     "as_of": "2026-11-25",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/5Y",
-     "chg_1d": -0.05,
-     "chg_1w": -0.21,
-     "chg_ytd": 0.96,
+     "chg_1d": -0.04,
+     "chg_1w": -0.24,
+     "chg_ytd": 0.92,
      "basis": "official close",
      "source": "U.S. Department of the Treasury",
      "official": {
-      "value": 4.69,
-      "as_of": "2026-11-24",
-      "chg_ytd": 0.96
+      "value": 4.65,
+      "as_of": "2026-11-25",
+      "chg_ytd": 0.92
      },
      "ytd_base": {
       "date": "2025-12-31",
@@ -53,20 +53,20 @@
     },
     {
      "label": "10-year",
-     "value": 4.91,
-     "as_of": "2026-11-24",
+     "value": 4.85,
+     "as_of": "2026-11-25",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y",
-     "chg_1d": -0.01,
-     "chg_1w": -0.19,
-     "chg_ytd": 0.73,
+     "chg_1d": -0.06,
+     "chg_1w": -0.22,
+     "chg_ytd": 0.67,
      "basis": "official close",
      "source": "U.S. Department of the Treasury",
      "official": {
-      "value": 4.91,
-      "as_of": "2026-11-24",
-      "chg_ytd": 0.73
+      "value": 4.85,
+      "as_of": "2026-11-25",
+      "chg_ytd": 0.67
      },
      "ytd_base": {
       "date": "2025-12-31",
@@ -75,20 +75,20 @@
     },
     {
      "label": "30-year",
-     "value": 5.3,
-     "as_of": "2026-11-24",
+     "value": 5.24,
+     "as_of": "2026-11-25",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/30Y",
-     "chg_1d": 0.01,
-     "chg_1w": -0.16,
-     "chg_ytd": 0.46,
+     "chg_1d": -0.06,
+     "chg_1w": -0.17,
+     "chg_ytd": 0.4,
      "basis": "official close",
      "source": "U.S. Department of the Treasury",
      "official": {
-      "value": 5.3,
-      "as_of": "2026-11-24",
-      "chg_ytd": 0.46
+      "value": 5.24,
+      "as_of": "2026-11-25",
+      "chg_ytd": 0.4
      },
      "ytd_base": {
       "date": "2025-12-31",
@@ -97,14 +97,14 @@
     },
     {
      "label": "2s10s",
-     "value": 0.28,
-     "as_of": "2026-11-24",
+     "value": 0.24,
+     "as_of": "2026-11-25",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:par/2Y",
-     "chg_1d": -0.01,
-     "chg_1w": -0.02,
-     "chg_ytd": -0.43,
+     "chg_1d": -0.04,
+     "chg_1w": -0.03,
+     "chg_ytd": -0.47,
      "basis": "official close",
      "source": "U.S. Department of the Treasury"
     }
@@ -115,40 +115,40 @@
    "rows": [
     {
      "label": "Real 10y",
-     "value": 2.79,
-     "as_of": "2026-11-24",
+     "value": 2.73,
+     "as_of": "2026-11-25",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:real/10Y",
-     "chg_1d": 0.0,
-     "chg_1w": -0.1,
-     "chg_ytd": 0.86,
+     "chg_1d": -0.06,
+     "chg_1w": -0.15,
+     "chg_ytd": 0.8,
      "basis": "official close",
      "source": "U.S. Department of the Treasury"
     },
     {
      "label": "10y breakeven",
      "value": 2.12,
-     "as_of": "2026-11-24",
+     "as_of": "2026-11-25",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:real/10Y",
-     "chg_1d": -0.01,
-     "chg_1w": -0.09,
+     "chg_1d": -0.0,
+     "chg_1w": -0.07,
      "chg_ytd": -0.13,
      "basis": "official close",
      "source": "U.S. Department of the Treasury"
     },
     {
      "label": "5y5y fwd breakeven",
-     "value": 2.13,
-     "as_of": "2026-11-24",
+     "value": 2.11,
+     "as_of": "2026-11-25",
      "is_yield": true,
      "provenance": "hard",
      "source_key": "ust:par/10Y \u2212 ust:real/10Y \u2212 ust:par/5Y \u2212 ust:real/5Y",
-     "chg_1d": 0.02,
-     "chg_1w": -0.03,
-     "chg_ytd": -0.11,
+     "chg_1d": -0.02,
+     "chg_1w": -0.04,
+     "chg_ytd": -0.13,
      "basis": "official close",
      "source": "U.S. Department of the Treasury"
     }
