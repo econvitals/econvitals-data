@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-27T23:06:06+00:00",
+    "generated_at": "2026-11-27T23:34:38+00:00",
     "run_date": "2026-11-27",
-    "builder_commit": "6dddcd414",
+    "builder_commit": "75fe7cb40",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-27T18:07:14-05:00"
+      "as_of": "2026-11-27T18:35:36-05:00"
     }
   },
   "sections": {
@@ -2388,13 +2388,12 @@
               },
               {
                 "label": "Trimmed-mean PCE",
-                "ann_1": 2.8303,
-                "ann_3": 2.5884,
-                "ann_6": 2.3859,
-                "yoy": 2.371,
+                "ann_1": 2.83,
+                "ann_3": 2.5856,
+                "ann_6": 2.385,
+                "yoy": 2.3703,
                 "through": "Oct 2026",
-                "provenance": "hard",
-                "est": true
+                "provenance": "hard"
               },
               {
                 "label": "Core goods",
