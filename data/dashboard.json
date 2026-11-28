@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-27T23:34:38+00:00",
+    "generated_at": "2026-11-28T03:34:29+00:00",
     "run_date": "2026-11-27",
-    "builder_commit": "75fe7cb40",
+    "builder_commit": "daf35c9e5",
     "schema_version": "2.0",
     "source": "The statistical agencies (BEA, BLS, Census, Treasury) and FRED, with Atlanta Fed GDPNow, the New York Fed Staff Nowcast and CME ZQ futures",
     "gdp_quarter": {
@@ -13,7 +13,7 @@
       "in_progress_label": "Q4 2026",
       "in_progress_advance_date": null,
       "source": "store",
-      "as_of": "2026-11-27T18:35:36-05:00"
+      "as_of": "2026-11-27T22:35:14-05:00"
     }
   },
   "sections": {
@@ -143,7 +143,7 @@
         "items": [
           {
             "source": "Econvitals Composite",
-            "value": 2.0,
+            "value": 2.2,
             "quarter": "Q4 2026",
             "as_of": "2026-11-27",
             "provenance": "hard",
@@ -167,16 +167,16 @@
           },
           {
             "source": "NY Fed Staff Nowcast",
-            "value": 2.9,
+            "value": 3.0,
             "quarter": "Q4 2026",
-            "as_of": "2026-11-20",
+            "as_of": "2026-11-27",
             "provenance": "hard"
           }
         ],
         "composite": {
           "quarter": "Q4 2026",
-          "value": 1.9941,
-          "shown": 2.0,
+          "value": 2.1883,
+          "shown": 2.2,
           "band": 1.4,
           "days_to_release": null,
           "advance_release": null,
@@ -204,10 +204,10 @@
             {
               "key": "nyfed",
               "source": "NY Fed Staff Nowcast",
-              "value": 2.343,
-              "raw": 2.85,
-              "adjustment": -0.507,
-              "as_of": "2026-11-20",
+              "value": 2.99,
+              "raw": 2.99,
+              "adjustment": 0.0,
+              "as_of": "2026-11-27",
               "weight": 0.3
             },
             {
@@ -249,7 +249,7 @@
             "stage": "advance_indicators",
             "withheld": false
           },
-          "moved": "GDPNow \u22120.3 to 2.9 on 2026-11-25, mostly consumer spending after GDP (Q3 2nd estimate), Personal income and outlays, Advance Census manufacturing (M3-1), New-home sales, IP revision (11/24); NY Fed unchanged at 2.9 on 2026-11-20.",
+          "moved": "GDPNow \u22120.3 to 2.9 on 2026-11-25, mostly consumer spending after GDP (Q3 2nd estimate), Personal income and outlays, Advance Census manufacturing (M3-1), New-home sales, IP revision (11/24); NY Fed +0.1 to 3.0 on 2026-11-27.",
           "target": "BEA advance estimate",
           "method": "Fixed weights by days to the advance estimate: Econvitals' own estimate 10%; of the rest, equal beyond 45 days, then GDPNow 0.5 at 15-45 days and 0.6 inside 15 days, the NY Fed model and the Street median sharing the remainder. Until a tracker updates after a release, it is moved by half of Econvitals' own estimate's change since its last update. Band = GDPNow's average miss at this horizon.",
           "as_of": "2026-11-27"
@@ -648,8 +648,8 @@
                 {
                   "label": "GDP",
                   "indent": 0,
-                  "latest_q": 2.0,
-                  "q4q4": 2.743055
+                  "latest_q": 2.2,
+                  "q4q4": 2.791927
                 },
                 {
                   "label": "Consumption",
@@ -2378,13 +2378,12 @@
               },
               {
                 "label": "Median PCE",
-                "ann_1": 3.6761,
-                "ann_3": 2.995,
-                "ann_6": 2.8927,
-                "yoy": 2.8145,
+                "ann_1": 3.7183,
+                "ann_3": 3.0078,
+                "ann_6": 2.8902,
+                "yoy": 2.8133,
                 "through": "Oct 2026",
-                "provenance": "hard",
-                "est": true
+                "provenance": "hard"
               },
               {
                 "label": "Trimmed-mean PCE",
@@ -8860,7 +8859,7 @@
         "available": true,
         "source": "CME FedWatch End-of-Day API",
         "method": "CME FedWatch EOD \u2014 binary-tree probabilities (authoritative source)",
-        "reporting_date": "2026-11-25",
+        "reporting_date": "2026-11-27",
         "anchor_midpoint": 3.875,
         "anchor_source": "FRED DFEDTARU/DFEDTARL (as of 2026-11-27)",
         "current_range_bp": [
@@ -8873,12 +8872,12 @@
           {
             "outcome": "1 hike",
             "moves": 1,
-            "prob": 0.957
+            "prob": 0.997
           },
           {
             "outcome": "Hold",
             "moves": 0,
-            "prob": 0.043
+            "prob": 0.003
           }
         ],
         "checkpoints": [
@@ -8887,33 +8886,33 @@
             "date": "2026-12-09",
             "implied_rate": 4.125,
             "net_moves": 1.0,
-            "expected_rate": 4.1143,
+            "expected_rate": 4.1243,
             "modal_rate": 4.125,
             "modal_range_bp": [
               400,
               425
             ],
-            "net_moves_expected": 0.96,
+            "net_moves_expected": 1.0,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.957
+                "prob": 0.997
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.043
+                "prob": 0.003
               }
             ]
           }
         ],
         "year_end_implied": 4.125,
         "moves_priced_year_end": 1.0,
-        "year_end_expected": 4.1143,
+        "year_end_expected": 4.1243,
         "year_end_modal": 4.125,
-        "year_end_sigma": 0.0507,
-        "moves_priced_year_end_expected": 0.96,
+        "year_end_sigma": 0.0136,
+        "moves_priced_year_end_expected": 1.0,
         "now_curve": [
           {
             "date": "2026-11-27",
@@ -8941,7 +8940,7 @@
           },
           {
             "date": "2026-12-09",
-            "rate": 4.1143
+            "rate": 4.1243
           }
         ],
         "repricing_since_2025": {
@@ -8950,7 +8949,7 @@
           "moves_added": 4.0,
           "year_end_expected": 3.0412,
           "year_end_modal": 3.125,
-          "moves_added_expected": 4.29,
+          "moves_added_expected": 4.33,
           "curve": [
             {
               "date": "2026-11-27",
@@ -8975,37 +8974,37 @@
         "meetings": [
           {
             "date": "2026-12-09",
-            "reporting_date": "2026-11-25",
+            "reporting_date": "2026-11-27",
             "modal_range_bp": [
               400,
               425
             ],
             "modal_rate": 4.125,
-            "expected_rate": 4.1143,
-            "sigma": 0.0507,
-            "net_moves_expected": 0.96,
+            "expected_rate": 4.1243,
+            "sigma": 0.0136,
+            "net_moves_expected": 1.0,
             "distribution": [
               {
                 "outcome": "1 hike",
                 "moves": 1,
-                "prob": 0.957
+                "prob": 0.997
               },
               {
                 "outcome": "Hold",
                 "moves": 0,
-                "prob": 0.043
+                "prob": 0.003
               }
             ],
             "ranges": [
               {
                 "lo": 375,
                 "hi": 400,
-                "prob": 0.04296
+                "prob": 0.00296
               },
               {
                 "lo": 400,
                 "hi": 425,
-                "prob": 0.95704
+                "prob": 0.99704
               }
             ]
           }
@@ -9018,12 +9017,12 @@
         "label": "Chance of a rate hike at the Dec 9 meeting",
         "futures": {
           "source": "CME FedWatch (fed funds futures)",
-          "as_of": "2026-11-25",
-          "value": 0.957,
-          "p_hike": 0.957,
+          "as_of": "2026-11-27",
+          "value": 0.997,
+          "p_hike": 0.997,
           "p_cut": 0,
-          "p_hold": 0.043,
-          "p_move": 0.957
+          "p_hold": 0.003,
+          "p_move": 0.997
         },
         "kalshi": {
           "source": "Kalshi",
@@ -9407,7 +9406,7 @@
             {
               "date": "2026-10-01",
               "starts": 1309.0,
-              "permits": 1295.0
+              "permits": 1297.0
             }
           ],
           "series": [
@@ -9532,8 +9531,8 @@
             },
             {
               "label": "Permits (k)",
-              "c1": 1295.0,
-              "c2": -8.7,
+              "c1": 1297.0,
+              "c2": -8.5,
               "c1pct": false,
               "c2pct": true,
               "decimals": 0,
@@ -10009,13 +10008,13 @@
               "cpi": "2026-10-01",
               "core": "2026-10-01",
               "ten": "2026-10-01",
-              "pol": "2026-11-27"
+              "pol": "2026-11-28"
             }
           },
           {
             "country": "Germany",
-            "gdp_qq": 0.9,
-            "gdp": 1.2,
+            "gdp_qq": 0.5,
+            "gdp": 1.1,
             "unemp": 4.1,
             "cpi": 2.9,
             "core": 2.3,
@@ -10029,7 +10028,7 @@
               "cpi": "2026-10-01",
               "core": "2026-10-01",
               "ten": "2026-10-01",
-              "pol": "2026-11-27"
+              "pol": "2026-11-28"
             }
           },
           {
@@ -10049,7 +10048,7 @@
               "cpi": "2026-10-01",
               "core": "2026-10-01",
               "ten": "2026-10-01",
-              "pol": "2026-11-27"
+              "pol": "2026-11-28"
             }
           },
           {
@@ -10089,7 +10088,7 @@
               "cpi": "2026-10-01",
               "core": "2026-10-01",
               "ten": "2026-10-01",
-              "pol": "2026-11-27"
+              "pol": "2026-11-28"
             }
           },
           {
@@ -10117,7 +10116,7 @@
             "unemp": 5.1,
             "cpi": 4.6,
             "core": 4.4,
-            "ten": 14.9,
+            "ten": 14.27,
             "pol": 13.75,
             "asof": "Oct 2026",
             "dates": {
@@ -10126,7 +10125,7 @@
               "unemp": "2026-10-01",
               "cpi": "2026-10-01",
               "core": "2026-10-01",
-              "ten": "2026-11-26",
+              "ten": "2026-11-27",
               "pol": "2026-10-01"
             }
           }
